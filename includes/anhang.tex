@@ -1,0 +1,145 @@
+\startAnhang
+
+\listofanhang
+\clearpage
+
+\anhang{Erweiterte Konzeptmatrix}\label{app:konzeptmatrix}
+\begin{table}[htbp]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.25}
+
+\begin{tabular}{|A|S||*{14}{C|}}
+\hline
+\multicolumn{2}{|c||}{\textbf{Studie}} &
+\multicolumn{14}{c|}{\textbf{Konzepte}} \\
+\hline
+
+\multirow{2}{*}{\lhdr{4.3cm}{Autor(en)\\\& Jahr}} &
+\multirow{2}{*}{\lhdr{2.8cm}{System}} &
+\multicolumn{3}{c|}{\textbf{Ziel}} &
+\multicolumn{3}{c|}{\textbf{Datenquellen}} &
+\multicolumn{3}{c|}{\textbf{KI-/LLM-Ansatz}} &
+\multicolumn{3}{c|}{\textbf{Evaluation}} &
+\multicolumn{2}{c|}{\textbf{Kontext}} \\
+\cline{3-16}
+
+& &
+\hdr{WCAG-Konf.\ prüfen} &
+\hdr{Barrieren korrigieren} &
+\hdr{Entwickler unterstützen} &
+\hdr{Tool-Reports (axe etc.)} &
+\hdr{Interaktionsdaten (Playwright)} &
+\hdr{Quellcode-Analyse} &
+\hdr{LLM-basiert} &
+\hdr{Kontextsensitiv / RAG} &
+\hdr{Lokal ausführbar} &
+\hdr{Automatisierte Eval.} &
+\hdr{Qualitative Eval.} &
+\hdr{Nutzerstudie} &
+\hdr{Rich-Client / SPA} &
+\hdr{Rechtl.\ Rahmen (BFSG etc.)} \\
+\hline
+
+% ── HOCH ─────────────────────────────────────────────
+\multicolumn{16}{|l|}{\textbf{Hoch priorisierte Studien}} \\
+\hline
+
+He et al.\ (2025) & GenA11y
+& \yes &   &   & \yes &   &   & \yes &   &   & \yes &   &   &   &   \\ \hline
+
+Fathallah et al.\ (2025) & AccessGuru
+& \yes & \yes & \yes & \yes & \yes &   & \yes &   &   & \yes &   &   &   &   \\ \hline
+
+Bassi et al.\ (2025) & LLM Auditing
+& \yes & \yes & \yes &   &   &   & \yes &   &   &   & \yes &   &   & \yes \\ \hline
+
+Paternò et al.\ (2025) & TeVal
+& \yes &   & \yes & \yes &   &   & \yes & \yes &   &   & \yes &   &   &   \\ \hline
+
+Tafreshipour et al.\ (2024) & Ma11y
+& \yes &   &   & \yes & \yes &   &   &   &   & \yes &   &   &   &   \\ \hline
+
+Fernández-Navarro \& Chicano (2025) & LLM Remediation
+& \yes & \yes & \yes & \yes &   & \yes & \yes &   &   & \yes &   &   & \yes &   \\ \hline
+
+
+% ── MITTEL ───────────────────────────────────────────
+\multicolumn{16}{|l|}{\textbf{Mittel priorisierte Studien}} \\
+\hline
+
+Yu et al.\ (2025) & GenAI Screen Reader
+& \yes & \yes &   & \yes &   & \yes & \yes & \yes &   & \yes & \yes & \yes &   &   \\ \hline
+
+Huang et al.\ (2024) & ACCESS
+& \yes & \yes & \yes & \yes & \yes &   & \yes &   &   & \yes &   &   &   &   \\ \hline
+
+Pool (2023) & Testaro
+& \yes &   &   & \yes & \yes &   &   &   &   & \yes &   &   &   &   \\ \hline
+
+Mowar et al.\ (2024) & Copilot Study
+& \yes &   & \yes &   &   &   & \yes &   &   &   &   & \yes &   &   \\ \hline
+
+Abu Doush \& Kassem (2024) & AI Code Study
+& \yes & \yes & \yes &   &   &   & \yes &   &   & \yes &   &   &   &   \\ \hline
+
+Guriță \& Vatavu (2025) & AI UI Study
+& \yes &   &   &   &   &   & \yes &   &   & \yes &   &   &   &   \\ \hline
+
+Kodithuwakku \& Wick.\ (2025) & Tool Eval.
+& \yes &   &   & \yes &   &   &   &   &   & \yes &   &   &   &   \\ \hline
+
+Manca et al.\ (2023) & Transparency
+& \yes &   & \yes & \yes &   &   &   &   &   &   & \yes & \yes &   &   \\ \hline
+
+Jiang \& Nam (2025) & Cursor Rules
+&   &   & \yes &   &   & \yes & \yes &   &   &   & \yes &   &   &   \\ \hline
+
+Gubbi Mohanbabu \& Pavel (2024) & Context-Aware Img.
+& \yes & \yes &   &   &   &   & \yes & \yes &   & \yes & \yes & \yes &   &   \\ \hline
+
+Campoverde-Molina \& Luján-Mora (2025) & AI A11y SMS
+& \yes & \yes & \yes & \yes &   &   & \yes &   &   &   & \yes &   &   &   \\ \hline
+
+Leedy et al.\ (2025) & GenAI Builder Eval.
+& \yes &   &   & \yes &   &   & \yes &   &   & \yes & \yes &   &   &   \\ \hline
+
+Patel \& Melcer (2025) & AIDA Study
+& \yes &   & \yes &   &   &   & \yes &   &   &   & \yes & \yes &   &   \\ \hline
+
+
+% ── NIEDRIG ──────────────────────────────────────────
+\multicolumn{16}{|l|}{\textbf{Niedrig priorisierte Studien}} \\
+\hline
+
+Abou-Zahra et al.\ (2018) & AI for A11y
+& \yes &   &   &   &   &   & \yes &   &   &   & \yes &   &   & \yes \\ \hline
+
+Delnevo et al.\ (2024) & LLM Interaction
+& \yes & \yes &   &   &   &   & \yes &   &   &   & \yes &   & \yes &   \\ \hline
+
+Draffan et al.\ (2020) & Web2Access+AI
+& \yes &   &   & \yes &   &   & \yes &   &   &   & \yes &   &   &   \\ \hline
+
+
+% ── Eigener PoC ──────────────────────────────────────
+\multicolumn{16}{|l|}{\textbf{Eigener Proof of Concept}} \\
+\hline
+
+\textbf{Martinez Campo (2025)} &
+\textbf{CLARA}
+& \yes & \yes & \yes
+& \yes & \yes & \yes
+& \yes & \yes & \yes
+&   & \yes &
+& \yes & \yes \\ \hline
+
+\end{tabular}
+
+\caption[Konzeptmatrix (vollständige Übersicht)]{%
+Konzeptmatrix nach Webster Watson\footcite[Vgl.][]{WebsterWatson2002}: Vollständige Übersicht aller analysierten Studien im Vergleich zum eigenen Proof of Concept.
+\yes~=~Konzept vorhanden/adressiert; leer~=~nicht adressiert.
+}
+\label{tab:konzeptmatrix_voll}
+\end{table}

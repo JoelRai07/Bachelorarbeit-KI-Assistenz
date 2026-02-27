@@ -1,0 +1,62 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{WebsterWatson2002}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=6ed791f1b25c2edc28d090a99d5856ba}{%
+           family={Webster},
+           familyi={W\bibinitperiod},
+           given={Jane},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8da518c264e426f51264b39faf1ba701}{%
+           family={Watson},
+           familyi={W\bibinitperiod},
+           given={Richard\bibnamedelima T.},
+           giveni={R\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bebf48c11fae9b06937f32e891ef5884}
+      \strng{fullhash}{bebf48c11fae9b06937f32e891ef5884}
+      \strng{fullhashraw}{bebf48c11fae9b06937f32e891ef5884}
+      \strng{bibnamehash}{bebf48c11fae9b06937f32e891ef5884}
+      \strng{authorbibnamehash}{bebf48c11fae9b06937f32e891ef5884}
+      \strng{authornamehash}{bebf48c11fae9b06937f32e891ef5884}
+      \strng{authorfullhash}{bebf48c11fae9b06937f32e891ef5884}
+      \strng{authorfullhashraw}{bebf48c11fae9b06937f32e891ef5884}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{MIS Quarterly}
+      \field{number}{2}
+      \field{title}{Analyzing the Past to Prepare for the Future: Writing a Literature Review}
+      \field{volume}{26}
+      \field{year}{2002}
+      \field{pages}{2\bibrangedash 6}
+      \range{pages}{5}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

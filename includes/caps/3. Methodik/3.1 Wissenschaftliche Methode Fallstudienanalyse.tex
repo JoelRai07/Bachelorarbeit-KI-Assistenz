@@ -1,0 +1,87 @@
+\chapter{Methodik}
+\section{Wissenschaftliche Methode Fallstudienanalyse}
+
+\newcolumntype{A}{>{\raggedright\arraybackslash}p{4.3cm}} % Autor/Jahr
+\newcolumntype{S}{>{\raggedright\arraybackslash}p{2.8cm}} % System
+\newcolumntype{C}{>{\centering\arraybackslash}p{0.55cm}}  % Konzept-Spalten (alle gleich breit)
+
+\newcommand{\lhdr}[2]{\parbox[c][32mm][c]{#1}{\centering\textbf{#2}}}
+\newcommand{\hdr}[1]{\rotatebox{90}{\scriptsize\strut #1}}
+
+\newcommand{\yes}{\textbf{x}}
+
+\begin{table}[htbp]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.25}
+
+\begin{tabular}{|A|S||*{14}{C|}}
+\hline
+\multicolumn{2}{|c||}{\textbf{Studie}} &
+\multicolumn{14}{c|}{\textbf{Konzepte}} \\
+\hline
+
+\multirow{2}{*}{\lhdr{4.3cm}{Autor(en)\\\& Jahr}} &
+\multirow{2}{*}{\lhdr{2.8cm}{System}} &
+\multicolumn{3}{c|}{\textbf{Ziel}} &
+\multicolumn{3}{c|}{\textbf{Datenquellen}} &
+\multicolumn{3}{c|}{\textbf{KI-/LLM-Ansatz}} &
+\multicolumn{3}{c|}{\textbf{Evaluation}} &
+\multicolumn{2}{c|}{\textbf{Kontext}} \\
+\cline{3-16}
+
+& &
+\hdr{WCAG-Konf.\ prüfen} &
+\hdr{Barrieren korrigieren} &
+\hdr{Entwickler unterstützen} &
+\hdr{Tool-Reports (axe etc.)} &
+\hdr{Interaktionsdaten (Playwright)} &
+\hdr{Quellcode-Analyse} &
+\hdr{LLM-basiert} &
+\hdr{Kontextsensitiv / RAG} &
+\hdr{Lokal ausführbar} &
+\hdr{Automatisierte Eval.} &
+\hdr{Qualitative Eval.} &
+\hdr{Nutzerstudie} &
+\hdr{Rich-Client / SPA} &
+\hdr{Rechtl.\ Rahmen (BFSG etc.)} \\
+\hline
+
+% ── HOCH-priorisierte Studien ────────────────────────────────
+\multicolumn{16}{|l|}{\textbf{Hoch priorisierte Studien}} \\
+\hline
+
+He et al.\ (2025) & GenA11y
+& \yes &   &   & \yes &   &   & \yes &   &   & \yes &   &   &   &   \\ \hline
+
+Fathallah et al.\ (2025) & AccessGuru
+& \yes & \yes & \yes & \yes & \yes &   & \yes &   &   & \yes &   &   &   &   \\ \hline
+
+Bassi et al.\ (2025) & LLM Auditing
+& \yes & \yes & \yes &   &   &   & \yes &   &   &   & \yes &   &   & \yes \\ \hline
+
+Paternò et al.\ (2025) & TeVal
+& \yes &   & \yes & \yes &   &   & \yes & \yes &   &   & \yes &   &   &   \\ \hline
+
+Tafreshipour et al.\ (2024) & Ma11y
+& \yes &   &   & \yes & \yes &   &   &   &   & \yes &   &   &   &   \\ \hline
+
+% ── Eigener PoC ──────────────────────────────────────────────
+
+\textbf{Martinez Campo (2026)} &
+\textbf{CLARA}
+& \yes & \yes & \yes
+& \yes & \yes & \yes
+& \yes & \yes & \yes
+&   & \yes & 
+& \yes & \yes \\ \hline
+
+\end{tabular}
+
+\caption[Konzeptmatrix (Hauptmatrix, hoch priorisierte Studien)]{%
+  Konzeptmatrix nach Webster Watson\footcite[Vgl.][]{WebsterWatson2002}: Hoch priorisierte Studien im Vergleich
+  zum eigenen Proof of Concept. \yes~=~Konzept vorhanden/adressiert; leer ~=~nicht adressiert.
+  Die vollständige Matrix aller analysierten Studien findet sich in Anhang~\ref{app:konzeptmatrix}.}
+\label{tab:konzeptmatrix_haupt}
+\end{table}
