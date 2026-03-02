@@ -19,6 +19,37 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
+    \entry{OHCHR}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6fab04391a8fca70b59b2115b71407ad}{%
+           family={{United Nations Human Rights}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{6fab04391a8fca70b59b2115b71407ad}
+      \strng{fullhash}{6fab04391a8fca70b59b2115b71407ad}
+      \strng{fullhashraw}{6fab04391a8fca70b59b2115b71407ad}
+      \strng{bibnamehash}{6fab04391a8fca70b59b2115b71407ad}
+      \strng{authorbibnamehash}{6fab04391a8fca70b59b2115b71407ad}
+      \strng{authornamehash}{6fab04391a8fca70b59b2115b71407ad}
+      \strng{authorfullhash}{6fab04391a8fca70b59b2115b71407ad}
+      \strng{authorfullhashraw}{6fab04391a8fca70b59b2115b71407ad}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{journaltitle}{OHCHR}
+      \field{urlday}{28}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ohchr.org/en/instruments-mechanisms/instruments/convention-rights-persons-disabilities
+      \endverb
+      \verb{url}
+      \verb https://www.ohchr.org/en/instruments-mechanisms/instruments/convention-rights-persons-disabilities
+      \endverb
+    \endentry
     \entry{WebsterWatson2002}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=6ed791f1b25c2edc28d090a99d5856ba}{%
@@ -55,6 +86,40 @@
       \field{year}{2002}
       \field{pages}{2\bibrangedash 6}
       \range{pages}{5}
+    \endentry
+    \entry{WHO}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=531217507bec092b6ec36c0f78f46736}{%
+           family={{World Health Organization}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {World Health Organization}%
+      }
+      \strng{namehash}{531217507bec092b6ec36c0f78f46736}
+      \strng{fullhash}{531217507bec092b6ec36c0f78f46736}
+      \strng{fullhashraw}{531217507bec092b6ec36c0f78f46736}
+      \strng{bibnamehash}{531217507bec092b6ec36c0f78f46736}
+      \strng{authorbibnamehash}{531217507bec092b6ec36c0f78f46736}
+      \strng{authornamehash}{531217507bec092b6ec36c0f78f46736}
+      \strng{authorfullhash}{531217507bec092b6ec36c0f78f46736}
+      \strng{authorfullhashraw}{531217507bec092b6ec36c0f78f46736}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{journaltitle}{World Health Organization}
+      \field{urlday}{28}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.who.int/health-topics/disability#tab=tab_1
+      \endverb
+      \verb{url}
+      \verb https://www.who.int/health-topics/disability#tab=tab_1
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

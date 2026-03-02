@@ -363,85 +363,44 @@ INPUT .\latex-vorlage.lot
 INPUT .\latex-vorlage.lot
 INPUT latex-vorlage.lot
 OUTPUT latex-vorlage.lot
-INPUT .\includes\caps\1. Einleitung\1.1 Motivation und Kontext.tex
-INPUT .\includes\caps\1. Einleitung\1.1 Motivation und Kontext.tex
-INPUT includes\caps\1. Einleitung\1.1 Motivation und Kontext.tex
+INPUT .\includes\caps\1.tex
+INPUT .\includes\caps\1.tex
+INPUT includes\caps\1.tex
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecsx1440.tfm
-INPUT .\includes\caps\1. Einleitung\1.2 Problemstellung und Zielsetzung.tex
-INPUT .\includes\caps\1. Einleitung\1.2 Problemstellung und Zielsetzung.tex
-INPUT includes\caps\1. Einleitung\1.2 Problemstellung und Zielsetzung.tex
-INPUT .\includes\caps\1. Einleitung\1.3 Forschungsfrage(n) und Aufbau der Arbeit.tex
-INPUT .\includes\caps\1. Einleitung\1.3 Forschungsfrage(n) und Aufbau der Arbeit.tex
-INPUT includes\caps\1. Einleitung\1.3 Forschungsfrage(n) und Aufbau der Arbeit.tex
-INPUT .\includes\caps\2. Theoretische Grundlagen\2.1 Barrierefreiheit von Webanwendungen.tex
-INPUT .\includes\caps\2. Theoretische Grundlagen\2.1 Barrierefreiheit von Webanwendungen.tex
-INPUT includes\caps\2. Theoretische Grundlagen\2.1 Barrierefreiheit von Webanwendungen.tex
-INPUT .\includes\caps\2. Theoretische Grundlagen\2.2 Automatisierte Barrierefreiheitsanalyse.tex
-INPUT .\includes\caps\2. Theoretische Grundlagen\2.2 Automatisierte Barrierefreiheitsanalyse.tex
-INPUT includes\caps\2. Theoretische Grundlagen\2.2 Automatisierte Barrierefreiheitsanalyse.tex
-INPUT .\includes\caps\2. Theoretische Grundlagen\2.3 Rich-Client-Webanwendungen und Testautomatisierung.tex
-INPUT .\includes\caps\2. Theoretische Grundlagen\2.3 Rich-Client-Webanwendungen und Testautomatisierung.tex
-INPUT includes\caps\2. Theoretische Grundlagen\2.3 Rich-Client-Webanwendungen und Testautomatisierung.tex
-INPUT .\includes\caps\2. Theoretische Grundlagen\2.4 KI-Assistenzsysteme für Softwareanalyse und Handlungsempfehlungen.tex
-INPUT .\includes\caps\2. Theoretische Grundlagen\2.4 KI-Assistenzsysteme für Softwareanalyse und Handlungsempfehlungen.tex
-INPUT includes\caps\2. Theoretische Grundlagen\2.4 KI-Assistenzsysteme für Softwareanalyse und Handlungsempfehlungen.tex
-INPUT .\includes\caps\3. Methodik\3.1 Wissenschaftliche Methode Fallstudienanalyse.tex
-INPUT .\includes\caps\3. Methodik\3.1 Wissenschaftliche Methode Fallstudienanalyse.tex
-INPUT includes\caps\3. Methodik\3.1 Wissenschaftliche Methode Fallstudienanalyse.tex
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0800.tfm
-INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
-INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0900.tfm
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr9.tfm
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi9.tfm
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy9.tfm
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex9.tfm
+INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0600.tfm
-INPUT .\includes\caps\3. Methodik\3.2 Untersuchungsgegenstand und Scope-Abgrenzung.tex
-INPUT .\includes\caps\3. Methodik\3.2 Untersuchungsgegenstand und Scope-Abgrenzung.tex
-INPUT includes\caps\3. Methodik\3.2 Untersuchungsgegenstand und Scope-Abgrenzung.tex
-INPUT .\includes\caps\3. Methodik\3.3 Evaluationsdesign und Kriterien.tex
-INPUT .\includes\caps\3. Methodik\3.3 Evaluationsdesign und Kriterien.tex
-INPUT includes\caps\3. Methodik\3.3 Evaluationsdesign und Kriterien.tex
-INPUT .\includes\caps\4. Analyse und Anforderungen\4.1 Analyse der Tool-Outputs und typischer Findings.tex
-INPUT .\includes\caps\4. Analyse und Anforderungen\4.1 Analyse der Tool-Outputs und typischer Findings.tex
-INPUT includes\caps\4. Analyse und Anforderungen\4.1 Analyse der Tool-Outputs und typischer Findings.tex
-INPUT .\includes\caps\4. Analyse und Anforderungen\4.2 Analyse von Interaktionsdaten aus Playwright.tex
-INPUT .\includes\caps\4. Analyse und Anforderungen\4.2 Analyse von Interaktionsdaten aus Playwright.tex
-INPUT includes\caps\4. Analyse und Anforderungen\4.2 Analyse von Interaktionsdaten aus Playwright.tex
-INPUT .\includes\caps\4. Analyse und Anforderungen\4.3 Analyse der Codebasis als Kontextquelle.tex
-INPUT .\includes\caps\4. Analyse und Anforderungen\4.3 Analyse der Codebasis als Kontextquelle.tex
-INPUT includes\caps\4. Analyse und Anforderungen\4.3 Analyse der Codebasis als Kontextquelle.tex
-INPUT .\includes\caps\4. Analyse und Anforderungen\4.4 Datenschutz & Sicherheitsanforderungen.tex
-INPUT .\includes\caps\4. Analyse und Anforderungen\4.4 Datenschutz & Sicherheitsanforderungen.tex
-INPUT includes\caps\4. Analyse und Anforderungen\4.4 Datenschutz & Sicherheitsanforderungen.tex
-INPUT .\includes\caps\5. Konzeption des Assistenzsystems\5.1 Zielarchitektur und Datenpipeline.tex
-INPUT .\includes\caps\5. Konzeption des Assistenzsystems\5.1 Zielarchitektur und Datenpipeline.tex
-INPUT includes\caps\5. Konzeption des Assistenzsystems\5.1 Zielarchitektur und Datenpipeline.tex
-INPUT .\includes\caps\5. Konzeption des Assistenzsystems\5.2 Modell der Kontextualisierung & Priorisierung.tex
-INPUT .\includes\caps\5. Konzeption des Assistenzsystems\5.2 Modell der Kontextualisierung & Priorisierung.tex
-INPUT includes\caps\5. Konzeption des Assistenzsystems\5.2 Modell der Kontextualisierung & Priorisierung.tex
-INPUT .\includes\caps\5. Konzeption des Assistenzsystems\5.3 Ausgabeformat entwicklernahe To-Do-Liste.tex
-INPUT .\includes\caps\5. Konzeption des Assistenzsystems\5.3 Ausgabeformat entwicklernahe To-Do-Liste.tex
-INPUT includes\caps\5. Konzeption des Assistenzsystems\5.3 Ausgabeformat entwicklernahe To-Do-Liste.tex
-INPUT .\includes\caps\6. PoC\6.1 Technische Umsetzung.tex
-INPUT .\includes\caps\6. PoC\6.1 Technische Umsetzung.tex
-INPUT includes\caps\6. PoC\6.1 Technische Umsetzung.tex
-INPUT .\includes\caps\6. PoC\6.2 Beispielabläufe und Ergebnisse am Untersuchungsobjekt.tex
-INPUT .\includes\caps\6. PoC\6.2 Beispielabläufe und Ergebnisse am Untersuchungsobjekt.tex
-INPUT includes\caps\6. PoC\6.2 Beispielabläufe und Ergebnisse am Untersuchungsobjekt.tex
-INPUT .\includes\caps\7. Evaluation & Diskussion\7.1 Ergebnisse entlang der Kriterien und Limitationen.tex
-INPUT .\includes\caps\7. Evaluation & Diskussion\7.1 Ergebnisse entlang der Kriterien und Limitationen.tex
-INPUT includes\caps\7. Evaluation & Diskussion\7.1 Ergebnisse entlang der Kriterien und Limitationen.tex
-INPUT .\includes\caps\7. Evaluation & Diskussion\7.2 Handlungsempfehlungen und Ausblick.tex
-INPUT .\includes\caps\7. Evaluation & Diskussion\7.2 Handlungsempfehlungen und Ausblick.tex
-INPUT includes\caps\7. Evaluation & Diskussion\7.2 Handlungsempfehlungen und Ausblick.tex
-INPUT .\includes\caps\8. Fazit\8. Fazit.tex
-INPUT .\includes\caps\8. Fazit\8. Fazit.tex
-INPUT includes\caps\8. Fazit\8. Fazit.tex
+INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1095.tfm
+INPUT .\includes\caps\2.tex
+INPUT .\includes\caps\2.tex
+INPUT includes\caps\2.tex
+INPUT .\includes\caps\3.tex
+INPUT .\includes\caps\3.tex
+INPUT includes\caps\3.tex
+INPUT .\includes\caps\4.tex
+INPUT .\includes\caps\4.tex
+INPUT includes\caps\4.tex
+INPUT .\includes\caps\5.tex
+INPUT .\includes\caps\5.tex
+INPUT includes\caps\5.tex
+INPUT .\includes\caps\6.tex
+INPUT .\includes\caps\6.tex
+INPUT includes\caps\6.tex
+INPUT .\includes\caps\7.tex
+INPUT .\includes\caps\7.tex
+INPUT includes\caps\7.tex
+INPUT .\includes\caps\8.tex
+INPUT .\includes\caps\8.tex
+INPUT includes\caps\8.tex
 INPUT .\includes\anhang.tex
 INPUT .\includes\anhang.tex
 INPUT includes\anhang.tex
@@ -450,11 +409,12 @@ INPUT .\latex-vorlage.app
 INPUT latex-vorlage.app
 OUTPUT latex-vorlage.app
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0500.tfm
+INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\eccc1095.tfm
+INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ectt1095.tfm
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1095.tfm
 INPUT .\includes\extra\erklaerung_ki.tex
 INPUT .\includes\extra\erklaerung_ki.tex
 INPUT includes\extra\erklaerung_ki.tex
-INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1095.tfm
 INPUT .\template\_dhbw_erklaerung.tex
 INPUT .\template\_dhbw_erklaerung.tex
 INPUT template\_dhbw_erklaerung.tex
@@ -463,18 +423,22 @@ INPUT .\latex-vorlage.out
 INPUT .\latex-vorlage.out
 INPUT latex-vorlage.run.xml
 OUTPUT latex-vorlage.run.xml
+INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk
+INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk
+INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk
+INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk
+INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1095.pk
+INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1095.pk
+INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0500.pk
+INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0500.pk
+INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1095.pk
+INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1095.pk
+INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1095.pk
+INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1095.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk
-INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1095.pk
-INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1095.pk
-INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk
-INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk
-INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0500.pk
-INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0500.pk
-INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1095.pk
-INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1095.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1440.pk

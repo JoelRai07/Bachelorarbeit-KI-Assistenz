@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.9.8)  27 FEB 2026 20:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.9.8)  2 MAR 2026 00:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1001,7 +1001,20 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [3
 
 
-] (includes/extra/abkuerzungen.tex)
+] (includes/extra/abkuerzungen.tex
+
+LaTeX Warning: Hyper reference `acro:RoI' on page IV undefined on input line 9.
+
+
+LaTeX Warning: Hyper reference `acro:RoI' on page IV undefined on input line 9.
+
+
+LaTeX Warning: Hyper reference `acro:UCS' on page IV undefined on input line 10.
+
+
+LaTeX Warning: Hyper reference `acro:UCS' on page IV undefined on input line 10.
+
+)
 
 [4
 
@@ -1022,19 +1035,65 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 [6
 
-] (includes/caps/1. Einleitung/1.1 Motivation und Kontext.tex
+] (includes/caps/1.tex
 chapter 1.
-) (includes/caps/1. Einleitung/1.2 Problemstellung und Zielsetzung.tex) (includes/caps/1. Einleitung/1.3 Forschungsfrage(n) und Aufbau der Arbeit.tex) (includes/caps/2. Theoretische Grundlagen/2.1 Barrierefreiheit von Webanwendungen.tex
+Package acronym Info: Label `acro:WCAG' newly defined as it shall be overridden
+although it is yet undefined on input line 3.
+Package acronym Info: Label `acro:LLM' newly defined as it shall be overridden
+although it is yet undefined on input line 5.
+
 
 [1
 
 
 
 ]
-chapter 2.
-) (includes/caps/2. Theoretische Grundlagen/2.2 Automatisierte Barrierefreiheitsanalyse.tex) (includes/caps/2. Theoretische Grundlagen/2.3 Rich-Client-Webanwendungen und Testautomatisierung.tex) (includes/caps/2. Theoretische Grundlagen/2.4 KI-Assistenzsysteme für Softwareanalyse und Handlungsempfehlungen.tex) (includes/caps/3. Methodik/3.1 Wissenschaftliche Methode Fallstudienanalyse.tex
+Package acronym Info: Label `acro:EAA' newly defined as it shall be overridden
+although it is yet undefined on input line 13.
+Package acronym Info: Label `acro:BFSG' newly defined as it shall be overridden
+although it is yet undefined on input line 13.
+Package acronym Info: Label `acro:BITV' newly defined as it shall be overridden
+although it is yet undefined on input line 13.
+Package acronym Info: Label `acro:BITBW' newly defined as it shall be overridden
+although it is yet undefined on input line 17.
 
-[2
+
+[2]
+Package acronym Info: Label `acro:DOM' newly defined as it shall be overridden
+although it is yet undefined on input line 24.
+
+Overfull \hbox (22.82834pt too wide) in paragraph at lines 32--34
+\T1/cmr/m/n/10.95 ren, kon-text-sen-si-ti-ven As-sis-tenz-l�-sung zur Bar-rie-re-frei-heits-ana-ly-se von Rich-Client-Webanwendungen.
+ []
+
+
+Overfull \hbox (18.02914pt too wide) in paragraph at lines 32--34
+\T1/cmr/m/n/10.95 Der Proof of Con-cept soll au-to-ma-ti-sier-te Barrierefreiheits-Reports, In-ter-ak-ti-ons-da-ten aus Playwright-
+ []
+
+
+
+[3]
+Overfull \hbox (18.3576pt too wide) in paragraph at lines 37--38
+[]\T1/cmr/bx/n/10.95 Inwieweit kann ein kon-text-sen-si-ti-ves KI-Assistenzsystem, das Tool-Reports, Playwright-
+ []
+
+Package acronym Info: Label `acro:TF' newly defined as it shall be overridden
+although it is yet undefined on input line 39.
+
+Overfull \hbox (4.98296pt too wide) in paragraph at lines 42--43
+[][][]\T1/cmr/m/n/10.95 2: In-wie-fern ver-bes-sert die Ein-be-zie-hung von Quell-co-de und Playwright-Interaktionsdaten
+ []
+
+
+
+[4]) (includes/caps/2.tex
+
+[5]
+chapter 2.
+) (includes/caps/3.tex
+
+[6
 
 ]
 chapter 3.
@@ -1051,39 +1110,39 @@ Overfull \hbox (70.69429pt too wide) in paragraph at lines 19--81
  [][] 
  []
 
-) (includes/caps/3. Methodik/3.2 Untersuchungsgegenstand und Scope-Abgrenzung.tex) (includes/caps/3. Methodik/3.3 Evaluationsdesign und Kriterien.tex) (includes/caps/4. Analyse und Anforderungen/4.1 Analyse der Tool-Outputs und typischer Findings.tex
+) (includes/caps/4.tex
 
-[3
+[7
 
 ]
 chapter 4.
-) (includes/caps/4. Analyse und Anforderungen/4.2 Analyse von Interaktionsdaten aus Playwright.tex) (includes/caps/4. Analyse und Anforderungen/4.3 Analyse der Codebasis als Kontextquelle.tex) (includes/caps/4. Analyse und Anforderungen/4.4 Datenschutz & Sicherheitsanforderungen.tex) (includes/caps/5. Konzeption des Assistenzsystems/5.1 Zielarchitektur und Datenpipeline.tex
+) (includes/caps/5.tex
 
-[4
+[8
 
 ]
 chapter 5.
-) (includes/caps/5. Konzeption des Assistenzsystems/5.2 Modell der Kontextualisierung & Priorisierung.tex) (includes/caps/5. Konzeption des Assistenzsystems/5.3 Ausgabeformat entwicklernahe To-Do-Liste.tex) (includes/caps/6. PoC/6.1 Technische Umsetzung.tex
+) (includes/caps/6.tex
 
-[5
+[9
 
 ]
 chapter 6.
-) (includes/caps/6. PoC/6.2 Beispielabläufe und Ergebnisse am Untersuchungsobjekt.tex) (includes/caps/7. Evaluation & Diskussion/7.1 Ergebnisse entlang der Kriterien und Limitationen.tex
+) (includes/caps/7.tex
 
-[6
+[10
 
 ]
 chapter 7.
-) (includes/caps/7. Evaluation & Diskussion/7.2 Handlungsempfehlungen und Ausblick.tex) (includes/caps/8. Fazit/8. Fazit.tex
+) (includes/caps/8.tex
 
-[7
+[11
 
 ]
 chapter 8.
 ) (includes/anhang.tex
 
-[8
+[12
 
 ] (latex-vorlage.app)
 \tf@app=\write8
@@ -1091,7 +1150,7 @@ chapter 8.
 
 
 
-[9
+[13
 
 ]
 Overfull \vbox (67.29887pt too high) detected at line 19
@@ -1102,19 +1161,24 @@ Overfull \vbox (67.29887pt too high) detected at line 20
  []
 
 
-Overfull \hbox (70.69429pt too wide) in paragraph at lines 13--139
+Overfull \hbox (70.69429pt too wide) in paragraph at lines 13--141
  [][] 
  []
 
 )
 
-[10
+[14
 
 ]
 
-[11]
+[15]
+Overfull \hbox (2.73012pt too wide) in paragraph at lines 69--69
+\T1/cmtt/m/n/10.95 mechanisms / instruments / convention -[] rights -[] persons -[] disabilities$[] \T1/cmr/m/n/10.95 (Ab-ruf: 28. 02. 2026). 
+ []
 
-[12
+
+
+[16
 
 
 ] (includes/extra/erklaerung_ki.tex
@@ -1134,21 +1198,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--132
 
 
 
-[13
+[17
 
 
 
 ]) (template/_dhbw_erklaerung.tex
 
-[14])
+[18])
 
-[15
+[19
 
 ] (latex-vorlage.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `latex-vorlage.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'latex-vorlage.run.xml'.
@@ -1156,23 +1224,23 @@ Package logreq Info: Writing requests to 'latex-vorlage.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29076 strings out of 473523
- 588243 string characters out of 5714631
- 1654065 words of memory out of 5000000
- 51734 multiletter control sequences out of 15000+600000
- 581288 words of font info for 84 fonts, out of 8000000 for 9000
+ 29082 strings out of 473523
+ 578704 string characters out of 5714631
+ 1658782 words of memory out of 5000000
+ 51768 multiletter control sequences out of 15000+600000
+ 582278 words of font info for 86 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 108i,17n,127p,10962b,2369s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,18n,127p,10962b,2369s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-pdfTeX warning (dest): name{Hfootnote.42} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.53} has been referenced but does not exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{Hfootnote.17} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.28} has been referenced but does not exist, replaced by a fixed one
 
- <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0500.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on latex-vorlage.pdf (21 pages, 261370 bytes).
+ <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0500.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on latex-vorlage.pdf (25 pages, 306225 bytes).
 PDF statistics:
- 936 PDF objects out of 1000 (max. 8388607)
- 70 named destinations out of 1000 (max. 500000)
- 273 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1096 PDF objects out of 1200 (max. 8388607)
+ 97 named destinations out of 1000 (max. 500000)
+ 281 words of extra memory for PDF output out of 10000 (max. 10000000)
 
