@@ -19,6 +19,685 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
+    \entry{axe}{software}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c89ee4a2c9dcae6581ca53bff9aa4ee5}{%
+           family={axe},
+           familyi={a\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Deque Systems Inc.}%
+      }
+      \strng{namehash}{c89ee4a2c9dcae6581ca53bff9aa4ee5}
+      \strng{fullhash}{c89ee4a2c9dcae6581ca53bff9aa4ee5}
+      \strng{fullhashraw}{c89ee4a2c9dcae6581ca53bff9aa4ee5}
+      \strng{bibnamehash}{c89ee4a2c9dcae6581ca53bff9aa4ee5}
+      \strng{authorbibnamehash}{c89ee4a2c9dcae6581ca53bff9aa4ee5}
+      \strng{authornamehash}{c89ee4a2c9dcae6581ca53bff9aa4ee5}
+      \strng{authorfullhash}{c89ee4a2c9dcae6581ca53bff9aa4ee5}
+      \strng{authorfullhashraw}{c89ee4a2c9dcae6581ca53bff9aa4ee5}
+      \field{sortinit}{a}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Accessibility engine for automated Web {UI} testing}
+      \field{day}{24}
+      \field{month}{2}
+      \field{note}{original-date: 2015-06-10T15:26:45Z}
+      \field{title}{dequelabs/axe-core}
+      \field{urlday}{24}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/dequelabs/axe-core
+      \endverb
+      \verb{url}
+      \verb https://github.com/dequelabs/axe-core
+      \endverb
+      \keyw{accessibility,a11y,axe,Gering,Referenz}
+    \endentry
+    \entry{BFSG}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0f6b23d0bce1427069ac64c0687379c1}{%
+           family={Barrierefreiheitsstärkungsgesetz},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{0f6b23d0bce1427069ac64c0687379c1}
+      \strng{fullhash}{0f6b23d0bce1427069ac64c0687379c1}
+      \strng{fullhashraw}{0f6b23d0bce1427069ac64c0687379c1}
+      \strng{bibnamehash}{0f6b23d0bce1427069ac64c0687379c1}
+      \strng{authorbibnamehash}{0f6b23d0bce1427069ac64c0687379c1}
+      \strng{authornamehash}{0f6b23d0bce1427069ac64c0687379c1}
+      \strng{authorfullhash}{0f6b23d0bce1427069ac64c0687379c1}
+      \strng{authorfullhashraw}{0f6b23d0bce1427069ac64c0687379c1}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{BFSG}
+      \field{month}{2}
+      \field{title}{BFSG (Barrierefreiheitsstärkungsgesetz)}
+      \field{urlday}{24}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://bfsg-gesetz.de/
+      \endverb
+      \verb{url}
+      \verb https://bfsg-gesetz.de/
+      \endverb
+    \endentry
+    \entry{bassi_assessment_2025}{inproceedings}{}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=43fb208d055424208d21c170755edadb}{%
+           family={Bassi},
+           familyi={B\bibinitperiod},
+           given={Barry},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=66a64ed6b67003a30b625b8aa8afde78}{%
+           family={Delnevo},
+           familyi={D\bibinitperiod},
+           given={Giovanni},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ee4c748f696e1400942b82fcddc646bf}{%
+           family={Franco},
+           familyi={F\bibinitperiod},
+           given={Mirko},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0829213c71043eae2d8d8b741759a86e}{%
+           family={Gaggi},
+           familyi={G\bibinitperiod},
+           given={Ombretta},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a23fa297ed28e1e9eb0ab0a51fb610c6}{%
+           family={Gatto},
+           familyi={G\bibinitperiod},
+           given={Salvatore},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8c009711da5f2533327b494c3180c539}{%
+           family={Mirri},
+           familyi={M\bibinitperiod},
+           given={Silvia},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2d06ba437cbed58434edbcae18834cfe}{%
+           family={Olaiya},
+           familyi={O\bibinitperiod},
+           given={Kelvin},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York, {NY}, {USA}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{fe015e77fe1042fc0a892ee46c115a5b}
+      \strng{fullhash}{b2139693d445663909b34ff45620b7e2}
+      \strng{fullhashraw}{b2139693d445663909b34ff45620b7e2}
+      \strng{bibnamehash}{b2139693d445663909b34ff45620b7e2}
+      \strng{authorbibnamehash}{b2139693d445663909b34ff45620b7e2}
+      \strng{authornamehash}{fe015e77fe1042fc0a892ee46c115a5b}
+      \strng{authorfullhash}{b2139693d445663909b34ff45620b7e2}
+      \strng{authorfullhashraw}{b2139693d445663909b34ff45620b7e2}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Accessibility constitutes a fundamental right codified in national and international legislation and the {SDGs}. In particular, web accessibility is essential to enable people with disabilities to engage fully in societal and professional activities. Despite mandatory legal requirements, such as those included in the Web Accessibility Directive and the European Accessibility Act, a substantial portion of websites continue to exhibit accessibility barriers. Moreover, awareness of accessibility best practices remains limited among designers and developers. In this context, we assess the effectiveness of Large Language Models for automated accessibility auditing and {HTML} validation. We also examine how these models can aid developers in producing semantically correct and accessible web content, and we discuss their current limitations. Our research highlights the promises and challenges of integrating {LLMs} in web development and advocates using these tools as supportive aids rather than standalone solutions.}
+      \field{booktitle}{Proceedings of the 2025 International Conference on Information Technology for Social Good}
+      \field{isbn}{979-8-4007-2089-5}
+      \field{series}{{GoodIT} '25}
+      \field{title}{An Assessment of {LLM}-Based Auditing and Validation for Web Accessibility}
+      \field{urlday}{24}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{297\bibrangedash 305}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1145/3748699.3749805
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\YTSGK7SR\\Bassi et al. - 2025 - An Assessment of LLM-Based Auditing and Validation for Web Accessibility.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3748699.3749805
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3748699.3749805
+      \endverb
+      \keyw{Hoch,Wichtig}
+    \endentry
+    \entry{BITBW_2021}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c1dd1ae77076811036c172175f19f3f1}{%
+           family={BITBW},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{c1dd1ae77076811036c172175f19f3f1}
+      \strng{fullhash}{c1dd1ae77076811036c172175f19f3f1}
+      \strng{fullhashraw}{c1dd1ae77076811036c172175f19f3f1}
+      \strng{bibnamehash}{c1dd1ae77076811036c172175f19f3f1}
+      \strng{authorbibnamehash}{c1dd1ae77076811036c172175f19f3f1}
+      \strng{authornamehash}{c1dd1ae77076811036c172175f19f3f1}
+      \strng{authorfullhash}{c1dd1ae77076811036c172175f19f3f1}
+      \strng{authorfullhashraw}{c1dd1ae77076811036c172175f19f3f1}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Zur Startseite}
+      \field{month}{7}
+      \field{title}{6 Jahre BITBW}
+      \field{urlday}{12}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://bitbw.de/neuigkeiten/artikel/6-jahre-bitbw-1
+      \endverb
+      \verb{url}
+      \verb https://bitbw.de/neuigkeiten/artikel/6-jahre-bitbw-1
+      \endverb
+    \endentry
+    \entry{BITV}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ca9e1064e1d32641b807916e8e7c4ede}{%
+           family={{Bundesministerium für Digitales und Staatsmodernisierung}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Portal Barrierefreiheit der Dienstekonsolidierung des Bundes}%
+      }
+      \strng{namehash}{ca9e1064e1d32641b807916e8e7c4ede}
+      \strng{fullhash}{ca9e1064e1d32641b807916e8e7c4ede}
+      \strng{fullhashraw}{ca9e1064e1d32641b807916e8e7c4ede}
+      \strng{bibnamehash}{ca9e1064e1d32641b807916e8e7c4ede}
+      \strng{authorbibnamehash}{ca9e1064e1d32641b807916e8e7c4ede}
+      \strng{authornamehash}{ca9e1064e1d32641b807916e8e7c4ede}
+      \strng{authorfullhash}{ca9e1064e1d32641b807916e8e7c4ede}
+      \strng{authorfullhashraw}{ca9e1064e1d32641b807916e8e7c4ede}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Portal Barrierefreiheit der Dienstekonsolidierung des Bundes}
+      \field{month}{4}
+      \field{title}{Barrierefreie-Informationstechnik-Verordnung (BITV 2.0)}
+      \field{urlday}{24}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.barrierefreiheit-dienstekonsolidierung.bund.de/Webs/PB/DE/gesetze-und-richtlinien/bitv2-0/bitv2-0-node.html
+      \endverb
+      \verb{url}
+      \verb https://www.barrierefreiheit-dienstekonsolidierung.bund.de/Webs/PB/DE/gesetze-und-richtlinien/bitv2-0/bitv2-0-node.html
+      \endverb
+    \endentry
+    \entry{EAA}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=516d1743b3db5136e2551ce1b0fbad49}{%
+           family={{European Comission}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{516d1743b3db5136e2551ce1b0fbad49}
+      \strng{fullhash}{516d1743b3db5136e2551ce1b0fbad49}
+      \strng{fullhashraw}{516d1743b3db5136e2551ce1b0fbad49}
+      \strng{bibnamehash}{516d1743b3db5136e2551ce1b0fbad49}
+      \strng{authorbibnamehash}{516d1743b3db5136e2551ce1b0fbad49}
+      \strng{authornamehash}{516d1743b3db5136e2551ce1b0fbad49}
+      \strng{authorfullhash}{516d1743b3db5136e2551ce1b0fbad49}
+      \strng{authorfullhashraw}{516d1743b3db5136e2551ce1b0fbad49}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{European Commission}
+      \field{title}{European accessibility act (EAA)}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/european-accessibility-act-eaa_en
+      \endverb
+      \verb{url}
+      \verb https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/european-accessibility-act-eaa_en
+      \endverb
+    \endentry
+    \entry{fathallah_accessguru_2025}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=9fdf6d84f9ddb39c1fc301a6e709d508}{%
+           family={Fathallah},
+           familyi={F\bibinitperiod},
+           given={Nadeen},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2ae708ea9438367bb4c41ea4ef2ba4d3}{%
+           family={Hernández},
+           familyi={H\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3489f3873d85937d1977e3a21e5e76a7}{%
+           family={Staab},
+           familyi={S\bibinitperiod},
+           given={Steffen},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York, {NY}, {USA}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{a97c6ad05dcaa4e61a34ad4c99a400b3}
+      \strng{fullhash}{a97c6ad05dcaa4e61a34ad4c99a400b3}
+      \strng{fullhashraw}{a97c6ad05dcaa4e61a34ad4c99a400b3}
+      \strng{bibnamehash}{a97c6ad05dcaa4e61a34ad4c99a400b3}
+      \strng{authorbibnamehash}{a97c6ad05dcaa4e61a34ad4c99a400b3}
+      \strng{authornamehash}{a97c6ad05dcaa4e61a34ad4c99a400b3}
+      \strng{authorfullhash}{a97c6ad05dcaa4e61a34ad4c99a400b3}
+      \strng{authorfullhashraw}{a97c6ad05dcaa4e61a34ad4c99a400b3}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The vast majority of Web pages fail to comply with established Web accessibility guidelines, excluding a range of users with diverse abilities from interacting with their content. Making Web pages accessible to all users requires dedicated expertise and additional manual efforts from Web page providers. To lower their efforts and, thus, promote inclusiveness, we aim to automatically detect and correct Web accessibility violations in {HTML} code. While previous work has made progress in detecting certain types of accessibility violations, the problem of automatically detecting and correcting accessibility violations remains an open challenge that we address.We introduce a novel taxonomy classifying Web accessibility violations into three key categories— Syntactic, Semantic, and Layout. This taxonomy provides a structured foundation for developing our detection and correction method and selecting and redefining evaluation metrics. We propose our novel method, {AccessGuru}, which combines existing accessibility testing tools and Large Language Models ({LLMs}) to detect accessibility violations of Web accessibility guidelines and taxonomy-driven prompting strategies of {LLMs} to correct all three accessibility violation categories.To evaluate these capabilities, we have developed a novel benchmark encompassing Web accessibility violations from real-world Web pages. Our benchmark quantifies syntactic and layout compliance and judges semantic accuracy through a comparative analysis against human expert corrections. Evaluation against our benchmark demonstrates that our method achieves up to 84\% average violation score decrease on our benchmark dataset, significantly outperforming existing methods, which achieve at most 50\% average violation score decrease.}
+      \field{booktitle}{Proceedings of the 27th International {ACM} {SIGACCESS} Conference on Computers and Accessibility}
+      \field{day}{22}
+      \field{isbn}{979-8-4007-0676-9}
+      \field{month}{10}
+      \field{series}{{ASSETS} '25}
+      \field{shorttitle}{{AccessGuru}}
+      \field{title}{{AccessGuru}: Leveraging {LLMs} to Detect and Correct Web Accessibility Violations in {HTML} Code}
+      \field{urlday}{24}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 22}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1145/3663547.3746360
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\VCA4FGQZ\\Fathallah et al. - 2025 - AccessGuru Leveraging LLMs to Detect and Correct Web Accessibility Violations in HTML Code.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3663547.3746360
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3663547.3746360
+      \endverb
+      \keyw{Hoch,Wichtig}
+    \endentry
+    \entry{Lighthouse}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={Google},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Chrome for Developers}
+      \field{month}{9}
+      \field{title}{Lighthouse : Chrome for developers}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.chrome.com/docs/lighthouse/overview
+      \endverb
+      \verb{url}
+      \verb https://developer.chrome.com/docs/lighthouse/overview
+      \endverb
+    \endentry
+    \entry{he_enhancing_2025}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=1683bfab2faf51bf603be8f87fd33db2}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Ziyao},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5f7195b4d8cbde533b3b889ee35972da}{%
+           family={Huq},
+           familyi={H\bibinitperiod},
+           given={Syed\bibnamedelima Fatiul},
+           giveni={S\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7243bc9dcb94a297bc863f672dc9db0c}{%
+           family={Malek},
+           familyi={M\bibinitperiod},
+           given={Sam},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4b3e00f0530b3f4fad8247b9e7b33ae8}
+      \strng{fullhash}{4b3e00f0530b3f4fad8247b9e7b33ae8}
+      \strng{fullhashraw}{4b3e00f0530b3f4fad8247b9e7b33ae8}
+      \strng{bibnamehash}{4b3e00f0530b3f4fad8247b9e7b33ae8}
+      \strng{authorbibnamehash}{4b3e00f0530b3f4fad8247b9e7b33ae8}
+      \strng{authornamehash}{4b3e00f0530b3f4fad8247b9e7b33ae8}
+      \strng{authorfullhash}{4b3e00f0530b3f4fad8247b9e7b33ae8}
+      \strng{authorfullhashraw}{4b3e00f0530b3f4fad8247b9e7b33ae8}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Websites are integral to people’s daily lives, with billions in use today. However, due to limited awareness of accessibility and its guidelines, developers often release web apps that are inaccessible to people with disabilities, who make up around 16\% of the global population. To ensure a baseline of accessibility, software engineers rely on automated checkers that assess a webpage’s compliance based on predefined rules. Unfortunately, these tools typically cover only a small subset of accessibility guidelines and often overlook violations that require a semantic understanding of the webpage. The advent of generative {AI}, known for its ability to comprehend textual and visual content, has created new possibilities for detecting accessibility violations. We began by studying the most widely used guideline, {WCAG}, to determine the testable success criteria that generative {AI} could address. This led to the development of an automated tool called {GenA}11y, which extracts elements from a page related to each success criterion and inputs them into an {LLM} prompted to detect accessibility issues on the web. Evaluations of {GenA}11y showed its effectiveness, with a precision of 94.5\% and a recall of 87.61\%. Additionally, when tested on real websites, {GenA}11y identified an average of eight more types of accessibility violations than the combination of existing tools.}
+      \field{day}{19}
+      \field{issue}{{FSE}}
+      \field{journaltitle}{Proc. {ACM} Softw. Eng.}
+      \field{month}{6}
+      \field{shorttitle}{Enhancing Web Accessibility}
+      \field{title}{Enhancing Web Accessibility: Automated Detection of Issues with Generative {AI}}
+      \field{urlday}{24}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{volume}{2}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{FSE101:2264\bibrangedash FSE101:2287}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1145/3729371
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\RH5HIN7F\\He et al. - 2025 - Enhancing Web Accessibility Automated Detection of Issues with Generative AI.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3729371
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3729371
+      \endverb
+      \keyw{Hoch,Wichtig}
+    \endentry
+    \entry{heinemann_barrierefreiheit_2024}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2c7690335938647f3bdd877273c9764a}{%
+           family={Heinemann},
+           familyi={H\bibinitperiod},
+           given={Daniela},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=dd96ccd35c54cd8a311df0bb8ddd0221}{%
+           family={Seckelmann},
+           familyi={S\bibinitperiod},
+           given={Margrit},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin}%
+      }
+      \list{publisher}{1}{%
+        {Erich Schmidt Verlag {GmbH} \& Co. {KG}}%
+      }
+      \strng{namehash}{2c7690335938647f3bdd877273c9764a}
+      \strng{fullhash}{2c7690335938647f3bdd877273c9764a}
+      \strng{fullhashraw}{2c7690335938647f3bdd877273c9764a}
+      \strng{bibnamehash}{2c7690335938647f3bdd877273c9764a}
+      \strng{authorbibnamehash}{2c7690335938647f3bdd877273c9764a}
+      \strng{authornamehash}{2c7690335938647f3bdd877273c9764a}
+      \strng{authorfullhash}{2c7690335938647f3bdd877273c9764a}
+      \strng{authorfullhashraw}{2c7690335938647f3bdd877273c9764a}
+      \strng{editorbibnamehash}{dd96ccd35c54cd8a311df0bb8ddd0221}
+      \strng{editornamehash}{dd96ccd35c54cd8a311df0bb8ddd0221}
+      \strng{editorfullhash}{dd96ccd35c54cd8a311df0bb8ddd0221}
+      \strng{editorfullhashraw}{dd96ccd35c54cd8a311df0bb8ddd0221}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Barrierefreies E-Government ist ein wichtiges Thema in der heutigen, stark auf Technisierung und Digitalisierung ausgerichteten Gesellschaft. Menschen mit Behinderung stoßen im Alltag oft auf Barrieren und Hindernisse. Barrieren, die durch verschiedene Formen und Ausprägungen von Behinderungen, Umwelteinflüssen oder sonstigen Einwirkungen entstehen können, sind in der Regel komplex und vielschichtig. Diese treten nicht nur im gesellschaftlichen Alltag auf, sondern auch in der Kommunikation mit Verwaltungsträgern. Barrierefreiheit umfasst dabei mehr als die bauliche Barrierefreiheit und behindertengerechte Ausstattung von Gebäuden. Die spezifischen Bedarfe von Menschen mit Behinderungen müssen daher angemessen Berücksichtigung finden.}
+      \field{booktitle}{Digitalisierte Verwaltung - Vernetztes E-Government}
+      \field{isbn}{978-3-503-23763-0}
+      \field{langid}{german}
+      \field{title}{Barrierefreiheit}
+      \field{urlday}{24}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{469\bibrangedash 488}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.37307/b.978-3-503-23763-0.15
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.37307/b.978-3-503-23763-0.15
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.37307/b.978-3-503-23763-0.15
+      \endverb
+      \keyw{Mittel}
+    \endentry
+    \entry{Landesrecht_BW}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=41b35bb83b4cdd1dd2bed7bf094b61db}{%
+           family={{Landesrecht BW}},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{41b35bb83b4cdd1dd2bed7bf094b61db}
+      \strng{fullhash}{41b35bb83b4cdd1dd2bed7bf094b61db}
+      \strng{fullhashraw}{41b35bb83b4cdd1dd2bed7bf094b61db}
+      \strng{bibnamehash}{41b35bb83b4cdd1dd2bed7bf094b61db}
+      \strng{authorbibnamehash}{41b35bb83b4cdd1dd2bed7bf094b61db}
+      \strng{authornamehash}{41b35bb83b4cdd1dd2bed7bf094b61db}
+      \strng{authorfullhash}{41b35bb83b4cdd1dd2bed7bf094b61db}
+      \strng{authorfullhashraw}{41b35bb83b4cdd1dd2bed7bf094b61db}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Startseite}
+      \field{month}{5}
+      \field{title}{Gesetz zur Errichtung der Landesoberbehörde BITBW}
+      \field{urlday}{12}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2015}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.landesrecht-bw.de/bsbw/document/jlr-ITErGBWV3P2
+      \endverb
+      \verb{url}
+      \verb https://www.landesrecht-bw.de/bsbw/document/jlr-ITErGBWV3P2
+      \endverb
+    \endentry
+    \entry{Šmite_Wohlin_Galviņa_Prikladnicki_2012}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=c47ac0accd9cf7c7846c338787fa3a5f}{%
+           family={Šmite},
+           familyi={Š\bibinitperiod},
+           given={Darja},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e1ce15e2eeb53e3fc8c6035fd761594b}{%
+           family={Wohlin},
+           familyi={W\bibinitperiod},
+           given={Claes},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ae5ef51d49a594e068434fe4d95c22c4}{%
+           family={Galviņa},
+           familyi={G\bibinitperiod},
+           given={Zane},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bdaaed9a3cc66b81c3a29c6497bac264}{%
+           family={Prikladnicki},
+           familyi={P\bibinitperiod},
+           given={Rafael},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bea043c9a6b5b8f1172c2db8b54892ad}
+      \strng{fullhash}{43c0bb990f0cb41e6f30ca665e61bcbc}
+      \strng{fullhashraw}{43c0bb990f0cb41e6f30ca665e61bcbc}
+      \strng{bibnamehash}{43c0bb990f0cb41e6f30ca665e61bcbc}
+      \strng{authorbibnamehash}{43c0bb990f0cb41e6f30ca665e61bcbc}
+      \strng{authornamehash}{bea043c9a6b5b8f1172c2db8b54892ad}
+      \strng{authorfullhash}{43c0bb990f0cb41e6f30ca665e61bcbc}
+      \strng{authorfullhashraw}{43c0bb990f0cb41e6f30ca665e61bcbc}
+      \field{sortinit}{Š}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Empirical Software Engineering}
+      \field{month}{7}
+      \field{number}{1}
+      \field{title}{An empirically based terminology and taxonomy for Global Software Engineering}
+      \field{volume}{19}
+      \field{year}{2012}
+      \field{pages}{105\bibrangedash 153}
+      \range{pages}{49}
+      \verb{doi}
+      \verb 10.1007/s10664-012-9217-9
+      \endverb
+    \endentry
+    \entry{tafreshipour_ma11y_2024}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=552ac112bb7a8fbd7cf7d1205ed8b0f3}{%
+           family={Tafreshipour},
+           familyi={T\bibinitperiod},
+           given={Mahan},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d23ee5296a2bf1b7941a508021d5d8e9}{%
+           family={Deshpande},
+           familyi={D\bibinitperiod},
+           given={Anmol},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e65ac13d0171968fd6ebee5f1182de6b}{%
+           family={Mehralian},
+           familyi={M\bibinitperiod},
+           given={Forough},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7991df34ab6f7cacecbbbffd7df908cf}{%
+           family={Ahmed},
+           familyi={A\bibinitperiod},
+           given={Iftekhar},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7243bc9dcb94a297bc863f672dc9db0c}{%
+           family={Malek},
+           familyi={M\bibinitperiod},
+           given={Sam},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York, {NY}, {USA}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{9de1712cf14b7810fdc87c3f9d649f14}
+      \strng{fullhash}{927192127301c8eb7ae9d5fd67dbdbdb}
+      \strng{fullhashraw}{927192127301c8eb7ae9d5fd67dbdbdb}
+      \strng{bibnamehash}{927192127301c8eb7ae9d5fd67dbdbdb}
+      \strng{authorbibnamehash}{927192127301c8eb7ae9d5fd67dbdbdb}
+      \strng{authornamehash}{9de1712cf14b7810fdc87c3f9d649f14}
+      \strng{authorfullhash}{927192127301c8eb7ae9d5fd67dbdbdb}
+      \strng{authorfullhashraw}{927192127301c8eb7ae9d5fd67dbdbdb}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Despite the availability of numerous automatic accessibility testing solutions, web accessibility issues persist on many websites. Moreover, there is a lack of systematic evaluations of the efficacy of current accessibility testing tools. To address this gap, we present the first mutation analysis framework, called Ma11y, designed to assess web accessibility testing tools. Ma11y includes 25 mutation operators that intentionally violate various accessibility principles and an automated oracle to determine whether a mutant is detected by a testing tool. Evaluation on real-world websites demonstrates the practical applicability of the mutation operators and the framework’s capacity to assess tool performance. Our results demonstrate that the current tools cannot identify nearly 50\% of the accessibility bugs injected by our framework, thus underscoring the need for the development of more effective accessibility testing tools. Finally, the framework’s accuracy and performance attest to its potential for seamless and automated application in practical settings.}
+      \field{booktitle}{Proceedings of the 33rd {ACM} {SIGSOFT} International Symposium on Software Testing and Analysis}
+      \field{day}{11}
+      \field{isbn}{979-8-4007-0612-7}
+      \field{month}{9}
+      \field{series}{{ISSTA} 2024}
+      \field{shorttitle}{Ma11y}
+      \field{title}{Ma11y: A Mutation Framework for Web Accessibility Testing}
+      \field{urlday}{24}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{100\bibrangedash 111}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1145/3650212.3652113
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\XA3KK9IK\\Tafreshipour et al. - 2024 - Ma11y A Mutation Framework for Web Accessibility Testing.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3650212.3652113
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3650212.3652113
+      \endverb
+      \keyw{Hoch,Wichtig}
+    \endentry
     \entry{OHCHR}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=6fab04391a8fca70b59b2115b71407ad}{%
@@ -48,6 +727,114 @@
       \endverb
       \verb{url}
       \verb https://www.ohchr.org/en/instruments-mechanisms/instruments/convention-rights-persons-disabilities
+      \endverb
+    \endentry
+    \entry{WebAIM19}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=790eee551afe5a8832859712ba1b5f4f}{%
+           family={WebAIM},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{fullhash}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{fullhashraw}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{bibnamehash}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{authorbibnamehash}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{authornamehash}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{authorfullhash}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{authorfullhashraw}{790eee551afe5a8832859712ba1b5f4f}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{WebAIM}
+      \field{title}{The WebAIM Million - 2019 report on the accessibility of the top 1,000,000 home pages}
+      \field{urlday}{24}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://webaim.org/projects/million/2019
+      \endverb
+      \verb{url}
+      \verb https://webaim.org/projects/million/2019
+      \endverb
+    \endentry
+    \entry{WebAIM}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=790eee551afe5a8832859712ba1b5f4f}{%
+           family={WebAIM},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{fullhash}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{fullhashraw}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{bibnamehash}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{authorbibnamehash}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{authornamehash}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{authorfullhash}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{authorfullhashraw}{790eee551afe5a8832859712ba1b5f4f}
+      \field{extraname}{2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{WebAIM}
+      \field{title}{The WebAIM Million - 2025 report on the accessibility of the top 1,000,000 home pages}
+      \field{urlday}{24}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://webaim.org/projects/million/
+      \endverb
+      \verb{url}
+      \verb https://webaim.org/projects/million/
+      \endverb
+    \endentry
+    \entry{WAVE}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=790eee551afe5a8832859712ba1b5f4f}{%
+           family={WebAIM},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{fullhash}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{fullhashraw}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{bibnamehash}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{authorbibnamehash}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{authornamehash}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{authorfullhash}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{authorfullhashraw}{790eee551afe5a8832859712ba1b5f4f}
+      \field{extraname}{3}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{WAVE Web Accessibility Evaluation Tool}
+      \field{title}{Wave Web Accessibility Evaluation Tools}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://wave.webaim.org/
+      \endverb
+      \verb{url}
+      \verb https://wave.webaim.org/
       \endverb
     \endentry
     \entry{WebsterWatson2002}{article}{}{}
@@ -119,6 +906,38 @@
       \endverb
       \verb{url}
       \verb https://www.who.int/health-topics/disability#tab=tab_1
+      \endverb
+    \endentry
+    \entry{WCAG}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=66c3509f57565d7fbe270a57a403004c}{%
+           family={{World Wide Web Consortium (W3C)}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{66c3509f57565d7fbe270a57a403004c}
+      \strng{fullhash}{66c3509f57565d7fbe270a57a403004c}
+      \strng{fullhashraw}{66c3509f57565d7fbe270a57a403004c}
+      \strng{bibnamehash}{66c3509f57565d7fbe270a57a403004c}
+      \strng{authorbibnamehash}{66c3509f57565d7fbe270a57a403004c}
+      \strng{authornamehash}{66c3509f57565d7fbe270a57a403004c}
+      \strng{authorfullhash}{66c3509f57565d7fbe270a57a403004c}
+      \strng{authorfullhashraw}{66c3509f57565d7fbe270a57a403004c}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Web Content Accessibility Guidelines (WCAG) 2.2}}
+      \field{urlday}{24}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.w3.org/TR/WCAG22/
+      \endverb
+      \verb{url}
+      \verb https://www.w3.org/TR/WCAG22/
       \endverb
     \endentry
   \enddatalist

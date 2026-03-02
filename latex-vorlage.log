@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.9.8)  2 MAR 2026 00:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.9.8)  2 MAR 2026 20:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1001,20 +1001,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [3
 
 
-] (includes/extra/abkuerzungen.tex
-
-LaTeX Warning: Hyper reference `acro:RoI' on page IV undefined on input line 9.
-
-
-LaTeX Warning: Hyper reference `acro:RoI' on page IV undefined on input line 9.
-
-
-LaTeX Warning: Hyper reference `acro:UCS' on page IV undefined on input line 10.
-
-
-LaTeX Warning: Hyper reference `acro:UCS' on page IV undefined on input line 10.
-
-)
+] (includes/extra/abkuerzungen.tex)
 
 [4
 
@@ -1039,6 +1026,11 @@ LaTeX Warning: Hyper reference `acro:UCS' on page IV undefined on input line 10.
 chapter 1.
 Package acronym Info: Label `acro:WCAG' newly defined as it shall be overridden
 although it is yet undefined on input line 3.
+
+Overfull \hbox (8.24963pt too wide) in paragraph at lines 3--4
+\T1/cmr/m/n/10.95 be-rech-tig-ten Zu-gang zu In-for-ma-tio-nen und Dienst-leis-tun-gen er-hal-ten, ge-winnt Web-Barrierefreiheit
+ []
+
 Package acronym Info: Label `acro:LLM' newly defined as it shall be overridden
 although it is yet undefined on input line 5.
 
@@ -1060,28 +1052,28 @@ although it is yet undefined on input line 17.
 
 [2]
 Package acronym Info: Label `acro:DOM' newly defined as it shall be overridden
-although it is yet undefined on input line 24.
+although it is yet undefined on input line 38.
 
-Overfull \hbox (22.82834pt too wide) in paragraph at lines 32--34
+
+[3]
+Overfull \hbox (22.82834pt too wide) in paragraph at lines 46--48
 \T1/cmr/m/n/10.95 ren, kon-text-sen-si-ti-ven As-sis-tenz-lö-sung zur Bar-rie-re-frei-heits-ana-ly-se von Rich-Client-Webanwendungen.
  []
 
 
-Overfull \hbox (18.02914pt too wide) in paragraph at lines 32--34
+Overfull \hbox (18.02914pt too wide) in paragraph at lines 46--48
 \T1/cmr/m/n/10.95 Der Proof of Con-cept soll au-to-ma-ti-sier-te Barrierefreiheits-Reports, In-ter-ak-ti-ons-da-ten aus Playwright-
  []
 
 
-
-[3]
-Overfull \hbox (18.3576pt too wide) in paragraph at lines 37--38
+Overfull \hbox (18.3576pt too wide) in paragraph at lines 51--52
 []\T1/cmr/bx/n/10.95 Inwieweit kann ein kon-text-sen-si-ti-ves KI-Assistenzsystem, das Tool-Reports, Playwright-
  []
 
 Package acronym Info: Label `acro:TF' newly defined as it shall be overridden
-although it is yet undefined on input line 39.
+although it is yet undefined on input line 53.
 
-Overfull \hbox (4.98296pt too wide) in paragraph at lines 42--43
+Overfull \hbox (4.98296pt too wide) in paragraph at lines 56--57
 [][][]\T1/cmr/m/n/10.95 2: In-wie-fern ver-bes-sert die Ein-be-zie-hung von Quell-co-de und Playwright-Interaktionsdaten
  []
 
@@ -1172,8 +1164,18 @@ Overfull \hbox (70.69429pt too wide) in paragraph at lines 13--141
 ]
 
 [15]
-Overfull \hbox (2.73012pt too wide) in paragraph at lines 69--69
-\T1/cmtt/m/n/10.95 mechanisms / instruments / convention -[] rights -[] persons -[] disabilities$[] \T1/cmr/m/n/10.95 (Ab-ruf: 28. 02. 2026). 
+Overfull \hbox (17.84677pt too wide) in paragraph at lines 69--69
+[][]\T1/cmr/bx/n/10.95 Barrierefreiheitsstärkungsgesetz (2026)\T1/cmr/m/n/10.95 : BFSG (Bar-rie-re-frei-heits-stär-kungs-ge-setz). \T1/cmr/m/sc/10.95 url\T1/cmr/m/n/10.95 : []$\T1/cmtt/m/n/10.95 https :
+ []
+
+
+Overfull \hbox (69.4092pt too wide) in paragraph at lines 69--69
+[][]\T1/cmr/bx/n/10.95 Bundesministerium für Di-gi-ta-les und Staats-mo-der-ni-sie-rung (2025)\T1/cmr/m/n/10.95 : Barrierefreie-Informationstechnik-
+ []
+
+
+Overfull \hbox (16.47182pt too wide) in paragraph at lines 69--69
+\T1/cmtt/m/n/10.95 europa . eu / strategy -[] and -[] policy / policies / justice -[] and -[] fundamental -[] rights / disability /
  []
 
 
@@ -1181,7 +1183,24 @@ Overfull \hbox (2.73012pt too wide) in paragraph at lines 69--69
 [16
 
 
-] (includes/extra/erklaerung_ki.tex
+]
+Overfull \hbox (2.73012pt too wide) in paragraph at lines 69--69
+\T1/cmtt/m/n/10.95 mechanisms / instruments / convention -[] rights -[] persons -[] disabilities$[] \T1/cmr/m/n/10.95 (Ab-ruf: 28. 02. 2026). 
+ []
+
+
+Package biblatex Warning: Field 'extrayear' is deprecated.
+(biblatex)                Please use 'extradate' instead.
+(biblatex)                Using 'extradate' now.
+
+
+Overfull \hbox (9.45776pt too wide) in paragraph at lines 69--69
+[][]\T1/cmr/bx/n/10.95 World Wi-de Web Con-sor-ti-um (W3C) (2026)\T1/cmr/m/n/10.95 : Web Con-tent Ac-ces-si-bi-li-ty Gui-de-li-nes (WCAG)
+ []
+
+
+
+[17] (includes/extra/erklaerung_ki.tex
 Overfull \hbox (1.558pt too wide) in paragraph at lines 132--132
 []\T1/cmr/m/n/10.95 mich ak-tiv über die Leis-tungs-fä-hig-keit und Be-schrän-kun-gen der oben ge-nann-ten KI-Systeme
  []
@@ -1198,25 +1217,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--132
 
 
 
-[17
+[18
 
 
 
 ]) (template/_dhbw_erklaerung.tex
 
-[18])
+[19])
 
-[19
+[20
 
 ] (latex-vorlage.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `latex-vorlage.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'latex-vorlage.run.xml'.
@@ -1224,23 +1239,23 @@ Package logreq Info: Writing requests to 'latex-vorlage.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29082 strings out of 473523
- 578704 string characters out of 5714631
- 1658782 words of memory out of 5000000
- 51768 multiletter control sequences out of 15000+600000
- 582278 words of font info for 86 fonts, out of 8000000 for 9000
+ 29237 strings out of 473523
+ 582759 string characters out of 5714631
+ 1659952 words of memory out of 5000000
+ 51883 multiletter control sequences out of 15000+600000
+ 583059 words of font info for 87 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 108i,18n,127p,10962b,2369s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,17n,127p,10962b,2369s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-pdfTeX warning (dest): name{Hfootnote.53} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.76} has been referenced but does not exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{Hfootnote.28} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.51} has been referenced but does not exist, replaced by a fixed one
 
- <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0500.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on latex-vorlage.pdf (25 pages, 306225 bytes).
+ <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0500.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on latex-vorlage.pdf (26 pages, 365165 bytes).
 PDF statistics:
- 1096 PDF objects out of 1200 (max. 8388607)
- 97 named destinations out of 1000 (max. 500000)
+ 1322 PDF objects out of 1440 (max. 8388607)
+ 136 named destinations out of 1000 (max. 500000)
  281 words of extra memory for PDF output out of 10000 (max. 10000000)
 
