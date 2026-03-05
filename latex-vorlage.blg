@@ -1,22 +1,25 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'latex-vorlage.blg'
-[88] biber-MSWIN64:340> INFO - === 
-[117] Biber.pm:420> INFO - Reading 'latex-vorlage.bcf'
-[209] Biber.pm:994> INFO - Found 20 citekeys in bib section 0
-[222] Biber.pm:4463> INFO - Processing section 0
-[232] Biber.pm:4654> INFO - Looking for bibtex file 'includes/literatur-datenbank.bib' for section 0
-[278] bibtex.pm:1713> INFO - LaTeX decoding ...
-[313] bibtex.pm:1519> INFO - Found BibTeX data source 'includes/literatur-datenbank.bib'
-[438] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[438] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[438] Biber.pm:4283> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
-[438] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
-[461] bbl.pm:676> INFO - Writing 'latex-vorlage.bbl' with encoding 'UTF-8'
-[472] bbl.pm:779> INFO - Output to latex-vorlage.bbl
-[479] Biber.pm:131> WARN - legacy month field 'Feb' in entry 'BFSG' is not an integer - this will probably not sort properly.
-[479] Biber.pm:131> WARN - legacy month field 'Apr' in entry 'BITV' is not an integer - this will probably not sort properly.
-[479] Biber.pm:131> WARN - legacy month field 'Jul' in entry 'BITBW_2021' is not an integer - this will probably not sort properly.
-[479] Biber.pm:131> WARN - legacy month field 'May' in entry 'Landesrecht_BW' is not an integer - this will probably not sort properly.
-[479] Biber.pm:131> WARN - legacy month field 'Sep' in entry 'Lighthouse' is not an integer - this will probably not sort properly.
-[479] Biber.pm:131> WARN - legacy month field 'Jul' in entry 'Šmite_Wohlin_Galviņa_Prikladnicki_2012' is not an integer - this will probably not sort properly.
-[479] Biber.pm:133> INFO - WARNINGS: 6
+[110] biber-MSWIN64:340> INFO - === 
+[149] Biber.pm:420> INFO - Reading 'latex-vorlage.bcf'
+[261] Biber.pm:994> INFO - Found 57 citekeys in bib section 0
+[273] Biber.pm:4463> INFO - Processing section 0
+[283] Biber.pm:4654> INFO - Looking for bibtex file 'includes/literatur-datenbank.bib' for section 0
+[349] bibtex.pm:1713> INFO - LaTeX decoding ...
+[433] bibtex.pm:1519> INFO - Found BibTeX data source 'includes/literatur-datenbank.bib'
+[723] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[723] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[723] Biber.pm:4283> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
+[723] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
+[783] bbl.pm:676> INFO - Writing 'latex-vorlage.bbl' with encoding 'UTF-8'
+[820] bbl.pm:779> INFO - Output to latex-vorlage.bbl
+[826] Biber.pm:131> WARN - Duplicate entry key: 'abuaddousWebAccessibilityChallenges2016' in file 'includes/literatur-datenbank.bib', skipping ...
+[826] Biber.pm:131> WARN - Duplicate entry key: 'morrisonImaginingArtificialIntelligence2017' in file 'includes/literatur-datenbank.bib', skipping ...
+[826] Biber.pm:131> WARN - legacy month field 'Feb' in entry 'BFSG' is not an integer - this will probably not sort properly.
+[827] Biber.pm:131> WARN - legacy month field 'Apr' in entry 'BITV' is not an integer - this will probably not sort properly.
+[827] Biber.pm:131> WARN - legacy month field 'Jul' in entry 'BITBW_2021' is not an integer - this will probably not sort properly.
+[827] Biber.pm:131> WARN - legacy month field 'May' in entry 'Landesrecht_BW' is not an integer - this will probably not sort properly.
+[827] Biber.pm:131> WARN - legacy month field 'Sep' in entry 'Lighthouse' is not an integer - this will probably not sort properly.
+[827] Biber.pm:131> WARN - legacy month field 'Jul' in entry 'Šmite_Wohlin_Galviņa_Prikladnicki_2012' is not an integer - this will probably not sort properly.
+[827] Biber.pm:131> WARN - ISBN '978-3-031-62845-0 978-3-031-62846-7' in entry 'miesenbergerComputersHelpingPeople2024' is invalid - run biber with '--validate_datamodel' for details.
+[827] Biber.pm:133> INFO - WARNINGS: 9
