@@ -155,6 +155,107 @@
       \verb https://thesai.org/Publications/ViewPaper?Volume=7&Issue=10&Code=ijacsa&SerialNo=23
       \endverb
     \endentry
+    \entry{anthropic2026claude}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f431db65cea024a5f19eab835afefee2}{%
+           family={{Anthropic}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f431db65cea024a5f19eab835afefee2}
+      \strng{fullhash}{f431db65cea024a5f19eab835afefee2}
+      \strng{fullhashraw}{f431db65cea024a5f19eab835afefee2}
+      \strng{bibnamehash}{f431db65cea024a5f19eab835afefee2}
+      \strng{authorbibnamehash}{f431db65cea024a5f19eab835afefee2}
+      \strng{authornamehash}{f431db65cea024a5f19eab835afefee2}
+      \strng{authorfullhash}{f431db65cea024a5f19eab835afefee2}
+      \strng{authorfullhashraw}{f431db65cea024a5f19eab835afefee2}
+      \field{extraname}{1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Claude Model Overview}
+      \field{urlday}{1}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.anthropic.com/claude
+      \endverb
+      \verb{url}
+      \verb https://www.anthropic.com/claude
+      \endverb
+    \endentry
+    \entry{System_Card}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f431db65cea024a5f19eab835afefee2}{%
+           family={Anthropic},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f431db65cea024a5f19eab835afefee2}
+      \strng{fullhash}{f431db65cea024a5f19eab835afefee2}
+      \strng{fullhashraw}{f431db65cea024a5f19eab835afefee2}
+      \strng{bibnamehash}{f431db65cea024a5f19eab835afefee2}
+      \strng{authorbibnamehash}{f431db65cea024a5f19eab835afefee2}
+      \strng{authornamehash}{f431db65cea024a5f19eab835afefee2}
+      \strng{authorfullhash}{f431db65cea024a5f19eab835afefee2}
+      \strng{authorfullhashraw}{f431db65cea024a5f19eab835afefee2}
+      \field{extraname}{2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{journaltitle}{System Card: Claude Sonnet 4.6}
+      \field{urlday}{17}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf
+      \endverb
+      \verb{url}
+      \verb https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf
+      \endverb
+    \endentry
+    \entry{Anthropic_API_Docs}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f431db65cea024a5f19eab835afefee2}{%
+           family={Anthropic},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f431db65cea024a5f19eab835afefee2}
+      \strng{fullhash}{f431db65cea024a5f19eab835afefee2}
+      \strng{fullhashraw}{f431db65cea024a5f19eab835afefee2}
+      \strng{bibnamehash}{f431db65cea024a5f19eab835afefee2}
+      \strng{authorbibnamehash}{f431db65cea024a5f19eab835afefee2}
+      \strng{authornamehash}{f431db65cea024a5f19eab835afefee2}
+      \strng{authorfullhash}{f431db65cea024a5f19eab835afefee2}
+      \strng{authorfullhashraw}{f431db65cea024a5f19eab835afefee2}
+      \field{extraname}{3}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{journaltitle}{Claude API Docs}
+      \field{urlday}{1}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://platform.claude.com/docs/en/about-claude/glossary
+      \endverb
+      \verb{url}
+      \verb https://platform.claude.com/docs/en/about-claude/glossary
+      \endverb
+    \endentry
     \entry{baiVirtualDom2022}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=9eedd317afac649c33bff3d75ab83306}{%
@@ -315,6 +416,82 @@
       \endverb
       \keyw{Hoch,Wichtig}
     \endentry
+    \entry{benderDangersStochasticParrots2021}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=e579c650beb31c286389278140fadd63}{%
+           family={Bender},
+           familyi={B\bibinitperiod},
+           given={Emily\bibnamedelima M.},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f2b0ffb56c5d1e4220c16c0258e02eae}{%
+           family={Gebru},
+           familyi={G\bibinitperiod},
+           given={Timnit},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=698aa56654e49949b5a9ea038d23587e}{%
+           family={{McMillan}-Major},
+           familyi={M\bibinithyphendelim M\bibinitperiod},
+           given={Angelina},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c3721cea1e5538fe0b83526d8333dbab}{%
+           family={Shmitchell},
+           familyi={S\bibinitperiod},
+           given={Shmargaret},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York, {NY}, {USA}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{c73d9460425aeddbb561b189551a3a98}
+      \strng{fullhash}{c4b1a296df1a50ba514ab947970f1784}
+      \strng{fullhashraw}{c4b1a296df1a50ba514ab947970f1784}
+      \strng{bibnamehash}{c4b1a296df1a50ba514ab947970f1784}
+      \strng{authorbibnamehash}{c4b1a296df1a50ba514ab947970f1784}
+      \strng{authornamehash}{c73d9460425aeddbb561b189551a3a98}
+      \strng{authorfullhash}{c4b1a296df1a50ba514ab947970f1784}
+      \strng{authorfullhashraw}{c4b1a296df1a50ba514ab947970f1784}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The past 3 years of work in {NLP} have been characterized by the development and deployment of ever larger language models, especially for English. {BERT}, its variants, {GPT}-2/3, and others, most recently Switch-C, have pushed the boundaries of the possible both through architectural innovations and through sheer size. Using these pretrained models and the methodology of fine-tuning them for specific tasks, researchers have extended the state of the art on a wide array of tasks as measured by leaderboards on specific benchmarks for English. In this paper, we take a step back and ask: How big is too big? What are the possible risks associated with this technology and what paths are available for mitigating those risks? We provide recommendations including weighing the environmental and financial costs first, investing resources into curating and carefully documenting datasets rather than ingesting everything on the web, carrying out pre-development exercises evaluating how the planned approach fits into research and development goals and supports stakeholder values, and encouraging research directions beyond ever larger language models.}
+      \field{booktitle}{Proceedings of the 2021 {ACM} Conference on Fairness, Accountability, and Transparency}
+      \field{day}{1}
+      \field{isbn}{978-1-4503-8309-7}
+      \field{month}{3}
+      \field{series}{{FAccT} '21}
+      \field{shorttitle}{On the Dangers of Stochastic Parrots}
+      \field{title}{On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?}
+      \field{urlday}{5}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{610\bibrangedash 623}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1145/3442188.3445922
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\Z8WSFNML\\Bender et al. - 2021 - On the Dangers of Stochastic Parrots Can Language Models Be Too Big .pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3442188.3445922
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3442188.3445922
+      \endverb
+    \endentry
     \entry{BITBW_2021}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=c1dd1ae77076811036c172175f19f3f1}{%
@@ -348,6 +525,313 @@
       \endverb
       \verb{url}
       \verb https://bitbw.de/neuigkeiten/artikel/6-jahre-bitbw-1
+      \endverb
+    \endentry
+    \entry{brown2020gpt3fewshot}{misc}{}{}
+      \name{author}{31}{}{%
+        {{un=0,uniquepart=base,hash=7c16e8d36475e58d4f2d161e6ecb7704}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={Tom\bibnamedelima B.},
+           giveni={T\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d4543c3bcd6aaf414da4296b349603e5}{%
+           family={Mann},
+           familyi={M\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9ac58bd43db2434e8e1ffd6182c3fcda}{%
+           family={Ryder},
+           familyi={R\bibinitperiod},
+           given={Nick},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9ed243177743da3e650f1cff6376bb3c}{%
+           family={Subbiah},
+           familyi={S\bibinitperiod},
+           given={Melanie},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1e2dad58400c2dd6405837788e785d19}{%
+           family={Kaplan},
+           familyi={K\bibinitperiod},
+           given={Jared\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4164e43d8cf919f5e3f8d80f5ea23f36}{%
+           family={Dhariwal},
+           familyi={D\bibinitperiod},
+           given={Prafulla},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4ca421ceeb5b516dd8fc64bea5a23f2a}{%
+           family={Neelakantan},
+           familyi={N\bibinitperiod},
+           given={Arvind},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ab5d7d7b9cfeaad635c4a60e8950d7dd}{%
+           family={Shyam},
+           familyi={S\bibinitperiod},
+           given={Pranav},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3c1d9a663596faaf544c1a65aac581be}{%
+           family={Sastry},
+           familyi={S\bibinitperiod},
+           given={Girish},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1e84eff933be9f4887bf369cf181bf12}{%
+           family={Askell},
+           familyi={A\bibinitperiod},
+           given={Amanda},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=abe4801e322e893b23785fd6d0800b5c}{%
+           family={Agarwal},
+           familyi={A\bibinitperiod},
+           given={Sandhini},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=787b9715a98ea66a8d5e6bae042ae0b9}{%
+           family={Herbert-Voss},
+           familyi={H\bibinithyphendelim V\bibinitperiod},
+           given={Ariel},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c3a5cc5e520e0d1a9f8bbf377c74cd27}{%
+           family={Krueger},
+           familyi={K\bibinitperiod},
+           given={Gretchen},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eb1d3044b466619459c76843f0e98bb9}{%
+           family={Henighan},
+           familyi={H\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5c2f5c2e6d4a9ec8681377f8a8e5e6af}{%
+           family={Child},
+           familyi={C\bibinitperiod},
+           given={Rewon},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=82063a12702e7b2c026ae0ff03b8f102}{%
+           family={Ramesh},
+           familyi={R\bibinitperiod},
+           given={Aditya},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=18becbb5ea500211a8219e94dd0a975c}{%
+           family={Ziegler},
+           familyi={Z\bibinitperiod},
+           given={Daniel\bibnamedelima M.},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=495187f3a2c93ddb8083bd18a5702527}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Jeffrey},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fdaff50f84c08440dcb5fad75b559780}{%
+           family={Winter},
+           familyi={W\bibinitperiod},
+           given={Clemens},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=68a04c5006dbbf98f7719709540c6b56}{%
+           family={Hesse},
+           familyi={H\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fb15a691583ec94aafe0be6e7da4878f}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2a5f009f12a0567430729b5ace41435d}{%
+           family={Sigler},
+           familyi={S\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e5aa3a709cbe706efba113bec9789364}{%
+           family={Litwin},
+           familyi={L\bibinitperiod},
+           given={Mateusz},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7006ca8c1ce969019b89de50fece60dd}{%
+           family={Gray},
+           familyi={G\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=01f70651539bbd7dccc01e86ed9c78c3}{%
+           family={Chess},
+           familyi={C\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1480c861b1a73e1d1de1b227e985b179}{%
+           family={Clark},
+           familyi={C\bibinitperiod},
+           given={Jack},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ca86811e7a0582a9e7cb8d33e7ab445d}{%
+           family={Berner},
+           familyi={B\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b51e7c5fe92844f39ce52b8a5fa5675f}{%
+           family={McCandlish},
+           familyi={M\bibinitperiod},
+           given={Sam},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a812c46caad94fc8701be37871f303ba}{%
+           family={Radford},
+           familyi={R\bibinitperiod},
+           given={Alec},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8d569d1d5b8b5a7836017a98b430f959}{%
+           family={Sutskever},
+           familyi={S\bibinitperiod},
+           given={Ilya},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1e6adbf36ab730cd5fdadb838b4d2667}{%
+           family={Amodei},
+           familyi={A\bibinitperiod},
+           given={Dario},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0884233a667161739ddd01569813457f}
+      \strng{fullhash}{d03fc0ef29cf288adac1ad57db6f5e3f}
+      \strng{fullhashraw}{d03fc0ef29cf288adac1ad57db6f5e3f}
+      \strng{bibnamehash}{d03fc0ef29cf288adac1ad57db6f5e3f}
+      \strng{authorbibnamehash}{d03fc0ef29cf288adac1ad57db6f5e3f}
+      \strng{authornamehash}{0884233a667161739ddd01569813457f}
+      \strng{authorfullhash}{d03fc0ef29cf288adac1ad57db6f5e3f}
+      \strng{authorfullhashraw}{d03fc0ef29cf288adac1ad57db6f5e3f}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CL}
+      \field{eprinttype}{arxiv}
+      \field{note}{Definition von zero-/one-/few-shot (in-context learning) auf S.~4}
+      \field{title}{Language Models are Few-Shot Learners}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb 2005.14165
+      \endverb
+    \endentry
+    \entry{brynjolfssonNBERWORKINGPAPER}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=7bd9f54569cb8c0301da00ed49b5a752}{%
+           family={Brynjolfsson},
+           familyi={B\bibinitperiod},
+           given={Erik},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9549ba5d9e9696208664346821d3ac14}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Danielle},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=821532b907beea089b725316bfc03965}{%
+           family={Raymond},
+           familyi={R\bibinitperiod},
+           given={Lindsey\bibnamedelima R},
+           giveni={L\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f3a10e7583539c6c6ec680050450f703}
+      \strng{fullhash}{f3a10e7583539c6c6ec680050450f703}
+      \strng{fullhashraw}{f3a10e7583539c6c6ec680050450f703}
+      \strng{bibnamehash}{f3a10e7583539c6c6ec680050450f703}
+      \strng{authorbibnamehash}{f3a10e7583539c6c6ec680050450f703}
+      \strng{authornamehash}{f3a10e7583539c6c6ec680050450f703}
+      \strng{authorfullhash}{f3a10e7583539c6c6ec680050450f703}
+      \strng{authorfullhashraw}{f3a10e7583539c6c6ec680050450f703}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{New {AI} tools have the potential to change the way workers perform and learn, but little is known about their impacts on the job. In this paper, we study the staggered introduction of a generative {AI}-based conversational assistant using data from 5,179 customer support agents. Access to the tool increases productivity, as measured by issues resolved per hour, by 14\% on average, including a 34\% improvement for novice and low-skilled workers but with minimal impact on experienced and highly skilled workers. We provide suggestive evidence that the {AI} model disseminates the best practices of more able workers and helps newer workers move down the experience curve. In addition, we find that {AI} assistance improves customer sentiment, increases employee retention, and may lead to worker learning. Our results suggest that access to generative {AI} can increase productivity, with large heterogeneity in effects across workers.}
+      \field{langid}{english}
+      \field{title}{{NBER} {WORKING} {PAPER} {SERIES}}
+      \field{year}{2023}
+      \verb{file}
+      \verb PDF:C\:\\Users\\joely\\Zotero\\storage\\QQZLVKWN\\Brynjolfsson et al. - NBER WORKING PAPER SERIES.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{buchananVeryBriefHistory2005}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c8f929dd0a8b95eaa41769ea38e6516}{%
+           family={Buchanan},
+           familyi={B\bibinitperiod},
+           given={Bruce\bibnamedelima G.},
+           giveni={B\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9c8f929dd0a8b95eaa41769ea38e6516}
+      \strng{fullhash}{9c8f929dd0a8b95eaa41769ea38e6516}
+      \strng{fullhashraw}{9c8f929dd0a8b95eaa41769ea38e6516}
+      \strng{bibnamehash}{9c8f929dd0a8b95eaa41769ea38e6516}
+      \strng{authorbibnamehash}{9c8f929dd0a8b95eaa41769ea38e6516}
+      \strng{authornamehash}{9c8f929dd0a8b95eaa41769ea38e6516}
+      \strng{authorfullhash}{9c8f929dd0a8b95eaa41769ea38e6516}
+      \strng{authorfullhashraw}{9c8f929dd0a8b95eaa41769ea38e6516}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this brief history, the beginnings of artificial intelligence are traced to philosophy, fiction, and imagination. Early inventions in electronics, engineering, and many other disciplines have influenced {AI}. Some early milestones include work in problems solving which included basic work in learning, knowledge representation, and inference as well as demonstration programs in language understanding, translation, theorem proving, associative memory, and knowledge-based systems. The article ends with a brief examination of influential organizations and current issues facing the field.}
+      \field{issn}{2371-9621}
+      \field{journaltitle}{{AI} Magazine}
+      \field{langid}{english}
+      \field{note}{\_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1609/aimag.v26i4.1848}
+      \field{number}{4}
+      \field{title}{A (Very) Brief History of Artificial Intelligence}
+      \field{urlday}{5}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{volume}{26}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{53\bibrangedash 60}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1609/aimag.v26i4.1848
+      \endverb
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\joely\\Zotero\\storage\\HLSFXPB2\\aimag.v26i4.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1609/aimag.v26i4.1848
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1609/aimag.v26i4.1848
       \endverb
     \endentry
     \entry{BFSGGesetz}{misc}{}{}
@@ -527,6 +1011,40 @@
       \endverb
       \keyw{accessibility,a11y,axe,Gering,Referenz}
     \endentry
+    \entry{OpenAI_Developers}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f2c26f6f08e958d0400dcaaab664d99d}{%
+           family={Developers},
+           familyi={D\bibinitperiod},
+           given={OpenAI},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f2c26f6f08e958d0400dcaaab664d99d}
+      \strng{fullhash}{f2c26f6f08e958d0400dcaaab664d99d}
+      \strng{fullhashraw}{f2c26f6f08e958d0400dcaaab664d99d}
+      \strng{bibnamehash}{f2c26f6f08e958d0400dcaaab664d99d}
+      \strng{authorbibnamehash}{f2c26f6f08e958d0400dcaaab664d99d}
+      \strng{authornamehash}{f2c26f6f08e958d0400dcaaab664d99d}
+      \strng{authorfullhash}{f2c26f6f08e958d0400dcaaab664d99d}
+      \strng{authorfullhashraw}{f2c26f6f08e958d0400dcaaab664d99d}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{journaltitle}{OpenAI API Reference}
+      \field{urlday}{1}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developers.openai.com/api/reference/resources/completions/methods/create/
+      \endverb
+      \verb{url}
+      \verb https://developers.openai.com/api/reference/resources/completions/methods/create/
+      \endverb
+    \endentry
     \entry{EAA}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=516d1743b3db5136e2551ce1b0fbad49}{%
@@ -631,12 +1149,12 @@
     \endentry
     \entry{fernandesEvaluatingAccessibilityWeb2012}{article}{}{}
       \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=cf5b4b19e05834270576794ad2857227}{%
+        {{un=1,uniquepart=given,hash=cf5b4b19e05834270576794ad2857227}{%
            family={Fernandes},
            familyi={F\bibinitperiod},
            given={Nádia},
            giveni={N\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=0,uniquepart=base,hash=5c3ed17e3c451cbc593a8a954c212b4b}{%
            family={Costa},
            familyi={C\bibinitperiod},
@@ -1008,12 +1526,12 @@
     \endentry
     \entry{huang_access_2024}{misc}{}{}
       \name{author}{8}{}{%
-        {{un=0,uniquepart=base,hash=eddeb0790aa8c16ddd415bc21af372cf}{%
+        {{un=1,uniquepart=given,hash=eddeb0790aa8c16ddd415bc21af372cf}{%
            family={Huang},
            familyi={H\bibinitperiod},
            given={Calista},
            giveni={C\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=0,uniquepart=base,hash=922f2ff1294c124e06302c4e61be77cb}{%
            family={Ma},
            familyi={M\bibinitperiod},
@@ -1103,6 +1621,189 @@
       \verb http://arxiv.org/abs/2401.16450
       \endverb
       \keyw{Computer Science - Human-Computer Interaction,Computer Science - Software Engineering,Computer Science - Artificial Intelligence,Hoch,Wichtig}
+    \endentry
+    \entry{huangSurveyHallucinationLarge2025}{article}{}{}
+      \name{author}{11}{}{%
+        {{un=1,uniquepart=given,hash=ebcb470ee777cbc56984a83379d29819}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Lei},
+           giveni={L\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=33dec5c759c85b22701f20add36a7ce5}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Weijiang},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5df07c6cefaf645fc4f245d14e3b69d6}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Weitao},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1a3b6b1d786ba9037182438c6555736d}{%
+           family={Zhong},
+           familyi={Z\bibinitperiod},
+           given={Weihong},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ab3ff7c90017062cb61e7267dbcc7094}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Zhangyin},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2f100a4fbc0bb09e5c0e70e9a4af36a9}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Haotian},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e81e723c604d2cd99bd2504278a0adcd}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Qianglong},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=646c35577faa04835231d176405ee262}{%
+           family={Peng},
+           familyi={P\bibinitperiod},
+           given={Weihua},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4594292cf0c840c87461b4f0e43a3d84}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Xiaocheng},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1b651c40ade9404b1c43c1786d1a7466}{%
+           family={Qin},
+           familyi={Q\bibinitperiod},
+           given={Bing},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=df4100f4c9320162410d3ddcc9257d55}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Ting},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d5a72ad860f0ae3bd779658a39d022a7}
+      \strng{fullhash}{f8c4e1e0196ecf27c8fd439fe69f4465}
+      \strng{fullhashraw}{f8c4e1e0196ecf27c8fd439fe69f4465}
+      \strng{bibnamehash}{f8c4e1e0196ecf27c8fd439fe69f4465}
+      \strng{authorbibnamehash}{f8c4e1e0196ecf27c8fd439fe69f4465}
+      \strng{authornamehash}{d5a72ad860f0ae3bd779658a39d022a7}
+      \strng{authorfullhash}{f8c4e1e0196ecf27c8fd439fe69f4465}
+      \strng{authorfullhashraw}{f8c4e1e0196ecf27c8fd439fe69f4465}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The emergence of large language models ({LLMs}) has marked a significant breakthrough in natural language processing ({NLP}), fueling a paradigm shift in information acquisition. Nevertheless, {LLMs} are prone to hallucination, generating plausible yet nonfactual content. This phenomenon raises significant concerns over the reliability of {LLMs} in real-world information retrieval ({IR}) systems and has attracted intensive research to detect and mitigate such hallucinations. Given the open-ended general-purpose attributes inherent to {LLMs}, {LLM} hallucinations present distinct challenges that diverge from prior task-specific models. This divergence highlights the urgency for a nuanced understanding and comprehensive overview of recent advances in {LLM} hallucinations. In this survey, we begin with an innovative taxonomy of hallucination in the era of {LLM} and then delve into the factors contributing to hallucinations. Subsequently, we present a thorough overview of hallucination detection methods and benchmarks. Our discussion then transfers to representative methodologies for mitigating {LLM} hallucinations. Additionally, we delve into the current limitations faced by retrieval-augmented {LLMs} in combating hallucinations, offering insights for developing more robust {IR} systems. Finally, we highlight the promising research directions on {LLM} hallucinations, including hallucination in large vision-language models and understanding of knowledge boundaries in {LLM} hallucinations.}
+      \field{day}{31}
+      \field{eprinttype}{arxiv}
+      \field{issn}{1046-8188, 1558-2868}
+      \field{journaltitle}{{ACM} Transactions on Information Systems}
+      \field{month}{3}
+      \field{number}{2}
+      \field{shortjournal}{{ACM} Trans. Inf. Syst.}
+      \field{shorttitle}{A Survey on Hallucination in Large Language Models}
+      \field{title}{A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions}
+      \field{urlday}{5}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{volume}{43}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 55}
+      \range{pages}{55}
+      \verb{doi}
+      \verb 10.1145/3703155
+      \endverb
+      \verb{eprint}
+      \verb 2311.05232 [cs]
+      \endverb
+      \verb{file}
+      \verb Preprint PDF:C\:\\Users\\joely\\Zotero\\storage\\PIXY9PQH\\Huang et al. - 2025 - A Survey on Hallucination in Large Language Models Principles, Taxonomy, Challenges, and Open Quest.pdf:application/pdf;Snapshot:C\:\\Users\\joely\\Zotero\\storage\\V7ZF9NHR\\2311.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2311.05232
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2311.05232
+      \endverb
+      \keyw{Computer Science - Computation and Language}
+    \endentry
+    \entry{Intern}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=88475b68a141c415e53b3e8a78e9c2c0}{%
+           family={{Intersoft Consulting}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{88475b68a141c415e53b3e8a78e9c2c0}
+      \strng{fullhash}{88475b68a141c415e53b3e8a78e9c2c0}
+      \strng{fullhashraw}{88475b68a141c415e53b3e8a78e9c2c0}
+      \strng{bibnamehash}{88475b68a141c415e53b3e8a78e9c2c0}
+      \strng{authorbibnamehash}{88475b68a141c415e53b3e8a78e9c2c0}
+      \strng{authornamehash}{88475b68a141c415e53b3e8a78e9c2c0}
+      \strng{authorfullhash}{88475b68a141c415e53b3e8a78e9c2c0}
+      \strng{authorfullhashraw}{88475b68a141c415e53b3e8a78e9c2c0}
+      \field{extraname}{1}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Datenschutz-Grundverordnung (DSGVO)}
+      \field{title}{Art. 28 DSGVO - Auftragsverarbeiter}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://dsgvo-gesetz.de/art-28-dsgvo/
+      \endverb
+      \verb{url}
+      \verb https://dsgvo-gesetz.de/art-28-dsgvo/
+      \endverb
+    \endentry
+    \entry{DSGVO}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=88475b68a141c415e53b3e8a78e9c2c0}{%
+           family={{Intersoft Consulting}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{88475b68a141c415e53b3e8a78e9c2c0}
+      \strng{fullhash}{88475b68a141c415e53b3e8a78e9c2c0}
+      \strng{fullhashraw}{88475b68a141c415e53b3e8a78e9c2c0}
+      \strng{bibnamehash}{88475b68a141c415e53b3e8a78e9c2c0}
+      \strng{authorbibnamehash}{88475b68a141c415e53b3e8a78e9c2c0}
+      \strng{authornamehash}{88475b68a141c415e53b3e8a78e9c2c0}
+      \strng{authorfullhash}{88475b68a141c415e53b3e8a78e9c2c0}
+      \strng{authorfullhashraw}{88475b68a141c415e53b3e8a78e9c2c0}
+      \field{extraname}{2}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Datenschutz-Grundverordnung (DSGVO)}
+      \field{title}{Datenschutz-GrundverordnungDSGVO}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://dsgvo-gesetz.de/
+      \endverb
+      \verb{url}
+      \verb https://dsgvo-gesetz.de/
+      \endverb
     \endentry
     \entry{kerkmann_barrierefreie_2015}{book}{}{}
       \name{author}{2}{}{%
@@ -1376,6 +2077,127 @@
       \verb{file}
       \verb PDF:C\:\\Users\\joely\\Zotero\\storage\\RLQB4NW6\\2017 - Research Methods in Human-Computer Interaction.pdf:application/pdf
       \endverb
+    \endentry
+    \entry{lewisRetrievalAugmentedGenerationKnowledgeIntensive2021}{misc}{}{}
+      \name{author}{12}{}{%
+        {{un=0,uniquepart=base,hash=ecbe786a5668bf643d74bb24fe1c3cfe}{%
+           family={Lewis},
+           familyi={L\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=79978685fd7b37606022b06c0f6419a1}{%
+           family={Perez},
+           familyi={P\bibinitperiod},
+           given={Ethan},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d205faec67355b6e0ec49f82a492324c}{%
+           family={Piktus},
+           familyi={P\bibinitperiod},
+           given={Aleksandra},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e1c32989a78998fe3c03c981d0da2dc7}{%
+           family={Petroni},
+           familyi={P\bibinitperiod},
+           given={Fabio},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b24392ebfb2c0a35979fc689c389c649}{%
+           family={Karpukhin},
+           familyi={K\bibinitperiod},
+           given={Vladimir},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=78a420900f50a8470ad085fb05231bf6}{%
+           family={Goyal},
+           familyi={G\bibinitperiod},
+           given={Naman},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4eadcf26f55e11fe4be834b52d9b7fdf}{%
+           family={Küttler},
+           familyi={K\bibinitperiod},
+           given={Heinrich},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c97f53fdeeb04c28de19e3324cb4bc0a}{%
+           family={Lewis},
+           familyi={L\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d4d56d3d370b3afd4ad2ebf985fbd3f8}{%
+           family={Yih},
+           familyi={Y\bibinitperiod},
+           given={Wen-tau},
+           giveni={W\bibinithyphendelim t\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b3ff4029884ead9928954ea33714192c}{%
+           family={Rocktäschel},
+           familyi={R\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6cd024b217f3f2f8126e253b8c84d24d}{%
+           family={Riedel},
+           familyi={R\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ca01c762f4a52dd8a8548508f8d727c9}{%
+           family={Kiela},
+           familyi={K\bibinitperiod},
+           given={Douwe},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{f238c3bfc4b30650dd17e65c4aadfc66}
+      \strng{fullhash}{22489b764620b23a8cc8547a492f0763}
+      \strng{fullhashraw}{22489b764620b23a8cc8547a492f0763}
+      \strng{bibnamehash}{22489b764620b23a8cc8547a492f0763}
+      \strng{authorbibnamehash}{22489b764620b23a8cc8547a492f0763}
+      \strng{authornamehash}{f238c3bfc4b30650dd17e65c4aadfc66}
+      \strng{authorfullhash}{22489b764620b23a8cc8547a492f0763}
+      \strng{authorfullhashraw}{22489b764620b23a8cc8547a492f0763}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Large pre-trained language models have been shown to store factual knowledge in their parameters, and achieve state-of-the-art results when fine-tuned on downstream {NLP} tasks. However, their ability to access and precisely manipulate knowledge is still limited, and hence on knowledge-intensive tasks, their performance lags behind task-specific architectures. Additionally, providing provenance for their decisions and updating their world knowledge remain open research problems. Pre-trained models with a differentiable access mechanism to explicit non-parametric memory can overcome this issue, but have so far been only investigated for extractive downstream tasks. We explore a general-purpose fine-tuning recipe for retrieval-augmented generation ({RAG}) -- models which combine pre-trained parametric and non-parametric memory for language generation. We introduce {RAG} models where the parametric memory is a pre-trained seq2seq model and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural retriever. We compare two {RAG} formulations, one which conditions on the same retrieved passages across the whole generated sequence, the other can use different passages per token. We fine-tune and evaluate our models on a wide range of knowledge-intensive {NLP} tasks and set the state-of-the-art on three open domain {QA} tasks, outperforming parametric seq2seq models and task-specific retrieve-and-extract architectures. For language generation tasks, we find that {RAG} models generate more specific, diverse and factual language than a state-of-the-art parametric-only seq2seq baseline.}
+      \field{day}{12}
+      \field{eprinttype}{arxiv}
+      \field{month}{4}
+      \field{number}{{arXiv}:2005.11401}
+      \field{title}{Retrieval-Augmented Generation for Knowledge-Intensive {NLP} Tasks}
+      \field{urlday}{5}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2005.11401
+      \endverb
+      \verb{eprint}
+      \verb 2005.11401 [cs]
+      \endverb
+      \verb{file}
+      \verb Preprint PDF:C\:\\Users\\joely\\Zotero\\storage\\DVWZUGFX\\Lewis et al. - 2021 - Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.pdf:application/pdf;Snapshot:C\:\\Users\\joely\\Zotero\\storage\\V87AF4ZP\\2005.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2005.11401
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2005.11401
+      \endverb
+      \keyw{Computer Science - Computation and Language,Computer Science - Machine Learning}
     \endentry
     \entry{manca_transparency_2023}{article}{}{}
       \name{author}{4}{}{%
@@ -1876,6 +2698,34 @@
       \endverb
       \keyw{Mittel,Vielleicht}
     \endentry
+    \entry{openai2023gpt4}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0523b13262b12c215d8009938f5c14f1}{%
+           family={{OpenAI}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{0523b13262b12c215d8009938f5c14f1}
+      \strng{fullhash}{0523b13262b12c215d8009938f5c14f1}
+      \strng{fullhashraw}{0523b13262b12c215d8009938f5c14f1}
+      \strng{bibnamehash}{0523b13262b12c215d8009938f5c14f1}
+      \strng{authorbibnamehash}{0523b13262b12c215d8009938f5c14f1}
+      \strng{authornamehash}{0523b13262b12c215d8009938f5c14f1}
+      \strng{authorfullhash}{0523b13262b12c215d8009938f5c14f1}
+      \strng{authorfullhashraw}{0523b13262b12c215d8009938f5c14f1}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{arXiv preprint arXiv:2303.08774}
+      \field{title}{GPT-4 Technical Report}
+      \field{year}{2023}
+      \verb{eprint}
+      \verb 2303.08774
+      \endverb
+    \endentry
     \entry{WorldReportDisability}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=8179b1fdebe9235e54501d2878c47e1b}{%
@@ -2094,6 +2944,49 @@
       \verb{url}
       \verb https://www.researchgate.net/publication/396366120_Policy_in_Practice_A_Systematic_Review_of_WCAG_22_and_ADA_2024_Effects_on_Web_and_Mobile_Accessibility
       \endverb
+    \endentry
+    \entry{russellArtificialIntelligenceModern2021}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=143fa183327d9fcd9de18eec99d6ca97}{%
+           family={Russell},
+           familyi={R\bibinitperiod},
+           given={Stuart},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5de798d5fa3c0236c0478134cd23f52a}{%
+           family={Norvig},
+           familyi={N\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Hoboken}%
+      }
+      \list{publisher}{1}{%
+        {Pearson}%
+      }
+      \strng{namehash}{b280605b721b4ebcba5395298499f924}
+      \strng{fullhash}{b280605b721b4ebcba5395298499f924}
+      \strng{fullhashraw}{b280605b721b4ebcba5395298499f924}
+      \strng{bibnamehash}{b280605b721b4ebcba5395298499f924}
+      \strng{authorbibnamehash}{b280605b721b4ebcba5395298499f924}
+      \strng{authornamehash}{b280605b721b4ebcba5395298499f924}
+      \strng{authorfullhash}{b280605b721b4ebcba5395298499f924}
+      \strng{authorfullhashraw}{b280605b721b4ebcba5395298499f924}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The most comprehensive, up-to-date introduction to the theory and practice of artificial intelligence The long-anticipated revision of Artificial Intelligence: A Modern Approach explores the full breadth and depth of the field of artificial intelligence ({AI}). The 4th Edition brings readers up to date on the latest technologies, presents concepts in a more unified manner, and offers new or expanded coverage of machine learning, deep learning, transfer learning, multiagent systems, robotics, natural language processing, causality, probabilistic programming, privacy, fairness, and safe {AI}.}
+      \field{isbn}{978-0-13-461099-3}
+      \field{pagetotal}{1136}
+      \field{shorttitle}{Artificial Intelligence}
+      \field{title}{Artificial Intelligence: A Modern Approach}
+      \field{year}{2021}
+      \field{dateera}{ce}
     \endentry
     \entry{sariogluAccessibilityWebModeling}{article}{}{}
       \name{author}{1}{}{%
@@ -2385,6 +3278,159 @@
       \verb https://dl.acm.org/doi/10.1145/3650212.3652113
       \endverb
       \keyw{Hoch,Wichtig}
+    \endentry
+    \entry{touvron2023llama2}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{21}{}{%
+        {{un=0,uniquepart=base,hash=a2a13fcd633ec70c55a7f3f4812afdcf}{%
+           family={Touvron},
+           familyi={T\bibinitperiod},
+           given={Hugo},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=950630d7ca7a0fad0a3d3f705e279eb1}{%
+           family={Martin},
+           familyi={M\bibinitperiod},
+           given={Louis},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2f7a28226c3a07d546eb4e727221d2ea}{%
+           family={Stone},
+           familyi={S\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4259895890611f7a0591f723b097f014}{%
+           family={Albert},
+           familyi={A\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=18b5c5fc5f9f3bbb5d989b59eae0318a}{%
+           family={Almahairi},
+           familyi={A\bibinitperiod},
+           given={Amjad},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3f8d04c034a513f6abe1e2c15f14e3e4}{%
+           family={Babaei},
+           familyi={B\bibinitperiod},
+           given={Yasmine},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8dca70cf10dd8f894b4dff4af9ff238c}{%
+           family={Bashlykov},
+           familyi={B\bibinitperiod},
+           given={Nikolay},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1b9611b3526fa975cb70666e43061068}{%
+           family={Batra},
+           familyi={B\bibinitperiod},
+           given={Soumya},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f6126d401371bb053d15e54678a5d2be}{%
+           family={Bhargava},
+           familyi={B\bibinitperiod},
+           given={Prajjwal},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7681ed73d0f254dc4ce489faa0245a38}{%
+           family={Bhosale},
+           familyi={B\bibinitperiod},
+           given={Shruti},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=acb20098a194c44158de5770b1a70666}{%
+           family={Bikel},
+           familyi={B\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8269ea0da45e06632fa2fb6ab5a485f2}{%
+           family={Blecher},
+           familyi={B\bibinitperiod},
+           given={Lukas},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a34f5689cad1c408c313da70915c7631}{%
+           family={Canton-Ferrer},
+           familyi={C\bibinithyphendelim F\bibinitperiod},
+           given={Cristian},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=87afbb2c2912cf3858d79c6e82cfe4b1}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Moya},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c30bc5878e196747275a7ff581c6ed22}{%
+           family={Cucurull},
+           familyi={C\bibinitperiod},
+           given={Guillem},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8bc68c3d86e021e0a7cf92611aef5aba}{%
+           family={Esiobu},
+           familyi={E\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=350dca5d371a8203f3a07fb06bb28575}{%
+           family={Fernandes},
+           familyi={F\bibinitperiod},
+           given={Jude},
+           giveni={J\bibinitperiod},
+           givenun=1}}%
+        {{un=1,uniquepart=given,hash=76c6af62ff4da9d3f19d41b4e8d2bbc1}{%
+           family={Fu},
+           familyi={F\bibinitperiod},
+           given={Jeremy},
+           giveni={J\bibinitperiod},
+           givenun=1}}%
+        {{un=1,uniquepart=given,hash=c206969fdfb0e87b34f30ee6cc0f0139}{%
+           family={Fu},
+           familyi={F\bibinitperiod},
+           given={Wenyin},
+           giveni={W\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=ceb8a0f78cb4f3c580c3bacec158d307}{%
+           family={Fuller},
+           familyi={F\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8ba5b0a41692cd620325c1fc0a9dc84a}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Cynthia},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c237483431fea681283a37adbb23a59f}
+      \strng{fullhash}{fbc5800cd72d02011927fdf32e217ec3}
+      \strng{fullhashraw}{fbc5800cd72d02011927fdf32e217ec3}
+      \strng{bibnamehash}{fbc5800cd72d02011927fdf32e217ec3}
+      \strng{authorbibnamehash}{fbc5800cd72d02011927fdf32e217ec3}
+      \strng{authornamehash}{c237483431fea681283a37adbb23a59f}
+      \strng{authorfullhash}{fbc5800cd72d02011927fdf32e217ec3}
+      \strng{authorfullhashraw}{fbc5800cd72d02011927fdf32e217ec3}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{arXiv preprint arXiv:2307.09288}
+      \field{title}{Llama 2: Open Foundation and Fine-Tuned Chat Models}
+      \field{year}{2023}
+      \verb{eprint}
+      \verb 2307.09288
+      \endverb
     \endentry
     \entry{un_crpd_2006}{online}{}{}
       \name{author}{1}{}{%
@@ -2707,6 +3753,211 @@
       \field{pages}{2\bibrangedash 6}
       \range{pages}{5}
     \endentry
+    \entry{wei2022emergent}{article}{}{}
+      \name{author}{16}{ul=2}{%
+        {{un=0,uniquepart=base,hash=61331a11b490f3d927555985facd25b3}{%
+           family={Wei},
+           familyi={W\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7579658a0aca8cb0e17a89deb28b8ccc}{%
+           family={Tay},
+           familyi={T\bibinitperiod},
+           given={Yi},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3963a2fcc8de83e028bc855365b882d9}{%
+           family={Bommasani},
+           familyi={B\bibinitperiod},
+           given={Rishi},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=81a5a94e2388c149a73a86381db45e07}{%
+           family={Raffel},
+           familyi={R\bibinitperiod},
+           given={Colin},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=91aafc93e68e8c6a55e8cd804c2acaf2}{%
+           family={Zoph},
+           familyi={Z\bibinitperiod},
+           given={Barret},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c28d74501d531d6672ccf4c28016c7ac}{%
+           family={Borgeaud},
+           familyi={B\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=14889c0769f78922934df82a671f0cf3}{%
+           family={Yogatama},
+           familyi={Y\bibinitperiod},
+           given={Dani},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3fd5b56bfa48546f2caae7b4aa56a29f}{%
+           family={Bosma},
+           familyi={B\bibinitperiod},
+           given={Maarten},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=797f9a226fd7356db5edc6feba1a0e87}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Denny},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b8598f6ee8ef27100af553bb38e1ff24}{%
+           family={Metzler},
+           familyi={M\bibinitperiod},
+           given={Donald},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=594b2be737e055817db9ad276b6bf05a}{%
+           family={Chi},
+           familyi={C\bibinitperiod},
+           given={Ed\bibnamedelima H.},
+           giveni={E\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=be228979341f812e59d6e0fe757fe105}{%
+           family={Hashimoto},
+           familyi={H\bibinitperiod},
+           given={Tatsunori},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=494b568c5dc85ba8f3f409635f9c5f25}{%
+           family={Vinyals},
+           familyi={V\bibinitperiod},
+           given={Oriol},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=86c032bbc45c3b616f0a1170befc0e82}{%
+           family={Liang},
+           familyi={L\bibinitperiod},
+           given={Percy},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4aecfb0cc2e1e3b7899129fa2a94e2b8}{%
+           family={Dean},
+           familyi={D\bibinitperiod},
+           given={Jeffrey},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=749d4fb83777d7b74c0ee8de5a510f41}{%
+           family={Fedus},
+           familyi={F\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c6a1f0ebfee474ce709a3ddd57a9125f}
+      \strng{fullhash}{57bcf1cdff8676d0b7f3434a8ee3973a}
+      \strng{fullhashraw}{57bcf1cdff8676d0b7f3434a8ee3973a}
+      \strng{bibnamehash}{57bcf1cdff8676d0b7f3434a8ee3973a}
+      \strng{authorbibnamehash}{57bcf1cdff8676d0b7f3434a8ee3973a}
+      \strng{authornamehash}{c6a1f0ebfee474ce709a3ddd57a9125f}
+      \strng{authorfullhash}{57bcf1cdff8676d0b7f3434a8ee3973a}
+      \strng{authorfullhashraw}{57bcf1cdff8676d0b7f3434a8ee3973a}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Transactions on Machine Learning Research}
+      \field{title}{Emergent Abilities of Large Language Models}
+      \field{year}{2022}
+      \field{pages}{1\bibrangedash 35}
+      \range{pages}{35}
+      \verb{urlraw}
+      \verb https://openreview.net/forum?id=yzkSU5zdwD
+      \endverb
+      \verb{url}
+      \verb https://openreview.net/forum?id=yzkSU5zdwD
+      \endverb
+    \endentry
+    \entry{wei2022chainofthought}{misc}{}{}
+      \name{author}{9}{ul=2}{%
+        {{un=0,uniquepart=base,hash=61331a11b490f3d927555985facd25b3}{%
+           family={Wei},
+           familyi={W\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=27d22d8f05f44b47f7dcfe9b7fb85584}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Xuezhi},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fc76f5fb256da4d423554f8e629b4321}{%
+           family={Schuurmans},
+           familyi={S\bibinitperiod},
+           given={Dale},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3fd5b56bfa48546f2caae7b4aa56a29f}{%
+           family={Bosma},
+           familyi={B\bibinitperiod},
+           given={Maarten},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a096e9107f0463212211c4510c6fa470}{%
+           family={Ichter},
+           familyi={I\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=61e00ed0c44b8bddb9077a74a4ac1167}{%
+           family={Xia},
+           familyi={X\bibinitperiod},
+           given={Fei},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4c62c73d10bbf27f93c07774d30f647c}{%
+           family={Chi},
+           familyi={C\bibinitperiod},
+           given={Ed},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c636f146591d51579a8119b777394878}{%
+           family={Le},
+           familyi={L\bibinitperiod},
+           given={Quoc\bibnamedelima V.},
+           giveni={Q\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=797f9a226fd7356db5edc6feba1a0e87}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Denny},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b14663f4d0bd3b59eb629fe8a9acd724}
+      \strng{fullhash}{0a6023425e9f1a427e86985342d6f7ef}
+      \strng{fullhashraw}{0a6023425e9f1a427e86985342d6f7ef}
+      \strng{bibnamehash}{0a6023425e9f1a427e86985342d6f7ef}
+      \strng{authorbibnamehash}{0a6023425e9f1a427e86985342d6f7ef}
+      \strng{authornamehash}{b14663f4d0bd3b59eb629fe8a9acd724}
+      \strng{authorfullhash}{0a6023425e9f1a427e86985342d6f7ef}
+      \strng{authorfullhashraw}{0a6023425e9f1a427e86985342d6f7ef}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CL}
+      \field{eprinttype}{arxiv}
+      \field{note}{Definition von Chain-of-Thought Prompting auf S.~2}
+      \field{title}{Chain-of-Thought Prompting Elicits Reasoning in Large Language Models}
+      \field{year}{2022}
+      \verb{eprint}
+      \verb 2201.11903
+      \endverb
+    \endentry
     \entry{WHO}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=531217507bec092b6ec36c0f78f46736}{%
@@ -2812,6 +4063,74 @@
       \endverb
       \verb{url}
       \verb https://www.w3.org/TR/WCAG22/
+      \endverb
+    \endentry
+    \entry{yao2022react}{misc}{}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=5c1b62cbd4e181d818b927549813cf73}{%
+           family={Yao},
+           familyi={Y\bibinitperiod},
+           given={Shunyu},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4fc64f0dbaf7cb8f21c7c85d580cdb15}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Jeffrey},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2cb7d2d6e42d109fa2c5086d6c8f6a63}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Dian},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a926c34a0eebdaaa30da36b46bd2192c}{%
+           family={Du},
+           familyi={D\bibinitperiod},
+           given={Nan},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=20b3779bbd037bbfdd1ffd3967624997}{%
+           family={Shafran},
+           familyi={S\bibinitperiod},
+           given={Izhak},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=997c3143c2e5d593e816d2ff704fbf98}{%
+           family={Narasimhan},
+           familyi={N\bibinitperiod},
+           given={Karthik},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2923de2da7f9b32b957552e414b6bc16}{%
+           family={Cao},
+           familyi={C\bibinitperiod},
+           given={Yuan},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4ae4be538df04cfc1571685175562cad}
+      \strng{fullhash}{6f22c9f891fbcfb7465b1c3157b57023}
+      \strng{fullhashraw}{6f22c9f891fbcfb7465b1c3157b57023}
+      \strng{bibnamehash}{6f22c9f891fbcfb7465b1c3157b57023}
+      \strng{authorbibnamehash}{6f22c9f891fbcfb7465b1c3157b57023}
+      \strng{authornamehash}{4ae4be538df04cfc1571685175562cad}
+      \strng{authorfullhash}{6f22c9f891fbcfb7465b1c3157b57023}
+      \strng{authorfullhashraw}{6f22c9f891fbcfb7465b1c3157b57023}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CL}
+      \field{eprinttype}{arxiv}
+      \field{note}{Definition/Intuition von ReAct (interleaved reasoning+acting) auf S.~2; publiziert bei ICLR 2023}
+      \field{title}{ReAct: Synergizing Reasoning and Acting in Language Models}
+      \field{year}{2022}
+      \verb{eprint}
+      \verb 2210.03629
       \endverb
     \endentry
     \entry{yin_case_2018}{book}{}{}

@@ -131,10 +131,78 @@ Drittens erschwert die Komponentenabstraktion die Ursachenanalyse: Ein einzelnes
 
 Um diese dynamischen Zustände automatisiert reproduzierbar testen zu können, werden Werkzeuge zur Browserautomatisierung benötigt.
 
-Playwright ist ein von Microsoft entwickeltes Open-Source-Framework für die End-to-End-Test\-automatisierung von Webanwendungen.\footcite[Vgl.][]{playwright} Es ermöglicht die automatisierte Steuerung der Browser Chromium, Firefox und WebKit über eine einheitliche API und führt Anwendungen in einem echten Browser-Kontext aus, sodass JavaScript-Ausführung, clientseitiges Rendering und dynamische \ac{DOM}-Manipulationen vollständig nachgebildet werden.
+Playwright ist ein von Microsoft entwickeltes Open-Source-Framework für die End-to-End-Test\-automatisierung von Webanwendungen.\footcite[Vgl.][]{playwright} Es ermöglicht die automatisierte Steuerung der Browser Chromium, Firefox und WebKit über eine einheitliche \ac{API} und führt Anwendungen in einem echten Browser-Kontext aus, sodass JavaScript-Ausführung, clientseitiges Rendering und dynamische \ac{DOM}-Manipulationen vollständig nachgebildet werden.
 
 Für die Barrierefreiheitsanalyse ist Playwright aus mehreren Gründen besonders geeignet. Erstens kann es durch programmierte Interaktionen - Klicks, Formularausfüllungen, Tastatureingaben, Hover-Aktionen - gezielt verschiedene Anwendungszustände auslösen. Zweitens bietet Playwright mit \texttt{@axe-core/playwright} eine direkte Integration der axe-core-Bibliothek: Nach jeder Interaktion kann unmittelbar eine vollständige axe-Prüfung des aktuellen \ac{DOM}-Zustands angestoßen werden.\footcite[Vgl.][]{axe}
 
 Huang et al. nutzen in \textfett{ACCESS} genau diese Integration für die sequentielle Prüfung verschiedener Seitenzustände.\footcite[Vgl.][]{huang_access_2024} Fathallah et al. zeigen in \textfett{AccessGuru}, dass die Kombination aus Playwright-Interaktion und axe-core-Analyse entscheidend dazu beiträgt, auch dynamisch erzeugte Barrieren zu erfassen.\footcite[Vgl.][S. 2 f.]{fathallah_accessguru_2025} He et al. nutzen Playwright in \textfett{GenA11y} für die \ac{DOM}-Extraktion nach vollständigem clientseitigem Rendering.\footcite[Vgl.][]{he_enhancing_2025} In der vorliegenden Arbeit dient Playwright als zentrales Werkzeug der Detection-Phase: Es löst definierte Interaktionssequenzen aus, erfasst die resultierenden \ac{DOM}-Zustände und stößt axe-core-Prüfungen an, deren strukturierter JSON-Output als erster Input für die \ac{LLM}-Analysepipeline dient. Dieser Ansatz bildet die Grundlage für die Detection-Phase des in dieser Arbeit entwickelten Systems zur automatisierten Barrierefreiheitsanalyse.
 
-\section{KI-Assistenzsysteme für Softwareanalyse und Handlungsempfehlungen}\label{kap:2.4}
+\section{\ac{KI}-Assistenzsysteme für Softwareanalyse und Handlungsempfehlungen}\label{kap:2.4}
+
+Das Konzept der \ac{KI} ist eng mit den Anfängen der Informatik in den 1950er Jahren verbunden.\footcite[Vgl.][]{buchananVeryBriefHistory2005} Künstliche Intelligenz bezeichnet nach der Definition von Russell und Norvig die Theorie und Entwicklung von Computersystemen die in der Lage sind, Aufgaben zu erfüllen die normalerweise menschliche Intelligenz erfordern.\footcite[Vgl.][S. 22 ff.]{russellArtificialIntelligenceModern2021} Zu typischen Aufgaben der \ac{KI} zählen Sprachverarbeitung, visuelle Wahrnehmung und auch eine Entscheidungsfindung auf einer gewissen Ebene.\footcite[Vgl.][S. 2-3]{russellArtificialIntelligenceModern2021} \ac{KI} fungiert als Oberbegriff für viele weitere Unterarten an Teildisziplinen wie Maschinelles Lernen und Deep Learning. Doch innerhalb all dieser Untergruppen haben sich \acl{LLM} als besonders leistungsfähige Klasse von \ac{KI}-Systemen für sprachbasierte Aufgaben etabliert.
+
+\subsection{Grundlagen: Large Language Models}
+
+\ac{LLM}s sind neuronale Netzwerke, die auf extrem großen Datensätzen, mit dem Ziel traniert werden, das nächste Token einer Textsequenz vorherzusagen.\footcite[Vgl.][S. 5 ff.]{brynjolfssonNBERWORKINGPAPER} Durch dieses Training auf massiver Datenbasis entstehen Modelle, die komplexe Sprachstrukturen, semantische Zusammenhänge und logisches Schlussfolgern internalisieren. Für den Zugriff auf externes Wissen werden häufig \textit{Embedding}-basierte Retrieval-Methoden verwendet (Vektorraumsuche), die in \ac{RAG}-Systemen zentral sind.\footcite[Vgl.][]{lewisRetrievalAugmentedGenerationKnowledgeIntensive2021} Die bekanntesten Vertreter sind GPT-4o (OpenAI), Claude (Anthropic) und die LLaMA-Modellfamilie (Meta).\footcite[Vgl.][]{anthropic2026claude}\footcite[Vgl.][]{openai2023gpt4}\footcite[Vgl.][]{touvron2023llama2} Entscheidend für den Anwendungskontext dieser Arbeit sind die sogenannten Emergent Abilities dieser Modelle: Fähigkeiten wie Code-Generierung, mehrsprachige Übersetzung und kontextuelles Schlussfolgern, die ab einer bestimmten Modellgröße ohne explizites Training auftreten. \glqq An ability is emergent if it is not present in smaller models but is present in larger models \grqq.\footcite[Entnommen aus][S. 2]{wei2022emergent} 
+
+Im Kontext der Barrierefreiheitsanalyse bieten \ac{LLM}s gegenüber regelbasierten Tools drei wesentliche Vorteile: 
+
+\begin{itemize}
+    \item Sie verfügen über ein Sprachverständnis, das die Bewertung semantischer Inhalte ermöglicht.
+    \item Sie können Code generieren und transformieren, wodurch konkrete Handlungsempfehlungen abgeleitet werden können.
+    \item Sie können große Mengen an Text analysieren und strukturieren.
+    \item Sie verarbeiten Kontext und können durch Techniken wie Clustering die Bedeutung eines Elements im Zusammenhang der Gesamtseite beurteilen.
+\end{itemize}
+
+Diesen Stärken stehen bekannte Schwächen gegenüber: 
+\begin{itemize}
+    \item \ac{LLM}s können halluzinieren, also plausibel klingende Ausgaben erzeugen, die jedoch faktisch falsch sind.\footcite[Vgl.][]{huangSurveyHallucinationLarge2025}
+    \item Sie sind von einem Knowledge-Cutoff betroffen. Als solcher wird der \textit{Stichtag} definiert, bis zu dem die Trainingsdaten eines Modells reichen, sodass Ereignisse oder Informationen nach diesem Zeitpunkt dem Modell nicht bekannt sind. Ein passendes Beispiel hierfür ist das neuste Modell von Anthropic Claude Sonnet 4.6 dass nur mit Informationen bis May 2025 trainiert worden ist.\footcite[Vgl.][S. 7]{System_Card}
+    \item Bei gleicher Eingabe erzeugen sie nicht immer identische Ausgaben; dieses Verhalten wird als Nicht-Determinismus bezeichnet.\footcite[Vgl.][Temperature]{OpenAI_Developers}\footcite[Vgl.][Temperature]{Anthropic_API_Docs}
+    \item Die generierten Inhalte können Verzerrungen (\textit{Bias}) aus den Trainingsdaten übernehmen.\footcite[Vgl.][S. 614-615]{benderDangersStochasticParrots2021}
+\end{itemize}
+
+
+\subsection{Prompt-Engineering-Strategien}
+
+Die Qualität der Ausgaben eines \ac{LLM} hängt maßgeblich von der Formulierung der Eingabe - dem sogenannten Prompt - ab. Prompt Engineering bezeichnet die systematische Gestaltung dieser Eingaben, um die Ausgabequalität zu maximieren. Im Folgenden werden die für diese Arbeit relevanten Strategien beschrieben, die in Kapitel \ref{kap:6} als Grundlage für das Prompt-Design des PoC dienen. 
+
+\begin{itemize}
+    \item \textbf{Zero-Shot Prompting} bezeichnet die direkte Anfrage ohne Beispiele oder Kontextinformationen. Das Modell nutzt ausschließlich sein vortrainiertes Wissen. Diese Strategie ist einfach umzusetzen, erzielt bei komplexen Aufgaben wie der Barrierefreiheitsanalyse jedoch häufig unzureichende Ergebnisse.\footcite[Vgl.][S. 4]{brown2020gpt3fewshot}
+    \item \textbf{Few-Shot Prompting} ergänzt den Prompt um eine kleine Anzahl von Beispielen (Input-Output-Paaren), die dem Modell das erwartete Ausgabeformat und die inhaltlichen Erwartungen verdeutlichen. Dieser Ansatz verbessert die Konsistenz und Präzision der Ausgaben erheblich, erfordert jedoch sorgfältig ausgewählte Beispiele.\footcite[Vgl.][S. 4]{brown2020gpt3fewshot} Als Vergleich von Zero-Shot- und Few-Shot-Prompting dient die Grafik \ref{fig:fewshot}.
+    \item \textbf{Chain-of-Thought Prompting (CoT)} veranlasst das Modell, seinen Lösungsweg Schritt für Schritt zu erklären, bevor es zur finalen Antwort gelangt. Dieses explizite Reasoning reduziert nachweislich Halluzinationen bei komplexen Schlussfolgerungen und macht die Entscheidungslogik des Modells für eine Prüfung durch den Nutzer zugänglich.\footcite[Vgl.][S. 2]{wei2022chainofthought}
+    \item \textbf{ReAct-Prompting} kombiniert Reasoning (Re) und Action (Act) in einem iterativen Prozess: Das Modell wechselt zwischen Denken (Reasoning) und Handeln, wie das konstante Wechseln von Tools und Daten. Dadurch werden die Ausgaben der zurückgemeldeten Ergebnisse verfeinert. Huang et al. demonstrieren, dass ReAct-Prompting bei der automatisierten Barrierefreiheitskorrektur (\textfett{ACCESS}) mit einem Severity Score Reduction von 51,3\% alle anderen verglichenen Strategien übertrifft.\footcite[Vgl.][]{huang_access_2024}\footcite[Vgl.][]{yao2022react}
+    \item \textbf{Role-Play Prompting} weist dem Modell eine Expertenrolle zu, die seine Ausgaben in Richtung domänenspezifischen Wissens lenkt. Ein Prompt, der das Modell als "erfahrenen Barrierefreiheitsexperten und React-Entwickler" adressiert, verbessert nachweislich die Qualität accessibility-spezifischer Ausgaben, da das Modell seine Antworten stärker an der Perspektive eines Fachexperten ausrichtet.\footcite[Vgl.][]{fathallah_accessguru_2025}
+    \item \textbf{Metacognitive Prompting} fordert das Modell auf, die eigene Ausgabe in einem zweiten Schritt zu reflektieren und zu bewerten, bevor diese finalisiert wird. In Verbindung mit Corrective Re-Prompting - einer Technik, bei der fehlerhafte Ausgaben dem Modell zusammen mit einer Fehlerbeschreibung als Feedback zurückgespielt werden - ermöglicht dieser Ansatz eine iterative Qualitätssteigerung. Fathallah et al. belegen, dass Corrective Re-Prompting in \textfett{AccessGuru} den Violation Score Decrease von 0,72 auf 0,84 verbessert.\footcite[Vgl.][]{fathallah_accessguru_2025} 
+
+\end{itemize}
+
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.7\textwidth]{graphics/fewshot.png}
+  \caption{Zero-Shot und Few-Shot Prompting im Vergleich\footcite[Vgl.][]{brown2020gpt3fewshot}}
+  \label{fig:fewshot}
+\end{figure}
+
+
+\subsection{\acs{RAG} und Fine-Tuning als Erweiterungsansätze}
+
+Neben Prompt-Engineering-Strategien existieren zwei weitergehende Ansätze, die Leistungsfähigkeit von \ac{LLM}s zu verbessern.
+
+\textfett{\acl{RAG}} erweitert den Prompt eines \ac{LLM} zur Laufzeit mit thematisch passenden Dokumenten, die aus einer externen Wissensbasis abgerufen werden.\footcite[Vgl.][]{lewisRetrievalAugmentedGenerationKnowledgeIntensive2021} Im Kontext der Barrierefreiheitsanalyse könnte eine \ac{RAG}-Pipeline aktuelle \ac{WCAG}-Erfolgskriterien, Techniken und bekannte Lösungsmuster für das Modell abrufbar machen und so sicherstellen, dass es unabhängig von seinem Trainings-Cutoff mit aktuellen Anforderungen arbeitet. Bassi et al. zeigen, dass der Einsatz von \acs{RAG} mit einem \ac{WCAG}-2.1-Dokument-Korpus Halluzinationen um 34\% reduziert.\footcite[Vgl.][]{bassi_assessment_2025} 
+
+\textfett{Fine-Tuning} bezeichnet das domänenspezifische Training eines vortrainierten Modells auf einem kleineren, aufgabenspezifischen Datensatz. Delnevo et al. zeigen, dass Fine-Tuning auf einem Datensatz, die Konsistenz von Bewertungen signifikant verbessert.\footcite[Vgl.][]{delnevo_interaction_2024} Für den Kontext der öffentlichen Verwaltung wäre insbesondere ein Fine-Tuning auf \ac{BITV}-spezifischen Anforderungen und internen Entwicklungsstandards der \ac{BITBW} denkbar. 
+
+Beide Ansätze liegen außerhalb des Scopes dieser Arbeit und werden als Ausblick in Kapitel \ref{Limits} und \ref{Ausblick} aufgegriffen.
+
+\subsection{Datenschutz bei \ac{KI}-gestützten Accessibility-Services}
+
+Der Einsatz von \ac{LLM}s im Kontext öffentlicher Verwaltungen wirft spezifische Datenschutzfragen auf. Webanwendungen der öffentlichen Verwaltung verarbeiten häufig personenbezogene Daten - etwa in Formularseiten, die persönliche Angaben von Bürgerinnen und Bürgern erfassen. Werden diese Seiten für eine \ac{KI}-gestützte Accessibility-Analyse an externe \ac{LLM}-\ac{API}s übermittelt, ist die Wahrung der Datenschutzgarantien fraglich.
+
+Die \acl{DSGVO} schreibt vor, dass personenbezogene Daten nur auf Basis einer Rechtsgrundlage und unter Wahrung der Grundsätze der Zweckbindung und Datenminimierung verarbeitet werden dürfen.\footcite[Vgl.][]{DSGVO} Die Übermittlung von Produktiv-\ac{HTML}-Quellcode, der im schlimmsten Fall personenbezogene Daten als Attributwerte enthalten kann, an externe \ac{API}-Dienste wie die OpenAI \ac{API} oder die Anthropic \ac{API} ist ohne explizite Rechtsgrundlage und einen Auftragsverarbeitungsvertrag nach Art. 28 \ac{DSGVO} für öffentliche Verwaltungen in Deutschland problematisch.\footcite[Vgl.][]{Intern} 
+
+Als Lösungsansatz wird in dieser Arbeit ein Lokal-First-Prinzip verfolgt: Das \ac{KI}-Assistenzsystem soll ohne externe \ac{API}-Aufrufe betreibbar sein, indem lokal ausführbare Open-Source-Modelle - etwa Modelle der LLaMA-Familie oder Mistral - eingesetzt werden.\footcite[Vgl.][]{touvron2023llama2} Damit bleiben sämtliche Analyse- und Codedaten innerhalb der eigenen Infrastruktur. Diese Anforderung prägt sowohl die nicht-funktionalen Anforderungen (Kapitel \ref{kap:5}) als auch die Architekturentscheidungen (Kapitel \ref{kap:6}) dieser Arbeit.
+
+Die in diesem Kapitel erarbeiteten theoretischen Grundlagen - das normative Fundament der \ac{WCAG}, die empirisch belegten Grenzen regelbasierter Tools, die Besonderheiten von React-Anwendungen sowie die Möglichkeiten und Grenzen von \ac{LLM}s und Prompt-Engineering - bilden den konzeptionellen Rahmen für die im folgenden Kapitel systematisch aufgearbeitete Forschungsliteratur und Methodik.
+
