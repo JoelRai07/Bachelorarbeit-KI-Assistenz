@@ -1,5 +1,5 @@
 \babel@toc {ngerman}{}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces \ac {WCAG}-Schichtenmodell}}{9}{figure.88}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Taxonomie der Barrierefreiheitsverst\"o\ss e nach Fathallah et al. mit Beispielen und Erkennungscharakteristik je Kategorie}}{14}{figure.127}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Framework Popularity über die letzten Jahre\blx@tocontentsinit {0}\footcite [Vgl.][]{262588213843476FrontendFrameworksPopularity}}}{14}{figure.133}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Zero-Shot und Few-Shot Prompting im Vergleich\blx@tocontentsinit {0}\footcite [Vgl.][]{brown2020gpt3fewshot}}}{19}{figure.171}%
+\contentsline {figure}{\numberline {1}{\ignorespaces WCAG-Schichtenmodell\footnote {Eigene Abbildung}}}{9}{figure.90}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Taxonomie der Barrierefreiheitsverstösse nach Fathallah et al. mit Beispielen und Erkennungscharakteristik je Kategorie\blx@tocontentsinit {0}\footcite [Eigene Abbildung, inspiriert aus][]{fathallah_accessguru_2025}}}{14}{figure.131}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Framework Popularity über die letzten Jahre\blx@tocontentsinit {0}\footcite [Entnommen aus][]{262588213843476FrontendFrameworksPopularity}}}{14}{figure.139}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Zero-Shot und Few-Shot Prompting im Vergleich\blx@tocontentsinit {0}\footcite [Entnommen aus][]{brown2020gpt3fewshot}}}{19}{figure.177}%

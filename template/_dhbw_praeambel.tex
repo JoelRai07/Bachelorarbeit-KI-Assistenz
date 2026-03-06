@@ -3,8 +3,9 @@
 %
 \usepackage{ifthen}           % für Umschaltung DE/EN
 \newcommand{\DEoEN}[2]{\ifthenelse{\equal{\meineSprache}{DE}}{#1}{#2}}
-
-
+\usepackage{float}
+\usepackage{footnote}
+\makesavenoteenv{figure} % von mir hinzugefügt
 \usepackage[utf8]{inputenc}   % Zeichencodierung UTF-8 für Eingabe-Dateien
 \usepackage[T1]{fontenc}      % Darstellung von Umlauten im PDF
 
@@ -36,6 +37,7 @@
 
 \usepackage{enumerate}      % anpassbare Nummerier./Aufz.
 \usepackage{graphicx}       % Einbinden von Grafiken
+\usepackage{placeins}       % \FloatBarrier to keep floats in section
 \usepackage{multirow}
 \usepackage{array}
 \usepackage[onehalfspacing]{setspace} % anderthalbzeilig

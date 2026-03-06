@@ -33,6 +33,10 @@ INPUT .\template\_dhbw_praeambel.tex
 INPUT template\_dhbw_praeambel.tex
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
+INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\mdwtools\footnote.sty
+INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\mdwtools\footnote.sty
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\base\inputenc.sty
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\base\inputenc.sty
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\base\fontenc.sty
@@ -96,6 +100,8 @@ INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphi
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex.def
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex.def
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\placeins\placeins.sty
+INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\placeins\placeins.sty
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\multirow\multirow.sty
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\multirow\multirow.sty
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\tools\array.sty
@@ -250,6 +256,10 @@ INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\eurosym\eurosym.sty
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\eurosym\eurosym.sty
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\scrhack\scrhack.sty
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\scrhack\scrhack.sty
+INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\floatbytocbasic\floatbytocbasic.sty
+INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\floatbytocbasic\floatbytocbasic.sty
+INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\xpatch\xpatch.sty
+INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\xpatch\xpatch.sty
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\setspaceenhanced\setspaceenhanced.sty
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\setspaceenhanced\setspaceenhanced.sty
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\graphics\rotating.sty
@@ -264,8 +274,6 @@ INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\graphics\lscape.sty
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\graphics\lscape.sty
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\lscapeenhanced\lscapeenhanced.sty
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\lscapeenhanced\lscapeenhanced.sty
-INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\xpatch\xpatch.sty
-INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\xpatch\xpatch.sty
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\pgf\frontendlayer\tikz.sty
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\pgf\frontendlayer\tikz.sty
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\pgf\basiclayer\pgf.sty
