@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.9.8)  5 MAR 2026 20:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.9.8)  5 MAR 2026 21:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1059,30 +1059,30 @@ although it is yet undefined on input line 17.
 
 [2]
 Package acronym Info: Label `acro:DOM' newly defined as it shall be overridden
-although it is yet undefined on input line 38.
+although it is yet undefined on input line 25.
 Package acronym Info: Label `acro:HTML' newly defined as it shall be overridden
-although it is yet undefined on input line 40.
+although it is yet undefined on input line 27.
 
 
 [3]
-Overfull \hbox (22.82834pt too wide) in paragraph at lines 46--48
+Overfull \hbox (22.82834pt too wide) in paragraph at lines 33--34
 \T1/cmr/m/n/10.95 ren, kon-text-sen-si-ti-ven As-sis-tenz-lö-sung zur Bar-rie-re-frei-heits-ana-ly-se von Rich-Client-Webanwendungen.
  []
 
 
-Overfull \hbox (18.02914pt too wide) in paragraph at lines 46--48
+Overfull \hbox (18.02914pt too wide) in paragraph at lines 33--34
 \T1/cmr/m/n/10.95 Der Proof of Con-cept soll au-to-ma-ti-sier-te Barrierefreiheits-Reports, In-ter-ak-ti-ons-da-ten aus Playwright-
  []
 
 
-Overfull \hbox (18.3576pt too wide) in paragraph at lines 51--52
+Overfull \hbox (18.3576pt too wide) in paragraph at lines 39--40
 []\T1/cmr/bx/n/10.95 Inwieweit kann ein kon-text-sen-si-ti-ves KI-Assistenzsystem, das Tool-Reports, Playwright-
  []
 
 Package acronym Info: Label `acro:TF' newly defined as it shall be overridden
-although it is yet undefined on input line 53.
+although it is yet undefined on input line 41.
 
-Overfull \hbox (4.98296pt too wide) in paragraph at lines 56--57
+Overfull \hbox (4.98296pt too wide) in paragraph at lines 44--45
 [][][]\T1/cmr/m/n/10.95 2: In-wie-fern ver-bes-sert die Ein-be-zie-hung von Quell-co-de und Playwright-Interaktionsdaten
  []
 
@@ -1113,9 +1113,15 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 [8]
+<graphics/WCAG-Dreieck-4-Ebenen.png, id=544, 770.88pt x 643.6547pt>
+File: graphics/WCAG-Dreieck-4-Ebenen.png Graphic file (type png)
+<use graphics/WCAG-Dreieck-4-Ebenen.png>
+Package pdftex.def Info: graphics/WCAG-Dreieck-4-Ebenen.png  used on input line 41.
+(pdftex.def)             Requested size: 227.62206pt x 190.05327pt.
 
-[9]
-Overfull \hbox (50.25468pt too wide) in paragraph at lines 45--46
+
+[9 <./graphics/WCAG-Dreieck-4-Ebenen.png>]
+Overfull \hbox (50.25468pt too wide) in paragraph at lines 53--54
 []\T1/cmr/m/n/10.95 Für öf-fent-li-che Stel-len des Bun-des gilt in Deutsch-land be-reits seit 2011 die Barrierefreie-Informationstechnik-
  []
 
@@ -1126,14 +1132,14 @@ Overfull \hbox (50.25468pt too wide) in paragraph at lines 45--46
 [11]
 
 [12]
-Overfull \hbox (1.43257pt too wide) in paragraph at lines 99--100
+Overfull \hbox (1.43257pt too wide) in paragraph at lines 107--108
 []\T1/cmr/bx/n/10.95 Syntaktische Ver-stö-ÿe \T1/cmr/m/n/10.95 be-zeich-nen Fäl-le, in de-nen ein er-for-der-li-ches Accessibility-Element
  []
 
-<graphics/react.png, id=703, 984.67876pt x 618.05907pt>
+<graphics/react.png, id=702, 984.67876pt x 618.05907pt>
 File: graphics/react.png Graphic file (type png)
 <use graphics/react.png>
-Package pdftex.def Info: graphics/react.png  used on input line 113.
+Package pdftex.def Info: graphics/react.png  used on input line 121.
 (pdftex.def)             Requested size: 227.62206pt x 142.86732pt.
 
 
@@ -1141,31 +1147,31 @@ Package pdftex.def Info: graphics/react.png  used on input line 113.
 
 [14 <./graphics/react.png>]
 Package acronym Info: Label `acro:API' newly defined as it shall be overridden
-although it is yet undefined on input line 134.
+although it is yet undefined on input line 147.
 
 
 [15]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ac' on input line 140.
+(hyperref)                removing `\@ac' on input line 153.
 
-Package acronym Info: Label `acro:RAG' overridden on input line 146.
+Package acronym Info: Label `acro:RAG' overridden on input line 159.
 
 
 [16]
 
 [17]
-<graphics/fewshot.png, id=886, 894.34125pt x 477.28313pt>
+
+[18]
+<graphics/fewshot.png, id=893, 894.34125pt x 477.28313pt>
 File: graphics/fewshot.png Graphic file (type png)
 <use graphics/fewshot.png>
-Package pdftex.def Info: graphics/fewshot.png  used on input line 183.
+Package pdftex.def Info: graphics/fewshot.png  used on input line 196.
 (pdftex.def)             Requested size: 318.66948pt x 170.06665pt.
 
 
-[18]
-
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ac' on input line 199.
+(hyperref)                removing `\@ac' on input line 212.
 
 
 
@@ -1354,29 +1360,29 @@ Package logreq Info: Writing requests to 'latex-vorlage.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29965 strings out of 473523
- 601669 string characters out of 5714631
- 1668375 words of memory out of 5000000
- 52381 multiletter control sequences out of 15000+600000
+ 29967 strings out of 473523
+ 601892 string characters out of 5714631
+ 1668423 words of memory out of 5000000
+ 52388 multiletter control sequences out of 15000+600000
  585652 words of font info for 94 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  108i,18n,127p,10962b,3649s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-pdfTeX warning (dest): name{Hfootnote.223} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.218} has been referenced but does not exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{Hfootnote.198} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.193} has been referenced but does not exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{Hfootnote.185} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.180} has been referenced but does not exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{Hfootnote.141} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.138} has been referenced but does not exist, replaced by a fixed one
 
  <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0500.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on latex-vorlage.pdf (46 pages, 820441 bytes).
+Output written on latex-vorlage.pdf (46 pages, 1406250 bytes).
 PDF statistics:
- 2350 PDF objects out of 2487 (max. 8388607)
- 363 named destinations out of 1000 (max. 500000)
- 395 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2342 PDF objects out of 2487 (max. 8388607)
+ 358 named destinations out of 1000 (max. 500000)
+ 400 words of extra memory for PDF output out of 10000 (max. 10000000)
 

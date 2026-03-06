@@ -3502,76 +3502,6 @@
       \verb https://www.ohchr.org/en/instruments-mechanisms/instruments/convention-rights-persons-disabilities
       \endverb
     \endentry
-    \entry{WAITools}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=446a1ae6601a5c59360c7d591c3992da}{%
-           family={W3C},
-           familyi={W\bibinitperiod}}}%
-      }
-      \strng{namehash}{446a1ae6601a5c59360c7d591c3992da}
-      \strng{fullhash}{446a1ae6601a5c59360c7d591c3992da}
-      \strng{fullhashraw}{446a1ae6601a5c59360c7d591c3992da}
-      \strng{bibnamehash}{446a1ae6601a5c59360c7d591c3992da}
-      \strng{authorbibnamehash}{446a1ae6601a5c59360c7d591c3992da}
-      \strng{authornamehash}{446a1ae6601a5c59360c7d591c3992da}
-      \strng{authorfullhash}{446a1ae6601a5c59360c7d591c3992da}
-      \strng{authorfullhashraw}{446a1ae6601a5c59360c7d591c3992da}
-      \field{extraname}{1}
-      \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{extradate}{1}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{WAVE Web Accessibility Evaluation Tool}
-      \field{title}{Evaluation-Tool-List}
-      \field{urlday}{6}
-      \field{urlmonth}{10}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.w3.org/WAI/test-evaluate/tools/list/
-      \endverb
-      \verb{url}
-      \verb https://www.w3.org/WAI/test-evaluate/tools/list/
-      \endverb
-    \endentry
-    \entry{WAI}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=446a1ae6601a5c59360c7d591c3992da}{%
-           family={W3C},
-           familyi={W\bibinitperiod}}}%
-      }
-      \strng{namehash}{446a1ae6601a5c59360c7d591c3992da}
-      \strng{fullhash}{446a1ae6601a5c59360c7d591c3992da}
-      \strng{fullhashraw}{446a1ae6601a5c59360c7d591c3992da}
-      \strng{bibnamehash}{446a1ae6601a5c59360c7d591c3992da}
-      \strng{authorbibnamehash}{446a1ae6601a5c59360c7d591c3992da}
-      \strng{authornamehash}{446a1ae6601a5c59360c7d591c3992da}
-      \strng{authorfullhash}{446a1ae6601a5c59360c7d591c3992da}
-      \strng{authorfullhashraw}{446a1ae6601a5c59360c7d591c3992da}
-      \field{extraname}{2}
-      \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{extradate}{2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{WAVE Web Accessibility Evaluation Tool}
-      \field{title}{Web Accessibility Initivative}
-      \field{urlday}{6}
-      \field{urlmonth}{10}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.w3.org/WAI/
-      \endverb
-      \verb{url}
-      \verb https://www.w3.org/WAI/
-      \endverb
-    \endentry
     \entry{WebAIM19}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=790eee551afe5a8832859712ba1b5f4f}{%
@@ -4063,6 +3993,76 @@
       \endverb
       \verb{url}
       \verb https://www.w3.org/TR/WCAG22/
+      \endverb
+    \endentry
+    \entry{WAITools}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=66c3509f57565d7fbe270a57a403004c}{%
+           family={{World Wide Web Consortium (W3C)}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{66c3509f57565d7fbe270a57a403004c}
+      \strng{fullhash}{66c3509f57565d7fbe270a57a403004c}
+      \strng{fullhashraw}{66c3509f57565d7fbe270a57a403004c}
+      \strng{bibnamehash}{66c3509f57565d7fbe270a57a403004c}
+      \strng{authorbibnamehash}{66c3509f57565d7fbe270a57a403004c}
+      \strng{authornamehash}{66c3509f57565d7fbe270a57a403004c}
+      \strng{authorfullhash}{66c3509f57565d7fbe270a57a403004c}
+      \strng{authorfullhashraw}{66c3509f57565d7fbe270a57a403004c}
+      \field{extraname}{3}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{WAVE Web Accessibility Evaluation Tool}
+      \field{title}{Evaluation-Tool-List}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.w3.org/WAI/test-evaluate/tools/list/
+      \endverb
+      \verb{url}
+      \verb https://www.w3.org/WAI/test-evaluate/tools/list/
+      \endverb
+    \endentry
+    \entry{WAI}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=66c3509f57565d7fbe270a57a403004c}{%
+           family={{World Wide Web Consortium (W3C)}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{66c3509f57565d7fbe270a57a403004c}
+      \strng{fullhash}{66c3509f57565d7fbe270a57a403004c}
+      \strng{fullhashraw}{66c3509f57565d7fbe270a57a403004c}
+      \strng{bibnamehash}{66c3509f57565d7fbe270a57a403004c}
+      \strng{authorbibnamehash}{66c3509f57565d7fbe270a57a403004c}
+      \strng{authornamehash}{66c3509f57565d7fbe270a57a403004c}
+      \strng{authorfullhash}{66c3509f57565d7fbe270a57a403004c}
+      \strng{authorfullhashraw}{66c3509f57565d7fbe270a57a403004c}
+      \field{extraname}{4}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{WAVE Web Accessibility Evaluation Tool}
+      \field{title}{Web Accessibility Initivative}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.w3.org/WAI/
+      \endverb
+      \verb{url}
+      \verb https://www.w3.org/WAI/
       \endverb
     \endentry
     \entry{yao2022react}{misc}{}{}
