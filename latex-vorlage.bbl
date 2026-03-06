@@ -1011,40 +1011,6 @@
       \endverb
       \keyw{accessibility,a11y,axe,Gering,Referenz}
     \endentry
-    \entry{OpenAI_Developers}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=f2c26f6f08e958d0400dcaaab664d99d}{%
-           family={Developers},
-           familyi={D\bibinitperiod},
-           given={OpenAI},
-           giveni={O\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{f2c26f6f08e958d0400dcaaab664d99d}
-      \strng{fullhash}{f2c26f6f08e958d0400dcaaab664d99d}
-      \strng{fullhashraw}{f2c26f6f08e958d0400dcaaab664d99d}
-      \strng{bibnamehash}{f2c26f6f08e958d0400dcaaab664d99d}
-      \strng{authorbibnamehash}{f2c26f6f08e958d0400dcaaab664d99d}
-      \strng{authornamehash}{f2c26f6f08e958d0400dcaaab664d99d}
-      \strng{authorfullhash}{f2c26f6f08e958d0400dcaaab664d99d}
-      \strng{authorfullhashraw}{f2c26f6f08e958d0400dcaaab664d99d}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labelnamesource}{author}
-      \field{journaltitle}{OpenAI API Reference}
-      \field{urlday}{1}
-      \field{urlmonth}{3}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://developers.openai.com/api/reference/resources/completions/methods/create/
-      \endverb
-      \verb{url}
-      \verb https://developers.openai.com/api/reference/resources/completions/methods/create/
-      \endverb
-    \endentry
     \entry{EAA}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=516d1743b3db5136e2551ce1b0fbad49}{%
@@ -2712,6 +2678,7 @@
       \strng{authornamehash}{0523b13262b12c215d8009938f5c14f1}
       \strng{authorfullhash}{0523b13262b12c215d8009938f5c14f1}
       \strng{authorfullhashraw}{0523b13262b12c215d8009938f5c14f1}
+      \field{extraname}{1}
       \field{sortinit}{O}
       \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
       \field{extradatescope}{labelyear}
@@ -2724,6 +2691,38 @@
       \field{year}{2023}
       \verb{eprint}
       \verb 2303.08774
+      \endverb
+    \endentry
+    \entry{OpenAI_Developers}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0523b13262b12c215d8009938f5c14f1}{%
+           family={{OpenAI}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{0523b13262b12c215d8009938f5c14f1}
+      \strng{fullhash}{0523b13262b12c215d8009938f5c14f1}
+      \strng{fullhashraw}{0523b13262b12c215d8009938f5c14f1}
+      \strng{bibnamehash}{0523b13262b12c215d8009938f5c14f1}
+      \strng{authorbibnamehash}{0523b13262b12c215d8009938f5c14f1}
+      \strng{authornamehash}{0523b13262b12c215d8009938f5c14f1}
+      \strng{authorfullhash}{0523b13262b12c215d8009938f5c14f1}
+      \strng{authorfullhashraw}{0523b13262b12c215d8009938f5c14f1}
+      \field{extraname}{2}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{journaltitle}{OpenAI API Reference}
+      \field{urlday}{1}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developers.openai.com/api/reference/resources/completions/methods/create/
+      \endverb
+      \verb{url}
+      \verb https://developers.openai.com/api/reference/resources/completions/methods/create/
       \endverb
     \endentry
     \entry{WorldReportDisability}{online}{}{}

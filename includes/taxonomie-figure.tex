@@ -1,0 +1,63 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  catbox/.style={
+    rectangle, rounded corners=3pt,
+    minimum width=4.2cm, minimum height=1.1cm,
+    draw=#1!60, fill=#1!8, line width=0.8pt,
+    font=\bfseries\small, align=center
+  },
+  exbox/.style={
+    rectangle, rounded corners=2pt,
+    minimum width=4.2cm,
+    draw=#1!30, fill=white, line width=0.5pt,
+    font=\scriptsize, align=left, text=black,
+    inner sep=5pt
+  },
+  detectbox/.style={
+    rectangle, rounded corners=2pt,
+    minimum width=4.2cm, minimum height=0.7cm,
+    draw=#1!40, fill=#1!5, line width=0.5pt,
+    font=\scriptsize\itshape, align=center, text=black
+  },
+]
+
+% Column 1: Syntaktisch
+\node[catbox=blue] (syn) {Syntaktisch};
+\node[exbox=blue, below=4mm of syn] (syn-ex) {%
+  \textbullet~Fehlendes \texttt{alt}-Attribut\\
+  \textbullet~\texttt{<table>} ohne \texttt{<th>}\\
+  \textbullet~Fehlender \texttt{aria-label}%
+};
+\node[detectbox=blue, below=3mm of syn-ex] (syn-det) {Regelbasiert pr\"ufbar};
+
+% Column 2: Semantisch
+\node[catbox=orange, right=8mm of syn] (sem) {Semantisch};
+\node[exbox=orange, below=4mm of sem] (sem-ex) {%
+  \textbullet~\texttt{alt="Bild"}\\
+  \textbullet~Label: \textit{Eingabe}\\
+  \textbullet~Linktext: \textit{hier klicken}%
+};
+\node[detectbox=orange, below=3mm of sem-ex] (sem-det) {Sprachverst\"andnis n\"otig};
+
+% Column 3: Layout
+\node[catbox=teal, right=8mm of sem] (lay) {Layout};
+\node[exbox=teal, below=4mm of lay] (lay-ex) {%
+  \textbullet~Unzureichender Kontrast\\
+  \textbullet~Fehlender Fokusindikator\\
+  \textbullet~Eingeschr\"ankte Zoomf\"ahigkeit%
+};
+\node[detectbox=teal, below=3mm of lay-ex] (lay-det) {Teils algorithmisch pr\"ufbar};
+
+% Header
+\node[above=8mm of sem, font=\small\bfseries] (title) {Taxonomie der Barrierefreiheitsverst\"o\ss e};
+
+% Detection difficulty arrow
+\draw[-{Stealth[length=3mm]}, line width=1pt, black]
+  ([yshift=-3mm]syn-det.south west) -- ([yshift=-3mm]lay-det.south east)
+  node[midway, below=1mm, font=\scriptsize, text=black] {Zunehmende Komplexit\"at der Erkennung};
+
+\end{tikzpicture}
+\caption{Taxonomie der Barrierefreiheitsverst\"o\ss e nach Fathallah et al. mit Beispielen und Erkennungscharakteristik je Kategorie}
+\label{fig:taxonomie_verstoesse}
+\end{figure}
