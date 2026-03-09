@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.9.8)  6 MAR 2026 15:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.9.8)  9 MAR 2026 13:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1251,11 +1251,6 @@ although it is yet undefined on input line 26.
 
 ] (includes/caps/1.tex
 chapter 1.
-
-Overfull \hbox (8.24963pt too wide) in paragraph at lines 3--4
-\T1/cmr/m/n/10.95 be-rech-tig-ten Zu-gang zu In-for-ma-tio-nen und Dienst-leis-tun-gen er-hal-ten, ge-winnt Web-Barrierefreiheit
- []
-
 Package acronym Info: Label `acro:LLM' newly defined as it shall be overridden
 although it is yet undefined on input line 5.
 
@@ -1283,20 +1278,6 @@ although it is yet undefined on input line 27.
 
 
 [3]
-Overfull \hbox (22.82834pt too wide) in paragraph at lines 33--34
-\T1/cmr/m/n/10.95 ren, kon-text-sen-si-ti-ven As-sis-tenz-lö-sung zur Bar-rie-re-frei-heits-ana-ly-se von Rich-Client-Webanwendungen.
- []
-
-
-Overfull \hbox (18.02914pt too wide) in paragraph at lines 33--34
-\T1/cmr/m/n/10.95 Der Proof of Con-cept soll au-to-ma-ti-sier-te Barrierefreiheits-Reports, In-ter-ak-ti-ons-da-ten aus Playwright-
- []
-
-
-Overfull \hbox (18.3576pt too wide) in paragraph at lines 39--40
-[]\T1/cmr/bx/n/10.95 Inwieweit kann ein kon-text-sen-si-ti-ves KI-Assistenzsystem, das Tool-Reports, Playwright-
- []
-
 Package acronym Info: Label `acro:TF' newly defined as it shall be overridden
 although it is yet undefined on input line 41.
 
@@ -1331,7 +1312,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 [8]
-<graphics/WCAG-Dreieck-4-Ebenen.png, id=547, 770.88pt x 643.6547pt>
+<graphics/WCAG-Dreieck-4-Ebenen.png, id=533, 770.88pt x 643.6547pt>
 File: graphics/WCAG-Dreieck-4-Ebenen.png Graphic file (type png)
 <use graphics/WCAG-Dreieck-4-Ebenen.png>
 Package pdftex.def Info: graphics/WCAG-Dreieck-4-Ebenen.png  used on input line 41.
@@ -1339,11 +1320,6 @@ Package pdftex.def Info: graphics/WCAG-Dreieck-4-Ebenen.png  used on input line 
 
 
 [9 <./graphics/WCAG-Dreieck-4-Ebenen.png>]
-Overfull \hbox (50.25468pt too wide) in paragraph at lines 53--54
-[]\T1/cmr/m/n/10.95 Für öf-fent-li-che Stel-len des Bun-des gilt in Deutsch-land be-reits seit 2011 die Barrierefreie-Informationstechnik-
- []
-
-
 
 [10]
 
@@ -1361,7 +1337,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 )
 
 [13]
-<graphics/react.png, id=725, 984.67876pt x 618.05907pt>
+<graphics/react.png, id=711, 984.67876pt x 618.05907pt>
 File: graphics/react.png Graphic file (type png)
 <use graphics/react.png>
 Package pdftex.def Info: graphics/react.png  used on input line 124.
@@ -1387,7 +1363,7 @@ Package acronym Info: Label `acro:RAG' overridden on input line 162.
 [17]
 
 [18]
-<graphics/fewshot.png, id=893, 894.34125pt x 477.28313pt>
+<graphics/fewshot.png, id=881, 894.34125pt x 477.28313pt>
 File: graphics/fewshot.png Graphic file (type png)
 <use graphics/fewshot.png>
 Package pdftex.def Info: graphics/fewshot.png  used on input line 199.
@@ -1461,15 +1437,21 @@ chapter 8.
 [28
 
 ]
-Overfull \vbox (67.29887pt too high) detected at line 19
+<graphics/ComplexitÃ¤t.png, id=990, 1336.24219pt x 534.49687pt>
+File: graphics/ComplexitÃ¤t.png Graphic file (type png)
+<use graphics/ComplexitÃ¤t.png>
+Package pdftex.def Info: graphics/ComplexitÃ¤t.png  used on input line 8.
+(pdftex.def)             Requested size: 409.71692pt x 163.88173pt.
+
+Overfull \vbox (67.29887pt too high) detected at line 27
  []
 
 
-Overfull \vbox (67.29887pt too high) detected at line 20
+Overfull \vbox (67.29887pt too high) detected at line 28
  []
 
 
-Overfull \hbox (70.69429pt too wide) in paragraph at lines 13--141
+Overfull \hbox (70.69429pt too wide) in paragraph at lines 21--149
  [][] 
  []
 
@@ -1477,7 +1459,7 @@ Overfull \hbox (70.69429pt too wide) in paragraph at lines 13--141
 
 [29
 
-]
+ <./graphics/ComplexitÃ¤t.png>]
 
 [30]
 
@@ -1586,23 +1568,23 @@ Package logreq Info: Writing requests to 'latex-vorlage.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41091 strings out of 473523
- 846280 string characters out of 5714631
- 1882582 words of memory out of 5000000
- 63272 multiletter control sequences out of 15000+600000
+ 41103 strings out of 473523
+ 846595 string characters out of 5714631
+ 1882146 words of memory out of 5000000
+ 63281 multiletter control sequences out of 15000+600000
  586988 words of font info for 97 fonts, out of 8000000 for 9000
- 1144 hyphenation exceptions out of 8191
- 108i,18n,127p,10962b,3645s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 1147 hyphenation exceptions out of 8191
+ 108i,18n,127p,10962b,2369s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-pdfTeX warning (dest): name{Hfootnote.217} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.218} has been referenced but does not exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{Hfootnote.192} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.188} has been referenced but does not exist, replaced by a fixed one
 
- <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0500.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on latex-vorlage.pdf (47 pages, 1433320 bytes).
+ <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0500.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on latex-vorlage.pdf (47 pages, 1517385 bytes).
 PDF statistics:
- 2418 PDF objects out of 2487 (max. 8388607)
+ 2415 PDF objects out of 2487 (max. 8388607)
  356 named destinations out of 1000 (max. 500000)
- 412 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 417 words of extra memory for PDF output out of 10000 (max. 10000000)
 
