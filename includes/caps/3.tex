@@ -1,5 +1,38 @@
-\chapter{Methodik} \label{kap:3}
-\section{Wissenschaftliche Methode Fallstudienanalyse}
+\chapter{Stand der Forschung} \label{kap:3}
+
+Das folgende Kapitel gibt einen thematisch strukturierten Überblick über den Stand der Forschung zu \ac{KI}-gestützter Barrierefreiheitsanalyse und arbeitet die verbleibenden Forschungslücken heraus, die den Ausgangspunkt der vorliegenden Arbeit bilden. Die relevanten Arbeiten lassen sich in drei Entwicklungslinien einordnen: (1) \ac{LLM}-basierte Erkennung von Accessibility-Verstößen, (2) \ac{LLM}-basierte Korrektur und Code-Generierung sowie (3) hybride Pipelines, die regelbasierte Tools mit \ac{LLM}-Analyse kombinieren.
+\section{Vorgehen der Literaturrecherche}
+
+Zur Einordnung des Forschungsstands wurde eine strukturierte Literaturrecherche in wissenschaftlichen Datenbanken durchgeführt. Berücksichtigt wurden insbesondere ACM Digital Library, IEEE Xplore, Science Direct, arXiv und ResearchGate. Die Recherche erfolgte themenorientiert anhand von Suchbegriffen wie „web accessibility“, „\ac{LLM} accessibility“, „accessibility violation detection“, „accessibility remediation“, „prompt engineering accessibility“, „Playwright accessibility“ und „axe-core“. Berücksichtigt wurden primär aktuelle Arbeiten mit Bezug zur automatisierten Erkennung oder Behebung von Barrierefreiheitsverstößen in Webanwendungen mit \ac{KI}-Assistenzsystemen. Ausgeschlossen wurden Arbeiten ohne klaren Webbezug, rein konzeptionelle Beiträge ohne methodische Auswertung sowie Beiträge mit fehlender Übertragbarkeit auf den Untersuchungskontext dieser Arbeit. Die identifizierten Arbeiten wurden anschließend thematisch gruppiert, priorisiert, eingeordnet und vergleichend ausgewertet.
+\section{Von frühen \ac{KI}-Ansätzen zur \ac{LLM}-basierten Erkennung}
+
+Frühe Arbeiten wie Abou-Zahra et al. (2018) identifizierten zwar grundlegende Einsatzmöglichkeiten von \ac{KI} für die Barrierefreiheitsanalyse, lieferten jedoch keine belastbaren Metriken.\footcite[Vgl.][]{abou-zahra_artificial_2018} Mit dem Aufkommen leistungsfähiger Large Language Models verschob sich der Forschungsfokus grundlegend. Delnevo et al. (2024) zeigten, dass GPT-3.5 einfache syntaktische Verstöße mit moderater Genauigkeit erkennen kann, bei semantischen Problemen jedoch inkonsistente Bewertungen liefert.\footcite[Vgl.][]{delnevo_interaction_2024} Bassi et al. (2025) verglichen GPT-4o, GPT-3.5 und LLaMA 3.1 unter kontrollierten Bedingungen: GPT-4o erzielte eine Erkennungsrate von 74\% gegenüber 42\% für GPT-3.5, konnte jedoch eine Halluzinationsrate von rund 15\% nicht unterschreiten.\footcite[Vgl.][]{bassi_assessment_2025} Der Einsatz von Chain-of-Verification in Kombination mit \ac{RAG} reduzierte diese Fehlerquote signifikant.
+
+\section{\ac{LLM}-basierte Korrektur und Prompt-Engineering}
+
+Abu Doush und Kassem (2024) zeigten, dass strukturierte Prompts die Qualität \ac{LLM}-generierter barrierefreier \ac{HTML}-Alternativen erheblich verbessern, jedoch bei komplexeren Interaktionsmustern weiterhin Schwächen bestehen.\footcite[Vgl.][]{doush_evaluating_2025} Guriță und Vatavu (2025) belegten, dass accessibility-orientierte Prompts paradoxerweise zu mehr Violations führen können als neutrale Prompts; erst iteratives Prompting über fünf Runden senkte den Violation Score von 0,84 auf 0,32.\footcite[Vgl.][]{gurita_insights_2025}
+
+Den aktuellen Stand der Technik repräsentiert \textfett{AccessGuru} von Fathallah et al. (2025).\footcite[Vgl.][]{fathallah_accessguru_2025} Das System kombiniert eine zweistufige Pipeline – regelbasierte Detection via Playwright und \textfett{axe-core}, anschließend \ac{LLM}-basierte Korrektur durch GPT-4o mit Role-Play, Contextual und Metacognitive Prompting. Corrective Re-Prompting verbessert den Violation Score Decrease von 0,72 auf 0,84 bei einer semantischen Ähnlichkeit von 77\% zu menschlichen Referenzlösungen. Als offenes Problem benennen die Autoren die fehlende Verknüpfung korrigierter \ac{HTML}-Snippets mit dem Quellcode der geprüften Anwendung.
+
+\section{Hybride Pipelines und Ensemble-Testing}
+
+Huang et al. entwickelten 2024 mit \textfett{ACCESS} ein System, das Prompt Engineering gezielt zur automatisierten Barrierefreiheitskorrektur einsetzt und dabei verschiedene Strategien systematisch vergleicht.\footcite[Vgl.][]{huang_access_2024} Der Vergleich von ReAct, Chain-of-Thought und Few-Shot Prompting zeigt, dass ReAct mit einem Severity Score Reduction von 51,3\% alle anderen Strategien übertrifft - ein Ergebnis, das die Bedeutung iterativer, werkzeuggestützter Reasoning-Strategien für diese Aufgabe unterstreicht. 
+
+He et al. präsentierten 2025 mit \textfett{GenA11y} das methodisch ausgefeilteste Detection-System des aktuellen Forschungsstands.\footcite[Vgl.][]{he_enhancing_2025} \textfett{GenA11y} extrahiert nach vollständigem clientseitigem Rendering den \ac{DOM} via Playwright und prüft ihn anschließend kriteriumsspezifisch mit GPT-4o - für jedes \ac{WCAG}-Erfolgskriterium wird ein eigener, optimierter Prompt eingesetzt. Eine Ablation Study belegt, dass weder \ac{DOM}-Extraktion noch optimiertes Prompting allein die Gesamtleistung von Precision 94,5\% und Recall 87,6\% erreichen - beide Komponenten sind also notwendige Bestandteile des Systems. \textfett{GenA11y} erkennt acht Verstoßtypen, die von keinem der verglichenen regelbasierten Tools gefunden werden. Paternò et al. ergänzen dieses Bild mit \textfett{TeVal}, das semantische \ac{WCAG}-Kriterien durch Role-Play Prompting mit Few-Shot-Beispielen und Confidence Score bewertet und dabei eine Effektivität von 92,4\% erzielt.\footcite[Vgl.][]{paterno_how_2025}
+
+Pool (2023) adressiert die Detection-Schicht mit \textfett{Testaro}, einem Ensemble aus acht Ac\-ces\-si\-bi\-li\-ty-Werk\-zeugen (u.\,a. textbf{axe-core, WAVE, QualWeb}).\footcite[Vgl.][]{pool_testaro_2023} Die empirische Analyse zeigt, dass jedes Tool exklusive Violations erkennt, was die Komplementarität der Werkzeuge belegt.
+
+\section{Forschungslücken und Einordnung der vorliegenden Arbeit}
+
+Die Analyse der bestehenden Forschungsarbeiten zeigt drei persistente Forschungslücken, die den Ausgangspunkt der vorliegenden Arbeit definieren.
+
+Erstens berücksichtigt keiner der untersuchten Ansätze systematisch zustandsabhängige Barrieren, die erst durch Nutzerinteraktionen in React-basierten Single-Page Applications entstehen. Zwar setzen einzelne Systeme wie \textfett{AccessGuru} Playwright zur \ac{DOM}-Extraktion ein, jedoch beschränkt sich dies auf das initiale Rendering - interaktionsbedingte Zustandswechsel werden nicht geprüft.
+
+Zweitens verknüpft kein bekannter Ansatz Tool-Reports mit dem Quellcode der geprüften Anwendung. AccessGuru selbst benennt dies als offenes Problem: Die generierten Korrekturen beziehen sich auf isolierte \ac{DOM}-Snippets und nicht auf die JSX-Komponenten, in denen Entwicklerinnen und Entwickler tatsächlich eingreifen müssten. Die Lücke zwischen technischer Fehlererkennung und entwicklernaher Umsetzung bleibt damit ungeschlossen.
+
+Drittens adressiert keine der untersuchten Arbeiten die datenschutzrechtlichen Anforderungen öffentlicher Verwaltungen: Alle Systeme setzen auf cloudbasierte \ac{LLM}-\ac{API}s (primär GPT-4o), was für die \ac{BITBW} und vergleichbare Institutionen ohne vertiefte datenschutzrechtliche Prüfung nicht nutzbar ist.
+
+Die Konzeptmatrix in Tabelle \ref{tab:konzeptmatrix_haupt} fasst die zentralen Merkmale der untersuchten Studien im Vergleich zum eigenen Proof of Concept zusammen und macht die Forschungslücken strukturell sichtbar. 
 
 \newcolumntype{A}{>{\raggedright\arraybackslash}p{4.3cm}} % Autor/Jahr
 \newcolumntype{S}{>{\raggedright\arraybackslash}p{2.8cm}} % System
@@ -12,10 +45,10 @@
 
 \begin{table}[htbp]
 \centering
-\scriptsize
 \setlength{\tabcolsep}{2.5pt}
 \renewcommand{\arraystretch}{1.25}
 
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{|A|S||*{14}{C|}}
 \hline
 \multicolumn{2}{|c||}{\textbf{Studie}} &
@@ -77,16 +110,110 @@ Tafreshipour et al.\ (2024) & Ma11y
 &   & \yes & 
 & \yes & \yes \\ \hline
 
-\end{tabular}
+\end{tabular}%
+}% Ende resizebox
 
 \caption[Konzeptmatrix (Hauptmatrix, hoch priorisierte Studien)]{%
-  Konzeptmatrix nach Webster Watson\footcite[Vgl.][]{WebsterWatson2002}: Hoch priorisierte Studien im Vergleich
+  Konzeptmatrix nach Webster Watson\footnotemark: Hoch priorisierte Studien im Vergleich
   zum eigenen Proof of Concept. \yes~=~Konzept vorhanden/adressiert; leer ~=~nicht adressiert.
   Die vollständige Matrix aller analysierten Studien findet sich in Anhang~\ref{app:konzeptmatrix}.}
 \label{tab:konzeptmatrix_haupt}
 \end{table}
+\footnotetext{Vgl. \cite{WebsterWatson2002}.}
 
 
-\section{Untersuchungsgegenstand und Scope-Abgrenzung}
 
-\section{Evaluationsdesign und Kriterien}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\chapter{Methodik} \label{kap:methodik}
+
+Das folgende Kapitel legt das methodische Vorgehen der Arbeit dar. Zunächst wird die gewählte Forschungsmethode begründet (Abschnitt~\ref{sec:wiss_methode}), anschließend der Untersuchungsgegenstand abgegrenzt (Abschnitt~\ref{sec:scope}) und schließlich das Evaluationsdesign mit den zugehörigen Bewertungskriterien definiert (Abschnitt~\ref{sec:eval}).
+
+\section{Wissenschaftliche Methode} \label{sec:wiss_methode}
+
+Die vorliegende Arbeit folgt dem Forschungsparadigma des \ac{DSR}, das von Hevner et al. für die Wirtschaftsinformatik systematisiert wurde.\footcite[Vgl.][]{hevner2004dsr} \ac{DSR} eignet sich für diese Arbeit aus zwei Gründen: Erstens steht die Konstruktion eines konkreten technischen Artefakts - des Proof of Concept zur \ac{KI}-gestützten Barrierefreiheitsanalyse - im Zentrum der Forschungsfrage, nicht die Überprüfung einer statistischen Hypothese. Zweitens fordert \ac{DSR} explizit die Evaluation des Artefakts in einem realen Anwendungskontext, was dem praxisorientierten Charakter der Arbeit entspricht. Alternative Forschungsansätze wie Action Research oder kontrollierte Experimente wurden verworfen: Action Research setzt eine iterative Zusammenarbeit mit Praktikern über mehrere Zyklen voraus, die im Rahmen einer Bachelorarbeit nicht realisierbar ist.\footcites[Vgl.][S. 1 ff.]{baskerville1999ar}[Vgl.][S. 239-335]{baskerville2004ar} Ein kontrolliertes Experiment würde eine statistisch belastbare Stichprobe vergleichbarer Webanwendungen erfordern, die für den spezifischen Kontext öffentlicher Verwaltungen nicht verfügbar ist.
+
+Als prozessualer Rahmen dient das sechsphasige DSRM-Prozessmodell nach Peffers et al. Tabelle~\ref{tab:dsrm_mapping} ordnet die Phasen den jeweiligen Kapiteln dieser Arbeit zu.\footcite[Vgl.][]{peffers2007dsrm}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{DSRM-Phase} & \textbf{Kapitel} \\
+\hline
+Problem-Identifikation & Kapitel \ref{kap:1}-\ref{kap:3} \\
+Zieldefinition & Kapitel \ref{kap:1.3} \& \ref{kap:3} \\
+Design \& Entwicklung & Kapitel \ref{kap:4}-\ref{kap:5} \\
+Demonstration & Kapitel \ref{kap:6} \\
+Evaluation & Kapitel \ref{kap:7} \\
+Kommunikation & Kapitel \ref{kap:8} \\
+\hline
+\end{tabular}
+\caption{Zuordnung der DSRM-Phasen zu den Kapiteln der Arbeit.}
+\label{tab:dsrm_mapping}
+\end{table}
+
+Ergänzt wird dieser Rahmen durch einen Fall\-studien\-ansatz nach Yin.\footcite[Vgl.][]{yin_case_2018} Die \ac{BITBW}-Web\-anwendung BWEC Client dient als Einzelfallstudie, an der das entwickelte System demonstriert und evaluiert wird. Der Fall\-studien\-ansatz ist geeignet, weil die Forschungsfrage auf ein zeitgenössisches Phänomen (\ac{KI}-gestützte Accessibility-Analyse) in einem spezifischen Praxiskontext (öffentliche Verwaltung, React-An\-wen\-dung) abzielt, bei dem die Grenzen zwischen technischem System und organisatorischem Kontext nicht trennscharf sind.
+
+Die Wahl eines Proof of Concept als Artefakttyp ist durch die explorative Natur der Forschungsfrage begründet: Das Ziel ist die konzeptionelle Demonstration der technischen Machbarkeit, nicht die statistisch belastbare Generalisierung auf eine Grundgesamtheit. Dieses Vorgehen entspricht dem in der Wirtschaftsinformatik etablierten Ansatz für frühe Forschungsphasen, in denen zunächst die Funktionsfähigkeit eines Artefakts nachzuweisen ist, bevor großangelegte Wirkungsstudien durchgeführt werden können.
+
+\section{Untersuchungsgegenstand und Scope-Abgrenzung} \label{sec:scope}
+
+Als Untersuchungsgegenstand dient der BWEC Client, eine öffentlich zugängliche React-basierte Webanwendung der \ac{BITBW}. Die Anwendung eignet sich als Fallstudie, da sie drei für die Forschungsfrage zentrale Eigenschaften vereint: gesetzlich relevante Anforderungen an digitale Barrierefreiheit, einen datenschutzsensiblen Einsatzkontext in der öffentlichen Verwaltung sowie typische Interaktionsmuster moderner Single-Page Applications.
+
+Der Untersuchungsscope ist wie folgt abgegrenzt:
+
+\begin{itemize}
+    \item \textbf{Eingeschlossen:} Öffentlich zugängliche Bereiche der Anwendung ohne Authentifizierung. Betrachtet werden Barrierefreiheitsverstöße bezüglich \ac{WCAG}~2.2 auf Konformitätsstufe A und AA, soweit sie durch regelbasierte Prüfung, \ac{DOM}-Analyse und Interaktionsausführung im Frontend beobachtbar sind.\footcite[Vgl.][]{WCAG}
+    \item \textbf{Ausgeschlossen:} Backend-Logik, Datenbankstrukturen, organisatorische Betriebsprozesse sowie eine vollständige rechtliche Bewertung im Sinne einer formalen \ac{BITV}-Prüfung.
+\end{itemize}
+
+Die Arbeit erhebt keinen Anspruch auf vollständige Abdeckung aller \ac{WCAG}-Erfolgskriterien oder auf Generalisierbarkeit auf beliebige Frameworks und Anwendungstypen. Diese Einschränkungen werden in Kapitel \ref{kap:7} als Limitationen diskutiert.
+
+
+\section{Evaluationsdesign und Kriterien} \label{sec:eval}
+
+Ziel der Evaluation ist es, die technische Machbarkeit und den praktischen Nutzen des entwickelten Proof of Concept im Anwendungskontext des BWEC Clients zu untersuchen.
+
+\subsection{Evaluationslogik}
+
+Die Evaluation folgt einem fünfstufigen Vorgehen:
+
+\begin{enumerate}
+    \item \textbf{Seitenauswahl:} Relevante öffentlich zugängliche Seiten und Interaktions\-zustände des BWEC Clients werden für die Untersuchung ausgewählt.
+    \item \textbf{Manuelles Referenzaudit:} Der Autor führt ein manuelles Audit der ausgewählten Seiten durch, um vorhandene Barrierefreiheitsverstöße zu identifizieren und nach Verstoßtyp (syntaktisch, semantisch, interaktionsbezogen) zu kategorisieren. Als Prüfgrundlage dienen die \ac{WCAG}~2.2-Erfolgskriterien der Stufen A und AA.\footcite[Vgl.][]{WCAG}
+    \item \textbf{Automatisierte Analyse:} Dieselben Seiten werden mit dem entwickelten Proof of Concept analysiert.
+    \item \textbf{Vergleich:} Die Ergebnisse des Systems werden dem manuellen Audit gegenübergestellt. Dabei wird erfasst, welche Verstöße korrekt erkannt, welche übersehen und welche fälschlich gemeldet werden.
+    \item \textbf{Wirksamkeitsprüfung:} Eine Stichprobe der generierten Handlungsempfehlungen wird manuell in repräsentativen Codeausschnitten umgesetzt und anschließend erneut mit axe-core geprüft, um den Violation Score Decrease zu messen.
+\end{enumerate}
+
+\subsection{Bewertungskriterien}
+
+Die Evaluation erfolgt qualitativ entlang von vier Kriterien, die aus den Forschungsfragen und der Fachliteratur abgeleitet werden.
+
+\textbf{Kriterium 1 - Korrektheit der Erkennung:} Die vom System identifizierten Verstöße werden mit dem manuellen Referenzaudit verglichen. Dabei wird differenziert, welche Verstoßtypen erkannt werden und wo das System versagt. Als Orientierungswerte dienen die Ergebnisse vergleichbarer Systeme: \textfett{GenA11y} erreicht eine Precision von 94,5\% und einen Recall von 87,6\%.\footcite[Vgl.][]{he_enhancing_2025}
+
+\textbf{Kriterium 2 - Qualität der Handlungsempfehlungen:} Die generierten Empfehlungen werden hinsichtlich Verständlichkeit, Korrektheit und direkter Umsetzbarkeit beurteilt. Quantitativ wird der Violation Score Decrease durch axe-core-Nachprüfung nach Umsetzung einer Stichprobe gemessen. \textfett{AccessGuru} erreicht als Referenzwert einen Violation Score Decrease von 84\%.\footcite[Vgl.][]{fathallah_accessguru_2025}
+
+\textbf{Kriterium 3 - Mehrwert der Kontextualisierung:} Es wird qualitativ bewertet, ob die Einbeziehung von Quellcode und Playwright-Interaktionsdaten die Handlungsempfehlungen gegenüber einem rein regelbasierten Report verbessert. Dies adressiert direkt Teilforschungsfrage \ac{TF}2.
+
+\textbf{Kriterium 4 - Technische Praktikabilität:} Laufzeit, Stabilität und Qualität des JSON-Outputs werden unter realen Bedingungen dokumentiert.
+
+\subsection{Limitationen des Evaluationsdesigns}
+
+Zwei methodische Einschränkungen sind vorab zu benennen. Erstens wird die Bewertung durch den Autor selbst durchgeführt und nicht durch unabhängige Gutachter validiert. Die fehlende Inter-Rater-Reliabilität schränkt die Objektivität der qualitativen Bewertungen ein. Zweitens sind die genannten Referenzwerte von \textfett{AccessGuru} und \textfett{GenA11y} nur eingeschränkt vergleichbar, da sie auf anderen Datensätzen und unter anderen Rahmenbedingungen ermittelt wurden. Sie dienen daher als Orientierung, nicht als direkter Benchmark. Beide Limitationen werden in Kapitel \ref{kap:7} vertieft diskutiert.

@@ -537,6 +537,7 @@ INPUT .\graphics\fewshot.png
 INPUT .\includes\caps\3.tex
 INPUT .\includes\caps\3.tex
 INPUT includes\caps\3.tex
+INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0500.tfm
 INPUT .\includes\caps\4.tex
 INPUT .\includes\caps\4.tex
 INPUT includes\caps\4.tex
@@ -566,7 +567,6 @@ INPUT .\graphics\Complexität.png
 INPUT .\graphics\Complexität.png
 INPUT .\graphics\Complexität.png
 INPUT .\graphics\Complexität.png
-INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0500.tfm
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\eccc1095.tfm
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx0600.tfm
 INPUT .\includes\extra\erklaerung_ki.tex

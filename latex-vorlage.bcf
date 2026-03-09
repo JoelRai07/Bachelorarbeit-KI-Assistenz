@@ -2513,9 +2513,28 @@
     <bcf:citekey order="132" intorder="1">DSGVO</bcf:citekey>
     <bcf:citekey order="133" intorder="1">Intern</bcf:citekey>
     <bcf:citekey order="134" intorder="1">touvron2023llama2</bcf:citekey>
-    <bcf:citekey order="135" intorder="1">WebsterWatson2002</bcf:citekey>
-    <bcf:citekey order="136" intorder="1">WebAIM</bcf:citekey>
-    <bcf:citekey order="137" intorder="1">WebsterWatson2002</bcf:citekey>
+    <bcf:citekey order="135" intorder="1">abou-zahra_artificial_2018</bcf:citekey>
+    <bcf:citekey order="136" intorder="1">delnevo_interaction_2024</bcf:citekey>
+    <bcf:citekey order="137" intorder="1">bassi_assessment_2025</bcf:citekey>
+    <bcf:citekey order="138" intorder="1">doush_evaluating_2025</bcf:citekey>
+    <bcf:citekey order="139" intorder="1">gurita_insights_2025</bcf:citekey>
+    <bcf:citekey order="140" intorder="1">fathallah_accessguru_2025</bcf:citekey>
+    <bcf:citekey order="141" intorder="1">huang_access_2024</bcf:citekey>
+    <bcf:citekey order="142" intorder="1">he_enhancing_2025</bcf:citekey>
+    <bcf:citekey order="143" intorder="1">paterno_how_2025</bcf:citekey>
+    <bcf:citekey order="144" intorder="1">pool_testaro_2023</bcf:citekey>
+    <bcf:citekey order="145" intorder="1">WebsterWatson2002</bcf:citekey>
+    <bcf:citekey order="146" intorder="1">hevner2004dsr</bcf:citekey>
+    <bcf:citekey order="147" intorder="1">baskerville1999ar</bcf:citekey>
+    <bcf:citekey order="148" intorder="1">baskerville2004ar</bcf:citekey>
+    <bcf:citekey order="149" intorder="1">peffers2007dsrm</bcf:citekey>
+    <bcf:citekey order="150" intorder="1">yin_case_2018</bcf:citekey>
+    <bcf:citekey order="151" intorder="1">WCAG</bcf:citekey>
+    <bcf:citekey order="152" intorder="1">WCAG</bcf:citekey>
+    <bcf:citekey order="153" intorder="1">he_enhancing_2025</bcf:citekey>
+    <bcf:citekey order="154" intorder="1">fathallah_accessguru_2025</bcf:citekey>
+    <bcf:citekey order="155" intorder="1">WebAIM</bcf:citekey>
+    <bcf:citekey order="156" intorder="1">WebsterWatson2002</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

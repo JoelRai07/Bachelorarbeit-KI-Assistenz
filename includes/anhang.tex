@@ -14,10 +14,10 @@
 \anhang{Erweiterte Konzeptmatrix}\label{app:konzeptmatrix}
 \begin{table}[htbp]
 \centering
-\scriptsize
 \setlength{\tabcolsep}{2.5pt}
 \renewcommand{\arraystretch}{1.25}
 
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{|A|S||*{14}{C|}}
 \hline
 \multicolumn{2}{|c||}{\textbf{Studie}} &
@@ -145,11 +145,13 @@ Draffan et al.\ (2020) & Web2Access+AI
 &   & \yes &
 & \yes & \yes \\ \hline
 
-\end{tabular}
+\end{tabular}%
+}% Ende resizebox
 
 \caption[Konzeptmatrix (vollständige Übersicht)]{%
-Konzeptmatrix nach Webster Watson\footcite[Vgl.][]{WebsterWatson2002}: Vollständige Übersicht aller analysierten Studien im Vergleich zum eigenen Proof of Concept.
+Konzeptmatrix nach Webster Watson\footnotemark: Vollständige Übersicht aller analysierten Studien im Vergleich zum eigenen Proof of Concept.
 \yes~=~Konzept vorhanden/adressiert; leer~=~nicht adressiert.
 }
 \label{tab:konzeptmatrix_voll}
 \end{table}
+\footnotetext{Vgl. \cite{WebsterWatson2002}.}
