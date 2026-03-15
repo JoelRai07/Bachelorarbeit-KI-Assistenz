@@ -47,7 +47,7 @@ Das System muss vollständig ohne externe \ac{API}-Aufrufe betreibbar sein. Wede
 
 \textfett{\ac{NFA}-02 Laufzeit und Praktikabilität}
 
-Der vollständige Analyselauf - von der Playwright-Initialisierung bis zum fertigen \acs{JSON}-Report - muss auf einem Entwicklungsrechner in einer für den Entwicklungsalltag akzeptablen Zeit abschließen. Als Richtwert gilt eine Gesamtlaufzeit von unter fünfzehn Minuten für eine einzelne Seite mit bis zu 20 axe-Verstößen. Diese Anforderung begrenzt die Komplexität der eingesetzten Prompt-Kette und schließt mehrstufige Reasoning-Schleifen (wie iteratives Corrective Re-Prompting)\footnote{Vgl. Kapitel \ref{Prompt}} aus dem Scope des \ac{PoC} aus.
+Der vollständige Analyselauf - von der Playwright-Initialisierung bis zum fertigen \acs{JSON}-Report - muss auf einem Entwicklungsrechner in einer für den Entwicklungsalltag akzeptablen Zeit abschließen. Als Richtwert gilt eine Gesamtlaufzeit von fünfzehn Minuten für eine einzelne Seite mit bis zu 20 axe-Verstößen. Diese Anforderung begrenzt die Komplexität der eingesetzten Prompt-Kette und schließt mehrstufige Reasoning-Schleifen (wie iteratives Corrective Re-Prompting)\footnote{Vgl. Kapitel \ref{Prompt}} aus dem Scope des \ac{PoC} aus.
 
 \textfett{\ac{NFA}-03 Wartbarkeit und Erweiterbarkeit}
 
@@ -106,7 +106,7 @@ Tabelle \ref{Anforderungstabelle} fasst die spezifizierten Anforderungen zusamme
 \hline
 \ac{NFA}-01 & Datenschutz und Lokal-First (kein externer \ac{API}-Aufruf) & Institutionell (\ac{DSGVO}, \ac{BITBW}) & Muss \\
 \hline
-\ac{NFA}-02 & Laufzeit $<$\,10\,min pro Seite (ohne GPU) & Praxisanforderung \ac{BITBW} & Soll \\
+\ac{NFA}-02 & Laufzeit $<$\,15\,min pro Seite (ohne GPU) & Praxisanforderung \ac{BITBW} & Soll \\
 \hline
 \ac{NFA}-03 & Wartbarkeit und Erweiterbarkeit (modulare Architektur) & Software-Engineering Best Practice & Soll \\
 \hline

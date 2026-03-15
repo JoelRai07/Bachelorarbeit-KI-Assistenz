@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber latex-vorlage"] 1773598985.31107 "latex-vorlage.bcf" "latex-vorlage.bbl" "latex-vorlage" 1773599261.6662 0
+["biber latex-vorlage"] 1773598985.31107 "latex-vorlage.bcf" "latex-vorlage.bbl" "latex-vorlage" 1773600423.73963 0
   "includes/literatur-datenbank.bib" 1773598987 94862 1a334e1c7da0a37eec4dc5406c75bfda ""
-  "latex-vorlage.bcf" 1773599261 125122 07ca6ebf0e5965e43f25d72561dd1107 "pdflatex"
+  "latex-vorlage.bcf" 1773600423 125122 07ca6ebf0e5965e43f25d72561dd1107 "pdflatex"
   (generated)
   "latex-vorlage.bbl"
   "latex-vorlage.blg"
   (rewritten before read)
-["pdflatex"] 1773599255.16888 "c:/Users/joely/OneDrive/Desktop/BA/latex-vorlage_v2.1/latex-vorlage.tex" "latex-vorlage.pdf" "latex-vorlage" 1773599261.66717 0
+["pdflatex"] 1773600417.5164 "c:/Users/joely/OneDrive/Desktop/BA/latex-vorlage_v2.1/latex-vorlage.tex" "latex-vorlage.pdf" "latex-vorlage" 1773600423.74064 0
   "C:/Users/joely/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1773312897 81107 70b8516c68c2e617189c5e44bfd16b96 ""
   "C:/Users/joely/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx0600.pk" 1772479256 14788 597b7651f7441782aaed91b4ca41da65 ""
   "C:/Users/joely/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1000.pk" 1720700297 25420 1c945b97a9c87a0b417b8d44f0e03ffb ""
@@ -286,9 +286,9 @@
   "graphics/react.png" 1772718750 136753 ac831db8f7fce254ec41c3b3ec391050 ""
   "includes/anhang.tex" 1773145358 5710 d5a133908cedbd56b52aa338cdfd5138 ""
   "includes/caps/1.tex" 1773588895 14153 df9835160aef3abbfcb53dd411c00ebb ""
-  "includes/caps/2.tex" 1773599254 42054 81f5432a4486624c50a0d422d17b0190 ""
+  "includes/caps/2.tex" 1773600416 42058 9948396135c57a605075580dbc6c5fef ""
   "includes/caps/3.tex" 1773588390 19701 28cee069c8a10bcc0d3381d38811d153 ""
-  "includes/caps/4.tex" 1773583709 14118 14c338dda01e7bcf5c2b8bcc582b8d86 ""
+  "includes/caps/4.tex" 1773600113 14112 faa6f38e2795f16a0672cd9a49b1303f ""
   "includes/caps/5.tex" 1773150172 232 d38095560e7c4c63a99660d685c13c5f ""
   "includes/caps/6.tex" 1772528414 164 c6d45a6eba6e6a4a1a249757e7195ab6 ""
   "includes/caps/7.tex" 1773064643 192 82a0e71cb2c94b522e047139caa38c8f ""
@@ -299,15 +299,15 @@
   "includes/extra/erklaerung_ki.tex" 1771866037 5286 86441931c36dacb28c837c49014fdc68 ""
   "includes/extra/sperrvermerk.tex" 1773312511 407 a53dc5839604060c83b02ed68a0d8131 ""
   "includes/taxonomie-figure.tex" 1773054193 2408 b59a465cadf790d3d9fa68c4700d0988 ""
-  "latex-vorlage.app" 1773599261 187 383cc9c3c84bcb717e9467108028fc75 "pdflatex"
-  "latex-vorlage.aux" 1773599261 80742 71b5d4f11a0190ac4240f1b584329835 "pdflatex"
+  "latex-vorlage.app" 1773600423 187 383cc9c3c84bcb717e9467108028fc75 "pdflatex"
+  "latex-vorlage.aux" 1773600423 80761 cc84a505ce2871159e1f6c8f733708cd "pdflatex"
   "latex-vorlage.bbl" 1773598988 263590 2e92af85559c210fbe79b745ca8ac13e "biber latex-vorlage"
-  "latex-vorlage.lof" 1773599261 580 77626a3248ef05e4e9a37faf61686eb1 "pdflatex"
-  "latex-vorlage.lot" 1773599261 674 30014a135fc153997edd07ec407bd2dc "pdflatex"
-  "latex-vorlage.out" 1773599257 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "latex-vorlage.run.xml" 1773599261 2428 2d119b512bd1d4ff1381f82b4891beaf "pdflatex"
+  "latex-vorlage.lof" 1773600423 580 77626a3248ef05e4e9a37faf61686eb1 "pdflatex"
+  "latex-vorlage.lot" 1773600423 674 30014a135fc153997edd07ec407bd2dc "pdflatex"
+  "latex-vorlage.out" 1773600419 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "latex-vorlage.run.xml" 1773600423 2428 2d119b512bd1d4ff1381f82b4891beaf "pdflatex"
   "latex-vorlage.tex" 1773312823 2467 e3a4611eab29013e3232208038f6edcc ""
-  "latex-vorlage.toc" 1773599261 5698 3234657ee062eb9b1c3f32312deee2c3 "pdflatex"
+  "latex-vorlage.toc" 1773600423 5698 3234657ee062eb9b1c3f32312deee2c3 "pdflatex"
   "template/_dhbw_biblatex-config.tex" 1771866037 5675 6458ff6d1ddde7fe67c7cfcb4b877bb6 ""
   "template/_dhbw_deckblatt.tex" 1771866037 2389 d1e60105213bd1a7b30d1fed387a3aac ""
   "template/_dhbw_erklaerung.tex" 1771866037 924 13f182951ae36c7ba91049ce26ef857d ""
