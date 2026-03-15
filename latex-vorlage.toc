@@ -1,58 +1,62 @@
 \babel@toc {ngerman}{}\relax 
-\contentsline {chapter}{Abkürzungsverzeichnis}{V}{chapter*.5}%
-\contentsline {chapter}{Abbildungsverzeichnis}{VI}{section*.6}%
-\contentsline {chapter}{Tabellenverzeichnis}{VII}{section*.7}%
-\contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.8}%
-\contentsline {section}{\numberline {1.1}Motivation und Kontext}{1}{section.11}%
-\contentsline {section}{\numberline {1.2}Problemstellung}{2}{section.25}%
-\contentsline {section}{\numberline {1.3}Zielsetzung und Forschungsfragen}{4}{section.38}%
-\contentsline {section}{\numberline {1.4}Aufbau der Arbeit}{5}{section.41}%
-\contentsline {chapter}{\numberline {2}Theoretische Grundlagen}{6}{chapter.44}%
-\contentsline {section}{\numberline {2.1}Barrierefreiheit von Webanwendungen}{6}{section.45}%
-\contentsline {subsection}{\numberline {2.1.1}Begriffsdefinition und Relevanz}{6}{subsection.46}%
-\contentsline {subsection}{\numberline {2.1.2}\ac {WCAG}: Aufbau, Prinzipien und Konformitätsstufen}{8}{subsection.72}%
-\contentsline {subsection}{\numberline {2.1.3}Rechtlicher Rahmen}{10}{subsection.91}%
-\contentsline {section}{\numberline {2.2}Automatisierte Barrierefreiheitsanalyse}{10}{section.97}%
-\contentsline {subsection}{\numberline {2.2.1}Klassische Tool-Ansätze}{11}{subsection.100}%
-\contentsline {subsection}{\numberline {2.2.2}Grenzen bestehender Tools}{11}{subsection.108}%
-\contentsline {subsection}{\numberline {2.2.3}Taxonomie der Verstöße: Syntaktisch, Semantisch, Layout}{13}{subsection.119}%
-\contentsline {section}{\numberline {2.3}Rich-Client-Webanwendungen und Testautomatisierung}{14}{section.130}%
-\contentsline {subsection}{\numberline {2.3.1}Charakteristika und Abgrenzung}{14}{subsection.131}%
-\contentsline {subsection}{\numberline {2.3.2}Herausforderungen für die Barrierefreiheitsprüfung}{15}{subsection.140}%
-\contentsline {subsection}{\numberline {2.3.3}Playwright als Testautomatisierungswerkzeug}{16}{subsection.145}%
-\contentsline {section}{\numberline {2.4}\ac {KI}-Assistenzsysteme für Softwareanalyse und Handlungsempfehlungen}{16}{section.152}%
-\contentsline {subsection}{\numberline {2.4.1}Grundlagen: Large Language Models}{17}{subsection.156}%
-\contentsline {subsection}{\numberline {2.4.2}Prompt-Engineering-Strategien}{18}{subsection.166}%
-\contentsline {subsection}{\numberline {2.4.3}\acs {RAG} und Fine-Tuning als Erweiterungsansätze}{19}{subsection.176}%
-\contentsline {subsection}{\numberline {2.4.4}Datenschutz bei \ac {KI}-gestützten Accessibility-Services}{20}{subsection.180}%
-\contentsline {chapter}{\numberline {3}Stand der Forschung}{22}{chapter.184}%
-\contentsline {section}{\numberline {3.1}Vorgehen der Literaturrecherche}{22}{section.185}%
-\contentsline {section}{\numberline {3.2}Von frühen \ac {KI}-Ansätzen zur \ac {LLM}-basierten Erkennung}{22}{section.186}%
-\contentsline {section}{\numberline {3.3}\ac {LLM}-basierte Korrektur und Prompt-Engineering}{23}{section.190}%
-\contentsline {section}{\numberline {3.4}Hybride Pipelines und Ensemble-Testing}{23}{section.194}%
-\contentsline {section}{\numberline {3.5}Forschungslücken und Einordnung der vorliegenden Arbeit}{24}{section.199}%
-\contentsline {chapter}{\numberline {4}Methodik}{26}{chapter.203}%
-\contentsline {section}{\numberline {4.1}Wissenschaftliche Methode}{26}{section.204}%
-\contentsline {section}{\numberline {4.2}Untersuchungsgegenstand und Scope-Abgrenzung}{27}{section.211}%
-\contentsline {section}{\numberline {4.3}Evaluationsdesign und Kriterien}{27}{section.213}%
-\contentsline {subsection}{\numberline {4.3.1}Evaluationslogik}{28}{subsection.214}%
-\contentsline {subsection}{\numberline {4.3.2}Bewertungskriterien}{28}{subsection.221}%
-\contentsline {subsection}{\numberline {4.3.3}Limitationen des Evaluationsdesigns}{29}{subsection.224}%
-\contentsline {chapter}{\numberline {5}Analyse und Anforderungen}{30}{chapter.225}%
-\contentsline {section}{\numberline {5.1}Analyse der Tool-Outputs und typischer Findings}{30}{section.226}%
-\contentsline {section}{\numberline {5.2}Analyse von Interaktionsdaten aus Playwright}{30}{section.227}%
-\contentsline {section}{\numberline {5.3}Analyse der Codebasis als Kontextquelle}{30}{section.228}%
-\contentsline {section}{\numberline {5.4}Datenschutz \& Sicherheitsanforderungen}{30}{section.229}%
-\contentsline {chapter}{\numberline {6}Konzeption des Assistenzsystems}{31}{chapter.230}%
-\contentsline {section}{\numberline {6.1}Zielarchitektur und Datenpipeline}{31}{section.231}%
-\contentsline {section}{\numberline {6.2}Modell der Kontextualisierung \& Priorisierung}{31}{section.232}%
-\contentsline {section}{\numberline {6.3}Ausgabeformat entwicklernahe To-Do-Liste}{31}{section.233}%
-\contentsline {chapter}{\numberline {7}Implementierung des Proof of Concept}{32}{chapter.234}%
-\contentsline {section}{\numberline {7.1}Technische Umsetzung}{32}{section.235}%
-\contentsline {section}{\numberline {7.2}Beispielabläufe und Ergebnisse am Untersuchungsobjekt}{32}{section.236}%
-\contentsline {chapter}{\numberline {8}Evaluation \& Diskussion}{33}{chapter.237}%
-\contentsline {section}{\numberline {8.1}Ergebnisse entlang der Kriterien und Limitationen}{33}{section.238}%
-\contentsline {section}{\numberline {8.2}Handlungsempfehlungen und Ausblick}{33}{section.239}%
-\contentsline {chapter}{\numberline {9}Fazit}{34}{chapter.240}%
-\contentsline {chapter}{Anhang}{35}{chapter*.241}%
-\contentsline {chapter}{Literaturverzeichnis}{38}{section*.253}%
+\contentsline {chapter}{Sperrvermerk}{I}{chapter*.1}%
+\contentsline {chapter}{Abkürzungsverzeichnis}{V}{chapter*.8}%
+\contentsline {chapter}{Abbildungsverzeichnis}{VI}{section*.9}%
+\contentsline {chapter}{Tabellenverzeichnis}{VII}{section*.10}%
+\contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.11}%
+\contentsline {section}{\numberline {1.1}Motivation und Kontext}{1}{section.14}%
+\contentsline {section}{\numberline {1.2}Problemstellung}{2}{section.28}%
+\contentsline {section}{\numberline {1.3}Zielsetzung und Forschungsfragen}{4}{section.41}%
+\contentsline {section}{\numberline {1.4}Aufbau der Arbeit}{5}{section.44}%
+\contentsline {chapter}{\numberline {2}Theoretische Grundlagen}{6}{chapter.47}%
+\contentsline {section}{\numberline {2.1}Barrierefreiheit von Webanwendungen}{6}{section.48}%
+\contentsline {subsection}{\numberline {2.1.1}Begriffsdefinition und Relevanz}{6}{subsection.49}%
+\contentsline {subsection}{\numberline {2.1.2}\ac {WCAG}: Aufbau, Prinzipien und Konformitätsstufen}{8}{subsection.77}%
+\contentsline {subsection}{\numberline {2.1.3}Rechtlicher Rahmen}{10}{subsection.96}%
+\contentsline {section}{\numberline {2.2}Automatisierte Barrierefreiheitsanalyse}{10}{section.102}%
+\contentsline {subsection}{\numberline {2.2.1}Klassische Tool-Ansätze}{11}{subsection.105}%
+\contentsline {subsection}{\numberline {2.2.2}Grenzen bestehender Tools}{12}{subsection.114}%
+\contentsline {subsection}{\numberline {2.2.3}Taxonomie der Verstöße: Syntaktisch, Semantisch, Layout}{13}{subsection.126}%
+\contentsline {section}{\numberline {2.3}Rich-Client-Webanwendungen und Testautomatisierung}{14}{section.137}%
+\contentsline {subsection}{\numberline {2.3.1}Charakteristika und Abgrenzung}{14}{subsection.138}%
+\contentsline {subsection}{\numberline {2.3.2}Herausforderungen für die Barrierefreiheitsprüfung}{15}{subsection.149}%
+\contentsline {subsection}{\numberline {2.3.3}Playwright als Testautomatisierungswerkzeug}{16}{subsection.155}%
+\contentsline {section}{\numberline {2.4}\ac {KI}-Assistenzsysteme für Softwareanalyse und Handlungsempfehlungen}{17}{section.164}%
+\contentsline {subsection}{\numberline {2.4.1}Grundlagen: Large Language Models}{17}{subsection.168}%
+\contentsline {subsection}{\numberline {2.4.2}Prompt-Engineering-Strategien}{18}{subsection.183}%
+\contentsline {subsection}{\numberline {2.4.3}\acs {RAG} und Fine-Tuning als Erweiterungsansätze}{19}{subsection.195}%
+\contentsline {subsection}{\numberline {2.4.4}Datenschutz bei \ac {KI}-gestützten Accessibility-Services}{20}{subsection.200}%
+\contentsline {chapter}{\numberline {3}Stand der Forschung}{22}{chapter.204}%
+\contentsline {section}{\numberline {3.1}Vorgehen der Literaturrecherche}{22}{section.205}%
+\contentsline {section}{\numberline {3.2}Von frühen \ac {KI}-Ansätzen zur \ac {LLM}-basierten Erkennung}{22}{section.207}%
+\contentsline {section}{\numberline {3.3}\ac {LLM}-basierte Korrektur und Prompt-Engineering}{23}{section.211}%
+\contentsline {section}{\numberline {3.4}Hybride Pipelines und Ensemble-Testing}{23}{section.215}%
+\contentsline {section}{\numberline {3.5}Forschungslücken und Einordnung der vorliegenden Arbeit}{24}{section.222}%
+\contentsline {chapter}{\numberline {4}Methodik}{26}{chapter.231}%
+\contentsline {section}{\numberline {4.1}Wissenschaftliche Methode}{26}{section.232}%
+\contentsline {section}{\numberline {4.2}Untersuchungsgegenstand und Scope-Abgrenzung}{27}{section.241}%
+\contentsline {section}{\numberline {4.3}Evaluationsdesign und Kriterien}{27}{section.245}%
+\contentsline {subsection}{\numberline {4.3.1}Evaluationslogik}{28}{subsection.246}%
+\contentsline {subsection}{\numberline {4.3.2}Bewertungskriterien}{28}{subsection.254}%
+\contentsline {subsection}{\numberline {4.3.3}Limitationen des Evaluationsdesigns}{29}{subsection.259}%
+\contentsline {chapter}{\numberline {5}Analyse und Anforderungen}{30}{chapter.262}%
+\contentsline {section}{\numberline {5.1}Problemkontext und Handlungsbedarf}{30}{section.263}%
+\contentsline {section}{\numberline {5.2}\acl {FA}}{31}{section.272}%
+\contentsline {section}{\numberline {5.3}\acl {NFA}}{32}{section.290}%
+\contentsline {section}{\numberline {5.4}Modellauswahl: Ollama und qwen2.5-coder:7b}{33}{section.300}%
+\contentsline {subsection}{\numberline {5.4.1}Ollama als Laufzeitumgebung}{33}{subsection.301}%
+\contentsline {subsection}{\numberline {5.4.2}Begründung der Modellwahl}{33}{subsection.303}%
+\contentsline {subsection}{\numberline {5.4.3}Zusammenfassung der Anforderungen}{34}{subsection.305}%
+\contentsline {chapter}{\numberline {6}Konzeption des Assistenzsystems}{36}{chapter.309}%
+\contentsline {section}{\numberline {6.1}Zielarchitektur und Datenpipeline}{36}{section.310}%
+\contentsline {section}{\numberline {6.2}Modell der Kontextualisierung \& Priorisierung}{36}{section.311}%
+\contentsline {section}{\numberline {6.3}Ausgabeformat entwicklernahe To-Do-Liste}{36}{section.312}%
+\contentsline {chapter}{\numberline {7}Implementierung des Proof of Concept}{37}{chapter.313}%
+\contentsline {section}{\numberline {7.1}Technische Umsetzung}{37}{section.314}%
+\contentsline {section}{\numberline {7.2}Beispielabläufe und Ergebnisse am Untersuchungsobjekt}{37}{section.315}%
+\contentsline {chapter}{\numberline {8}Evaluation \& Diskussion}{38}{chapter.316}%
+\contentsline {section}{\numberline {8.1}Ergebnisse entlang der Kriterien und Limitationen}{38}{section.317}%
+\contentsline {section}{\numberline {8.2}Handlungsempfehlungen und Ausblick}{38}{section.318}%
+\contentsline {chapter}{\numberline {9}Fazit}{39}{chapter.319}%
+\contentsline {chapter}{Anhang}{40}{chapter*.320}%
+\contentsline {chapter}{Literaturverzeichnis}{43}{section*.332}%

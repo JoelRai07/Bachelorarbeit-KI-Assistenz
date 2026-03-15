@@ -20,6 +20,11 @@
 
 %%% Umstellung der Seiten-Nummerierung auf i, ii, iii ... %%%
 \pagenumbering{Roman} 
+\setcounter{page}{0}
+
+%%% Sperrvermerk %%%
+\input{includes/extra/sperrvermerk.tex}
+\clearpage
 
 %%% Abstract einbinden (optionale Kurzfassung Ihrer Arbeit) %%%
 \input{includes/extra/abstract.tex}
@@ -75,4 +80,6 @@
 \cleardoublepage
 \input{includes/extra/erklaerung_ki.tex}
 \input{template/_dhbw_erklaerung.tex}
+
+
 \end{document}

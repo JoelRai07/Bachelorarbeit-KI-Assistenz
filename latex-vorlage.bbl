@@ -209,12 +209,18 @@
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{extradate}{2}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{17}
       \field{journaltitle}{System Card: Claude Sonnet 4.6}
-      \field{urlday}{17}
-      \field{urlmonth}{2}
+      \field{month}{2}
+      \field{title}{System Card: Claude Sonnet 4.6}
+      \field{urlday}{2}
+      \field{urlmonth}{3}
       \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf
@@ -244,7 +250,9 @@
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{url}
       \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
       \field{journaltitle}{Claude API Docs}
+      \field{title}{Resources}
       \field{urlday}{1}
       \field{urlmonth}{3}
       \field{urlyear}{2026}
@@ -254,6 +262,41 @@
       \endverb
       \verb{url}
       \verb https://platform.claude.com/docs/en/about-claude/glossary
+      \endverb
+    \endentry
+    \entry{bwec}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=368402738cb3996294660013ebe4db4a}{%
+           family={Baden-Württemberg},
+           familyi={B\bibinithyphendelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{368402738cb3996294660013ebe4db4a}
+      \strng{fullhash}{368402738cb3996294660013ebe4db4a}
+      \strng{fullhashraw}{368402738cb3996294660013ebe4db4a}
+      \strng{bibnamehash}{368402738cb3996294660013ebe4db4a}
+      \strng{authorbibnamehash}{368402738cb3996294660013ebe4db4a}
+      \strng{authornamehash}{368402738cb3996294660013ebe4db4a}
+      \strng{authorfullhash}{368402738cb3996294660013ebe4db4a}
+      \strng{authorfullhashraw}{368402738cb3996294660013ebe4db4a}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Baden}
+      \field{month}{12}
+      \field{title}{Neuer BW-Empfangsclient treibt Digitalisierung der Verwaltung voran}
+      \field{urlday}{24}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.baden-wuerttemberg.de/de/service/presse/pressemitteilung/pid/neuer-bw-empfangsclient-treibt-digitalisierung-der-verwaltung-voran-1
+      \endverb
+      \verb{url}
+      \verb https://www.baden-wuerttemberg.de/de/service/presse/pressemitteilung/pid/neuer-bw-empfangsclient-treibt-digitalisierung-der-verwaltung-voran-1
       \endverb
     \endentry
     \entry{baiVirtualDom2022}{article}{}{}
@@ -287,41 +330,6 @@
       \endverb
       \verb{url}
       \verb https://arxiv.org/abs/2202.08409
-      \endverb
-    \endentry
-    \entry{BFSG}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=0f6b23d0bce1427069ac64c0687379c1}{%
-           family={Barrierefreiheitsstärkungsgesetz},
-           familyi={B\bibinitperiod}}}%
-      }
-      \strng{namehash}{0f6b23d0bce1427069ac64c0687379c1}
-      \strng{fullhash}{0f6b23d0bce1427069ac64c0687379c1}
-      \strng{fullhashraw}{0f6b23d0bce1427069ac64c0687379c1}
-      \strng{bibnamehash}{0f6b23d0bce1427069ac64c0687379c1}
-      \strng{authorbibnamehash}{0f6b23d0bce1427069ac64c0687379c1}
-      \strng{authornamehash}{0f6b23d0bce1427069ac64c0687379c1}
-      \strng{authorfullhash}{0f6b23d0bce1427069ac64c0687379c1}
-      \strng{authorfullhashraw}{0f6b23d0bce1427069ac64c0687379c1}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{BFSG}
-      \field{month}{2}
-      \field{title}{BFSG (Barrierefreiheitsstärkungsgesetz)}
-      \field{urlday}{24}
-      \field{urlmonth}{2}
-      \field{urlyear}{2026}
-      \field{year}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://bfsg-gesetz.de/
-      \endverb
-      \verb{url}
-      \verb https://bfsg-gesetz.de/
       \endverb
     \endentry
     \entry{baskerville2004ar}{article}{}{}
@@ -583,9 +591,9 @@
       \field{journaltitle}{Zur Startseite}
       \field{month}{7}
       \field{title}{6 Jahre BITBW}
-      \field{urlday}{12}
-      \field{urlmonth}{7}
-      \field{urlyear}{2025}
+      \field{urlday}{28}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
       \field{year}{2021}
       \field{urldateera}{ce}
       \verb{urlraw}
@@ -798,13 +806,26 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{day}{22}
       \field{eprintclass}{cs.CL}
       \field{eprinttype}{arxiv}
+      \field{month}{7}
       \field{note}{Definition von zero-/one-/few-shot (in-context learning) auf S.~4}
       \field{title}{Language Models are Few-Shot Learners}
+      \field{urlday}{28}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
       \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
       \verb{eprint}
       \verb 2005.14165
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2005.14165
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2005.14165
       \endverb
     \endentry
     \entry{brynjolfssonNBERWORKINGPAPER}{article}{}{}
@@ -844,7 +865,7 @@
       \field{labeltitlesource}{title}
       \field{abstract}{New {AI} tools have the potential to change the way workers perform and learn, but little is known about their impacts on the job. In this paper, we study the staggered introduction of a generative {AI}-based conversational assistant using data from 5,179 customer support agents. Access to the tool increases productivity, as measured by issues resolved per hour, by 14\% on average, including a 34\% improvement for novice and low-skilled workers but with minimal impact on experienced and highly skilled workers. We provide suggestive evidence that the {AI} model disseminates the best practices of more able workers and helps newer workers move down the experience curve. In addition, we find that {AI} assistance improves customer sentiment, increases employee retention, and may lead to worker learning. Our results suggest that access to generative {AI} can increase productivity, with large heterogeneity in effects across workers.}
       \field{langid}{english}
-      \field{title}{{NBER} {WORKING} {PAPER} {SERIES}}
+      \field{title}{Generative AI at Work}
       \field{year}{2023}
       \verb{file}
       \verb PDF:C\:\\Users\\joely\\Zotero\\storage\\QQZLVKWN\\Brynjolfsson et al. - NBER WORKING PAPER SERIES.pdf:application/pdf
@@ -923,9 +944,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Gesetz zur Umsetzung der Richtlinie (EU) 2019/882 des Europäischen Parlaments und des Rates über die Barrierefreiheitsanforderungen für Produkte und Dienstleistungen 1}
-      \field{urlday}{12}
-      \field{urlmonth}{7}
-      \field{urlyear}{2025}
+      \field{urlday}{24}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.gesetze-im-internet.de/bfsg/
@@ -959,7 +980,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Portal Barrierefreiheit der Dienstekonsolidierung des Bundes}
       \field{month}{4}
-      \field{title}{Barrierefreie-Informationstechnik-Verordnung (BITV 2.0)}
+      \field{title}{Barriere\-freie-In\-formationstechnik-Verordnung (BITV 2.0)}
       \field{urlday}{24}
       \field{urlmonth}{2}
       \field{urlyear}{2026}
@@ -1079,6 +1100,41 @@
       \endverb
       \keyw{accessibility,a11y,axe,Gering,Referenz}
     \endentry
+    \entry{BFSG}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=52429adfda2017e33d1c548712accf73}{%
+           family={{Deutscher Bundestag}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{52429adfda2017e33d1c548712accf73}
+      \strng{fullhash}{52429adfda2017e33d1c548712accf73}
+      \strng{fullhashraw}{52429adfda2017e33d1c548712accf73}
+      \strng{bibnamehash}{52429adfda2017e33d1c548712accf73}
+      \strng{authorbibnamehash}{52429adfda2017e33d1c548712accf73}
+      \strng{authornamehash}{52429adfda2017e33d1c548712accf73}
+      \strng{authorfullhash}{52429adfda2017e33d1c548712accf73}
+      \strng{authorfullhashraw}{52429adfda2017e33d1c548712accf73}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{BFSG}
+      \field{month}{2}
+      \field{title}{BFSG (Barrierefreiheitsstärkungsgesetz)}
+      \field{urlday}{24}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://bfsg-gesetz.de/
+      \endverb
+      \verb{url}
+      \verb https://bfsg-gesetz.de/
+      \endverb
+    \endentry
     \entry{doush_evaluating_2025}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=25e08f8aa7873c5d1ea1f193b221ffb9}{%
@@ -1144,20 +1200,62 @@
       \endverb
       \keyw{Hoch}
     \endentry
-    \entry{EAA}{misc}{}{}
+    \entry{dsgvo2016}{legislation}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=516d1743b3db5136e2551ce1b0fbad49}{%
-           family={{European Comission}},
+        {{un=0,uniquepart=base,hash=556d1bfbe80d4f0da446cf7f37c88a68}{%
+           family={{Europäisches Parlament und Rat der Europäischen Union}},
            familyi={E\bibinitperiod}}}%
       }
-      \strng{namehash}{516d1743b3db5136e2551ce1b0fbad49}
-      \strng{fullhash}{516d1743b3db5136e2551ce1b0fbad49}
-      \strng{fullhashraw}{516d1743b3db5136e2551ce1b0fbad49}
-      \strng{bibnamehash}{516d1743b3db5136e2551ce1b0fbad49}
-      \strng{authorbibnamehash}{516d1743b3db5136e2551ce1b0fbad49}
-      \strng{authornamehash}{516d1743b3db5136e2551ce1b0fbad49}
-      \strng{authorfullhash}{516d1743b3db5136e2551ce1b0fbad49}
-      \strng{authorfullhashraw}{516d1743b3db5136e2551ce1b0fbad49}
+      \strng{namehash}{556d1bfbe80d4f0da446cf7f37c88a68}
+      \strng{fullhash}{556d1bfbe80d4f0da446cf7f37c88a68}
+      \strng{fullhashraw}{556d1bfbe80d4f0da446cf7f37c88a68}
+      \strng{bibnamehash}{556d1bfbe80d4f0da446cf7f37c88a68}
+      \strng{authorbibnamehash}{556d1bfbe80d4f0da446cf7f37c88a68}
+      \strng{authornamehash}{556d1bfbe80d4f0da446cf7f37c88a68}
+      \strng{authorfullhash}{556d1bfbe80d4f0da446cf7f37c88a68}
+      \strng{authorfullhashraw}{556d1bfbe80d4f0da446cf7f37c88a68}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{day}{27}
+      \field{journaltitle}{Amtsblatt der Europäischen Union}
+      \field{month}{4}
+      \field{number}{119}
+      \field{series}{L}
+      \field{shorttitle}{DSGVO}
+      \field{title}{Verordnung (EU) 2016/679 des Europäischen Parlaments und des Rates vom 27. April 2016 zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten, zum freien Datenverkehr und zur Aufhebung der Richtlinie 95/46/EG (Datenschutz-Grundverordnung)}
+      \field{urlday}{10}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 88}
+      \range{pages}{88}
+      \verb{urlraw}
+      \verb https://eur-lex.europa.eu/eli/reg/2016/679/oj
+      \endverb
+      \verb{url}
+      \verb https://eur-lex.europa.eu/eli/reg/2016/679/oj
+      \endverb
+    \endentry
+    \entry{EAA}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a1b813a6e85874b4c945aec2cdbea74c}{%
+           family={{European Commission}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{a1b813a6e85874b4c945aec2cdbea74c}
+      \strng{fullhash}{a1b813a6e85874b4c945aec2cdbea74c}
+      \strng{fullhashraw}{a1b813a6e85874b4c945aec2cdbea74c}
+      \strng{bibnamehash}{a1b813a6e85874b4c945aec2cdbea74c}
+      \strng{authorbibnamehash}{a1b813a6e85874b4c945aec2cdbea74c}
+      \strng{authornamehash}{a1b813a6e85874b4c945aec2cdbea74c}
+      \strng{authorfullhash}{a1b813a6e85874b4c945aec2cdbea74c}
+      \strng{authorfullhashraw}{a1b813a6e85874b4c945aec2cdbea74c}
       \field{sortinit}{E}
       \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
       \field{extradatescope}{labelyear}
@@ -1166,6 +1264,8 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{European Commission}
       \field{title}{European accessibility act (EAA)}
+      \field{urlday}{24}
+      \field{urlmonth}{2}
       \field{urlyear}{2026}
       \field{urldateera}{ce}
       \verb{urlraw}
@@ -1248,12 +1348,12 @@
     \endentry
     \entry{fernandesEvaluatingAccessibilityWeb2012}{article}{}{}
       \name{author}{4}{}{%
-        {{un=1,uniquepart=given,hash=cf5b4b19e05834270576794ad2857227}{%
+        {{un=0,uniquepart=base,hash=cf5b4b19e05834270576794ad2857227}{%
            family={Fernandes},
            familyi={F\bibinitperiod},
            given={Nádia},
            giveni={N\bibinitperiod},
-           givenun=1}}%
+           givenun=0}}%
         {{un=0,uniquepart=base,hash=5c3ed17e3c451cbc593a8a954c212b4b}{%
            family={Costa},
            familyi={C\bibinitperiod},
@@ -1371,9 +1471,9 @@
       \field{journaltitle}{Chrome for Developers}
       \field{month}{9}
       \field{title}{Lighthouse : Chrome for developers}
-      \field{urlday}{6}
-      \field{urlmonth}{10}
-      \field{urlyear}{2025}
+      \field{urlday}{28}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
       \field{year}{2025}
       \field{urldateera}{ce}
       \verb{urlraw}
@@ -1512,41 +1612,39 @@
       \keyw{Mittel}
     \endentry
     \entry{harrenstienAutomaticCaptionsYouTube}{online}{}{}
-      \name{author}{2}{}{%
+      \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=35f8361c73dcd96057a5d817b7e6d310}{%
            family={Harrenstien},
            familyi={H\bibinitperiod},
            given={Ken},
            giveni={K\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=a640d79ffa4cef5884efebfec07b6ce2}{%
-           family={Engineer},
-           familyi={E\bibinitperiod},
-           given={Software},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
       }
-      \strng{namehash}{0a382e6d1e108a710d770ae5f47ed564}
-      \strng{fullhash}{0a382e6d1e108a710d770ae5f47ed564}
-      \strng{fullhashraw}{0a382e6d1e108a710d770ae5f47ed564}
-      \strng{bibnamehash}{0a382e6d1e108a710d770ae5f47ed564}
-      \strng{authorbibnamehash}{0a382e6d1e108a710d770ae5f47ed564}
-      \strng{authornamehash}{0a382e6d1e108a710d770ae5f47ed564}
-      \strng{authorfullhash}{0a382e6d1e108a710d770ae5f47ed564}
-      \strng{authorfullhashraw}{0a382e6d1e108a710d770ae5f47ed564}
+      \strng{namehash}{35f8361c73dcd96057a5d817b7e6d310}
+      \strng{fullhash}{35f8361c73dcd96057a5d817b7e6d310}
+      \strng{fullhashraw}{35f8361c73dcd96057a5d817b7e6d310}
+      \strng{bibnamehash}{35f8361c73dcd96057a5d817b7e6d310}
+      \strng{authorbibnamehash}{35f8361c73dcd96057a5d817b7e6d310}
+      \strng{authornamehash}{35f8361c73dcd96057a5d817b7e6d310}
+      \strng{authorfullhash}{35f8361c73dcd96057a5d817b7e6d310}
+      \strng{authorfullhashraw}{35f8361c73dcd96057a5d817b7e6d310}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Insights from Googlers into our products, technology, and the Google culture}
+      \field{day}{19}
       \field{langid}{english}
+      \field{month}{11}
       \field{title}{Automatic captions in {YouTube}}
       \field{titleaddon}{Official Google Blog}
       \field{urlday}{4}
       \field{urlmonth}{3}
       \field{urlyear}{2026}
+      \field{year}{2009}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{file}
       \verb Snapshot:C\:\\Users\\joely\\Zotero\\storage\\GN48LQU9\\automatic-captions-in-youtube.html:text/html
@@ -1953,70 +2051,6 @@
       \endverb
       \keyw{Computer Science - Computation and Language}
     \endentry
-    \entry{Intern}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=88475b68a141c415e53b3e8a78e9c2c0}{%
-           family={{Intersoft Consulting}},
-           familyi={I\bibinitperiod}}}%
-      }
-      \strng{namehash}{88475b68a141c415e53b3e8a78e9c2c0}
-      \strng{fullhash}{88475b68a141c415e53b3e8a78e9c2c0}
-      \strng{fullhashraw}{88475b68a141c415e53b3e8a78e9c2c0}
-      \strng{bibnamehash}{88475b68a141c415e53b3e8a78e9c2c0}
-      \strng{authorbibnamehash}{88475b68a141c415e53b3e8a78e9c2c0}
-      \strng{authornamehash}{88475b68a141c415e53b3e8a78e9c2c0}
-      \strng{authorfullhash}{88475b68a141c415e53b3e8a78e9c2c0}
-      \strng{authorfullhashraw}{88475b68a141c415e53b3e8a78e9c2c0}
-      \field{extraname}{1}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
-      \field{extradate}{1}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Datenschutz-Grundverordnung (DSGVO)}
-      \field{title}{Art. 28 DSGVO - Auftragsverarbeiter}
-      \field{year}{2018}
-      \verb{urlraw}
-      \verb https://dsgvo-gesetz.de/art-28-dsgvo/
-      \endverb
-      \verb{url}
-      \verb https://dsgvo-gesetz.de/art-28-dsgvo/
-      \endverb
-    \endentry
-    \entry{DSGVO}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=88475b68a141c415e53b3e8a78e9c2c0}{%
-           family={{Intersoft Consulting}},
-           familyi={I\bibinitperiod}}}%
-      }
-      \strng{namehash}{88475b68a141c415e53b3e8a78e9c2c0}
-      \strng{fullhash}{88475b68a141c415e53b3e8a78e9c2c0}
-      \strng{fullhashraw}{88475b68a141c415e53b3e8a78e9c2c0}
-      \strng{bibnamehash}{88475b68a141c415e53b3e8a78e9c2c0}
-      \strng{authorbibnamehash}{88475b68a141c415e53b3e8a78e9c2c0}
-      \strng{authornamehash}{88475b68a141c415e53b3e8a78e9c2c0}
-      \strng{authorfullhash}{88475b68a141c415e53b3e8a78e9c2c0}
-      \strng{authorfullhashraw}{88475b68a141c415e53b3e8a78e9c2c0}
-      \field{extraname}{2}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
-      \field{extradate}{2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Datenschutz-Grundverordnung (DSGVO)}
-      \field{title}{Datenschutz-GrundverordnungDSGVO}
-      \field{year}{2018}
-      \verb{urlraw}
-      \verb https://dsgvo-gesetz.de/
-      \endverb
-      \verb{url}
-      \verb https://dsgvo-gesetz.de/
-      \endverb
-    \endentry
     \entry{kerkmann_barrierefreie_2015}{book}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=6c3cb1b30388e65abb86abae5d2cd32a}{%
@@ -2054,7 +2088,7 @@
       \field{isbn}{978-3-11-033729-7}
       \field{langid}{german}
       \field{month}{5}
-      \field{note}{Google-Books-{ID}: T5ylCQAAQBAJ}
+      \field{note}{Google-Books-{ID}: T5ylCQA\-AQBAJ}
       \field{pagetotal}{292}
       \field{shorttitle}{Barrierefreie Informationssysteme}
       \field{title}{Barrierefreie Informationssysteme: Zugänglichkeit für Menschen mit Behinderung in Theorie und Praxis}
@@ -2146,25 +2180,17 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Individuals with disabilities that impede their range of motion often have difficulty accessing technologies. With the use of computer-based assistive technology; devices, tools, and services can be used to maintain and improve the functional capabilities of motor disabilities. Assistive Technologie...}
-      \field{day}{10}
       \field{isbn}{978-1-4666-4438-0}
-      \field{month}{7}
-      \field{note}{Publication Title: https://services.igi-global.com/resolvedoi/resolve.aspx?doi=10.4018/978-1-4666-4438-0}
       \field{title}{Assistive Technologies and Computer Access for Motor Disabilities}
-      \field{urlday}{4}
-      \field{urlmonth}{3}
-      \field{urlyear}{2026}
-      \field{year}{2014}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
+      \field{year}{2013}
       \verb{file}
       \verb Snapshot:C\:\\Users\\joely\\Zotero\\storage\\9S78JYLV\\75832.html:text/html
       \endverb
       \verb{urlraw}
-      \verb https://www.igi-global.com/book/assistive-technologies-computer-access-motor/www.igi-global.com/book/assistive-technologies-computer-access-motor/75832
+      \verb https://www.igi-global.com/book/assistive-technologies-computer-access-motor/75832
       \endverb
       \verb{url}
-      \verb https://www.igi-global.com/book/assistive-technologies-computer-access-motor/www.igi-global.com/book/assistive-technologies-computer-access-motor/75832
+      \verb https://www.igi-global.com/book/assistive-technologies-computer-access-motor/75832
       \endverb
     \endentry
     \entry{262588213843476FrontendFrameworksPopularity}{online}{}{}
@@ -2187,7 +2213,7 @@
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Front-end frameworks popularity (React, Vue, Angular and Svelte) - {FrontendFrameworksPopularity}.md}
@@ -2197,6 +2223,7 @@
       \field{urlday}{5}
       \field{urlmonth}{3}
       \field{urlyear}{2026}
+      \field{year}{2026}
       \field{urldateera}{ce}
       \verb{file}
       \verb Snapshot:C\:\\Users\\joely\\Zotero\\storage\\EKWFBDAK\\b1caa4c3a185629299ec234d2314e190.html:text/html
@@ -2231,9 +2258,9 @@
       \field{journaltitle}{Startseite}
       \field{month}{5}
       \field{title}{Gesetz zur Errichtung der Landesoberbehörde BITBW}
-      \field{urlday}{12}
-      \field{urlmonth}{7}
-      \field{urlyear}{2025}
+      \field{urlday}{28}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
       \field{year}{2015}
       \field{urldateera}{ce}
       \verb{urlraw}
@@ -2501,9 +2528,16 @@
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{extradate}{1}
-      \field{labeldatesource}{nodate}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
       \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
       \field{journaltitle}{React Blog RSS}
+      \field{title}{React}
+      \field{urlday}{5}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://react.dev/
       \endverb
@@ -2529,11 +2563,16 @@
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{extradate}{2}
-      \field{labeldatesource}{nodate}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{React}
       \field{title}{Render and Commit}
+      \field{urlday}{5}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://react.dev/learn/render-and-commit
       \endverb
@@ -2559,11 +2598,16 @@
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{extradate}{3}
-      \field{labeldatesource}{nodate}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{React}
       \field{title}{Virtual DOM and Internals}
+      \field{urlday}{5}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://legacy.reactjs.org/docs/faq-internals.html
       \endverb
@@ -2585,8 +2629,10 @@
       \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
       \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
       \strng{authorfullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \field{extraname}{1}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{1}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -2609,6 +2655,45 @@
       \verb https://playwright.dev/docs/intro
       \endverb
       \keyw{Gering,Referenz}
+    \endentry
+    \entry{JavaScriptSyntaxTypes}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={Microsoft},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{TypeScript} extends {JavaScript} by adding types to the language. {TypeScript} speeds up your development experience by catching errors and providing fixes before you even run your code.}
+      \field{langid}{english}
+      \field{title}{{JavaScript} With Syntax For Types.}
+      \field{urlday}{9}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\joely\\Zotero\\storage\\WYSYFQ4U\\www.typescriptlang.org.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.typescriptlang.org/
+      \endverb
+      \verb{url}
+      \verb https://www.typescriptlang.org/
+      \endverb
     \endentry
     \entry{miesenbergerComputersHelpingPeople2024}{collection}{}{}
       \name{editor}{3}{}{%
@@ -2910,6 +2995,79 @@
       \endverb
       \keyw{Mittel,Vielleicht}
     \endentry
+    \entry{njifenjou_role-play_2024}{misc}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=580b6687aa1fc70aa19e99b8cbbdf6f1}{%
+           family={Njifenjou},
+           familyi={N\bibinitperiod},
+           given={Ahmed},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f8da5f9d48692fefe84cb0a434fc0952}{%
+           family={Sucal},
+           familyi={S\bibinitperiod},
+           given={Virgile},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ac8d2cb7381a037e510083e609559fc2}{%
+           family={Jabaian},
+           familyi={J\bibinitperiod},
+           given={Bassam},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=984634072bdb075fa4b203fdf5397780}{%
+           family={Lefèvre},
+           familyi={L\bibinitperiod},
+           given={Fabrice},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{334e3a2c8b75c24cf12b3515d5ab519e}
+      \strng{fullhash}{64e2b7b9564e49184f7bc328fb4776e8}
+      \strng{fullhashraw}{64e2b7b9564e49184f7bc328fb4776e8}
+      \strng{bibnamehash}{64e2b7b9564e49184f7bc328fb4776e8}
+      \strng{authorbibnamehash}{64e2b7b9564e49184f7bc328fb4776e8}
+      \strng{authornamehash}{334e3a2c8b75c24cf12b3515d5ab519e}
+      \strng{authorfullhash}{64e2b7b9564e49184f7bc328fb4776e8}
+      \strng{authorfullhashraw}{64e2b7b9564e49184f7bc328fb4776e8}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Recently, various methods have been proposed to create open-domain conversational agents with Large Language Models ({LLMs}). These models are able to answer user queries, but in a one-way Q\&A format rather than a true conversation. Fine-tuning on particular datasets is the usual way to modify their style to increase conversational ability, but this is expensive and usually only available in a few languages. In this study, we explore role-play zero-shot prompting as an efficient and cost-effective solution for open-domain conversation, using capable multilingual {LLMs} (Beeching et al., 2023) trained to obey instructions. We design a prompting system that, when combined with an instruction-following model - here Vicuna (Chiang et al., 2023) - produces conversational agents that match and even surpass fine-tuned models in human evaluation in French in two different tasks.}
+      \field{day}{26}
+      \field{eprinttype}{arxiv}
+      \field{month}{6}
+      \field{number}{{arXiv}:2406.18460}
+      \field{title}{Role-Play Zero-Shot Prompting with Large Language Models for Open-Domain Human-Machine Conversation}
+      \field{urlday}{28}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2406.18460
+      \endverb
+      \verb{eprint}
+      \verb 2406.18460 [cs]
+      \endverb
+      \verb{file}
+      \verb Preprint PDF:C\:\\Users\\joely\\Zotero\\storage\\VFSJ2W6M\\Njifenjou et al. - 2024 - Role-Play Zero-Shot Prompting with Large Language Models for Open-Domain Human-Machine Conversation.pdf:application/pdf;Snapshot:C\:\\Users\\joely\\Zotero\\storage\\CDPPW7DY\\2406.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2406.18460
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2406.18460
+      \endverb
+      \keyw{Computer Science - Human-Computer Interaction,Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Gering,Nicht}
+    \endentry
     \entry{openai2023gpt4}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=0523b13262b12c215d8009938f5c14f1}{%
@@ -2934,9 +3092,19 @@
       \field{eprinttype}{arXiv}
       \field{journaltitle}{arXiv preprint arXiv:2303.08774}
       \field{title}{GPT-4 Technical Report}
+      \field{urlday}{1}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
       \field{year}{2023}
+      \field{urldateera}{ce}
       \verb{eprint}
       \verb 2303.08774
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2303.08774
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2303.08774
       \endverb
     \endentry
     \entry{OpenAI_Developers}{misc}{}{}
@@ -2959,7 +3127,9 @@
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{url}
       \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
       \field{journaltitle}{OpenAI API Reference}
+      \field{title}{Create completion}
       \field{urlday}{1}
       \field{urlmonth}{3}
       \field{urlyear}{2026}
@@ -2971,7 +3141,7 @@
       \verb https://developers.openai.com/api/reference/resources/completions/methods/create/
       \endverb
     \endentry
-    \entry{WorldReportDisability}{online}{}{}
+    \entry{WorldReportDisability}{book}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=8179b1fdebe9235e54501d2878c47e1b}{%
            family={Organization},
@@ -2979,6 +3149,9 @@
            given={World\bibnamedelima Health},
            giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod},
            givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {World Health Organization}%
       }
       \strng{namehash}{8179b1fdebe9235e54501d2878c47e1b}
       \strng{fullhash}{8179b1fdebe9235e54501d2878c47e1b}
@@ -2994,15 +3167,14 @@
       \field{labeldatesource}{url}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{isbn}{978-92-4-156418-2; 978-92-4-068800-1 (PDF); 978-92-4-068636-6 (ePUB); 978-92-4-068637-3 (Daisy); 978-92-4-068521-5 (PDF, original)}
       \field{langid}{english}
+      \field{note}{WHO Library Cataloguing-in-Publication Data. NLM classification: HV 1553}
       \field{title}{World Report on Disability}
       \field{urlday}{4}
       \field{urlmonth}{3}
       \field{urlyear}{2026}
       \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\joely\\Zotero\\storage\\SJCMEW4P\\world-report-on-disability.html:text/html
-      \endverb
       \verb{urlraw}
       \verb https://www.who.int/teams/noncommunicable-diseases/sensory-functions-disability-and-rehabilitation/world-report-on-disability
       \endverb
@@ -3294,7 +3466,7 @@
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Download Citation {|} Policy in Practice: A Systematic Review of {WCAG} 2.2 and {ADA} 2024 Effects on Web and Mobile Accessibility {|} Digital accessibility remains a global concern, affecting 1.3 billion people with disabilities. This study evaluates the impact of two policy... {|} Find, read and cite all the research you need on {ResearchGate}}
       \field{day}{11}
-      \field{journaltitle}{{ResearchGate}}
+      \field{journaltitle}{{Digitus}}
       \field{langid}{english}
       \field{month}{10}
       \field{shorttitle}{Policy in Practice}
@@ -3390,6 +3562,288 @@
       \field{dateera}{ce}
       \verb{file}
       \verb PDF:C\:\\Users\\joely\\Zotero\\storage\\GU9LD4RM\\Sarioğlu - Accessibility in Web Modeling Tools Systematic Review and Conceptualization of a Keyboard-Only Prot.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{schulhoff2024promptreport}{article}{}{}
+      \name{author}{31}{}{%
+        {{un=0,uniquepart=base,hash=572b48d10d1ca3e03df3bc08618dd048}{%
+           family={Schulhoff},
+           familyi={S\bibinitperiod},
+           given={Sander},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f773aed534a538a4d3ae125e53c149ea}{%
+           family={Ilie},
+           familyi={I\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=808d5cf88672b716f29359a1f06601a7}{%
+           family={Balepur},
+           familyi={B\bibinitperiod},
+           given={Nishant},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5656eef590db99fef15521bd8d6664a2}{%
+           family={Kahadze},
+           familyi={K\bibinitperiod},
+           given={Konstantine},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7db5a7d413ea00d686fedd2fca543e76}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Amanda},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=50e55ce524a6cabd5d5e862c580e6869}{%
+           family={Si},
+           familyi={S\bibinitperiod},
+           given={Chenglei},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f29f16103d47cb547a785ee081268c6c}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yinheng},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9296da738820f1b8b76320d669ddf026}{%
+           family={Gupta},
+           familyi={G\bibinitperiod},
+           given={Aayush},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8d84a2e19f8a55ae31fed72deaca052f}{%
+           family={Han},
+           familyi={H\bibinitperiod},
+           given={HyoJung},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=585714f3d76ef67cccb61d198cf96414}{%
+           family={Schulhoff},
+           familyi={S\bibinitperiod},
+           given={Sevien},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ecf854451ee44b99aed3d2a8f75f16f7}{%
+           family={Dulepet},
+           familyi={D\bibinitperiod},
+           given={Pranav\bibnamedelima Sandeep},
+           giveni={P\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5273e3b95f1d5e352c8928ac085b77dd}{%
+           family={Vidyadhara},
+           familyi={V\bibinitperiod},
+           given={Saurav},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4faf825befa660f75adda8a62fbfb09c}{%
+           family={Ki},
+           familyi={K\bibinitperiod},
+           given={Dayeon},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f4421642bbde13def706feefe9c39cd7}{%
+           family={Agrawal},
+           familyi={A\bibinitperiod},
+           given={Sweta},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c29742d2f39170d7cf9a84130831a615}{%
+           family={Pham},
+           familyi={P\bibinitperiod},
+           given={Chau},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=56c2ff6af16c277a949b37c15764cea3}{%
+           family={Kroiz},
+           familyi={K\bibinitperiod},
+           given={Gerson},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ab0ec45eff644771d4bff0e3c40ea5b4}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Feileen},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fc4392d541b6736084a5924ff2835aee}{%
+           family={Tao},
+           familyi={T\bibinitperiod},
+           given={Hudson},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=99ef240a2d6161f24bf8e184d702b858}{%
+           family={Srivastava},
+           familyi={S\bibinitperiod},
+           given={Ashay},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ae126e9242dc99ba911a8fa573876fee}{%
+           family={Da\bibnamedelima Costa},
+           familyi={D\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Hevander},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cabc6222f57be750e3994dd409393bcb}{%
+           family={Gupta},
+           familyi={G\bibinitperiod},
+           given={Saloni},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dddf87565cbd257bcff294fa6895bb9b}{%
+           family={Rogers},
+           familyi={R\bibinitperiod},
+           given={Megan\bibnamedelima L.},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ffeb4cadd4e7a686ad942605402b1421}{%
+           family={Goncearenco},
+           familyi={G\bibinitperiod},
+           given={Inna},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8e98891b7c731d9cde323ca7421d57c3}{%
+           family={Sarli},
+           familyi={S\bibinitperiod},
+           given={Giuseppe},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1ec2a89421c1103dd9b9d95f01373ea8}{%
+           family={Galynker},
+           familyi={G\bibinitperiod},
+           given={Igor},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=881557f79cb190ba4cc79eb775dc3db7}{%
+           family={Peskoff},
+           familyi={P\bibinitperiod},
+           given={Denis},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9cf67a53d9ebd335c787b143ec098196}{%
+           family={Carpuat},
+           familyi={C\bibinitperiod},
+           given={Marine},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d224ecfefc70293d1b9b28a1915cf6f2}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={Jules},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a831d318c9a798d7b9d1aff1545943e}{%
+           family={Anadkat},
+           familyi={A\bibinitperiod},
+           given={Shyamal},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=44177551d66b6f0da271276a2b65f585}{%
+           family={Hoyle},
+           familyi={H\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ba57143778a42bc76658900fe675e760}{%
+           family={Resnik},
+           familyi={R\bibinitperiod},
+           given={Philip},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ef0db98bd7be90261474bc3de8f33007}
+      \strng{fullhash}{fcc7f42fe53de5e6ad1b81c46503b40b}
+      \strng{fullhashraw}{fcc7f42fe53de5e6ad1b81c46503b40b}
+      \strng{bibnamehash}{fcc7f42fe53de5e6ad1b81c46503b40b}
+      \strng{authorbibnamehash}{fcc7f42fe53de5e6ad1b81c46503b40b}
+      \strng{authornamehash}{ef0db98bd7be90261474bc3de8f33007}
+      \strng{authorfullhash}{fcc7f42fe53de5e6ad1b81c46503b40b}
+      \strng{authorfullhashraw}{fcc7f42fe53de5e6ad1b81c46503b40b}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{arXiv preprint arXiv:2406.06608}
+      \field{title}{The Prompt Report: A Systematic Survey of Prompting Techniques}
+      \field{urlday}{9}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{eprint}
+      \verb 2406.06608
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2406.06608
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2406.06608
+      \endverb
+    \endentry
+    \entry{silvestreSystemsOpportunitiesLLM2025}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=00b5436b83bef91d24ba11ecc9e62308}{%
+           family={Silvestre},
+           familyi={S\bibinitperiod},
+           given={Pedro\bibnamedelima F.},
+           giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=21c929c62df652f90f442dc629746da2}{%
+           family={Pietzuch},
+           familyi={P\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York, {NY}, {USA}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{40908ad515949d97da141170f131a9b9}
+      \strng{fullhash}{40908ad515949d97da141170f131a9b9}
+      \strng{fullhashraw}{40908ad515949d97da141170f131a9b9}
+      \strng{bibnamehash}{40908ad515949d97da141170f131a9b9}
+      \strng{authorbibnamehash}{40908ad515949d97da141170f131a9b9}
+      \strng{authornamehash}{40908ad515949d97da141170f131a9b9}
+      \strng{authorfullhash}{40908ad515949d97da141170f131a9b9}
+      \strng{authorfullhashraw}{40908ad515949d97da141170f131a9b9}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Reinforcement learning-based fine-tuning ({RLFT}) has emerged as a crucial workload for enhancing large language models ({LLMs}). {RLFT} workflows are challenging, involving nested loops, multiple models, dynamically shaped tensors and interleaving sequential generation and parallel inference tasks. Despite these complexities, current {RLFT} engines rely on coarse-grained algorithm representations, treating each component as an independently optimized black-box. As a result, {RLFT} engines suffer from redundant computations, scheduling overhead, inefficient memory management, and missed opportunities for parallelism.We argue that a fine-grained representation is needed to enable holistic optimization for {RLFT} workloads. Additionally, we demonstrate that existing declarative deep learning engines fail to optimize {RLFT} workloads end-to-end due to their need for static tensor shapes and loop bounds, leading to excessive peak memory usage and unnecessary computations. Through micro-benchmarks, we quantify these inefficiencies and show that addressing them could enable more efficient and flexible execution. We propose an {RLFT} system design based on a fine-granularity representation, opening the door to generalizable optimizations, and paving the way for more scalable and efficient {RLFT} systems.}
+      \field{booktitle}{Proceedings of the 5th Workshop on Machine Learning and Systems}
+      \field{isbn}{979-8-4007-1538-9}
+      \field{series}{{EuroMLSys} '25}
+      \field{title}{Systems Opportunities for {LLM} Fine-Tuning using Reinforcement Learning}
+      \field{urlday}{9}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{90\bibrangedash 99}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1145/3721146.3721944
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\YKZQR3HL\\Silvestre und Pietzuch - 2025 - Systems Opportunities for LLM Fine-Tuning using Reinforcement Learning.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3721146.3721944
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3721146.3721944
       \endverb
     \endentry
     \entry{Šmite_Wohlin_Galviņa_Prikladnicki_2012}{article}{}{}
@@ -3561,7 +4015,11 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{2025 Stack Overflow Developer Survey}
       \field{title}{Survey index}
+      \field{urlday}{5}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
       \field{year}{2025}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://survey.stackoverflow.co/2025/
       \endverb
@@ -3653,9 +4111,7 @@
       \keyw{Hoch,Wichtig}
     \endentry
     \entry{touvron2023llama2}{article}{}{}
-      \true{moreauthor}
-      \true{morelabelname}
-      \name{author}{21}{}{%
+      \name{author}{68}{}{%
         {{un=0,uniquepart=base,hash=a2a13fcd633ec70c55a7f3f4812afdcf}{%
            family={Touvron},
            familyi={T\bibinitperiod},
@@ -3728,11 +4184,11 @@
            given={Lukas},
            giveni={L\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=a34f5689cad1c408c313da70915c7631}{%
-           family={Canton-Ferrer},
-           familyi={C\bibinithyphendelim F\bibinitperiod},
-           given={Cristian},
-           giveni={C\bibinitperiod},
+        {{un=0,uniquepart=base,hash=88658b8a76c5ee08e1a06ff9a649912c}{%
+           family={Ferrer},
+           familyi={F\bibinitperiod},
+           given={Cristian\bibnamedelima Canton},
+           giveni={C\bibinitperiod\bibinitdelim C\bibinitperiod},
            givenun=0}}%
         {{un=0,uniquepart=base,hash=87afbb2c2912cf3858d79c6e82cfe4b1}{%
            family={Chen},
@@ -3752,24 +4208,24 @@
            given={David},
            giveni={D\bibinitperiod},
            givenun=0}}%
-        {{un=1,uniquepart=given,hash=350dca5d371a8203f3a07fb06bb28575}{%
+        {{un=0,uniquepart=base,hash=350dca5d371a8203f3a07fb06bb28575}{%
            family={Fernandes},
            familyi={F\bibinitperiod},
            given={Jude},
            giveni={J\bibinitperiod},
-           givenun=1}}%
-        {{un=1,uniquepart=given,hash=76c6af62ff4da9d3f19d41b4e8d2bbc1}{%
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=76c6af62ff4da9d3f19d41b4e8d2bbc1}{%
            family={Fu},
            familyi={F\bibinitperiod},
            given={Jeremy},
            giveni={J\bibinitperiod},
-           givenun=1}}%
-        {{un=1,uniquepart=given,hash=c206969fdfb0e87b34f30ee6cc0f0139}{%
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c206969fdfb0e87b34f30ee6cc0f0139}{%
            family={Fu},
            familyi={F\bibinitperiod},
            given={Wenyin},
            giveni={W\bibinitperiod},
-           givenun=1}}%
+           givenun=0}}%
         {{un=0,uniquepart=base,hash=ceb8a0f78cb4f3c580c3bacec158d307}{%
            family={Fuller},
            familyi={F\bibinitperiod},
@@ -3782,27 +4238,362 @@
            given={Cynthia},
            giveni={C\bibinitperiod},
            givenun=0}}%
+        {{un=0,uniquepart=base,hash=3b3711fab2634fac4eff6816c0f5cb0c}{%
+           family={Goswami},
+           familyi={G\bibinitperiod},
+           given={Vedanuj},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=78a420900f50a8470ad085fb05231bf6}{%
+           family={Goyal},
+           familyi={G\bibinitperiod},
+           given={Naman},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=83b44b72b8c1a3fa66c344f8314ae0ea}{%
+           family={Hartshorn},
+           familyi={H\bibinitperiod},
+           given={Anthony},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4abc1e75d2af9ab7d913201989a0e571}{%
+           family={Hosseini},
+           familyi={H\bibinitperiod},
+           given={Saghar},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=87e1cd3cb3c64f79a269f8eb6ca4689c}{%
+           family={Hou},
+           familyi={H\bibinitperiod},
+           given={Rui},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3bf2bb5e273c329482dd632f9a6aaead}{%
+           family={Inan},
+           familyi={I\bibinitperiod},
+           given={Hakan},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=71cb443347f4b9392a81d58940afc147}{%
+           family={Kardas},
+           familyi={K\bibinitperiod},
+           given={Marcin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8406b239af8c6ae9ab411887b09b8cdd}{%
+           family={Kerkez},
+           familyi={K\bibinitperiod},
+           given={Viktor},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2118ff6f53e7a26f72795cd86e0272e3}{%
+           family={Khabsa},
+           familyi={K\bibinitperiod},
+           given={Madian},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ce85bd2d98b3f94c341b59edaa214e3d}{%
+           family={Kloumann},
+           familyi={K\bibinitperiod},
+           given={Isabel},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=897d7f44330ad50e6bbabf2e19436741}{%
+           family={Korenev},
+           familyi={K\bibinitperiod},
+           given={Artem},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b58bfbc914fead2ccb6bc50a44bbe36f}{%
+           family={Koura},
+           familyi={K\bibinitperiod},
+           given={Punit\bibnamedelima Singh},
+           giveni={P\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=08284515d256b832e9dba10a88af84f4}{%
+           family={Lachaux},
+           familyi={L\bibinitperiod},
+           given={Marie-Anne},
+           giveni={M\bibinithyphendelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c641a91d616b6eda08cbbdca7b7eb186}{%
+           family={Lavril},
+           familyi={L\bibinitperiod},
+           given={Thibaut},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6ce116cb36b1ac6aa9dd9ea8b552ea39}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Jenya},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=727001a7f22db6717a536a1042b6f98b}{%
+           family={Liskovich},
+           familyi={L\bibinitperiod},
+           given={Diana},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4eadf32831509d81ab5104f8d3d113da}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Yinghai},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4bf12306f229966567f3fa80a61f52c9}{%
+           family={Mao},
+           familyi={M\bibinitperiod},
+           given={Yuning},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7222f9d76b0fff504f39e7c9c2a526be}{%
+           family={Martinet},
+           familyi={M\bibinitperiod},
+           given={Xavier},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2760810ac53a3b0afd0d63a8af2b52e3}{%
+           family={Mihaylov},
+           familyi={M\bibinitperiod},
+           given={Todor},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1ea33d3177718e2d0ae3eec9e183b220}{%
+           family={Mishra},
+           familyi={M\bibinitperiod},
+           given={Pushkar},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9c9c8b449afb88c0a84739775b9c805a}{%
+           family={Molybog},
+           familyi={M\bibinitperiod},
+           given={Igor},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bcb0b5e3ef5432037cd2481f62d07112}{%
+           family={Nie},
+           familyi={N\bibinitperiod},
+           given={Yixin},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a2080b9d7f5596d56ff1c48c3b0bf6aa}{%
+           family={Poulton},
+           familyi={P\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8ba0e40bb2bd52546beafceb6b00d636}{%
+           family={Reizenstein},
+           familyi={R\bibinitperiod},
+           given={Jeremy},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ebc081fa0f4af7c84ad59529ef780b4b}{%
+           family={Rungta},
+           familyi={R\bibinitperiod},
+           given={Rashi},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b1cdc19c053698d822241e24629f9360}{%
+           family={Saladi},
+           familyi={S\bibinitperiod},
+           given={Kalyan},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a7fbe7fc6a5ce250cabe9388e690c55b}{%
+           family={Schelten},
+           familyi={S\bibinitperiod},
+           given={Alan},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=890ca1d1a899ca554e599fcb6e7fb479}{%
+           family={Silva},
+           familyi={S\bibinitperiod},
+           given={Ruan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d3a381f971b5c6215ca00dbab6af16bc}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Eric\bibnamedelima Michael},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1debb57f937a6ac0fc26bedd2f7365e6}{%
+           family={Subramanian},
+           familyi={S\bibinitperiod},
+           given={Ranjan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9cf8d901d24d77adab28b880dc77fbde}{%
+           family={Tan},
+           familyi={T\bibinitperiod},
+           given={Xiaoqing\bibnamedelima Ellen},
+           giveni={X\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=053e8c6174328cafc9566859df3bbe95}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Binh},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bc3d70abe301dce69ed52a2854aabd09}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={Ross},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d79624dc6e7d48b3c631a4fd694087af}{%
+           family={Williams},
+           familyi={W\bibinitperiod},
+           given={Adina},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=57736c117ce3a023bbd05f03b70733f0}{%
+           family={Kuan},
+           familyi={K\bibinitperiod},
+           given={Jian\bibnamedelima Xiang},
+           giveni={J\bibinitperiod\bibinitdelim X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=45be0856419ed489bdf51603a27cf854}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Puxin},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d2ade1cc491ab061c743877b9fac6eb4}{%
+           family={Yan},
+           familyi={Y\bibinitperiod},
+           given={Zheng},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=93956bb0eb985aaa3bc14fd1e311e982}{%
+           family={Zarov},
+           familyi={Z\bibinitperiod},
+           given={Iliyan},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=584fe8cb46f9a24597f46045f82d1d8d}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Yuchen},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=277117db6b938bd36379979ac719cc02}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={Angela},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=54affa9a2c21ec7e6165e1f0698417b1}{%
+           family={Kambadur},
+           familyi={K\bibinitperiod},
+           given={Melanie},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a2da348cbbad750c6fe76dda9c35ffcd}{%
+           family={Narang},
+           familyi={N\bibinitperiod},
+           given={Sharan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a829e25f1d50c3545ed8e99f12890acc}{%
+           family={Rodriguez},
+           familyi={R\bibinitperiod},
+           given={Aurelien},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5f64b32e164398414aabe27f1af0140e}{%
+           family={Stojnic},
+           familyi={S\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=79caf76234e835df3dc38a785e0913e0}{%
+           family={Edunov},
+           familyi={E\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3669dc61c228df3d7b95b1306107fa82}{%
+           family={Scialom},
+           familyi={S\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
       }
       \strng{namehash}{c237483431fea681283a37adbb23a59f}
-      \strng{fullhash}{fbc5800cd72d02011927fdf32e217ec3}
-      \strng{fullhashraw}{fbc5800cd72d02011927fdf32e217ec3}
-      \strng{bibnamehash}{fbc5800cd72d02011927fdf32e217ec3}
-      \strng{authorbibnamehash}{fbc5800cd72d02011927fdf32e217ec3}
+      \strng{fullhash}{06fe4240ad61e7c82c3d29b55da15871}
+      \strng{fullhashraw}{06fe4240ad61e7c82c3d29b55da15871}
+      \strng{bibnamehash}{06fe4240ad61e7c82c3d29b55da15871}
+      \strng{authorbibnamehash}{06fe4240ad61e7c82c3d29b55da15871}
       \strng{authornamehash}{c237483431fea681283a37adbb23a59f}
-      \strng{authorfullhash}{fbc5800cd72d02011927fdf32e217ec3}
-      \strng{authorfullhashraw}{fbc5800cd72d02011927fdf32e217ec3}
+      \strng{authorfullhash}{06fe4240ad61e7c82c3d29b55da15871}
+      \strng{authorfullhashraw}{06fe4240ad61e7c82c3d29b55da15871}
       \field{sortinit}{T}
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{day}{19}
+      \field{eprintclass}{cs.CL}
       \field{eprinttype}{arXiv}
       \field{journaltitle}{arXiv preprint arXiv:2307.09288}
+      \field{month}{7}
       \field{title}{Llama 2: Open Foundation and Fine-Tuned Chat Models}
+      \field{urlday}{1}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
       \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
       \verb{eprint}
       \verb 2307.09288
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2307.09288
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2307.09288
+      \endverb
+    \endentry
+    \entry{OHCHR}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3cc54e2c0d69c1b76b4d49edb22dd6d1}{%
+           family={{United Nations}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{3cc54e2c0d69c1b76b4d49edb22dd6d1}
+      \strng{fullhash}{3cc54e2c0d69c1b76b4d49edb22dd6d1}
+      \strng{fullhashraw}{3cc54e2c0d69c1b76b4d49edb22dd6d1}
+      \strng{bibnamehash}{3cc54e2c0d69c1b76b4d49edb22dd6d1}
+      \strng{authorbibnamehash}{3cc54e2c0d69c1b76b4d49edb22dd6d1}
+      \strng{authornamehash}{3cc54e2c0d69c1b76b4d49edb22dd6d1}
+      \strng{authorfullhash}{3cc54e2c0d69c1b76b4d49edb22dd6d1}
+      \strng{authorfullhashraw}{3cc54e2c0d69c1b76b4d49edb22dd6d1}
+      \field{extraname}{1}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{12}
+      \field{journaltitle}{United Nations Human Rights}
+      \field{month}{12}
+      \field{title}{Convention on the Rights of Persons with Disabilities}
+      \field{urlday}{28}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{year}{2006}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ohchr.org/en/instruments-mechanisms/instruments/convention-rights-persons-disabilities
+      \endverb
+      \verb{url}
+      \verb https://www.ohchr.org/en/instruments-mechanisms/instruments/convention-rights-persons-disabilities
       \endverb
     \endentry
     \entry{un_crpd_2006}{online}{}{}
@@ -3822,8 +4613,10 @@
       \strng{authornamehash}{3cc54e2c0d69c1b76b4d49edb22dd6d1}
       \strng{authorfullhash}{3cc54e2c0d69c1b76b4d49edb22dd6d1}
       \strng{authorfullhashraw}{3cc54e2c0d69c1b76b4d49edb22dd6d1}
+      \field{extraname}{2}
       \field{sortinit}{U}
       \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradate}{2}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -3844,36 +4637,66 @@
       \verb https://www.un.org/disabilities/documents/convention/convoptprot-e.pdf
       \endverb
     \endentry
-    \entry{OHCHR}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=6fab04391a8fca70b59b2115b71407ad}{%
-           family={{United Nations Human Rights}},
-           familyi={U\bibinitperiod}}}%
+    \entry{wangMetacognitivePromptingImproves2024}{misc}{}{}
+      \name{author}{2}{}{%
+        {{un=1,uniquepart=given,hash=a48cdbcd19a30fd4053a4d8a78536c8f}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yuqing},
+           giveni={Y\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=dd151adb3c48be4898120a9350584206}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Yun},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
       }
-      \strng{namehash}{6fab04391a8fca70b59b2115b71407ad}
-      \strng{fullhash}{6fab04391a8fca70b59b2115b71407ad}
-      \strng{fullhashraw}{6fab04391a8fca70b59b2115b71407ad}
-      \strng{bibnamehash}{6fab04391a8fca70b59b2115b71407ad}
-      \strng{authorbibnamehash}{6fab04391a8fca70b59b2115b71407ad}
-      \strng{authornamehash}{6fab04391a8fca70b59b2115b71407ad}
-      \strng{authorfullhash}{6fab04391a8fca70b59b2115b71407ad}
-      \strng{authorfullhashraw}{6fab04391a8fca70b59b2115b71407ad}
-      \field{sortinit}{U}
-      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{9a2eb02b5bc515373812509a6b9f8300}
+      \strng{fullhash}{9a2eb02b5bc515373812509a6b9f8300}
+      \strng{fullhashraw}{9a2eb02b5bc515373812509a6b9f8300}
+      \strng{bibnamehash}{9a2eb02b5bc515373812509a6b9f8300}
+      \strng{authorbibnamehash}{9a2eb02b5bc515373812509a6b9f8300}
+      \strng{authornamehash}{9a2eb02b5bc515373812509a6b9f8300}
+      \strng{authorfullhash}{9a2eb02b5bc515373812509a6b9f8300}
+      \strng{authorfullhashraw}{9a2eb02b5bc515373812509a6b9f8300}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
-      \field{journaltitle}{OHCHR}
-      \field{urlday}{28}
-      \field{urlmonth}{2}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In Large Language Models ({LLMs}), there have been consistent advancements in task-specific performance, largely influenced by effective prompt design. Recent advancements in prompting have enhanced reasoning in logic-intensive tasks for {LLMs}, yet the nuanced understanding abilities of these models, crucial for processing and interpreting complex information, remain underexplored. In this study, we introduce Metacognitive Prompting ({MP}), a strategy inspired by human introspective reasoning processes. Using {MP}, {LLMs} undergo a systematic series of structured, self-aware evaluations, drawing on both their vast inherent knowledge and new insights. We conduct extensive experiments on four prevalent {LLMs}: Llama2, {PaLM}2, {GPT}-3.5, and {GPT}-4, across ten natural language understanding ({NLU}) datasets from {GLUE}, {SuperGLUE}, {BLUE}, and {LexGLUE} benchmarks. Additionally, we compare our method with chain-of-thought prompting and its advanced versions. The results show that {GPT}-4 consistently excels across all tasks, while other models have shown significant progress in some tasks when used in conjunction with {MP}. Furthermore, {MP} consistently outperforms existing prompting methods in both general and domain-specific {NLU} tasks. This study underscores the potential to amplify the understanding abilities of {LLMs} and highlights the benefits of mirroring human introspective reasoning in {NLU} tasks.}
+      \field{day}{20}
+      \field{eprinttype}{arxiv}
+      \field{month}{3}
+      \field{number}{{arXiv}:2308.05342}
+      \field{title}{Metacognitive Prompting Improves Understanding in Large Language Models}
+      \field{urlday}{9}
+      \field{urlmonth}{3}
       \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2308.05342
+      \endverb
+      \verb{eprint}
+      \verb 2308.05342 [cs]
+      \endverb
+      \verb{file}
+      \verb Preprint PDF:C\:\\Users\\joely\\Zotero\\storage\\4QF6E5SJ\\Wang und Zhao - 2024 - Metacognitive Prompting Improves Understanding in Large Language Models.pdf:application/pdf;Snapshot:C\:\\Users\\joely\\Zotero\\storage\\4THUQG5D\\2308.html:text/html
+      \endverb
       \verb{urlraw}
-      \verb https://www.ohchr.org/en/instruments-mechanisms/instruments/convention-rights-persons-disabilities
+      \verb http://arxiv.org/abs/2308.05342
       \endverb
       \verb{url}
-      \verb https://www.ohchr.org/en/instruments-mechanisms/instruments/convention-rights-persons-disabilities
+      \verb http://arxiv.org/abs/2308.05342
       \endverb
+      \keyw{Computer Science - Artificial Intelligence,Computer Science - Computation and Language}
     \endentry
     \entry{WebAIM19}{misc}{}{}
       \name{author}{1}{}{%
@@ -3928,7 +4751,6 @@
       \field{extraname}{2}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{extradate}{1}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -3965,16 +4787,16 @@
       \field{extraname}{3}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{extradate}{2}
+      \field{extradate}{1}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{url}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{WAVE Web Accessibility Evaluation Tool}
       \field{title}{Wave Web Accessibility Evaluation Tools}
-      \field{urlday}{6}
-      \field{urlmonth}{10}
-      \field{urlyear}{2025}
+      \field{urlday}{28}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://wave.webaim.org/
@@ -4000,6 +4822,7 @@
       \field{extraname}{4}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{2}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{url}
       \field{labelnamesource}{author}
@@ -4169,16 +4992,23 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{day}{26}
       \field{journaltitle}{Transactions on Machine Learning Research}
+      \field{month}{10}
       \field{title}{Emergent Abilities of Large Language Models}
+      \field{urlday}{28}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
       \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
       \field{pages}{1\bibrangedash 35}
       \range{pages}{35}
       \verb{urlraw}
-      \verb https://openreview.net/forum?id=yzkSU5zdwD
+      \verb https://arxiv.org/abs/2206.07682
       \endverb
       \verb{url}
-      \verb https://openreview.net/forum?id=yzkSU5zdwD
+      \verb https://arxiv.org/abs/2206.07682
       \endverb
     \endentry
     \entry{wei2022chainofthought}{misc}{}{}
@@ -4189,12 +5019,12 @@
            given={Jason},
            giveni={J\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=27d22d8f05f44b47f7dcfe9b7fb85584}{%
+        {{un=1,uniquepart=given,hash=27d22d8f05f44b47f7dcfe9b7fb85584}{%
            family={Wang},
            familyi={W\bibinitperiod},
            given={Xuezhi},
            giveni={X\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=0,uniquepart=base,hash=fc76f5fb256da4d423554f8e629b4321}{%
            family={Schuurmans},
            familyi={S\bibinitperiod},
@@ -4283,7 +5113,9 @@
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{url}
       \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
       \field{journaltitle}{World Health Organization}
+      \field{title}{Disability}
       \field{urlday}{28}
       \field{urlmonth}{2}
       \field{urlyear}{2026}
@@ -4318,7 +5150,7 @@
       \field{labeltitlesource}{title}
       \field{day}{5}
       \field{month}{6}
-      \field{title}{{Web Content Accessibility Guidelines (WCAG) 2.2}}
+      \field{title}{{Web Content Accessibility Guidelines (WCAG) 2.1}}
       \field{urlday}{24}
       \field{urlmonth}{2}
       \field{urlyear}{2026}
@@ -4390,11 +5222,11 @@
       \field{labeldatesource}{url}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{WAVE Web Accessibility Evaluation Tool}
+      \field{journaltitle}{W3C WAI}
       \field{title}{Evaluation-Tool-List}
-      \field{urlday}{6}
-      \field{urlmonth}{10}
-      \field{urlyear}{2025}
+      \field{urlday}{28}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.w3.org/WAI/test-evaluate/tools/list/
@@ -4425,11 +5257,11 @@
       \field{labeldatesource}{url}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{WAVE Web Accessibility Evaluation Tool}
-      \field{title}{Web Accessibility Initivative}
-      \field{urlday}{6}
-      \field{urlmonth}{10}
-      \field{urlyear}{2025}
+      \field{journaltitle}{W3C WAI}
+      \field{title}{Web Accessibility Initiative}
+      \field{urlday}{28}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.w3.org/WAI/
@@ -4501,18 +5333,28 @@
       \field{eprinttype}{arxiv}
       \field{note}{Definition/Intuition von ReAct (interleaved reasoning+acting) auf S.~2; publiziert bei ICLR 2023}
       \field{title}{ReAct: Synergizing Reasoning and Acting in Language Models}
-      \field{year}{2022}
+      \field{urlday}{28}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{year}{2023-03-10}
+      \field{urldateera}{ce}
       \verb{eprint}
       \verb 2210.03629
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/2210.03629
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/2210.03629
       \endverb
     \endentry
     \entry{yin_case_2018}{book}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=0eb46c301c503425677e7171d3b95938}{%
+        {{un=0,uniquepart=base,hash=bf7eb9dbb747f641a5083488354145d6}{%
            family={Yin},
            familyi={Y\bibinitperiod},
-           given={Dr\bibnamedelima Robert\bibnamedelima K.},
-           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim K\bibinitperiod},
+           given={Robert\bibnamedelima K.},
+           giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod},
            givenun=0}}%
       }
       \list{location}{1}{%
@@ -4521,14 +5363,14 @@
       \list{publisher}{1}{%
         {{SAGE} Publications, Inc}%
       }
-      \strng{namehash}{0eb46c301c503425677e7171d3b95938}
-      \strng{fullhash}{0eb46c301c503425677e7171d3b95938}
-      \strng{fullhashraw}{0eb46c301c503425677e7171d3b95938}
-      \strng{bibnamehash}{0eb46c301c503425677e7171d3b95938}
-      \strng{authorbibnamehash}{0eb46c301c503425677e7171d3b95938}
-      \strng{authornamehash}{0eb46c301c503425677e7171d3b95938}
-      \strng{authorfullhash}{0eb46c301c503425677e7171d3b95938}
-      \strng{authorfullhashraw}{0eb46c301c503425677e7171d3b95938}
+      \strng{namehash}{bf7eb9dbb747f641a5083488354145d6}
+      \strng{fullhash}{bf7eb9dbb747f641a5083488354145d6}
+      \strng{fullhashraw}{bf7eb9dbb747f641a5083488354145d6}
+      \strng{bibnamehash}{bf7eb9dbb747f641a5083488354145d6}
+      \strng{authorbibnamehash}{bf7eb9dbb747f641a5083488354145d6}
+      \strng{authornamehash}{bf7eb9dbb747f641a5083488354145d6}
+      \strng{authorfullhash}{bf7eb9dbb747f641a5083488354145d6}
+      \strng{authorfullhashraw}{bf7eb9dbb747f641a5083488354145d6}
       \field{sortinit}{Y}
       \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
       \field{extradatescope}{labelyear}
