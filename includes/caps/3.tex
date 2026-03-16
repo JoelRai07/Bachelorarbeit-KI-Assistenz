@@ -6,7 +6,7 @@ Das folgende Kapitel gibt einen thematisch strukturierten Überblick über den S
 Zur Einordnung des Forschungsstands wurde eine strukturierte Literaturrecherche in wissenschaftlichen Datenbanken durchgeführt.\footcite[Vgl.][]{WebsterWatson2002} Berücksichtigt wurden insbesondere ACM Digital Library, IEEE Xplore, Science Direct, arXiv und ResearchGate. Die Recherche erfolgte themenorientiert anhand von Suchbegriffen wie „web accessibility“, „\ac{LLM} accessibility“, „accessibility violation detection“, „accessibility remediation“, „prompt engineering accessibility“, „Playwright accessibility“ und „axe-core“. Berücksichtigt wurden primär aktuelle Arbeiten mit Bezug zur automatisierten Erkennung oder Behebung von Barrierefreiheitsverstößen in Webanwendungen mit \ac{KI}-Assistenzsystemen. Ausgeschlossen wurden Arbeiten ohne klaren Webbezug, rein konzeptionelle Beiträge ohne methodische Auswertung sowie Beiträge mit fehlender Übertragbarkeit auf den Untersuchungskontext dieser Arbeit. Die identifizierten Arbeiten wurden anschließend thematisch gruppiert, priorisiert, eingeordnet und vergleichend ausgewertet.
 \section{Von frühen \ac{KI}-Ansätzen zur \ac{LLM}-basierten Erkennung}
 
-Frühe Arbeiten wie Abou-Zahra et al. (2018) identifizierten zwar grundlegende Einsatzmöglichkeiten von \ac{KI} für die Barrierefreiheitsanalyse, lieferten jedoch keine belastbaren Metriken.\footcite[Vgl.][]{abou-zahra_artificial_2018} Mit dem Aufkommen leistungsfähiger Large Language Models verschob sich der Forschungsfokus grundlegend. Delnevo et al. (2024) zeigten, dass GPT-3.5 einfache syntaktische Verstöße mit moderater Genauigkeit erkennen kann, bei semantischen Problemen jedoch inkonsistente Bewertungen liefert.\footcite[Vgl.][]{delnevo_interaction_2024} Bassi et al. (2025) verglichen GPT-4o, GPT-3.5 und LLaMA 3.1 unter kontrollierten Bedingungen: GPT-4o erzielte eine Erkennungsrate von 74\% gegenüber 42\% für GPT-3.5, konnte jedoch eine Halluzinationsrate von rund 15\% nicht unterschreiten.\footcite[Vgl.][]{bassi_assessment_2025} Der Einsatz von Chain-of-Verification in Kombination mit \ac{RAG} reduzierte diese Fehlerquote signifikant.
+Frühe Arbeiten wie Abou-Zahra et al. (2018) identifizierten zwar grundlegende Einsatzmöglichkeiten von \ac{KI} für die Barrierefreiheitsanalyse, lieferten jedoch noch keine belastbaren quantitativen Leistungsmaße.\footcite[Vgl.][]{abou-zahra_artificial_2018} Mit dem Aufkommen leistungsfähiger Large Language Models verlagerte sich der Forschungsfokus auf die empirische Bewertung konkreter Modellleistungen. Delnevo et al. (2024) zeigen, dass GPT-3.5 einfache syntaktische Verstöße mit moderater Genauigkeit erkennen kann, bei semantisch anspruchsvolleren Problemen jedoch inkonsistente Bewertungen liefert.\footcite[Vgl.][]{delnevo_interaction_2024} Bassi et al. (2025) verglichen GPT-4o, GPT-3.5 und LLaMA~3.1 in einer zweistufigen Evaluation von HTML-Snippets und Webseiten. Für GPT-4o berichten sie in der ersten Prüfphase einen Anteil korrekt identifizierter Verstöße von 74\%, während 15\% der gemeldeten Verstöße als Halluzinationen eingestuft wurden.\footcite[Vgl.][S. 302]{bassi_assessment_2025} Eine nachgelagerte Chain-of-Verification-artige Verifikationsstufe erhöhte die Zuverlässigkeit der Befunde deutlich, da die im ersten Schritt erkannten Verstöße anschließend gezielt auf tatsächliche Fehler oder Halluzinationen überprüft wurden; ein Einsatz von \ac{RAG} wird von Bassi et al. hingegen nur als mögliche zukünftige Erweiterung diskutiert.\footcite[Vgl.][S. 301]{bassi_assessment_2025}
 
 \section{\ac{LLM}-basierte Korrektur und Prompt-Engineering}
 
@@ -18,9 +18,9 @@ Den aktuellen Stand der Technik repräsentiert \textfett{AccessGuru} von Fathall
 
 Huang et al. entwickelten 2024 mit \textfett{ACCESS} ein System, das Prompt Engineering gezielt zur automatisierten Barrierefreiheitskorrektur einsetzt und dabei verschiedene Strategien systematisch vergleicht.\footcite[Vgl.][]{huang_access_2024} Der Vergleich von ReAct, Chain-of-Thought und Few-Shot Prompting zeigt, dass ReAct mit einem Severity Score Reduction von 51,3\% alle anderen Strategien übertrifft - ein Ergebnis, das die Bedeutung iterativer, werkzeuggestützter Reasoning-Strategien für diese Aufgabe unterstreicht. 
 
-He et al. präsentierten 2025 mit \textfett{GenA11y} das methodisch ausgefeilteste Detection-System des aktuellen Forschungsstands.\footcite[Vgl.][]{he_enhancing_2025} \textfett{GenA11y} extrahiert nach vollständigem clientseitigem Rendering den \ac{DOM} via Playwright und prüft ihn anschließend kriteriumsspezifisch mit GPT-4o - für jedes \ac{WCAG}-Erfolgskriterium wird ein eigener, optimierter Prompt eingesetzt. Eine Ablation Study belegt, dass weder \ac{DOM}-Extraktion noch optimiertes Prompting allein die Gesamtleistung von Precision 94,5\% und Recall 87,6\% erreichen - beide Komponenten sind also notwendige Bestandteile des Systems.\footcite[Vgl.][]{fathallah_accessguru_2025} \textfett{GenA11y} erkennt acht Verstoßtypen, die von keinem der verglichenen regelbasierten Tools gefunden werden.\footcite[Vgl.][]{he_enhancing_2025} Paternò et al. ergänzen dieses Bild mit \textfett{TeVal}, das semantische \ac{WCAG}-Kriterien durch Role-Play Prompting mit Few-Shot-Beispielen und Confidence Score bewertet und dabei eine Effektivität von 92,4\% erzielt.\footcite[Vgl.][]{paterno_how_2025}
+He et al. präsentierten 2025 mit \textfett{GenA11y} das methodisch ausgefeilteste Detection-System des aktuellen Forschungsstands.\footcite[Vgl.][]{he_enhancing_2025} \textfett{GenA11y} extrahiert nach vollständigem clientseitigem Rendering den \ac{DOM} via Playwright und prüft ihn anschließend kriteriumsspezifisch mit GPT-4o - für jedes \ac{WCAG}-Erfolgskriterium wird ein eigener, optimierter Prompt eingesetzt. Eine Ablation Study belegt, dass weder \ac{DOM}-Extraktion noch optimiertes Prompting allein die Gesamtleistung von Precision 94,5\% und Recall 87,6\% erreichen - beide Komponenten sind also notwendige Bestandteile des Systems.\footcite[Vgl.][]{he_enhancing_2025} \textfett{GenA11y} erkennt acht Verstoßtypen, die von keinem der verglichenen regelbasierten Tools gefunden werden.\footcite[Vgl.][]{he_enhancing_2025} Paternò et al. ergänzen dieses Bild mit \textfett{TeVal}, das semantische \ac{WCAG}-Kriterien durch Role-Play Prompting mit Few-Shot-Beispielen und Confidence Score bewertet und dabei eine Effektivität von 92,4\% erzielt.\footcite[Vgl.][]{paterno_how_2025}
 
-Pool (2023) adressiert die Detection-Schicht mit \textfett{Testaro}, einem Ensemble aus acht Ac\-ces\-si\-bi\-li\-ty-Werk\-zeugen (u.\,a. textbf{axe-core, WAVE, QualWeb}).\footcite[Vgl.][]{pool_testaro_2023} Die empirische Analyse zeigt, dass jedes Tool exklusive Violations erkennt, was die Komplementarität der Werkzeuge belegt.
+Pool (2023) adressiert die Detection-Schicht mit \textfett{Testaro}, einem Ensemble aus acht Ac\-ces\-si\-bi\-li\-ty-Werk\-zeugen (u.\,a. \textfett{axe-core, WAVE, QualWeb}).\footcite[Vgl.][]{pool_testaro_2023} Die empirische Analyse zeigt, dass jedes Tool exklusive Violations erkennt, was die Komplementarität der Werkzeuge belegt.
 
 \section{Forschungslücken und Einordnung der vorliegenden Arbeit} \label{Forschungslücken}
 
@@ -103,11 +103,11 @@ Tafreshipour et al.\ (2024) & Ma11y
 % ── Eigener PoC ──────────────────────────────────────────────
 
 \textbf{Martinez Campo (2026)} &
-\textbf{ACE}
+\textbf{ACE (angestrebt)}
 & \yes & \yes & \yes
 & \yes & \yes & \yes
 & \yes & \yes & \yes
-&   & \yes & 
+&   & \yes &
 & \yes & \yes \\ \hline
 
 \end{tabular}%
@@ -115,7 +115,8 @@ Tafreshipour et al.\ (2024) & Ma11y
 
 \caption[Konzeptmatrix (Hauptmatrix, hoch priorisierte Studien)]{%
   Konzeptmatrix nach Webster Watson\footnotemark: Hoch priorisierte Studien im Vergleich
-  zum eigenen \acl{PoC}. \yes~=~Konzept vorhanden/adressiert; leer ~=~nicht adressiert.
+  zum eigenen \acf{PoC}. \yes~=~Konzept vorhanden/adressiert; leer ~=~nicht adressiert.
+  Für den eigenen \ac{PoC} bezeichnen die Markierungen angestrebte Designziele, deren Umsetzung und Wirksamkeit in Kapitel~\ref{kap:7} evaluiert wird.
   Die vollständige Matrix aller analysierten Studien findet sich in Anhang~\ref{app:konzeptmatrix}.}
 \label{tab:konzeptmatrix_haupt}
 \end{table}
@@ -157,7 +158,7 @@ Als prozessualer Rahmen dient das sechsphasige DSRM-Prozessmodell nach Peffers e
 \textbf{DSRM-Phase} & \textbf{Kapitel} \\
 \hline
 Problem-Identifikation & Kapitel \ref{kap:1}-\ref{kap:3} \\
-Zieldefinition & Kapitel \ref{kap:1.3} \& \ref{kap:3} \\
+Zieldefinition & Kapitel \ref{kap:1.3} \& \ref{Forschungslücken} \\
 Design \& Entwicklung & Kapitel \ref{kap:4}-\ref{kap:5} \\
 Demonstration & Kapitel \ref{kap:6} \\
 Evaluation & Kapitel \ref{kap:7} \\
@@ -174,7 +175,7 @@ Die Wahl eines \ac{PoC} als Artefakttyp ist durch die explorative Natur der Fors
 
 \section{Untersuchungsgegenstand und Scope-Abgrenzung} \label{sec:scope}
 
-Als Untersuchungsgegenstand dient der BWEC Client, eine öffentlich zugängliche React-basierte Webanwendung der \ac{BITBW}.\footcite[Vgl.][]{bwec} Die Anwendung eignet sich als Fallstudie, da sie drei für die Forschungsfrage zentrale Eigenschaften vereint: gesetzlich relevante Anforderungen an digitale Barrierefreiheit, einen datenschutzsensiblen Einsatzkontext in der öffentlichen Verwaltung sowie typische Interaktionsmuster moderner Single-Page Applications.
+Als Untersuchungsgegenstand dient der BWEC, eine öffentlich zugängliche React-basierte Webanwendung der \ac{BITBW}.\footcite[Vgl.][]{bwec} Die Anwendung eignet sich als Fallstudie, da sie drei für die Forschungsfrage zentrale Eigenschaften vereint: gesetzlich relevante Anforderungen an digitale Barrierefreiheit, einen datenschutzsensiblen Einsatzkontext in der öffentlichen Verwaltung sowie typische Interaktionsmuster moderner Single-Page Applications.
 
 Der Untersuchungsscope ist wie folgt abgegrenzt:
 
@@ -187,14 +188,14 @@ Die Arbeit erhebt keinen Anspruch auf vollständige Abdeckung aller \ac{WCAG}-Er
 
 \section{Evaluationsdesign und Kriterien} \label{sec:eval}
 
-Ziel der Evaluation ist es, die technische Machbarkeit und den praktischen Nutzen des entwickelten \ac{PoC} im Anwendungskontext des BWEC Clients zu untersuchen.
+Ziel der Evaluation ist es, die technische Machbarkeit und den praktischen Nutzen des entwickelten \ac{PoC} im Anwendungskontext des BWEC zu untersuchen.
 
 \subsection{Evaluationslogik}
 
 Die Evaluation folgt einem fünfstufigen Vorgehen:
 
 \begin{enumerate}
-    \item \textbf{Seitenauswahl:} Relevante öffentlich zugängliche Seiten und Interaktions\-zustände des BWEC Clients werden für die Untersuchung ausgewählt.
+    \item \textbf{Seitenauswahl:} Relevante öffentlich zugängliche Seiten und Interaktions\-zustände des BWEC werden für die Untersuchung ausgewählt.
     \item \textbf{Manuelles Referenzaudit:} Der Autor führt ein manuelles Audit der ausgewählten Seiten durch, um vorhandene Barrierefreiheitsverstöße zu identifizieren und nach Verstoßtyp (syntaktisch, semantisch, interaktionsbezogen) zu kategorisieren. Als Prüfgrundlage dienen die \ac{WCAG}~2.2-Erfolgskriterien der Stufen A und AA.\footcite[Vgl.][]{WCAG}
     \item \textbf{Automatisierte Analyse:} Dieselben Seiten werden mit dem entwickelten \ac{PoC} analysiert.
     \item \textbf{Vergleich:} Die Ergebnisse des Systems werden dem manuellen Audit gegenübergestellt. Dabei wird erfasst, welche Verstöße korrekt erkannt, welche übersehen und welche fälschlich gemeldet werden.
@@ -209,7 +210,7 @@ Die Evaluation erfolgt qualitativ anhand von vier Kriterien, die auf Basis der F
 
 \textbf{Kriterium 2 - Qualität der Handlungsempfehlungen:} Die generierten Empfehlungen werden hinsichtlich Verständlichkeit, Korrektheit und direkter Umsetzbarkeit beurteilt. Quantitativ wird der Violation Score Decrease durch axe-core-Nachprüfung nach Umsetzung einer Stichprobe gemessen. \textfett{AccessGuru} erreicht als Referenzwert einen Violation Score Decrease von 84\%.\footcite[Vgl.][]{fathallah_accessguru_2025}
 
-\textbf{Kriterium 3 - Mehrwert der Kontextualisierung:} Es wird qualitativ bewertet, ob die Einbeziehung von Quellcode und Playwright-Interaktionsdaten die Handlungsempfehlungen gegenüber einem rein regelbasierten Report verbessert. Dies adressiert direkt Teilforschungsfrage \ac{TF}2.\footnote{Siehe Kapitel \ref{kap:1.3}}
+\textbf{Kriterium 3 - Mehrwert der Kontextualisierung:} Um den Einfluss der Quellcode- und Playwright-Kontextualisierung isoliert bewerten zu können, wird ein Ablationsvergleich durchgeführt: Dieselben Testfälle werden in zwei Konfigurationen analysiert - einmal mit dem vollständigen Kontext (axe-Report, Playwright-Interaktionsdaten und Quellcode) und einmal ausschließlich mit dem axe-Report und dem gerenderten \ac{DOM}-Snippet. Die resultierenden Handlungsempfehlungen beider Durchläufe werden anhand der Kriterien Quellcodebezug, Umsetzbarkeit und semantische Tiefe qualitativ verglichen. Dies adressiert direkt Teilforschungsfrage \ac{TF}2.\footnote{Siehe Kapitel \ref{kap:1.3}}
 
 \textbf{Kriterium 4 - Technische Praktikabilität:} Laufzeit, Stabilität und Qualität des \acs{JSON}-Outputs werden unter realen Bedingungen dokumentiert.
 

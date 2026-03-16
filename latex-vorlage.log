@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.9.8)  15 MAR 2026 19:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.9.8)  16 MAR 2026 18:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1225,4 +1225,465 @@ Package acronym Info: Label `acro:WCAG' newly defined as it shall be overridden
 although it is yet undefined on input line 14.
 Package acronym Info: Label `acro:KI' newly defined as it shall be overridden
 although it is yet undefined on input line 24.
-Package acronym Info: Label `acro:RAG' newly defined as it shall 
+Package acronym Info: Label `acro:RAG' newly defined as it shall be overridden
+although it is yet undefined on input line 27.
+Package acronym Info: Label `acro:LLM' newly defined as it shall be overridden
+although it is yet undefined on input line 31.
+
+
+[3
+
+
+]
+Package acronym Info: Label `acro:FA' newly defined as it shall be overridden
+although it is yet undefined on input line 44.
+Package acronym Info: Label `acro:NFA' newly defined as it shall be overridden
+although it is yet undefined on input line 45.
+)
+\tf@toc=\write6
+\openout6 = `latex-vorlage.toc'.
+
+
+
+[4] (includes/extra/abkuerzungen.tex)
+
+[5
+
+
+] (latex-vorlage.lof)
+\tf@lof=\write7
+\openout7 = `latex-vorlage.lof'.
+
+
+
+[6
+
+] (latex-vorlage.lot)
+\tf@lot=\write8
+\openout8 = `latex-vorlage.lot'.
+
+
+
+[7
+
+] (includes/caps/1.tex
+chapter 1.
+Package acronym Info: Label `acro:EAA' newly defined as it shall be overridden
+although it is yet undefined on input line 9.
+Package acronym Info: Label `acro:BFSG' newly defined as it shall be overridden
+although it is yet undefined on input line 9.
+Package acronym Info: Label `acro:BITV' newly defined as it shall be overridden
+although it is yet undefined on input line 9.
+
+
+[1
+
+
+
+]
+Package acronym Info: Label `acro:BITBW' newly defined as it shall be overridden
+although it is yet undefined on input line 13.
+Package acronym Info: Label `acro:API' newly defined as it shall be overridden
+although it is yet undefined on input line 13.
+
+
+[2]
+Package acronym Info: Label `acro:DOM' newly defined as it shall be overridden
+although it is yet undefined on input line 23.
+Package acronym Info: Label `acro:HTML' newly defined as it shall be overridden
+although it is yet undefined on input line 25.
+
+
+[3]
+<graphics/Diagramm1.png, id=411, 815.045pt x 152.57pt>
+File: graphics/Diagramm1.png Graphic file (type png)
+<use graphics/Diagramm1.png>
+Package pdftex.def Info: graphics/Diagramm1.png  used on input line 35.
+(pdftex.def)             Requested size: 455.24411pt x 85.21745pt.
+Package acronym Info: Label `acro:TF' newly defined as it shall be overridden
+although it is yet undefined on input line 52.
+
+Overfull \hbox (1.10892pt too wide) in paragraph at lines 55--56
+[][][]\T1/cmr/m/n/10.95 2: In-wie-fern ver-bes-sert die Kom-bi-na-ti-on von Tool-Reports, Playwright-Interaktionsdaten
+ []
+
+
+
+[4 <./graphics/Diagramm1.png>]) (includes/caps/2.tex
+
+[5]
+chapter 2.
+Package acronym Info: Label `acro:WAI' newly defined as it shall be overridden
+although it is yet undefined on input line 9.
+Package acronym Info: Label `acro:WHO' newly defined as it shall be overridden
+although it is yet undefined on input line 9.
+
+
+[6
+
+]
+Package acronym Info: Label `acro:PoC' newly defined as it shall be overridden
+although it is yet undefined on input line 17.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ac' on input line 21.
+
+
+
+[7]
+
+[8]
+<graphics/WCAG-Dreieck-4-Ebenen.png, id=607, 770.88pt x 643.6547pt>
+File: graphics/WCAG-Dreieck-4-Ebenen.png Graphic file (type png)
+<use graphics/WCAG-Dreieck-4-Ebenen.png>
+Package pdftex.def Info: graphics/WCAG-Dreieck-4-Ebenen.png  used on input line 37.
+(pdftex.def)             Requested size: 182.09486pt x 152.03476pt.
+
+
+[9 <./graphics/WCAG-Dreieck-4-Ebenen.png>]
+Overfull \hbox (10.0597pt too wide) in paragraph at lines 51--52
+\T1/cmr/m/n/10.95 Württemberg ([])[] als zen-tra-le IT-Dienstleisterin der Lan-des-ver-wal-tung Baden-Württembergs
+ []
+
+
+
+[10]
+
+[11]
+Overfull \hbox (1.43257pt too wide) in paragraph at lines 109--110
+[]\T1/cmr/bx/n/10.95 Syntaktische Ver-stö-ÿe \T1/cmr/m/n/10.95 be-zeich-nen Fäl-le, in de-nen ein er-for-der-li-ches Accessibility-Element
+ []
+
+
+
+[12] (includes/taxonomie-figure.tex)
+
+[13]
+<graphics/react.png, id=791, 984.67876pt x 618.05907pt>
+File: graphics/react.png Graphic file (type png)
+<use graphics/react.png>
+Package pdftex.def Info: graphics/react.png  used on input line 125.
+(pdftex.def)             Requested size: 227.62206pt x 142.86732pt.
+
+
+[14 <./graphics/react.png>]
+
+[15]
+Package acronym Info: Label `acro:JSON' newly defined as it shall be overridden
+although it is yet undefined on input line 156.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ac' on input line 158.
+
+Package acronym Info: Label `acro:RAG' overridden on input line 164.
+
+
+[16]
+
+[17]
+
+[18]
+<graphics/fewshot.png, id=984, 894.34125pt x 477.28313pt>
+File: graphics/fewshot.png Graphic file (type png)
+<use graphics/fewshot.png>
+Package pdftex.def Info: graphics/fewshot.png  used on input line 210.
+(pdftex.def)             Requested size: 318.66948pt x 170.06665pt.
+
+
+[19 <./graphics/fewshot.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ac' on input line 226.
+
+Package acronym Info: Label `acro:DSGVO' newly defined as it shall be overridden
+although it is yet undefined on input line 230.
+) (includes/caps/3.tex
+
+[20]
+
+[21]
+chapter 3.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ac' on input line 7.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ac' on input line 7.
+
+
+
+[22
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ac' on input line 11.
+
+
+
+[23]
+Overfull \vbox (57.04884pt too high) detected at line 114
+ []
+
+
+Overfull \vbox (57.04884pt too high) detected at line 114
+ []
+
+
+
+[24]
+
+[25]
+chapter 4.
+Package acronym Info: Label `acro:DSR' newly defined as it shall be overridden
+although it is yet undefined on input line 150.
+
+
+[26
+
+]
+
+[27]
+Overfull \hbox (11.4939pt too wide) in paragraph at lines 198--199
+[]\T1/cmr/bx/n/10.95 Seitenauswahl: \T1/cmr/m/n/10.95 Re-le-van-te öf-fent-lich zu-gäng-li-che Sei-ten und Interaktions-zustände des BWEC
+ []
+
+
+
+[28]
+Package acronym Info: Label `acro:JSON' overridden on input line 215.
+) (includes/caps/4.tex
+
+[29]
+chapter 5.
+
+Overfull \hbox (8.42735pt too wide) in paragraph at lines 13--14
+\T1/cmr/m/n/10.95 lo-kal aus-führ-ba-ren, [][]-gestützten As-sis-tenz-sys-tems, das axe-core-Violation-Reports, Playwright-
+ []
+
+
+
+[30
+
+]
+Overfull \hbox (3.61205pt too wide) in paragraph at lines 29--30
+\T1/cmr/m/n/10.95 Handler auf Nicht-interaktiven Ele-men-ten, feh-len-de \T1/cmtt/m/n/10.95 alt\T1/cmr/m/n/10.95 -Attribute, Ver-wen-dung ver-al-te-ter [][]-
+ []
+
+
+
+[31]
+Package acronym Info: Label `acro:JSON' overridden on input line 35.
+Package acronym Info: Label `acro:JSON' overridden on input line 37.
+Package acronym Info: Label `acro:JSON' overridden on input line 49.
+
+Overfull \hbox (3.46214pt too wide) in paragraph at lines 53--54
+[]\T1/cmr/m/n/10.95 Die Sys-te-mar-chi-tek-tur muss ei-ne kla-re mo-du-la-re Tren-nung der Kom-po-nen-ten (De-tec-ti-on, Context-
+ []
+
+
+
+[32]
+Package acronym Info: Label `acro:JSON' overridden on input line 57.
+Package acronym Info: Label `acro:CLI' newly defined as it shall be overridden
+although it is yet undefined on input line 65.
+
+
+[33]
+Package acronym Info: Label `acro:JSON' overridden on input line 73.
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--116
+[]|\T1/cmr/m/n/10 Regelbasierte Accessibility-
+ []
+
+
+Underfull \hbox (badness 2269) in paragraph at lines 116--116
+[]|\T1/cmr/m/n/10 Statische Quell-co-de-ana-ly-se (grep-
+ []
+
+Package acronym Info: Label `acro:JSON' overridden on input line 116.
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--116
+[]|\T1/cmr/m/n/10 Institutionell ([][],
+ []
+
+
+Underfull \hbox (badness 5446) in paragraph at lines 116--116
+[]|\T1/cmr/m/n/10 Wartbarkeit und Er-weiter-bar-keit
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--116
+[]|\T1/cmr/m/n/10 Software-Engineering Best
+ []
+
+Package acronym Info: Label `acro:JSON' overridden on input line 116.
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--116
+[]|\T1/cmr/m/n/10 Reproduzierbarkeit (Tem-pe-ra-
+ []
+
+) (includes/caps/5.tex
+
+[34]
+
+[35]
+chapter 6.
+) (includes/caps/6.tex
+
+[36
+
+]
+chapter 7.
+) (includes/caps/7.tex
+
+[37
+
+]
+chapter 8.
+) (includes/caps/8.tex
+
+[38
+
+]
+chapter 9.
+) (includes/anhang.tex
+
+[39
+
+] (latex-vorlage.app)
+\tf@app=\write9
+\openout9 = `latex-vorlage.app'.
+
+
+
+[40
+
+]
+<graphics/ComplexitÃ¤t.png, id=1524, 1336.24219pt x 534.49687pt>
+File: graphics/ComplexitÃ¤t.png Graphic file (type png)
+<use graphics/ComplexitÃ¤t.png>
+Package pdftex.def Info: graphics/ComplexitÃ¤t.png  used on input line 8.
+(pdftex.def)             Requested size: 409.71692pt x 163.88173pt.
+
+Overfull \vbox (57.04884pt too high) detected at line 149
+ []
+
+
+Overfull \vbox (57.04884pt too high) detected at line 149
+ []
+
+)
+
+[41
+
+ <./graphics/ComplexitÃ¤t.png>]
+
+[42]
+
+Package biblatex Warning: Field 'extrayear' is deprecated.
+(biblatex)                Please use 'extradate' instead.
+(biblatex)                Using 'extradate' now.
+
+
+
+[43
+
+
+]
+
+Package biblatex Warning: No driver for 'legislation'.
+(biblatex)                Using fallback driver on input line 74.
+
+
+
+[44]
+
+[45]
+Overfull \hbox (4.74887pt too wide) in paragraph at lines 74--74
+\T1/cmr/m/n/10.95 gäng-lich-keit für Men-schen mit Be-hin-de-rung in Theo-rie und Pra-xis. Google-Books-ID: T5ylCQA-
+ []
+
+
+
+[46]
+
+[47]
+Overfull \hbox (2.84285pt too wide) in paragraph at lines 74--74
+[][]\T1/cmr/bx/n/10.95 Schulhoff, San-der; Ilie, Mi-cha-el; Ba-le-pur, Nis-hant; Ka-had-ze, Kon-stan-ti-ne; Liu, Aman-
+ []
+
+
+
+[48]
+
+[49]
+Overfull \hbox (9.45776pt too wide) in paragraph at lines 74--74
+[][]\T1/cmr/bx/n/10.95 World Wi-de Web Con-sor-ti-um (W3C) (2018)\T1/cmr/m/n/10.95 : Web Con-tent Ac-ces-si-bi-li-ty Gui-de-li-nes (WCAG)
+ []
+
+
+Overfull \hbox (9.45776pt too wide) in paragraph at lines 74--74
+[][]\T1/cmr/bx/n/10.95 World Wi-de Web Con-sor-ti-um (W3C) (2023)\T1/cmr/m/n/10.95 : Web Con-tent Ac-ces-si-bi-li-ty Gui-de-li-nes (WCAG)
+ []
+
+
+
+[50]
+
+[51] (includes/extra/erklaerung_ki.tex
+Overfull \hbox (1.558pt too wide) in paragraph at lines 132--132
+[]\T1/cmr/m/n/10.95 mich ak-tiv über die Leis-tungs-fä-hig-keit und Be-schrän-kun-gen der oben ge-nann-ten KI-Systeme
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
+\T1/cmr/bx/n/10.95 wis-sen-schaft-li-chen
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
+[]|\T1/cmr/bx/n/10.95 Eingesetzte(s)
+ []
+
+
+
+[52
+
+
+
+]) (template/_dhbw_erklaerung.tex
+
+[53])
+
+[54
+
+] (latex-vorlage.aux)
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2020/03/25>
+ ***********
+Package rerunfilecheck Info: File `latex-vorlage.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package logreq Info: Writing requests to 'latex-vorlage.run.xml'.
+\openout1 = `latex-vorlage.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 41467 strings out of 473523
+ 853133 string characters out of 5714631
+ 1885612 words of memory out of 5000000
+ 63503 multiletter control sequences out of 15000+600000
+ 586212 words of font info for 96 fonts, out of 8000000 for 9000
+ 1146 hyphenation exceptions out of 8191
+ 108i,18n,127p,10962b,2390s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0500.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on latex-vorlage.pdf (62 pages, 1678577 bytes).
+PDF statistics:
+ 3065 PDF objects out of 3580 (max. 8388607)
+ 493 named destinations out of 1000 (max. 500000)
+ 526 words of extra memory for PDF output out of 10000 (max. 10000000)
+
