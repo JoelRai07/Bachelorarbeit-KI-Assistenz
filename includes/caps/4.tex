@@ -8,7 +8,7 @@ Die \ac{BITBW} entwickelt und betreibt als zentraler IT-Dienstleisterin der Land
 
 Im Sinne des Design-Science-Research-Paradigmas ist der Ausgangspunkt die Identifikation eines praxisrelevanten Problems, für das bestehende Lösungen unzureichend sind.\footcite[Vgl.][S. 79]{hevner2004dsr} Aus der Analyse der Forschungsliteratur (Kapitel \ref{kap:3}) und den Rahmenbedingungen der \ac{BITBW} lassen sich drei zentrale Problemfelder ableiten.\footcite[Vgl.][S. 52--55]{peffers2007dsrm}
 
-Zum einen ist in der betrachteten Literatur kein Ansatz erkennbar, der nicht nur den anfänglichen \ac{DOM}-Zustand prüft, sondern auch Barrieren erkennt, die erst durch typische Nutzerinteraktionen in React-Anwendungen sichtbar werden.\footcite[Vgl.][]{fathallah_accessguru_2025} Zum anderen fehlt bislang eine Lösung, die die Ergebnisse einer allgemeinen \ac{DOM}-Analyse so verständlich und praxisnah aufbereitet, dass Entwickler gezielt für einzelne Quellcodedateien und Komponenten konkrete Verbesserungen ableiten können.\footcite[Vgl.][]{he_enhancing_2025,fathallah_accessguru_2025} Außerdem setzen alle bekannten Forschungsprototypen auf cloudbasierte \ac{LLM}-\ac{API}s - ein Ansatz, der für die \ac{BITBW} aus Datenschutzgründen nicht ohne Weiteres in Frage kommt.\footcite[Vgl.][Art. 28, 44 ff.]{dsgvo2016}
+Zum einen ist in der betrachteten Literatur kein Ansatz erkennbar, der nicht nur den anfänglichen \ac{DOM}-Zustand prüft, sondern auch Barrieren erkennt, die erst durch typische Nutzerinteraktionen in React-Anwendungen sichtbar werden.\footcite[Vgl.][]{fathallah_accessguru_2025} Zum anderen fehlt bislang eine Lösung, die die Ergebnisse einer allgemeinen \ac{DOM}-Analyse so verständlich und praxisnah aufbereitet, dass Entwickler gezielt für einzelne Quellcodedateien und Komponenten konkrete Verbesserungen ableiten können. Außerdem setzen alle bekannten Forschungsprototypen auf cloudbasierte \ac{LLM}-\ac{API}s - ein Ansatz, der für die \ac{BITBW} aus Datenschutzgründen nicht ohne Weiteres in Frage kommt.\footcite[Vgl.][Art. 28, 44 ff.]{dsgvo2016}\footnote{Siehe Kapitel \ref{datenschutz}}
 
 Aus diesen drei Dimensionen leitet sich das Ziel der vorliegenden Arbeit ab: die Entwicklung eines lokal ausführbaren, \ac{LLM}-gestützten Assistenzsystems, das axe-core-Violation-Reports, Playwright-Interaktionsdaten und statische Quellcodeanalyse kombiniert, um entwicklernahe Handlungsempfehlungen für React-basierte Webanwendungen zu generieren.\footnote{Siehe Kapitel \ref{kap:1.3}}
 
@@ -18,7 +18,7 @@ Aus diesen drei Dimensionen leitet sich das Ziel der vorliegenden Arbeit ab: die
 
 \textfett{\acs{FA}-01 Regelbasierte Accessibility-Erkennung}
 
-Das System muss den BWEC automatisiert auf Barrierefreiheitsverstöße nach \ac{WCAG} 2.2 Level A und AA prüfen.\footcite[Vgl.][]{bwec,WCAG} Die Prüfung basiert auf axe-core als Detection-Backend. Dessen Regelkatalog deckt einen wesentlichen Teil der syntaktisch und algorithmisch prüfbaren Verstöße gegen \ac{WCAG} 2.0, 2.1 und 2.2 ab\footcite[Vgl.][Erfolgskriterien]{WCAG}, ersetzt jedoch keine vollständige manuelle Barrierefreiheitsprüfung.\footcite[Vgl.][]{axe} Der Output je Verstoß umfasst mindestens: Regel-ID (Zur Identifikation), Schweregrad (critical/serious/moderate/minor) sowie ein \ac{HTML}-Ausschnitt des betroffenen Elements. %sowie XPath-Selektor.
+Das System muss den BWEC automatisiert auf Barrierefreiheitsverstöße nach \ac{WCAG} 2.2 Level A und AA prüfen.\footcite[Vgl.][]{bwec,WCAG} Die Prüfung basiert auf axe-core als Detection-Backend. Dessen Regelkatalog deckt einen wesentlichen Teil der syntaktisch und algorithmisch prüfbaren Verstöße gegen \ac{WCAG} 2.0, 2.1 und 2.2 ab\footcite[Vgl.][]{WCAG}, ersetzt jedoch keine vollständige manuelle Barrierefreiheitsprüfung.\footcite[Vgl.][]{axe} Der Output je Verstoß umfasst mindestens: Regel-ID (Zur Identifikation), Schweregrad (critical/serious/moderate/minor) sowie ein \ac{HTML}-Ausschnitt des betroffenen Elements. %sowie XPath-Selektor.
 
 \textfett{\acs{FA}-02 Dynamische Zustandserfassung via Playwright}
 
@@ -30,7 +30,8 @@ Das System muss den Quellcode der geprüften React-Anwendung automatisiert nach 
 
 \textfett{\ac{FA}-04 \ac{LLM}-gestützte Analyse und Handlungsempfehlung}
 
-Das System muss die Ergebnisse aus \ac{FA}-01, \ac{FA}-02 und \ac{FA}-03 zu einem strukturierten Kontext zusammenführen und an ein lokal ausgeführtes Sprachmodell übergeben. Das Sprachmodell erhält einen kombinierten Prompt\footnote{Siehe Kapitel \ref{kap:5.3}} und generiert daraus eine Handlungsempfehlung im Format Must-have/Nice-to-have je Verstoß und mit Angabe der betroffenen Datei.\footcite[Vgl.][]{doush_evaluating_2025,fathallah_accessguru_2025,paterno_how_2025}
+Das System muss die Ergebnisse aus \ac{FA}-01, \ac{FA}-02 und \ac{FA}-03 zu einem strukturierten Kontext zusammenführen und an ein lokal ausgeführtes Sprachmodell übergeben. Das Sprachmodell erhält einen kombinierten Prompt\footnote{Siehe Kapitel \ref{kap:5.3}} und generiert daraus eine Handlungsempfehlung im Format Must-have/Nice-to-have je Verstoß und mit Angabe der betroffenen Datei.
+%\footcite[Vgl.][]{doush_evaluating_2025,fathallah_accessguru_2025,paterno_how_2025}
 
 \textfett{\ac{FA}-05 Strukturierter \acs{JSON}-Output}
 
@@ -46,7 +47,7 @@ Das System muss vollständig ohne externe \ac{API}-Aufrufe betreibbar sein. Wede
 
 \textfett{\ac{NFA}-02 Laufzeit und Praktikabilität}
 
-Der vollständige Analyselauf - von der Playwright-Initialisierung bis zum fertigen \acs{JSON}-Report - muss auf einem Entwicklungsrechner in einer für den Entwicklungsalltag akzeptablen Zeit abschließen. Als Richtwert gilt eine Gesamtlaufzeit von unter zehn Minuten für eine einzelne Seite mit bis zu 20 axe-Verstößen. Diese Anforderung begrenzt die Komplexität der eingesetzten Prompt-Kette und schließt mehrstufige Reasoning-Schleifen (wie iteratives Corrective Re-Prompting)\footnote{Vgl. Kapitel \ref{Prompt}} aus dem Scope des \ac{PoC} aus.
+Der vollständige Analyselauf - von der Playwright-Initialisierung bis zum fertigen \acs{JSON}-Report - muss auf einem Entwicklungsrechner in einer für den Entwicklungsalltag akzeptablen Zeit abschließen. Als Richtwert gilt eine Gesamtlaufzeit von unter zehn Minuten für eine einzelne Seite mit bis zu 20 axe-Verstößen. Diese Anforderung begrenzt die Komplexität der eingesetzten Prompt-Kette und schließt mehrstufige Reasoning-Schleifen (wie iteratives Corrective Re-Prompting)\footnote{Siehe Kapitel \ref{Prompt}} aus dem Scope des \ac{PoC} aus.
 
 \textfett{\ac{NFA}-03 Wartbarkeit und Erweiterbarkeit}
 
@@ -62,15 +63,15 @@ Die Wahl des Sprachmodells ist für das vorliegende System von besonderer Releva
 
 \subsection{Ollama als Laufzeitumgebung}
 
-Ollama ist ein Open-Source-Werkzeug, das die lokale Ausführung von \ac{LLM}s über eine einheitliche REST-\ac{API} ermöglicht. Die Modellverwaltung (Download, Quantisierung, Speicherverwaltung) wird durch eine einfach zu bedienende \ac{CLI} abstrahiert: Modelle lassen sich mit ollama pull <modell> herunterladen und mit ollama run <modell> starten. Die REST-\ac{API} ist kompatibel mit der OpenAI-\ac{API}-Spezifikation, wodurch sich viele bestehende Bibliotheken und Anwendungen – insbesondere in Node.js – ohne größeren Anpassungsaufwand integrieren lassen. Für den vorliegenden \ac{PoC} ist Ollama die einzige zusätzliche Infrastruktur, die neben einer Standard-Node.js-Installation benötigt wird.
+Ollama ist ein Open-Source-Werkzeug, das die lokale Ausführung von \ac{LLM}s über eine einheitliche REST-\ac{API} ermöglicht.\footcite[Vgl.][S. 1]{touvron2023llama2} Die Modellverwaltung (Download, Quantisierung, Speicherverwaltung) wird durch eine einfach zu bedienende \ac{CLI} abstrahiert: Modelle lassen sich mit ollama pull <modell> herunterladen und mit ollama run <modell> starten.\footcite[Vgl.][]{Ollama} Die REST-\ac{API} ist kompatibel mit der OpenAI-\ac{API}-Spezifikation, wodurch sich viele bestehende Bibliotheken und Anwendungen - insbesondere in Node.js - ohne größeren Anpassungsaufwand integrieren lassen. Für den vorliegenden \ac{PoC} ist Ollama die einzige zusätzliche Infrastruktur, die neben einer Standard-Node.js-Installation benötigt wird.
 
 \subsection{Begründung der Modellwahl}
 
 Für den Einsatz im vorliegenden System wurden lokal ausführbare Modelle der 7B-Parameter-Klasse verglichen, da diese auf Entwicklungsrechnern ohne dedizierte Grafikkarte (GPU) mit akzeptabler Latenz betrieben werden können. Alternativ wurden LLaMA 3.1-8B und Mistral-7B als Kandidaten in Betracht gezogen.
 
-Qwen2.5-Coder ist eine von Alibaba Cloud entwickelte, speziell auf Code-Aufgaben ausgerichtete Modellfamilie.\footcite[Vgl.][]{hui2024qwen25coder} Das Modell wurde auf über 5,5 Billionen Tokens trainiert, darunter ein hoher Anteil an Code-Daten aus öffentlichen Repositories, Stack Overflow und technischen Dokumentationen.\footcite[Vgl.][]{hui2024qwen25coder} In standardisierten Code-Benchmarks - darunter HumanEval, MBPP und EvoEval - übertrifft Qwen2.5-Coder:7B vergleichbare Modelle der 7B-Klasse inklusive CodeLlama-7B, DeepSeek-Coder-6.7B, LLaMA-3.1-8B und Mistral-7B konsistent.\footcite[Vgl.][]{hui2024qwen25coder}
+Qwen2.5-Coder ist eine von Alibaba Cloud entwickelte, speziell auf Code-Aufgaben ausgerichtete Modellfamilie.\footcite[Vgl.][S. 3]{hui2024qwen25coder} Das Modell wurde auf über 5,5 Billionen Tokens trainiert, darunter ein hoher Anteil an Code-Daten aus öffentlichen Repositories, Stack Overflow und technischen Dokumentationen.\footcite[Vgl.][S. 4]{hui2024qwen25coder} In standardisierten Code-Benchmarks - darunter HumanEval, MBPP und EvoEval - übertrifft Qwen2.5-Coder:7B vergleichbare Modelle der 7B-Klasse inklusive CodeLlama-7B, DeepSeek-Coder-6.7B, LLaMA-3.1-8B und Mistral-7B konsistent.\footcite[Vgl.][S. 19]{hui2024qwen25coder}
 
-Für den vorliegenden Anwendungsfall sind drei Eigenschaften entscheidend: Erstens versteht qwen2.5-coder:7b JSX und TypeScript nativ, was für die Analyse von React-Quellcode ohne Vorverarbeitung relevant ist. Zweitens erzeugt das Modell strukturierte \acs{JSON}-Ausgaben mit hoher Zuverlässigkeit, was \ac{NFA}-04 (Reproduzierbarkeit) begünstigt. Drittens beträgt das Kontextfenster standardmäßig 32.768 Tokens, was ausreicht, um mehrere Violation-Reports, relevante Quellcode-Ausschnitte und den System-Prompt in einer einzigen Anfrage zu übermitteln.\footcite[Vgl.][]{hui2024qwen25coder}
+Für den vorliegenden Anwendungsfall sind drei Eigenschaften entscheidend: Erstens versteht qwen2.5-coder:7b JSX und TypeScript nativ, was für die Analyse von React-Quellcode ohne Vorverarbeitung relevant ist. Zweitens erzeugt das Modell strukturierte \acs{JSON}-Ausgaben mit hoher Zuverlässigkeit, was \ac{NFA}-04 (Reproduzierbarkeit) begünstigt. Drittens beträgt das Kontextfenster standardmäßig 32.768 Tokens, was ausreicht, um mehrere Violation-Reports, relevante Quellcode-Ausschnitte und den System-Prompt in einer einzigen Anfrage zu übermitteln.\footcite[Vgl.][S. 13]{hui2024qwen25coder}
 
 Es ist jedoch zu betonen, dass diese Benchmarks allgemeine Code-Generierung messen und keine Aussage über die Fähigkeit zur semantischen Accessibility-Analyse erlauben. Ob ein 7B-Modell die in Kapitel~\ref{kap:2.4} beschriebenen Vorteile von \ac{LLM}s - insbesondere Sprachverständnis und kontextuelles Schlussfolgern - in ausreichendem Maße besitzt, ist eine offene Frage, die durch die Evaluation in Kapitel~\ref{kap:7} empirisch adressiert wird.
 
@@ -80,9 +81,9 @@ Die Wahl eines 7B-Modells anstelle eines leistungsfähigeren, aber ressourcenint
 
 Tabelle \ref{Anforderungstabelle} fasst die spezifizierten Anforderungen zusammen und gibt jeweils den Ursprung und die Priorität an.
 
-\begin{table}[htbp] 
+\begin{table}[h] 
 \centering
-\small
+\footnotesize
 \renewcommand{\arraystretch}{1.2}
 
 \resizebox{\textwidth}{!}{%
