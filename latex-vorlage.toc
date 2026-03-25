@@ -16,7 +16,7 @@
 \contentsline {section}{\numberline {2.2}Automatisierte Barrierefreiheitsanalyse}{10}{section.104}%
 \contentsline {subsection}{\numberline {2.2.1}Klassische Tool-Ansätze}{10}{subsection.107}%
 \contentsline {subsection}{\numberline {2.2.2}Grenzen bestehender Tools}{11}{subsection.116}%
-\contentsline {subsection}{\numberline {2.2.3}Taxonomie der Verstöße: Syntaktisch, Semantisch, Layout}{12}{subsection.131}%
+\contentsline {subsection}{\numberline {2.2.3}Taxonomie der Verstöße: syntaktisch, semantisch, Layout}{12}{subsection.131}%
 \contentsline {section}{\numberline {2.3}Rich-Client-Webanwendungen und Testautomatisierung}{14}{section.142}%
 \contentsline {subsection}{\numberline {2.3.1}Charakteristika und Abgrenzung}{14}{subsection.143}%
 \contentsline {subsection}{\numberline {2.3.2}Herausforderungen für die Barrierefreiheitsprüfung}{15}{subsection.152}%
@@ -49,14 +49,19 @@
 \contentsline {subsection}{\numberline {5.4.3}Zusammenfassung der Anforderungen}{34}{subsection.304}%
 \contentsline {chapter}{\numberline {6}Konzeption des Assistenzsystems}{36}{chapter.308}%
 \contentsline {section}{\numberline {6.1}Zielarchitektur und Datenpipeline}{36}{section.309}%
-\contentsline {section}{\numberline {6.2}Modell der Kontextualisierung \& Priorisierung}{36}{section.310}%
-\contentsline {section}{\numberline {6.3}Ausgabeformat entwicklernahe To-Do-Liste}{36}{section.311}%
-\contentsline {chapter}{\numberline {7}Implementierung des Proof of Concept}{37}{chapter.312}%
-\contentsline {section}{\numberline {7.1}Technische Umsetzung}{37}{section.313}%
-\contentsline {section}{\numberline {7.2}Beispielabläufe und Ergebnisse am Untersuchungsobjekt}{37}{section.314}%
-\contentsline {chapter}{\numberline {8}Evaluation \& Diskussion}{38}{chapter.315}%
-\contentsline {section}{\numberline {8.1}Ergebnisse entlang der Kriterien und Limitationen}{38}{section.316}%
-\contentsline {section}{\numberline {8.2}Handlungsempfehlungen und Ausblick}{38}{section.317}%
-\contentsline {chapter}{\numberline {9}Fazit}{39}{chapter.318}%
-\contentsline {chapter}{Anhang}{40}{chapter*.319}%
-\contentsline {chapter}{Literaturverzeichnis}{43}{section*.328}%
+\contentsline {subsection}{\numberline {6.1.1}Analysequellen}{36}{subsection.310}%
+\contentsline {subsection}{\numberline {6.1.2}Unified Finding Schema}{37}{subsection.314}%
+\contentsline {section}{\numberline {6.2}Modell der Kontextualisierung und Priorisierung}{38}{section.317}%
+\contentsline {subsection}{\numberline {6.2.1}Single-Prompt-Strategie}{38}{subsection.318}%
+\contentsline {subsection}{\numberline {6.2.2}Token-Budget-Steuerung}{39}{subsection.322}%
+\contentsline {subsection}{\numberline {6.2.3}Modellwahl}{39}{subsection.323}%
+\contentsline {section}{\numberline {6.3}Ausgabeformat: entwicklernahe To-Do-Liste}{39}{section.325}%
+\contentsline {chapter}{\numberline {7}Implementierung des Proof of Concept}{41}{chapter.327}%
+\contentsline {section}{\numberline {7.1}Technische Umsetzung}{41}{section.328}%
+\contentsline {section}{\numberline {7.2}Beispielabläufe und Ergebnisse am Untersuchungsobjekt}{41}{section.329}%
+\contentsline {chapter}{\numberline {8}Evaluation \& Diskussion}{42}{chapter.330}%
+\contentsline {section}{\numberline {8.1}Ergebnisse entlang der Kriterien und Limitationen}{42}{section.335}%
+\contentsline {section}{\numberline {8.2}Handlungsempfehlungen und Ausblick}{42}{section.336}%
+\contentsline {chapter}{\numberline {9}Fazit}{45}{chapter.337}%
+\contentsline {chapter}{Anhang}{46}{chapter*.338}%
+\contentsline {chapter}{Literaturverzeichnis}{49}{section*.350}%

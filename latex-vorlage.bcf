@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bcf:controlfile version="3.11" bltxversion="3.21" xmlns:bcf="https://sourceforge.net/projects/biblatex">
+<bcf:controlfile version="3.11" bltxversion="3.20" xmlns:bcf="https://sourceforge.net/projects/biblatex">
   <!-- BIBER OPTIONS -->
   <bcf:options component="biber" type="global">
     <bcf:option type="singlevalued">
@@ -514,7 +514,6 @@
     <bcf:option datatype="string">alphaothers</bcf:option>
     <bcf:option datatype="string">sortalphaothers</bcf:option>
     <bcf:option datatype="string">presort</bcf:option>
-    <bcf:option datatype="string">citepagerange</bcf:option>
     <bcf:option datatype="string">texencoding</bcf:option>
     <bcf:option datatype="string">bibencoding</bcf:option>
     <bcf:option datatype="string">sortingtemplatename</bcf:option>
@@ -2594,8 +2593,19 @@
     <bcf:citekey order="212" intorder="1">hui2024qwen25coder</bcf:citekey>
     <bcf:citekey order="213" intorder="1">hui2024qwen25coder</bcf:citekey>
     <bcf:citekey order="214" intorder="1">hui2024qwen25coder</bcf:citekey>
-    <bcf:citekey order="215" intorder="1">WebAIM</bcf:citekey>
-    <bcf:citekey order="216" intorder="1">WebsterWatson2002</bcf:citekey>
+    <bcf:citekey order="215" intorder="1">fathallah_accessguru_2025</bcf:citekey>
+    <bcf:citekey order="216" intorder="1">huang_access_2024</bcf:citekey>
+    <bcf:citekey order="217" intorder="1">bassi_2025</bcf:citekey>
+    <bcf:citekey order="218" intorder="1">schulhoff_prompt_2024</bcf:citekey>
+    <bcf:citekey order="219" intorder="1">fathallah_accessguru_2025</bcf:citekey>
+    <bcf:citekey order="220" intorder="1">fathallah_accessguru_2025</bcf:citekey>
+    <bcf:citekey order="221" intorder="1">fathallah_accessguru_2025</bcf:citekey>
+    <bcf:citekey order="222" intorder="1">schulhoff_prompt_2024</bcf:citekey>
+    <bcf:citekey order="223" intorder="1">njifenjou_role_2024</bcf:citekey>
+    <bcf:citekey order="224" intorder="1">paternò_2025</bcf:citekey>
+    <bcf:citekey order="225" intorder="1">fathallah_accessguru_2025</bcf:citekey>
+    <bcf:citekey order="226" intorder="1">WebAIM</bcf:citekey>
+    <bcf:citekey order="227" intorder="1">WebsterWatson2002</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

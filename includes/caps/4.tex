@@ -4,7 +4,7 @@ In diesem Kapitel werden die Grundlagen für das in Kapitel \ref{kap:5} beschrie
 
 \section{Problemkontext und Handlungsbedarf}\label{kap:4.1}
 
-Die \ac{BITBW} entwickelt und betreibt als zentraler IT-Dienstleisterin der Landesverwaltung Baden-Württemberg eine Vielzahl webbasierter Anwendungen.\footcite[Vgl.][]{BITBW_2021} Alle diese Anwendungen unterliegen den gesetzlichen Anforderungen der \ac{BITV} 2.0, die \ac{WCAG} 2.2 auf Konformitätsstufe AA als verbindlichen Maßstab definiert.\footcite[Vgl.][]{BITV} In der Praxis erfolgt die Barrierefreiheitsprüfung heute überwiegend manuell oder durch den Einsatz einzelner regelbasierter Tools - ein Vorgehen, das in zweifacher Hinsicht problematisch ist: Manuelle Audits sind personalintensiv und skalieren schlecht mit der Anzahl zu betreuender Anwendungen; regelbasierte Tools erfassen, wie in Kapitel \ref{tools} dargelegt, nur einen Bruchteil tatsächlich vorhandener Barrieren.\footcite[Vgl.][S. 8-9]{tafreshipour_ma11y_2024}
+Die \ac{BITBW} entwickelt und betreibt als zentraler IT-Dienstleisterin der Landesverwaltung Baden-Württemberg eine Vielzahl webbasierter Anwendungen.\footcite[Vgl.][]{BITBW_2021} Alle diese Anwendungen unterliegen den gesetzlichen Anforderungen der \ac{BITV} 2.0, die \ac{WCAG} 2.2 auf Konformitätsstufe AA als verbindlichen Maßstab definiert.\footcite[Vgl.][]{BITV} In der Praxis erfolgt die Barrierefreiheitsprüfung heute überwiegend manuell oder durch den Einsatz einzelner regelbasierter Tools - ein Vorgehen, das in zweifacher Hinsicht problematisch ist: manuelle Audits sind personalintensiv und skalieren unzureichend mit der Anzahl zu betreuender Anwendungen; regelbasierte Tools erfassen, wie in Kapitel \ref{tools} dargelegt, nur einen Bruchteil tatsächlich vorhandener Barrieren.\footcite[Vgl.][S. 8-9]{tafreshipour_ma11y_2024}
 
 Im Sinne des Design-Science-Research-Paradigmas ist der Ausgangspunkt die Identifikation eines praxisrelevanten Problems, für das bestehende Lösungen unzureichend sind.\footcite[Vgl.][S. 79]{hevner2004dsr} Aus der Analyse der Forschungsliteratur (Kapitel \ref{kap:3}) und den Rahmenbedingungen der \ac{BITBW} lassen sich drei zentrale Problemfelder ableiten.\footcite[Vgl.][S. 52--55]{peffers2007dsrm}
 
@@ -39,7 +39,7 @@ Das System muss seine Ergebnisse in einem maschinenlesbaren \acs{JSON}-Format au
 
 \section{\acf{NFA}}\label{kap:4.3}
 
-\acf{NFA} beschreiben Qualitätseigenschaften des Systems, die bestimmen, wie gut es seine funktionalen Aufgaben erfüllt. Sie haben für das vorliegende System besonderes Gewicht, da der Betriebskontext der \ac{BITBW} (öffentliche Verwaltung, lokale Infrastruktur) strenge Randbedingungen setzt.
+\acf{NFA} beschreiben Qualitätseigenschaften des Systems, die bestimmen, wie gut es seine funktionalen Aufgaben erfüllt. Sie haben für das vorliegende System besonderes Gewicht, da der Betriebskontext der \ac{BITBW} (öffentliche Verwaltung, lokale Infrastruktur) strenge Rahmenbedingungen setzt.
 
 \textfett{\ac{NFA}-01 Datenschutz und Lokal-First}
 
@@ -71,11 +71,11 @@ Für den Einsatz im vorliegenden System wurden lokal ausführbare Modelle der 7B
 
 Qwen2.5-Coder ist eine von Alibaba Cloud entwickelte, speziell auf Code-Aufgaben ausgerichtete Modellfamilie.\footcite[Vgl.][S. 3]{hui2024qwen25coder} Das Modell wurde auf über 5,5 Billionen Tokens trainiert, darunter ein hoher Anteil an Code-Daten aus öffentlichen Repositories, Stack Overflow und technischen Dokumentationen.\footcite[Vgl.][S. 4]{hui2024qwen25coder} In standardisierten Code-Benchmarks - darunter HumanEval, MBPP und EvoEval - übertrifft Qwen2.5-Coder:7B vergleichbare Modelle der 7B-Klasse inklusive CodeLlama-7B, DeepSeek-Coder-6.7B, LLaMA-3.1-8B und Mistral-7B konsistent.\footcite[Vgl.][S. 19]{hui2024qwen25coder}
 
-Für den vorliegenden Anwendungsfall sind drei Eigenschaften entscheidend: Erstens versteht qwen2.5-coder:7b JSX und TypeScript nativ, was für die Analyse von React-Quellcode ohne Vorverarbeitung relevant ist. Zweitens erzeugt das Modell strukturierte \acs{JSON}-Ausgaben mit hoher Zuverlässigkeit, was \ac{NFA}-04 (Reproduzierbarkeit) begünstigt. Drittens beträgt das Kontextfenster standardmäßig 32.768 Tokens, was ausreicht, um mehrere Violation-Reports, relevante Quellcode-Ausschnitte und den System-Prompt in einer einzigen Anfrage zu übermitteln.\footcite[Vgl.][S. 13]{hui2024qwen25coder}
+Für den vorliegenden Anwendungsfall sind drei Eigenschaften entscheidend: erstens versteht qwen2.5-coder:7b JSX und TypeScript nativ, was für die Analyse von React-Quellcode ohne Vorverarbeitung relevant ist. Zweitens erzeugt das Modell strukturierte \acs{JSON}-Ausgaben mit hoher Zuverlässigkeit, was \ac{NFA}-04 (Reproduzierbarkeit) begünstigt. Drittens beträgt das Kontextfenster standardmäßig 32.768 Tokens, was ausreicht, um mehrere Violation-Reports, relevante Quellcode-Ausschnitte und den System-Prompt in einer einzigen Anfrage zu übermitteln.\footcite[Vgl.][S. 13]{hui2024qwen25coder}
 
 Es ist jedoch zu betonen, dass diese Benchmarks allgemeine Code-Generierung messen und keine Aussage über die Fähigkeit zur semantischen Accessibility-Analyse erlauben. Ob ein 7B-Modell die in Kapitel~\ref{kap:2.4} beschriebenen Vorteile von \ac{LLM}s - insbesondere Sprachverständnis und kontextuelles Schlussfolgern - in ausreichendem Maße besitzt, ist eine offene Frage, die durch die Evaluation in Kapitel~\ref{kap:7} empirisch adressiert wird.
 
-Die Wahl eines 7B-Modells anstelle eines leistungsfähigeren, aber ressourcenintensiveren Modells (z.\,B. LLaMA-3.1-70B) ist bewusst: Im Rahmen eines \ac{PoC}, der auf handelsüblicher Hardware betreibbar sein muss, ist die Praktikabilität ein entscheidendes Auswahlkriterium. Die datenschutzrechtliche Anforderung (\ac{NFA}-01) schließt zudem cloudbasierte Alternativen vollständig aus.
+Die Wahl eines 7B-Modells anstelle eines leistungsfähigeren, aber ressourcenintensiveren Modells (z.\,B. LLaMA-3.1-70B) ist bewusst: im Rahmen eines \ac{PoC}, der auf handelsüblicher Hardware betreibbar sein muss, ist die Praktikabilität ein entscheidendes Auswahlkriterium. Die datenschutzrechtliche Anforderung (\ac{NFA}-01) schließt zudem cloudbasierte Alternativen vollständig aus.
 
 \subsection{Zusammenfassung der Anforderungen}
 
@@ -116,9 +116,9 @@ Tabelle \ref{Anforderungstabelle} fasst die spezifizierten Anforderungen zusamme
 \end{tabular}%
 }% Ende resizebox
 
-\caption{Anforderungsübersicht: Funktionale und nicht-funktionale Anforderungen mit Ursprung und Priorität.}\label{Anforderungstabelle}
+\caption{Anforderungsübersicht: funktionale und nicht-funktionale Anforderungen mit Ursprung und Priorität.}\label{Anforderungstabelle}
 \label{tab:anforderungen}
 \end{table}
 
 
-Die Anforderungen \ac{FA}-01 bis \ac{FA}-05 und \ac{NFA}-01 bis \ac{NFA}-04 bilden die verbindliche Grundlage für das Systemdesign in Kapitel \ref{kap:5}. \ac{NFA}-01 (Lokal-First) hat dabei Vorrang vor allen anderen Anforderungen und schränkt den Lösungsraum strukturell ein: Alle Designentscheidungen müssen mit dem Betrieb auf lokaler Infrastruktur vereinbar sein.
+Die Anforderungen \ac{FA}-01 bis \ac{FA}-05 und \ac{NFA}-01 bis \ac{NFA}-04 bilden die verbindliche Grundlage für das Systemdesign in Kapitel \ref{kap:5}. \ac{NFA}-01 (Lokal-First) hat dabei Vorrang vor allen anderen Anforderungen und schränkt den Lösungsraum strukturell ein: alle Designentscheidungen müssen mit dem Betrieb auf lokaler Infrastruktur vereinbar sein.

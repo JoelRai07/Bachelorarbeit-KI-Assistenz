@@ -1,6 +1,199 @@
-\chapter{Konzeption des Assistenzsystems} \label{kap:5}
+\chapter{Konzeption des Assistenzsystems}
+\label{chap:konzeption}
+
+Das vorliegende Kapitel beschreibt die konzeptionelle Grundlage des entwickelten Assistenzsystems. 
+Ausgehend von den in Kapitel~4 ermittelten Anforderungen werden zunächst die Zielarchitektur 
+und die Datenpipeline erläutert, bevor das Modell der Kontextualisierung und Priorisierung sowie 
+das gewählte Ausgabeformat vorgestellt werden. Jede Entwurfsentscheidung wird dabei mit 
+Bezug auf die identifizierten funktionalen und nicht-funktionalen Anforderungen begründet.
+
+% ─────────────────────────────────────────────────────────────────────────────
 \section{Zielarchitektur und Datenpipeline}
+\label{sec:zielarchitektur}
 
-\section{Modell der Kontextualisierung \& Priorisierung} \label{kap:5.3}
+Die Zielarchitektur des Systems folgt dem Prinzip einer sequenziellen Datenpipeline, 
+die drei voneinander unabhängige Analysequellen zusammenführt und deren Ergebnisse 
+in einem einheitlichen Schema normalisiert, bevor sie an ein lokales Sprachmodell 
+übergeben werden. Abbildung~\ref{fig:pipeline} illustriert den Gesamtablauf.
 
-\section{Ausgabeformat entwicklernahe To-Do-Liste}
+% TODO: Abbildung der Pipeline hier einfügen
+% \begin{figure}[h]
+%   \centering
+%   \includegraphics[width=\textwidth]{figures/pipeline.pdf}
+%   \caption{Datenpipeline des ACE-Assistenzsystems}
+%   \label{fig:pipeline}
+% \end{figure}
+
+Die Pipeline gliedert sich in vier Phasen: die parallele Datenerhebung durch axe-core, 
+Playwright und grep, die Normalisierung der Rohdaten in das Unified Finding Schema (UFS), 
+die Prompt-Konstruktion mit Token-Budget-Steuerung sowie die Inferenz durch das lokale 
+Sprachmodell und die anschließende Ausgabe.
+
+\subsection{Analysequellen}
+
+Das System nutzt drei komplementäre Werkzeuge zur Datenerhebung, die jeweils 
+unterschiedliche Aspekte der Barrierefreiheit abdecken und sich gegenseitig ergänzen.
+
+\textbf{axe-core} wird über einen gesteuerten Chromium-Browser ausgeführt und analysiert 
+den vollständig gerenderten DOM der Zielanwendung auf Verstöße gegen WCAG-Erfolgskriterien. 
+Da Rich-Client-Webanwendungen ihre Inhalte erst zur Laufzeit per JavaScript erzeugen, 
+ist ein echter Browser-Launch unerlässlich -- statische HTML-Analysen würden den 
+tatsächlichen Zustand der Anwendung nicht abbilden.\footcite[Vgl.][]{fathallah_accessguru_2025}
+
+\textbf{Playwright} führt sieben generische Interaktionschecks aus, die unabhängig von 
+der konkreten Anwendungslogik auf jeder Web-App lauffähig sind. Geprüft werden unter 
+anderem die Erreichbarkeit aller interaktiven Elemente per Tastatur, die Sichtbarkeit 
+des Fokusindikators sowie das Vorhandensein eines Skip-Links. Diese verhaltensbasierten 
+Checks decken Verletzungen auf, die im statischen DOM nicht sichtbar sind, etwa fehlende 
+Fokus-Traps in modalen Dialogen.\footcite[Vgl.][]{huang_access_2024}
+
+\textbf{grep} durchsucht den React-Quellcode der Anwendung nach bekannten Anti-Patterns 
+und reichert gleichzeitig axe-core-Findings um ihren Entstehungskontext im Quellcode an. 
+Die Entscheidung für reguläre Ausdrücke anstelle eines vollständigen Abstract Syntax Tree 
+(AST)-Parsers ergibt sich aus zwei Überlegungen: Erstens sind die sechs implementierten 
+Pattern-Checks syntaktischer Natur -- sie suchen nach textuell erkennbaren Mustern im 
+JSX-Markup, nicht nach semantischen Datenflüssen, für die ein AST-Parser erforderlich wäre. 
+Zweitens gewährleistet der regexp-basierte Ansatz Sprachunabhängigkeit über 
+\texttt{.tsx}, \texttt{.jsx}, \texttt{.ts} und \texttt{.js}-Dateien hinweg, ohne 
+sprachspezifische Parser-Abhängigkeiten einzuführen.\footcite[Vgl.][S.~12]{bassi_2025}
+Die Anreicherungsstrategie folgt dabei einem selektiven Ansatz: Durchsucht werden 
+ausschließlich jene Quelldateien, auf die axe-core oder Playwright hinweisen, um das 
+verfügbare Token-Budget nicht durch irrelevante Codefragmente zu belasten (vgl. 
+Abschnitt~\ref{sec:kontextualisierung}).
+
+% ─────────────────────────────────────────────────────────────────────────────
+\subsection{Unified Finding Schema}
+\label{sec:ufs}
+
+Ein zentrales architektonisches Element ist das \emph{Unified Finding Schema} (UFS), 
+das alle Findings unabhängig von ihrer Herkunft in eine einheitliche TypeScript-Schnittstelle 
+überführt. Ohne eine solche Normalisierungsschicht würde der Prompt-Builder drei 
+strukturell heterogene Datenformate erhalten: axe-core liefert Objekte mit 
+\texttt{impact}-Stufen und DOM-Selektorketten, Playwright gibt boolesche 
+\texttt{passed}-Felder mit Check-IDs zurück, und grep produziert Datei-Zeilen-Tupel 
+mit Textfragmenten. Diese Heterogenität hätte drei negative Konsequenzen.
+
+Erstens würde die Token-Effizienz sinken, da rohe axe-core-Ausgaben vollständige 
+DOM-Snapshots und ausführliche Hilfetexte enthalten, die für die LLM-Inferenz nicht 
+relevant sind. Zweitens wäre eine quellenübergreifende Deduplizierung nicht möglich, 
+da kein gemeinsames Identifikationsfeld existierte. Drittens könnte die 
+Severity-basierte Priorisierung im Token-Budget-Algorithmus nicht angewendet werden, 
+da \texttt{impact} (axe), \texttt{severity} (intern) und Dateiname (grep) 
+inkommensurable Größen darstellen.\footcite[Vgl.][]{schulhoff_prompt_2024}
+
+Das UFS definiert folgende Kernfelder:
+
+\begin{itemize}
+  \item \texttt{source}: Herkunftsquelle (\texttt{"axe"}, \texttt{"playwright"}, \texttt{"grep"})
+  \item \texttt{ruleId}: Eindeutiger Regelbezeichner, normalisiert über alle Quellen
+  \item \texttt{severity}: Einheitliche Schweregradbewertung (\texttt{critical}, \texttt{serious}, \texttt{moderate}, \texttt{minor})
+  \item \texttt{wcagCriteria} und \texttt{wcagLevel}: Zugeordnetes WCAG-Erfolgskriterium und Konformitätsstufe
+  \item \texttt{selector}: CSS-Selektor des betroffenen DOM-Elements
+  \item \texttt{componentPath}: Dateipfad der React-Komponente (sofern durch grep ermittelt)
+  \item \texttt{codeSnippet} und \texttt{lineRange}: Relevanter Quellcodeausschnitt mit Zeilenangabe
+  \item \texttt{category}: Klassifikation nach \texttt{"syntaktisch"}, \texttt{"semantisch"} oder \texttt{"layout"} in Anlehnung an die Taxonomie von \footcite[Vgl.][]{fathallah_accessguru_2025}
+\end{itemize}
+
+Das Feld \texttt{componentPath} ist dabei das entscheidende Bindeglied zwischen 
+DOM-Analyse und Quellcode: Erst durch die Verknüpfung eines axe-Findings mit dem 
+konkreten Dateipfad und der Zeilennummer wird aus einer generischen Meldung 
+(\emph{,,Element hat keinen alternativen Text``}) eine entwicklernahe Handlungsanweisung 
+(\emph{,,In \texttt{LoginForm.tsx}, Zeile~46: Füge \texttt{alt}-Attribut hinzu``}).
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Modell der Kontextualisierung und Priorisierung}
+\label{sec:kontextualisierung}
+
+\subsection{Single-Prompt-Strategie}
+
+Eine grundlegende Entwurfsentscheidung betrifft die Interaktionsstrategie mit dem 
+lokalen Sprachmodell. Konzeptionell wäre ein mehrstufiger Ansatz denkbar, bei dem 
+zunächst die axe-Findings, dann die Playwright-Ergebnisse und abschließend der 
+Quellcodekontext in separaten Aufrufen verarbeitet werden, wie es etwa 
+\citeauthor{fathallah_accessguru_2025} mit dem AccessGuru-System über eine 
+Cloud-API realisieren.\footcite[Vgl.][S.~5]{fathallah_accessguru_2025}
+
+Für den vorliegenden Anwendungsfall wird hingegen eine Single-Prompt-Strategie gewählt, 
+die alle drei Datenquellen in einem einzigen Modellaufruf zusammenführt. Diese 
+Entscheidung ergibt sich aus drei Überlegungen.
+
+\textbf{Latenzbudget:} Die Laufzeitmessungen zeigen, dass ein einzelner LLM-Aufruf 
+auf einem lokalen CPU-basierten System zwischen 491 und 3.238 Sekunden benötigt, 
+abhängig von der Modellgröße. Eine Multi-Step-Kette mit vier sequenziellen Aufrufen 
+würde die Gesamtlaufzeit auf ein Vielfaches erhöhen und damit NFA-02 
+(maximale Analysedauer von 20 Minuten) noch deutlicher verletzen, als es beim 
+größten getesteten Modell ohnehin der Fall ist.
+
+\textbf{Cross-Source-Korrelation:} Ein einzelner Prompt ermöglicht dem Sprachmodell, 
+Zusammenhänge zwischen den Quellen zu erkennen und zu einem kohärenten Fix 
+zusammenzufassen. Meldet axe-core ein fehlendes \texttt{aria-label} und liefert grep 
+gleichzeitig den zugehörigen Quellcodeausschnitt, kann das Modell beides in einem 
+einzigen, konkreten Vorschlag verbinden. Bei getrennten Aufrufen ginge dieser 
+Kontext verloren.\footcite[Vgl.][]{schulhoff_prompt_2024}
+
+\textbf{Auditierbarkeit:} Ein deterministischer, reproduzierbarer Prompt ist für eine 
+wissenschaftliche Evaluation wichtiger als hypothetische Qualitätsgewinne durch 
+mehrstufige Verarbeitung. Ein Prompt entspricht einem nachvollziehbaren 
+Entscheidungspfad; Fehler in einem Teilschritt propagieren sich bei Multi-Step 
+unkontrolliert in nachfolgende Aufrufe.\footcite[Vgl.][]{njifenjou_role_2024}
+
+\subsection{Token-Budget-Steuerung}
+
+Da lokale Modelle typischerweise über ein Kontextfenster von 32.768 Tokens verfügen 
+und der System-Prompt sowie das Ausgabeformat einen fixen Anteil belegen, steht für 
+die Findings ein variables Input-Budget zur Verfügung. Der Prompt-Builder implementiert 
+eine Priorisierungsstrategie, die Findings nach Schweregrad sortiert und Einträge 
+niedrigerer Priorität auslässt, sobald das Budget überschritten wird. Die Sortierung 
+erfolgt auf Basis des normierten \texttt{severity}-Felds des UFS, was die 
+quellenübergreifende Vergleichbarkeit der Schweregrade voraussetzt.
+
+Darüber hinaus wird grep selektiv eingesetzt: Statt die gesamte Codebasis zu 
+durchsuchen, werden ausschließlich Dateien analysiert, die durch axe-core- oder 
+Playwright-Findings referenziert werden. Dieses Vorgehen begrenzt die Anzahl 
+der Code-Snippets im Prompt und verhindert eine unkontrollierte Ausweitung des 
+Token-Verbrauchs.
+
+\subsection{Modellwahl}
+
+Als Inferenzbackend wird Ollama eingesetzt, das die lokale Ausführung von 
+Quantisierungsmodellen ohne GPU-Beschleunigung ermöglicht und damit die 
+Datenschutzanforderungen der BITBW erfüllt (NFA-05).\footcite[Vgl.][]{paternò_2025}
+Cloud-basierte Dienste wie die OpenAI API scheiden aus, da sie eine Übermittlung 
+potenziell schützenswerter Quellcodeausschnitte an externe Server erforderten, 
+was im Kontext öffentlicher Verwaltung nicht zulässig ist.
+
+Für den Modellvergleich in der Evaluation (vgl. Kapitel~7) wurden drei Modelle 
+ausgewählt: \texttt{qwen2.5-coder:7b} als ressourcenschonende Baseline mit 
+Fokus auf Code-Aufgaben, \texttt{qwen3:latest} (ca.~8B Parameter) als 
+Vertreter der neueren Modellgeneration mit Reasoning-Modus sowie 
+\texttt{qwen3:32b} als qualitativ stärkste lokale Option innerhalb des 
+verfügbaren Arbeitsspeichers von 96~GB. Die Modellgröße wird dabei bewusst 
+als Variable im Evaluationsdesign behandelt, um den Trade-off zwischen 
+Ausgabequalität und Laufzeit empirisch zu erfassen.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Ausgabeformat: entwicklernahe To-Do-Liste}
+\label{sec:ausgabeformat}
+
+Das Ausgabeformat des Systems ist als priorisierte To-Do-Liste konzipiert, 
+die sich an Entwicklerinnen und Entwickler richtet und unmittelbar in den 
+bestehenden Entwicklungsworkflow integrierbar sein soll. Die Wahl dieses Formats 
+ergibt sich aus der Anforderungsanalyse (FA-05) sowie aus der Literatur, die 
+zeigt, dass die Akzeptanz von Barrierefreiheitsempfehlungen stark von ihrer 
+Handlungsorientierung abhängt.\footcite[Vgl.][S.~8]{fathallah_accessguru_2025}
+
+Die Liste gliedert sich in zwei Prioritätsstufen: \emph{Must-have}-Einträge 
+bezeichnen Verstöße gegen Level-A- und Level-AA-Erfolgskriterien, die eine 
+gesetzliche Konformitätspflicht begründen können, während \emph{Nice-to-have}-Einträge 
+Empfehlungen zur Verbesserung der Nutzungserfahrung umfassen. Jeder Eintrag 
+enthält -- sofern durch die grep-Anreicherung verfügbar -- den Dateipfad der 
+betroffenen Komponente, die Zeilennummer sowie einen konkreten Code-Fix-Vorschlag. 
+Dieser Aufbau entspricht dem Qualitätskriterium der \emph{Kontextsensitivität}: 
+Das System geht über die reine Fehlerbenennung hinaus und liefert den 
+entwicklungsrelevanten Kontext, der für eine unmittelbare Behebung erforderlich ist.
+
+Es ist anzumerken, dass das Ausgabeformat durch einen System-Prompt vorgegeben 
+wird, dessen Einhaltung durch das Sprachmodell nicht garantiert werden kann. 
+Die Evaluation in Kapitel~7 zeigt, dass alle drei getesteten Modelle das 
+vorgegebene Must-have/Nice-to-have-Schema in mindestens einem Lauf nicht 
+einhalten. Diese Limitation wird in Abschnitt~\ref{sec:limitationen} diskutiert.
