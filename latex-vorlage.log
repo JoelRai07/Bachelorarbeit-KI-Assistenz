@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.9.8)  26 MAR 2026 01:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.9.8)  26 MAR 2026 02:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1206,50 +1206,45 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 61.
  (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)) (includes/extra/sperrvermerk.tex
+)) (includes/extra/abstract.tex
 
 [0
 
-{C:/Users/joely/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}])
+{C:/Users/joely/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 
 [1
-
-] (includes/extra/abstract.tex
-
-[2
-
 
 
 ]) (latex-vorlage.toc
 Package acronym Info: Label `acro:WCAG' newly defined as it shall be overridden
-although it is yet undefined on input line 14.
+although it is yet undefined on input line 13.
 Package acronym Info: Label `acro:KI' newly defined as it shall be overridden
-although it is yet undefined on input line 24.
+although it is yet undefined on input line 23.
 Package acronym Info: Label `acro:RAG' newly defined as it shall be overridden
-although it is yet undefined on input line 27.
+although it is yet undefined on input line 26.
 Package acronym Info: Label `acro:LLM' newly defined as it shall be overridden
-although it is yet undefined on input line 31.
+although it is yet undefined on input line 30.
 
 
-[3
+[2
 
 
 ]
 Package acronym Info: Label `acro:FA' newly defined as it shall be overridden
-although it is yet undefined on input line 44.
+although it is yet undefined on input line 43.
 Package acronym Info: Label `acro:NFA' newly defined as it shall be overridden
-although it is yet undefined on input line 45.
+although it is yet undefined on input line 44.
 Package acronym Info: Label `acro:UFS' newly defined as it shall be overridden
-although it is yet undefined on input line 53.
+although it is yet undefined on input line 52.
 )
 \tf@toc=\write6
 \openout6 = `latex-vorlage.toc'.
 
 
 
-[4] (includes/extra/abkuerzungen.tex)
+[3] (includes/extra/abkuerzungen.tex)
 
-[5
+[4
 
 
 ] (latex-vorlage.lof
@@ -1261,7 +1256,7 @@ although it is yet undefined on input line 7.
 
 
 
-[6
+[5
 
 ] (latex-vorlage.lot
 Package acronym Info: Label `acro:PoC' newly defined as it shall be overridden
@@ -1272,7 +1267,7 @@ although it is yet undefined on input line 7.
 
 
 
-[7
+[6
 
 ] (includes/caps/1.tex
 chapter 1.
@@ -1303,7 +1298,7 @@ although it is yet undefined on input line 25.
 
 
 [3]
-<graphics/Diagramm1.png, id=490, 815.045pt x 152.57pt>
+<graphics/Diagramm1.png, id=486, 815.045pt x 152.57pt>
 File: graphics/Diagramm1.png Graphic file (type png)
 <use graphics/Diagramm1.png>
 Package pdftex.def Info: graphics/Diagramm1.png  used on input line 35.
@@ -1341,7 +1336,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [7]
 
 [8]
-<graphics/WCAG-Dreieck-4-Ebenen.png, id=684, 770.88pt x 643.6547pt>
+<graphics/WCAG-Dreieck-4-Ebenen.png, id=680, 770.88pt x 643.6547pt>
 File: graphics/WCAG-Dreieck-4-Ebenen.png Graphic file (type png)
 <use graphics/WCAG-Dreieck-4-Ebenen.png>
 Package pdftex.def Info: graphics/WCAG-Dreieck-4-Ebenen.png  used on input line 37.
@@ -1367,7 +1362,7 @@ Overfull \hbox (1.43257pt too wide) in paragraph at lines 109--110
 (includes/taxonomie-figure.tex)
 
 [13]
-<graphics/react.png, id=876, 984.67876pt x 618.05907pt>
+<graphics/react.png, id=872, 984.67876pt x 618.05907pt>
 File: graphics/react.png Graphic file (type png)
 <use graphics/react.png>
 Package pdftex.def Info: graphics/react.png  used on input line 125.
@@ -1392,7 +1387,7 @@ Package acronym Info: Label `acro:RAG' overridden on input line 164.
 [17]
 
 [18]
-<graphics/fewshot.png, id=1074, 894.34125pt x 477.28313pt>
+<graphics/fewshot.png, id=1070, 894.34125pt x 477.28313pt>
 File: graphics/fewshot.png Graphic file (type png)
 <use graphics/fewshot.png>
 Package pdftex.def Info: graphics/fewshot.png  used on input line 202.
@@ -1565,7 +1560,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [35]
 chapter 6.
-<graphics/durchlauf.png, id=1594, 1258.7025pt x 118.4425pt>
+<graphics/durchlauf.png, id=1589, 1258.7025pt x 118.4425pt>
 File: graphics/durchlauf.png Graphic file (type png)
 <use graphics/durchlauf.png>
 Package pdftex.def Info: graphics/durchlauf.png  used on input line 13.
@@ -1674,68 +1669,15 @@ Overfull \hbox (0.8864pt too wide) in paragraph at lines 190--191
 
 [48]
 chapter 8.
-
-Underfull \hbox (badness 10000) in paragraph at lines 8--8
-[]|\T1/cmr/bx/n/10.95 Erwartende
- []
-
-
-Underfull \hbox (badness 6078) in paragraph at lines 18--18
-[]|\T1/cmr/m/n/10.95 Fokus-Outline via CSS ent-fernt
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--32
-[]|\T1/cmr/m/n/10.95 grep (CSS-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--53
-[]|\T1/cmr/m/n/10.95 Fokus-Outline ent-fernt
- []
-
-
-Overfull \hbox (92.82515pt too wide) in paragraph at lines 41--71
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
-[]|\T1/cmr/m/n/10.95 Enthält Da-teiname, Zei-len-num-mer und
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
-\T1/cmr/m/n/10.95 einen kon-kre-ten Fix-Vorschlag (z.B.
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
-[]|\T1/cmr/m/n/10.95 Fokus-Outline ent-fernt
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 ) (includes/caps/8.tex
 
 [49
 
 ]
-
-[50]
-
-[51]
 chapter 9.
 ) (includes/anhang.tex
 
-[52
+[50
 
 ] (latex-vorlage.app)
 \tf@app=\write9
@@ -1743,48 +1685,117 @@ chapter 9.
 
 
 
-[53
+[51
 
 ]
-<graphics/ComplexitÃ¤t.png, id=1918, 1336.24219pt x 534.49687pt>
+<graphics/ComplexitÃ¤t.png, id=1916, 1336.24219pt x 534.49687pt>
 File: graphics/ComplexitÃ¤t.png Graphic file (type png)
 <use graphics/ComplexitÃ¤t.png>
 Package pdftex.def Info: graphics/ComplexitÃ¤t.png  used on input line 8.
 (pdftex.def)             Requested size: 409.71692pt x 163.88173pt.
 
-Overfull \vbox (57.04884pt too high) detected at line 149
- []
 
-
-Overfull \vbox (57.04884pt too high) detected at line 149
- []
-
-
-
-[54
+[52
 
  <./graphics/ComplexitÃ¤t.png>]
-
-[55]
-<graphics/Sequenzdiagramm.png, id=1941, 1911.14pt x 864.22874pt>
-File: graphics/Sequenzdiagramm.png Graphic file (type png)
-<use graphics/Sequenzdiagramm.png>
-Package pdftex.def Info: graphics/Sequenzdiagramm.png  used on input line 163.
-(pdftex.def)             Requested size: 682.86617pt x 308.788pt.
+Overfull \vbox (57.04884pt too high) detected at line 150
+ []
 
 
-[56
+Overfull \vbox (57.04884pt too high) detected at line 150
+ []
 
+
+
+[53
 
 ]
 
-[57 <./graphics/Sequenzdiagramm.png>]
+[54]
+<graphics/Sequenzdiagramm.png, id=1943, 1911.14pt x 864.22874pt>
+File: graphics/Sequenzdiagramm.png Graphic file (type png)
+<use graphics/Sequenzdiagramm.png>
+Package pdftex.def Info: graphics/Sequenzdiagramm.png  used on input line 165.
+(pdftex.def)             Requested size: 455.24411pt x 205.86305pt.
 
-[58
 
-])
+[55
 
-[59]
+]
+
+[56 <./graphics/Sequenzdiagramm.png>]
+
+[57
+
+]
+
+[58]
+
+[59
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 331--331
+[]|\T1/cmr/bx/n/10.95 Erwartende
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 343--343
+[]|\T1/cmr/m/n/10.95 onClick-Handler oh-ne
+ []
+
+
+Underfull \hbox (badness 4254) in paragraph at lines 347--347
+[]|\T1/cmr/m/n/10.95 Modaler Dia-log oh-ne Fokus-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--355
+[]|\T1/cmr/m/n/10.95 grep (CSS-
+ []
+
+
+
+[60
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 400--400
+[]|\T1/cmr/m/n/10.95 Fokus-Outline ent-fernt
+ []
+
+
+Underfull \hbox (badness 3579) in paragraph at lines 415--416
+[]|\T1/cmr/m/n/10.95 Enthält Da-teiname, Zei-len-num-mer und
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 415--416
+\T1/cmr/m/n/10.95 einen kon-kre-ten Fix-Vorschlag (z.B.
+ []
+
+
+Underfull \hbox (badness 2165) in paragraph at lines 419--420
+[]|\T1/cmr/m/n/10.95 Beschreibt le-dig-lich das Pro-blem, oh-ne
+ []
+
+
+
+[61
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 445--445
+[]|\T1/cmr/m/n/10.95 Fokus-Outline ent-fernt
+ []
+
+
+Underfull \hbox (badness 3482) in paragraph at lines 449--449
+[]|\T1/cmtt/m/n/10.95 role="button" \T1/cmr/m/n/10.95 auf \T1/cmtt/m/n/10.95 <div>
+ []
+
+)
+
+[62
+
+]
 
 Package biblatex Warning: Field 'extrayear' is deprecated.
 (biblatex)                Please use 'extradate' instead.
@@ -1792,61 +1803,61 @@ Package biblatex Warning: Field 'extrayear' is deprecated.
 
 
 
-[60
+[63
 
 
 ]
 
 Package biblatex Warning: No driver for 'legislation'.
-(biblatex)                Using fallback driver on input line 74.
+(biblatex)                Using fallback driver on input line 72.
 
 
 
-[61]
-Overfull \hbox (0.37888pt too wide) in paragraph at lines 74--74
+[64]
+Overfull \hbox (0.37888pt too wide) in paragraph at lines 72--72
 [][]\T1/cmr/bx/n/10.95 Gao, Yun-fan; Xiong, Yun; Gao, Xi-nyu; Jia, Kang; Pan, Jin-li-ang et al. (2023)\T1/cmr/m/n/10.95 : Retrieval-
  []
 
 
-Overfull \hbox (18.53203pt too wide) in paragraph at lines 74--74
+Overfull \hbox (18.53203pt too wide) in paragraph at lines 72--72
 \T1/cmr/m/n/10.95 Augmented Ge-ne-ra-ti-on for Lar-ge Lan-gua-ge Mo-dels: A Sur-vey. In: \T1/cmr/m/it/10.95 ar-Xiv pre-print ar-Xiv:2312.10997\T1/cmr/m/n/10.95 . 
  []
 
 
 
-[62]
-Overfull \hbox (4.74887pt too wide) in paragraph at lines 74--74
+[65]
+Overfull \hbox (4.74887pt too wide) in paragraph at lines 72--72
 \T1/cmr/m/n/10.95 gäng-lich-keit für Men-schen mit Be-hin-de-rung in Theo-rie und Pra-xis. Google-Books-ID: T5ylCQA-
  []
 
 
 
-[63]
+[66]
 
-[64]
-Overfull \hbox (2.84285pt too wide) in paragraph at lines 74--74
+[67]
+Overfull \hbox (2.84285pt too wide) in paragraph at lines 72--72
 [][]\T1/cmr/bx/n/10.95 Schulhoff, San-der; Ilie, Mi-cha-el; Ba-le-pur, Nis-hant; Ka-had-ze, Kon-stan-ti-ne; Liu, Aman-
  []
 
 
 
-[65]
+[68]
 
-[66]
-Overfull \hbox (9.45776pt too wide) in paragraph at lines 74--74
+[69]
+Overfull \hbox (9.45776pt too wide) in paragraph at lines 72--72
 [][]\T1/cmr/bx/n/10.95 World Wi-de Web Con-sor-ti-um (W3C) (2018)\T1/cmr/m/n/10.95 : Web Con-tent Ac-ces-si-bi-li-ty Gui-de-li-nes (WCAG)
  []
 
 
-Overfull \hbox (9.45776pt too wide) in paragraph at lines 74--74
+Overfull \hbox (9.45776pt too wide) in paragraph at lines 72--72
 [][]\T1/cmr/bx/n/10.95 World Wi-de Web Con-sor-ti-um (W3C) (2023)\T1/cmr/m/n/10.95 : Web Con-tent Ac-ces-si-bi-li-ty Gui-de-li-nes (WCAG)
  []
 
 
 
-[67]
+[70]
 
-[68] (includes/extra/erklaerung_ki.tex
+[71] (includes/extra/erklaerung_ki.tex
 Overfull \hbox (1.558pt too wide) in paragraph at lines 132--132
 []\T1/cmr/m/n/10.95 mich ak-tiv über die Leis-tungs-fä-hig-keit und Be-schrän-kun-gen der oben ge-nann-ten KI-Systeme
  []
@@ -1863,15 +1874,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--132
 
 
 
-[69
+[72
 
 
 
 ]) (template/_dhbw_erklaerung.tex
 
-[70])
+[73])
 
-[71
+[74
 
 ] (latex-vorlage.aux)
  ***********
@@ -1889,26 +1900,26 @@ Package logreq Info: Writing requests to 'latex-vorlage.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 42389 strings out of 473523
- 863288 string characters out of 5714631
- 2028797 words of memory out of 5000000
- 64180 multiletter control sequences out of 15000+600000
- 588385 words of font info for 100 fonts, out of 8000000 for 9000
+ 42404 strings out of 473523
+ 863265 string characters out of 5714631
+ 2028922 words of memory out of 5000000
+ 64184 multiletter control sequences out of 15000+600000
+ 588720 words of font info for 101 fonts, out of 8000000 for 9000
  1146 hyphenation exceptions out of 8191
  108i,19n,127p,10962b,2390s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{Hfootnote.321} has been referenced but does not exist, replaced by a fixed one
-
 
 pdfTeX warning (dest): name{Hfootnote.320} has been referenced but does not exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{Hfootnote.127} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.319} has been referenced but does not exist, replaced by a fixed one
 
- <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0500.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on latex-vorlage.pdf (79 pages, 2004651 bytes).
+
+pdfTeX warning (dest): name{Hfootnote.126} has been referenced but does not exist, replaced by a fixed one
+
+ <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0500.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on latex-vorlage.pdf (81 pages, 2028546 bytes).
 PDF statistics:
- 3898 PDF objects out of 4296 (max. 8388607)
- 734 named destinations out of 1000 (max. 500000)
- 664 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3964 PDF objects out of 4296 (max. 8388607)
+ 747 named destinations out of 1000 (max. 500000)
+ 656 words of extra memory for PDF output out of 10000 (max. 10000000)
 

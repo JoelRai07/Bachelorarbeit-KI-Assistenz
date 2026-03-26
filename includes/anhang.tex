@@ -10,6 +10,7 @@
   \label{fig:complexity}
 \end{figure}
 
+\clearpage
 
 \anhang{Erweiterte Konzeptmatrix}\label{app:konzeptmatrix}
 \begin{table}[htbp]
@@ -156,15 +157,17 @@ Konzeptmatrix nach Webster Watson\footnotemark: Vollständige Übersicht aller a
 \end{table}
 \footnotetext{Vgl. \cite{WebsterWatson2002}.}
 
+\clearpage
+
 \anhang{Detailliertes Sequenzdiagramm}\label{app:sequenz}
-\begin{landscape}
 \begin{figure}[p]
   \centering
-  \includegraphics[width=\linewidth, keepaspectratio]{graphics/Sequenzdiagramm.png}
+  \includegraphics[width=\textwidth, keepaspectratio]{graphics/Sequenzdiagramm.png}
   \caption[Sequenzdiagramm der ACE-Pipeline]{Detailliertes Sequenzdiagramm eines vollständigen \ac{ACE}-Pipeline-Durchlaufs. Dargestellt sind die Interaktionen zwischen \ac{CLI}, axe-core, Playwright, Code-Modul, Prompt-Builder, Ollama und Output-Formatter (vgl. Abschnitt~\ref{sec:impl-pipeline}).\protect\footnote{Eigene Abbildung}}
   \label{fig:sequenz}
 \end{figure}
-\end{landscape}
+
+\clearpage
 
 \anhang{System-Prompt des ACE-Assistenzsystems}\label{app:systemprompt}
 
@@ -273,4 +276,188 @@ Erwartete Ausgabe:
               autoFocus>Schliessen</button>
 \end{lstlisting}
 
-    
+
+\clearpage
+\anhang{Aufteilung des Token-Budgets}\label{app:tokenbudget}
+
+\begin{figure}[htbp]
+\centering
+\small
+\setlength{\fboxsep}{0pt}
+\setlength{\fboxrule}{0.4pt}
+
+\begin{tikzpicture}
+  % Gesamtrahmen
+  \draw[thick] (0,0) rectangle (12,7);
+  \node[anchor=north west, font=\bfseries] at (0.2,6.75) {Kontextfenster: 32.768 Tokens};
+
+  % System-Prompt (oben, klein)
+  \fill[gray!25] (0.3,5.35) rectangle (11.7,6.05);
+  \draw (0.3,5.35) rectangle (11.7,6.05);
+  \node[anchor=west, font=\small] at (0.5,5.7) {\textbf{System-Prompt} (\texttildelow{}400 Tokens) -- Role-Play + Few-Shot + Regeln};
+  \node[anchor=east, font=\scriptsize\itshape] at (11.5,5.7) {fest};
+
+  % Findings (Mitte, groß)
+  \fill[blue!12] (0.3,1.95) rectangle (11.7,5.15);
+  \draw (0.3,1.95) rectangle (11.7,5.15);
+  \node[anchor=center, font=\small] at (6,4.05) {\textbf{User-Prompt: Serialisierte Findings} (\texttildelow{}24.000 Tokens)};
+  \node[anchor=center, font=\scriptsize] at (6,3.45) {axe-core-Findings + Playwright-Findings + grep-Findings};
+  \node[anchor=center, font=\scriptsize\itshape] at (6,2.85) {variabel -- wird bei Platzmangel nach Schweregrad priorisiert};
+  \node[anchor=center, font=\scriptsize] at (6,2.3) {critical $\rightarrow$ serious $\rightarrow$ moderate $\rightarrow$ minor};
+
+  % Output-Reserve (unten)
+  \fill[orange!15] (0.3,0.3) rectangle (11.7,1.75);
+  \draw (0.3,0.3) rectangle (11.7,1.75);
+  \node[anchor=center, font=\small] at (6,1.15) {\textbf{Output-Reserve} (\texttildelow{}8.192 Tokens)};
+  \node[anchor=center, font=\scriptsize\itshape] at (6,0.65) {Platz f\"ur die LLM-Antwort (To-Do-Liste) -- muss frei bleiben};
+\end{tikzpicture}
+
+\caption[Aufteilung des Token-Budgets]{Aufteilung des Kontextfensters (32.768 Tokens) in drei Bereiche: System-Prompt (fest), serialisierte Findings (variabel, nach Schweregrad priorisiert) und Output-Reserve (fest). Vgl. Abschnitt~\ref{sec:kontextualisierung}.\protect\footnote{Eigene Abbildung}}
+\label{fig:tokenbudget}
+\end{figure}
+
+
+\clearpage
+
+\anhang{Accessibility-Verstöße der Testanwendung und zugehörige Prüfquellen}
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.2}
+\caption{Accessibility-Verstöße der Testanwendung und zugehörige Prüfquellen}
+\begin{tabular}{|c|p{5.4cm}|c|p{2.8cm}|c|}
+\hline
+\textbf{\#} & \textbf{Violation} & \textbf{Kategorie} & \textbf{Erwartende Quelle} & \textbf{WCAG} \\
+\hline
+1 & \texttt{<img>} ohne alt-Attribut & syntaktisch & axe-core & 1.1.1 \\
+\hline
+2 & \texttt{<button>} ohne sichtbaren Text und ohne aria-label & syntaktisch & axe-core & 4.1.2 \\
+\hline
+3 & Formularfeld ohne \texttt{<label>} & syntaktisch & axe-core & 1.3.1 \\
+\hline
+4 & Kontrastverhältnis $< 4.5:1$ (Text auf Hintergrund) & layout & axe-core & 1.4.3 \\
+\hline
+5 & Fokus-Outline via CSS entfernt (\texttt{outline: none}) & layout & axe-core + Playwright & 2.4.7 \\
+\hline
+6 & onClick-Handler ohne onKeyDown-Pendant & semantisch & grep & 2.1.1 \\
+\hline
+7 & \texttt{role="button"} auf \texttt{<div>} ohne tabIndex & semantisch & axe-core + grep & 4.1.2 \\
+\hline
+8 & Modaler Dialog ohne Fokus-Trap & semantisch & Playwright & 2.1.2 \\
+\hline
+9 & Skip-Link fehlt & semantisch & Playwright & 2.4.1 \\
+\hline
+10 & \texttt{aria-hidden="true"} auf fokussierbarem Element & syntaktisch & axe-core & 4.1.2 \\
+\hline
+11 & Reihenfolge im DOM weicht von visueller Reihenfolge ab & semantisch & axe-core & 1.3.2 \\
+\hline
+12 & Interaktives Element zu klein ($<24\times24$px) & layout & grep (CSS-Pattern) & 2.5.8 \\
+\hline
+\end{tabular}
+\label{tab:accessibility_verstoesse}
+\end{table}
+
+\clearpage
+
+\anhang{Erkennungsrate der Violations im Proof of Concept}
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.2}
+\caption{Erkennungsrate der Violations im Proof of Concept}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|p{5cm}|c|c|c|p{3cm}|}
+\hline
+\textbf{\#} & \textbf{Violation} & \textbf{Erkannt (\checkmark/$\times$)} & \textbf{Quelle korrekt} & \textbf{False Positive} & \textbf{Anmerkung} \\
+\hline
+1 & \texttt{<img>} ohne alt-Attribut & \checkmark & axe-core \checkmark & -- & \\
+\hline
+2 & \texttt{<button>} ohne Label & \checkmark & axe-core \checkmark & -- & \\
+\hline
+3 & Formularfeld ohne \texttt{<label>} &  &  &  &  \\
+\hline
+4 & Kontrastverhältnis $< 4.5:1$ &  &  &  &  \\
+\hline
+5 & Fokus-Outline entfernt (\texttt{outline: none}) &  &  &  &  \\
+\hline
+6 & onClick ohne onKeyDown &  &  &  &  \\
+\hline
+7 & \texttt{role="button"} auf \texttt{<div>} ohne tabIndex &  &  &  &  \\
+\hline
+8 & Modal ohne Fokus-Trap &  &  &  &  \\
+\hline
+9 & Skip-Link fehlt &  &  &  &  \\
+\hline
+10 & \texttt{aria-hidden="true"} auf fokussierbarem Element &  &  &  &  \\
+\hline
+11 & DOM-Reihenfolge vs. visuelle Reihenfolge &  &  &  &  \\
+\hline
+12 & Interaktives Element zu klein ($<24\times24$px) &  &  &  &  \\
+\hline
+\end{tabular}
+}%
+\label{tab:erkennungsrate_poc}
+\end{table}
+
+\anhang{Bewertungsskala für die Empfehlungsqualität der LLM-Ausgaben}
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.2}
+\caption{Bewertungsskala für die Empfehlungsqualität der LLM-Ausgaben}
+\begin{tabular}{|c|p{2.8cm}|p{7.2cm}|}
+\hline
+\textbf{Stufe} & \textbf{Bezeichnung} & \textbf{Kriterium} \\
+\hline
+2 & Konkret & Enthält Dateiname, Zeilennummer und einen konkreten Fix-Vorschlag (z.\,B. \texttt{aria-label="..."}). \\
+\hline
+1 & Teilweise & Enthält den richtigen Fix-Typ, jedoch ohne konkreten Codekontext (z.\,B. \glqq{}Füge ein aria-label hinzu\grqq). \\
+\hline
+0 & Generisch & Beschreibt lediglich das Problem, ohne einen umsetzbaren Lösungsvorschlag. \\
+\hline
+\end{tabular}
+\label{tab:bewertungsskala_empfehlungen}
+\end{table}
+
+\clearpage
+\anhang{Bewertung der Empfehlungsqualität pro Violation}
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.2}
+\caption{Bewertung der Empfehlungsqualität pro Violation}
+\begin{tabular}{|c|p{4.8cm}|c|p{5.2cm}|}
+\hline
+\textbf{\#} & \textbf{Violation} & \textbf{Stufe (0--2)} & \textbf{Anmerkung} \\
+\hline
+1 & \texttt{<img>} ohne alt-Attribut &  &  \\
+\hline
+2 & \texttt{<button>} ohne Label &  &  \\
+\hline
+3 & Formularfeld ohne \texttt{<label>} &  &  \\
+\hline
+4 & Kontrastverhältnis $< 4.5:1$ &  &  \\
+\hline
+5 & Fokus-Outline entfernt (\texttt{outline: none}) &  &  \\
+\hline
+6 & onClick ohne onKeyDown &  &  \\
+\hline
+7 & \texttt{role="button"} auf \texttt{<div>} ohne tabIndex &  &  \\
+\hline
+8 & Modal ohne Fokus-Trap &  &  \\
+\hline
+9 & Skip-Link fehlt &  &  \\
+\hline
+10 & \texttt{aria-hidden="true"} auf fokussierbarem Element &  &  \\
+\hline
+11 & DOM-Reihenfolge vs. visuelle Reihenfolge &  &  \\
+\hline
+12 & Interaktives Element zu klein ($<24\times24$px) &  &  \\
+\hline
+\end{tabular}
+\label{tab:empfehlungsqualitaet}
+\end{table}
