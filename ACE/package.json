@@ -1,0 +1,29 @@
+{
+  "name": "ace-assistant",
+  "version": "0.1.0",
+  "description": "Kontextsensitive, lokale KI-Assistenz zur automatisierten Barrierefreiheitsanalyse von Rich-Client-Webanwendungen",
+  "main": "src/index.ts",
+  "scripts": {
+    "analyze": "tsx src/index.ts",
+    "prompt": "tsx src/index.ts --skip-llm",
+    "axe": "tsx src/index.ts --axe-only --skip-llm",
+    "test:ollama": "tsx src/ollama.ts",
+    "clean": "rm -rf results"
+  },
+  "dependencies": {
+    "@axe-core/playwright": "^4.10.1",
+    "@playwright/test": "^1.50.1",
+    "axe-core": "^4.10.3",
+    "dotenv": "^17.3.1",
+    "playwright": "^1.50.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.9",
+    "tsx": "4.21.0",
+    "typescript": "^5.7.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "packageManager": "pnpm@10.29.3"
+}
