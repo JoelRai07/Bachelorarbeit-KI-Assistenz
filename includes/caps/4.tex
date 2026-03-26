@@ -57,35 +57,48 @@ Die Systemarchitektur muss eine klare modulare Trennung der Komponenten (Detecti
 
 Das System muss deterministisch genug sein, dass zwei aufeinanderfolgende Analyseläufe auf derselben Anwendungsversion im Wesentlichen dieselben Befunde produzieren. Da \ac{LLM}s inhärent probabilistisch sind, wird Reproduzierbarkeit durch eine feste Temperatur-Einstellung (Temperature = 0.1) für das Sprachmodell und durch strukturierte Ausgabeformate (\acs{JSON}-Schema im Prompt) sichergestellt.\footcites[Vgl.][Temperature]{OpenAI_Developers}[Vgl.][Temperature]{Anthropic_API_Docs}
 
-\section{Modellauswahl: Ollama und qwen2.5-coder:7b}\label{kap:4.4}
-
-Die Wahl des Sprachmodells ist für das vorliegende System von besonderer Relevanz, da \ac{NFA}-01 die Nutzung cloudbasierter Modelle ausschließt und gleichzeitig \ac{FA}-04 ein Modell erfordert, das sowohl Code verstehen als auch natürlichsprachige Handlungsempfehlungen generieren kann. 
-
+\section{Lokale Inferenzinfrastruktur: Ollama}\label{kap:4.4}
+ 
+% ── Geändert gegenüber Originalversion ──────────────────────────────────────
+% Begründung: Die ursprüngliche Version dieses Abschnitts behandelte qwen2.5-coder:7b
+% als abschließende Einzelentscheidung. Da im Rahmen der Evaluation (Kapitel 7)
+% ein systematischer Modellvergleich durchgeführt wird, ist die Modellwahl hier
+% bewusst offen gehalten. Abschnitt 4.4 begründet ausschließlich die Infrastruktur-
+% entscheidung (Ollama). Die Auswahl konkreter Modellkandidaten und deren Bewertung
+% erfolgen in Kapitel 5.2 bzw. Kapitel 7.
+% ─────────────────────────────────────────────────────────────────────────────
+ 
+Die Wahl der Inferenzinfrastruktur ist durch \ac{NFA}-01 (Lokal-First) strukturell vorgegeben: Cloudbasierte Modell-\ac{API}s wie die OpenAI API oder Anthropic Claude scheiden aus, da ihre Nutzung die Übermittlung potenziell schützenswerter Quellcodeausschnitte und \ac{DOM}-Inhalte an externe Server erfordert. Dies ist im Kontext öffentlicher Verwaltung ohne gesonderte datenschutzrechtliche Prüfung nicht zulässig.\footcite[Vgl.][Art. 28 und Art. 44 ff.]{dsgvo2016}
+ 
 \subsection{Ollama als Laufzeitumgebung}
-
-Ollama ist ein Open-Source-Werkzeug, das die lokale Ausführung von \ac{LLM}s über eine einheitliche REST-\ac{API} ermöglicht.\footcite[Vgl.][S. 1]{touvron2023llama2} Die Modellverwaltung (Download, Quantisierung, Speicherverwaltung) wird durch eine einfach zu bedienende \ac{CLI} abstrahiert: Modelle lassen sich mit ollama pull <modell> herunterladen und mit ollama run <modell> starten.\footcite[Vgl.][]{Ollama} Die REST-\ac{API} ist kompatibel mit der OpenAI-\ac{API}-Spezifikation, wodurch sich viele bestehende Bibliotheken und Anwendungen - insbesondere in Node.js - ohne größeren Anpassungsaufwand integrieren lassen. Für den vorliegenden \ac{PoC} ist Ollama die einzige zusätzliche Infrastruktur, die neben einer Standard-Node.js-Installation benötigt wird.
-
-\subsection{Begründung der Modellwahl}
-
-Für den Einsatz im vorliegenden System wurden lokal ausführbare Modelle der 7B-Parameter-Klasse verglichen, da diese auf Entwicklungsrechnern ohne dedizierte Grafikkarte (GPU) mit akzeptabler Latenz betrieben werden können. Alternativ wurden LLaMA 3.1-8B und Mistral-7B als Kandidaten in Betracht gezogen.
-
-Qwen2.5-Coder ist eine von Alibaba Cloud entwickelte, speziell auf Code-Aufgaben ausgerichtete Modellfamilie.\footcite[Vgl.][S. 3]{hui2024qwen25coder} Das Modell wurde auf über 5,5 Billionen Tokens trainiert, darunter ein hoher Anteil an Code-Daten aus öffentlichen Repositories, Stack Overflow und technischen Dokumentationen.\footcite[Vgl.][S. 4]{hui2024qwen25coder} In standardisierten Code-Benchmarks - darunter HumanEval, MBPP und EvoEval - übertrifft Qwen2.5-Coder:7B vergleichbare Modelle der 7B-Klasse inklusive CodeLlama-7B, DeepSeek-Coder-6.7B, LLaMA-3.1-8B und Mistral-7B konsistent.\footcite[Vgl.][S. 19]{hui2024qwen25coder}
-
-Für den vorliegenden Anwendungsfall sind drei Eigenschaften entscheidend: erstens versteht qwen2.5-coder:7b JSX und TypeScript nativ, was für die Analyse von React-Quellcode ohne Vorverarbeitung relevant ist. Zweitens erzeugt das Modell strukturierte \acs{JSON}-Ausgaben mit hoher Zuverlässigkeit, was \ac{NFA}-04 (Reproduzierbarkeit) begünstigt. Drittens beträgt das Kontextfenster standardmäßig 32.768 Tokens, was ausreicht, um mehrere Violation-Reports, relevante Quellcode-Ausschnitte und den System-Prompt in einer einzigen Anfrage zu übermitteln.\footcite[Vgl.][S. 13]{hui2024qwen25coder}
-
-Es ist jedoch zu betonen, dass diese Benchmarks allgemeine Code-Generierung messen und keine Aussage über die Fähigkeit zur semantischen Accessibility-Analyse erlauben. Ob ein 7B-Modell die in Kapitel~\ref{kap:2.4} beschriebenen Vorteile von \ac{LLM}s - insbesondere Sprachverständnis und kontextuelles Schlussfolgern - in ausreichendem Maße besitzt, ist eine offene Frage, die durch die Evaluation in Kapitel~\ref{kap:7} empirisch adressiert wird.
-
-Die Wahl eines 7B-Modells anstelle eines leistungsfähigeren, aber ressourcenintensiveren Modells (z.\,B. LLaMA-3.1-70B) ist bewusst: im Rahmen eines \ac{PoC}, der auf handelsüblicher Hardware betreibbar sein muss, ist die Praktikabilität ein entscheidendes Auswahlkriterium. Die datenschutzrechtliche Anforderung (\ac{NFA}-01) schließt zudem cloudbasierte Alternativen vollständig aus.
-
+ 
+Ollama ist ein quelloffenes Werkzeug, das die lokale Ausführung von \ac{LLM}s über eine einheitliche REST-\ac{API} ermöglicht.\footcite[Vgl.][]{Ollama} Die Modellverwaltung -- Download, Quantisierung und Speicherverwaltung -- wird durch eine einfach zu bedienende \ac{CLI} abstrahiert: Modelle lassen sich mit \texttt{ollama pull <modell>} herunterladen und mit \texttt{ollama run <modell>} starten. Die REST-\ac{API} ist kompatibel mit der OpenAI-\ac{API}-Spezifikation, wodurch sich bestehende Node.js-Bibliotheken ohne größeren Anpassungsaufwand integrieren lassen. Für den vorliegenden \ac{PoC} ist Ollama die einzige zusätzliche Infrastrukturkomponente, die neben einer Standard-Node.js-Installation benötigt wird.
+ 
+Ein weiterer Vorteil von Ollama ist die Unterstützung quantisierter Modellvarianten (z.\,B. Q4\_K\_M), die eine speichereffiziente Ausführung auf \ac{CPU}-basierten Systemen ohne dedizierte Grafikkarte ermöglichen. Dies ist für den Betrieb auf Entwicklungsrechnern der \ac{BITBW} relevant, da nicht von der Verfügbarkeit dedizierter \ac{GPU}-Hardware ausgegangen werden kann.
+ 
+\subsection{Anforderungen an das Sprachmodell}
+ 
+Unabhängig von der konkreten Modellwahl lassen sich aus den funktionalen und nicht-funktionalen Anforderungen vier Eigenschaften ableiten, die ein geeignetes Modell aufweisen muss.
+ 
+Erstens muss das Modell \textbf{JSX und TypeScript} ohne Vorverarbeitung verarbeiten können, da der grep-Anreicherungsschritt Quellcodeausschnitte aus React-Komponenten direkt in den Prompt einbettet (\ac{FA}-03).
+ 
+Zweitens muss das Modell \textbf{strukturierte Ausgaben} in einem vorgegebenen Format zuverlässig erzeugen, da der Report-Parser ein definiertes Must-have/Nice-to-have-Schema erwartet (\ac{FA}-05, \ac{NFA}-04).
+ 
+Drittens muss das Modell innerhalb eines \textbf{Kontextfensters von mindestens 8.192 Tokens} arbeiten, um mehrere Violation-Reports, relevante Quellcodeausschnitte und den System-Prompt in einer einzigen Anfrage verarbeiten zu können (\ac{FA}-04).
+ 
+Viertens muss das Modell \textbf{auf \ac{CPU}-basierten Systemen} mit akzeptabler Latenz betreibbar sein, was die praktisch einsetzbare Parameterzahl auf ca. 7--32 Milliarden Parameter begrenzt (\ac{NFA}-02).\footcite[Vgl.][S. 3]{hui2024qwen25coder}
+ 
+Die Auswahl konkreter Modellkandidaten, die diese Anforderungen erfüllen, sowie deren vergleichende Evaluation werden in Kapitel~\ref{sec:kontextualisierung} bzw. Kapitel~\ref{kap:7} behandelt.
+ 
 \subsection{Zusammenfassung der Anforderungen}
-
+ 
 Tabelle \ref{Anforderungstabelle} fasst die spezifizierten Anforderungen zusammen und gibt jeweils den Ursprung und die Priorität an.
-
-\begin{table}[h] 
+ 
+\begin{table}[h]
 \centering
 \footnotesize
 \renewcommand{\arraystretch}{1.2}
-
+ 
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|l|p{5.5cm}|p{4.5cm}|l|}
 \hline
@@ -114,11 +127,11 @@ Tabelle \ref{Anforderungstabelle} fasst die spezifizierten Anforderungen zusamme
 \ac{NFA}-04 & Reproduzierbarkeit (Temperature\,=\,0.1, \acs{JSON}-Schema) & Forschungsmethodik & Soll \\
 \hline
 \end{tabular}%
-}% Ende resizebox
-
-\caption{Anforderungsübersicht: funktionale und nicht-funktionale Anforderungen mit Ursprung und Priorität.}\label{Anforderungstabelle}
+}
+ 
+\caption{Anforderungsübersicht: Funktionale und nicht-funktionale Anforderungen mit Ursprung und Priorität.}
+\label{Anforderungstabelle}
 \label{tab:anforderungen}
 \end{table}
-
-
-Die Anforderungen \ac{FA}-01 bis \ac{FA}-05 und \ac{NFA}-01 bis \ac{NFA}-04 bilden die verbindliche Grundlage für das Systemdesign in Kapitel \ref{kap:5}. \ac{NFA}-01 (Lokal-First) hat dabei Vorrang vor allen anderen Anforderungen und schränkt den Lösungsraum strukturell ein: alle Designentscheidungen müssen mit dem Betrieb auf lokaler Infrastruktur vereinbar sein.
+ 
+Die Anforderungen \ac{FA}-01 bis \ac{FA}-05 und \ac{NFA}-01 bis \ac{NFA}-04 bilden die verbindliche Grundlage für das Systemdesign in Kapitel~\ref{kap:5}. \ac{NFA}-01 (Lokal-First) hat dabei Vorrang vor allen anderen Anforderungen und schränkt den Lösungsraum strukturell ein: Alle Designentscheidungen müssen mit dem Betrieb auf lokaler Infrastruktur vereinbar sein.

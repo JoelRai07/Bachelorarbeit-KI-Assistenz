@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.9.8)  25 MAR 2026 21:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.9.8)  26 MAR 2026 01:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -584,7 +584,7 @@ Class scrreprt Warning: Usage of package `tocloft' together
 (scrreprt)              `part', `section', `subsection',
 (scrreprt)              `subsubsection', `paragraph' and `subparagraph'.
 (scrreprt)              Nevertheless, using requested
-(scrreprt)              package `tocloft' on input line 59.
+(scrreprt)              package `tocloft' on input line 71.
 
 (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/tocloft\tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
@@ -1173,36 +1173,7 @@ Package biblatex Info: Data encoding 'utf8' specified.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'latex-vorlage.bbl' found.
- (latex-vorlage.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                bassi_2025
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                njifenjou_role_2024
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                paternÃ²_2025
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                schulhoff_prompt_2024
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+ (latex-vorlage.bbl)
 Package biblatex Info: Reference section=0 on input line 17.
 Package biblatex Info: Reference segment=0 on input line 17.
 Package hyperref Info: Link coloring OFF on input line 17.
@@ -1268,6 +1239,8 @@ Package acronym Info: Label `acro:FA' newly defined as it shall be overridden
 although it is yet undefined on input line 44.
 Package acronym Info: Label `acro:NFA' newly defined as it shall be overridden
 although it is yet undefined on input line 45.
+Package acronym Info: Label `acro:UFS' newly defined as it shall be overridden
+although it is yet undefined on input line 53.
 )
 \tf@toc=\write6
 \openout6 = `latex-vorlage.toc'.
@@ -1279,7 +1252,10 @@ although it is yet undefined on input line 45.
 [5
 
 
-] (latex-vorlage.lof)
+] (latex-vorlage.lof
+Package acronym Info: Label `acro:ACE' newly defined as it shall be overridden
+although it is yet undefined on input line 7.
+)
 \tf@lof=\write7
 \openout7 = `latex-vorlage.lof'.
 
@@ -1288,10 +1264,8 @@ although it is yet undefined on input line 45.
 [6
 
 ] (latex-vorlage.lot
-Overfull \hbox (6.06334pt too wide) in paragraph at lines 5--5
- [][] [][]\T1/cmr/m/n/10.95 Anforderungsübersicht: funk-tio-na-le und nicht-funktionale An-for-de-run-gen mit Ur-sprung 
- []
-
+Package acronym Info: Label `acro:PoC' newly defined as it shall be overridden
+although it is yet undefined on input line 7.
 )
 \tf@lot=\write8
 \openout8 = `latex-vorlage.lot'.
@@ -1329,7 +1303,7 @@ although it is yet undefined on input line 25.
 
 
 [3]
-<graphics/Diagramm1.png, id=429, 815.045pt x 152.57pt>
+<graphics/Diagramm1.png, id=490, 815.045pt x 152.57pt>
 File: graphics/Diagramm1.png Graphic file (type png)
 <use graphics/Diagramm1.png>
 Package pdftex.def Info: graphics/Diagramm1.png  used on input line 35.
@@ -1343,11 +1317,7 @@ Overfull \hbox (1.10892pt too wide) in paragraph at lines 55--56
 
 
 
-[4 <./graphics/Diagramm1.png>]
-
-LaTeX Warning: Reference `kap:5' on page 5 undefined on input line 68.
-
-) (includes/caps/2.tex
+[4 <./graphics/Diagramm1.png>]) (includes/caps/2.tex
 
 [5]
 chapter 2.
@@ -1360,8 +1330,7 @@ although it is yet undefined on input line 9.
 [6
 
 ]
-Package acronym Info: Label `acro:PoC' newly defined as it shall be overridden
-although it is yet undefined on input line 17.
+Package acronym Info: Label `acro:PoC' overridden on input line 17.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1372,7 +1341,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [7]
 
 [8]
-<graphics/WCAG-Dreieck-4-Ebenen.png, id=622, 770.88pt x 643.6547pt>
+<graphics/WCAG-Dreieck-4-Ebenen.png, id=684, 770.88pt x 643.6547pt>
 File: graphics/WCAG-Dreieck-4-Ebenen.png Graphic file (type png)
 <use graphics/WCAG-Dreieck-4-Ebenen.png>
 Package pdftex.def Info: graphics/WCAG-Dreieck-4-Ebenen.png  used on input line 37.
@@ -1398,7 +1367,7 @@ Overfull \hbox (1.43257pt too wide) in paragraph at lines 109--110
 (includes/taxonomie-figure.tex)
 
 [13]
-<graphics/react.png, id=814, 984.67876pt x 618.05907pt>
+<graphics/react.png, id=876, 984.67876pt x 618.05907pt>
 File: graphics/react.png Graphic file (type png)
 <use graphics/react.png>
 Package pdftex.def Info: graphics/react.png  used on input line 125.
@@ -1423,7 +1392,7 @@ Package acronym Info: Label `acro:RAG' overridden on input line 164.
 [17]
 
 [18]
-<graphics/fewshot.png, id=1012, 894.34125pt x 477.28313pt>
+<graphics/fewshot.png, id=1074, 894.34125pt x 477.28313pt>
 File: graphics/fewshot.png Graphic file (type png)
 <use graphics/fewshot.png>
 Package pdftex.def Info: graphics/fewshot.png  used on input line 202.
@@ -1431,6 +1400,9 @@ Package pdftex.def Info: graphics/fewshot.png  used on input line 202.
 
 
 [19 <./graphics/fewshot.png>]
+
+LaTeX Warning: Reference `Limits' on page 20 undefined on input line 236.
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\@ac' on input line 239.
@@ -1479,9 +1451,6 @@ chapter 4.
 Package acronym Info: Label `acro:DSR' newly defined as it shall be overridden
 although it is yet undefined on input line 153.
 
-LaTeX Warning: Reference `kap:5' on page 26 undefined on input line 165.
-
-
 
 [26
 
@@ -1500,9 +1469,6 @@ Package acronym Info: Label `acro:JSON' overridden on input line 218.
 
 [29]
 chapter 5.
-
-LaTeX Warning: Reference `kap:5' on page 30 undefined on input line 3.
-
 
 Overfull \hbox (8.42735pt too wide) in paragraph at lines 13--14
 \T1/cmr/m/n/10.95 lo-kal aus-führ-ba-ren, [][]-gestützten As-sis-tenz-sys-tems, das axe-core-Violation-Reports, Playwright-
@@ -1536,53 +1502,62 @@ Overfull \hbox (3.46214pt too wide) in paragraph at lines 54--55
 [32]
 Package acronym Info: Label `acro:JSON' overridden on input line 58.
 Package acronym Info: Label `acro:CLI' newly defined as it shall be overridden
-although it is yet undefined on input line 66.
+although it is yet undefined on input line 75.
+Package acronym Info: Label `acro:CPU' newly defined as it shall be overridden
+although it is yet undefined on input line 77.
+Package acronym Info: Label `acro:GPU' newly defined as it shall be overridden
+although it is yet undefined on input line 77.
+
+Overfull \hbox (21.00275pt too wide) in paragraph at lines 77--78
+[]\T1/cmr/m/n/10.95 Ein wei-te-rer Vor-teil von Ol-la-ma ist die Un-ter-stüt-zung quan-ti-sier-ter Mo-dell-va-ri-an-ten (z.B. Q4_K_M),
+ []
+
+
+Overfull \hbox (4.74138pt too wide) in paragraph at lines 81--82
+\T1/cmr/m/n/10.95 Unabhängig von der kon-kre-ten Mo-dell-wahl las-sen sich aus den funk-tio-na-len und nicht-funktionalen
+ []
+
 
 
 [33]
-Package acronym Info: Label `acro:JSON' overridden on input line 74.
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--117
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 []|\T1/cmr/m/n/9 Dynamische Zu-stand-ser-fas-sung via
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--117
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 []|\T1/cmr/m/n/9 Statische Quell-co-de-ana-ly-se (grep-
  []
 
 
-Underfull \hbox (badness 3657) in paragraph at lines 117--117
+Underfull \hbox (badness 3657) in paragraph at lines 130--130
 []|[][]\T1/cmr/m/n/9 -gestützte Ana-ly-se und Hand-
  []
 
-Package acronym Info: Label `acro:JSON' overridden on input line 117.
+Package acronym Info: Label `acro:JSON' overridden on input line 130.
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--117
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 []|\T1/cmr/m/n/9 Institutionell ([][],
  []
 
 
-Underfull \hbox (badness 3919) in paragraph at lines 117--117
+Underfull \hbox (badness 3919) in paragraph at lines 130--130
 []|\T1/cmr/m/n/9 Laufzeit $\OML/cmm/m/it/9 <$\T1/cmr/m/n/9 10min pro Sei-te (oh-ne
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--117
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 []|\T1/cmr/m/n/9 Software-Engineering Best
  []
 
-Package acronym Info: Label `acro:JSON' overridden on input line 117.
+Package acronym Info: Label `acro:JSON' overridden on input line 130.
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--117
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 []|\T1/cmr/m/n/9 Reproduzierbarkeit (Tem-pe-ra-
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Reference `kap:5' on page 34 undefined on input line 124.
 
 ) (includes/caps/5.tex
 
@@ -1590,64 +1565,114 @@ LaTeX Warning: Reference `kap:5' on page 34 undefined on input line 124.
 
 [35]
 chapter 6.
+<graphics/durchlauf.png, id=1594, 1258.7025pt x 118.4425pt>
+File: graphics/durchlauf.png Graphic file (type png)
+<use graphics/durchlauf.png>
+Package pdftex.def Info: graphics/durchlauf.png  used on input line 13.
+(pdftex.def)             Requested size: 491.66446pt x 46.26466pt.
 
-LaTeX Warning: Reference `fig:pipeline' on page 36 undefined on input line 17.
-
-
-LaTeX Warning: Citation 'bassi_2025' on page 36 undefined on input line 58.
+Overfull \hbox (36.42035pt too wide) in paragraph at lines 13--14
+ [][] 
+ []
 
 
 
 [36
 
-]
-
-LaTeX Warning: Citation 'schulhoff_prompt_2024' on page 37 undefined on input line 82.
-
-
-Overfull \hbox (5.97366pt too wide) in paragraph at lines 76--83
-[]\T1/cmr/m/n/10.95 Erstens wür-de die Token-Effizienz sin-ken, da ro-he axe-core-Ausgaben voll-stän-di-ge DOM-Snapshots
- []
-
+ <./graphics/durchlauf.png>]
+Package acronym Info: Label `acro:AST' newly defined as it shall be overridden
+although it is yet undefined on input line 30.
 
 
 [37]
-Overfull \hbox (5.05139pt too wide) in paragraph at lines 109--115
-\T1/cmr/m/n/10.95 Eine grund-le-gen-de Ent-wurfs-ent-schei-dung be-trifft die In-ter-ak-ti-onss-tra-te-gie mit dem lo-ka-len Sprach-
+Overfull \hbox (15.11685pt too wide) in paragraph at lines 63--65
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-LaTeX Warning: Citation 'schulhoff_prompt_2024' on page 38 undefined on input line 132.
-
-
-LaTeX Warning: Citation 'njifenjou_role_2024' on page 38 undefined on input line 138.
+Overfull \hbox (23.63948pt too wide) in paragraph at lines 81--82
+\T1/cmtt/m/n/10.95 source\T1/cmr/m/n/10.95 , \T1/cmtt/m/n/10.95 ruleId\T1/cmr/m/n/10.95 , \T1/cmtt/m/n/10.95 severity\T1/cmr/m/n/10.95 , \T1/cmtt/m/n/10.95 category\T1/cmr/m/n/10.95 ), [][]\T1/cmr/bx/n/10.95 -Bezug \T1/cmr/m/n/10.95 (\T1/cmtt/m/n/10.95 wcagCriteria\T1/cmr/m/n/10.95 , \T1/cmtt/m/n/10.95 wcagLevel\T1/cmr/m/n/10.95 ) und \T1/cmr/bx/n/10.95 Quellcode-
+ []
 
 
 
 [38]
-
-LaTeX Warning: Citation 'paternÃ²_2025' on page 39 undefined on input line 160.
-
-
-Overfull \hbox (7.52829pt too wide) in paragraph at lines 165--173
-\T1/cmtt/m/n/10.95 qwen2.5-coder:7b \T1/cmr/m/n/10.95 als res-sour-cen-scho-nen-de Ba-se-li-ne mit Fo-kus auf Code-Aufgaben, \T1/cmtt/m/n/10.95 qwen3:latest
+Overfull \hbox (5.05139pt too wide) in paragraph at lines 95--96
+\T1/cmr/m/n/10.95 Eine grund-le-gen-de Ent-wurfs-ent-schei-dung be-trifft die In-ter-ak-ti-onss-tra-te-gie mit dem lo-ka-len Sprach-
  []
 
 
 
 [39]
 
-LaTeX Warning: Reference `sec:limitationen' on page 40 undefined on input line 199.
+[40]) (includes/caps/6.tex
 
-) (includes/caps/6.tex
-
-[40]
+[41]
 chapter 7.
-) (includes/caps/7.tex
 
-[41
+Underfull \hbox (badness 2875) in paragraph at lines 22--23
+[]|\T1/cmr/m/n/10.95 Umgebungsvariablen aus \T1/cmtt/m/n/10.95 .env\T1/cmr/m/n/10.95 -Datei
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+[]|\T1/cmr/m/n/10.95 TypeScript-Runner (Monorepo-
+ []
+
+
+
+[42
 
 ]
+Overfull \hbox (7.09932pt too wide) in paragraph at lines 48--49
+[][]\T1/cmr/m/n/10.95 -Aufruf) und \T1/cmtt/m/n/10.95 --axe-only \T1/cmr/m/n/10.95 (nur axe-core aus-füh-ren). Die Kon-fi-gu-ra-ti-on -- ein-schlieÿ-lich Ollama-
+ []
+
+
+
+[43]
+Overfull \hbox (0.70195pt too wide) in paragraph at lines 78--91
+ [][] 
+ []
+
+
+Overfull \hbox (27.62297pt too wide) in paragraph at lines 97--98
+[]\T1/cmr/m/n/10.95 Fehlgeschlagene Checks wer-den über ein sta-ti-sches Map-ping (\T1/cmtt/m/n/10.95 CHECK_DEFINITIONS\T1/cmr/m/n/10.95 ) in \T1/cmtt/m/n/10.95 UnifiedFinding\T1/cmr/m/n/10.95 -
+ []
+
+
+
+[44]
+Underfull \hbox (badness 1406) in paragraph at lines 123--123
+[]|\T1/cmtt/m/n/10 onClick \T1/cmr/m/n/10 auf \T1/cmtt/m/n/10 <div>\T1/cmr/m/n/10 /\T1/cmtt/m/n/10 <span> \T1/cmr/m/n/10 oh-ne
+ []
+
+
+Underfull \hbox (badness 4036) in paragraph at lines 127--127
+[]|\T1/cmtt/m/n/10 tabIndex={-1} \T1/cmr/m/n/10 ent-fernt Ele-ment
+ []
+
+
+Overfull \hbox (21.62172pt too wide) in paragraph at lines 135--136
+[]\T1/cmr/m/n/10.95 Treffer wer-den nach der Nor-ma-li-sie-rung de-du-pli-ziert: Fin-dings mit iden-ti-scher \T1/cmtt/m/n/10.95 ruleId\T1/cmr/m/n/10.95 , \T1/cmtt/m/n/10.95 componentPath
+ []
+
+
+
+[45]
+
+[46]
+Package acronym Info: Label `acro:JSON' overridden on input line 190.
+
+Overfull \hbox (0.8864pt too wide) in paragraph at lines 190--191
+\T1/cmr/m/n/10.95 dell das vor-ge-ge-be-ne For-mat nicht ein-hält --, wird dies im Re-port do-ku-men-tiert (\T1/cmtt/m/n/10.95 parsed.success:
+ []
+
+
+
+[47]) (includes/caps/7.tex
+
+[48]
 chapter 8.
 
 Underfull \hbox (badness 10000) in paragraph at lines 8--8
@@ -1700,17 +1725,17 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (includes/caps/8.tex
 
-[42
+[49
 
 ]
 
-[43]
+[50]
 
-[44]
+[51]
 chapter 9.
 ) (includes/anhang.tex
 
-[45
+[52
 
 ] (latex-vorlage.app)
 \tf@app=\write9
@@ -1718,10 +1743,10 @@ chapter 9.
 
 
 
-[46
+[53
 
 ]
-<graphics/ComplexitÃ¤t.png, id=1608, 1336.24219pt x 534.49687pt>
+<graphics/ComplexitÃ¤t.png, id=1918, 1336.24219pt x 534.49687pt>
 File: graphics/ComplexitÃ¤t.png Graphic file (type png)
 <use graphics/ComplexitÃ¤t.png>
 Package pdftex.def Info: graphics/ComplexitÃ¤t.png  used on input line 8.
@@ -1734,13 +1759,32 @@ Overfull \vbox (57.04884pt too high) detected at line 149
 Overfull \vbox (57.04884pt too high) detected at line 149
  []
 
-)
 
-[47
+
+[54
 
  <./graphics/ComplexitÃ¤t.png>]
 
-[48]
+[55]
+<graphics/Sequenzdiagramm.png, id=1941, 1911.14pt x 864.22874pt>
+File: graphics/Sequenzdiagramm.png Graphic file (type png)
+<use graphics/Sequenzdiagramm.png>
+Package pdftex.def Info: graphics/Sequenzdiagramm.png  used on input line 163.
+(pdftex.def)             Requested size: 682.86617pt x 308.788pt.
+
+
+[56
+
+
+]
+
+[57 <./graphics/Sequenzdiagramm.png>]
+
+[58
+
+])
+
+[59]
 
 Package biblatex Warning: Field 'extrayear' is deprecated.
 (biblatex)                Please use 'extradate' instead.
@@ -1748,7 +1792,7 @@ Package biblatex Warning: Field 'extrayear' is deprecated.
 
 
 
-[49
+[60
 
 
 ]
@@ -1758,7 +1802,7 @@ Package biblatex Warning: No driver for 'legislation'.
 
 
 
-[50]
+[61]
 Overfull \hbox (0.37888pt too wide) in paragraph at lines 74--74
 [][]\T1/cmr/bx/n/10.95 Gao, Yun-fan; Xiong, Yun; Gao, Xi-nyu; Jia, Kang; Pan, Jin-li-ang et al. (2023)\T1/cmr/m/n/10.95 : Retrieval-
  []
@@ -1770,25 +1814,25 @@ Overfull \hbox (18.53203pt too wide) in paragraph at lines 74--74
 
 
 
-[51]
+[62]
 Overfull \hbox (4.74887pt too wide) in paragraph at lines 74--74
 \T1/cmr/m/n/10.95 gäng-lich-keit für Men-schen mit Be-hin-de-rung in Theo-rie und Pra-xis. Google-Books-ID: T5ylCQA-
  []
 
 
 
-[52]
+[63]
 
-[53]
+[64]
 Overfull \hbox (2.84285pt too wide) in paragraph at lines 74--74
 [][]\T1/cmr/bx/n/10.95 Schulhoff, San-der; Ilie, Mi-cha-el; Ba-le-pur, Nis-hant; Ka-had-ze, Kon-stan-ti-ne; Liu, Aman-
  []
 
 
 
-[54]
+[65]
 
-[55]
+[66]
 Overfull \hbox (9.45776pt too wide) in paragraph at lines 74--74
 [][]\T1/cmr/bx/n/10.95 World Wi-de Web Con-sor-ti-um (W3C) (2018)\T1/cmr/m/n/10.95 : Web Con-tent Ac-ces-si-bi-li-ty Gui-de-li-nes (WCAG)
  []
@@ -1800,9 +1844,9 @@ Overfull \hbox (9.45776pt too wide) in paragraph at lines 74--74
 
 
 
-[56]
+[67]
 
-[57] (includes/extra/erklaerung_ki.tex
+[68] (includes/extra/erklaerung_ki.tex
 Overfull \hbox (1.558pt too wide) in paragraph at lines 132--132
 []\T1/cmr/m/n/10.95 mich ak-tiv über die Leis-tungs-fä-hig-keit und Be-schrän-kun-gen der oben ge-nann-ten KI-Systeme
  []
@@ -1819,15 +1863,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--132
 
 
 
-[58
+[69
 
 
 
 ]) (template/_dhbw_erklaerung.tex
 
-[59])
+[70])
 
-[60
+[71
 
 ] (latex-vorlage.aux)
  ***********
@@ -1845,20 +1889,26 @@ Package logreq Info: Writing requests to 'latex-vorlage.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41527 strings out of 473523
- 853948 string characters out of 5714631
- 1886591 words of memory out of 5000000
- 63528 multiletter control sequences out of 15000+600000
- 587304 words of font info for 98 fonts, out of 8000000 for 9000
+ 42389 strings out of 473523
+ 863288 string characters out of 5714631
+ 2028797 words of memory out of 5000000
+ 64180 multiletter control sequences out of 15000+600000
+ 588385 words of font info for 100 fonts, out of 8000000 for 9000
  1146 hyphenation exceptions out of 8191
- 108i,18n,127p,10962b,2390s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,19n,127p,10962b,2390s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-pdfTeX warning (dest): name{Hfootnote.124} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.321} has been referenced but does not exist, replaced by a fixed one
 
- <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0500.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on latex-vorlage.pdf (68 pages, 1753989 bytes).
+
+pdfTeX warning (dest): name{Hfootnote.320} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.127} has been referenced but does not exist, replaced by a fixed one
+
+ <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0500.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on latex-vorlage.pdf (79 pages, 2004651 bytes).
 PDF statistics:
- 3228 PDF objects out of 3580 (max. 8388607)
- 526 named destinations out of 1000 (max. 500000)
- 566 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3898 PDF objects out of 4296 (max. 8388607)
+ 734 named destinations out of 1000 (max. 500000)
+ 664 words of extra memory for PDF output out of 10000 (max. 10000000)
 

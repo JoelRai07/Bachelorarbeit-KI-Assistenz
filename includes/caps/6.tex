@@ -1,5 +1,220 @@
 \chapter{Implementierung des Proof of Concept} \label{kap:6}
-\section{Technische Umsetzung}
 
+Dieses Kapitel beschreibt die prototypische Umsetzung des in Kapitel~\ref{kap:5} konzipierten Assistenzsystems. Zunächst wird der technische Rahmen dargestellt (Abschnitt~\ref{sec:techstack}), bevor die Implementierung der einzelnen Pipeline-Module erläutert wird (Abschnitte~\ref{sec:impl-axe}--\ref{sec:impl-output}). Abschnitt~\ref{sec:impl-prompt} beschreibt die konkrete Umsetzung der Prompt-Strategie einschließlich des System-Prompts.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Technischer Rahmen und Projektstruktur}
+\label{sec:techstack}
+
+Der \ac{PoC} ist als Node.js-Anwendung in TypeScript implementiert. Die Wahl von TypeScript ergibt sich aus der Nähe zum Untersuchungsgegenstand (React/TypeScript) und ermöglicht die typsichere Definition des \ac{UFS} (vgl. Listing~\ref{lst:ufs}). Als Laufzeitumgebung wird Node.js ab Version~20 eingesetzt; die Ausführung erfolgt über \texttt{tsx}, einen TypeScript-Runner, der Kompilierung und Ausführung in einem Schritt verbindet. Auf ein zusätzliches Framework wurde bewusst verzichtet, um den \ac{PoC} minimal zu halten.
+
+Tabelle~\ref{tab:dependencies} listet die wesentlichen Abhängigkeiten des Projekts.
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}llp{6.5cm}@{}}
+\toprule
+\textbf{Paket} & \textbf{Version} & \textbf{Zweck} \\
+\midrule
+\texttt{playwright} & 1.50 & Browser-Automatisierung für Interaktionschecks \\
+\texttt{@axe-core/playwright} & 4.10 & axe-core-Integration in Playwright \\
+\texttt{dotenv} & 17.3 & Umgebungsvariablen aus \texttt{.env}-Datei laden \\
+\texttt{tsx} & 4.21 & TypeScript-Runner (Monorepo-Dependency) \\
+\bottomrule
+\end{tabular}
+\caption{Wesentliche Abhängigkeiten des \acs{PoC}}
+\label{tab:dependencies}
+\end{table}
+
+Die Projektstruktur folgt einer flachen Modulstruktur, bei der jedes Modul in \texttt{src/modules/} sowohl die Datenerhebung als auch die Normalisierung in das \ac{UFS} übernimmt:
+
+\begin{lstlisting}[language={}, caption={Projektstruktur des \acs{PoC}}, label={lst:projektstruktur}]
+ACE/
+  src/
+    index.ts          # Pipeline-Orchestrierung und CLI
+    types.ts          # UnifiedFinding, PipelineMetrics
+    config.ts         # Zentrale Konfiguration (Env-Vars)
+    prompt.ts         # Prompt-Builder mit Token-Budget
+    ollama.ts         # HTTP-Client fuer Ollama
+    output.ts         # Markdown- und JSON-Report-Formatter
+    modules/
+      axe.ts          # axe-core: Collector + Normalizer
+      playwright.ts   # Playwright: 7 Checks + Normalizer
+      code.ts         # grep: Anreicherung + Pattern-Findings
+  results/            # Generierte Reports (nicht versioniert)
+\end{lstlisting}
+
+Die Pipeline wird über \texttt{src/index.ts} orchestriert und unterstützt vier CLI-Flags: \texttt{-{}-url} (Ziel-URL), \texttt{-{}-src-dir} (Quellcode-Pfad für die grep-Phase), \texttt{-{}-skip-llm} (Prompt speichern ohne \ac{LLM}-Aufruf) und \texttt{-{}-axe-only} (nur axe-core ausführen). Die Konfiguration -- einschließlich Ollama-URL, Modellname und Timeout-Werte -- erfolgt zentral in \texttt{config.ts} und kann über Umgebungsvariablen überschrieben werden.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{axe-core-Modul}
+\label{sec:impl-axe}
+
+Das axe-core-Modul implementiert \ac{FA}-01 (regelbasierte Accessibility-Erkennung). Es startet über Playwright einen headless Chromium-Browser, navigiert zur Ziel-URL und wartet auf \texttt{networkidle}, um sicherzustellen, dass die React-Anwendung vollständig gerendert ist. Anschließend wird über \texttt{AxeBuilder} eine axe-core-Analyse ausgeführt, die auf die Tags \texttt{wcag2a}, \texttt{wcag2aa}, \texttt{wcag21a}, \texttt{wcag21aa} und \texttt{wcag22aa} beschränkt ist -- entsprechend dem gesetzlichen Mindeststandard (vgl. Abschnitt~\ref{kap:2.1}).
+
+Die Normalisierung überführt jede Violation in ein \texttt{UnifiedFinding}. Dabei werden drei Transformationen durchgeführt:
+
+\begin{itemize}
+  \item \textbf{Severity-Mapping:} Das \texttt{impact}-Feld von axe-core (\texttt{critical}, \texttt{serious}, \texttt{moderate}, \texttt{minor}) wird direkt auf das \texttt{severity}-Feld des \ac{UFS} abgebildet.
+  \item \textbf{WCAG-Extraktion:} Aus den axe-Tags (z.\,B. \texttt{wcag143}) werden die Erfolgskriterien (z.\,B. \texttt{1.4.3}) und die Konformitätsstufe extrahiert.
+  \item \textbf{Kategorie-Heuristik:} Jede Regel wird anhand ihres \texttt{ruleId} einer Kategorie der in Abschnitt~\ref{Taxonomie} eingeführten Taxonomie zugeordnet. Farbkontrast-Regeln werden als \texttt{layout} klassifiziert, ARIA-Strukturregeln als \texttt{semantisch}, alle übrigen als \texttt{syntaktisch}.
+\end{itemize}
+
+Die Felder \texttt{componentPath}, \texttt{codeSnippet} und \texttt{lineRange} bleiben nach der axe-Normalisierung zunächst \texttt{null} und werden erst in der Code-Phase (Abschnitt~\ref{sec:impl-code}) angereichert.
+
+Es ist anzumerken, dass axe-core im \ac{PoC} einmalig beim initialen Seitenaufruf ausgeführt wird und nicht nach jeder Playwright-Interaktion. Eine Analyse pro Zustandswechsel wäre technisch realisierbar, würde jedoch bei sieben Checks mit je mehreren Zustandsänderungen die Laufzeit um bis zu 168~Sekunden erhöhen und damit \ac{NFA}-02 verletzen. Diese Einschränkung wird in Abschnitt~\ref{sec:limitationen} als Limitation diskutiert.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Playwright-Modul}
+\label{sec:impl-pw}
+
+Das Playwright-Modul implementiert \ac{FA}-02 (dynamische Zustandserfassung). Es definiert sieben generische Interaktionschecks, die jeweils ein spezifisches \ac{WCAG}-Erfolgskriterium adressieren. Tabelle~\ref{tab:pw-checks} gibt einen Überblick.
+
+\begin{table}[H]
+\centering
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Check-ID} & \textbf{Prüfgegenstand} & \textbf{WCAG} & \textbf{Kategorie} \\
+\midrule
+\texttt{keyboard-tab-reachable} & Interaktive Elemente per Tab erreichbar & 2.1.1 (A) & semantisch \\
+\texttt{keyboard-trap-free} & Kein Keyboard-Trap nach 40 Tab-Presses & 2.1.2 (A) & semantisch \\
+\texttt{focus-visible} & Sichtbarer Fokusindikator vorhanden & 2.4.7 (AA) & layout \\
+\texttt{skip-link-present} & Erstes Tab-Ziel ist ein Skip-Link & 2.4.1 (A) & semantisch \\
+\texttt{page-title-present} & Seite hat einen nicht-leeren \texttt{<title>} & 2.4.2 (A) & syntaktisch \\
+\texttt{html-lang-present} & \texttt{<html>} hat ein \texttt{lang}-Attribut & 3.1.1 (A) & syntaktisch \\
+\texttt{focus-after-dialog} & Fokus wandert beim Dialogöffnen in den Dialog & 2.4.3 (A) & semantisch \\
+\bottomrule
+\end{tabular}
+\caption{Implementierte Playwright-Checks mit \ac{WCAG}-Zuordnung und Kategorie}
+\label{tab:pw-checks}
+\end{table}
+
+Die Checks sind anwendungsunabhängig konzipiert: Sie setzen keine Kenntnis der konkreten Anwendungslogik voraus und sind auf jeder Web-App ausführbar. Der Keyboard-Trap-Check beispielsweise drückt 40-mal die Tab-Taste und prüft, ob der Fokus in den letzten zehn Schritten auf demselben Element verbleibt. Der Focus-Visible-Check navigiert per Tab durch die Seite und prüft für jedes fokussierte Element, ob ein sichtbarer Fokusindikator (\texttt{outline} oder \texttt{box-shadow}) vorhanden ist -- eine Prüfung, die Tafreshipour et al. als Schwachstelle bestehender Tools identifizieren.\footcite[Vgl.][S.~110]{tafreshipour_ma11y_2024}
+
+Fehlgeschlagene Checks werden über ein statisches Mapping (\texttt{CHECK\_DEFINITIONS}) in \texttt{UnifiedFinding}-Objekte überführt. Jede Check-Definition enthält die zugehörige \texttt{ruleId}, \texttt{severity}, \ac{WCAG}-Kriterien und Kategorie. Checks, die erfolgreich bestanden werden, erzeugen kein Finding.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Code-Modul}
+\label{sec:impl-code}
+
+Das Code-Modul erfüllt zwei Aufgaben: die Anreicherung bestehender Findings mit Quellcode-Kontext (\ac{FA}-03) und die eigenständige Erkennung von Anti-Patterns im React-Quellcode.
+
+\subsection{Anreicherung bestehender Findings}
+
+Für jedes axe-core- oder Playwright-Finding, das einen CSS-Selektor enthält aber noch keinen \texttt{componentPath} besitzt, wird der Quellcode der React-Anwendung durchsucht. Der Algorithmus extrahiert Suchbegriffe aus dem Selektor -- IDs, CSS-Klassen, ARIA-Attribute -- und sucht diese in den \texttt{.tsx}/\texttt{.jsx}/\texttt{.ts}/\texttt{.js}-Dateien des angegebenen Quellverzeichnisses. Bei einem Treffer werden \texttt{componentPath}, \texttt{codeSnippet} (zehn Zeilen Kontext um die Fundstelle) und \texttt{lineRange} im Finding ergänzt.
+
+Diese Anreicherung adressiert die in Abschnitt~\ref{Herausforderungen} beschriebene Diskrepanz zwischen gerendertem \ac{DOM} und Quellcode. Durchsucht werden ausschließlich Dateien, die durch axe-core- oder Playwright-Findings referenziert werden -- nicht die gesamte Codebasis. Dieses selektive Vorgehen begrenzt den Token-Verbrauch im späteren Prompt (vgl. Abschnitt~\ref{sec:kontextualisierung}).
+
+\subsection{Pattern-Findings}
+
+Zusätzlich zur Anreicherung erkennt das Modul sechs Anti-Patterns durch reguläre Ausdrücke. Tabelle~\ref{tab:grep-patterns} zeigt die implementierten Patterns.
+
+\begin{table}[H]
+\centering
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}lp{5.5cm}ll@{}}
+\toprule
+\textbf{Pattern-ID} & \textbf{Beschreibung} & \textbf{WCAG} & \textbf{Kategorie} \\
+\midrule
+\texttt{div-span-onclick} & \texttt{onClick} auf \texttt{<div>}/\texttt{<span>} ohne Keyboard-Handler & 2.1.1 (A) & semantisch \\
+\texttt{img-missing-alt} & \texttt{<img>} ohne \texttt{alt}-Attribut & 1.1.1 (A) & syntaktisch \\
+\texttt{label-missing-htmlfor} & \texttt{<label>} ohne \texttt{htmlFor} & 1.3.1 (A) & syntaktisch \\
+\texttt{role-button-non-semantic} & \texttt{role="button"} auf Nicht-Button & 4.1.2 (A) & semantisch \\
+\texttt{tabindex-removes-element} & \texttt{tabIndex=\{-1\}} entfernt Element aus Tab-Reihenfolge & 2.1.1 (A) & semantisch \\
+\texttt{autofocus-usage} & \texttt{autoFocus} kann den Fokusfluss stören & 2.4.3 (A) & semantisch \\
+\bottomrule
+\end{tabular}
+\caption{Implementierte grep-Patterns mit \ac{WCAG}-Zuordnung}
+\label{tab:grep-patterns}
+\end{table}
+
+Treffer werden nach der Normalisierung dedupliziert: Findings mit identischer \texttt{ruleId}, \texttt{componentPath} und Startzeile werden zusammengefasst. Pro Pattern werden maximal acht Treffer berücksichtigt, um eine Überrepräsentation häufiger Patterns im Token-Budget zu vermeiden.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Prompt-Builder und System-Prompt}
+\label{sec:impl-prompt}
+
+Der Prompt-Builder setzt die in Abschnitt~\ref{sec:kontextualisierung} beschriebene Strategie um. Er besteht aus drei Komponenten: dem System-Prompt, der Token-Budget-Steuerung und der Serialisierung der Findings.
+
+\subsection{System-Prompt}
+
+Der System-Prompt implementiert die in Kapitel~\ref{kap:5} gewählten Prompt-Engineering-Strategien. Das \textbf{Role-Play Prompting} erfolgt durch die Anweisung \emph{,,Du bist ein erfahrener Barrierefreiheitsexperte für React/TypeScript-Webanwendungen``}, die das Modell in eine domänenspezifische Expertenrolle versetzt (vgl. Abschnitt~\ref{Prompt}). Das \textbf{Few-Shot Prompting} wird durch zwei konkrete Beispiele realisiert: ein \texttt{critical}-Finding (Farbkontrast) mit vollständigem Code-Fix als Must-have-Eintrag und ein \texttt{moderate}-Finding (\texttt{tabIndex}) als Nice-to-have-Eintrag. Beide Beispiele demonstrieren dem Modell das erwartete Ausgabeformat einschließlich der \ac{WCAG}-Angabe, des Dateipfads und des konkreten Code-Fix-Vorschlags.
+
+Ergänzend enthält der System-Prompt sechs Priorisierungsregeln, die das Must-have/Nice-to-have-Schema operationalisieren:
+
+\begin{enumerate}
+  \item Must-have: Severity \texttt{critical}/\texttt{serious} und \ac{WCAG} Level A/AA
+  \item Nice-to-have: Severity \texttt{moderate}/\texttt{minor} oder Level AAA
+  \item Findings zum selben Element zusammenfassen
+  \item Codekontext für konkrete React/TypeScript-Fixes nutzen
+  \item Ausschließlich auf Deutsch antworten
+  \item Keine Findings erfinden, die nicht in den Daten vorhanden sind
+\end{enumerate}
+
+Regel~6 adressiert gezielt das in Abschnitt~\ref{kap:2.4} beschriebene Halluzinationsproblem von \ac{LLM}s. Der vollständige System-Prompt einschließlich der Few-Shot-Beispiele ist in Anhang~\ref{app:systemprompt} dokumentiert.
+
+\subsection{Token-Budget-Steuerung}
+
+Wie in Abschnitt~\ref{sec:kontextualisierung} beschrieben, ist das Kontextfenster lokaler Modelle begrenzt. Der Prompt-Builder reserviert feste Anteile für den System-Prompt und die Modellausgabe; der verbleibende Platz steht für die serialisierten Findings zur Verfügung.\footnote{Beim eingesetzten Qwen2.5-Coder beträgt das Kontextfenster 32.768~Tokens. Nach Abzug von System-Prompt und Output-Reserve verbleiben ca.~24.000~Tokens für die Findings.}
+
+Übersteigt die Gesamtmenge der Findings dieses Budget, werden alle Findings quellenübergreifend nach Schweregrad sortiert und von unten abgeschnitten. Findings mit Severity \texttt{critical} und \texttt{serious} haben dabei Vorrang. Der User-Prompt enthält einen expliziten Hinweis, wenn Findings aus Budgetgründen weggelassen wurden.
+
+\subsection{Serialisierung}
+
+Jedes Finding wird in ein kompaktes Textformat serialisiert, das die wesentlichen Informationen auf wenige Zeilen komprimiert:
+
+\begin{lstlisting}[language={}, caption={Serialisiertes Finding im Prompt}, label={lst:serialized}]
+[axe-007] CRITICAL | color-contrast | \ac{WCAG} 1.4.3 (AA)
+Beschreibung: Element hat unzureichenden Farbkontrast
+Element: .sidebar > .nav-link
+Datei: components/Sidebar.tsx:42-52
+Code:
+42: <a className="nav-link" href="/dashboard">
+43:   Dashboard
+44: </a>
+\end{lstlisting}
+
+Die Serialisierung begrenzt Beschreibungen auf 300~Zeichen und Code-Snippets auf 20~Zeilen, um den Token-Verbrauch je Finding vorhersagbar zu halten.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Ollama-Client und Output-Formatter}
+\label{sec:impl-ollama}
+\label{sec:impl-output}
+
+Der Ollama-Client kapselt den HTTP-Aufruf an die lokale Ollama-Instanz (\texttt{localhost:11434}). Die Anfrage nutzt den \texttt{/api/generate}-Endpunkt mit den Parametern \texttt{temperature: 0.1} (\ac{NFA}-04) und \texttt{num\_predict: 8192} (maximale Output-Tokens). Die niedrige Temperature-Einstellung reduziert den Nicht-Determinismus der Ausgaben (vgl. Abschnitt~\ref{kap:2.4}), ohne sie vollständig zu eliminieren. Der Client implementiert ein Timeout von zehn Minuten, da die Inferenz auf \ac{CPU}-basierten Systemen je nach Modellgröße mehrere Minuten in Anspruch nehmen kann. Die Antwort von Ollama enthält neben dem generierten Text auch die tatsächliche Anzahl der Prompt- und Output-Tokens (\texttt{prompt\_eval\_count}, \texttt{eval\_count}), die für die Evaluation in Kapitel~\ref{kap:7} erfasst werden.
+
+Der Output-Formatter erzeugt pro Analysedurchlauf zwei Dateien: einen Markdown-Report für die menschliche Lesbarkeit und einen \ac{JSON}-Report für die maschinelle Weiterverarbeitung (\ac{FA}-05). Der Markdown-Report enthält einen Metadaten-Header (URL, Modell, Zeitstempel, Token-Statistiken), die Roh-Ausgabe des Sprachmodells sowie eine Metriken-Tabelle mit den Laufzeiten aller Pipeline-Phasen. Der \ac{JSON}-Report speichert zusätzlich das Parsing-Ergebnis der \ac{LLM}-Antwort: Der Formatter versucht, die Markdown-Ausgabe in Must-have- und Nice-to-have-Einträge zu zerlegen. Schlägt dieses Parsing fehl -- etwa weil das Modell das vorgegebene Format nicht einhält --, wird dies im Report dokumentiert (\texttt{parsed.success: false}).
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Pipeline-Orchestrierung}
+\label{sec:impl-pipeline}
+
+Die Pipeline-Orchestrierung in \texttt{index.ts} verkettet alle Module in der durch Abbildung~\ref{fig:pipeline} definierten Reihenfolge (ein detailliertes Sequenzdiagramm findet sich in Anhang~\ref{app:sequenz}). Jede Phase wird einzeln zeitgemessen, um die in \ac{NFA}-02 geforderte Laufzeitanalyse in Kapitel~\ref{kap:7} zu ermöglichen. Die Metriken werden in einem \texttt{PipelineMetrics}-Objekt gesammelt, das neben den Phasenzeiten auch Token-Schätzungen, Anreicherungsquoten und Deduplizierungsstatistiken enthält.
+
+Der Ablauf eines vollständigen Durchlaufs ist:
+
+\begin{enumerate}
+  \item axe-core: Browser starten, \ac{DOM} analysieren, Findings normalisieren
+  \item Playwright: Sieben Interaktionschecks ausführen, fehlgeschlagene normalisieren
+  \item Code-Anreicherung: axe/Playwright-Findings mit Quellcode-Kontext ergänzen
+  \item Code-Patterns: Sechs Anti-Patterns im Quellcode suchen, deduplizieren
+  \item Prompt-Builder: Findings serialisieren, Token-Budget anwenden
+  \item Ollama: Prompt senden, Antwort empfangen
+  \item Output: Markdown- und JSON-Report generieren und speichern
+\end{enumerate}
+
+Der \texttt{-{}-skip-llm}-Modus speichert den fertigen Prompt als Textdatei, ohne Ollama aufzurufen. Dieser Modus wurde während der Entwicklung genutzt, um den Prompt unabhängig von der Modellverfügbarkeit zu iterieren und für die Evaluation zu dokumentieren.
 
 \section{Beispielabläufe und Ergebnisse am Untersuchungsobjekt}
+\label{sec:beispielablaeufe}
+
+% TODO: Diesen Abschnitt nach dem ersten erfolgreichen Durchlauf gegen den BWEC
+% Client mit konkreten Ergebnissen füllen. Empfohlener Inhalt:
+% - Ein konkreter Pipeline-Durchlauf mit Konsolenausgabe oder Screenshot
+% - Beispiel-Findings aus jeder der drei Quellen (axe, Playwright, grep)
+% - Ausschnitt der LLM-generierten To-Do-Liste (Must-have und Nice-to-have)
+% - Kurze Diskussion: Welche Findings wurden angereichert? Welche nicht? Warum?

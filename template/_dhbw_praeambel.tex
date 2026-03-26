@@ -21,6 +21,18 @@
 {ö}{{\"o}}1
 {€}{{\euro}}1
 }
+\lstdefinelanguage{JavaScript}{
+  keywords={const, let, var, function, return, export, import, from, if, else, for, while, switch, case, break, continue, default, new, class, extends, implements, interface, type, async, await, try, catch, finally, throw, true, false, null, undefined},
+  sensitive=true,
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]",
+  morestring=[b]'
+}
+\lstdefinelanguage{TypeScript}{
+  language=JavaScript,
+  morekeywords={readonly, public, private, protected, abstract, declare, enum, keyof, namespace, never, unknown, type, interface, implements, as}
+}
 
 \usepackage[
   inner=35mm,outer=15mm,top=25mm,

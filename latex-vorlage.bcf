@@ -2587,25 +2587,30 @@
     <bcf:citekey order="206" intorder="1">dsgvo2016</bcf:citekey>
     <bcf:citekey order="207" intorder="1">OpenAI_Developers</bcf:citekey>
     <bcf:citekey order="208" intorder="1">Anthropic_API_Docs</bcf:citekey>
-    <bcf:citekey order="209" intorder="1">touvron2023llama2</bcf:citekey>
+    <bcf:citekey order="209" intorder="1">dsgvo2016</bcf:citekey>
     <bcf:citekey order="210" intorder="1">Ollama</bcf:citekey>
     <bcf:citekey order="211" intorder="1">hui2024qwen25coder</bcf:citekey>
-    <bcf:citekey order="212" intorder="1">hui2024qwen25coder</bcf:citekey>
-    <bcf:citekey order="213" intorder="1">hui2024qwen25coder</bcf:citekey>
-    <bcf:citekey order="214" intorder="1">hui2024qwen25coder</bcf:citekey>
+    <bcf:citekey order="212" intorder="1">fathallah_accessguru_2025</bcf:citekey>
+    <bcf:citekey order="213" intorder="1">kodithuwakku_assessing_2025</bcf:citekey>
+    <bcf:citekey order="214" intorder="1">huang_access_2024</bcf:citekey>
     <bcf:citekey order="215" intorder="1">fathallah_accessguru_2025</bcf:citekey>
-    <bcf:citekey order="216" intorder="1">huang_access_2024</bcf:citekey>
-    <bcf:citekey order="217" intorder="1">bassi_2025</bcf:citekey>
-    <bcf:citekey order="218" intorder="1">schulhoff_prompt_2024</bcf:citekey>
-    <bcf:citekey order="219" intorder="1">fathallah_accessguru_2025</bcf:citekey>
+    <bcf:citekey order="216" intorder="1">bassi_assessment_2025</bcf:citekey>
+    <bcf:citekey order="217" intorder="1">kodithuwakku_assessing_2025</bcf:citekey>
+    <bcf:citekey order="218" intorder="1">fathallah_accessguru_2025</bcf:citekey>
+    <bcf:citekey order="219" intorder="1">pool_testaro_2023</bcf:citekey>
     <bcf:citekey order="220" intorder="1">fathallah_accessguru_2025</bcf:citekey>
     <bcf:citekey order="221" intorder="1">fathallah_accessguru_2025</bcf:citekey>
-    <bcf:citekey order="222" intorder="1">schulhoff_prompt_2024</bcf:citekey>
-    <bcf:citekey order="223" intorder="1">njifenjou_role_2024</bcf:citekey>
-    <bcf:citekey order="224" intorder="1">paternò_2025</bcf:citekey>
-    <bcf:citekey order="225" intorder="1">fathallah_accessguru_2025</bcf:citekey>
-    <bcf:citekey order="226" intorder="1">WebAIM</bcf:citekey>
-    <bcf:citekey order="227" intorder="1">WebsterWatson2002</bcf:citekey>
+    <bcf:citekey order="222" intorder="1">huang_access_2024</bcf:citekey>
+    <bcf:citekey order="223" intorder="1">njifenjou_role-play_2024</bcf:citekey>
+    <bcf:citekey order="224" intorder="1">fathallah_accessguru_2025</bcf:citekey>
+    <bcf:citekey order="225" intorder="1">brown2020gpt3fewshot</bcf:citekey>
+    <bcf:citekey order="226" intorder="1">wei2022chainofthought</bcf:citekey>
+    <bcf:citekey order="227" intorder="1">lewisRetrievalAugmentedGenerationKnowledgeIntensive2021</bcf:citekey>
+    <bcf:citekey order="228" intorder="1">fathallah_accessguru_2025</bcf:citekey>
+    <bcf:citekey order="229" intorder="1">brown2020gpt3fewshot</bcf:citekey>
+    <bcf:citekey order="230" intorder="1">tafreshipour_ma11y_2024</bcf:citekey>
+    <bcf:citekey order="231" intorder="1">WebAIM</bcf:citekey>
+    <bcf:citekey order="232" intorder="1">WebsterWatson2002</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
