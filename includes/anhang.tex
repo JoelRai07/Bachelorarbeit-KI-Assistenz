@@ -159,11 +159,87 @@ Konzeptmatrix nach Webster Watson\footnotemark: Vollständige Übersicht aller a
 
 \clearpage
 
+\anhang{Schematische Übersicht der ACE-Pipeline}\label{app:ace-pipeline-schema}
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  >=Latex,
+  node distance=9mm and 10mm,
+  box/.style={
+    draw,
+    rounded corners=1.5pt,
+    align=center,
+    minimum height=9mm,
+    text width=33mm,
+    inner sep=3pt
+  },
+  smallbox/.style={
+    draw,
+    rounded corners=1.5pt,
+    align=center,
+    minimum height=9mm,
+    text width=26mm,
+    inner sep=3pt
+  },
+  norm/.style={
+    align=center,
+    text width=26mm
+  }
+]
+
+% Top node
+\node[box, text width=44mm] (client) {BWEC Client (React/TS)};
+
+% Tool nodes
+\node[smallbox, below left=17mm and 28mm of client] (axe) {axe-core\\(DOM)};
+\node[smallbox, below=17mm of client] (pw) {Playwright\\(E2E)};
+\node[smallbox, below right=17mm and 28mm of client] (grep) {Code\\(grep + LLM)};
+
+% Normalizer row
+\node[norm, below=12mm of axe] (n1) {Normalizer};
+\node[norm, below=12mm of pw] (n2) {Normalizer};
+\node[norm, below=12mm of grep] (n3) {Normalizer};
+
+% Unified schema
+\node[box, text width=42mm, below=16mm of n2] (ufs) {Unified Finding\\Schema (UFS)};
+
+% Prompt / Ollama
+\node[box, text width=44mm, below=11mm of ufs] (ollama) {Kombinierter Prompt\\$\rightarrow$ Ollama (lokal)\\qwen2.5-coder:7b};
+
+% Todo list
+\node[box, text width=42mm, below=11mm of ollama] (todo) {Priorisierte\\To-Do-Liste};
+
+% Arrows top -> tools
+\draw[->] (client) -- (axe);
+\draw[->] (client) -- (pw);
+\draw[->] (client) -- (grep);
+
+% Arrows tools -> normalizer
+\draw[->] (axe) -- (n1);
+\draw[->] (pw) -- (n2);
+\draw[->] (grep) -- (n3);
+
+% Arrows normalizer -> UFS (separate entry points on top edge)
+\draw[->] (n1) -- ([xshift=-10mm]ufs.north);
+\draw[->] (n2) -- (ufs.north);
+\draw[->] (n3) -- ([xshift=10mm]ufs.north);
+
+% Downstream
+\draw[->] (ufs) -- (ollama);
+\draw[->] (ollama) -- (todo);
+
+\end{tikzpicture}
+\caption[Schematische Übersicht der \ac{ACE}-Pipeline]{Schematische Übersicht der im \ac{PoC} implementierten \ac{ACE}-Pipeline von der Datenerhebung bis zur priorisierten Ausgabe. Die Code-Schiene umfasst regex-basierte Pattern (grep) sowie optional die LLM-basierte Codeanalyse.\protect\footnote{Eigene Abbildung}}
+\label{fig:ace-pipeline-schema}
+\end{figure}
+
+\clearpage
+
 \anhang{Detailliertes Sequenzdiagramm}\label{app:sequenz}
 \begin{figure}[p]
   \centering
   \includegraphics[width=\textwidth, keepaspectratio]{graphics/Sequenzdiagramm.png}
-  \caption[Sequenzdiagramm der ACE-Pipeline]{Detailliertes Sequenzdiagramm eines vollständigen \ac{ACE}-Pipeline-Durchlaufs. Dargestellt sind die Interaktionen zwischen \ac{CLI}, axe-core, Playwright, Code-Modul, Prompt-Builder, Ollama und Output-Formatter (vgl. Abschnitt~\ref{sec:impl-pipeline}).\protect\footnote{Eigene Abbildung}}
+  \caption[Sequenzdiagramm der ACE-Pipeline]{Detailliertes Sequenzdiagramm eines vollständigen \ac{ACE}-Pipeline-Durchlaufs. Dargestellt sind die Interaktionen zwischen \ac{CLI}, axe-core, Playwright, Code-Modul (grep), optionalem LLM-Detektor, Prompt-Builder, Ollama und Output-Formatter (vgl. Abschnitt~\ref{sec:impl-pipeline}).\protect\footnote{Eigene Abbildung}}
   \label{fig:sequenz}
 \end{figure}
 
@@ -176,8 +252,8 @@ Der folgende System-Prompt wird dem Sprachmodell bei jedem Pipeline-Durchlauf ü
 \begin{lstlisting}[language={}, caption={Vollständiger System-Prompt des ACE-Assistenzsystems (aus \texttt{src/prompt.ts})}, label={lst:systemprompt}, basicstyle=\ttfamily\scriptsize, breaklines=true]
 Du bist ein erfahrener Barrierefreiheitsexperte für
 React/TypeScript-Webanwendungen.
-Deine Aufgabe ist es, Findings aus drei unabhängigen
-Analysewerkzeugen (axe-core, Playwright, grep) zu einer
+Deine Aufgabe ist es, Findings aus vier Analysequellen
+(axe-core, Playwright, grep und LLM-Codeanalyse) zu einer
 priorisierten, entwicklernahen To-Do-Liste zusammenzufassen.
 
 AUSGABEFORMAT (strikt einhalten):
@@ -301,7 +377,7 @@ Erwartete Ausgabe:
   \fill[blue!12] (0.3,1.95) rectangle (11.7,5.15);
   \draw (0.3,1.95) rectangle (11.7,5.15);
   \node[anchor=center, font=\small] at (6,4.05) {\textbf{User-Prompt: Serialisierte Findings} (\texttildelow{}24.000 Tokens)};
-  \node[anchor=center, font=\scriptsize] at (6,3.45) {axe-core-Findings + Playwright-Findings + grep-Findings};
+  \node[anchor=center, font=\scriptsize] at (6,3.45) {axe-core-Findings + Playwright-Findings + grep-Findings + LLM-Code-Findings};
   \node[anchor=center, font=\scriptsize\itshape] at (6,2.85) {variabel -- wird bei Platzmangel nach Schweregrad priorisiert};
   \node[anchor=center, font=\scriptsize] at (6,2.3) {critical $\rightarrow$ serious $\rightarrow$ moderate $\rightarrow$ minor};
 
@@ -340,9 +416,9 @@ Erwartete Ausgabe:
 \hline
 5 & Fokus-Outline via CSS entfernt (\texttt{outline: none}) & layout & axe-core + Playwright & 2.4.7 \\
 \hline
-6 & onClick-Handler ohne onKeyDown-Pendant & semantisch & grep & 2.1.1 \\
+6 & onClick-Handler ohne onKeyDown-Pendant & semantisch & grep + LLM-Codeanalyse & 2.1.1 \\
 \hline
-7 & \texttt{role="button"} auf \texttt{<div>} ohne tabIndex & semantisch & axe-core + grep & 4.1.2 \\
+7 & \texttt{role="button"} auf \texttt{<div>} ohne tabIndex & semantisch & axe-core + grep + LLM-Codeanalyse & 4.1.2 \\
 \hline
 8 & Modaler Dialog ohne Fokus-Trap & semantisch & Playwright & 2.1.2 \\
 \hline
@@ -352,7 +428,7 @@ Erwartete Ausgabe:
 \hline
 11 & Reihenfolge im DOM weicht von visueller Reihenfolge ab & semantisch & axe-core & 1.3.2 \\
 \hline
-12 & Interaktives Element zu klein ($<24\times24$px) & layout & grep (CSS-Pattern) & 2.5.8 \\
+12 & Interaktives Element zu klein ($<24\times24$px) & layout & grep (CSS-Pattern) + LLM-Codeanalyse & 2.5.8 \\
 \hline
 \end{tabular}
 \label{tab:accessibility_verstoesse}

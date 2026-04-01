@@ -1,18 +1,112 @@
 \chapter{Evaluation \& Diskussion} \label{kap:7} 
+Dieses Kapitel wird als strukturierte To-Do-Liste vorbereitet und anschließend mit Messwerten aus den Runs befüllt.
 
-Eingebaute Verstöße der Anwendung siehe Tab. \ref{tab:accessibility_verstoesse} im Anhang.
+\section{To-Do-Liste für Kapitel 7}
 
-Erkennungsrate der Violations im Proof of Concept siehe Tab. \ref{tab:erkennungsrate_poc} im Anhang.
+\subsection*{A. Ziel und Forschungsfragen sauber verankern}
+\begin{itemize}
+    \item Evaluationsziel in 3--5 Sätzen formulieren: Vergleich von Detektion, Priorisierung und Robustheit.
+    \item \textbf{FF1} operationalisieren: Beitrag lokaler \ac{LLM}s zur Priorisierung und Aufbereitung.
+    \item \textbf{FF2} operationalisieren: Mehrwert von Codekontext und LLM-Detektor gegenüber Tool-only.
+\end{itemize}
 
-Bewertungsskala und Bewertung der Empfehlungsqualität siehe Tab. \ref{tab:bewertungsskala_empfehlungen} und Tab. \ref{tab:empfehlungsqualitaet} im Anhang.
+\subsection*{B. Versuchsdesign dokumentieren}
+\begin{itemize}
+    \item Modelle nennen und kurz begründen: Qwen2.5-coder-7b, Qwen2.5-coder-14b, Qwen3-32b, DeepSeek-r1-70b.
+    \item Testobjekte beschreiben: 12-, 50- und 100-Fehler-Suite.
+    \item Bedingungen fixieren:
+    \begin{itemize}
+        \item axe-only
+        \item tools-only (axe + Playwright + grep)
+        \item tools + LLM-Priorisierung
+        \item tools + LLM-Detektor + LLM-Priorisierung
+        \item optional: tools + LLM-Detektor + LLM-Priorisierung ohne grep
+    \end{itemize}
+    \item Run-Anzahl je Bedingung festhalten (z. B. 10 Runs für 12er, 5 Runs für 50/100).
+    \item Reproduzierbarkeit dokumentieren: identische Prompts, Temperature = 0.05, Hardware/VM, Zeitfenster.
+\end{itemize}
 
-Beschreibung der Testkomponente -- kurz erklären was sie ist und warum synthetisch
-Tabelle: eingebaute Violations (die obige Tabelle, gekürzt)
-Erkennungsrate -- Tabelle + Recall/Precision-Werte
-Empfehlungsqualität -- Tabelle mit Stufen + 2-3 konkrete Beispiele (ein Stufe-0, ein Stufe-2 gegenübergestellt)
-Satz zur Rechtfertigung warum quantitativ + qualitativ kombiniert wird
-BWEC Real-World als Zusatzvalidierung -- 1 Absatz
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Modellklasse} & \textbf{Beispielmodell} & \textbf{Erwartete Qualität} & \textbf{Erwartete Laufzeit/Ressourcen} \\
+\midrule
+Klein (7B) & \texttt{qwen2.5-coder:7b} & solide Baseline, höhere Varianz & niedrig bis mittel \\
+Mittel (14B) & \texttt{qwen2.5-coder:14b} & bessere Konsistenz als 7B & mittel \\
+Groß (32B) & \texttt{qwen3:32b} & höhere inhaltliche Präzision & hoch \\
+Sehr groß (70B) & \texttt{deepseek-r1:70b} & höchste Erwartung an Qualität & sehr hoch \\
+\bottomrule
+\end{tabular}
+\caption{Modellklasse vs. erwartetes Verhalten im Evaluationsdesign}
+\label{tab:modellklasse_erwartung}
+\end{table}
+
+\subsection*{C. Metriken fest definieren}
+\begin{itemize}
+    \item \textbf{Detektion}: Recall, Precision, F1, False-Positive-Rate.
+    \item \textbf{Qualität der Empfehlung}: Stufe 0/1/2 gemäß Tab.~\ref{tab:bewertungsskala_empfehlungen}.
+    \item \textbf{Formatstabilität}: Parsing-Quote (\texttt{parsed.success}).
+    \item \textbf{Effizienz}: Laufzeit pro Phase, Gesamtlaufzeit, Prompt-/Output-Tokens.
+\end{itemize}
+
+\subsection*{D. Auswertung in 3 Dimensionen (Prüfer-Fokus)}
+\textbf{Dimension 1: Verstoßkategorie} (syntaktisch, semantisch, layout)
+\begin{itemize}
+    \item Für jede Kategorie Recall/Precision pro Bedingung berichten.
+    \item Kategorieabhängige Stärken/Schwächen der Modelle diskutieren.
+\end{itemize}
+
+\textbf{Dimension 2: WCAG-Kriteriumsebene} (z. B. 1.1.1, 2.1.1, 2.4.7)
+\begin{itemize}
+    \item Pro Kriterium Trefferquote je Modell/Bedingung darstellen.
+    \item Besonders kritische Kriterien explizit vergleichen (z. B. 2.1.1 Keyboard, 2.4.7 Fokus sichtbar).
+\end{itemize}
+
+\textbf{Dimension 3: Pipeline-Bedingung / Modellgröße}
+\begin{itemize}
+    \item Effekt von Komponenten (Ablation) und Modellgröße auf Qualität und Laufzeit zeigen.
+    \item Trade-off diskutieren: Qualität vs. Laufzeit/Tokenkosten.
+\end{itemize}
+
+\subsection*{E. Ergebnisdarstellung (quantitativ)}
+\begin{itemize}
+    \item Tabelle: Gesamtmetriken pro Modell \(\times\) Bedingung \(\times\) Suite.
+    \item Tabelle: Metriken nach den 3 Dimensionen.
+    \item Tabelle: Laufzeit und Tokens (Median, Mittelwert, Streuung).
+    \item Tabellen im Anhang referenzieren und bei Bedarf ergänzen.
+\end{itemize}
+
+\subsection*{F. Ergebnisdarstellung (qualitativ)}
+\begin{itemize}
+    \item Mindestens drei Fallbeispiele: guter Fix, teilweise brauchbar, Halluzination.
+    \item Je Fall: Input-Finding, Modellantwort, Bewertung (0/1/2), kurze Begründung.
+\end{itemize}
+
+\subsection*{G. Limitationen und Validität}
+\begin{itemize}
+    \item axe-core nur initialer Zustand (kein vollständiger Re-Scan je Zustand).
+    \item Regex-Limits von grep und mögliche False Positives.
+    \item Modellbedingte Halluzinationen und Formatabweichungen.
+    \item Externe Validität: zunächst nur eine SPA-Klasse als Testobjekt.
+\end{itemize}
+
+\subsection*{H. Beantwortung der Forschungsfragen (am Kapitelende)}
+\begin{itemize}
+    \item FF1 mit klarer Ja/Nein-Aussage und 2--3 Kennzahlen beantworten.
+    \item FF2 mit klarer Ja/Nein-Aussage und 2--3 Kennzahlen beantworten.
+    \item Keine offenen Interpretationen ohne Zahlen stehen lassen.
+\end{itemize}
 
 \section{Ergebnisse entlang der Kriterien und Limitationen} \label{sec:limitationen}
 
+\textit{TODO: Nach Abschluss der Runs mit den Ergebnissen aus Abschnitt A--H befüllen.}
+
 \section{Handlungsempfehlungen und Ausblick} \label{Ausblick}
+
+\textit{TODO: Auf Basis der 3-Dimensionen-Auswertung konkrete Handlungsempfehlungen ableiten.}
+
+
+

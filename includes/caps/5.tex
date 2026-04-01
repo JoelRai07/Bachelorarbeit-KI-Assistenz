@@ -6,7 +6,7 @@ Dieses Kapitel beschreibt den konzeptionellen Entwurf des Assistenzsystems \text
 \section{Zielarchitektur und Datenpipeline}
 \label{sec:zielarchitektur}
 
-Die Architektur des Systems folgt einer sequenziellen Datenpipeline, die drei Analysequellen zusammenführt, deren Ergebnisse normalisiert und an ein lokales Sprachmodell übergibt. Abbildung~\ref{fig:pipeline} illustriert den Gesamtablauf.
+Die Architektur des Systems folgt einer sequenziellen Datenpipeline, die vier Analysequellen zusammenführt, deren Ergebnisse normalisiert und an ein lokales Sprachmodell übergibt. Abbildung~\ref{fig:pipeline} illustriert den Gesamtablauf. Eine reduzierte, textnahe Darstellung der Verarbeitungsschritte findet sich in Anhang~\ref{app:ace-pipeline-schema} (Abbildung~\ref{fig:ace-pipeline-schema}).
 
  \begin{figure}[h]
    \centering
@@ -15,11 +15,11 @@ Die Architektur des Systems folgt einer sequenziellen Datenpipeline, die drei An
   \label{fig:pipeline}
 \end{figure}
 
-Die Pipeline gliedert sich in vier Phasen: die parallele Datenerhebung durch axe-core, Playwright und grep, die Normalisierung der Rohdaten in das \ac{UFS}, die Prompt-Konstruktion mit Token-Budget-Steuerung sowie die Inferenz durch das lokale Sprachmodell und die anschließende Ausgabe.
+Die Pipeline gliedert sich in fünf Phasen: die Datenerhebung durch axe-core, Playwright und grep, die optionale \ac{LLM}-basierte Quellcodeanalyse, die Normalisierung der Rohdaten in das \ac{UFS}, die Prompt-Konstruktion mit Token-Budget-Steuerung sowie die Inferenz durch das lokale Sprachmodell und die anschließende Ausgabe.
 
 \subsection{Analysequellen}
 
-Die Wahl der drei Analysequellen ergibt sich unmittelbar aus den in Abschnitt~\ref{kap:grenzen Tools} dargestellten Grenzen bestehender Tools: begrenzte Regelabdeckung, semantische Blindheit und fehlende Dynamik. Jede Quelle adressiert einen dieser Schwachpunkte.
+Die Wahl der vier Analysequellen ergibt sich unmittelbar aus den in Abschnitt~\ref{kap:grenzen Tools} dargestellten Grenzen bestehender Tools: begrenzte Regelabdeckung, semantische Blindheit und fehlende Dynamik. Jede Quelle adressiert einen dieser Schwachpunkte.
 
 \textbf{axe-core} wird über einen gesteuerten Chromium-Browser ausgeführt und analysiert den vollständig gerenderten \ac{DOM} der Zielanwendung auf Verstöße gegen \ac{WCAG}-Erfolgskriterien. Da Rich-Client-Webanwendungen ihre Inhalte erst zur Laufzeit per JavaScript erzeugen (vgl. Abschnitt~\ref{kap:2.3}), ist ein echter Browser-Launch unerlässlich -- statische \ac{HTML}-Analysen würden den tatsächlichen Zustand der Anwendung nicht abbilden.\footcite[Vgl.][]{fathallah_accessguru_2025} axe-core deckt dabei primär \textit{syntaktische} Verstöße im Sinne der in Abschnitt~\ref{Taxonomie} eingeführten Taxonomie ab -- also Fälle, in denen ein erforderliches Accessibility-Attribut fehlt oder formal falsch gebildet ist. Kodithuwakku und Wickramaarachchi zeigen allerdings, dass selbst axe-core nur einen Bruchteil aller \ac{WCAG}-Tests automatisiert abdeckt (vgl. Tabelle~\ref{tab:tool_evaluation}), weshalb es als alleinige Quelle nicht ausreicht.\footcite[Vgl.][]{kodithuwakku_assessing_2025}
 
@@ -27,9 +27,11 @@ Die Wahl der drei Analysequellen ergibt sich unmittelbar aus den in Abschnitt~\r
 
 \textbf{grep} durchsucht den React-Quellcode der Anwendung nach bekannten Anti-Patterns und reichert gleichzeitig axe-core-Findings um ihren Entstehungskontext im Quellcode an. Diese Komponente adressiert die zweite Forschungslücke aus Kapitel~\ref{Forschungslücken}: die fehlende Verknüpfung zwischen \ac{DOM}-Analyse und Quellcode. Wie in Abschnitt~\ref{Herausforderungen} am Beispiel der \texttt{IconButton}-Komponente gezeigt, meldet axe-core Verstöße auf Ebene des gerenderten \ac{DOM}, ohne Hinweis darauf, in welcher Quelldatei die Ursache liegt. Fathallah et al. benennen genau diese Lücke als offenes Problem von AccessGuru.\footcite[Vgl.][]{fathallah_accessguru_2025}
 
+\textbf{LLM-Codeanalyse} ergänzt die regelbasierten Quellen um eine semantische Detektionsstufe. In dieser Stufe liest das lokale Modell Quellcode-Chunks mit Zeilennummern und erzeugt strukturierte Findings im \ac{UFS}-Schema (inklusive Evidenz, Dateipfad und Zeilenbereich). Diese Findings werden nicht als Ersatz, sondern als zusätzliche Quelle verwendet und anschließend mit axe-core-, Playwright- und grep-Befunden fusioniert.
+
 Die Entscheidung für reguläre Ausdrücke anstelle eines vollständigen \ac{AST}-Parsers\footnote{\acl{AST} -- eine baumartige Repräsentation der syntaktischen Struktur von Quellcode.} ergibt sich daraus, dass die implementierten Pattern-Checks syntaktischer Natur sind -- sie suchen nach textuell erkennbaren Mustern im JSX-Markup, nicht nach semantischen Datenflüssen. Zudem gewährleistet der regexp-basierte Ansatz Sprachunabhängigkeit über \texttt{.tsx}, \texttt{.jsx}, \texttt{.ts} und \texttt{.js}-Dateien hinweg, ohne sprachspezifische Parser-Abhängigkeiten einzuführen.\footcite[Vgl.][S.~12]{bassi_assessment_2025} Durchsucht werden ausschließlich Quelldateien, auf die axe-core oder Playwright hinweisen, um das Token-Budget nicht durch irrelevante Codefragmente zu belasten (vgl. Abschnitt~\ref{sec:kontextualisierung}).
 
-Tabelle~\ref{tab:tool-mapping} fasst die Zuordnung der drei Analysequellen zu den adressierten Problemen und den jeweiligen Verstoßtypen zusammen.
+Tabelle~\ref{tab:tool-mapping} fasst die Zuordnung der vier Analysequellen zu den adressierten Problemen und den jeweiligen Verstoßtypen zusammen.
 
 \begin{table}[H]
 \centering
@@ -42,6 +44,7 @@ Tabelle~\ref{tab:tool-mapping} fasst die Zuordnung der drei Analysequellen zu de
 axe-core & Begrenzte Regelabdeckung\footcite[Vgl.][]{kodithuwakku_assessing_2025} & primär syntaktisch & Abschnitt~\ref{kap:grenzen Tools} \\
 Playwright & Fehlende Dynamik bei zustandsabhängigen Barrieren & semantisch, layout & Abschnitt~\ref{Herausforderungen} \\
 grep & \ac{DOM}/Quellcode-Diskrepanz\footcite[Vgl.][]{fathallah_accessguru_2025} & alle (Anreicherung) & Abschnitt~\ref{Forschungslücken} \\
+LLM-Codeanalyse & Semantische Muster jenseits fester Regex-Regeln & semantisch, syntaktisch, layout & Abschnitt~\ref{kap:2.4} \\
 \bottomrule
 \end{tabular}
 \caption{Zuordnung der Analysequellen zu adressierten Problemen, Verstoßtypen und theoretischer Herleitung}
@@ -52,12 +55,12 @@ grep & \ac{DOM}/Quellcode-Diskrepanz\footcite[Vgl.][]{fathallah_accessguru_2025}
 \subsection{\acf{UFS}}
 \label{sec:ufs}
 
-Die Notwendigkeit einer Normalisierungsschicht ergibt sich aus der Heterogenität der Quellformate. Pool zeigt mit Testaro, dass jedes Accessibility-Tool eigene, inkompatible Ausgabeformate produziert -- ein Problem, das sich bei der Kombination mehrerer Werkzeuge verschärft.\footcite[Vgl.][]{pool_testaro_2023} Konkret liefert axe-core Objekte mit \texttt{impact}-Stufen und \ac{DOM}-Selektorketten, Playwright gibt boolesche \texttt{passed}-Felder mit Check-IDs zurück, und grep produziert Datei-Zeilen-Tupel mit Textfragmenten. Eine quellenübergreifende Deduplizierung oder Priorisierung wäre auf dieser Basis nicht möglich, da die Schweregrade der Quellen (\texttt{impact}, \texttt{severity}, Dateiname) inkommensurable Größen darstellen. Zudem enthalten die rohen axe-core-Ausgaben vollständige \ac{DOM}-Snapshots und ausführliche Hilfetexte, die für die \ac{LLM}-Inferenz nicht relevant sind und das Token-Budget unnötig belasten.
+Die Notwendigkeit einer Normalisierungsschicht ergibt sich aus der Heterogenität der Quellformate. Pool zeigt mit Testaro, dass jedes Accessibility-Tool eigene, inkompatible Ausgabeformate produziert -- ein Problem, das sich bei der Kombination mehrerer Werkzeuge verschärft.\footcite[Vgl.][]{pool_testaro_2023} Konkret liefert axe-core Objekte mit \texttt{impact}-Stufen und \ac{DOM}-Selektorketten, Playwright gibt boolesche \texttt{passed}-Felder mit Check-IDs zurück, grep produziert Datei-Zeilen-Tupel mit Textfragmenten, und die LLM-Codeanalyse liefert JSON-Objekte mit Evidenz- und Zeilenfeldern. Eine quellenübergreifende Deduplizierung oder Priorisierung wäre auf dieser Basis nicht möglich, da die Schweregrade der Quellen (\texttt{impact}, \texttt{severity}, Dateiname) inkommensurable Größen darstellen. Zudem enthalten die rohen axe-core-Ausgaben vollständige \ac{DOM}-Snapshots und ausführliche Hilfetexte, die für die \ac{LLM}-Inferenz nicht relevant sind und das Token-Budget unnötig belasten.
 
 Das \ac{UFS} überführt daher alle Findings in eine einheitliche TypeScript-Schnittstelle. Listing~\ref{lst:ufs} zeigt das Interface, wie es im \ac{PoC} implementiert ist.
 
 \begin{lstlisting}[language=JavaScript, caption={TypeScript-Interface des Unified Finding Schema}, label={lst:ufs}]
-export type FindingSource = "axe" | "playwright" | "grep";
+export type FindingSource = "axe" | "playwright" | "grep" | "llm";
 export type Severity = "critical" | "serious" | "moderate" | "minor";
 export type WcagLevel = "A" | "AA" | "AAA";
 export type ViolationCategory = "syntaktisch" | "semantisch" | "layout";
@@ -78,7 +81,7 @@ export interface UnifiedFinding {
 }
 \end{lstlisting}
 
-Die Felder lassen sich in drei Gruppen einteilen: \textbf{Identifikation und Klassifikation} (\texttt{id}, \texttt{source}, \texttt{ruleId}, \texttt{severity}, \texttt{category}), \textbf{\ac{WCAG}-Bezug} (\texttt{wcagCriteria}, \texttt{wcagLevel}) und \textbf{Quellcode-Kontext} (\texttt{selector}, \texttt{componentPath}, \texttt{codeSnippet}, \texttt{lineRange}). Felder, die eine Quelle nicht liefern kann, bleiben \texttt{null} und werden gegebenenfalls durch die grep-Anreicherung ergänzt.
+Die Felder lassen sich in drei Gruppen einteilen: \textbf{Identifikation und Klassifikation} (\texttt{id}, \texttt{source}, \texttt{ruleId}, \texttt{severity}, \texttt{category}), \textbf{\ac{WCAG}-Bezug} (\texttt{wcagCriteria}, \texttt{wcagLevel}) und \textbf{Quellcode-Kontext} (\texttt{selector}, \texttt{componentPath}, \texttt{codeSnippet}, \texttt{lineRange}). Felder, die eine Quelle nicht liefern kann, bleiben \texttt{null} und werden gegebenenfalls durch die grep-Anreicherung oder die LLM-Codeanalyse ergänzt.
 
 Das Feld \texttt{category} bildet die in Abschnitt~\ref{Taxonomie} eingeführte Taxonomie nach Fathallah et al. direkt im Datenmodell ab.\footcite[Vgl.][]{fathallah_accessguru_2025} Diese Klassifikation ist nicht nur für die Analyse relevant, sondern auch für die Evaluation: In Kapitel~\ref{kap:7} wird die Erkennungsleistung des Systems differenziert nach Verstoßtyp ausgewertet, um \ac{TF}1 zu beantworten.
 
@@ -88,15 +91,15 @@ Das Feld \texttt{componentPath} ist das entscheidende Bindeglied zwischen \ac{DO
 \section{Prompt-Strategie}
 \label{sec:kontextualisierung}
 
-Dieser Abschnitt beschreibt die Strategie für die Interaktion mit dem lokalen Sprachmodell: die Wahl zwischen Single- und Multi-Prompt-Ansatz, die eingesetzten Prompt-Engineering-Strategien sowie die Steuerung des Token-Budgets.
+Dieser Abschnitt beschreibt die Strategie für die Interaktion mit dem lokalen Sprachmodell: die Wahl des zweistufigen Prompt-Ansatzes, die eingesetzten Prompt-Engineering-Strategien sowie die Steuerung des Token-Budgets.
 
-\subsection{Single-Prompt-Strategie}
+\subsection{Zweistufige Prompt-Strategie}
 
-Eine grundlegende Entwurfsentscheidung betrifft die Interaktionsstrategie mit dem lokalen Sprachmodell. Konzeptionell wäre ein mehrstufiger Ansatz denkbar, bei dem die drei Datenquellen in separaten Aufrufen verarbeitet werden. Fathallah et al. realisieren dies mit AccessGuru über eine Cloud-API und setzen dabei iteratives Corrective Re-Prompting ein, das den Violation Score Decrease von 0,72 auf 0,84 verbessert.\footcite[Vgl.][]{fathallah_accessguru_2025} Auch Huang et al. zeigen mit ACCESS, dass ReAct-Prompting -- also iteratives Wechseln zwischen Reasoning und Tool-Aufrufen -- bei der Barrierefreiheitskorrektur die besten Ergebnisse erzielt.\footcite[Vgl.][S.~5]{huang_access_2024}
+Eine grundlegende Entwurfsentscheidung betrifft die Interaktionsstrategie mit dem lokalen Sprachmodell. Konzeptionell wäre ein stark iterativer Ansatz denkbar, bei dem jede Quelle in mehreren Korrekturschleifen verarbeitet wird. Fathallah et al. realisieren dies mit AccessGuru über eine Cloud-API und setzen dabei iteratives Corrective Re-Prompting ein, das den Violation Score Decrease von 0,72 auf 0,84 verbessert.\footcite[Vgl.][]{fathallah_accessguru_2025} Auch Huang et al. zeigen mit ACCESS, dass ReAct-Prompting -- also iteratives Wechseln zwischen Reasoning und Tool-Aufrufen -- bei der Barrierefreiheitskorrektur die besten Ergebnisse erzielt.\footcite[Vgl.][S.~5]{huang_access_2024}
 
-Für den vorliegenden Anwendungsfall wird dennoch eine Single-Prompt-Strategie gewählt, die alle drei Datenquellen in einem einzigen Modellaufruf zusammenführt. Der entscheidende Grund ist das Latenzbudget: Wie die Laufzeitmessungen in Kapitel~\ref{kap:7} zeigen, benötigt ein einzelner \ac{LLM}-Aufruf auf einem lokalen \ac{CPU}-basierten System zwischen 491 und 3.238 Sekunden, abhängig von der Modellgröße. Iterative Strategien wie ReAct oder Corrective Re-Prompting würden diese Laufzeit vervielfachen und \ac{NFA}-02 verletzen. AccessGuru und ACCESS können solche Strategien einsetzen, weil sie auf Cloud-\ac{API}s mit \ac{GPU}-Beschleunigung zugreifen -- eine Option, die durch \ac{NFA}-01 ausgeschlossen ist.
+Für den vorliegenden Anwendungsfall wird eine zweistufige Strategie gewählt: In Stufe~1 erzeugt das Modell als LLM-Detektor strukturierte Code-Findings aus Quellcode-Chunks; in Stufe~2 priorisiert ein kombinierter Prompt alle Quellen (axe-core, Playwright, grep, LLM). Der entscheidende Grund gegen weitere iterative Schleifen ist das Latenzbudget: Wie die Laufzeitmessungen in Kapitel~\ref{kap:7} zeigen, benötigt ein \ac{LLM}-Aufruf auf einem lokalen \ac{CPU}-basierten System je nach Modellgröße bereits mehrere Minuten. Zusätzliche ReAct- oder Corrective-Re-Prompting-Schleifen würden diese Laufzeit vervielfachen und \ac{NFA}-02 verletzen. AccessGuru und ACCESS können solche Strategien einsetzen, weil sie auf Cloud-\ac{API}s mit \ac{GPU}-Beschleunigung zugreifen -- eine Option, die durch \ac{NFA}-01 ausgeschlossen ist.
 
-Darüber hinaus ermöglicht ein einzelner Prompt dem Sprachmodell, Zusammenhänge zwischen den Quellen direkt zu erkennen. Meldet axe-core ein fehlendes \texttt{aria-label} und liefert grep gleichzeitig den zugehörigen Quellcodeausschnitt, kann das Modell beides in einem konkreten Vorschlag verbinden. Bei getrennten Aufrufen ginge dieser Kontext verloren.
+Der kombinierte Priorisierungsprompt in Stufe~2 ermöglicht es dem Sprachmodell, Zusammenhänge zwischen den Quellen direkt zu erkennen. Meldet axe-core ein fehlendes \texttt{aria-label}, liefert grep den zugehörigen Quellcodeausschnitt und bestätigt die LLM-Codeanalyse dieselbe Stelle, kann das Modell diese Evidenz in einem konkreten Vorschlag zusammenführen.
 
 \subsection{Wahl der Prompt-Engineering-Strategien}
 
@@ -114,7 +117,7 @@ Sprachmodelle verarbeiten Text nicht zeichenweise, sondern in Form von \textit{T
 
 Übersteigt die Gesamtmenge der serialisierten Findings dieses Budget, greift eine Priorisierungsstrategie: Alle Findings werden quellenübergreifend nach Schweregrad sortiert und von unten abgeschnitten. So ist sichergestellt, dass gesetzlich relevante Verstöße (\texttt{critical}/\texttt{serious}) stets im Prompt enthalten sind, während Findings niedrigerer Priorität bei Platzmangel entfallen.
 
-Ergänzend wird grep selektiv eingesetzt: Statt die gesamte Codebasis zu durchsuchen, werden ausschließlich Dateien analysiert, die durch axe-core- oder Playwright-Findings referenziert werden. Dieses Vorgehen begrenzt die Anzahl der Code-Snippets im Prompt und verhindert eine unkontrollierte Ausweitung des Token-Verbrauchs. Konzeptionell entspricht dieses selektive Retrieval dem Grundprinzip von \ac{RAG}-Systemen (vgl. Abschnitt~\ref{kap:2.4}): relevanter Kontext wird zur Laufzeit gezielt abgerufen und in den Prompt eingebettet, statt das Modell mit der gesamten Datenbasis zu konfrontieren.\footcite[Vgl.][S.~1--2]{lewisRetrievalAugmentedGenerationKnowledgeIntensive2021}
+Ergänzend wird grep selektiv eingesetzt: Statt die gesamte Codebasis zu durchsuchen, werden primär Dateien analysiert, die durch bestehende Befunde als relevant erscheinen. Zusätzlich arbeitet die LLM-Codeanalyse mit chunkbasiertem Retrieval, um den Kontext je Aufruf zu begrenzen. Dieses Vorgehen verhindert eine unkontrollierte Ausweitung des Token-Verbrauchs. Konzeptionell entspricht das selektive Retrieval dem Grundprinzip von \ac{RAG}-Systemen (vgl. Abschnitt~\ref{kap:2.4}): relevanter Kontext wird zur Laufzeit gezielt abgerufen und in den Prompt eingebettet, statt das Modell mit der gesamten Datenbasis zu konfrontieren.\footcite[Vgl.][S.~1--2]{lewisRetrievalAugmentedGenerationKnowledgeIntensive2021}
 
 % ─────────────────────────────────────────────────────────────────────────────
 \section{Ausgabeformat: entwicklernahe To-Do-Liste}
@@ -122,10 +125,10 @@ Ergänzend wird grep selektiv eingesetzt: Statt die gesamte Codebasis zu durchsu
 
 Das Ausgabeformat des Systems ist als priorisierte To-Do-Liste konzipiert, die sich an Entwicklerinnen und Entwickler richtet. Die Wahl dieses Formats ergibt sich aus \ac{FA}-05 sowie aus der Beobachtung, dass bestehende Violation Reports das Problem auf Ebene des gerenderten \ac{DOM} beschreiben, ohne Bezug zur Quellcodestruktur herzustellen (vgl. Abschnitt~\ref{kap:grenzen Tools}).\footcite[Vgl.][]{fathallah_accessguru_2025}
 
-Die Liste gliedert sich in zwei Prioritätsstufen: \emph{Must-have}-Einträge bezeichnen Verstöße gegen Level-A- und Level-AA-Erfolgskriterien, die eine gesetzliche Konformitätspflicht nach \ac{BITV} und \ac{BFSG} begründen (vgl. Abschnitt~\ref{kap:2.1}). \emph{Nice-to-have}-Einträge umfassen Empfehlungen, die über den gesetzlichen Mindeststandard hinausgehen. Jeder Eintrag enthält -- sofern durch die grep-Anreicherung verfügbar -- den Dateipfad der betroffenen Komponente, die Zeilennummer sowie einen konkreten Code-Fix-Vorschlag.
+Die Liste gliedert sich in zwei Prioritätsstufen: \emph{Must-have}-Einträge bezeichnen Verstöße gegen Level-A- und Level-AA-Erfolgskriterien, die eine gesetzliche Konformitätspflicht nach \ac{BITV} und \ac{BFSG} begründen (vgl. Abschnitt~\ref{kap:2.1}). \emph{Nice-to-have}-Einträge umfassen Empfehlungen, die über den gesetzlichen Mindeststandard hinausgehen. Jeder Eintrag enthält -- sofern durch grep-Anreicherung oder LLM-Codeanalyse verfügbar -- den Dateipfad der betroffenen Komponente, die Zeilennummer sowie einen konkreten Code-Fix-Vorschlag.
 
 Es ist anzumerken, dass das Ausgabeformat durch einen System-Prompt vorgegeben wird, dessen Einhaltung durch das Sprachmodell nicht garantiert werden kann. Insbesondere bei kleineren Modellen der 7B-Klasse ist die Formatkonformität nicht selbstverständlich.\footcite[Vgl.][S.~5]{brown2020gpt3fewshot} Die Evaluation in Kapitel~\ref{kap:7} untersucht, inwieweit die getesteten Modelle das vorgegebene Schema einhalten. Diese Limitation wird in Abschnitt~\ref{sec:limitationen} diskutiert.
 
 % ─────────────────────────────────────────────────────────────────────────────
 
-Zusammenfassend ergibt sich aus den Anforderungen, der Theorie und den identifizierten Forschungslücken ein System, das drei komplementäre Analysequellen über ein einheitliches Datenmodell (\ac{UFS}) zusammenführt, deren Ergebnisse in einem Single-Prompt an ein lokales Sprachmodell übergibt und eine priorisierte, entwicklernahe To-Do-Liste erzeugt. Kapitel~\ref{kap:6} beschreibt die prototypische Umsetzung dieser Konzeption.
+Zusammenfassend ergibt sich aus den Anforderungen, der Theorie und den identifizierten Forschungslücken ein System, das vier komplementäre Analysequellen über ein einheitliches Datenmodell (\ac{UFS}) zusammenführt und in einer zweistufigen \ac{LLM}-Strategie verarbeitet: Stufe~1 für optionale LLM-Codefindings und Stufe~2 für die quellenübergreifende Priorisierung. Kapitel~\ref{kap:6} beschreibt die prototypische Umsetzung dieser Konzeption.

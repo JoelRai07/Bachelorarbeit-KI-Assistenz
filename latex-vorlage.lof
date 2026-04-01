@@ -4,7 +4,8 @@
 \contentsline {figure}{\numberline {3}{\ignorespaces Taxonomie der Barrierefreiheitsverstösse}}{13}{figure.141}%
 \contentsline {figure}{\numberline {4}{\ignorespaces Framework Popularity über die letzten Jahre}}{14}{figure.149}%
 \contentsline {figure}{\numberline {5}{\ignorespaces Zero-Shot und Few-Shot Prompting im Vergleich}}{19}{figure.193}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Datenpipeline des \ac {ACE}-Assistenzsystems}}{36}{figure.310}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Komplexität von Home Pages (6 Jahre)}}{52}{figure.422}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Sequenzdiagramm der ACE-Pipeline}}{56}{figure.432}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Aufteilung des Token-Budgets}}{59}{figure.540}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Datenpipeline des \ac {ACE}-Assistenzsystems}}{36}{figure.311}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Komplexität von Home Pages (6 Jahre)}}{57}{figure.457}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Schematische Übersicht der \ac {ACE}-Pipeline}}{60}{figure.467}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Sequenzdiagramm der ACE-Pipeline}}{62}{figure.472}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Aufteilung des Token-Budgets}}{65}{figure.580}%

@@ -45,33 +45,38 @@
 \contentsline {section}{\numberline {5.4}Lokale Inferenzinfrastruktur: Ollama}{33}{section.295}%
 \contentsline {subsection}{\numberline {5.4.1}Ollama als Laufzeitumgebung}{33}{subsection.297}%
 \contentsline {subsection}{\numberline {5.4.2}Anforderungen an das Sprachmodell}{34}{subsection.302}%
-\contentsline {subsection}{\numberline {5.4.3}Zusammenfassung der Anforderungen}{34}{subsection.304}%
-\contentsline {chapter}{\numberline {6}Konzeption des Assistenzsystems}{36}{chapter.308}%
-\contentsline {section}{\numberline {6.1}Zielarchitektur und Datenpipeline}{36}{section.309}%
-\contentsline {subsection}{\numberline {6.1.1}Analysequellen}{36}{subsection.311}%
-\contentsline {subsection}{\numberline {6.1.2}\acf {UFS}}{38}{subsection.322}%
-\contentsline {section}{\numberline {6.2}Prompt-Strategie}{39}{section.345}%
-\contentsline {subsection}{\numberline {6.2.1}Single-Prompt-Strategie}{39}{subsection.346}%
-\contentsline {subsection}{\numberline {6.2.2}Wahl der Prompt-Engineering-Strategien}{40}{subsection.349}%
-\contentsline {subsection}{\numberline {6.2.3}Token-Budget-Steuerung}{40}{subsection.353}%
-\contentsline {section}{\numberline {6.3}Ausgabeformat: entwicklernahe To-Do-Liste}{41}{section.355}%
-\contentsline {chapter}{\numberline {7}Implementierung des Proof of Concept}{42}{chapter.358}%
-\contentsline {section}{\numberline {7.1}Technischer Rahmen und Projektstruktur}{42}{section.359}%
-\contentsline {section}{\numberline {7.2}axe-core-Modul}{43}{section.375}%
-\contentsline {section}{\numberline {7.3}Playwright-Modul}{44}{section.376}%
-\contentsline {section}{\numberline {7.4}Code-Modul}{44}{section.379}%
-\contentsline {subsection}{\numberline {7.4.1}Anreicherung bestehender Findings}{44}{subsection.380}%
-\contentsline {subsection}{\numberline {7.4.2}Pattern-Findings}{45}{subsection.381}%
-\contentsline {section}{\numberline {7.5}Prompt-Builder und System-Prompt}{45}{section.383}%
-\contentsline {subsection}{\numberline {7.5.1}System-Prompt}{45}{subsection.384}%
-\contentsline {subsection}{\numberline {7.5.2}Token-Budget-Steuerung}{46}{subsection.391}%
-\contentsline {subsection}{\numberline {7.5.3}Serialisierung}{46}{subsection.393}%
-\contentsline {section}{\numberline {7.6}Ollama-Client und Output-Formatter}{47}{section.403}%
-\contentsline {section}{\numberline {7.7}Pipeline-Orchestrierung}{47}{section.405}%
-\contentsline {section}{\numberline {7.8}Beispielabläufe und Ergebnisse am Untersuchungsobjekt}{48}{section.413}%
-\contentsline {chapter}{\numberline {8}Evaluation \& Diskussion}{49}{chapter.414}%
-\contentsline {section}{\numberline {8.1}Ergebnisse entlang der Kriterien und Limitationen}{49}{section.415}%
-\contentsline {section}{\numberline {8.2}Handlungsempfehlungen und Ausblick}{49}{section.416}%
-\contentsline {chapter}{\numberline {9}Fazit}{50}{chapter.417}%
-\contentsline {chapter}{Anhang}{51}{chapter*.418}%
-\contentsline {chapter}{Literaturverzeichnis}{63}{section*.555}%
+\contentsline {subsection}{\numberline {5.4.3}Ausgewählte Modellkandidaten für die Evaluation}{34}{subsection.304}%
+\contentsline {subsection}{\numberline {5.4.4}Zusammenfassung der Anforderungen}{35}{subsection.305}%
+\contentsline {chapter}{\numberline {6}Konzeption des Assistenzsystems}{36}{chapter.309}%
+\contentsline {section}{\numberline {6.1}Zielarchitektur und Datenpipeline}{36}{section.310}%
+\contentsline {subsection}{\numberline {6.1.1}Analysequellen}{36}{subsection.312}%
+\contentsline {subsection}{\numberline {6.1.2}\acf {UFS}}{38}{subsection.323}%
+\contentsline {section}{\numberline {6.2}Prompt-Strategie}{39}{section.346}%
+\contentsline {subsection}{\numberline {6.2.1}Zweistufige Prompt-Strategie}{39}{subsection.347}%
+\contentsline {subsection}{\numberline {6.2.2}Wahl der Prompt-Engineering-Strategien}{40}{subsection.350}%
+\contentsline {subsection}{\numberline {6.2.3}Token-Budget-Steuerung}{41}{subsection.354}%
+\contentsline {section}{\numberline {6.3}Ausgabeformat: entwicklernahe To-Do-Liste}{41}{section.356}%
+\contentsline {chapter}{\numberline {7}Implementierung des Proof of Concept}{43}{chapter.359}%
+\contentsline {section}{\numberline {7.1}Technischer Rahmen und Projektstruktur}{43}{section.360}%
+\contentsline {section}{\numberline {7.2}axe-core-Modul}{44}{section.377}%
+\contentsline {section}{\numberline {7.3}Playwright-Modul}{45}{section.378}%
+\contentsline {section}{\numberline {7.4}Code-Modul}{45}{section.381}%
+\contentsline {subsection}{\numberline {7.4.1}Anreicherung bestehender Findings}{45}{subsection.382}%
+\contentsline {subsection}{\numberline {7.4.2}Pattern-Findings}{46}{subsection.383}%
+\contentsline {section}{\numberline {7.5}LLM-Detektor-Modul}{46}{section.385}%
+\contentsline {subsection}{\numberline {7.5.1}Abgrenzung zu grep und Nutzen der Kombination}{47}{subsection.391}%
+\contentsline {subsection}{\numberline {7.5.2}Beispielhafter Ablauf eines LLM-Findings}{47}{subsection.392}%
+\contentsline {section}{\numberline {7.6}Prompt-Builder und System-Prompt}{48}{section.407}%
+\contentsline {subsection}{\numberline {7.6.1}System-Prompt}{48}{subsection.408}%
+\contentsline {subsection}{\numberline {7.6.2}Token-Budget-Steuerung}{49}{subsection.415}%
+\contentsline {subsection}{\numberline {7.6.3}Serialisierung}{49}{subsection.417}%
+\contentsline {section}{\numberline {7.7}Ollama-Client und Output-Formatter}{50}{section.427}%
+\contentsline {section}{\numberline {7.8}Pipeline-Orchestrierung}{50}{section.429}%
+\contentsline {section}{\numberline {7.9}Beispielabläufe und Ergebnisse am Untersuchungsobjekt}{51}{section.438}%
+\contentsline {chapter}{\numberline {8}Evaluation \& Diskussion}{52}{chapter.439}%
+\contentsline {section}{\numberline {8.1}To-Do-Liste für Kapitel 7}{52}{section.440}%
+\contentsline {section}{\numberline {8.2}Ergebnisse entlang der Kriterien und Limitationen}{54}{section.450}%
+\contentsline {section}{\numberline {8.3}Handlungsempfehlungen und Ausblick}{54}{section.451}%
+\contentsline {chapter}{\numberline {9}Fazit}{55}{chapter.452}%
+\contentsline {chapter}{Anhang}{56}{chapter*.453}%
+\contentsline {chapter}{Literaturverzeichnis}{69}{section*.595}%

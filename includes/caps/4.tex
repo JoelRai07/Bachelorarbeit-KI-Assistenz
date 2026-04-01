@@ -55,7 +55,7 @@ Die Systemarchitektur muss eine klare modulare Trennung der Komponenten (Detecti
 
 \textfett{\ac{NFA}-04 Reproduzierbarkeit}
 
-Das System muss deterministisch genug sein, dass zwei aufeinanderfolgende Analyseläufe auf derselben Anwendungsversion im Wesentlichen dieselben Befunde produzieren. Da \ac{LLM}s inhärent probabilistisch sind, wird Reproduzierbarkeit durch eine feste Temperatur-Einstellung (Temperature = 0.1) für das Sprachmodell und durch strukturierte Ausgabeformate (\acs{JSON}-Schema im Prompt) sichergestellt.\footcites[Vgl.][Temperature]{OpenAI_Developers}[Vgl.][Temperature]{Anthropic_API_Docs}
+Das System muss deterministisch genug sein, dass zwei aufeinanderfolgende Analyseläufe auf derselben Anwendungsversion im Wesentlichen dieselben Befunde produzieren. Da \ac{LLM}s inhärent probabilistisch sind, wird Reproduzierbarkeit durch eine feste Temperatur-Einstellung (Temperature = 0.05) für das Sprachmodell und durch strukturierte Ausgabeformate (\acs{JSON}-Schema im Prompt) sichergestellt.\footcites[Vgl.][Temperature]{OpenAI_Developers}[Vgl.][Temperature]{Anthropic_API_Docs}
 
 \section{Lokale Inferenzinfrastruktur: Ollama}\label{kap:4.4}
  
@@ -89,6 +89,21 @@ Drittens muss das Modell innerhalb eines \textbf{Kontextfensters von mindestens 
 Viertens muss das Modell \textbf{auf \ac{CPU}-basierten Systemen} mit akzeptabler Latenz betreibbar sein, was die praktisch einsetzbare Parameterzahl auf ca. 7--32 Milliarden Parameter begrenzt (\ac{NFA}-02).\footcite[Vgl.][S. 3]{hui2024qwen25coder}
  
 Die Auswahl konkreter Modellkandidaten, die diese Anforderungen erfüllen, sowie deren vergleichende Evaluation werden in Kapitel~\ref{sec:kontextualisierung} bzw. Kapitel~\ref{kap:7} behandelt.
+
+\subsection{Ausgewählte Modellkandidaten für die Evaluation}
+
+Für die Evaluation in Kapitel~\ref{kap:7} werden vier lokal ausführbare Modellkandidaten betrachtet:
+
+\begin{itemize}
+	\item \texttt{qwen2.5-coder:7b}
+	\item \texttt{qwen2.5-coder:14b}
+	\item \texttt{qwen3:32b}
+	\item \texttt{deepseek-r1:70b}
+\end{itemize}
+
+Die Auswahl folgt einem bewussten Größen- und Fähigkeitsvergleich entlang der Anforderungen aus Abschnitt~\ref{kap:4.3}: 7B und 14B repräsentieren ressourcenschonende Modelle für den operativen Lokalbetrieb, 32B einen mittleren Kompromiss aus Qualität und Laufzeit, 70B ein leistungsstarkes Referenzmodell mit höherem Rechenbedarf. Dadurch kann empirisch untersucht werden, wie sich Modellgröße auf Erkennungsqualität, Formatstabilität und Laufzeit auswirkt.
+
+Der in der Praxis teils verwendete Begriff \glqq Qwen Codex\grqq{} bezeichnet im Kontext dieser Arbeit kein separates OpenAI-Codex-Modell, sondern lokal über Ollama ausgeführte Qwen-Coder-Varianten.
  
 \subsection{Zusammenfassung der Anforderungen}
  
@@ -124,7 +139,7 @@ Tabelle \ref{Anforderungstabelle} fasst die spezifizierten Anforderungen zusamme
 \hline
 \ac{NFA}-03 & Wartbarkeit und Erweiterbarkeit (modulare Architektur) & Software-Engineering Best Practice & Soll \\
 \hline
-\ac{NFA}-04 & Reproduzierbarkeit (Temperature\,=\,0.1, \acs{JSON}-Schema) & Forschungsmethodik & Soll \\
+\ac{NFA}-04 & Reproduzierbarkeit (Temperature\,=\,0.05, \acs{JSON}-Schema) & Forschungsmethodik & Soll \\
 \hline
 \end{tabular}%
 }

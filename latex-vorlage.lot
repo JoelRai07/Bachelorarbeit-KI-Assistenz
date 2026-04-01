@@ -2,13 +2,14 @@
 \contentsline {table}{\numberline {1}{\ignorespaces Erkennungsleistung von Accessibility-Tools}}{12}{table.124}%
 \contentsline {table}{\numberline {2}{\ignorespaces Konzeptmatrix (Hauptmatrix, hoch priorisierte Studien)}}{25}{table.230}%
 \contentsline {table}{\numberline {3}{\ignorespaces Zuordnung der DSRM-Phasen zu den Kapiteln der Arbeit.}}{26}{table.240}%
-\contentsline {table}{\numberline {4}{\ignorespaces Anforderungsübersicht: Funktionale und nicht-funktionale Anforderungen mit Ursprung und Priorität.}}{35}{table.307}%
-\contentsline {table}{\numberline {5}{\ignorespaces Zuordnung der Analysequellen zu adressierten Problemen, Verstoßtypen und theoretischer Herleitung}}{37}{table.321}%
-\contentsline {table}{\numberline {6}{\ignorespaces Wesentliche Abhängigkeiten des \acs {PoC}}}{42}{table.360}%
-\contentsline {table}{\numberline {7}{\ignorespaces Implementierte Playwright-Checks mit \ac {WCAG}-Zuordnung und Kategorie}}{44}{table.377}%
-\contentsline {table}{\numberline {8}{\ignorespaces Implementierte grep-Patterns mit \ac {WCAG}-Zuordnung}}{45}{table.382}%
-\contentsline {table}{\numberline {9}{\ignorespaces Konzeptmatrix (vollständige Übersicht)}}{54}{table.427}%
-\contentsline {table}{\numberline {10}{\ignorespaces Accessibility-Verstöße der Testanwendung und zugehörige Prüfquellen}}{60}{table.545}%
-\contentsline {table}{\numberline {11}{\ignorespaces Erkennungsrate der Violations im Proof of Concept}}{61}{table.548}%
-\contentsline {table}{\numberline {12}{\ignorespaces Bewertungsskala für die Empfehlungsqualität der LLM-Ausgaben}}{61}{table.551}%
-\contentsline {table}{\numberline {13}{\ignorespaces Bewertung der Empfehlungsqualität pro Violation}}{62}{table.554}%
+\contentsline {table}{\numberline {4}{\ignorespaces Anforderungsübersicht: Funktionale und nicht-funktionale Anforderungen mit Ursprung und Priorität.}}{35}{table.308}%
+\contentsline {table}{\numberline {5}{\ignorespaces Zuordnung der Analysequellen zu adressierten Problemen, Verstoßtypen und theoretischer Herleitung}}{38}{table.322}%
+\contentsline {table}{\numberline {6}{\ignorespaces Wesentliche Abhängigkeiten des \acs {PoC}}}{43}{table.361}%
+\contentsline {table}{\numberline {7}{\ignorespaces Implementierte Playwright-Checks mit \ac {WCAG}-Zuordnung und Kategorie}}{45}{table.379}%
+\contentsline {table}{\numberline {8}{\ignorespaces Implementierte grep-Patterns mit \ac {WCAG}-Zuordnung}}{46}{table.384}%
+\contentsline {table}{\numberline {9}{\ignorespaces Modellklasse vs. erwartetes Verhalten im Evaluationsdesign}}{53}{table.443}%
+\contentsline {table}{\numberline {10}{\ignorespaces Konzeptmatrix (vollständige Übersicht)}}{59}{table.462}%
+\contentsline {table}{\numberline {11}{\ignorespaces Accessibility-Verstöße der Testanwendung und zugehörige Prüfquellen}}{66}{table.585}%
+\contentsline {table}{\numberline {12}{\ignorespaces Erkennungsrate der Violations im Proof of Concept}}{67}{table.588}%
+\contentsline {table}{\numberline {13}{\ignorespaces Bewertungsskala für die Empfehlungsqualität der LLM-Ausgaben}}{67}{table.591}%
+\contentsline {table}{\numberline {14}{\ignorespaces Bewertung der Empfehlungsqualität pro Violation}}{68}{table.594}%
