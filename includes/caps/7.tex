@@ -1,112 +1,234 @@
-\chapter{Evaluation \& Diskussion} \label{kap:7} 
-Dieses Kapitel wird als strukturierte To-Do-Liste vorbereitet und anschließend mit Messwerten aus den Runs befüllt.
+\chapter{Evaluation \& Diskussion} \label{kap:7}
 
-\section{To-Do-Liste für Kapitel 7}
+\section{Evaluationsziel und Forschungsfragen}
 
-\subsection*{A. Ziel und Forschungsfragen sauber verankern}
+Die übergeordnete Forschungsfrage dieser Arbeit lautet, inwieweit ein kontextsensitives KI-Assistenzsystem, das Tool-Reports, Playwright-Interaktionsdaten und Quellcode kombiniert, Barrierefreiheitsverstöße in React-basierten Webanwendungen automatisiert erkennen und entwicklernahe Handlungsempfehlungen generieren kann. Diese Frage wird durch zwei Teilforschungsfragen operationalisiert.
+
 \begin{itemize}
-    \item Evaluationsziel in 3--5 Sätzen formulieren: Vergleich von Detektion, Priorisierung und Robustheit.
-    \item \textbf{FF1} operationalisieren: Beitrag lokaler \ac{LLM}s zur Priorisierung und Aufbereitung.
-    \item \textbf{FF2} operationalisieren: Mehrwert von Codekontext und LLM-Detektor gegenüber Tool-only.
+  \item \textbf{TF1:} Welche Typen von Barrierefreiheitsverstößen -- syntaktisch, semantisch und layout-bezogen -- lassen sich durch den gewählten Ansatz zuverlässig erkennen, und wo liegen die methodischen Grenzen?
+  \item \textbf{TF2:} Inwiefern verbessert die Kombination von Tool-Reports, Playwright-Interaktionsdaten und Quellcode die Qualität der generierten Handlungsempfehlungen gegenüber einer Analyse, die ausschließlich auf Tool-Reports und gerenderten \ac{DOM}-Ausschnitten basiert?
 \end{itemize}
 
-\subsection*{B. Versuchsdesign dokumentieren}
-\begin{itemize}
-    \item Modelle nennen und kurz begründen: Qwen2.5-coder-7b, Qwen2.5-coder-14b, Qwen3-32b, DeepSeek-r1-70b.
-    \item Testobjekte beschreiben: 12-, 50- und 100-Fehler-Suite.
-    \item Bedingungen fixieren:
-    \begin{itemize}
-        \item axe-only
-        \item tools-only (axe + Playwright + grep)
-        \item tools + LLM-Priorisierung
-        \item tools + LLM-Detektor + LLM-Priorisierung
-        \item optional: tools + LLM-Detektor + LLM-Priorisierung ohne grep
-    \end{itemize}
-    \item Run-Anzahl je Bedingung festhalten (z. B. 10 Runs für 12er, 5 Runs für 50/100).
-    \item Reproduzierbarkeit dokumentieren: identische Prompts, Temperature = 0.05, Hardware/VM, Zeitfenster.
-\end{itemize}
+Die Beantwortung erfolgt quantitativ über Recall, Konsistenz und Effizienz sowie qualitativ über Priorisierungs- und Fix-Qualität.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Versuchsdesign}
+\label{sec:versuchsdesign}
+
+\paragraph{Testobjekt.}
+Als Testobjekt dient eine eigens entwickelte React-\ac{SPA} (\textit{test-12-Suite}) mit zwölf gezielt eingebetteten \ac{WCAG}-Verstößen (Anhang~\ref{tab:accessibility_verstoesse}). Die Violations decken syntaktische, layout-bezogene und semantische Fehler ab. Dadurch ist die Ground Truth vollständig kontrollierbar.
+
+\paragraph{Modelle und Runs.}
+Es wurden drei lokal ausgeführte Sprachmodelle verglichen: \texttt{qwen2.5\-coder:7b}, \texttt{qwen2.5\-coder:14b} und \texttt{qwen3:32b}. Jedes Modell absolvierte zehn unabhängige Pipeline-Durchläufe auf demselben Testobjekt, sodass sich insgesamt 30~Runs ergeben. Tabelle~\ref{tab:versuchsdesign_uebersicht} fasst die wichtigsten Konfigurationsparameter zusammen. Die Temperatur wurde auf 0.05 gesetzt, um den Nicht-Determinismus der Ausgaben zu minimieren, ohne ihn vollständig zu eliminieren. Der Parameter \texttt{num\_predict} (maximale Ausgabetokens) war für alle Runs auf 3\,072 gesetzt. Da 7b/14b in allen Runs exakt dieses Output-Limit erreichen, wurde \texttt{num\_predict} nach Abschluss der Messreihe auf 6\,144 erhöht, um Folgeläufe mit größerer Sicherheitsmarge gegen Antwortabbruch durchzuführen (vgl. Abschnitt~\ref{sec:limitationen}).
 
 \begin{table}[htbp]
 \centering
 \small
 \renewcommand{\arraystretch}{1.15}
-\begin{tabular}{@{}llll@{}}
+\begin{tabular}{@{}ll@{}}
 \toprule
-\textbf{Modellklasse} & \textbf{Beispielmodell} & \textbf{Erwartete Qualität} & \textbf{Erwartete Laufzeit/Ressourcen} \\
+\textbf{Parameter} & \textbf{Wert} \\
 \midrule
-Klein (7B) & \texttt{qwen2.5-coder:7b} & solide Baseline, höhere Varianz & niedrig bis mittel \\
-Mittel (14B) & \texttt{qwen2.5-coder:14b} & bessere Konsistenz als 7B & mittel \\
-Groß (32B) & \texttt{qwen3:32b} & höhere inhaltliche Präzision & hoch \\
-Sehr groß (70B) & \texttt{deepseek-r1:70b} & höchste Erwartung an Qualität & sehr hoch \\
+Testsuite & test-12 (12~eingebettete Verstöße) \\
+Modelle & \texttt{qwen2.5-coder:7b}, \texttt{qwen2.5-coder:14b}, \texttt{qwen3:32b} \\
+Runs je Modell & 10 \\
+Temperature & 0.05 \\
+\texttt{num\_predict} (Priorisierung) & 3\,072 Tokens \\
+LLM-Detektor Chunks & 5 je Durchlauf \\
+Hardware & CPU-basiert, lokale Ollama-Instanz \\
 \bottomrule
 \end{tabular}
-\caption{Modellklasse vs. erwartetes Verhalten im Evaluationsdesign}
-\label{tab:modellklasse_erwartung}
+\caption{Konfigurationsparameter der Benchmarkläufe}
+\label{tab:versuchsdesign_uebersicht}
 \end{table}
 
-\subsection*{C. Metriken fest definieren}
-\begin{itemize}
-    \item \textbf{Detektion}: Recall, Precision, F1, False-Positive-Rate.
-    \item \textbf{Qualität der Empfehlung}: Stufe 0/1/2 gemäß Tab.~\ref{tab:bewertungsskala_empfehlungen}.
-    \item \textbf{Formatstabilität}: Parsing-Quote (\texttt{parsed.success}).
-    \item \textbf{Effizienz}: Laufzeit pro Phase, Gesamtlaufzeit, Prompt-/Output-Tokens.
-\end{itemize}
+\paragraph{Metriken.}
+Ausgewertet werden vier Metriken: (1)~\textbf{Recall} (erkannte Violations relativ zur Ground Truth), (2)~\textbf{Priorisierungsqualität} (Korrektheit der Must-have/Nice-to-have-Klassifikation), (3)~\textbf{Fix-Qualität} nach der dreistufigen Skala aus Anhang~\ref{tab:bewertungsskala_empfehlungen} sowie (4)~\textbf{Effizienz} (Laufzeit und Konsistenz über mehrere Runs). Die vollständigen Rohdaten liegen zusätzlich als CSV-Export vor (Anhang~\ref{tab:csv_beispiel}).
 
-\subsection*{D. Auswertung in 3 Dimensionen (Prüfer-Fokus)}
-\textbf{Dimension 1: Verstoßkategorie} (syntaktisch, semantisch, layout)
-\begin{itemize}
-    \item Für jede Kategorie Recall/Precision pro Bedingung berichten.
-    \item Kategorieabhängige Stärken/Schwächen der Modelle diskutieren.
-\end{itemize}
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Ergebnisse: Detektionsqualität (Recall)}
+\label{sec:ergebnisse_recall}
 
-\textbf{Dimension 2: WCAG-Kriteriumsebene} (z. B. 1.1.1, 2.1.1, 2.4.7)
-\begin{itemize}
-    \item Pro Kriterium Trefferquote je Modell/Bedingung darstellen.
-    \item Besonders kritische Kriterien explizit vergleichen (z. B. 2.1.1 Keyboard, 2.4.7 Fokus sichtbar).
-\end{itemize}
+\paragraph{Baseline.}
+Ohne LLM-Detektor erkennt die Tool-Pipeline (axe-core~+~Playwright~+~grep) in jedem Durchlauf stabil \textbf{8 von 12~Violations} (Recall: 66,7\,\%). Nicht erkannt werden V2, V8, V11 und V12. Diese Fälle erfordern überwiegend semantische Kontextinterpretation, die in der gewählten Tool-Konfiguration nicht vollständig abgedeckt ist. Insbesondere fehlt im Playwright-Set ein dedizierter Fokus-Trap-Test, wodurch V8 regelbasiert nicht zuverlässig erfasst wird.
 
-\textbf{Dimension 3: Pipeline-Bedingung / Modellgröße}
-\begin{itemize}
-    \item Effekt von Komponenten (Ablation) und Modellgröße auf Qualität und Laufzeit zeigen.
-    \item Trade-off diskutieren: Qualität vs. Laufzeit/Tokenkosten.
-\end{itemize}
+\paragraph{LLM-Detektor-Augmentierung.}
+Tabelle~\ref{tab:recall_modellvergleich} zeigt den Recall nach Hinzunahme des LLM-Detektors. Eine Violation gilt als erkannt, wenn sie in der Mehrzahl der zehn Runs im finalen Report erscheint.
 
-\subsection*{E. Ergebnisdarstellung (quantitativ)}
-\begin{itemize}
-    \item Tabelle: Gesamtmetriken pro Modell \(\times\) Bedingung \(\times\) Suite.
-    \item Tabelle: Metriken nach den 3 Dimensionen.
-    \item Tabelle: Laufzeit und Tokens (Median, Mittelwert, Streuung).
-    \item Tabellen im Anhang referenzieren und bei Bedarf ergänzen.
-\end{itemize}
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Bedingung} & \textbf{Erkannte Violations} & \textbf{Recall} & \textbf{Neu ggü. Baseline} & \textbf{Nicht erkannt} \\
+\midrule
+Baseline (Tools only) & 8\,/\,12 & 66,7\,\% & -- & V2, V8, V11, V12 \\
++ \texttt{qwen2.5-coder:7b} & 9\,/\,12 & 75,0\,\% & +V8 & V2, V10*, V11, V12 \\
++ \texttt{qwen2.5-coder:14b} & 11\,/\,12 & 91,7\,\% & +V2, +V8, +V12 & V11 (instabil) \\
++ \texttt{qwen3:32b} & 11--12\,/\,12 & 91,7--100\,\% & +V2, +V8, +V11, +V12 & -- \\
+\bottomrule
+\end{tabular}
+\caption[Recall-Vergleich je Bedingung und Modell]{Recall der ACE-Pipeline je Bedingung. *\texttt{qwen2.5-coder:7b} lässt V10 (aria-hidden) teilweise aus der Ausgabe heraus -- axe-core erkennt V10 zuverlässig, das Modell übernimmt es aber nicht konsistent in den Report.}
+\label{tab:recall_modellvergleich}
+\end{table}
 
-\subsection*{F. Ergebnisdarstellung (qualitativ)}
-\begin{itemize}
-    \item Mindestens drei Fallbeispiele: guter Fix, teilweise brauchbar, Halluzination.
-    \item Je Fall: Input-Finding, Modellantwort, Bewertung (0/1/2), kurze Begründung.
-\end{itemize}
+Die detaillierte Aufschlüsselung für alle 12~Violations mit der jeweiligen Erkennungsquelle findet sich in Anhang~\ref{tab:erkennungsrate_poc}.
 
-\subsection*{G. Limitationen und Validität}
-\begin{itemize}
-    \item axe-core nur initialer Zustand (kein vollständiger Re-Scan je Zustand).
-    \item Regex-Limits von grep und mögliche False Positives.
-    \item Modellbedingte Halluzinationen und Formatabweichungen.
-    \item Externe Validität: zunächst nur eine SPA-Klasse als Testobjekt.
-\end{itemize}
+\paragraph{Beitrag des LLM-Detektors.}
+Der zentrale Mehrwert liegt in der Erkennung von Violations, die in der Baseline fehlen. V8, V11 und V12 werden erst durch die kontextsensitive, chunk-basierte Codeanalyse robust erfasst. V2 (fehlendes \texttt{aria-label} auf einem Icon-Button) wird ebenfalls erst mit LLM-Unterstützung konsistent erkannt.
 
-\subsection*{H. Beantwortung der Forschungsfragen (am Kapitelende)}
-\begin{itemize}
-    \item FF1 mit klarer Ja/Nein-Aussage und 2--3 Kennzahlen beantworten.
-    \item FF2 mit klarer Ja/Nein-Aussage und 2--3 Kennzahlen beantworten.
-    \item Keine offenen Interpretationen ohne Zahlen stehen lassen.
-\end{itemize}
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Ergebnisse: Priorisierungsqualität}
+\label{sec:ergebnisse_priorisierung}
 
-\section{Ergebnisse entlang der Kriterien und Limitationen} \label{sec:limitationen}
+Das Prompt-Design schreibt dem Modell vor, Findings nach Must-have (WCAG~Level~A/AA, Severity critical/serious) und Nice-to-have (moderate/minor oder Level~AAA) zu kategorisieren. Von den 12 eingebetteten Violations sind elf eindeutig dem Must-have-Bereich zuzuordnen (WCAG~Level~A oder~AA, Severity serious oder critical); lediglich V12 (Mindestgröße 2.5.8~AA, moderate) ist grenzwertig.
 
-\textit{TODO: Nach Abschluss der Runs mit den Ergebnissen aus Abschnitt A--H befüllen.}
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Modell} & \textbf{Must-have Ø} & \textbf{Nice-to-have Ø} & \textbf{Gesamt-Findings Ø} & \textbf{Bewertung} \\
+\midrule
+\texttt{qwen2.5-coder:7b}  & 5,0 & 18,3 & 22,3 & Mangelhaft \\
+\texttt{qwen2.5-coder:14b} & 20,7 & 0,0  & 31,8 & Undifferenziert \\
+\texttt{qwen3:32b}         & 13,3 & 6,7  & 31,2 & Gut \\
+\bottomrule
+\end{tabular}
+\caption{Priorisierungsverhalten der drei Modelle (Mittelwerte über 10 Runs)}
+\label{tab:priorisierungsqualitaet}
+\end{table}
 
-\section{Handlungsempfehlungen und Ausblick} \label{Ausblick}
+\texttt{qwen2.5-coder:7b} zeigt eine \textbf{inverse Priorisierung}: Pflichtanforderungen wie WCAG~2.4.7 (Fokusindikator, pw-001, Level~AA) und WCAG~2.4.1 (Skip-Link, pw-002, Level~A) werden als Nice-to-have klassifiziert, während tatsächlich optionale Findings als Must-have eingestuft werden. Für einen BITV-konformen Einsatz ist dieses Modell daher \textit{nicht geeignet}.
 
-\textit{TODO: Auf Basis der 3-Dimensionen-Auswertung konkrete Handlungsempfehlungen ableiten.}
+\texttt{qwen2.5-coder:14b} klassifiziert nahezu alle Findings als Must-have (\O{}~20,7) und gibt 0,0 Nice-to-have aus. Da die Ausgabe in allen zehn Runs bei exakt 3\,072~Tokens endet, ist eine starke Length-Bias wahrscheinlich: spätere Listenanteile (typisch Nice-to-have) werden tendenziell unterrepräsentiert. Die Interpretation der Kategorisierung bleibt daher eingeschränkt.
 
+\texttt{qwen3:32b} liefert mit \O{}~13,3 Must-have und 6,7 Nice-to-have die \textbf{ausgewogenste Trennung}. Alle WCAG-Level-A/AA-Violations mit Severity serious werden korrekt als Must-have eingestuft; Findings mit Severity moderate (z.\,B. Mindestgröße von Buttons, \texttt{role="button"} ohne \texttt{tabIndex}) werden als Nice-to-have kategorisiert.
 
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Ergebnisse: Fix-Qualität (qualitativ)}
+\label{sec:ergebnisse_qualitaet}
 
+Die Bewertungsskala unterscheidet drei Stufen: Stufe~2 (konkret: Dateiname, Zeilennummer, umsetzbarer Code-Vorschlag), Stufe~1 (teilweise: richtiger Fix-Typ ohne konkreten Kontext) und Stufe~0 (generisch: nur Problembeschreibung ohne Lösung). Die vollständige Bewertung aller zwölf Violations findet sich in Anhang~\ref{tab:empfehlungsqualitaet}.
+
+\paragraph{Fallbeispiel 1 -- Konkrete Empfehlung (Stufe~2).}
+Für V8 (Modaler Dialog ohne Fokus-Trap) generiert \texttt{qwen3:32b}:
+
+\begin{lstlisting}[language={}, basicstyle=\ttfamily\scriptsize, breaklines=true]
+// ContactForm.tsx -- Fokus-Trap implementieren
+useEffect(() => {
+  if (modalOpen) {
+    const firstFocusable = document.querySelector<HTMLElement>('.modal-overlay [tabIndex]');
+    // ...Tab-Handler mit Shift+Tab-Logik
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }
+}, [modalOpen]);
+\end{lstlisting}
+
+Der Vorschlag benennt die korrekte Datei, nutzt einen React-konformen \texttt{useEffect}-Ansatz und enthält vollständige Tab-Trap-Logik -- Stufe~2.
+
+\paragraph{Fallbeispiel 2 -- Teilweise Empfehlung (Stufe~1).}
+\texttt{qwen2.5-coder:14b} empfiehlt für V4 (Kontrastverhältnis): \textit{``Ändere Hintergrund- oder Textfarbe, um Kontrast zu verbessern''} mit einem Inline-Style-Beispiel ohne spezifische Hex-Werte aus dem tatsächlichen Design. Die Datei wird korrekt benannt, der Fix-Typ stimmt, aber der konkrete Hex-Code fehlt -- Stufe~1.
+
+\paragraph{Fallbeispiel 3 -- Fehlklassifikation (7b).}
+\texttt{qwen2.5-coder:7b} stuft den Fokusindikator-Verlust (V5, WCAG~2.4.7~AA, Severity serious) als Nice-to-have ein. In der Ausgabe heißt es: \textit{``Optionale Verbesserung: Outline-Stil anpassen''}. Tatsächlich handelt es sich um eine gesetzlich relevante Pflichtanforderung -- klare Fehlklassifikation.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Ergebnisse: Effizienz und Robustheit}
+\label{sec:ergebnisse_effizienz}
+
+\paragraph{Laufzeit.}
+Tabelle~\ref{tab:laufzeit_modelle} zeigt die mittleren Laufzeiten je Pipeline-Phase. Die Gesamtlaufzeit umfasst die fünf Phasen: axe-core, Playwright, LLM-Detektor (5~Chunks), Prompt-Build und LLM-Priorisierung.
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+\textbf{Modell} & \textbf{LLM-Detektor Ø} & \textbf{LLM-Priorisierung Ø} & \textbf{Gesamt Ø} & \textbf{Min} & \textbf{Max} \\
+\midrule
+\texttt{qwen2.5-coder:7b}  & 99\,s  & 53\,s  & 173\,s & 133\,s & 199\,s \\
+\texttt{qwen2.5-coder:14b} & 165\,s & 143\,s & 320\,s & 313\,s & 330\,s \\
+\texttt{qwen3:32b}         & 349\,s & 337\,s & 681\,s & 631\,s & 721\,s \\
+\bottomrule
+\end{tabular}
+\caption{Mittlere Laufzeiten je Pipeline-Phase (Angaben in Sekunden, $n = 10$ je Modell)}
+\label{tab:laufzeit_modelle}
+\end{table}
+
+\texttt{qwen3:32b} benötigt im Mittel das 3,9-fache der 7b-Laufzeit, liefert dafür aber die höchste inhaltliche Stabilität und die beste Priorisierungsqualität. Für lokale, nicht echtzeitkritische Audits sind diese Laufzeiten vertretbar; für schnelle Feedback-Loops ist 14b praktikabler.
+
+\paragraph{Konsistenz.}
+Die Standardabweichung der LLM-Detektor-Findings unterscheidet sich zwischen den Modellen erheblich: \texttt{qwen3:32b} erreicht $\sigma = 0{,}42$ (Fast-Determinismus: 90\,\% aller Runs liefern exakt 19~Findings), während \texttt{qwen2.5-coder:14b} mit $\sigma = 4{,}02$ eine bimodale Verteilung zeigt (3~Runs: 14~Findings, 7~Runs: 22--23~Findings). \texttt{qwen2.5-coder:7b} liegt mit $\sigma = 2{,}67$ dazwischen, produziert aber zwei Ausreißer-Runs (6 und 17~Findings).
+
+Die Aggregation verdeutlicht, dass die festen Detektoren (axe, Playwright, grep) über alle 30 Runs vollständig deterministisch bleiben, während die Varianz ausschließlich aus der LLM-Stufe stammt. Damit ist die Vergleichbarkeit der Modellläufe methodisch gegeben, da die nicht-LLM-bedingte Messvarianz praktisch null ist (vgl. Anhang~\ref{tab:detektor_konsistenz}).
+
+\paragraph{Parsing-Robustheit.}
+In allen 30~Runs wurde der LLM-Output erfolgreich geparst (\texttt{parsed.success: true}, 100\,\%). Das Prompt-Design mit festem Ausgabeformat zeigt damit eine hohe Robustheit über alle drei Modelle.
+
+\paragraph{Token-Nutzung.}
+\texttt{qwen2.5-coder:7b} und \texttt{qwen2.5-coder:14b} erreichen in allen zehn Runs exakt 3\,072~Output-Tokens. Das spricht für ein häufiges Erreichen des Output-Limits und erhöht das Risiko unvollständiger Antworten. Bei \texttt{qwen3:32b} erreichen 6 von 10~Runs das Limit, während die übrigen 4~Runs bei 2\,571--3\,066~Tokens enden. Die Erhöhung von \texttt{num\_predict} auf 6\,144 für künftige Runs ist daher methodisch sinnvoll, um den Einfluss eines möglichen Antwortabbruchs zu reduzieren.
+
+Zur Einordnung der Laufzeitkosten wurden zusätzlich Effizienzkennzahlen berechnet (LLM-Findings pro Sekunde sowie Zusatzgewinn gegenüber 7b). Diese zeigen, dass 14b trotz höherer absoluter Laufzeit den besten Kompromiss zwischen Zusatznutzen und Rechenaufwand bietet, während 32b vor allem durch Reproduzierbarkeit statt durch deutliche Mehrerkennung überzeugt (vgl. Anhang~\ref{tab:effizienz_metriken}).
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Limitationen und Validität}
+\label{sec:limitationen}
+
+\paragraph{Externe Validität.}
+Die Evaluation basiert auf einer einzelnen, synthetisch konstruierten Testsuite (test-12) mit 12~kontrollierten Violations. Eine direkte Übertragung auf produktive Anwendungen mit größeren Codebasen und komplexeren Interaktionsmustern ist daher nur eingeschränkt zulässig. Größere Suiten (test-50, test-100) sind als Folgeschritt vorgesehen.
+
+\paragraph{Token-Limit-Effekt.}
+Da 7b und 14b in allen Runs das Output-Limit von 3\,072~Tokens erreichen und 32b dies in 6 von 10~Runs ebenfalls erreicht, sind die Priorisierungszählungen (Must-have/Nice-to-have) nur eingeschränkt interpretierbar. Die Recall-Messung ist davon weniger betroffen, da zentrale Violations typischerweise früher im Output erscheinen; dennoch können einzelne Findings in späteren Abschnitten fehlen.
+
+Methodisch bedeutet dies: Die Priorisierungsmetrik ist in der vorliegenden Messreihe stärker als \textit{untere Schranke} zu interpretieren. Aussagen zur absoluten Anzahl von Nice-to-have-Einträgen sind erst nach Replikation mit erhöhtem \texttt{num\_predict} robust belastbar.
+
+\paragraph{Grep-Limitierungen.}
+Die sechs grep-Pattern erkennen bekannte Anti-Patterns zuverlässig auf Textebene, sind aber nicht erschöpfend und struktursensitiv. Pattern 6 (onClick ohne onKeyDown) kann in bestimmten Konstellationen legitime Implementierungen als Violation markieren.
+
+\paragraph{Halluzinationen und Über-Detektion.}
+Alle drei Modelle erzeugen in einzelnen Runs Findings ohne belastbare Grundlage in den Eingabedaten. Die LLM-Detektor-Findings überschreiten in mehreren 14b-Runs die Ground-Truth-Zahl von 12 deutlich (bis zu 23~LLM-Findings). Trotz implementierter technischer Deduplizierung auf Basis von \texttt{ruleId|filePath|startLine} verbleiben semantisch redundante bzw. umformulierte Dubletten, sodass eine inhaltliche Nachprüfung weiterhin erforderlich ist.
+
+Ergänzend ist zu beachten, dass eine höhere Finding-Zahl nicht automatisch eine höhere Korrektheit bedeutet. Ein Teil der Mehrfunde repräsentiert sinnvolle Zusatzhinweise, ein anderer Teil semantische Umformulierungen bereits bekannter Probleme. Für produktive Compliance-Prozesse ist deshalb ein zweistufiges Vorgehen angezeigt: (1) automatisierte Vorselektion, (2) kuratierte fachliche Endprüfung.
+
+\paragraph{Hardware-Abhängigkeit.}
+Alle Laufzeitmessungen wurden auf einem einzelnen CPU-basierten System durchgeführt. Auf GPU-beschleunigter Hardware oder mit quantisierten Modellversionen wären erheblich kürzere Laufzeiten zu erwarten.
+
+\paragraph{Interne Validität.}
+Die Ground-Truth-Violations sind kontrolliert, dennoch bleibt die Interpretation der Priorisierungsmetriken durch den Token-Limit-Effekt beeinträchtigt. Für eine belastbarere Trennung von Modellqualität und Output-Längen-Effekt sind Replikationsläufe mit erhöhtem \texttt{num\_predict} erforderlich.
+
+Zusätzlich existiert ein Konstruktvaliditätsrisiko durch die Operationalisierung ,,Violation erkannt'', da die Erkennung über Report-Präsenz (Mehrheit der Runs) und nicht über eine semantisch kanonische Äquivalenzklasse gemessen wird. Dies kann bei paraphrasierten Findings zu konservativen oder liberalen Zuordnungen führen.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Handlungsempfehlungen und Ausblick}
+\label{Ausblick}
+
+Aus den Ergebnissen lassen sich drei kontextspezifische Handlungsempfehlungen ableiten. Erstens sollte \texttt{qwen3:32b} als Referenzmodell für compliance-relevante Endaudits eingesetzt werden, da es die höchste Stabilität in Recall, Priorisierung und Fix-Qualität zeigt. Zweitens ist \texttt{qwen2.5-coder:14b} für reguläre Entwicklungs- und QS-Zyklen die pragmatische Standardoption, weil es den besten Kompromiss aus Qualitätsniveau und Laufzeit erreicht. Drittens kann \texttt{qwen2.5-coder:7b} für zeitkritische CI-Smoketests genutzt werden; für rechtlich relevante Pflichtprüfungen ist es aufgrund der inversen Priorisierung jedoch nicht ausreichend. Zusätzlich sollte \texttt{num\_predict} auf mindestens 6\,144 erhöht und der Playwright-Satz um einen dedizierten Fokus-Trap-Test ergänzt werden.
+
+Als unmittelbarer nächster Schritt sind Benchmarkläufe auf den größeren Testsuiten (test-50 und test-100) vorgesehen, um die Skalierbarkeit des Ansatzes zu validieren und Aussagen über die Token-Budget-Steuerung bei größeren Codebasen treffen zu können. Mittelfristig wäre eine Evaluation auf realen BWEC-Applikationen wünschenswert, um die externe Validität zu erhöhen. Darüber hinaus bietet das strukturierte JSON-Format des ACE-Reports eine direkte Anschlussmöglichkeit für KI-Agenten-Workflows, in denen der Report als Kontext für ein nachgelagertes LLM dient, das die Fixes automatisiert umsetzt.
+
+Für die Folgeevaluation sollte ein festes Replikationsprotokoll genutzt werden (gleiche Seeds, identische Modellversionen, identische Prompt-Templates, dokumentierte Hardware), um Zeitreihenvergleiche zwischen test-12, test-50 und test-100 ohne methodische Brüche zu ermöglichen.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Beantwortung der Forschungsfragen}
+\label{sec:ff_beantwortung}
+
+\paragraph{Übergeordnete Forschungsfrage}
+
+Die übergeordnete Forschungsfrage kann \textbf{überwiegend positiv} beantwortet werden: Das kontextsensitive Assistenzsystem erkennt einen großen Teil relevanter Barrierefreiheitsverstöße automatisiert und erzeugt entwicklernahe Empfehlungen mit konkreten Datei-/Zeilenbezügen. Die Leistungsfähigkeit hängt jedoch deutlich vom gewählten Modell und von Token-Limits ab, sodass die Systemleistung nicht als modellunabhängig verstanden werden darf.
+
+\paragraph{TF1: Welche Verstoßtypen werden zuverlässig erkannt und wo liegen Grenzen?}
+
+\textbf{Ja} -- mit modellabhängigen Einschränkungen. Mit \texttt{qwen3:32b} erkennt die vollständige Pipeline in der test-12-Suite zuverlässig 11--12 von 12 eingebetteten Violations (Recall: 91,7--100\,\%) bei hoher Ausgabequalität. \texttt{qwen2.5-coder:14b} erreicht ebenfalls hohen Recall (91,7\,\%), zeigt aber deutliche Schwächen in der Priorisierungsinterpretierbarkeit unter Token-Limit. \texttt{qwen2.5-coder:7b} ist für den Pflichtbereich aufgrund inverser Priorisierung nicht geeignet.
+
+Damit werden syntaktische und mehrere semantische Verstöße zuverlässig erkannt; methodische Grenzen liegen vor allem bei output-limitierten Priorisierungsläufen, semantischen Dubletten sowie der externen Validität (nur test-12 in kontrollierter Umgebung).
+
+\paragraph{TF2: Verbessert die Kontextkombination die Qualität der Empfehlungen gegenüber Tool-only?}
+
+\textbf{Ja, der Mehrwert ist messbar und qualitativ bedeutsam.} Die Tool-Pipeline (axe + Playwright + grep) erreicht einen Recall von 66,7\,\% (8/12). Durch den LLM-Detektor steigt der Recall auf bis zu 100\,\% (+4~Violations). Dabei handelt es sich um semantische oder kontextabhängige Violations, die durch keine der regelbasierten Quellen zuverlässig erreichbar sind: V8 (modaler Fokus-Trap), V11 (DOM-/visuelle Reihenfolge) und V12 (Mindestgröße interaktiver Elemente) sind LLM-exklusive Funde. V2 (fehlendes \texttt{aria-label} auf Icon-Button) wird ebenfalls erst durch die LLM-Analyse konsistent erfasst. Damit belegt die Evaluation, dass der LLM-Detektor kein Redundanzmodul ist, sondern eine qualitativ eigenständige Detektionsstufe für Violation-Typen schließt, die für automatisierte BITV-Prüfungen bislang unerreichbar waren.
+
+Zusätzlich verbessert die Kontextkombination die Umsetzbarkeit der Empfehlungen, weil Tool-Befunde mit Interaktions- und Quellcodekontext verbunden werden und dadurch konkrete, entwicklungsnahe Fix-Vorschläge entstehen. Gegenüber einer reinen Tool/DOM-Sicht steigt damit nicht nur die Erkennungsbreite, sondern auch die praktische Anschlussfähigkeit für die Behebung.

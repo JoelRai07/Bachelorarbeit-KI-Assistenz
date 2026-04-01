@@ -1,7 +1,7 @@
 \babel@toc {ngerman}{}\relax 
-\contentsline {chapter}{Abkürzungsverzeichnis}{IV}{chapter*.8}%
-\contentsline {chapter}{Abbildungsverzeichnis}{V}{section*.10}%
-\contentsline {chapter}{Tabellenverzeichnis}{VI}{section*.12}%
+\contentsline {chapter}{Abkürzungsverzeichnis}{V}{chapter*.8}%
+\contentsline {chapter}{Abbildungsverzeichnis}{VI}{section*.10}%
+\contentsline {chapter}{Tabellenverzeichnis}{VII}{section*.12}%
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.13}%
 \contentsline {section}{\numberline {1.1}Motivation und Kontext}{1}{section.16}%
 \contentsline {section}{\numberline {1.2}Problemstellung}{2}{section.32}%
@@ -74,9 +74,37 @@
 \contentsline {section}{\numberline {7.8}Pipeline-Orchestrierung}{50}{section.429}%
 \contentsline {section}{\numberline {7.9}Beispielabläufe und Ergebnisse am Untersuchungsobjekt}{51}{section.438}%
 \contentsline {chapter}{\numberline {8}Evaluation \& Diskussion}{52}{chapter.439}%
-\contentsline {section}{\numberline {8.1}To-Do-Liste für Kapitel 7}{52}{section.440}%
-\contentsline {section}{\numberline {8.2}Ergebnisse entlang der Kriterien und Limitationen}{54}{section.450}%
-\contentsline {section}{\numberline {8.3}Handlungsempfehlungen und Ausblick}{54}{section.451}%
-\contentsline {chapter}{\numberline {9}Fazit}{55}{chapter.452}%
-\contentsline {chapter}{Anhang}{56}{chapter*.453}%
-\contentsline {chapter}{Literaturverzeichnis}{69}{section*.595}%
+\contentsline {section}{\numberline {8.1}Evaluationsziel und Forschungsfragen}{52}{section.440}%
+\contentsline {section}{\numberline {8.2}Versuchsdesign}{52}{section.441}%
+\contentsline {paragraph}{\nonumberline Testobjekt.}{52}{paragraph*.443}%
+\contentsline {paragraph}{\nonumberline Modelle und Runs.}{52}{paragraph*.446}%
+\contentsline {paragraph}{\nonumberline Metriken.}{53}{paragraph*.449}%
+\contentsline {section}{\numberline {8.3}Ergebnisse: Detektionsqualität (Recall)}{53}{section.450}%
+\contentsline {paragraph}{\nonumberline Baseline.}{53}{paragraph*.452}%
+\contentsline {paragraph}{\nonumberline LLM-Detektor-Augmentierung.}{53}{paragraph*.454}%
+\contentsline {paragraph}{\nonumberline Beitrag des LLM-Detektors.}{54}{paragraph*.457}%
+\contentsline {section}{\numberline {8.4}Ergebnisse: Priorisierungsqualität}{54}{section.458}%
+\contentsline {section}{\numberline {8.5}Ergebnisse: Fix-Qualität (qualitativ)}{54}{section.460}%
+\contentsline {paragraph}{\nonumberline Fallbeispiel 1 -- Konkrete Empfehlung (Stufe~2).}{55}{paragraph*.462}%
+\contentsline {paragraph}{\nonumberline Fallbeispiel 2 -- Teilweise Empfehlung (Stufe~1).}{55}{paragraph*.474}%
+\contentsline {paragraph}{\nonumberline Fallbeispiel 3 -- Fehlklassifikation (7b).}{55}{paragraph*.476}%
+\contentsline {section}{\numberline {8.6}Ergebnisse: Effizienz und Robustheit}{55}{section.477}%
+\contentsline {paragraph}{\nonumberline Laufzeit.}{55}{paragraph*.479}%
+\contentsline {paragraph}{\nonumberline Konsistenz.}{56}{paragraph*.482}%
+\contentsline {paragraph}{\nonumberline Parsing-Robustheit.}{56}{paragraph*.484}%
+\contentsline {paragraph}{\nonumberline Token-Nutzung.}{56}{paragraph*.486}%
+\contentsline {section}{\numberline {8.7}Limitationen und Validität}{56}{section.487}%
+\contentsline {paragraph}{\nonumberline Externe Validität.}{56}{paragraph*.489}%
+\contentsline {paragraph}{\nonumberline Token-Limit-Effekt.}{56}{paragraph*.491}%
+\contentsline {paragraph}{\nonumberline Grep-Limitierungen.}{57}{paragraph*.493}%
+\contentsline {paragraph}{\nonumberline Halluzinationen und Über-Detektion.}{57}{paragraph*.495}%
+\contentsline {paragraph}{\nonumberline Hardware-Abhängigkeit.}{57}{paragraph*.497}%
+\contentsline {paragraph}{\nonumberline Interne Validität.}{57}{paragraph*.499}%
+\contentsline {section}{\numberline {8.8}Handlungsempfehlungen und Ausblick}{58}{section.500}%
+\contentsline {section}{\numberline {8.9}Beantwortung der Forschungsfragen}{58}{section.501}%
+\contentsline {paragraph}{\nonumberline Übergeordnete Forschungsfrage}{58}{paragraph*.503}%
+\contentsline {paragraph}{\nonumberline TF1: Welche Verstoßtypen werden zuverlässig erkannt und wo liegen Grenzen?}{58}{paragraph*.505}%
+\contentsline {paragraph}{\nonumberline TF2: Verbessert die Kontextkombination die Qualität der Empfehlungen gegenüber Tool-only?}{59}{paragraph*.507}%
+\contentsline {chapter}{\numberline {9}Fazit}{60}{chapter.508}%
+\contentsline {chapter}{Anhang}{61}{chapter*.509}%
+\contentsline {chapter}{Literaturverzeichnis}{82}{section*.673}%

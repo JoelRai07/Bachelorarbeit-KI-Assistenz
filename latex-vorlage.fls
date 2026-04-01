@@ -594,6 +594,7 @@ INPUT .\graphics\Sequenzdiagramm.png
 INPUT .\graphics\Sequenzdiagramm.png
 INPUT .\graphics\Sequenzdiagramm.png
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1000.tfm
+INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcsx1440.tfm
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\eccc1095.tfm
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx0600.tfm
 INPUT .\includes\extra\erklaerung_ki.tex
@@ -611,6 +612,8 @@ INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecb
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx0600.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1095.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1095.pk
+INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcsx1440.pk
+INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcsx1440.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1000.pk

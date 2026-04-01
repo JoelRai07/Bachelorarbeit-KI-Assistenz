@@ -7,9 +7,20 @@
 \contentsline {table}{\numberline {6}{\ignorespaces Wesentliche Abhängigkeiten des \acs {PoC}}}{43}{table.361}%
 \contentsline {table}{\numberline {7}{\ignorespaces Implementierte Playwright-Checks mit \ac {WCAG}-Zuordnung und Kategorie}}{45}{table.379}%
 \contentsline {table}{\numberline {8}{\ignorespaces Implementierte grep-Patterns mit \ac {WCAG}-Zuordnung}}{46}{table.384}%
-\contentsline {table}{\numberline {9}{\ignorespaces Modellklasse vs. erwartetes Verhalten im Evaluationsdesign}}{53}{table.443}%
-\contentsline {table}{\numberline {10}{\ignorespaces Konzeptmatrix (vollständige Übersicht)}}{59}{table.462}%
-\contentsline {table}{\numberline {11}{\ignorespaces Accessibility-Verstöße der Testanwendung und zugehörige Prüfquellen}}{66}{table.585}%
-\contentsline {table}{\numberline {12}{\ignorespaces Erkennungsrate der Violations im Proof of Concept}}{67}{table.588}%
-\contentsline {table}{\numberline {13}{\ignorespaces Bewertungsskala für die Empfehlungsqualität der LLM-Ausgaben}}{67}{table.591}%
-\contentsline {table}{\numberline {14}{\ignorespaces Bewertung der Empfehlungsqualität pro Violation}}{68}{table.594}%
+\contentsline {table}{\numberline {9}{\ignorespaces Konfigurationsparameter der Benchmarkläufe}}{53}{table.447}%
+\contentsline {table}{\numberline {10}{\ignorespaces Recall-Vergleich je Bedingung und Modell}}{53}{table.455}%
+\contentsline {table}{\numberline {11}{\ignorespaces Priorisierungsverhalten der drei Modelle (Mittelwerte über 10 Runs)}}{54}{table.459}%
+\contentsline {table}{\numberline {12}{\ignorespaces Mittlere Laufzeiten je Pipeline-Phase (Angaben in Sekunden, $n = 10$ je Modell)}}{55}{table.480}%
+\contentsline {table}{\numberline {13}{\ignorespaces Konzeptmatrix (vollständige Übersicht)}}{64}{table.518}%
+\contentsline {table}{\numberline {14}{\ignorespaces Accessibility-Verstöße der Testanwendung und zugehörige Prüfquellen}}{71}{table.641}%
+\contentsline {table}{\numberline {15}{\ignorespaces Erkennungsrate der Violations im Proof of Concept}}{72}{table.644}%
+\contentsline {table}{\numberline {16}{\ignorespaces Bewertungsskala für die Empfehlungsqualität der LLM-Ausgaben}}{73}{table.647}%
+\contentsline {table}{\numberline {17}{\ignorespaces Bewertung der Empfehlungsqualität pro Violation}}{74}{table.650}%
+\contentsline {table}{\numberline {18}{\ignorespaces Recall-Matrix aller Violations je Bedingung}}{75}{table.653}%
+\contentsline {table}{\numberline {19}{\ignorespaces Rohdaten aller 30 Benchmark-Runs}}{76}{table.656}%
+\contentsline {table}{\numberline {20}{\ignorespaces Modell-Leistungsvergleich (alle Metriken)}}{77}{table.659}%
+\contentsline {table}{\numberline {21}{\ignorespaces Detektor-Konsistenz über alle Runs}}{78}{table.662}%
+\contentsline {table}{\numberline {22}{\ignorespaces Effizienzvergleich der Modelle}}{79}{table.665}%
+\contentsline {table}{\numberline {23}{\ignorespaces Über-Detektion relativ zu 12 Ground-Truth-Violations}}{80}{table.668}%
+\contentsline {table}{\numberline {24}{\ignorespaces CSV-Spaltenschema}}{81}{table.671}%
+\contentsline {table}{\numberline {25}{\ignorespaces Beispielzeilen aus dem CSV-Export}}{81}{table.672}%

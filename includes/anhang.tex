@@ -444,33 +444,33 @@ Erwartete Ausgabe:
 \renewcommand{\arraystretch}{1.2}
 \caption{Erkennungsrate der Violations im Proof of Concept}
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{|c|p{5cm}|c|c|c|p{3cm}|}
+\begin{tabular}{|c|p{5cm}|c|p{2.6cm}|c|p{2.8cm}|}
 \hline
-\textbf{\#} & \textbf{Violation} & \textbf{Erkannt (\checkmark/$\times$)} & \textbf{Quelle korrekt} & \textbf{False Positive} & \textbf{Anmerkung} \\
+\textbf{\#} & \textbf{Violation} & \textbf{Erkannt (\checkmark/$\times$)} & \textbf{Tatsächliche Quelle} & \textbf{False Positive} & \textbf{Anmerkung} \\
 \hline
-1 & \texttt{<img>} ohne alt-Attribut & \checkmark & axe-core \checkmark & -- & \\
+1 & \texttt{<img>} ohne alt-Attribut & \checkmark & axe-core & -- & Alle Modelle \\
 \hline
-2 & \texttt{<button>} ohne Label & \checkmark & axe-core \checkmark & -- & \\
+2 & \texttt{<button>} ohne \texttt{aria-label} & \checkmark & LLM-Detektor & -- & Nur 14b/32b; 7b miss \\
 \hline
-3 & Formularfeld ohne \texttt{<label>} &  &  &  &  \\
+3 & Formularfeld ohne \texttt{<label>} & \checkmark & axe-core + grep & -- & Alle Modelle \\
 \hline
-4 & Kontrastverhältnis $< 4.5:1$ &  &  &  &  \\
+4 & Kontrastverhältnis $< 4.5:1$ & \checkmark & axe-core & -- & 2 axe-Findings (nav + submit) \\
 \hline
-5 & Fokus-Outline entfernt (\texttt{outline: none}) &  &  &  &  \\
+5 & Fokus-Outline entfernt (\texttt{outline: none}) & \checkmark & axe-core + Playwright & -- & Alle Modelle \\
 \hline
-6 & onClick ohne onKeyDown &  &  &  &  \\
+6 & onClick ohne onKeyDown & \checkmark & grep & -- & Alle Modelle \\
 \hline
-7 & \texttt{role="button"} auf \texttt{<div>} ohne tabIndex &  &  &  &  \\
+7 & \texttt{role="button"} auf \texttt{<div>} ohne tabIndex & \checkmark & axe-core + grep & -- & Alle Modelle \\
 \hline
-8 & Modal ohne Fokus-Trap &  &  &  &  \\
+8 & Modal ohne Fokus-Trap & \checkmark & LLM-Detektor & -- & Playwright-Check greift nicht; nur mit LLM \\
 \hline
-9 & Skip-Link fehlt &  &  &  &  \\
+9 & Skip-Link fehlt & \checkmark & Playwright & -- & Alle Modelle \\
 \hline
-10 & \texttt{aria-hidden="true"} auf fokussierbarem Element &  &  &  &  \\
+10 & \texttt{aria-hidden="true"} auf fokussierbarem Element & \checkmark & axe-core & -- & 7b lässt es gelegentlich weg \\
 \hline
-11 & DOM-Reihenfolge vs. visuelle Reihenfolge &  &  &  &  \\
+11 & DOM-Reihenfolge vs. visuelle Reihenfolge & \checkmark & LLM-Detektor & -- & Nur 32b konsistent; 14b instabil \\
 \hline
-12 & Interaktives Element zu klein ($<24\times24$px) &  &  &  &  \\
+12 & Interaktives Element zu klein ($<24\times24$\,px) & \checkmark & LLM-Detektor & -- & 7b instabil; 14b/32b konsistent \\
 \hline
 \end{tabular}
 }%
@@ -508,32 +508,289 @@ Erwartete Ausgabe:
 \caption{Bewertung der Empfehlungsqualität pro Violation}
 \begin{tabular}{|c|p{4.8cm}|c|p{5.2cm}|}
 \hline
-\textbf{\#} & \textbf{Violation} & \textbf{Stufe (0--2)} & \textbf{Anmerkung} \\
+\textbf{\#} & \textbf{Violation} & \textbf{Stufe (0--2)} & \textbf{Anmerkung (qwen3:32b)} \\
 \hline
-1 & \texttt{<img>} ohne alt-Attribut &  &  \\
+1 & \texttt{<img>} ohne alt-Attribut & 2 & Datei App.tsx:37, konkreter \texttt{alt}-Text angegeben \\
 \hline
-2 & \texttt{<button>} ohne Label &  &  \\
+2 & \texttt{<button>} ohne \texttt{aria-label} & 2 & \texttt{aria-label}-Wert mit sprechendem Text vorgeschlagen \\
 \hline
-3 & Formularfeld ohne \texttt{<label>} &  &  \\
+3 & Formularfeld ohne \texttt{<label>} & 2 & \texttt{label} + \texttt{htmlFor} + \texttt{id} vollständig ausgearbeitet \\
 \hline
-4 & Kontrastverhältnis $< 4.5:1$ &  &  \\
+4 & Kontrastverhältnis $< 4.5:1$ & 2 & CSS-Regel mit konkreten Hex-Farben je betroffener Klasse \\
 \hline
-5 & Fokus-Outline entfernt (\texttt{outline: none}) &  &  \\
+5 & Fokus-Outline entfernt (\texttt{outline: none}) & 2 & CSS-Klasse mit \texttt{outline: 2px solid} als Ersatz \\
 \hline
-6 & onClick ohne onKeyDown &  &  \\
+6 & onClick ohne onKeyDown & 1 & \texttt{onKeyDown}-Muster korrekt, aber generisch; kein Dateikontext \\
 \hline
-7 & \texttt{role="button"} auf \texttt{<div>} ohne tabIndex &  &  \\
+7 & \texttt{role="button"} auf \texttt{<div>} ohne tabIndex & 2 & \texttt{tabIndex=\{0\}} + \texttt{onKeyDown} JSX-Snippet mit Kontext \\
 \hline
-8 & Modal ohne Fokus-Trap &  &  \\
+8 & Modal ohne Fokus-Trap & 2 & Vollständiger \texttt{useEffect}-Fokus-Trap mit Shift+Tab-Logik \\
 \hline
-9 & Skip-Link fehlt &  &  \\
+9 & Skip-Link fehlt & 2 & \texttt{<a href="\#main-content">}-Snippet mit CSS-Klasse \\
 \hline
-10 & \texttt{aria-hidden="true"} auf fokussierbarem Element &  &  \\
+10 & \texttt{aria-hidden="true"} auf fokussierbarem Element & 2 & Korrektur (\texttt{aria-hidden} entfernen oder \texttt{tabIndex=\{-1\}}) mit Kontext \\
 \hline
-11 & DOM-Reihenfolge vs. visuelle Reihenfolge &  &  \\
+11 & DOM-Reihenfolge vs. visuelle Reihenfolge & 2 & CSS \texttt{order}-Property als Lösung; DOM-Reihenfolge erhalten \\
 \hline
-12 & Interaktives Element zu klein ($<24\times24$px) &  &  \\
+12 & Interaktives Element zu klein ($<24\times24$\,px) & 2 & CSS \texttt{width}/\texttt{height} auf 24\,px mit Klasse \texttt{.btn-tiny} \\
 \hline
 \end{tabular}
 \label{tab:empfehlungsqualitaet}
+\end{table}
+
+\clearpage
+\anhang{Recall-Matrix: Violation × Bedingung}\label{app:recall_matrix}
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.25}
+\caption[Recall-Matrix aller Violations je Bedingung]{Erkennungsstatus je Violation und Bedingung. \checkmark~=~konsistent erkannt; $\sim$~=~instabil (nur in einigen Runs); $\times$~=~nicht erkannt. Basis: test-12, jeweils 10~Runs.}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|p{5.2cm}|c|c|c|c|c|}
+\hline
+\textbf{\#} & \textbf{Violation} & \textbf{Baseline} & \textbf{+\,7b} & \textbf{+\,14b} & \textbf{+\,32b} & \textbf{LLM-exklusiv} \\
+\hline
+1  & \texttt{<img>} ohne alt-Attribut                            & \checkmark & \checkmark & \checkmark & \checkmark & \\
+\hline
+2  & \texttt{<button>} ohne \texttt{aria-label} (Icon-Button)    & $\times$   & $\times$   & \checkmark & \checkmark & \checkmark \\
+\hline
+3  & Formularfeld ohne \texttt{<label>}                          & \checkmark & \checkmark & \checkmark & \checkmark & \\
+\hline
+4  & Kontrastverhältnis $<4.5:1$                                 & \checkmark & \checkmark & \checkmark & \checkmark & \\
+\hline
+5  & Fokus-Outline entfernt (\texttt{outline: none})             & \checkmark & \checkmark & \checkmark & \checkmark & \\
+\hline
+6  & onClick ohne onKeyDown                                      & \checkmark & \checkmark & \checkmark & \checkmark & \\
+\hline
+7  & \texttt{role="button"} auf \texttt{<div>} ohne tabIndex     & \checkmark & \checkmark & \checkmark & \checkmark & \\
+\hline
+8  & Modaler Dialog ohne Fokus-Trap                              & $\times$   & \checkmark & \checkmark & \checkmark & \checkmark \\
+\hline
+9  & Skip-Link fehlt                                             & \checkmark & \checkmark & \checkmark & \checkmark & \\
+\hline
+10 & \texttt{aria-hidden="true"} auf fokussierbarem Element      & \checkmark & $\sim$     & \checkmark & \checkmark & \\
+\hline
+11 & DOM-Reihenfolge weicht von visueller Reihenfolge ab         & $\times$   & $\times$   & $\sim$     & \checkmark & \checkmark \\
+\hline
+12 & Interaktives Element zu klein ($<24\times24$\,px)           & $\times$   & $\sim$     & \checkmark & \checkmark & \checkmark \\
+\hline
+\multicolumn{2}{|c|}{\textbf{Recall}} & \textbf{8\,/\,12} & \textbf{9\,/\,12} & \textbf{11\,/\,12} & \textbf{11--12\,/\,12} & 4~Violations \\
+\hline
+\end{tabular}
+}%
+\label{tab:recall_matrix}
+\end{table}
+
+\clearpage
+\anhang{Rohdaten: alle 30 Benchmark-Runs}\label{app:rohdaten}
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.1}
+\caption[Rohdaten aller 30 Benchmark-Runs]{Vollständige Messdaten der 30 Pipeline-Durchläufe (test-12-Suite). LLM-Det.~=~Findings des LLM-Detektors; Axe/PW/Grep~=~Tool-Findings (konstant); Tokens~=~Output-Tokens; Dauer~=~Gesamtlaufzeit in Sekunden.}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|l|c|c|c|c|c|c|c|}
+\hline
+\textbf{Run} & \textbf{Modell} & \textbf{LLM-Det.} & \textbf{Axe} & \textbf{PW} & \textbf{Grep} & \textbf{Gesamt} & \textbf{Tokens} & \textbf{Dauer\,(s)} \\
+\hline
+01 & qwen2.5-coder:7b  & 10 & 4 & 2 & 6 & 22 & 3072 & 133 \\
+02 & qwen2.5-coder:7b  & 10 & 4 & 2 & 6 & 22 & 3072 & 147 \\
+03 & qwen2.5-coder:7b  & 10 & 4 & 2 & 6 & 22 & 3072 & 173 \\
+04 & qwen2.5-coder:7b  & 10 & 4 & 2 & 6 & 22 & 3072 & 172 \\
+05 & qwen2.5-coder:7b  & 10 & 4 & 2 & 6 & 22 & 3072 & 177 \\
+06 & qwen2.5-coder:7b  & 10 & 4 & 2 & 6 & 22 & 3072 & 177 \\
+07 & qwen2.5-coder:7b  & 10 & 4 & 2 & 6 & 22 & 3072 & 186 \\
+08 & qwen2.5-coder:7b  & 10 & 4 & 2 & 6 & 22 & 3072 & 181 \\
+09 & qwen2.5-coder:7b  & 17 & 4 & 2 & 6 & 29 & 3072 & 184 \\
+10 & qwen2.5-coder:7b  &  6 & 4 & 2 & 6 & 18 & 3072 & 199 \\
+\hline
+11 & qwen2.5-coder:14b & 14 & 4 & 2 & 6 & 26 & 3072 & 320 \\
+12 & qwen2.5-coder:14b & 22 & 4 & 2 & 6 & 34 & 3072 & 315 \\
+13 & qwen2.5-coder:14b & 22 & 4 & 2 & 6 & 34 & 3072 & 315 \\
+14 & qwen2.5-coder:14b & 22 & 4 & 2 & 6 & 34 & 3072 & 313 \\
+15 & qwen2.5-coder:14b & 23 & 4 & 2 & 6 & 35 & 3072 & 318 \\
+16 & qwen2.5-coder:14b & 22 & 4 & 2 & 6 & 34 & 3072 & 315 \\
+17 & qwen2.5-coder:14b & 23 & 4 & 2 & 6 & 35 & 3072 & 330 \\
+18 & qwen2.5-coder:14b & 14 & 4 & 2 & 6 & 26 & 3072 & 322 \\
+19 & qwen2.5-coder:14b & 14 & 4 & 2 & 6 & 26 & 3072 & 327 \\
+20 & qwen2.5-coder:14b & 22 & 4 & 2 & 6 & 34 & 3072 & 321 \\
+\hline
+21 & qwen3:32b         & 20 & 4 & 2 & 6 & 32 & 3072 & 721 \\
+22 & qwen3:32b         & 19 & 4 & 2 & 6 & 31 & 2571 & 637 \\
+23 & qwen3:32b         & 20 & 4 & 2 & 6 & 32 & 3072 & 697 \\
+24 & qwen3:32b         & 19 & 4 & 2 & 6 & 31 & 3072 & 691 \\
+25 & qwen3:32b         & 19 & 4 & 2 & 6 & 31 & 3066 & 689 \\
+26 & qwen3:32b         & 19 & 4 & 2 & 6 & 31 & 3072 & 706 \\
+27 & qwen3:32b         & 19 & 4 & 2 & 6 & 31 & 3027 & 684 \\
+28 & qwen3:32b         & 19 & 4 & 2 & 6 & 31 & 2690 & 631 \\
+29 & qwen3:32b         & 19 & 4 & 2 & 6 & 31 & 3072 & 671 \\
+30 & qwen3:32b         & 19 & 4 & 2 & 6 & 31 & 3072 & 685 \\
+\hline
+\end{tabular}
+}%
+\label{tab:rohdaten_runs}
+\end{table}
+
+\clearpage
+\anhang{Modell-Leistungsvergleich (Zusammenfassung)}\label{app:modell_summary}
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.25}
+\caption[Modell-Leistungsvergleich (alle Metriken)]{Zusammenfassung aller Leistungsmetriken für die drei evaluierten Modelle (test-12-Suite, je $n=10$ Runs). $\sigma$~=~Standardabweichung der LLM-Detektor-Findings über 10~Runs.}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Metrik} & \textbf{qwen2.5-coder:7b} & \textbf{qwen2.5-coder:14b} & \textbf{qwen3:32b} \\
+\hline
+Recall (Ø über Runs)              & $\sim$75\,\%     & $\sim$91{,}7\,\%  & 91{,}7--100\,\% \\
+LLM-Detektor-Findings (Ø)         & 10{,}3           & 19{,}8             & 19{,}2 \\
+LLM-Detektor-Findings (Min--Max)  & 6--17            & 14--23             & 19--20 \\
+Konsistenz $\sigma$               & 2{,}67           & 4{,}02             & 0{,}42 \\
+Must-have (Ø)                     & 5{,}0            & 20{,}7             & 13{,}3 \\
+Nice-to-have (Ø)                  & 18{,}3           & 0{,}0              & 6{,}7 \\
+Priorisierung                     & Fehlerhaft       & Undifferenziert    & Korrekt \\
+Fix-Qualität (Stufe)              & 0--1             & 1                  & 1--2 \\
+Gesamtlaufzeit (Ø)                & 173\,s           & 320\,s             & 681\,s \\
+LLM-Detektor-Laufzeit (Ø)        & 99\,s            & 165\,s             & 349\,s \\
+LLM-Priorisierung (Ø)            & 53\,s            & 143\,s             & 337\,s \\
+Output-Tokens (Ø)                 & 3072 (alle)      & 3072 (alle)        & 2979 \\
+Token-Kürzung                     & 10/10 Runs       & 10/10 Runs         & 6/10 Runs \\
+Parsing-Erfolg                    & 100\,\%          & 100\,\%            & 100\,\% \\
+Eignung BITV-Einsatz              & Nicht geeignet   & Bedingt geeignet   & Empfohlen \\
+\hline
+\end{tabular}
+}%
+\label{tab:modell_summary}
+\end{table}
+
+\clearpage
+\anhang{Detektor-Konsistenz über alle 30 Runs}\label{app:detektor_konsistenz}
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\caption[Detektor-Konsistenz über alle Runs]{Konsistenzanalyse der vier Detektoren über alle 30 Benchmark-Runs (test-12).}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Detektor} & \textbf{Gesamtfindings} & \textbf{Ø pro Run} & \textbf{Varianz über Runs} & \textbf{Interpretation} \\
+\hline
+axe-core    & 120 & 4,0  & 0,0  & vollständig deterministisch \\
+\hline
+Playwright  & 60  & 2,0  & 0,0  & vollständig deterministisch \\
+\hline
+grep        & 180 & 6,0  & 0,0  & vollständig deterministisch \\
+\hline
+LLM-Detektor & 493 & 16,4 & modellabhängig & einzige relevante Varianzquelle \\
+\hline
+\end{tabular}
+\label{tab:detektor_konsistenz}
+\end{table}
+
+\clearpage
+\anhang{Effizienzmetriken und Kosten-Nutzen-Verhältnis}\label{app:effizienz_metriken}
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\caption[Effizienzvergleich der Modelle]{Effizienzvergleich auf Basis der 30 Benchmark-Runs. \textit{LLM-Findings/s} bezieht sich auf LLM-Detektor-Findings pro Sekunde Gesamtlaufzeit.}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Modell} & \textbf{LLM-Findings Ø} & \textbf{Gesamtlaufzeit Ø (s)} & \textbf{LLM-Findings/s} & \textbf{Zusatznutzen ggü. 7b} \\
+\hline
+qwen2.5-coder:7b  & 10,3 & 172,9 & 0,060 & Referenz \\
+\hline
+qwen2.5-coder:14b & 19,8 & 319,7 & 0,062 & +92\,\% Findings bei 1,85x Laufzeit \\
+\hline
+qwen3:32b         & 19,2 & 681,1 & 0,028 & +86\,\% Findings bei 3,94x Laufzeit \\
+\hline
+\end{tabular}
+\label{tab:effizienz_metriken}
+\end{table}
+
+\clearpage
+\anhang{Über-Detektion relativ zur Ground Truth}\label{app:overdetection}
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\caption[Über-Detektion relativ zu 12 Ground-Truth-Violations]{Vergleich der durchschnittlichen Gesamtfindings pro Run mit der Ground Truth (12 Violations). Hohe Werte deuten auf zusätzliche Hinweise und/oder semantische Redundanzen hin.}
+\begin{tabular}{|l|c|c|c|p{5.3cm}|}
+\hline
+\textbf{Modell} & \textbf{Gesamtfindings Ø} & \textbf{Ground Truth} & \textbf{Quote} & \textbf{Interpretation} \\
+\hline
+qwen2.5-coder:7b  & 22,3 & 12 & 186\,\% & moderater Überschuss; Recall-Gewinn begrenzt, Priorisierung instabil \\
+\hline
+qwen2.5-coder:14b & 31,8 & 12 & 265\,\% & deutlicher Überschuss; hoher Recall, jedoch erhöhte Redundanz \\
+\hline
+qwen3:32b         & 31,2 & 12 & 260\,\% & ähnlicher Überschuss wie 14b, aber mit höherer Konsistenz \\
+\hline
+\end{tabular}
+\label{tab:overdetection}
+\end{table}
+
+\clearpage
+\anhang{CSV-Export der Benchmark-Rohdaten}\label{app:csv_export}
+
+Die Benchmark-Rohdaten wurden zusätzlich als CSV-Datei exportiert (\texttt{analysis/benchmark\_analysis\_raw.csv}). Tabelle~\ref{tab:csv_schema} dokumentiert das Spaltenschema, Tabelle~\ref{tab:csv_beispiel} zeigt exemplarische Zeilen (je ein Run pro Modell).
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\caption[CSV-Spaltenschema]{Spaltenschema des CSV-Exports \texttt{benchmark\_analysis\_raw.csv}.}
+\begin{tabular}{|l|p{8.7cm}|}
+\hline
+\textbf{Spalte} & \textbf{Bedeutung} \\
+\hline
+Model & Verwendetes Modell (z.\,B. qwen2.5-coder:14b) \\
+\hline
+Suite & Testsuite (hier: test-12) \\
+\hline
+Run & Laufnummer innerhalb einer Modellserie \\
+\hline
+LLM Findings / Axe Findings / Playwright Findings / Grep Findings & Anzahl erkannter Findings pro Detektor \\
+\hline
+LLM Detect (ms) & Laufzeit der LLM-Detektionsphase in Millisekunden \\
+\hline
+LLM Detect Chunks & Anzahl verarbeiteter Code-Chunks \\
+\hline
+Total Duration (ms) & Gesamtlaufzeit der Pipeline in Millisekunden \\
+\hline
+Parse Success & Parsing-Status der finalen LLM-Ausgabe \\
+\hline
+Output Tokens & Tatsächlich generierte Output-Tokens \\
+\hline
+Est Input Tokens / Actual Prompt Tokens & Geschätzte bzw. tatsächlich ausgewertete Prompt-Tokens \\
+\hline
+\end{tabular}
+\label{tab:csv_schema}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.15}
+\caption[Beispielzeilen aus dem CSV-Export]{Repräsentative Beispielzeilen aus \texttt{benchmark\_analysis\_raw.csv} (jeweils Run~01 pro Modell).}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Model} & \textbf{Run} & \textbf{LLM} & \textbf{Axe} & \textbf{PW} & \textbf{Grep} & \textbf{LLM Detect (ms)} & \textbf{Total (ms)} & \textbf{Parse} & \textbf{Output Tokens} \\
+\hline
+qwen2.5-coder:7b  & 01 & 10 & 4 & 2 & 6 & 73841  & 132999 & true & 3072 \\
+\hline
+qwen2.5-coder:14b & 01 & 14 & 4 & 2 & 6 & 171653 & 320427 & true & 3072 \\
+\hline
+qwen3:32b         & 01 & 20 & 4 & 2 & 6 & 370243 & 720835 & true & 3072 \\
+\hline
+\end{tabular}
+}%
+\label{tab:csv_beispiel}
 \end{table}
