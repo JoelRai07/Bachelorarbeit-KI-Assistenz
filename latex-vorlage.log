@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.9.8)  1 APR 2026 16:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.9.8)  2 APR 2026 17:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -717,7 +717,27 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count457
 \@lastruleclass=\count458
 \@thisrulewidth=\dimen182
-) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
+Package: longtable 2024-10-27 v4.22 Multi-page Table package (DPC)
+\LTleft=\skip129
+\LTright=\skip130
+\LTpre=\skip131
+\LTpost=\skip132
+\LTchunksize=\count459
+\LTcapwidth=\dimen183
+\LT@head=\box64
+\LT@firsthead=\box65
+\LT@foot=\box66
+\LT@lastfoot=\box67
+\LT@gbox=\box68
+\LT@cols=\count460
+\LT@rows=\count461
+\c@LT@tables=\count462
+\c@LT@chunks=\count463
+\LT@p@ftn=\toks33
+)
+Class scrreprt Info: longtable captions redefined on input line 79.
+ (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
  (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
@@ -732,13 +752,13 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count459
+\c@section@level=\count464
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-\@linkdim=\dimen183
-\Hy@linkcounter=\count460
-\Hy@pagecounter=\count461
+\@linkdim=\dimen184
+\Hy@linkcounter=\count465
+\Hy@pagecounter=\count466
  (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -746,7 +766,7 @@ Now handling font encoding PD1 ...
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count462
+\Hy@SavedSpaceFactor=\count467
  (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -760,17 +780,17 @@ Package hyperref Info: Plain pages OFF on input line 4172.
 Package hyperref Info: Backreferencing OFF on input line 4177.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4424.
-\c@Hy@tempcnt=\count463
+\c@Hy@tempcnt=\count468
 LaTeX Info: Redefining \url on input line 4763.
-\XeTeXLinkMargin=\dimen184
+\XeTeXLinkMargin=\dimen185
  (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count464
-\Field@Width=\dimen185
-\Fld@charsize=\dimen186
+\Fld@menulength=\count469
+\Field@Width=\dimen186
+\Fld@charsize=\dimen187
 Package hyperref Info: Hyper figures OFF on input line 6042.
 Package hyperref Info: Link nesting OFF on input line 6047.
 Package hyperref Info: Hyper index ON on input line 6050.
@@ -782,9 +802,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6072.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count465
-\c@Item=\count466
-\c@Hfootnote=\count467
+\Hy@abspage=\count470
+\c@Item=\count471
+\c@Hfootnote=\count472
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
@@ -793,8 +813,8 @@ File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
 with kernel methods
 )
-\Fld@listcount=\count468
-\c@bookmark@seq@number=\count469
+\Fld@listcount=\count473
+\c@bookmark@seq@number=\count474
  (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
  (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
@@ -802,17 +822,17 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
-\Hy@SectionHShift=\skip129
+\Hy@SectionHShift=\skip133
 )
-\c@anhcnt=\count470
-\c@anhang=\count471
-\cftbeforeanhangskip=\skip130
-\cftanhangindent=\skip131
-\cftanhangnumwidth=\skip132
-\c@appdepth=\count472
-\cftbeforeapptitleskip=\skip133
-\cftafterapptitleskip=\skip134
-\c@anhteilcnt=\count473
+\c@anhcnt=\count475
+\c@anhang=\count476
+\cftbeforeanhangskip=\skip134
+\cftanhangindent=\skip135
+\cftanhangnumwidth=\skip136
+\c@appdepth=\count477
+\cftbeforeapptitleskip=\skip137
+\cftafterapptitleskip=\skip138
+\c@anhteilcnt=\count478
  (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/chngcntr\chngcntr.sty
 Package: chngcntr 2018/04/09 v1.1a change counter resetting
 Package chngcntr Info: \counterwithout already defined.
@@ -829,7 +849,7 @@ Package scrlayer-scrpage Info: Makeing stand-alone element `pagehead' from
 Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/eurosym\eurosym.sty
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
-\@eurobox=\box64
+\@eurobox=\box69
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/scrhack\scrhack.sty
 Package: scrhack 2024-09-04 v3.42 scrhack emulation package
  (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/floatbytocbasic\floatbytocbasic.sty
@@ -840,16 +860,16 @@ Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
 Package: setspaceenhanced 2024-11-12 v1.04 improved setspace package
 )) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/graphics\rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
-\c@r@tfl@t=\count474
-\rotFPtop=\skip135
-\rotFPbot=\skip136
-\rot@float@box=\box65
-\rot@mess@toks=\toks33
+\c@r@tfl@t=\count479
+\rotFPtop=\skip139
+\rotFPbot=\skip140
+\rot@float@box=\box70
+\rot@mess@toks=\toks34
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
 Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
-\everycr=\toks34
-\minrowclearance=\skip137
-\rownum=\count475
+\everycr=\toks35
+\minrowclearance=\skip141
+\rownum=\count480
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
  (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape-nometadata.sty
@@ -859,15 +879,15 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/lscapeenhanced\lscapeenhanced.sty
 Package: lscapeenhanced 2024-04-16 v1.0 improved lscape package
 Package lscapeenhanced Info: \landscape patched to make \textheight change optional on input line 72.
-\@lscapeenhanced@textheight=\skip138
+\@lscapeenhanced@textheight=\skip142
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
-\pgfutil@everybye=\toks35
-\pgfutil@tempdima=\dimen187
-\pgfutil@tempdimb=\dimen188
+\pgfutil@everybye=\toks36
+\pgfutil@tempdima=\dimen188
+\pgfutil@tempdimb=\dimen189
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
-\pgfutil@abb=\box66
+\pgfutil@abb=\box71
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
 Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
 ))
@@ -875,31 +895,31 @@ Package: pgf 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks36
-\pgfkeys@temptoks=\toks37
+\pgfkeys@pathtoks=\toks37
+\pgfkeys@temptoks=\toks38
  (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks38
+\pgfkeys@tmptoks=\toks39
 ))
-\pgf@x=\dimen189
-\pgf@y=\dimen190
-\pgf@xa=\dimen191
-\pgf@ya=\dimen192
-\pgf@xb=\dimen193
-\pgf@yb=\dimen194
-\pgf@xc=\dimen195
-\pgf@yc=\dimen196
-\pgf@xd=\dimen197
-\pgf@yd=\dimen198
+\pgf@x=\dimen190
+\pgf@y=\dimen191
+\pgf@xa=\dimen192
+\pgf@ya=\dimen193
+\pgf@xb=\dimen194
+\pgf@yb=\dimen195
+\pgf@xc=\dimen196
+\pgf@yc=\dimen197
+\pgf@xd=\dimen198
+\pgf@yd=\dimen199
 \w@pgf@writea=\write4
 \r@pgf@reada=\read4
-\c@pgf@counta=\count476
-\c@pgf@countb=\count477
-\c@pgf@countc=\count478
-\c@pgf@countd=\count479
-\t@pgf@toka=\toks39
-\t@pgf@tokb=\toks40
-\t@pgf@tokc=\toks41
-\pgf@sys@id@count=\count480
+\c@pgf@counta=\count481
+\c@pgf@countb=\count482
+\c@pgf@countc=\count483
+\c@pgf@countd=\count484
+\t@pgf@toka=\toks40
+\t@pgf@tokb=\toks41
+\t@pgf@tokc=\toks42
+\pgf@sys@id@count=\count485
  (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
@@ -910,8 +930,8 @@ File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
 File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 ))) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count481
-\pgfsyssoftpath@bigbuffer@items=\count482
+\pgfsyssoftpath@smallbuffer@items=\count486
+\pgfsyssoftpath@bigbuffer@items=\count487
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
@@ -934,52 +954,52 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex
 Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
-\pgfmath@dimen=\dimen199
-\pgfmath@count=\count483
-\pgfmath@box=\box67
-\pgfmath@toks=\toks42
-\pgfmath@stack@operand=\toks43
-\pgfmath@stack@operation=\toks44
+\pgfmath@dimen=\dimen256
+\pgfmath@count=\count488
+\pgfmath@box=\box72
+\pgfmath@toks=\toks43
+\pgfmath@stack@operand=\toks44
+\pgfmath@stack@operation=\toks45
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count484
+\c@pgfmathroundto@lastzeros=\count489
 )) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.tex) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@picminx=\dimen256
-\pgf@picmaxx=\dimen257
-\pgf@picminy=\dimen258
-\pgf@picmaxy=\dimen259
-\pgf@pathminx=\dimen260
-\pgf@pathmaxx=\dimen261
-\pgf@pathminy=\dimen262
-\pgf@pathmaxy=\dimen263
-\pgf@xx=\dimen264
-\pgf@xy=\dimen265
-\pgf@yx=\dimen266
-\pgf@yy=\dimen267
-\pgf@zx=\dimen268
-\pgf@zy=\dimen269
+\pgf@picminx=\dimen257
+\pgf@picmaxx=\dimen258
+\pgf@picminy=\dimen259
+\pgf@picmaxy=\dimen260
+\pgf@pathminx=\dimen261
+\pgf@pathmaxx=\dimen262
+\pgf@pathminy=\dimen263
+\pgf@pathmaxy=\dimen264
+\pgf@xx=\dimen265
+\pgf@xy=\dimen266
+\pgf@yx=\dimen267
+\pgf@yy=\dimen268
+\pgf@zx=\dimen269
+\pgf@zy=\dimen270
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@path@lastx=\dimen270
-\pgf@path@lasty=\dimen271
+\pgf@path@lastx=\dimen271
+\pgf@path@lasty=\dimen272
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@shorten@end@additional=\dimen272
-\pgf@shorten@start@additional=\dimen273
+\pgf@shorten@end@additional=\dimen273
+\pgf@shorten@start@additional=\dimen274
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfpic=\box68
-\pgf@hbox=\box69
-\pgf@layerbox@main=\box70
-\pgf@picture@serial@count=\count485
+\pgfpic=\box73
+\pgf@hbox=\box74
+\pgf@layerbox@main=\box75
+\pgf@picture@serial@count=\count490
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgflinewidth=\dimen274
+\pgflinewidth=\dimen275
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@pt@x=\dimen275
-\pgf@pt@y=\dimen276
-\pgf@pt@temp=\dimen277
+\pgf@pt@x=\dimen276
+\pgf@pt@y=\dimen277
+\pgf@pt@temp=\dimen278
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
@@ -988,17 +1008,17 @@ File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowsep=\dimen278
+\pgfarrowsep=\dimen279
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@max=\dimen279
-\pgf@sys@shading@range@num=\count486
-\pgf@shadingcount=\count487
+\pgf@max=\dimen280
+\pgf@sys@shading@range@num=\count491
+\pgf@shadingcount=\count492
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfexternal@startupbox=\box71
+\pgfexternal@startupbox=\box76
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransparency.code.tex
@@ -1009,65 +1029,65 @@ File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodeparttextbox=\box72
+\pgfnodeparttextbox=\box77
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen280
-\pgf@nodesepend=\dimen281
+\pgf@nodesepstart=\dimen281
+\pgf@nodesepend=\dimen282
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 )) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.sty (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex)) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex)) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen282
-\pgffor@skip=\dimen283
-\pgffor@stack=\toks45
-\pgffor@toks=\toks46
+\pgffor@iter=\dimen283
+\pgffor@skip=\dimen284
+\pgffor@stack=\toks46
+\pgffor@toks=\toks47
 )) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count488
-\pgfplotmarksize=\dimen284
+\pgf@plot@mark@count=\count493
+\pgfplotmarksize=\dimen285
 )
-\tikz@lastx=\dimen285
-\tikz@lasty=\dimen286
-\tikz@lastxsaved=\dimen287
-\tikz@lastysaved=\dimen288
-\tikz@lastmovetox=\dimen289
-\tikz@lastmovetoy=\dimen290
-\tikzleveldistance=\dimen291
-\tikzsiblingdistance=\dimen292
-\tikz@figbox=\box73
-\tikz@figbox@bg=\box74
-\tikz@tempbox=\box75
-\tikz@tempbox@bg=\box76
-\tikztreelevel=\count489
-\tikznumberofchildren=\count490
-\tikznumberofcurrentchild=\count491
-\tikz@fig@count=\count492
+\tikz@lastx=\dimen286
+\tikz@lasty=\dimen287
+\tikz@lastxsaved=\dimen288
+\tikz@lastysaved=\dimen289
+\tikz@lastmovetox=\dimen290
+\tikz@lastmovetoy=\dimen291
+\tikzleveldistance=\dimen292
+\tikzsiblingdistance=\dimen293
+\tikz@figbox=\box78
+\tikz@figbox@bg=\box79
+\tikz@tempbox=\box80
+\tikz@tempbox@bg=\box81
+\tikztreelevel=\count494
+\tikznumberofchildren=\count495
+\tikznumberofcurrentchild=\count496
+\tikz@fig@count=\count497
  (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count493
-\pgfmatrixcurrentcolumn=\count494
-\pgf@matrix@numberofcolumns=\count495
+\pgfmatrixcurrentrow=\count498
+\pgfmatrixcurrentcolumn=\count499
+\pgf@matrix@numberofcolumns=\count500
 )
-\tikz@expandcount=\count496
+\tikz@expandcount=\count501
  (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowinset=\dimen293
-\pgfarrowlength=\dimen294
-\pgfarrowwidth=\dimen295
-\pgfarrowlinewidth=\dimen296
-) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarycalc.code.tex
+\pgfarrowinset=\dimen294
+\pgfarrowlength=\dimen295
+\pgfarrowwidth=\dimen296
+\pgfarrowlinewidth=\dimen297
+)
+(C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))
-(C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/xurl\xurl.sty
+)) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/xurl\xurl.sty
 Package: xurl 2022/01/09 v 0.10 modify URL breaks
 
 xurl: Set penalties for biblatex
@@ -1095,9 +1115,9 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
-\c@lstlisting=\count497
+\c@lstlisting=\count502
 Package tocbasic Info: setting babel extension for `lol' on input line 17.
-\scr@dte@lstlisting@maxnumwidth=\skip139
+\scr@dte@lstlisting@maxnumwidth=\skip143
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1135,17 +1155,17 @@ Package tocbasic Info: setting babel extension for `lol' on input line 17.
 
 (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count498
-\scratchdimen=\dimen297
-\scratchbox=\box77
-\nofMPsegments=\count499
-\nofMParguments=\count500
-\everyMPshowfont=\toks47
-\MPscratchCnt=\count501
-\MPscratchDim=\dimen298
-\MPnumerator=\count502
-\makeMPintoPDFobject=\count503
-\everyMPtoPDFconversion=\toks48
+\scratchcounter=\count503
+\scratchdimen=\dimen298
+\scratchbox=\box82
+\nofMPsegments=\count504
+\nofMParguments=\count505
+\everyMPshowfont=\toks48
+\MPscratchCnt=\count506
+\MPscratchDim=\dimen299
+\MPnumerator=\count507
+\makeMPintoPDFobject=\count508
+\everyMPtoPDFconversion=\toks49
 ) (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -1193,7 +1213,7 @@ Class scrreprt Info: loading recommended package `bookmark'.
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
  (C:\Users\joely\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
 File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
-\BKM@id=\count504
+\BKM@id=\count509
 ))
 Package scrbase Info: activating ngerman \refname on input line 17.
 Package scrbase Info: activating ngerman \figurename on input line 17.
@@ -1263,15 +1283,17 @@ although it is yet undefined on input line 7.
 ] (latex-vorlage.lot
 Package acronym Info: Label `acro:PoC' newly defined as it shall be overridden
 although it is yet undefined on input line 7.
-)
+
+
+[7
+
+])
 \tf@lot=\write8
 \openout8 = `latex-vorlage.lot'.
 
 
 
-[7
-
-] (includes/caps/1.tex
+[8] (includes/caps/1.tex
 chapter 1.
 Package acronym Info: Label `acro:EAA' newly defined as it shall be overridden
 although it is yet undefined on input line 9.
@@ -1300,7 +1322,7 @@ although it is yet undefined on input line 25.
 
 
 [3]
-<graphics/Diagramm1.png, id=545, 815.045pt x 152.57pt>
+<graphics/Diagramm1.png, id=689, 815.045pt x 152.57pt>
 File: graphics/Diagramm1.png Graphic file (type png)
 <use graphics/Diagramm1.png>
 Package pdftex.def Info: graphics/Diagramm1.png  used on input line 35.
@@ -1338,7 +1360,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [7]
 
 [8]
-<graphics/WCAG-Dreieck-4-Ebenen.png, id=739, 770.88pt x 643.6547pt>
+<graphics/WCAG-Dreieck-4-Ebenen.png, id=892, 770.88pt x 643.6547pt>
 File: graphics/WCAG-Dreieck-4-Ebenen.png Graphic file (type png)
 <use graphics/WCAG-Dreieck-4-Ebenen.png>
 Package pdftex.def Info: graphics/WCAG-Dreieck-4-Ebenen.png  used on input line 37.
@@ -1364,7 +1386,7 @@ Overfull \hbox (1.43257pt too wide) in paragraph at lines 109--110
 (includes/taxonomie-figure.tex)
 
 [13]
-<graphics/react.png, id=931, 984.67876pt x 618.05907pt>
+<graphics/react.png, id=1092, 984.67876pt x 618.05907pt>
 File: graphics/react.png Graphic file (type png)
 <use graphics/react.png>
 Package pdftex.def Info: graphics/react.png  used on input line 125.
@@ -1389,7 +1411,7 @@ Package acronym Info: Label `acro:RAG' overridden on input line 164.
 [17]
 
 [18]
-<graphics/fewshot.png, id=1129, 894.34125pt x 477.28313pt>
+<graphics/fewshot.png, id=1299, 894.34125pt x 477.28313pt>
 File: graphics/fewshot.png Graphic file (type png)
 <use graphics/fewshot.png>
 Package pdftex.def Info: graphics/fewshot.png  used on input line 202.
@@ -1399,6 +1421,9 @@ Package pdftex.def Info: graphics/fewshot.png  used on input line 202.
 [19 <./graphics/fewshot.png>]
 
 LaTeX Warning: Reference `Limits' on page 20 undefined on input line 236.
+
+
+LaTeX Warning: Reference `Ausblick' on page 20 undefined on input line 236.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1502,694 +1527,4 @@ Package acronym Info: Label `acro:CLI' newly defined as it shall be overridden
 although it is yet undefined on input line 75.
 Package acronym Info: Label `acro:CPU' newly defined as it shall be overridden
 although it is yet undefined on input line 77.
-Package acronym Info: Label `acro:GPU' newly defined as it shall be overridden
-although it is yet undefined on input line 77.
-
-Overfull \hbox (21.00275pt too wide) in paragraph at lines 77--78
-[]\T1/cmr/m/n/10.95 Ein wei-te-rer Vor-teil von Ol-la-ma ist die Un-ter-stüt-zung quan-ti-sier-ter Mo-dell-va-ri-an-ten (z.B. Q4_K_M),
- []
-
-
-Overfull \hbox (4.74138pt too wide) in paragraph at lines 81--82
-\T1/cmr/m/n/10.95 Unabhängig von der kon-kre-ten Mo-dell-wahl las-sen sich aus den funk-tio-na-len und nicht-funktionalen
- []
-
-
-
-[33]
-Underfull \hbox (badness 10000) in paragraph at lines 145--145
-[]|\T1/cmr/m/n/9 Dynamische Zu-stand-ser-fas-sung via
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 145--145
-[]|\T1/cmr/m/n/9 Statische Quell-co-de-ana-ly-se (grep-
- []
-
-
-Underfull \hbox (badness 3657) in paragraph at lines 145--145
-[]|[][]\T1/cmr/m/n/9 -gestützte Ana-ly-se und Hand-
- []
-
-Package acronym Info: Label `acro:JSON' overridden on input line 145.
-
-Underfull \hbox (badness 10000) in paragraph at lines 145--145
-[]|\T1/cmr/m/n/9 Institutionell ([][],
- []
-
-
-Underfull \hbox (badness 3919) in paragraph at lines 145--145
-[]|\T1/cmr/m/n/9 Laufzeit $\OML/cmm/m/it/9 <$\T1/cmr/m/n/9 10min pro Sei-te (oh-ne
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 145--145
-[]|\T1/cmr/m/n/9 Software-Engineering Best
- []
-
-Package acronym Info: Label `acro:JSON' overridden on input line 145.
-
-Underfull \hbox (badness 10000) in paragraph at lines 145--145
-[]|\T1/cmr/m/n/9 Reproduzierbarkeit (Tem-pe-ra-
- []
-
-
-
-[34]) (includes/caps/5.tex
-
-[35]
-chapter 6.
-<graphics/durchlauf.png, id=1653, 1258.7025pt x 118.4425pt>
-File: graphics/durchlauf.png Graphic file (type png)
-<use graphics/durchlauf.png>
-Package pdftex.def Info: graphics/durchlauf.png  used on input line 13.
-(pdftex.def)             Requested size: 491.66446pt x 46.26466pt.
-
-Overfull \hbox (36.42035pt too wide) in paragraph at lines 13--14
- [][] 
- []
-
-
-
-[36
-
- <./graphics/durchlauf.png>]
-Package acronym Info: Label `acro:AST' newly defined as it shall be overridden
-although it is yet undefined on input line 32.
-
-
-[37]
-Overfull \hbox (15.11685pt too wide) in paragraph at lines 66--68
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-
-[38]
-Overfull \hbox (23.63948pt too wide) in paragraph at lines 84--85
-\T1/cmtt/m/n/10.95 source\T1/cmr/m/n/10.95 , \T1/cmtt/m/n/10.95 ruleId\T1/cmr/m/n/10.95 , \T1/cmtt/m/n/10.95 severity\T1/cmr/m/n/10.95 , \T1/cmtt/m/n/10.95 category\T1/cmr/m/n/10.95 ), [][]\T1/cmr/bx/n/10.95 -Bezug \T1/cmr/m/n/10.95 (\T1/cmtt/m/n/10.95 wcagCriteria\T1/cmr/m/n/10.95 , \T1/cmtt/m/n/10.95 wcagLevel\T1/cmr/m/n/10.95 ) und \T1/cmr/bx/n/10.95 Quellcode-
- []
-
-
-Overfull \hbox (5.05139pt too wide) in paragraph at lines 98--99
-\T1/cmr/m/n/10.95 Eine grund-le-gen-de Ent-wurfs-ent-schei-dung be-trifft die In-ter-ak-ti-onss-tra-te-gie mit dem lo-ka-len Sprach-
- []
-
-
-
-[39]
-
-[40]
-
-[41]) (includes/caps/6.tex
-
-[42]
-chapter 7.
-
-Underfull \hbox (badness 2875) in paragraph at lines 22--23
-[]|\T1/cmr/m/n/10.95 Umgebungsvariablen aus \T1/cmtt/m/n/10.95 .env\T1/cmr/m/n/10.95 -Datei
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
-[]|\T1/cmr/m/n/10.95 TypeScript-Runner (Monorepo-
- []
-
-
-
-[43
-
-]
-
-[44]
-Overfull \hbox (0.70195pt too wide) in paragraph at lines 79--92
- [][] 
- []
-
-
-Overfull \hbox (27.62297pt too wide) in paragraph at lines 98--99
-[]\T1/cmr/m/n/10.95 Fehlgeschlagene Checks wer-den über ein sta-ti-sches Map-ping (\T1/cmtt/m/n/10.95 CHECK_DEFINITIONS\T1/cmr/m/n/10.95 ) in \T1/cmtt/m/n/10.95 UnifiedFinding\T1/cmr/m/n/10.95 -
- []
-
-
-
-[45]
-Underfull \hbox (badness 1406) in paragraph at lines 124--124
-[]|\T1/cmtt/m/n/10 onClick \T1/cmr/m/n/10 auf \T1/cmtt/m/n/10 <div>\T1/cmr/m/n/10 /\T1/cmtt/m/n/10 <span> \T1/cmr/m/n/10 oh-ne
- []
-
-
-Underfull \hbox (badness 4036) in paragraph at lines 128--128
-[]|\T1/cmtt/m/n/10 tabIndex={-1} \T1/cmr/m/n/10 ent-fernt Ele-ment
- []
-
-
-Overfull \hbox (21.62172pt too wide) in paragraph at lines 136--137
-[]\T1/cmr/m/n/10.95 Treffer wer-den nach der Nor-ma-li-sie-rung de-du-pli-ziert: Fin-dings mit iden-ti-scher \T1/cmtt/m/n/10.95 ruleId\T1/cmr/m/n/10.95 , \T1/cmtt/m/n/10.95 componentPath
- []
-
-
-
-[46]
-
-[47]
-Overfull \hbox (54.3136pt too wide) in paragraph at lines 183--184
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-
-[48]
-Overfull \hbox (2.12901pt too wide) in paragraph at lines 238--239
-\T1/cmr/m/n/10.95 Die An-fra-ge nutzt den \T1/cmtt/m/n/10.95 /api/generate\T1/cmr/m/n/10.95 -Endpunkt mit den Pa-ra-me-tern \T1/cmtt/m/n/10.95 temperature: 0.05 \T1/cmr/m/n/10.95 ([][]-
- []
-
-
-
-[49]
-Package acronym Info: Label `acro:JSON' overridden on input line 240.
-
-Overfull \hbox (0.8864pt too wide) in paragraph at lines 240--241
-\T1/cmr/m/n/10.95 dell das vor-ge-ge-be-ne For-mat nicht ein-hält --, wird dies im Re-port do-ku-men-tiert (\T1/cmtt/m/n/10.95 parsed.success:
- []
-
-
-
-[50]) (includes/caps/7.tex
-
-[51]
-chapter 8.
-
-Overfull \hbox (1.80533pt too wide) in paragraph at lines 5--6
-\T1/cmr/m/n/10.95 Assistenzsystem, das Tool-Reports, Playwright-Interaktionsdaten und Quell-co-de kom-bi-niert, Bar-
- []
-
-
-Overfull \hbox (3.96498pt too wide) in paragraph at lines 9--10
-[]\T1/cmr/bx/n/10.95 TF2: \T1/cmr/m/n/10.95 In-wie-fern ver-bes-sert die Kom-bi-na-ti-on von Tool-Reports, Playwright-Interaktionsdaten
- []
-
-Package acronym Info: Label `acro:SPA' newly defined as it shall be overridden
-although it is yet undefined on input line 19.
-
-Overfull \hbox (10.79132pt too wide) in paragraph at lines 22--23
-\T1/cmtt/m/n/10.95 coder:7b\T1/cmr/m/n/10.95 , \T1/cmtt/m/n/10.95 qwen2.5-coder:14b \T1/cmr/m/n/10.95 und \T1/cmtt/m/n/10.95 qwen3:32b\T1/cmr/m/n/10.95 . Je-des Mo-dell ab-sol-vier-te zehn un-ab-hän-gi-ge Pipeline-
- []
-
-
-Overfull \hbox (6.07849pt too wide) in paragraph at lines 46--47
-[] []\T1/cmss/bx/n/10.95 Metriken.[][] \T1/cmr/m/n/10.95 Aus-ge-wer-tet wer-den vier Me-tri-ken: (1) \T1/cmr/bx/n/10.95 Re-call \T1/cmr/m/n/10.95 (er-kann-te Vio-la-ti-ons re-la-tiv zur Ground
- []
-
-
-
-[52
-
-]
-Overfull \hbox (17.74345pt too wide) in paragraph at lines 56--57
-[] []\T1/cmss/bx/n/10.95 LLM-Detektor-Augmentierung.[][] \T1/cmr/m/n/10.95 Ta-bel-le []10[] zeigt den Re-call nach Hin-zu-nah-me des LLM-Detektors.
- []
-
-
-Overfull \hbox (38.67651pt too wide) in paragraph at lines 62--72
- [][] 
- []
-
-
-
-[53]
-
-[54]
-
-[55]
-Overfull \hbox (22.154pt too wide) in paragraph at lines 171--172
-[] []\T1/cmss/bx/n/10.95 Parsing-Robustheit.[][] \T1/cmr/m/n/10.95 In al-len 30 Runs wur-de der LLM-Output er-folg-reich ge-parst (\T1/cmtt/m/n/10.95 parsed.success:
- []
-
-
-
-[56]
-
-[57]
-
-[58]) (includes/caps/8.tex
-
-[59]
-chapter 9.
-) (includes/anhang.tex
-
-[60
-
-] (latex-vorlage.app)
-\tf@app=\write9
-\openout9 = `latex-vorlage.app'.
-
-
-
-[61
-
-]
-<graphics/ComplexitÃ¤t.png, id=2133, 1336.24219pt x 534.49687pt>
-File: graphics/ComplexitÃ¤t.png Graphic file (type png)
-<use graphics/ComplexitÃ¤t.png>
-Package pdftex.def Info: graphics/ComplexitÃ¤t.png  used on input line 8.
-(pdftex.def)             Requested size: 409.71692pt x 163.88173pt.
-
-
-[62
-
- <./graphics/ComplexitÃ¤t.png>]
-Overfull \vbox (57.04884pt too high) detected at line 150
- []
-
-
-Overfull \vbox (57.04884pt too high) detected at line 150
- []
-
-
-
-[63
-
-]
-
-[64]
-
-[65
-
-]
-<graphics/Sequenzdiagramm.png, id=2173, 1911.14pt x 864.22874pt>
-File: graphics/Sequenzdiagramm.png Graphic file (type png)
-<use graphics/Sequenzdiagramm.png>
-Package pdftex.def Info: graphics/Sequenzdiagramm.png  used on input line 241.
-(pdftex.def)             Requested size: 455.24411pt x 205.86305pt.
-
-
-[66
-
-]
-
-[67 <./graphics/Sequenzdiagramm.png>]
-
-[68
-
-]
-
-[69]
-
-[70
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 407--407
-[]|\T1/cmr/bx/n/10.95 Erwartende
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 419--419
-[]|\T1/cmr/m/n/10.95 onClick-Handler oh-ne
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 419--419
-[]|\T1/cmr/m/n/10.95 grep + LLM-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 421--421
-[]|\T1/cmr/m/n/10.95 axe-core +
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 421--421
-\T1/cmr/m/n/10.95 grep + LLM-
- []
-
-
-Underfull \hbox (badness 4254) in paragraph at lines 423--423
-[]|\T1/cmr/m/n/10.95 Modaler Dia-log oh-ne Fokus-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 431--431
-[]|\T1/cmr/m/n/10.95 grep (CSS-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 431--431
-\T1/cmr/m/n/10.95 Pattern)
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 431--431
-\T1/cmr/m/n/10.95 + LLM-
- []
-
-
-
-[71
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 476--476
-[]|\T1/cmr/bx/n/10.95 Tatsächliche
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 476--476
-[]|\T1/cmr/m/n/10.95 2 axe-Findings
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 476--476
-[]|\T1/cmr/m/n/10.95 Fokus-Outline ent-fernt
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 476--476
-[]|\T1/cmr/m/n/10.95 axe-core +
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 476--476
-[]|\T1/cmr/m/n/10.95 Playwright-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 476--476
-\T1/cmr/m/n/10.95 Check greift
- []
-
-
-Underfull \hbox (badness 5050) in paragraph at lines 476--476
-\T1/cmr/m/n/10.95 nicht; nur mit
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 476--476
-[]|\T1/cmr/m/n/10.95 7b in-sta-bil;
- []
-
-
-Underfull \hbox (badness 1565) in paragraph at lines 476--476
-\T1/cmr/m/n/10.95 14b/32b kon-sis-
- []
-
-
-Underfull \hbox (badness 3579) in paragraph at lines 491--492
-[]|\T1/cmr/m/n/10.95 Enthält Da-teiname, Zei-len-num-mer und
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 491--492
-\T1/cmr/m/n/10.95 einen kon-kre-ten Fix-Vorschlag (z.B.
- []
-
-
-Underfull \hbox (badness 2165) in paragraph at lines 495--496
-[]|\T1/cmr/m/n/10.95 Beschreibt le-dig-lich das Pro-blem, oh-ne
- []
-
-
-
-[72
-
-]
-
-[73]
-Underfull \hbox (badness 7433) in paragraph at lines 513--514
-[]|\T1/cmr/m/n/10.95 Datei App.tsx:37, kon-kre-ter
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 515--516
-[]|\T1/cmtt/m/n/10.95 aria-label\T1/cmr/m/n/10.95 -Wert mit spre-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 521--521
-[]|\T1/cmr/m/n/10.95 Fokus-Outline ent-fernt
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 523--524
-[]|\T1/cmtt/m/n/10.95 onKeyDown\T1/cmr/m/n/10.95 -Muster kor-rekt,
- []
-
-
-Underfull \hbox (badness 3482) in paragraph at lines 525--525
-[]|\T1/cmtt/m/n/10.95 role="button" \T1/cmr/m/n/10.95 auf \T1/cmtt/m/n/10.95 <div>
- []
-
-
-Underfull \hbox (badness 5036) in paragraph at lines 525--526
-[]|\T1/cmtt/m/n/10.95 tabIndex={0} \T1/cmr/m/n/10.95 + \T1/cmtt/m/n/10.95 onKeyDown
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 527--528
-[]|\T1/cmr/m/n/10.95 Vollständiger \T1/cmtt/m/n/10.95 useEffect\T1/cmr/m/n/10.95 -
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 527--528
-\T1/cmr/m/n/10.95 Fokus-Trap mit Shift+Tab-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 529--530
-[]|\T1/cmtt/m/n/10.95 <a href="#main-content^^T\T1/cmr/m/n/10.95 -
- []
-
-
-Underfull \hbox (badness 1325) in paragraph at lines 531--532
-[]|\T1/cmr/m/n/10.95 Korrektur (\T1/cmtt/m/n/10.95 aria-hidden \T1/cmr/m/n/10.95 ent-
- []
-
-
-Underfull \hbox (badness 4279) in paragraph at lines 531--532
-\T1/cmr/m/n/10.95 fer-nen oder \T1/cmtt/m/n/10.95 tabIndex={-1}\T1/cmr/m/n/10.95 )
- []
-
-
-Underfull \hbox (badness 1831) in paragraph at lines 533--534
-[]|\T1/cmr/m/n/10.95 CSS \T1/cmtt/m/n/10.95 order\T1/cmr/m/n/10.95 -Property als Lö-
- []
-
-
-
-[74
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 581--581
-[]|\T1/cmtt/m/n/10.95 <button> \T1/cmr/m/n/10.95 oh-ne \T1/cmtt/m/n/10.95 aria-label
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 581--581
-[]|\T1/cmr/m/n/10.95 Fokus-Outline ent-fernt
- []
-
-
-Underfull \hbox (badness 1460) in paragraph at lines 581--581
-[]|\T1/cmr/m/n/10.95 Modaler Dia-log oh-ne Fokus-
- []
-
-
-Underfull \hbox (badness 3281) in paragraph at lines 581--581
-[]|\T1/cmtt/m/n/10.95 aria-hidden="true" \T1/cmr/m/n/10.95 auf fo-
- []
-
-
-Underfull \hbox (badness 1297) in paragraph at lines 581--581
-[]|\T1/cmr/m/n/10.95 DOM-Reihenfolge weicht von
- []
-
-
-
-[75
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 592--592
-\T1/cmr/m/n/10.95 dings des LLM-Detektors; Axe/P-W/-Grep = Tool-Findings (kon-stant); To-
- []
-
-
-
-[76
-
-]
-
-[77
-
-]
-Overfull \hbox (48.63197pt too wide) in paragraph at lines 679--693
- [][] 
- []
-
-
-
-[78
-
-]
-Overfull \hbox (133.35776pt too wide) in paragraph at lines 703--715
- [][] 
- []
-
-
-
-[79
-
-]
-Underfull \hbox (badness 5985) in paragraph at lines 731--732
-[]|\T1/cmr/m/n/10.95 deutlicher Über-schuss; ho-her
- []
-
-
-Overfull \hbox (34.19473pt too wide) in paragraph at lines 725--737
- [][] 
- []
-
-
-
-[80
-
-]
-Overfull \hbox (83.78572pt too wide) in paragraph at lines 742--743
-\T1/cmr/m/n/10.95 Die Benchmark-Rohdaten wur-den zu-sätz-lich als CSV-Datei ex-por-tiert (\T1/cmtt/m/n/10.95 analysis/benchmark_analysis_raw.csv\T1/cmr/m/n/10.95 ).
- []
-
-
-Overfull \hbox (144.15668pt too wide) in paragraph at lines 749--775
- [][] 
- []
-
-)
-
-[81
-
-]
-
-Package biblatex Warning: Field 'extrayear' is deprecated.
-(biblatex)                Please use 'extradate' instead.
-(biblatex)                Using 'extradate' now.
-
-
-
-[82
-
-
-]
-
-Package biblatex Warning: No driver for 'legislation'.
-(biblatex)                Using fallback driver on input line 72.
-
-
-
-[83]
-Overfull \hbox (0.37888pt too wide) in paragraph at lines 72--72
-[][]\T1/cmr/bx/n/10.95 Gao, Yun-fan; Xiong, Yun; Gao, Xi-nyu; Jia, Kang; Pan, Jin-li-ang et al. (2023)\T1/cmr/m/n/10.95 : Retrieval-
- []
-
-
-Overfull \hbox (18.53203pt too wide) in paragraph at lines 72--72
-\T1/cmr/m/n/10.95 Augmented Ge-ne-ra-ti-on for Lar-ge Lan-gua-ge Mo-dels: A Sur-vey. In: \T1/cmr/m/it/10.95 ar-Xiv pre-print ar-Xiv:2312.10997\T1/cmr/m/n/10.95 . 
- []
-
-
-
-[84]
-Overfull \hbox (4.74887pt too wide) in paragraph at lines 72--72
-\T1/cmr/m/n/10.95 gäng-lich-keit für Men-schen mit Be-hin-de-rung in Theo-rie und Pra-xis. Google-Books-ID: T5ylCQA-
- []
-
-
-
-[85]
-
-[86]
-Overfull \hbox (2.84285pt too wide) in paragraph at lines 72--72
-[][]\T1/cmr/bx/n/10.95 Schulhoff, San-der; Ilie, Mi-cha-el; Ba-le-pur, Nis-hant; Ka-had-ze, Kon-stan-ti-ne; Liu, Aman-
- []
-
-
-
-[87]
-
-[88]
-Overfull \hbox (9.45776pt too wide) in paragraph at lines 72--72
-[][]\T1/cmr/bx/n/10.95 World Wi-de Web Con-sor-ti-um (W3C) (2018)\T1/cmr/m/n/10.95 : Web Con-tent Ac-ces-si-bi-li-ty Gui-de-li-nes (WCAG)
- []
-
-
-Overfull \hbox (9.45776pt too wide) in paragraph at lines 72--72
-[][]\T1/cmr/bx/n/10.95 World Wi-de Web Con-sor-ti-um (W3C) (2023)\T1/cmr/m/n/10.95 : Web Con-tent Ac-ces-si-bi-li-ty Gui-de-li-nes (WCAG)
- []
-
-
-
-[89]
-
-[90] (includes/extra/erklaerung_ki.tex
-Overfull \hbox (1.558pt too wide) in paragraph at lines 132--132
-[]\T1/cmr/m/n/10.95 mich ak-tiv über die Leis-tungs-fä-hig-keit und Be-schrän-kun-gen der oben ge-nann-ten KI-Systeme
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 132--132
-\T1/cmr/bx/n/10.95 wis-sen-schaft-li-chen
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 132--132
-[]|\T1/cmr/bx/n/10.95 Eingesetzte(s)
- []
-
-
-
-[91
-
-
-
-]) (template/_dhbw_erklaerung.tex
-
-[92])
-
-[93
-
-] (latex-vorlage.aux)
- ***********
-LaTeX2e <2024-11-01> patch level 2
-L3 programming layer <2020/03/25>
- ***********
-
-
-LaTeX Warning: There were undefined references.
-
-Package rerunfilecheck Info: File `latex-vorlage.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package logreq Info: Writing requests to 'latex-vorlage.run.xml'.
-\openout1 = `latex-vorlage.run.xml'.
-
- ) 
-Here is how much of TeX's memory you used:
- 42741 strings out of 473523
- 868156 string characters out of 5714631
- 2031835 words of memory out of 5000000
- 64382 multiletter control sequences out of 15000+600000
- 589064 words of font info for 102 fonts, out of 8000000 for 9000
- 1146 hyphenation exceptions out of 8191
- 108i,19n,127p,10962b,2425s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{Hfootnote.321} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Hfootnote.320} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Hfootnote.126} has been referenced but does not exist, replaced by a fixed one
-
- <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcsx1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0500.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on latex-vorlage.pdf (101 pages, 2144643 bytes).
-PDF statistics:
- 4369 PDF objects out of 5155 (max. 8388607)
- 885 named destinations out of 1000 (max. 500000)
- 744 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+Package acronym Info:
