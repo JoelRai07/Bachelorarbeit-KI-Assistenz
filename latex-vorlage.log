@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.9.8)  4 APR 2026 01:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.9.8)  4 APR 2026 01:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1327,7 +1327,7 @@ although it is yet undefined on input line 25.
 
 
 [3]
-<graphics/Diagramm1.png, id=714, 815.045pt x 152.57pt>
+<graphics/Diagramm1.png, id=730, 815.045pt x 152.57pt>
 File: graphics/Diagramm1.png Graphic file (type png)
 <use graphics/Diagramm1.png>
 Package pdftex.def Info: graphics/Diagramm1.png  used on input line 35.
@@ -1367,7 +1367,7 @@ although it is yet undefined on input line 23.
 [7]
 
 [8]
-<graphics/WCAG-Dreieck-4-Ebenen.png, id=908, 770.88pt x 643.6547pt>
+<graphics/WCAG-Dreieck-4-Ebenen.png, id=924, 770.88pt x 643.6547pt>
 File: graphics/WCAG-Dreieck-4-Ebenen.png Graphic file (type png)
 <use graphics/WCAG-Dreieck-4-Ebenen.png>
 Package pdftex.def Info: graphics/WCAG-Dreieck-4-Ebenen.png  used on input line 37.
@@ -1393,7 +1393,7 @@ Overfull \hbox (1.43257pt too wide) in paragraph at lines 109--110
 (includes/taxonomie-figure.tex)
 
 [13]
-<graphics/react.png, id=1100, 984.67876pt x 618.05907pt>
+<graphics/react.png, id=1116, 984.67876pt x 618.05907pt>
 File: graphics/react.png Graphic file (type png)
 <use graphics/react.png>
 Package pdftex.def Info: graphics/react.png  used on input line 125.
@@ -1418,7 +1418,7 @@ Package acronym Info: Label `acro:RAG' overridden on input line 164.
 [17]
 
 [18]
-<graphics/fewshot.png, id=1298, 894.34125pt x 477.28313pt>
+<graphics/fewshot.png, id=1314, 894.34125pt x 477.28313pt>
 File: graphics/fewshot.png Graphic file (type png)
 <use graphics/fewshot.png>
 Package pdftex.def Info: graphics/fewshot.png  used on input line 202.
@@ -1591,7 +1591,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 145--145
 
 [35]
 chapter 6.
-<graphics/durchlauf.png, id=1825, 1258.7025pt x 118.4425pt>
+<graphics/durchlauf.png, id=1841, 1258.7025pt x 118.4425pt>
 File: graphics/durchlauf.png Graphic file (type png)
 <use graphics/durchlauf.png>
 Package pdftex.def Info: graphics/durchlauf.png  used on input line 13.
@@ -1803,16 +1803,9 @@ Overfull \hbox (30.4324pt too wide) in paragraph at lines 346--347
 
 
 [62]
-
-LaTeX Warning: Reference `app:accessibility_verstoesse_100' on page 63 undefined on input line 376.
-
-
 Overfull \hbox (28.74176pt too wide) in paragraph at lines 382--383
 \T1/cmr/bx/n/10.95 ver-let-zen NFA-02 \T1/cmr/m/n/10.95 -- selbst der güns-tigs-te Run be-nö-tigt 648s = 10,8min. Da-mit ist \T1/cmtt/m/n/10.95 qwen2.5-coder:7b
  []
-
-
-LaTeX Warning: Reference `app:ausstehend_100' on page 63 undefined on input line 387.
 
 
 
@@ -1886,7 +1879,17 @@ Underfull \hbox (badness 2495) in paragraph at lines 16--17
 []|\T1/cmr/m/n/10.95 Konzeptmatrix, Pipeline-Schema, Prompt-Dokumentation,
  []
 
-<graphics/ComplexitÃ¤t.png, id=2616, 1336.24219pt x 534.49687pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+[]|\T1/cmr/m/n/10.95 Violations-Katalog, Roh-da-ten, Mo-dell-ver-gleich
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 22--23
+\T1/cmr/m/n/10.95 (7b/14b/32b), Token-Nutzung, Ef-fi-zi-enz, Over-de-tec-ti-on,
+ []
+
+<graphics/ComplexitÃ¤t.png, id=2652, 1336.24219pt x 534.49687pt>
 File: graphics/ComplexitÃ¤t.png Graphic file (type png)
 <use graphics/ComplexitÃ¤t.png>
 Package pdftex.def Info: graphics/ComplexitÃ¤t.png  used on input line 32.
@@ -2325,12 +2328,12 @@ Underfull \hbox (badness 5652) in paragraph at lines 1076--1077
 [96
 
 ]
-<graphics/test12-screen1.png, id=2946, 1443.89438pt x 777.65532pt>
+<graphics/test12-screen1.png, id=2982, 1443.89438pt x 777.65532pt>
 File: graphics/test12-screen1.png Graphic file (type png)
 <use graphics/test12-screen1.png>
 Package pdftex.def Info: graphics/test12-screen1.png  used on input line 1094.
 (pdftex.def)             Requested size: 432.48051pt x 232.91869pt.
-<graphics/test12-screen2.png, id=2947, 442.65375pt x 669.2503pt>
+<graphics/test12-screen2.png, id=2983, 442.65375pt x 669.2503pt>
 File: graphics/test12-screen2.png Graphic file (type png)
 <use graphics/test12-screen2.png>
 Package pdftex.def Info: graphics/test12-screen2.png  used on input line 1101.
@@ -2814,12 +2817,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1702--1703
 [117
 
 ]
-<graphics/test-50-Bild1.png, id=3061, 1444.64719pt x 773.89125pt>
+<graphics/test-50-Bild1.png, id=3097, 1444.64719pt x 773.89125pt>
 File: graphics/test-50-Bild1.png Graphic file (type png)
 <use graphics/test-50-Bild1.png>
 Package pdftex.def Info: graphics/test-50-Bild1.png  used on input line 1770.
 (pdftex.def)             Requested size: 432.48051pt x 231.6732pt.
-<graphics/test-50-Bild2.png, id=3062, 1443.89438pt x 773.89125pt>
+<graphics/test-50-Bild2.png, id=3098, 1443.89438pt x 773.89125pt>
 File: graphics/test-50-Bild2.png Graphic file (type png)
 <use graphics/test-50-Bild2.png>
 Package pdftex.def Info: graphics/test-50-Bild2.png  used on input line 1777.
@@ -2831,12 +2834,12 @@ Package pdftex.def Info: graphics/test-50-Bild2.png  used on input line 1777.
  <./graphics/test-50-Bild1.png>]
 
 [119 <./graphics/test-50-Bild2.png>]
-<graphics/test-50-Bild3.png, id=3074, 1444.64719pt x 773.89125pt>
+<graphics/test-50-Bild3.png, id=3110, 1444.64719pt x 773.89125pt>
 File: graphics/test-50-Bild3.png Graphic file (type png)
 <use graphics/test-50-Bild3.png>
 Package pdftex.def Info: graphics/test-50-Bild3.png  used on input line 1786.
 (pdftex.def)             Requested size: 432.48051pt x 231.6732pt.
-<graphics/test-50-Bild4.png, id=3075, 1444.64719pt x 313.9228pt>
+<graphics/test-50-Bild4.png, id=3111, 1444.64719pt x 313.9228pt>
 File: graphics/test-50-Bild4.png Graphic file (type png)
 <use graphics/test-50-Bild4.png>
 Package pdftex.def Info: graphics/test-50-Bild4.png  used on input line 1793.
@@ -2849,7 +2852,71 @@ Package pdftex.def Info: graphics/test-50-Bild4.png  used on input line 1793.
 
 [121
 
-])
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1944--1944
+[]|\T1/cmr/m/n/10.95 Paginierung \T1/cmtt/m/n/10.95 role="button"
+ []
+
+[122
+
+
+] [123] [124]
+
+[125]
+Underfull \hbox (badness 10000) in paragraph at lines 1990--1990
+[][][]\T1/cmr/m/n/10.95 Vollständige Mess-da-ten der 30 Pipeline-Durchläufe (test-100-Suite,
+ []
+
+
+Underfull \hbox (badness 1515) in paragraph at lines 1990--1990
+\T1/cmtt/m/n/10.95 num_predict \T1/cmr/m/n/10.95 = 12288). LLM-Det. = Fin-dings des LLM-Detektors; Axe/P-W/-
+ []
+
+
+
+[126
+
+]
+
+[127
+
+]
+
+[128
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 2127--2127
+[]|\T1/cmr/m/n/10.95 Leichte Über-de-tek-ti-on; ho-he
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2153--2153
+[]|\T1/cmr/bx/n/8 Gesamt-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2153--2153
+[]|\T1/cmr/bx/n/8 Min--
+ []
+
+
+
+[129
+
+]
+
+[130
+
+]
+Overfull \hbox (5.38539pt too wide) in paragraph at lines 2195--2196
+[]\T1/cmr/bx/n/10.95 Empfehlungsqualität \T1/cmr/m/n/10.95 (tab:empfehlungsqualitaet_100): Stu-fen-be-wer-tung der Fix-Qualität
+ []
+
+)
+
+[131
+
+]
 
 Package biblatex Warning: Field 'extrayear' is deprecated.
 (biblatex)                Please use 'extradate' instead.
@@ -2857,8 +2924,7 @@ Package biblatex Warning: Field 'extrayear' is deprecated.
 
 
 
-[122
-
+[132
 
 
 ]
@@ -2868,7 +2934,7 @@ Package biblatex Warning: No driver for 'legislation'.
 
 
 
-[123]
+[133]
 Overfull \hbox (0.37888pt too wide) in paragraph at lines 74--74
 [][]\T1/cmr/bx/n/10.95 Gao, Yun-fan; Xiong, Yun; Gao, Xi-nyu; Jia, Kang; Pan, Jin-li-ang et al. (2023)\T1/cmr/m/n/10.95 : Retrieval-
  []
@@ -2880,25 +2946,25 @@ Overfull \hbox (18.53203pt too wide) in paragraph at lines 74--74
 
 
 
-[124]
+[134]
 Overfull \hbox (4.74887pt too wide) in paragraph at lines 74--74
 \T1/cmr/m/n/10.95 gäng-lich-keit für Men-schen mit Be-hin-de-rung in Theo-rie und Pra-xis. Google-Books-ID: T5ylCQA-
  []
 
 
 
-[125]
+[135]
 
-[126]
+[136]
 Overfull \hbox (2.84285pt too wide) in paragraph at lines 74--74
 [][]\T1/cmr/bx/n/10.95 Schulhoff, San-der; Ilie, Mi-cha-el; Ba-le-pur, Nis-hant; Ka-had-ze, Kon-stan-ti-ne; Liu, Aman-
  []
 
 
 
-[127]
+[137]
 
-[128]
+[138]
 Overfull \hbox (9.45776pt too wide) in paragraph at lines 74--74
 [][]\T1/cmr/bx/n/10.95 World Wi-de Web Con-sor-ti-um (W3C) (2018)\T1/cmr/m/n/10.95 : Web Con-tent Ac-ces-si-bi-li-ty Gui-de-li-nes (WCAG)
  []
@@ -2910,9 +2976,9 @@ Overfull \hbox (9.45776pt too wide) in paragraph at lines 74--74
 
 
 
-[129]
+[139]
 
-[130] (includes/extra/erklaerung_ki.tex
+[140] (includes/extra/erklaerung_ki.tex
 Overfull \hbox (1.558pt too wide) in paragraph at lines 132--132
 []\T1/cmr/m/n/10.95 mich ak-tiv über die Leis-tungs-fä-hig-keit und Be-schrän-kun-gen der oben ge-nann-ten KI-Systeme
  []
@@ -2929,15 +2995,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--132
 
 
 
-[131
+[141
 
 
 
 ]) (template/_dhbw_erklaerung.tex
 
-[132])
+[142])
 
-[133
+[143
 
 ] (latex-vorlage.aux)
  ***********
@@ -2955,10 +3021,10 @@ Package logreq Info: Writing requests to 'latex-vorlage.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43329 strings out of 473523
- 876730 string characters out of 5714631
- 2062026 words of memory out of 5000000
- 64768 multiletter control sequences out of 15000+600000
+ 43381 strings out of 473523
+ 877470 string characters out of 5714631
+ 2063488 words of memory out of 5000000
+ 64784 multiletter control sequences out of 15000+600000
  590877 words of font info for 104 fonts, out of 8000000 for 9000
  1146 hyphenation exceptions out of 8191
  108i,19n,127p,10962b,2433s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2972,9 +3038,9 @@ pdfTeX warning (dest): name{Hfootnote.322} has been referenced but does not exis
 pdfTeX warning (dest): name{Hfootnote.128} has been referenced but does not exist, replaced by a fixed one
 
  <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcsx1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0500.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on latex-vorlage.pdf (143 pages, 2474485 bytes).
+Output written on latex-vorlage.pdf (153 pages, 2511027 bytes).
 PDF statistics:
- 5343 PDF objects out of 6186 (max. 8388607)
- 1083 named destinations out of 1200 (max. 500000)
+ 5439 PDF objects out of 6186 (max. 8388607)
+ 1119 named destinations out of 1200 (max. 500000)
  1025 words of extra memory for PDF output out of 10000 (max. 10000000)
 

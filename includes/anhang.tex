@@ -19,7 +19,7 @@ test-12-Block & Violations-Katalog, Erkennungsrate, Recall-Matrix, Rohdaten, Mod
 \hline
 test-50-Block & Violations-Katalog, Erkennungsrate, Recall-Matrix, Rohdaten, Modellvergleich, Token-Nutzung, Effizienz, Overdetection, Konsistenz, Empfehlungsqualität, CSV-Auszug \\
 \hline
-test-100-Block & Platzhalter-Block für die kommende Messreihe (noch ohne Tabelleninhalt) \\
+test-100-Block & Violations-Katalog, Rohdaten, Modellvergleich (7b/14b/32b), Token-Nutzung, Effizienz, Overdetection, Konsistenz, Quantilanalyse (7b), ausstehend: Erkennungsrate, Recall-Matrix, Empfehlungsqualität, CSV-Auszug \\
 \hline
 \end{tabular}
 \label{tab:anhang_overview}
@@ -1840,3 +1840,360 @@ Max (100\,\%)   & 63 Findings  & absolutes Maximum (32b) \\
 
 \clearpage
 
+% ══════════════════════════════════════════════════════════════════════════════
+% test-100-Suite -- Anhang-Abschnitte (qwen2.5-coder:7b, 10 Runs)
+% ══════════════════════════════════════════════════════════════════════════════
+ 
+\clearpage
+ 
+\anhang{Accessibility-Verstöße der Testanwendung (test-100-Suite)}\label{app:accessibility_verstoesse_100}
+ 
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.1}
+\begin{longtable}{|c|p{5.8cm}|c|p{3.6cm}|c|}
+\caption[Accessibility-Verstöße der test-100-Suite]{Alle 100 eingebetteten Accessibility-Verstöße der test-100-Suite mit Kategorie, erwarteter Erkennungsquelle und zugehörigem WCAG-Kriterium. \textit{LLM} = ausschließlich LLM-Codeanalyse; \textit{manuell} = keine automatische Erkennungsquelle erwartet.}\label{tab:accessibility_verstoesse_100} \\
+\hline
+\textbf{\#} & \textbf{Violation} & \textbf{Kat.} & \textbf{Erwartete Quelle} & \textbf{WCAG} \\
+\hline
+\endfirsthead
+\caption[]{Accessibility-Verstöße der test-100-Suite (Fortsetzung)} \\
+\hline
+\textbf{\#} & \textbf{Violation} & \textbf{Kat.} & \textbf{Erwartete Quelle} & \textbf{WCAG} \\
+\hline
+\endhead
+\hline \multicolumn{5}{|r|}{\textit{Fortsetzung auf der nächsten Seite}} \\ \hline
+\endfoot
+\hline
+\endlastfoot
+%--- App.tsx ---
+V1   & Skip-Link fehlt                           & sem. & Playwright              & 2.4.1 \\ \hline
+V2   & \texttt{<html>} ohne \texttt{lang}        & syn. & axe-core                & 3.1.1 \\ \hline
+V3   & Logo ohne \texttt{alt}                    & syn. & axe-core + grep         & 1.1.1 \\ \hline
+V4   & Deko-Bild ohne \texttt{alt=""}            & syn. & axe-core + grep         & 1.1.1 \\ \hline
+V5   & Button ohne zugänglichen Namen            & syn. & axe-core                & 4.1.2 \\ \hline
+V6   & Badge Kontrast zu niedrig                 & lay. & axe-core                & 1.4.3 \\ \hline
+V7   & \texttt{<a>} ohne \texttt{href}           & sem. & axe-core                & 2.1.1 \\ \hline
+V8   & CSS \texttt{order} weicht von DOM ab      & sem. & axe-core                & 1.3.2 \\ \hline
+V9   & \texttt{<nav>} ohne \texttt{aria-label}   & syn. & axe-core                & 1.3.1 \\ \hline
+V10  & \texttt{onClick} auf \texttt{<li>} o.\,\texttt{onKeyDown} & sem. & grep & 2.1.1 \\ \hline
+%--- Dashboard.tsx ---
+V11  & Headings übersprungen (\texttt{h3})       & sem. & axe-core                & 1.3.1 \\ \hline
+V12  & KPI-Icon ohne \texttt{alt}                & syn. & axe-core + grep         & 1.1.1 \\ \hline
+V13  & KPI-Wert Kontrast niedrig                 & lay. & axe-core                & 1.4.3 \\ \hline
+V14  & KPI-Icon ohne \texttt{alt}                & syn. & axe-core + grep         & 1.1.1 \\ \hline
+V15  & \texttt{onClick} auf \texttt{<div>} o.\,\texttt{onKeyDown} & sem. & grep & 2.1.1 \\ \hline
+V16  & \texttt{role="button"} ohne \texttt{tabIndex} & sem. & axe-core + grep    & 4.1.2 \\ \hline
+V17  & Chart ohne \texttt{alt}                   & syn. & axe-core + grep         & 1.1.1 \\ \hline
+V18  & Tabelle ohne \texttt{<caption>}           & sem. & axe-core                & 1.3.1 \\ \hline
+V19  & \texttt{<th>} ohne \texttt{scope}         & syn. & axe-core                & 1.3.1 \\ \hline
+V20  & Status nur durch Farbe                    & sem. & manuell                 & 1.4.1 \\ \hline
+%--- UserProfile.tsx ---
+V21  & Avatar ohne \texttt{alt}                  & syn. & axe-core + grep         & 1.1.1 \\ \hline
+V22  & Input ohne \texttt{<label>}               & syn. & axe-core                & 1.3.1 \\ \hline
+V23  & Input ohne \texttt{<label>}               & syn. & axe-core                & 1.3.1 \\ \hline
+V24  & Textarea ohne \texttt{<label>}            & syn. & axe-core                & 1.3.1 \\ \hline
+V25  & Pflichtfeld ohne \texttt{required}        & syn. & manuell                 & 3.3.2 \\ \hline
+V26  & Fehlermeldung nicht verknüpft             & sem. & manuell                 & 3.3.1 \\ \hline
+V27  & Button Kontrast niedrig                   & lay. & axe-core                & 1.4.3 \\ \hline
+V28  & \texttt{outline: none} auf Button         & lay. & Playwright              & 2.4.7 \\ \hline
+V29  & Statusmeldung ohne \texttt{aria-live}     & sem. & manuell                 & 4.1.3 \\ \hline
+V30  & Duplikat-ID                               & syn. & axe-core                & 4.1.1 \\ \hline
+%--- DataTable.tsx ---
+V31  & \texttt{onClick} auf \texttt{<span>} o.\,\texttt{onKeyDown} & sem. & grep & 2.1.1 \\ \hline
+V32  & Suchfeld ohne Label                       & syn. & axe-core                & 1.3.1 \\ \hline
+V33  & Tabelle ohne \texttt{<caption>}           & sem. & axe-core                & 1.3.1 \\ \hline
+V34  & Checkbox ohne Label                       & syn. & axe-core                & 1.3.1 \\ \hline
+V35  & Checkbox ohne Label (Zeilen)              & syn. & axe-core                & 1.3.1 \\ \hline
+V36  & Status nur durch Farbe                    & sem. & manuell                 & 1.4.1 \\ \hline
+V37  & Icon-Button ohne Namen                    & syn. & axe-core                & 4.1.2 \\ \hline
+V38  & Paginierung \texttt{onClick} o.\ Keyboard & sem. & grep                   & 2.1.1 \\ \hline
+V39  & Paginierung \texttt{onClick} o.\ Keyboard & sem. & grep                   & 2.1.1 \\ \hline
+V40  & Paginierung \texttt{onClick} o.\ Keyboard & sem. & grep                   & 2.1.1 \\ \hline
+%--- Notifications.tsx ---
+V41  & \texttt{<li>} \texttt{onClick} o.\,\texttt{onKeyDown} & sem. & grep    & 2.1.1 \\ \hline
+V42  & Ungelesen nur durch Farbe                 & sem. & manuell                 & 1.4.1 \\ \hline
+V43  & Kontrast Zeitangabe niedrig               & lay. & axe-core                & 1.4.3 \\ \hline
+V44  & \texttt{<li>} \texttt{onClick} o.\,\texttt{onKeyDown} & sem. & grep    & 2.1.1 \\ \hline
+V45  & \texttt{<li>} \texttt{onClick} o.\,\texttt{onKeyDown} & sem. & grep    & 2.1.1 \\ \hline
+V46  & Button 16$\times$16\,px $<$ 24$\times$24\,px & lay. & grep (CSS)     & 2.5.8 \\ \hline
+V47  & Modal ohne Fokus-Trap                     & sem. & Playwright              & 2.1.2 \\ \hline
+V48  & Dialog ohne \texttt{aria-labelledby}      & syn. & axe-core                & 4.1.2 \\ \hline
+V49  & \texttt{outline: none} auf Button         & lay. & Playwright              & 2.4.7 \\ \hline
+V50  & \texttt{aria-hidden} auf fokussierbarem   & syn. & axe-core                & 4.1.2 \\ \hline
+%--- Settings.tsx ---
+V51  & Tab \texttt{onClick} o.\,\texttt{onKeyDown} & sem. & grep               & 2.1.1 \\ \hline
+V52  & Tab \texttt{onClick} o.\,\texttt{onKeyDown} & sem. & grep               & 2.1.1 \\ \hline
+V53  & Tab \texttt{onClick} o.\,\texttt{onKeyDown} & sem. & grep               & 2.1.1 \\ \hline
+V54  & Toggle ohne zugänglichen Namen            & syn. & axe-core                & 4.1.2 \\ \hline
+V55  & Select ohne Label                         & syn. & axe-core                & 1.3.1 \\ \hline
+V56  & Input ohne Label                          & syn. & axe-core                & 1.3.1 \\ \hline
+V57  & Passwortfeld ohne Label                   & syn. & axe-core                & 1.3.1 \\ \hline
+V58  & Passwortfeld ohne Label                   & syn. & axe-core                & 1.3.1 \\ \hline
+V59  & Button Kontrast niedrig                   & lay. & axe-core                & 1.4.3 \\ \hline
+V60  & Checkbox ohne Label                       & syn. & axe-core                & 1.3.1 \\ \hline
+%--- SearchResults.tsx ---
+V61  & Suchfeld ohne Label                       & syn. & axe-core                & 1.3.1 \\ \hline
+V62  & Button ohne Namen                         & syn. & axe-core                & 4.1.2 \\ \hline
+V63  & Filter-Chips \texttt{onClick} o.\ Keyboard & sem. & grep                 & 2.1.1 \\ \hline
+V64  & \texttt{<li>} \texttt{onClick} o.\,\texttt{onKeyDown} & sem. & grep    & 2.1.1 \\ \hline
+V65  & \texttt{<li>} \texttt{onClick} o.\,\texttt{onKeyDown} & sem. & grep    & 2.1.1 \\ \hline
+V66  & \texttt{<li>} \texttt{onClick} o.\,\texttt{onKeyDown} & sem. & grep    & 2.1.1 \\ \hline
+V67  & \texttt{<li>} \texttt{onClick} o.\,\texttt{onKeyDown} & sem. & grep    & 2.1.1 \\ \hline
+V68  & Typ-Badge nur durch Farbe                 & sem. & manuell                 & 1.4.1 \\ \hline
+V69  & Kontrast Datum niedrig                    & lay. & axe-core                & 1.4.3 \\ \hline
+V70  & Paginierung \texttt{role="button"} o.\,\texttt{tabIndex} & sem. & axe-core + grep & 4.1.2 \\ \hline
+%--- FileUpload.tsx ---
+V71  & Dropzone \texttt{onClick} o.\,\texttt{onKeyDown} & sem. & grep          & 2.1.1 \\ \hline
+V72  & Upload-Icon ohne \texttt{alt}             & syn. & axe-core + grep         & 1.1.1 \\ \hline
+V73  & File-Input ohne Label                     & syn. & axe-core                & 1.3.1 \\ \hline
+V74  & Löschen-Button ohne Namen                & syn. & axe-core                & 4.1.2 \\ \hline
+V75  & Progressbar ohne \texttt{aria-valuenow}   & syn. & axe-core                & 4.1.2 \\ \hline
+V76  & Kontrast Hilfetext niedrig                & lay. & axe-core                & 1.4.3 \\ \hline
+V77  & Button 16$\times$16\,px $<$ 24$\times$24\,px & lay. & grep (CSS)     & 2.5.8 \\ \hline
+V78  & Modal ohne Fokus-Trap                     & sem. & Playwright              & 2.1.2 \\ \hline
+V79  & Dialog ohne \texttt{aria-labelledby}      & syn. & axe-core                & 4.1.2 \\ \hline
+V80  & \texttt{outline: none} auf Button         & lay. & Playwright              & 2.4.7 \\ \hline
+%--- Calendar.tsx ---
+V81  & Tabelle ohne \texttt{<caption>}           & sem. & axe-core                & 1.3.1 \\ \hline
+V82  & \texttt{<th>} ohne \texttt{scope}         & syn. & axe-core                & 1.3.1 \\ \hline
+V83  & \texttt{<td>} \texttt{onClick} o.\,\texttt{onKeyDown} & sem. & grep    & 2.1.1 \\ \hline
+V84  & Event nur durch Farbe                     & sem. & manuell                 & 1.4.1 \\ \hline
+V85  & \texttt{role="button"} ohne \texttt{tabIndex} & sem. & axe-core + grep  & 4.1.2 \\ \hline
+V86  & Detail ohne \texttt{aria-live}            & sem. & manuell                 & 4.1.3 \\ \hline
+V87  & Banner-Bild ohne \texttt{alt}             & syn. & axe-core + grep         & 1.1.1 \\ \hline
+%--- Chat.tsx ---
+V88  & Chat ohne \texttt{aria-live}              & sem. & manuell                 & 4.1.3 \\ \hline
+V89  & Kontrast Zeitstempel niedrig              & lay. & axe-core                & 1.4.3 \\ \hline
+V90  & Chat-Input ohne Label                     & syn. & axe-core                & 1.3.1 \\ \hline
+V91  & Senden-Button ohne Namen                  & syn. & axe-core                & 4.1.2 \\ \hline
+V92  & Emoji \texttt{onClick} o.\,\texttt{onKeyDown} & sem. & grep            & 2.1.1 \\ \hline
+V93  & Online-Status nur durch Farbe             & sem. & manuell                 & 1.4.1 \\ \hline
+V94  & Kontrast Hilfetext niedrig                & lay. & axe-core                & 1.4.3 \\ \hline
+%--- HelpCenter.tsx ---
+V95  & Suchfeld ohne Label                       & syn. & axe-core                & 1.3.1 \\ \hline
+V96  & Accordion \texttt{onClick} o.\,\texttt{onKeyDown} & sem. & grep       & 2.1.1 \\ \hline
+V97  & Accordion ohne \texttt{aria-expanded}     & sem. & manuell                 & 4.1.2 \\ \hline
+V98  & Kontaktbild ohne \texttt{alt}             & syn. & axe-core + grep         & 1.1.1 \\ \hline
+V99  & Kontrast Kontaktinfo niedrig              & lay. & axe-core                & 1.4.3 \\ \hline
+V100 & \texttt{aria-hidden} auf fokussierbarem   & syn. & axe-core                & 4.1.2 \\ \hline
+\end{longtable}
+\begin{center}\footnotesize Kat.: syn.\ = syntaktisch, sem.\ = semantisch, lay.\ = layout.\end{center}
+ 
+\clearpage
+ 
+\anhang{Rohdaten: alle 10 Benchmark-Runs (test-100-Suite, qwen2.5-coder:7b)}\label{app:rohdaten_100}
+ 
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.1}
+\caption[Rohdaten aller 30 Benchmark-Runs (test-100)]{Vollständige Messdaten der 30 Pipeline-Durchläufe (test-100-Suite, \texttt{num\_predict}~=~12\,288). LLM-Det.~=~Findings des LLM-Detektors; Axe/PW/Grep~=~Tool-Findings (konstant je Run); Tokens~=~Output-Tokens; Dauer~=~Priorisierungslaufzeit in Sekunden.}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|l|c|c|c|c|c|c|c|}
+\hline
+\textbf{Run} & \textbf{Modell} & \textbf{LLM-Det.} & \textbf{Axe} & \textbf{PW} & \textbf{Grep} & \textbf{Gesamt-Det.} & \textbf{Tokens} & \textbf{Dauer\,(s)} \\
+\hline
+01 & qwen2.5-coder:7b & 107 & 11 & 2 & 24 & 144 & 12\,288 & 424 \\
+02 & qwen2.5-coder:7b &  99 & 11 & 2 & 24 & 136 & 12\,288 & 395 \\
+03 & qwen2.5-coder:7b &  98 & 11 & 2 & 24 & 135 & 12\,288 & 401 \\
+04 & qwen2.5-coder:7b &  97 & 11 & 2 & 24 & 134 &  7\,902 & 261 \\
+05 & qwen2.5-coder:7b & 110 & 11 & 2 & 24 & 147 & 12\,288 & 408 \\
+06 & qwen2.5-coder:7b & 109 & 11 & 2 & 24 & 146 & 12\,288 & 388 \\
+07 & qwen2.5-coder:7b & 109 & 11 & 2 & 24 & 146 & 12\,288 & 372 \\
+08 & qwen2.5-coder:7b &  96 & 11 & 2 & 24 & 133 &  8\,007 & 258 \\
+09 & qwen2.5-coder:7b & 106 & 11 & 2 & 24 & 143 & 12\,288 & 371 \\
+10 & qwen2.5-coder:7b & 109 & 11 & 2 & 24 & 146 & 12\,288 & 369 \\
+\hline
+11 & qwen2.5-coder:14b &  93 & 11 & 2 & 24 & 130 & 12\,288 & 759 \\
+12 & qwen2.5-coder:14b &  91 & 11 & 2 & 24 & 128 & 12\,288 & 790 \\
+13 & qwen2.5-coder:14b &  93 & 11 & 2 & 24 & 130 & 12\,288 & 865 \\
+14 & qwen2.5-coder:14b &  91 & 11 & 2 & 24 & 128 & 12\,288 & 867 \\
+15 & qwen2.5-coder:14b & 100 & 11 & 2 & 24 & 137 & 12\,288 & 864 \\
+16 & qwen2.5-coder:14b &  93 & 11 & 2 & 24 & 130 & 12\,288 & 818 \\
+17 & qwen2.5-coder:14b &  94 & 11 & 2 & 24 & 131 & 12\,288 & 821 \\
+18 & qwen2.5-coder:14b &  95 & 11 & 2 & 24 & 132 & 12\,288 & 822 \\
+19 & qwen2.5-coder:14b & 100 & 11 & 2 & 24 & 137 & 12\,288 & 844 \\
+20 & qwen2.5-coder:14b &  93 & 11 & 2 & 24 & 130 & 12\,288 & 759 \\
+\hline
+21 & qwen3:32b &  94 & 11 & 2 & 24 & 131 &  8\,936 & 1\,220 \\
+22 & qwen3:32b & 104 & 11 & 2 & 24 & 141 &  6\,698 &   960 \\
+23 & qwen3:32b & 104 & 11 & 2 & 24 & 141 & 12\,288 & 1\,708 \\
+24 & qwen3:32b & 106 & 11 & 2 & 24 & 143 &  6\,367 &   971 \\
+25 & qwen3:32b &  94 & 11 & 2 & 24 & 131 &  7\,355 & 1\,000 \\
+26 & qwen3:32b & 104 & 11 & 2 & 24 & 141 &  6\,890 &   976 \\
+27 & qwen3:32b &  94 & 11 & 2 & 24 & 131 &  5\,476 &   781 \\
+28 & qwen3:32b &  93 & 11 & 2 & 24 & 130 &  4\,206 &   634 \\
+29 & qwen3:32b &  94 & 11 & 2 & 24 & 131 &  8\,571 & 1\,126 \\
+30 & qwen3:32b & 104 & 11 & 2 & 24 & 141 &  6\,816 &   954 \\
+\hline
+\end{tabular}
+}%
+\label{tab:rohdaten_runs_100}
+\end{table}
+ 
+\clearpage
+ 
+\anhang{Modell-Leistungsvergleich: test-100-Suite Zusammenfassung (qwen2.5-coder:7b)}\label{app:modell_summary_100}
+ 
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.25}
+\caption[Modell-Leistungsvergleich (test-100-Suite)]{Zusammenfassung der Leistungsmetriken für \texttt{qwen2.5-coder:7b} auf der test-100-Suite ($n=10$ Runs, \texttt{num\_predict}~=~12\,288). Ausschließlich 7b wurde evaluiert; 14b und 32b stehen als Folgeschritt aus. Recall-Wert: vorläufige Schätzung auf Basis qualitativer Analyse der nicht-trunzierten Runs (4, 8); systemische Verifikation über alle 10 Runs ist ausstehend.}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Metrik} & \textbf{qwen2.5-coder:7b} \\
+\hline
+Recall (vorläufige Schätzung)                  & $\approx$70\,\% (systemische Verifikation ausstehend) \\
+LLM-Detektor-Findings (Ø $\pm$ $\sigma$)       & 104{,}0 $\pm$ 5{,}75 \\
+LLM-Detektor-Findings (Min--Max)               & 96--110 \\
+Konsistenz $\sigma$                            & 5{,}75 \\
+Priorisierungsqualität                         & Fehlerhaft (inverse Priorisierung bestätigt) \\
+Fix-Qualität (Stufe)                           & 0--1 \\
+Priorisierungslaufzeit (Ø)                     & 365\,s \\
+LLM-Detektor-Laufzeit (Ø)                     & 394\,s \\
+Gesamtlaufzeit (Ø)                             & 765\,s \\
+Gesamtlaufzeit (Min--Max)                      & 648\,s -- 839\,s \\
+Output-Tokens Ø                                & 11\,421 \\
+Output-Limit ausgeschöpft                      & 8\,/\,10 Runs (80\,\%) \\
+Parsing-Erfolg                                 & 100\,\% \\
+NFA-02-Konformität                             & \texttimes\ (alle 10 Runs: min.\ 10{,}8\,min) \\
+Eignung BITV-Einsatz                           & Nicht geeignet \\
+\hline
+\end{tabular}
+}%
+\label{tab:modell_summary_100}
+\end{table}
+ 
+\clearpage
+ 
+\anhang{Token-Nutzung pro Modell: Input/Output (test-100-Suite)}\label{app:token_economy_100}
+ 
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\caption[Token-Nutzung (test-100)]{Durchschnittliche Token-Nutzung je Run (test-100-Suite, \texttt{num\_predict}~=~12\,288). 80\,\% aller Runs schöpften das Output-Limit vollständig aus; lediglich Run~4 (7\,902) und Run~8 (8\,007) wurden nicht abgeschnitten. Der Input-Token-Anstieg gegenüber test-50 (\O{}~13\,200--14\,200) reflektiert die größere Anzahl serialisierter Findings.}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Modell} & \textbf{Input-Tokens Ø} & \textbf{Output-Tokens Ø} & \textbf{Truncation} \\
+\hline
+qwen2.5-coder:7b  & 17\,503 & 11\,421 & 8\,/\,10 Runs (80\,\%) \\
+\hline
+\multicolumn{4}{|l|}{\textit{Gesamt (10 Runs): Input $\approx$175\,032 / Output 114\,213 Tokens}} \\
+\hline
+\end{tabular}
+\label{tab:token_economy_100}
+\end{table}
+ 
+\anhang{Effizienzmetriken (test-100-Suite)}\label{app:effizienz_metriken_100}
+ 
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\caption[Effizienzvergleich (test-100)]{Effizienzvergleich auf Basis der 10 Benchmark-Runs der test-100-Suite. \textit{LLM-Findings/s} bezieht sich auf LLM-Detektor-Findings pro Sekunde Priorisierungslaufzeit.}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Modell} & \textbf{LLM-Findings Ø} & \textbf{Priorisierungslaufzeit Ø\,(s)} & \textbf{LLM-Findings/s} & \textbf{Zusatznutzen ggü.\ test-50} \\
+\hline
+qwen2.5-coder:7b  & 104{,}0 & 365 & 0{,}285 & +123\,\% Findings bei +84\,\% Zeitaufwand \\
+\hline
+\end{tabular}
+}%
+\label{tab:effizienz_metriken_100}
+\end{table}
+ 
+\clearpage
+ 
+\anhang{Über-Detektion relativ zur Ground Truth (test-100-Suite)}\label{app:overdetection_100}
+ 
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\caption[Über-Detektion relativ zu 100 Ground-Truth-Violations]{Vergleich der durchschnittlichen LLM-Detektor-Findings pro Run mit der Ground Truth (100~Violations, test-100-Suite).}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|p{5.5cm}|}
+\hline
+\textbf{Modell} & \textbf{LLM-Findings Ø} & \textbf{Ground Truth} & \textbf{Quote} & \textbf{Interpretation} \\
+\hline
+qwen2.5-coder:7b  & 104{,}0 & 100 & 104\,\% & Leichte Überdetektion; hohe LLM-Finding-Zahl trotz inverser Priorisierung und 80\,\% Truncation \\
+\hline
+\end{tabular}
+}%
+\label{tab:overdetection_100}
+\end{table}
+ 
+\anhang{Detektor-Konsistenz über alle 10 Runs (test-100-Suite)}\label{app:detektor_konsistenz_100}
+ 
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.2}
+\scriptsize
+\caption[Detektor-Konsistenz (test-100, alle 10 Runs)]{Konsistenzanalyse der Detektoren über alle 10 Benchmark-Runs (test-100). Axe-core, Playwright und grep bleiben vollständig deterministisch; die Varianz entsteht ausschließlich im LLM-Detektor.}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|p{2.4cm}|p{0.8cm}|p{1.5cm}|p{1.2cm}|p{1.2cm}|p{1.8cm}|p{4.0cm}|}
+\hline
+\textbf{Detektor} & \textbf{Runs} & \textbf{Gesamt-Findings} & \textbf{Ø/Run} & \textbf{Min--Max} & \textbf{$\sigma^2$ / $\sigma$} & \textbf{Interpretation} \\
+\hline
+axe-core    & 10 & 110 & 11{,}0 & 11--11 & 0{,}00 / 0{,}00 & vollständig deterministisch \\
+\hline
+Playwright  & 10 &  20 &  2{,}0 &  2--2  & 0{,}00 / 0{,}00 & vollständig deterministisch \\
+\hline
+grep        & 10 & 240 & 24{,}0 & 24--24 & 0{,}00 / 0{,}00 & vollständig deterministisch \\
+\hline
+qwen2.5-coder:7b & 10 & 1040 & 104{,}0 & 96--110 & 33{,}11 / 5{,}75 & moderate Streuung; höher als 14b/32b auf test-12 \\
+\hline
+\end{tabular}
+}%
+\label{tab:detektor_konsistenz_100}
+\end{table}
+ 
+\clearpage
+ 
+\anhang{Statistische Verteilung der LLM-Findings (alle 10 Runs, test-100-Suite)}\label{app:statistik_quantile_100}
+ 
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\caption[Quantilanalyse der LLM-Findings (test-100, 10 Runs)]{Quantilanalyse der LLM-Detektor-Findings über alle 10 Benchmark-Runs der test-100-Suite (\texttt{qwen2.5-coder:7b}).}
+\begin{tabular}{|l|c|p{7cm}|}
+\hline
+\textbf{Quantil} & \textbf{Wert} & \textbf{Interpretation} \\
+\hline
+Min (0\,\%)     & 96 Findings  & absolutes Minimum (Runs 4 und 8, nicht trunkiert) \\
+\hline
+Q1 (25\,\%)     & 98 Findings  & unteres Cluster (Runs 2, 3, 4) \\
+\hline
+Median (50\,\%) & 106{,}5 Findings & Übergangsbereich \\
+\hline
+Q3 (75\,\%)     & 109 Findings & oberes Cluster (Runs 5--7, 10) \\
+\hline
+Max (100\,\%)   & 110 Findings & absolutes Maximum (Run 5) \\
+\hline
+\ac{IQR}        & 11 Findings  & moderate Modell-Varianz \\
+\hline
+\end{tabular}
+\label{tab:statistik_quantile_100}
+\end{table}
+ 
+\clearpage
+ 
+\anhang{Hinweis: Ausstehende Tabellen (test-100-Suite)}\label{app:ausstehend_100}
+ 
+Die folgenden Anhang-Bausteine der test-100-Suite erfordern eine systematische Violation-für-Violation-Auswertung über alle 10~Runs und sind als Folgeschritt vorgesehen:
+ 
+\begin{itemize}
+  \item \textbf{Erkennungsrate} (tab:erkennungsrate\_poc\_100): Mapping jeder der 100 Ground-Truth-Violations auf die tatsächliche Erkennungsquelle je Run.
+  \item \textbf{Recall-Matrix} (tab:recall\_matrix\_100): Binarmatrix Violation~$\times$ Bedingung (Baseline / +7b), basierend auf der $>\,5/10$-Schwelle.
+  \item \textbf{Empfehlungsqualität} (tab:empfehlungsqualitaet\_100): Stufenbewertung der Fix-Qualität je Violation (0--2).
+  \item \textbf{CSV-Auszug} (tab:csv\_beispiel\_100): Repräsentative Rohdatenzeilen.
+\end{itemize}
+ 
+\noindent\textit{Methodischer Hinweis}: Zwei Runs (4 und 8) haben vollständige, nicht-trunkierte Berichte (7\,902 bzw.\ 8\,007 Output-Tokens). Diese Runs bilden die primäre Grundlage für die Recall-Schätzung. In den restlichen acht trunzierten Runs (je 12\,288 Tokens) ist der Nice-to-have-Abschnitt vollständig abgeschnitten, wodurch Violations, die 7b als Nice-to-have klassifiziert, in diesen Runs nicht im finalen Report erscheinen und damit unter die $>\,5/10$-Schwelle fallen. Die vorläufige Recall-Schätzung beträgt $\approx$70\,/\,100.

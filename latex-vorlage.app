@@ -38,3 +38,12 @@
 \contentsline {section}{\numberline {Anhang\ 38}Statistische Verteilung der LLM-Findings (alle 30 Runs, test-50-Suite)}{117}{section*.806}%
 \contentsline {section}{\numberline {Anhang\ 39}Screenshots der Testanwendung (test-50-Suite)}{118}{section*.809}%
 \contentsline {section}{\numberline {Anhang\ 40}test-100-Suite (kompletter Block)}{121}{section*.815}%
+\contentsline {section}{\numberline {Anhang\ 41}Accessibility-Verstöße der Testanwendung (test-100-Suite)}{122}{section*.818}%
+\contentsline {section}{\numberline {Anhang\ 42}Rohdaten: alle 10 Benchmark-Runs (test-100-Suite, qwen2.5-coder:7b)}{126}{section*.820}%
+\contentsline {section}{\numberline {Anhang\ 43}Modell-Leistungsvergleich: test-100-Suite Zusammenfassung (qwen2.5-coder:7b)}{127}{section*.823}%
+\contentsline {section}{\numberline {Anhang\ 44}Token-Nutzung pro Modell: Input/Output (test-100-Suite)}{128}{section*.826}%
+\contentsline {section}{\numberline {Anhang\ 45}Effizienzmetriken (test-100-Suite)}{128}{section*.829}%
+\contentsline {section}{\numberline {Anhang\ 46}Über-Detektion relativ zur Ground Truth (test-100-Suite)}{129}{section*.832}%
+\contentsline {section}{\numberline {Anhang\ 47}Detektor-Konsistenz über alle 10 Runs (test-100-Suite)}{129}{section*.835}%
+\contentsline {section}{\numberline {Anhang\ 48}Statistische Verteilung der LLM-Findings (alle 10 Runs, test-100-Suite)}{130}{section*.838}%
+\contentsline {section}{\numberline {Anhang\ 49}Hinweis: Ausstehende Tabellen (test-100-Suite)}{131}{section*.841}%
