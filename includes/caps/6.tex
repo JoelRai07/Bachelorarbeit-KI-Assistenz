@@ -46,13 +46,13 @@ ACE/
   results/            # Generierte Reports (nicht versioniert)
 \end{lstlisting}
 
-Die Pipeline wird über \texttt{src/index.ts} orchestriert und unterstützt fünf CLI-Flags: \texttt{-{}-url} (Ziel-URL), \texttt{-{}-src-dir} (Quellcode-Pfad), \texttt{-{}-skip-llm} (Prompt speichern ohne finale Priorisierung), \texttt{-{}-axe-only} (nur axe-core ausführen) und \texttt{-{}-llm-detect} (zusätzliche LLM-Codeanalyse aktivieren). Die Konfiguration -- einschließlich Ollama-URL, Modellname und Timeout-Werte -- erfolgt zentral in \texttt{config.ts} und kann über Umgebungsvariablen überschrieben werden.
+Die Pipeline wird über \texttt{src/index.ts} orchestriert und unterstützt fünf \ac{CLI}-Flags: \texttt{-{}-url} (Ziel-\acs{URL}), \texttt{-{}-src-dir} (Quellcode-Pfad), \texttt{-{}-skip-llm} (Prompt speichern ohne finale Priorisierung), \texttt{-{}-axe-only} (nur axe-core ausführen) und \texttt{-{}-llm-detect} (zusätzliche \ac{LLM}-Codeanalyse aktivieren). Die Konfiguration -- einschließlich Ollama-\acs{URL}, Modellname und Timeout-Werte -- erfolgt zentral in \texttt{config.ts} und kann über Umgebungsvariablen überschrieben werden.
 
 % ─────────────────────────────────────────────────────────────────────────────
 \section{axe-core-Modul}
 \label{sec:impl-axe}
 
-Das axe-core-Modul implementiert \ac{FA}-01 (regelbasierte Accessibility-Erkennung). Es startet über Playwright einen headless Chromium-Browser, navigiert zur Ziel-URL und wartet auf \texttt{networkidle}, um sicherzustellen, dass die React-Anwendung vollständig gerendert ist. Anschließend wird über \texttt{AxeBuilder} eine axe-core-Analyse ausgeführt, die auf die Tags \texttt{wcag2a}, \texttt{wcag2aa}, \texttt{wcag21a}, \texttt{wcag21aa} und \texttt{wcag22aa} beschränkt ist -- entsprechend dem gesetzlichen Mindeststandard (vgl. Abschnitt~\ref{kap:2.1}).
+Das axe-core-Modul implementiert \ac{FA}-01 (regelbasierte Accessibility-Erkennung). Es startet über Playwright einen headless Chromium-Browser, navigiert zur Ziel-\acs{URL} und wartet auf \texttt{networkidle}, um sicherzustellen, dass die React-Anwendung vollständig gerendert ist. Anschließend wird über \texttt{AxeBuilder} eine axe-core-Analyse ausgeführt, die auf die Tags \texttt{wcag2a}, \texttt{wcag2aa}, \texttt{wcag21a}, \texttt{wcag21aa} und \texttt{wcag22aa} beschränkt ist -- entsprechend dem gesetzlichen Mindeststandard (vgl. Abschnitt~\ref{kap:2.1}).
 
 Die Normalisierung überführt jede Violation in ein \texttt{UnifiedFinding}. Dabei werden drei Transformationen durchgeführt:
 
@@ -139,36 +139,36 @@ Treffer werden nach der Normalisierung dedupliziert: Findings mit identischer \t
 \section{LLM-Detektor-Modul}
 \label{sec:impl-llm-detector}
 
-Das LLM-Detektor-Modul ergänzt die regelbasierten Quellen um eine modellbasierte Quellcodeanalyse. Es wird nur ausgeführt, wenn der CLI-Parameter \texttt{-{}-llm-detect} gesetzt ist und ein Quellcodepfad via \texttt{-{}-src-dir} vorliegt. Ziel ist nicht die Ersetzung bestehender Tools, sondern eine zusätzliche Detektionsquelle mit semantischem Fokus.
+Das \ac{LLM}-Detektor-Modul ergänzt die regelbasierten Quellen um eine modellbasierte Quellcodeanalyse. Es wird nur ausgeführt, wenn der \ac{CLI}-Parameter \texttt{-{}-llm-detect} gesetzt ist und ein Quellcodepfad via \texttt{-{}-src-dir} vorliegt. Ziel ist nicht die Ersetzung bestehender Tools, sondern eine zusätzliche Detektionsquelle mit semantischem Fokus.
 
 Die Verarbeitung erfolgt in fünf Schritten:
 
 \begin{enumerate}
   \item \textbf{Dateiselektion:} Das Modul sammelt rekursiv Dateien mit den Endungen \texttt{.tsx}, \texttt{.ts}, \texttt{.jsx}, \texttt{.js} und \texttt{.css}. Die Anzahl der analysierten Dateien ist über \texttt{LLM\_DETECT\_MAX\_FILES} begrenzbar (Default: 60; in den Benchmarkläufen auf 25 reduziert, um die Laufzeit auf der test-12-Suite zu begrenzen).
   \item \textbf{Chunking:} Die Dateien werden mit Zeilennummern versehen und in Text-Chunks aufgeteilt. Die Chunk-Größe ist über \texttt{LLM\_DETECT\_CHUNK\_CHARS} konfigurierbar (in den Benchmarkläufen: 4000 Zeichen), damit der Kontext robust verarbeitet werden kann.
-  \item \textbf{Detektionsprompt:} Für jeden Chunk wird ein eigener Prompt erzeugt. Dieser verlangt \textit{ausschließlich} JSON im fest definierten Schema (u.\,a. \texttt{ruleId}, \texttt{wcagCriteria}, \texttt{filePath}, \texttt{startLine}, \texttt{endLine}, \texttt{evidence}, \texttt{fixSuggestion}).\footnote{Der vollständige System- und User-Prompt der Detektor-Phase ist in Anhang~\ref{app:detektorprompt} dokumentiert.}
-  \item \textbf{Parsing und Validierung:} Antworten werden primär als JSON extrahiert und validiert. Für Formatabweichungen ist ein Fallback implementiert, der semi-strukturierte Markdown-Ausgaben in das Zielformat überführt.
+  \item \textbf{Detektionsprompt:} Für jeden Chunk wird ein eigener Prompt erzeugt. Dieser verlangt \textit{ausschließlich} \acs{JSON} im fest definierten Schema (u.\,a. \texttt{ruleId}, \texttt{wcagCriteria}, \texttt{filePath}, \texttt{startLine}, \texttt{endLine}, \texttt{evidence}, \texttt{fixSuggestion}).\footnote{Der vollständige System- und User-Prompt der Detektor-Phase ist in Anhang~\ref{app:detektorprompt} dokumentiert.}
+  \item \textbf{Parsing und Validierung:} Antworten werden primär als \acs{JSON} extrahiert und validiert. Für Formatabweichungen ist ein Fallback implementiert, der semi-strukturierte Markdown-Ausgaben in das Zielformat überführt.
   \item \textbf{Normalisierung und Deduplizierung:} Valide Einträge werden als \texttt{source="llm"} in das \ac{UFS} überführt und über den Schlüssel \texttt{ruleId|filePath|startLine} dedupliziert.
 \end{enumerate}
 
-Dieses Vorgehen reduziert Halluzinationen, weil Findings ohne belastbare Evidenz oder ohne verwertbaren Datei-/Zeilenbezug verworfen werden. Gleichzeitig bleibt die Nachvollziehbarkeit erhalten, da jedes LLM-Finding einem konkreten Quellcodeausschnitt zugeordnet ist.
+Dieses Vorgehen reduziert Halluzinationen, weil Findings ohne belastbare Evidenz oder ohne verwertbaren Datei-/Zeilenbezug verworfen werden. Gleichzeitig bleibt die Nachvollziehbarkeit erhalten, da jedes \ac{LLM}-Finding einem konkreten Quellcodeausschnitt zugeordnet ist.
 
 \subsection{Abgrenzung zu grep und Nutzen der Kombination}
 
-Für die Nachvollziehbarkeit gegenüber nicht-technischen Lesenden ist die funktionale Trennung zwischen grep und LLM-Detektor zentral:
+Die beiden Detektionsansätze unterscheiden sich grundlegend in ihrer Arbeitsweise:
 
 \begin{itemize}
   \item \textbf{grep} arbeitet regelbasiert und deterministisch. Es erkennt bekannte Muster zuverlässig und reproduzierbar, kann aber nur das finden, was vorher als Regel modelliert wurde.
-  \item \textbf{LLM-Detektor} arbeitet kontextsensitiv. Er kann auch semantisch ähnliche Problemstellen erkennen, die nicht exakt einem festen Regex-Muster entsprechen, ist jedoch anfälliger für Formatabweichungen und Halluzinationen.
+  \item \textbf{\ac{LLM}-Detektor} arbeitet kontextsensitiv. Er kann auch semantisch ähnliche Problemstellen erkennen, die nicht exakt einem festen Regex-Muster entsprechen, ist jedoch anfälliger für Formatabweichungen und Halluzinationen.
 \end{itemize}
 
-Der \ac{PoC} nutzt deshalb beide Ansätze komplementär: grep als stabile Baseline und LLM-Detektor als zusätzliche Quelle mit potenziellem Recall-Gewinn.
+Der \ac{PoC} nutzt deshalb beide Ansätze komplementär: grep als stabile Baseline und \ac{LLM}-Detektor als zusätzliche Quelle mit potenziellem Recall-Gewinn.
 
-\subsection{Beispielhafter Ablauf eines LLM-Findings}
+\subsection{Beispielhafter Ablauf eines \ac{LLM}-Findings}
 
 Ein typischer Detektionsfall läuft wie folgt ab: In einer Komponente enthält ein \texttt{<div>} einen \texttt{onClick}-Handler ohne tastaturäquivalentes Ereignis. Das Modell meldet dazu ein Finding mit Datei- und Zeilenbezug sowie Evidenztext. Dieses Finding wird normalisiert, dedupliziert und als \texttt{source="llm"} in das \ac{UFS} überführt, bevor es in der Priorisierungsphase gemeinsam mit den toolbasierten Findings verarbeitet wird.
 
-\begin{lstlisting}[language={}, caption={Beispiel eines validierten LLM-Detektor-Findings (vereinfacht)}]
+\begin{lstlisting}[language={}, caption={Beispiel eines validierten \ac{LLM}-Detektor-Findings (vereinfacht)}]
 {
   "title": "Klickbare div-Komponente ohne Tastaturbedienung",
   "ruleId": "keyboard-click-only",
@@ -188,7 +188,7 @@ Ein typischer Detektionsfall läuft wie folgt ab: In einer Komponente enthält e
 \section{Prompt-Builder und System-Prompt}
 \label{sec:impl-prompt}
 
-Der Prompt-Builder setzt die in Abschnitt~\ref{sec:kontextualisierung} beschriebene Strategie um. Er besteht aus drei Komponenten: dem System-Prompt, der Token-Budget-Steuerung und der Serialisierung der Findings aus vier Quellen (axe-core, Playwright, grep, LLM-Codeanalyse).
+Der Prompt-Builder setzt die in Abschnitt~\ref{sec:kontextualisierung} beschriebene Strategie um. Er besteht aus drei Komponenten: dem System-Prompt, der Token-Budget-Steuerung und der Serialisierung der Findings aus vier Quellen (axe-core, Playwright, grep, \ac{LLM}-Codeanalyse).
 
 \subsection{System-Prompt}
 
@@ -235,15 +235,15 @@ Die Serialisierung begrenzt Beschreibungen auf 300~Zeichen und Code-Snippets auf
 \label{sec:impl-ollama}
 \label{sec:impl-output}
 
-Der Ollama-Client kapselt den HTTP-Aufruf an die lokale Ollama-Instanz (\texttt{localhost:11434}). Die Anfrage nutzt den \texttt{/api/generate}-Endpunkt mit den Parametern \texttt{temperature: 0.05} (\ac{NFA}-04) und \texttt{num\_predict: 6144} für die Priorisierungsantwort (in den Benchmarkläufen wurde noch \texttt{num\_predict}~=~3\,072 eingesetzt; der Wert wurde nach Abschluss der Messreihe erhöht, vgl. Abschnitt~\ref{sec:limit_tokenlimit}). Die niedrige Temperature-Einstellung reduziert den Nicht-Determinismus der Ausgaben (vgl. Abschnitt~\ref{kap:2.4}), ohne sie vollständig zu eliminieren. Der Client verwendet ein konfigurierbares Timeout (Default: drei Stunden), da die Inferenz auf \ac{CPU}-basierten Systemen je nach Modellgröße mehrere Minuten bis deutlich länger in Anspruch nehmen kann. Die Antwort von Ollama enthält neben dem generierten Text auch die tatsächliche Anzahl der Prompt- und Output-Tokens (\texttt{prompt\_eval\_count}, \texttt{eval\_count}), die für die Evaluation in Kapitel~\ref{kap:7} erfasst werden.
+Der Ollama-Client kapselt den \acs{HTTP}-Aufruf an die lokale Ollama-Instanz (\texttt{localhost:11434}). Die Anfrage nutzt den \texttt{/api/generate}-Endpunkt mit den Parametern \texttt{temperature: 0.05} (\ac{NFA}-04) und \texttt{num\_predict: 6144} für die Priorisierungsantwort (in den Benchmarkläufen wurde noch \texttt{num\_predict}~=~3\,072 eingesetzt; der Wert wurde nach Abschluss der Messreihe erhöht, vgl. Abschnitt~\ref{sec:limit_tokenlimit}). Die niedrige Temperature-Einstellung reduziert den Nicht-Determinismus der Ausgaben (vgl. Abschnitt~\ref{kap:2.4}), ohne sie vollständig zu eliminieren. Der Client verwendet ein konfigurierbares Timeout (Default: drei Stunden), da die Inferenz auf \ac{CPU}-basierten Systemen je nach Modellgröße mehrere Minuten bis deutlich länger in Anspruch nehmen kann. Die Antwort von Ollama enthält neben dem generierten Text auch die tatsächliche Anzahl der Prompt- und Output-Tokens (\texttt{prompt\_eval\_count}, \texttt{eval\_count}), die für die Evaluation in Kapitel~\ref{kap:7} erfasst werden.
 
-Der Output-Formatter erzeugt pro Analysedurchlauf zwei Dateien: einen Markdown-Report für die menschliche Lesbarkeit und einen \ac{JSON}-Report für die maschinelle Weiterverarbeitung (\ac{FA}-05). Der Markdown-Report enthält einen Metadaten-Header (URL, Modell, Zeitstempel, Token-Statistiken), die Roh-Ausgabe des Sprachmodells sowie eine Metriken-Tabelle mit den Laufzeiten aller Pipeline-Phasen. Der \ac{JSON}-Report speichert zusätzlich das Parsing-Ergebnis der \ac{LLM}-Antwort: Der Formatter versucht, die Markdown-Ausgabe in Must-have- und Nice-to-have-Einträge zu zerlegen. Schlägt dieses Parsing fehl -- etwa weil das Modell das vorgegebene Format nicht einhält --, wird dies im Report dokumentiert (\texttt{parsed.success: false}).
+Der Output-Formatter erzeugt pro Analysedurchlauf zwei Dateien: einen Markdown-Report für die menschliche Lesbarkeit und einen \acs{JSON}-Report für die maschinelle Weiterverarbeitung (\ac{FA}-05). Der Markdown-Report enthält einen Metadaten-Header (\acs{URL}, Modell, Zeitstempel, Token-Statistiken), die Roh-Ausgabe des Sprachmodells sowie eine Metriken-Tabelle mit den Laufzeiten aller Pipeline-Phasen. Der \acs{JSON}-Report speichert zusätzlich das Parsing-Ergebnis der \ac{LLM}-Antwort: Der Formatter versucht, die Markdown-Ausgabe in Must-have- und Nice-to-have-Einträge zu zerlegen. Schlägt dieses Parsing fehl -- etwa weil das Modell das vorgegebene Format nicht einhält --, wird dies im Report dokumentiert (\texttt{parsed.success: false}).
 
 % ─────────────────────────────────────────────────────────────────────────────
 \section{Pipeline-Orchestrierung}
 \label{sec:impl-pipeline}
 
-Die Pipeline-Orchestrierung in \texttt{index.ts} verkettet alle Module in der durch Abbildung~\ref{fig:pipeline} definierten Reihenfolge (eine kompakte Schemaansicht der Verarbeitungsschritte findet sich in Anhang~\ref{app:ace-pipeline-schema}, Abbildung~\ref{fig:ace-pipeline-schema}; ein detailliertes Sequenzdiagramm in Anhang~\ref{app:sequenz}). Jede Phase wird einzeln zeitgemessen, um die in \ac{NFA}-02 geforderte Laufzeitanalyse in Kapitel~\ref{kap:7} zu ermöglichen. Die Metriken werden in einem \texttt{PipelineMetrics}-Objekt gesammelt, das neben den Phasenzeiten auch Token-Schätzungen, Anreicherungsquoten und Deduplizierungsstatistiken enthält. Die in Kapitel~\ref{kap:7} ausgewerteten Kennzahlen -- Laufzeit je Phase, Anzahl der LLM-Detektor-Findings, Output-Token-Nutzung sowie Parsing-Erfolg -- werden direkt aus diesem Objekt in die pro Durchlauf erzeugten \acs{JSON}-Reports geschrieben.
+Die Pipeline-Orchestrierung in \texttt{index.ts} verkettet alle Module in der durch Abbildung~\ref{fig:pipeline} definierten Reihenfolge (eine kompakte Schemaansicht der Verarbeitungsschritte findet sich in Anhang~\ref{app:ace-pipeline-schema}, Abbildung~\ref{fig:ace-pipeline-schema}). Jede Phase wird einzeln zeitgemessen, um die in \ac{NFA}-02 geforderte Laufzeitanalyse in Kapitel~\ref{kap:7} zu ermöglichen. Die Metriken werden in einem \texttt{PipelineMetrics}-Objekt gesammelt, das neben den Phasenzeiten auch Token-Schätzungen, Anreicherungsquoten und Deduplizierungsstatistiken enthält. Die in Kapitel~\ref{kap:7} ausgewerteten Kennzahlen -- Laufzeit je Phase, Anzahl der \ac{LLM}-Detektor-Findings, Output-Token-Nutzung sowie Parsing-Erfolg -- werden direkt aus diesem Objekt in die pro Durchlauf erzeugten \acs{JSON}-Reports geschrieben.
 
 Der Ablauf eines vollständigen Durchlaufs ist:
 
@@ -252,10 +252,10 @@ Der Ablauf eines vollständigen Durchlaufs ist:
   \item Playwright: Sieben Interaktionschecks ausführen, fehlgeschlagene normalisieren
   \item Code-Anreicherung: axe/Playwright-Findings mit Quellcode-Kontext ergänzen
   \item Code-Patterns: Sechs Anti-Patterns im Quellcode suchen, deduplizieren
-  \item Optional (\texttt{-{}-llm-detect}): LLM-Codeanalyse ausführen und zusätzliche Findings normalisieren
+  \item Optional (\texttt{-{}-llm-detect}): \ac{LLM}-Codeanalyse ausführen und zusätzliche Findings normalisieren
   \item Prompt-Builder: Findings serialisieren, Token-Budget anwenden
   \item Ollama: kombinierten Priorisierungsprompt senden, Antwort empfangen
-  \item Output: Markdown- und JSON-Report generieren und speichern
+  \item Output: Markdown- und \acs{JSON}-Report generieren und speichern
 \end{enumerate}
 
 Der \texttt{-{}-skip-llm}-Modus speichert den fertigen Prompt als Textdatei, ohne Ollama aufzurufen. Dieser Modus wurde während der Entwicklung genutzt, um den Prompt unabhängig von der Modellverfügbarkeit zu iterieren und für die Evaluation zu dokumentieren.
@@ -263,6 +263,6 @@ Der \texttt{-{}-skip-llm}-Modus speichert den fertigen Prompt als Textdatei, ohn
 \section{Beispielabläufe und Ergebnisse am Untersuchungsobjekt}
 \label{sec:beispielablaeufe}
 
-Ein vollständiger Durchlauf auf der test-12-Suite erzeugt konsistent Findings aus allen vier Quellen (axe-core, Playwright, grep, optional LLM-Detektor) und überführt diese in einen einheitlichen JSON-Report sowie einen priorisierten Markdown-Report. Für die 30 Benchmarkläufe (je 10 Runs mit \texttt{qwen2.5-coder:7b}, \texttt{qwen2.5-coder:14b}, \texttt{qwen3:32b}) zeigt sich ein stabiler Baseline-Beitrag der regelbasierten Quellen (axe: 4, Playwright: 2, grep: 6 Findings pro Lauf) und ein modellabhängiger Zusatzbeitrag des LLM-Detektors (7b: \O{}~10,3; 14b: \O{}~19,8; 32b: \O{}~19,2).
+Ein vollständiger Durchlauf auf der test-12-Suite erzeugt konsistent Findings aus allen vier Quellen (axe-core, Playwright, grep, optional \ac{LLM}-Detektor) und überführt diese in einen einheitlichen \acs{JSON}-Report sowie einen priorisierten Markdown-Report. Für die 30 Benchmarkläufe (je 10 Runs mit \texttt{qwen2.5-coder:7b}, \texttt{qwen2.5-coder:14b}, \texttt{qwen3:32b}) zeigt sich ein stabiler Baseline-Beitrag der regelbasierten Quellen (axe: 4, Playwright: 2, grep: 6 Findings pro Lauf) und ein modellabhängiger Zusatzbeitrag des \ac{LLM}-Detektors (7b: \O{}~10,3; 14b: \O{}~19,8; 32b: \O{}~19,2).
 
-Die Ergebnisse bestätigen den beabsichtigten Nutzen der kombinierten Pipeline: Regelbasierte Quellen liefern reproduzierbare Pflichtbefunde, während die LLM-gestützte Codeanalyse zusätzliche semantische Violations identifiziert, die in der Tool-baseline nicht oder nur instabil detektierbar sind. Die detaillierte Auswertung mit Recall-Matrix, Rohdaten und Modellvergleich ist in Kapitel~\ref{kap:7} sowie im Anhang (Tabellen~\ref{tab:recall_matrix} bis \ref{tab:modell_summary}) dokumentiert.
+Die Ergebnisse bestätigen den beabsichtigten Nutzen der kombinierten Pipeline: Regelbasierte Quellen liefern reproduzierbare Pflichtbefunde, während die \ac{LLM}-gestützte Codeanalyse zusätzliche semantische Violations identifiziert, die in der Tool-baseline nicht oder nur instabil detektierbar sind. Die detaillierte Auswertung mit Recall-Matrix, Rohdaten und Modellvergleich ist in Kapitel~\ref{kap:7} sowie im Anhang (Tabellen~\ref{tab:recall_matrix} bis \ref{tab:modell_summary}) dokumentiert.

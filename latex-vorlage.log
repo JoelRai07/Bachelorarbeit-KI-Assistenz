@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.9.8)  2 APR 2026 22:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.9.8)  4 APR 2026 01:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1258,18 +1258,23 @@ Package acronym Info: Label `acro:UFS' newly defined as it shall be overridden
 although it is yet undefined on input line 53.
 
 
-[3])
+[3]
+Package acronym Info: Label `acro:BWEC' newly defined as it shall be overridden
+although it is yet undefined on input line 116.
+)
 \tf@toc=\write6
 \openout6 = `latex-vorlage.toc'.
 
 
 
-[4] (includes/extra/abkuerzungen.tex)
+[4] (includes/extra/abkuerzungen.tex
 
 [5
 
 
-] (latex-vorlage.lof
+])
+
+[6] (latex-vorlage.lof
 Package acronym Info: Label `acro:ACE' newly defined as it shall be overridden
 although it is yet undefined on input line 7.
 )
@@ -1278,14 +1283,14 @@ although it is yet undefined on input line 7.
 
 
 
-[6
+[7
 
 ] (latex-vorlage.lot
 Package acronym Info: Label `acro:PoC' newly defined as it shall be overridden
 although it is yet undefined on input line 7.
 
 
-[7
+[8
 
 ])
 \tf@lot=\write8
@@ -1293,7 +1298,7 @@ although it is yet undefined on input line 7.
 
 
 
-[8] (includes/caps/1.tex
+[9] (includes/caps/1.tex
 chapter 1.
 Package acronym Info: Label `acro:EAA' newly defined as it shall be overridden
 although it is yet undefined on input line 9.
@@ -1322,7 +1327,7 @@ although it is yet undefined on input line 25.
 
 
 [3]
-<graphics/Diagramm1.png, id=683, 815.045pt x 152.57pt>
+<graphics/Diagramm1.png, id=714, 815.045pt x 152.57pt>
 File: graphics/Diagramm1.png Graphic file (type png)
 <use graphics/Diagramm1.png>
 Package pdftex.def Info: graphics/Diagramm1.png  used on input line 35.
@@ -1355,12 +1360,14 @@ Package acronym Info: Label `acro:PoC' overridden on input line 17.
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\@ac' on input line 21.
 
+Package acronym Info: Label `acro:W3C' newly defined as it shall be overridden
+although it is yet undefined on input line 23.
 
 
 [7]
 
 [8]
-<graphics/WCAG-Dreieck-4-Ebenen.png, id=877, 770.88pt x 643.6547pt>
+<graphics/WCAG-Dreieck-4-Ebenen.png, id=908, 770.88pt x 643.6547pt>
 File: graphics/WCAG-Dreieck-4-Ebenen.png Graphic file (type png)
 <use graphics/WCAG-Dreieck-4-Ebenen.png>
 Package pdftex.def Info: graphics/WCAG-Dreieck-4-Ebenen.png  used on input line 37.
@@ -1386,7 +1393,7 @@ Overfull \hbox (1.43257pt too wide) in paragraph at lines 109--110
 (includes/taxonomie-figure.tex)
 
 [13]
-<graphics/react.png, id=1069, 984.67876pt x 618.05907pt>
+<graphics/react.png, id=1100, 984.67876pt x 618.05907pt>
 File: graphics/react.png Graphic file (type png)
 <use graphics/react.png>
 Package pdftex.def Info: graphics/react.png  used on input line 125.
@@ -1411,7 +1418,7 @@ Package acronym Info: Label `acro:RAG' overridden on input line 164.
 [17]
 
 [18]
-<graphics/fewshot.png, id=1267, 894.34125pt x 477.28313pt>
+<graphics/fewshot.png, id=1298, 894.34125pt x 477.28313pt>
 File: graphics/fewshot.png Graphic file (type png)
 <use graphics/fewshot.png>
 Package pdftex.def Info: graphics/fewshot.png  used on input line 202.
@@ -1480,7 +1487,7 @@ although it is yet undefined on input line 153.
 
 [27]
 Overfull \hbox (11.4939pt too wide) in paragraph at lines 201--202
-[]\T1/cmr/bx/n/10.95 Seitenauswahl: \T1/cmr/m/n/10.95 Re-le-van-te öf-fent-lich zu-gäng-li-che Sei-ten und Interaktions-zustände des BWEC
+[]\T1/cmr/bx/n/10.95 Seitenauswahl: \T1/cmr/m/n/10.95 Re-le-van-te öf-fent-lich zu-gäng-li-che Sei-ten und Interaktions-zustände des [][]
  []
 
 
@@ -1584,7 +1591,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 145--145
 
 [35]
 chapter 6.
-<graphics/durchlauf.png, id=1790, 1258.7025pt x 118.4425pt>
+<graphics/durchlauf.png, id=1825, 1258.7025pt x 118.4425pt>
 File: graphics/durchlauf.png Graphic file (type png)
 <use graphics/durchlauf.png>
 Package pdftex.def Info: graphics/durchlauf.png  used on input line 13.
@@ -1604,6 +1611,8 @@ although it is yet undefined on input line 32.
 
 
 [37]
+Package acronym Info: Label `acro:JSON' overridden on input line 58.
+
 Overfull \hbox (15.11685pt too wide) in paragraph at lines 66--68
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1645,6 +1654,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--24
 [43
 
 ]
+Package acronym Info: Label `acro:URL' newly defined as it shall be overridden
+although it is yet undefined on input line 49.
+Package acronym Info: Label `acro:URL' overridden on input line 49.
+Package acronym Info: Label `acro:URL' overridden on input line 55.
+
 
 [44]
 Overfull \hbox (0.70195pt too wide) in paragraph at lines 79--92
@@ -1676,6 +1690,14 @@ Overfull \hbox (21.62172pt too wide) in paragraph at lines 136--137
 
 
 [46]
+Package acronym Info: Label `acro:JSON' overridden on input line 149.
+Package acronym Info: Label `acro:JSON' overridden on input line 150.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ac' on input line 167.
+
+
 
 [47]
 Overfull \hbox (54.3136pt too wide) in paragraph at lines 183--184
@@ -1687,22 +1709,23 @@ Overfull \hbox (54.3136pt too wide) in paragraph at lines 183--184
 [48]
 
 [49]
+Package acronym Info: Label `acro:HTTP' newly defined as it shall be overridden
+although it is yet undefined on input line 238.
+
 Overfull \hbox (2.12901pt too wide) in paragraph at lines 238--239
 \T1/cmr/m/n/10.95 Die An-fra-ge nutzt den \T1/cmtt/m/n/10.95 /api/generate\T1/cmr/m/n/10.95 -Endpunkt mit den Pa-ra-me-tern \T1/cmtt/m/n/10.95 temperature: 0.05 \T1/cmr/m/n/10.95 ([][]-
  []
 
 Package acronym Info: Label `acro:JSON' overridden on input line 240.
-
-Overfull \hbox (0.8864pt too wide) in paragraph at lines 240--241
-\T1/cmr/m/n/10.95 dell das vor-ge-ge-be-ne For-mat nicht ein-hält --, wird dies im Re-port do-ku-men-tiert (\T1/cmtt/m/n/10.95 parsed.success:
- []
-
-
-LaTeX Warning: Reference `app:sequenz' on page 50 undefined on input line 246.
+Package acronym Info: Label `acro:URL' overridden on input line 240.
+Package acronym Info: Label `acro:JSON' overridden on input line 240.
+Package acronym Info: Label `acro:JSON' overridden on input line 246.
 
 
-
-[50]) (includes/caps/7.tex
+[50]
+Package acronym Info: Label `acro:JSON' overridden on input line 258.
+Package acronym Info: Label `acro:JSON' overridden on input line 266.
+) (includes/caps/7.tex
 
 [51]
 chapter 8.
@@ -1710,12 +1733,6 @@ Package acronym Info: Label `acro:SPA' newly defined as it shall be overridden
 although it is yet undefined on input line 14.
 Package acronym Info: Label `acro:RAM' newly defined as it shall be overridden
 although it is yet undefined on input line 21.
-
-Package acronym Warning: Acronym RAM is not defined on input line 21.
-
-
-Package acronym Warning: Acronym RAM is not defined on input line 21.
-
 
 Overfull \hbox (3.86156pt too wide) in paragraph at lines 21--22
 \T1/cmr/m/n/10.95 Es wur-den drei lo-kal aus-ge-führ-te Sprach-mo-del-le ver-gli-chen: \T1/cmtt/m/n/10.95 qwen2.5-coder:7b\T1/cmr/m/n/10.95 , \T1/cmtt/m/n/10.95 qwen2.5-coder:14b
@@ -1728,6 +1745,9 @@ Overfull \hbox (3.86156pt too wide) in paragraph at lines 21--22
 ]
 
 [53]
+Package acronym Info: Label `acro:UI' newly defined as it shall be overridden
+although it is yet undefined on input line 77.
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\@ac' on input line 79.
@@ -1765,11 +1785,6 @@ Overfull \hbox (0.79306pt too wide) in paragraph at lines 247--256
 Package acronym Info: Label `acro:IQR' newly defined as it shall be overridden
 although it is yet undefined on input line 265.
 
-Overfull \hbox (51.76663pt too wide) in paragraph at lines 272--273
-\T1/cmr/m/n/10.95 Die Output-Token-Nutzung zeigt ein kla-res Trun-kie-rungs-pro-fil: \T1/cmtt/m/n/10.95 qwen2.5-coder:7b \T1/cmr/m/n/10.95 und \T1/cmtt/m/n/10.95 qwen2.5-coder:14b
- []
-
-
 
 [59]
 
@@ -1789,16 +1804,35 @@ Overfull \hbox (30.4324pt too wide) in paragraph at lines 346--347
 
 [62]
 
+LaTeX Warning: Reference `app:accessibility_verstoesse_100' on page 63 undefined on input line 376.
+
+
+Overfull \hbox (28.74176pt too wide) in paragraph at lines 382--383
+\T1/cmr/bx/n/10.95 ver-let-zen NFA-02 \T1/cmr/m/n/10.95 -- selbst der güns-tigs-te Run be-nö-tigt 648s = 10,8min. Da-mit ist \T1/cmtt/m/n/10.95 qwen2.5-coder:7b
+ []
+
+
+LaTeX Warning: Reference `app:ausstehend_100' on page 63 undefined on input line 387.
+
+
+
 [63]
-Overfull \hbox (3.82797pt too wide) in paragraph at lines 408--409
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ac' on input line 389.
+
+
+
+[64]
+Overfull \hbox (3.82797pt too wide) in paragraph at lines 419--420
 []\T1/cmr/m/n/10.95 Zusätzlich ver-bes-sert die Kon-text-kom-bi-na-ti-on die Um-setz-bar-keit der Emp-feh-lun-gen: Tool-Befunde
  []
 
 
 
-[64]) (includes/caps/8.tex
+[65]) (includes/caps/8.tex
 
-[65]
+[66]
 chapter 9.
 
 Overfull \hbox (13.51558pt too wide) in paragraph at lines 3--4
@@ -1810,6 +1844,8 @@ Overfull \hbox (0.35062pt too wide) in paragraph at lines 12--13
 \T1/cmr/m/n/10.95 sche Quell-co-de-ana-ly-se kom-bi-niert, um ent-wick-ler-na-he Hand-lungs-emp-feh-lun-gen für React-basierte
  []
 
+Package acronym Info: Label `acro:JSON' overridden on input line 19.
+Package acronym Info: Label `acro:JSON' overridden on input line 21.
 
 Overfull \hbox (16.89018pt too wide) in paragraph at lines 21--22
 \T1/cmr/m/n/10.95 das lo-ka-le Sys-tem. [][]-02 (Lauf-zeit $\OML/cmm/m/it/10.95 <$ \T1/cmr/m/n/10.95 10 Min.) er-fül-len \T1/cmtt/m/n/10.95 qwen2.5-coder:7b \T1/cmr/m/n/10.95 und \T1/cmtt/m/n/10.95 qwen2.5-coder:14b
@@ -1817,51 +1853,27 @@ Overfull \hbox (16.89018pt too wide) in paragraph at lines 21--22
 
 
 
-[66
+[67
 
 ]
-Package acronym Info: Label `acro:BWEC' newly defined as it shall be overridden
-although it is yet undefined on input line 30.
-
-
-Package acronym Warning: Acronym BWEC is not defined on input line 30.
-
-
-Package acronym Warning: Acronym BWEC is not defined on input line 30.
-
-
 Overfull \hbox (5.12029pt too wide) in paragraph at lines 35--36
 \T1/cmr/m/n/10.95 nach Ab-schluss der Mess-rei-he vor-ge-nom-me-ne Er-hö-hung auf 6144 To-kens be-sei-tigt den Abschneide-
  []
 
 
-Package acronym Warning: Acronym BWEC is not defined on input line 44.
 
+[68]
+Package acronym Info: Label `acro:JSON' overridden on input line 55.
+)
+Overfull \hbox (1.07045pt too wide) in paragraph at lines 62--67
+[]\T1/cmr/m/n/10.95 Darüber hin-aus wä-re ei-ne In-te-gra-ti-on des [][]-Reports als Schritt in be-ste-hen-de CI/CD-Pipelines
+ []
 
+(includes/anhang.tex
 
-[67]
-Package acronym Info: Label `acro:CI' newly defined as it shall be overridden
-although it is yet undefined on input line 62.
+[69] (latex-vorlage.app
 
-
-Package acronym Warning: Acronym CI is not defined on input line 62.
-
-
-Package acronym Warning: Acronym CI is not defined on input line 62.
-
-Package acronym Info: Label `acro:CD' newly defined as it shall be overridden
-although it is yet undefined on input line 62.
-
-Package acronym Warning: Acronym CD is not defined on input line 62.
-
-
-Package acronym Warning: Acronym CD is not defined on input line 62.
-
-) (includes/anhang.tex
-
-[68] (latex-vorlage.app
-
-[69
+[70
 
 ])
 \tf@app=\write9
@@ -1869,19 +1881,19 @@ Package acronym Warning: Acronym CD is not defined on input line 62.
 
 
 
-[70]
+[71]
 Underfull \hbox (badness 2495) in paragraph at lines 16--17
 []|\T1/cmr/m/n/10.95 Konzeptmatrix, Pipeline-Schema, Prompt-Dokumentation,
  []
 
-<graphics/ComplexitÃ¤t.png, id=2522, 1336.24219pt x 534.49687pt>
+<graphics/ComplexitÃ¤t.png, id=2616, 1336.24219pt x 534.49687pt>
 File: graphics/ComplexitÃ¤t.png Graphic file (type png)
 <use graphics/ComplexitÃ¤t.png>
 Package pdftex.def Info: graphics/ComplexitÃ¤t.png  used on input line 32.
 (pdftex.def)             Requested size: 409.71692pt x 163.88173pt.
 
 
-[71
+[72
 
  <./graphics/ComplexitÃ¤t.png>]
 Overfull \vbox (57.04884pt too high) detected at line 174
@@ -1893,28 +1905,28 @@ Overfull \vbox (57.04884pt too high) detected at line 174
 
 
 
-[72
+[73
 
 ]
 
-[73]
-
-[74
-
-]
+[74]
 
 [75
 
+]
+
+[76
+
 
 ]
 
-[76]
+[77]
 
-[77
+[78
 
 ]
 
-[78]
+[79]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 438.
 
@@ -1929,7 +1941,7 @@ Underfull \hbox (badness 1389) in paragraph at lines 468--468
 
 
 
-[79
+[80
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 487--487
@@ -1953,11 +1965,11 @@ Underfull \hbox (badness 1354) in paragraph at lines 493--494
 
 
 
-[80
+[81
 
 ]
 
-[81
+[82
 
 ]
 Underfull \hbox (badness 3579) in paragraph at lines 541--542
@@ -1976,7 +1988,7 @@ Underfull \hbox (badness 2165) in paragraph at lines 545--546
 
 
 
-[82
+[83
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 583--583
@@ -2013,6 +2025,7 @@ Underfull \hbox (badness 1565) in paragraph at lines 583--583
 []|[][]\T1/cmr/m/n/10.95 -gestützte Ana-ly-se und
  []
 
+Package acronym Info: Label `acro:JSON' overridden on input line 583.
 
 Underfull \hbox (badness 10000) in paragraph at lines 583--583
 []|\T1/cmr/m/n/10.95 Lokal-First / Da-ten-schutz
@@ -2038,6 +2051,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 583--583
 []|\T1/cmr/m/n/10.95 Reproduzierbarkeit (sta-bi-le
  []
 
+Package acronym Info: Label `acro:JSON' overridden on input line 583.
 
 Underfull \hbox (badness 10000) in paragraph at lines 583--583
 \T1/cmr/m/n/10.95 Prompting si-chern Grund-sta-bi-li-tät;
@@ -2050,11 +2064,11 @@ Underfull \hbox (badness 3000) in paragraph at lines 583--583
 
 
 
-[83
+[84
 
 ]
 
-[84
+[85
 
 ]
 Underfull \hbox (badness 2662) in paragraph at lines 644--644
@@ -2088,7 +2102,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 664--664
 
 
 
-[85
+[86
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 709--709
@@ -2142,7 +2156,7 @@ Underfull \hbox (badness 1565) in paragraph at lines 709--709
 
 
 
-[86
+[87
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 754--754
@@ -2171,7 +2185,7 @@ Underfull \hbox (badness 1297) in paragraph at lines 754--754
 
 
 
-[87
+[88
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 766--766
@@ -2180,15 +2194,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 766--766
 
 
 
-[88
-
-]
-
 [89
 
 ]
 
 [90
+
+]
+
+[91
 
 ]
 Underfull \hbox (badness 2213) in paragraph at lines 914--914
@@ -2202,7 +2216,7 @@ Underfull \hbox (badness 5985) in paragraph at lines 914--914
 
 
 
-[91
+[92
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 948--948
@@ -2226,7 +2240,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 948--948
 
 
 
-[92
+[93
 
 ]
 Underfull \hbox (badness 7433) in paragraph at lines 969--970
@@ -2290,7 +2304,7 @@ Underfull \hbox (badness 1831) in paragraph at lines 989--990
 
 
 
-[93
+[94
 
 ]
 Underfull \hbox (badness 6691) in paragraph at lines 1034--1034
@@ -2299,7 +2313,7 @@ Underfull \hbox (badness 6691) in paragraph at lines 1034--1034
 
 
 
-[94
+[95
 
 ]
 Underfull \hbox (badness 5652) in paragraph at lines 1076--1077
@@ -2308,28 +2322,28 @@ Underfull \hbox (badness 5652) in paragraph at lines 1076--1077
 
 
 
-[95
+[96
 
 ]
-<graphics/test12-screen1.png, id=2850, 1443.89438pt x 777.65532pt>
+<graphics/test12-screen1.png, id=2946, 1443.89438pt x 777.65532pt>
 File: graphics/test12-screen1.png Graphic file (type png)
 <use graphics/test12-screen1.png>
 Package pdftex.def Info: graphics/test12-screen1.png  used on input line 1094.
 (pdftex.def)             Requested size: 432.48051pt x 232.91869pt.
-<graphics/test12-screen2.png, id=2851, 442.65375pt x 669.2503pt>
+<graphics/test12-screen2.png, id=2947, 442.65375pt x 669.2503pt>
 File: graphics/test12-screen2.png Graphic file (type png)
 <use graphics/test12-screen2.png>
 Package pdftex.def Info: graphics/test12-screen2.png  used on input line 1101.
 (pdftex.def)             Requested size: 432.48051pt x 653.90015pt.
 
 
-[96
+[97
 
  <./graphics/test12-screen1.png>]
 
-[97 <./graphics/test12-screen2.png>]
+[98 <./graphics/test12-screen2.png>]
 
-[98
+[99
 
 
 
@@ -2368,11 +2382,11 @@ Underfull \hbox (badness 3118) in paragraph at lines 1210--1210
 []|\T1/cmtt/m/n/10.95 outline: none \T1/cmr/m/n/10.95 auf But-ton (Fo-kus
  []
 
-[99
+[100
 
-] [100]
+] [101]
 
-[101]
+[102]
 Underfull \hbox (badness 10000) in paragraph at lines 1272--1272
 []|\T1/cmr/m/n/10 Überschriften-Hierarchie über-
  []
@@ -2442,11 +2456,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 1306--1306
 []|\T1/cmr/m/n/10 32b kons.; 14b inst.
  []
 
-[102
+[103
 
-] [103]
+] [104]
 
-[104]
+[105]
 Underfull \hbox (badness 10000) in paragraph at lines 1338--1338
 []|\T1/cmr/m/n/10.95 CSS \T1/cmtt/m/n/10.95 order $\OMS/cmsy/m/n/10.95 6\OT1/cmr/m/n/10.95 =$ \T1/cmr/m/n/10.95 DOM-
  []
@@ -2531,11 +2545,11 @@ Underfull \hbox (badness 7759) in paragraph at lines 1380--1380
 []|\T1/cmtt/m/n/10.95 outline: none \T1/cmr/m/n/10.95 im Modal-
  []
 
-[105
+[106
 
-] [106]
+] [107]
 
-[107]
+[108]
 Underfull \hbox (badness 10000) in paragraph at lines 1396--1396
 [][][]\T1/cmr/m/n/10.95 Vollständige Mess-da-ten der 30 Pipeline-Durchläufe (test-50-Suite,
  []
@@ -2547,15 +2561,15 @@ Underfull \hbox (badness 2310) in paragraph at lines 1396--1396
 
 
 
-[108
-
-]
-
 [109
 
 ]
 
 [110
+
+]
+
+[111
 
 ]
 Underfull \hbox (badness 1286) in paragraph at lines 1545--1545
@@ -2594,7 +2608,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1577--1577
 
 
 
-[111
+[112
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 1606--1607
@@ -2791,49 +2805,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 1702--1703
 []|\T1/cmr/m/n/10.95 Notifications.tsx:49,
  []
 
-[112
+[113
 
-] [113] [114]
+] [114] [115]
 
-[115]
+[116]
 
-[116
+[117
 
 ]
-<graphics/test-50-Bild1.png, id=2964, 1444.64719pt x 773.89125pt>
+<graphics/test-50-Bild1.png, id=3061, 1444.64719pt x 773.89125pt>
 File: graphics/test-50-Bild1.png Graphic file (type png)
 <use graphics/test-50-Bild1.png>
 Package pdftex.def Info: graphics/test-50-Bild1.png  used on input line 1770.
 (pdftex.def)             Requested size: 432.48051pt x 231.6732pt.
-<graphics/test-50-Bild2.png, id=2965, 1443.89438pt x 773.89125pt>
+<graphics/test-50-Bild2.png, id=3062, 1443.89438pt x 773.89125pt>
 File: graphics/test-50-Bild2.png Graphic file (type png)
 <use graphics/test-50-Bild2.png>
 Package pdftex.def Info: graphics/test-50-Bild2.png  used on input line 1777.
 (pdftex.def)             Requested size: 432.48051pt x 231.79129pt.
 
 
-[117
+[118
 
  <./graphics/test-50-Bild1.png>]
 
-[118 <./graphics/test-50-Bild2.png>]
-<graphics/test-50-Bild3.png, id=2978, 1444.64719pt x 773.89125pt>
+[119 <./graphics/test-50-Bild2.png>]
+<graphics/test-50-Bild3.png, id=3074, 1444.64719pt x 773.89125pt>
 File: graphics/test-50-Bild3.png Graphic file (type png)
 <use graphics/test-50-Bild3.png>
 Package pdftex.def Info: graphics/test-50-Bild3.png  used on input line 1786.
 (pdftex.def)             Requested size: 432.48051pt x 231.6732pt.
-<graphics/test-50-Bild4.png, id=2979, 1444.64719pt x 313.9228pt>
+<graphics/test-50-Bild4.png, id=3075, 1444.64719pt x 313.9228pt>
 File: graphics/test-50-Bild4.png Graphic file (type png)
 <use graphics/test-50-Bild4.png>
 Package pdftex.def Info: graphics/test-50-Bild4.png  used on input line 1793.
 (pdftex.def)             Requested size: 432.48051pt x 93.97638pt.
 
 
-[119
+[120
 
  <./graphics/test-50-Bild3.png> <./graphics/test-50-Bild4.png>]
 
-[120
+[121
 
 ])
 
@@ -2843,62 +2857,62 @@ Package biblatex Warning: Field 'extrayear' is deprecated.
 
 
 
-[121
+[122
 
 
 
 ]
 
 Package biblatex Warning: No driver for 'legislation'.
-(biblatex)                Using fallback driver on input line 72.
+(biblatex)                Using fallback driver on input line 74.
 
 
 
-[122]
-Overfull \hbox (0.37888pt too wide) in paragraph at lines 72--72
+[123]
+Overfull \hbox (0.37888pt too wide) in paragraph at lines 74--74
 [][]\T1/cmr/bx/n/10.95 Gao, Yun-fan; Xiong, Yun; Gao, Xi-nyu; Jia, Kang; Pan, Jin-li-ang et al. (2023)\T1/cmr/m/n/10.95 : Retrieval-
  []
 
 
-Overfull \hbox (18.53203pt too wide) in paragraph at lines 72--72
+Overfull \hbox (18.53203pt too wide) in paragraph at lines 74--74
 \T1/cmr/m/n/10.95 Augmented Ge-ne-ra-ti-on for Lar-ge Lan-gua-ge Mo-dels: A Sur-vey. In: \T1/cmr/m/it/10.95 ar-Xiv pre-print ar-Xiv:2312.10997\T1/cmr/m/n/10.95 . 
  []
 
 
 
-[123]
-Overfull \hbox (4.74887pt too wide) in paragraph at lines 72--72
+[124]
+Overfull \hbox (4.74887pt too wide) in paragraph at lines 74--74
 \T1/cmr/m/n/10.95 gäng-lich-keit für Men-schen mit Be-hin-de-rung in Theo-rie und Pra-xis. Google-Books-ID: T5ylCQA-
  []
 
 
 
-[124]
-
 [125]
-Overfull \hbox (2.84285pt too wide) in paragraph at lines 72--72
+
+[126]
+Overfull \hbox (2.84285pt too wide) in paragraph at lines 74--74
 [][]\T1/cmr/bx/n/10.95 Schulhoff, San-der; Ilie, Mi-cha-el; Ba-le-pur, Nis-hant; Ka-had-ze, Kon-stan-ti-ne; Liu, Aman-
  []
 
 
 
-[126]
-
 [127]
-Overfull \hbox (9.45776pt too wide) in paragraph at lines 72--72
+
+[128]
+Overfull \hbox (9.45776pt too wide) in paragraph at lines 74--74
 [][]\T1/cmr/bx/n/10.95 World Wi-de Web Con-sor-ti-um (W3C) (2018)\T1/cmr/m/n/10.95 : Web Con-tent Ac-ces-si-bi-li-ty Gui-de-li-nes (WCAG)
  []
 
 
-Overfull \hbox (9.45776pt too wide) in paragraph at lines 72--72
+Overfull \hbox (9.45776pt too wide) in paragraph at lines 74--74
 [][]\T1/cmr/bx/n/10.95 World Wi-de Web Con-sor-ti-um (W3C) (2023)\T1/cmr/m/n/10.95 : Web Con-tent Ac-ces-si-bi-li-ty Gui-de-li-nes (WCAG)
  []
 
 
 
-[128]
+[129]
 
-[129] (includes/extra/erklaerung_ki.tex
+[130] (includes/extra/erklaerung_ki.tex
 Overfull \hbox (1.558pt too wide) in paragraph at lines 132--132
 []\T1/cmr/m/n/10.95 mich ak-tiv über die Leis-tungs-fä-hig-keit und Be-schrän-kun-gen der oben ge-nann-ten KI-Systeme
  []
@@ -2915,15 +2929,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--132
 
 
 
-[130
+[131
 
 
 
 ]) (template/_dhbw_erklaerung.tex
 
-[131])
+[132])
 
-[132
+[133
 
 ] (latex-vorlage.aux)
  ***********
@@ -2941,26 +2955,26 @@ Package logreq Info: Writing requests to 'latex-vorlage.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43285 strings out of 473523
- 876215 string characters out of 5714631
- 2061689 words of memory out of 5000000
- 64755 multiletter control sequences out of 15000+600000
+ 43329 strings out of 473523
+ 876730 string characters out of 5714631
+ 2062026 words of memory out of 5000000
+ 64768 multiletter control sequences out of 15000+600000
  590877 words of font info for 104 fonts, out of 8000000 for 9000
  1146 hyphenation exceptions out of 8191
  108i,19n,127p,10962b,2433s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-pdfTeX warning (dest): name{Hfootnote.321} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.323} has been referenced but does not exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{Hfootnote.320} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.322} has been referenced but does not exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{Hfootnote.126} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.128} has been referenced but does not exist, replaced by a fixed one
 
  <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcsx1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0500.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on latex-vorlage.pdf (141 pages, 2456828 bytes).
+Output written on latex-vorlage.pdf (143 pages, 2474485 bytes).
 PDF statistics:
- 5239 PDF objects out of 6186 (max. 8388607)
- 1052 named destinations out of 1200 (max. 500000)
+ 5343 PDF objects out of 6186 (max. 8388607)
+ 1083 named destinations out of 1200 (max. 500000)
  1025 words of extra memory for PDF output out of 10000 (max. 10000000)
 

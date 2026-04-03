@@ -178,7 +178,7 @@ Die Wahl eines \ac{PoC} als Artefakttyp ist durch die explorative Natur der Fors
 
 \section{Untersuchungsgegenstand und Scope-Abgrenzung} \label{sec:scope}
 
-Als Untersuchungsgegenstand dient der BWEC, eine öffentlich zugängliche React-basierte Webanwendung der \ac{BITBW}.\footcite[Vgl.][]{bwec} Die Anwendung eignet sich als Fallstudie, da sie drei für die Forschungsfrage zentrale Eigenschaften vereint: gesetzlich relevante Anforderungen an digitale Barrierefreiheit, einen datenschutzsensiblen Einsatzkontext in der öffentlichen Verwaltung sowie typische Interaktionsmuster moderner Single-Page Applications.
+Als Untersuchungsgegenstand dient der \ac{BWEC}, eine öffentlich zugängliche React-basierte Webanwendung der \ac{BITBW}.\footcite[Vgl.][]{bwec} Die Anwendung eignet sich als Fallstudie, da sie drei für die Forschungsfrage zentrale Eigenschaften vereint: gesetzlich relevante Anforderungen an digitale Barrierefreiheit, einen datenschutzsensiblen Einsatzkontext in der öffentlichen Verwaltung sowie typische Interaktionsmuster moderner Single-Page Applications.
 
 Der Untersuchungsscope ist wie folgt abgegrenzt:
 
@@ -191,14 +191,14 @@ Die Arbeit erhebt keinen Anspruch auf vollständige Abdeckung aller \ac{WCAG}-Er
 
 \section{Evaluationsdesign und Kriterien} \label{sec:eval}
 
-Ziel der Evaluation ist es, die technische Machbarkeit und den praktischen Nutzen des entwickelten \ac{PoC} im Anwendungskontext des BWEC zu untersuchen.
+Ziel der Evaluation ist es, die technische Machbarkeit und den praktischen Nutzen des entwickelten \ac{PoC} im Anwendungskontext des \ac{BWEC} zu untersuchen.
 
 \subsection{Evaluationslogik}
 
 Die Evaluation folgt einem fünfstufigen Vorgehen:
 
 \begin{enumerate}
-    \item \textbf{Seitenauswahl:} Relevante öffentlich zugängliche Seiten und Interaktions\-zustände des BWEC werden für die Untersuchung ausgewählt.
+    \item \textbf{Seitenauswahl:} Relevante öffentlich zugängliche Seiten und Interaktions\-zustände des \ac{BWEC} werden für die Untersuchung ausgewählt.
     \item \textbf{Manuelles Referenzaudit:} Der Autor führt ein manuelles Audit der ausgewählten Seiten durch, um vorhandene Barrierefreiheitsverstöße zu identifizieren und nach Verstoßtyp (syntaktisch, semantisch, interaktionsbezogen) zu kategorisieren. Als Prüfgrundlage dienen die \ac{WCAG}~2.2-Erfolgskriterien der Stufen A und AA.\footcite[Vgl.][]{WCAG}
     \item \textbf{Automatisierte Analyse:} Dieselben Seiten werden mit dem entwickelten \ac{PoC} analysiert.
     \item \textbf{Vergleich:} Die Ergebnisse des Systems werden dem manuellen Audit gegenübergestellt. Dabei wird erfasst, welche Verstöße korrekt erkannt, welche übersehen und welche fälschlich gemeldet werden.
