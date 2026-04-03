@@ -2,6 +2,30 @@
 
 \listofanhang
 \clearpage
+\anhang{Übersicht der Anhangsstruktur}\label{app:anhang_overview}
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.2}
+\caption[Übersicht: generell vs. suite-spezifisch]{Übersicht der Anhangsstruktur mit Trennung zwischen generellen und suite-spezifischen Inhalten.}
+\begin{tabular}{|p{4.3cm}|p{10.2cm}|}
+\hline
+\textbf{Bereich} & \textbf{Inhalte} \\
+\hline
+Generell & Konzeptmatrix, Pipeline-Schema, Prompt-Dokumentation, Token-Budget, konsolidierte Empfehlung, Suite-Vergleich, allgemeiner FA/NFA-Erfüllungsgrad \\
+\hline
+test-12-Block & Violations-Katalog, Erkennungsrate, Recall-Matrix, Rohdaten, Modellvergleich, Token-Nutzung, Effizienz, Overdetection, Konsistenz, Empfehlungsqualität, CSV-Auszug \\
+\hline
+test-50-Block & Violations-Katalog, Erkennungsrate, Recall-Matrix, Rohdaten, Modellvergleich, Token-Nutzung, Effizienz, Overdetection, Konsistenz, Empfehlungsqualität, CSV-Auszug \\
+\hline
+test-100-Block & Platzhalter-Block für die kommende Messreihe (noch ohne Tabelleninhalt) \\
+\hline
+\end{tabular}
+\label{tab:anhang_overview}
+\end{table}
+
+
 \anhang{Komplexität von Home Pages}\label{anhang:complexity}
 \begin{figure}[htbp]
   \centering
@@ -229,7 +253,7 @@ Konzeptmatrix nach Webster Watson\footnotemark: Vollständige Übersicht aller a
 \draw[->] (ollama) -- (todo);
 
 \end{tikzpicture}
-\caption[Schematische Übersicht der ACE-Pipeline]{Schematische Übersicht der im \ac{PoC} implementierten ACE-Pipeline von der Datenerhebung bis zur priorisierten Ausgabe. Die Code-Schiene umfasst regex-basierte Pattern (grep) sowie optional die LLM-basierte Codeanalyse.\protect\footnote{Eigene Abbildung}}
+\caption[Schematische Übersicht der ACE-Pipeline]{Schematische Übersicht der im \ac{PoC} implementierten ACE-Pipeline von der Datenerhebung bis zur priorisierten Ausgabe. Die Code-Schiene umfasst regex-basierte Pattern (grep) und die LLM-basierte Codeanalyse.\protect\footnote{Eigene Abbildung}}
 \label{fig:ace-pipeline-schema}
 \end{figure}
 
@@ -409,32 +433,39 @@ Gib nur JSON zurück: {"findings": [...]}
 \setlength{\fboxrule}{0.4pt}
 
 \begin{tikzpicture}
-  % Gesamtrahmen
-  \draw[thick] (0,0) rectangle (12,7);
-  \node[anchor=north west, font=\bfseries] at (0.2,6.75) {Kontextfenster: 32.768 Tokens};
+  % Gesamtrahmen (größer für bessere Lesbarkeit)
+  \draw[thick] (0,0) rectangle (14,8.2);
+  \node[anchor=north west, font=\bfseries] at (0.25,7.95) {Kontextfenster: 32.768 Tokens (\texttt{TOTAL\_CONTEXT\_WINDOW})};
 
-  % System-Prompt (oben, klein)
-  \fill[gray!25] (0.3,5.35) rectangle (11.7,6.05);
-  \draw (0.3,5.35) rectangle (11.7,6.05);
-  \node[anchor=west, font=\small] at (0.5,5.7) {\textbf{System-Prompt} (\texttildelow{}400 Tokens) -- Role-Play + Few-Shot + Regeln};
-  \node[anchor=east, font=\scriptsize\itshape] at (11.5,5.7) {fest};
+  % System-Reserve (oben)
+  \fill[gray!25] (0.35,6.45) rectangle (13.65,7.25);
+  \draw (0.35,6.45) rectangle (13.65,7.25);
+  \node[anchor=west, font=\small] at (0.55,6.86) {\textbf{System-Reserve} (400 Tokens, \texttt{RESERVED\_FOR\_SYSTEM})};
+  \node[anchor=west, font=\scriptsize] at (0.55,6.58) {Role-Play + Few-Shot + Regeln; feste Vorreservierung};
 
-  % Findings (Mitte, groß)
-  \fill[blue!12] (0.3,1.95) rectangle (11.7,5.15);
-  \draw (0.3,1.95) rectangle (11.7,5.15);
-  \node[anchor=center, font=\small] at (6,4.05) {\textbf{User-Prompt: Serialisierte Findings} (\texttildelow{}24.000 Tokens)};
-  \node[anchor=center, font=\scriptsize] at (6,3.45) {axe-core-Findings + Playwright-Findings + grep-Findings + LLM-Code-Findings};
-  \node[anchor=center, font=\scriptsize\itshape] at (6,2.85) {variabel -- wird bei Platzmangel nach Schweregrad priorisiert};
-  \node[anchor=center, font=\scriptsize] at (6,2.3) {critical $\rightarrow$ serious $\rightarrow$ moderate $\rightarrow$ minor};
+  % Findings-Bereich (Mitte)
+  \fill[blue!12] (0.35,2.1) rectangle (13.65,6.2);
+  \draw (0.35,2.1) rectangle (13.65,6.2);
+  \node[anchor=center, font=\normalsize] at (7,5.2) {\textbf{User-Prompt: serialisierte Findings}};
+  \node[anchor=center, font=\small] at (7,4.75) {axe-core + Playwright + grep + LLM-Codeanalyse};
+  \node[anchor=center, font=\small] at (7,4.3) {Budget vor Feinschätzung: max. 24.176 Tokens (\texttt{AVAILABLE\_INPUT\_TOKENS})};
+  \node[anchor=center, font=\small] at (7,3.85) {tatsächlich verfügbar: 24.176 $-$ geschätzte System-Prompt-Tokens};
+  \node[anchor=center, font=\small\itshape] at (7,3.35) {variabel; bei Platzmangel werden moderate/minor Findings verworfen};
+  \node[anchor=center, font=\small] at (7,2.85) {Priorisierung: critical $\rightarrow$ serious $\rightarrow$ moderate $\rightarrow$ minor};
 
   % Output-Reserve (unten)
-  \fill[orange!15] (0.3,0.3) rectangle (11.7,1.75);
-  \draw (0.3,0.3) rectangle (11.7,1.75);
-  \node[anchor=center, font=\small] at (6,1.15) {\textbf{Output-Reserve} (\texttildelow{}8.192 Tokens)};
-  \node[anchor=center, font=\scriptsize\itshape] at (6,0.65) {Platz f\"ur die LLM-Antwort (To-Do-Liste) -- muss frei bleiben};
+  \fill[orange!15] (0.35,0.45) rectangle (13.65,1.8);
+  \draw (0.35,0.45) rectangle (13.65,1.8);
+  \node[anchor=center, font=\small] at (7,1.35) {\textbf{Output-Reserve} (8.192 Tokens, \texttt{RESERVED\_FOR\_OUTPUT})};
+  \node[anchor=center, font=\scriptsize] at (7,0.85) {fester Platz für die LLM-Antwort (Must-have/Nice-to-have-Liste)};
+
+  % Status-Labels separat rechts (keine Überdeckung)
+  \node[draw, rounded corners=1pt, fill=gray!10, font=\scriptsize\itshape, anchor=west] at (10.6,7.45) {fest reserviert};
+  \node[draw, rounded corners=1pt, fill=blue!6, font=\scriptsize\itshape, anchor=west] at (10.6,6.28) {variabel};
+  \node[draw, rounded corners=1pt, fill=orange!10, font=\scriptsize\itshape, anchor=west] at (10.6,1.95) {fest reserviert};
 \end{tikzpicture}
 
-\caption[Aufteilung des Token-Budgets]{Aufteilung des Kontextfensters (32.768 Tokens) in drei Bereiche: System-Prompt (fest), serialisierte Findings (variabel, nach Schweregrad priorisiert) und Output-Reserve (fest). Vgl. Abschnitt~\ref{sec:kontextualisierung}.\protect\footnote{Eigene Abbildung}}
+\caption[Aufteilung des Token-Budgets]{Aufteilung des Kontextfensters (32.768 Tokens) gemäß Implementierung in \texttt{src/prompt.ts}: feste Reserven für System (400) und Output (8.192), variabler Bereich für serialisierte Findings mit Schweregrad-basierter Kürzung bei Budgetüberschreitung. Vgl. Abschnitt~\ref{sec:kontextualisierung}.\protect\footnote{Eigene Abbildung}}
 \label{fig:tokenbudget}
 \end{figure}
 
@@ -485,7 +516,7 @@ Ground-Truth-Violations & 12 & 50 & 100 \\
 \hline
 Runs je Modell (aktuell) & 10 & 10 & 0 (geplant: 3) \\
 \hline
-Output-Limit \texttt{num\_predict} & 3\,072 & 8\,192 & 12\,288 (geplant) \\
+Output-Limit \texttt{num\_predict} & 6\,144 & 8\,192 & 12\,288 (geplant) \\
 \hline
 Beste LLM-Konsistenz $\sigma$ & 0{,}42 (14b) & 1{,}25 (32b) & k.\,A. \\
 \hline
@@ -496,23 +527,104 @@ NFA-02-Konformität (empfohlenes Modell) & 14b: \checkmark & 14b: \checkmark & k
 \end{table}
 
 \clearpage
+\anhang{Bewertungsskala für die Empfehlungsqualität der LLM-Ausgaben (generell)}
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.2}
+\caption[Bewertungsskala der Empfehlungsqualität]{Bewertungsskala für die Empfehlungsqualität der LLM-Ausgaben (test-12 und test-50).}
+\begin{tabular}{|c|p{2.8cm}|p{7.2cm}|}
+\hline
+\textbf{Stufe} & \textbf{Bezeichnung} & \textbf{Kriterium} \\
+\hline
+2 & Konkret & Enthält Dateiname, Zeilennummer und einen konkreten Fix-Vorschlag (z.\,B. \texttt{aria-label="..."}). \\
+\hline
+1 & Teilweise & Enthält den richtigen Fix-Typ, jedoch ohne konkreten Codekontext (z.\,B. \glqq{}Füge ein aria-label hinzu\grqq). \\
+\hline
+0 & Generisch & Beschreibt lediglich das Problem, ohne einen umsetzbaren Lösungsvorschlag. \\
+\hline
+\end{tabular}
+\label{tab:bewertungsskala_empfehlungen}
+\end{table}
+
+\clearpage
+\anhang{Erfüllungsgrad der funktionalen und nicht-funktionalen Anforderungen (generell)}\label{app:fa_nfa_erfuellung}
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.3}
+\caption[Erfüllungsgrad FA und NFA]{Erfüllungsgrad der funktionalen (\ac{FA}) und nicht-funktionalen (\ac{NFA}) Anforderungen im realisierten \ac{PoC}. Grundlage: Evaluationsergebnisse der test-12-Suite (30 Runs). \checkmark~=~vollständig erfüllt; $(\sim)$~=~bedingt erfüllt; \texttimes~=~nicht erfüllt.}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|p{5cm}|c|p{6.5cm}|}
+\hline
+\textbf{Anf.} & \textbf{Beschreibung} & \textbf{Status} & \textbf{Bemerkung} \\
+\hline
+\ac{FA}-01 & Regelbasierte Accessibility-Erkennung via axe-core & \checkmark & Alle vier Violation-Kategorien werden zuverlässig detektiert. \\
+\hline
+\ac{FA}-02 & Dynamische Zustandserfassung via Playwright & \checkmark & Interaktionsbasierte Barrieren (z.\,B. modaler Dialog) werden erfasst; V8 nur mit \ac{LLM}-Detektor (vgl. Abschnitt~\ref{sec:recall_baseline}). \\
+\hline
+\ac{FA}-03 & Statische Quellcodeanalyse via grep & \checkmark & Pattern-Matching liefert datei- und zeilenspezifischen Kontext für alle getesteten Violations. \\
+\hline
+\ac{FA}-04 & \ac{LLM}-gestützte Analyse und Handlungsempfehlung & \checkmark & Zweistufige Strategie (Detektor + Priorisierung) umgesetzt; Fix-Qualität Stufe~2 mit \texttt{qwen3:32b} für 11/12~Violations. \\
+\hline
+\ac{FA}-05 & Strukturierter \acs{JSON}-Report & \checkmark & \acs{UFS}-konformer Output mit maschinenlesbarer Priorisierungsliste. \\
+\hline\hline
+\ac{NFA}-01 & Lokal-First / Datenschutz (kein Cloud-Transfer) & \checkmark & Ollama-Infrastruktur; kein Quellcode verlässt das lokale System. \\
+\hline
+\ac{NFA}-02 & Laufzeit $<$ 10~Min. & $(\sim)$ & \texttt{qwen2.5-coder:7b} ($\varnothing$~231\,s) und \texttt{:14b} ($\varnothing$~420\,s) erfüllen; \texttt{qwen3:32b} verletzt mit max.~937\,s (15,6~Min.) in Ausreißerläufen. \\
+\hline
+\ac{NFA}-03 & Wartbarkeit (modulare Architektur) & \checkmark & Trennung in Detection, Context-Building und Synthesis; unabhängig erweiterbar. \\
+\hline
+\ac{NFA}-04 & Reproduzierbarkeit (stabile Ausgaben) & $(\sim)$ & Temperature~0,05 und \acs{JSON}-Schema-Prompting sichern Grundstabilität; $\sigma = 0{,}53$ bei \texttt{qwen3:32b} als bestes Modell (vgl. Abschnitt~\ref{sec:effizienz_konsistenz}). Für einen \ac{PoC} ausreichend. \\
+\hline
+\end{tabular}
+}%
+\label{tab:fa_nfa_erfuellung}
+\end{table}
+
+\clearpage
 \anhang{test-12-Suite (kompletter Block)}\label{app:block_test12}
 
-\anhang{Screenshots der Testanwendung (test-12-Suite)}
-
-\begin{figure}[htbp]
+\begin{table}[htbp]
 \centering
-\includegraphics[width=0.95\textwidth]{graphics/test12-screen1.png}
-\caption{Screenshot 1 der test-12-Suite}
-\label{fig:test12_screen1}
-\end{figure}
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.95\textwidth]{graphics/test12-screen2.png}
-\caption{Screenshot 2 der test-12-Suite}
-\label{fig:test12_screen2}
-\end{figure}
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.15}
+\caption[Template-Reihenfolge test-12]{Navigationsübersicht in der standardisierten Reihenfolge für die test-12-Suite.}
+\begin{tabular}{|c|p{11.4cm}|}
+\hline
+\textbf{Nr.} & \textbf{Baustein} \\
+\hline
+1 & Violations-Katalog \\
+\hline
+2 & Erkennungsrate \\
+\hline
+3 & Recall-Matrix \\
+\hline
+4 & Rohdaten \\
+\hline
+5 & Modellvergleich \\
+\hline
+6 & Token-Nutzung \\
+\hline
+7 & Effizienz \\
+\hline
+8 & Overdetection \\
+\hline
+9 & Konsistenz \\
+\hline
+10 & Empfehlungsqualität \\
+\hline
+11 & CSV-Auszug \\
+\hline
+12 & Statistische Verteilung \\
+\hline
+13 & Screenshots der Testsuite \\
+\hline
+\end{tabular}
+\label{tab:template_test12}
+\end{table}
 
 \clearpage
 
@@ -573,7 +685,7 @@ NFA-02-Konformität (empfohlenes Modell) & 14b: \checkmark & 14b: \checkmark & k
 \hline
 2 & \texttt{<button>} ohne \texttt{aria-label} & \checkmark & LLM-Detektor & - & Nur 14b/32b; 7b miss \\
 \hline
-3 & Formularfeld ohne \texttt{<label>} & \checkmark & axe-core + grep & - & Alle Modelle \\
+3 & Formularfeld ohne \texttt{<label>} & \checkmark & axe-core + grep & - & 7b instabil; 14b/32b konsistent \\
 \hline
 4 & Kontrastverhältnis $< 4.5:1$ & \checkmark & axe-core & - & 2 axe-Findings (nav + submit) \\
 \hline
@@ -587,11 +699,11 @@ NFA-02-Konformität (empfohlenes Modell) & 14b: \checkmark & 14b: \checkmark & k
 \hline
 9 & Skip-Link fehlt & \checkmark & Playwright & - & Alle Modelle \\
 \hline
-10 & \texttt{aria-hidden="true"} auf fokussierbarem Element & \checkmark & axe-core & - & 7b lässt es gelegentlich weg \\
+10 & \texttt{aria-hidden="true"} auf fokussierbarem Element & \checkmark & axe-core & - & Alle Modelle \\
 \hline
-11 & DOM-Reihenfolge vs. visuelle Reihenfolge & \checkmark & LLM-Detektor & - & Nur 32b konsistent; 14b instabil \\
+11 & DOM-Reihenfolge vs. visuelle Reihenfolge & \checkmark & LLM-Detektor & - & 14b/32b konsistent; 7b miss \\
 \hline
-12 & Interaktives Element zu klein ($<24\times24$\,px) & \checkmark & LLM-Detektor & - & 7b instabil; 14b/32b konsistent \\
+12 & Interaktives Element zu klein ($<24\times24$\,px) & \checkmark & LLM-Detektor & - & Alle Modelle \\
 \hline
 \end{tabular}
 }%
@@ -600,70 +712,6 @@ NFA-02-Konformität (empfohlenes Modell) & 14b: \checkmark & 14b: \checkmark & k
 
 \clearpage
 
-\anhang{Bewertungsskala für die Empfehlungsqualität der LLM-Ausgaben (test-12-Suite)}
-
-\begin{table}[htbp]
-\centering
-\setlength{\tabcolsep}{3.5pt}
-\renewcommand{\arraystretch}{1.2}
-\caption[Bewertungsskala der Empfehlungsqualität]{Bewertungsskala für die Empfehlungsqualität der LLM-Ausgaben (test-12 und test-50).}
-\begin{tabular}{|c|p{2.8cm}|p{7.2cm}|}
-\hline
-\textbf{Stufe} & \textbf{Bezeichnung} & \textbf{Kriterium} \\
-\hline
-2 & Konkret & Enthält Dateiname, Zeilennummer und einen konkreten Fix-Vorschlag (z.\,B. \texttt{aria-label="..."}). \\
-\hline
-1 & Teilweise & Enthält den richtigen Fix-Typ, jedoch ohne konkreten Codekontext (z.\,B. \glqq{}Füge ein aria-label hinzu\grqq). \\
-\hline
-0 & Generisch & Beschreibt lediglich das Problem, ohne einen umsetzbaren Lösungsvorschlag. \\
-\hline
-\end{tabular}
-\label{tab:bewertungsskala_empfehlungen}
-\end{table}
-
-\clearpage
-\anhang{Bewertung der Empfehlungsqualität pro Violation (test-12-Suite)}
-
-Die Bewertung basiert auf Run~01 von \texttt{qwen3:32b} (Tabelle~\ref{app:rohdaten}) und verwendet dieselbe dreistufige Skala wie Tabelle~\ref{tab:bewertungsskala_empfehlungen}. Stufe~2 liegt vor, wenn Dateiname, Zeilennummer und ein konkreter Code-Vorschlag vorhanden sind; Stufe~1, wenn der richtige Fix-Typ erkannt, aber kein konkreter Codekontext geliefert wird.
-
-\begin{table}[htbp]
-\centering
-\setlength{\tabcolsep}{3.5pt}
-\renewcommand{\arraystretch}{1.2}
-\caption[Bewertung der Empfehlungsqualität pro Violation (test-12)]{Bewertung der Fix-Qualität für alle 12 Violations (qwen3:32b, Run~01).}
-\begin{tabular}{|c|p{4.8cm}|c|p{5.2cm}|}
-\hline
-\textbf{\#} & \textbf{Violation} & \textbf{Stufe (0--2)} & \textbf{Anmerkung (qwen3:32b)} \\
-\hline
-1 & \texttt{<img>} ohne alt-Attribut & 2 & Datei App.tsx:37, konkreter \texttt{alt}-Text angegeben \\
-\hline
-2 & \texttt{<button>} ohne \texttt{aria-label} & 2 & \texttt{aria-label}-Wert mit sprechendem Text vorgeschlagen \\
-\hline
-3 & Formularfeld ohne \texttt{<label>} & 2 & \texttt{label} + \texttt{htmlFor} + \texttt{id} vollständig ausgearbeitet \\
-\hline
-4 & Kontrastverhältnis $< 4.5:1$ & 2 & CSS-Regel mit konkreten Hex-Farben je betroffener Klasse \\
-\hline
-5 & Fokus-Outline entfernt (\texttt{outline: none}) & 2 & CSS-Klasse mit \texttt{outline: 2px solid} als Ersatz \\
-\hline
-6 & onClick ohne onKeyDown & 1 & \texttt{onKeyDown}-Muster korrekt, aber generisch; kein Dateikontext \\
-\hline
-7 & \texttt{role="button"} auf \texttt{<div>} ohne tabIndex & 2 & \texttt{tabIndex=\{0\}} + \texttt{onKeyDown} JSX-Snippet mit Kontext \\
-\hline
-8 & Modal ohne Fokus-Trap & 2 & Vollständiger \texttt{useEffect}-Fokus-Trap mit Shift+Tab-Logik \\
-\hline
-9 & Skip-Link fehlt & 2 & \texttt{<a href="\#main-content">}-Snippet mit CSS-Klasse \\
-\hline
-10 & \texttt{aria-hidden="true"} auf fokussierbarem Element & 2 & Korrektur (\texttt{aria-hidden} entfernen oder \texttt{tabIndex=\{-1\}}) mit Kontext \\
-\hline
-11 & DOM-Reihenfolge vs. visuelle Reihenfolge & 2 & CSS \texttt{order}-Property als Lösung; DOM-Reihenfolge erhalten \\
-\hline
-12 & Interaktives Element zu klein ($<24\times24$\,px) & 2 & CSS \texttt{width}/\texttt{height} auf 24\,px mit Klasse \texttt{.btn-tiny} \\
-\hline
-\end{tabular}
-\label{tab:empfehlungsqualitaet}
-\end{table}
-
-\clearpage
 \anhang{Recall-Matrix: Violation × Bedingung (test-12-Suite)}\label{app:recall_matrix}
 
 \begin{table}[htbp]
@@ -680,7 +728,7 @@ Die Bewertung basiert auf Run~01 von \texttt{qwen3:32b} (Tabelle~\ref{app:rohdat
 \hline
 2  & \texttt{<button>} ohne \texttt{aria-label} (Icon-Button)    & $\times$   & $\times$   & \checkmark & \checkmark & \checkmark \\
 \hline
-3  & Formularfeld ohne \texttt{<label>}                          & \checkmark & \checkmark & \checkmark & \checkmark & \\
+3  & Formularfeld ohne \texttt{<label>}                          & \checkmark & $\sim$     & \checkmark & \checkmark & \\
 \hline
 4  & Kontrastverhältnis $<4.5:1$                                 & \checkmark & \checkmark & \checkmark & \checkmark & \\
 \hline
@@ -694,13 +742,13 @@ Die Bewertung basiert auf Run~01 von \texttt{qwen3:32b} (Tabelle~\ref{app:rohdat
 \hline
 9  & Skip-Link fehlt                                             & \checkmark & \checkmark & \checkmark & \checkmark & \\
 \hline
-10 & \texttt{aria-hidden="true"} auf fokussierbarem Element      & \checkmark & $\sim$     & \checkmark & \checkmark & \\
+10 & \texttt{aria-hidden="true"} auf fokussierbarem Element      & \checkmark & \checkmark & \checkmark & \checkmark & \\
 \hline
-11 & DOM-Reihenfolge weicht von visueller Reihenfolge ab         & $\times$   & $\times$   & $\sim$     & \checkmark & \checkmark \\
+11 & DOM-Reihenfolge weicht von visueller Reihenfolge ab         & $\times$   & $\times$   & \checkmark & \checkmark & \checkmark \\
 \hline
-12 & Interaktives Element zu klein ($<24\times24$\,px)           & $\times$   & $\sim$     & \checkmark & \checkmark & \checkmark \\
+12 & Interaktives Element zu klein ($<24\times24$\,px)           & $\times$   & \checkmark & \checkmark & \checkmark & \checkmark \\
 \hline
-\multicolumn{2}{|c|}{\textbf{Recall}} & \textbf{8\,/\,12} & \textbf{9\,/\,12} & \textbf{11\,/\,12} & \textbf{11--12\,/\,12} & 4~Violations \\
+\multicolumn{2}{|c|}{\textbf{Recall}} & \textbf{8\,/\,12} & \textbf{9\,/\,12} & \textbf{12\,/\,12} & \textbf{12\,/\,12} & 4~Violations \\
 \hline
 \end{tabular}
 }%
@@ -708,6 +756,7 @@ Die Bewertung basiert auf Run~01 von \texttt{qwen3:32b} (Tabelle~\ref{app:rohdat
 \end{table}
 
 \clearpage
+
 \anhang{Rohdaten: alle 30 Benchmark-Runs (test-12-Suite)}\label{app:rohdaten}
 
 \begin{table}[htbp]
@@ -760,33 +809,6 @@ Die Bewertung basiert auf Run~01 von \texttt{qwen3:32b} (Tabelle~\ref{app:rohdat
 \end{table}
 
 \clearpage
-\anhang{Statistische Verteilung der LLM-Findings (alle 30 Runs, test-12-Suite)}\label{app:statistik_quantile}
-
-\begin{table}[htbp]
-\centering
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.2}
-\caption[Quantilanalyse der LLM-Findings (test-12, alle 30 Runs)]{Quantilanalyse der LLM-Detektor-Findings über alle 30 Benchmark-Runs der test-12-Suite (3 Modelle $\times$ 10 Runs). Die Cluster-Struktur zeigt: 7b mit breiter Streuung (4--16), 14b und 32b mit engeren Ranges (22--23 bzw. 19--20).}
-\begin{tabular}{|l|c|p{7cm}|}
-\hline
-\textbf{Quantil} & \textbf{Wert} & \textbf{Interpretation} \\
-\hline
-Min (0\,\%)     & 4 Findings  & absolutes Minimum (7b, Ausreißer) \\
-\hline
-Q1 (25\,\%)     & 11 Findings & 25\,\% der Runs liefern $\leq$ 11 Findings (7b-Cluster) \\
-\hline
-Median (50\,\%) & 19{,}5 Findings & typischer Wert; entspricht dem 32b-Cluster und unteren 14b-Bereich \\
-\hline
-Q3 (75\,\%)     & 22 Findings & 75\,\% der Runs liefern $\leq$ 22 Findings (14b-Bereich) \\
-\hline
-Max (100\,\%)   & 23 Findings & absolutes Maximum (14b, oberer Bereich) \\
-\hline
-IQR             & 11 Findings & Streuung der mittleren 50\,\% -- spiegelt Modell-Heterogenität wider \\
-\hline
-\end{tabular}
-\label{tab:statistik_quantile}
-\end{table}
-
 
 \anhang{Modell-Leistungsvergleich: test-12-Suite Zusammenfassung}\label{app:modell_summary}
 
@@ -800,7 +822,7 @@ IQR             & 11 Findings & Streuung der mittleren 50\,\% -- spiegelt Modell
 \hline
 \textbf{Metrik} & \textbf{qwen2.5-coder:7b} & \textbf{qwen2.5-coder:14b} & \textbf{qwen3:32b} \\
 \hline
-Recall (Ø über Runs)              & $\sim$75\,\%     & $\sim$91{,}7\,\%  & 91{,}7--100\,\% \\
+Recall (Ø über Runs)              & $\sim$75\,\%     & 100\,\%            & 100\,\% \\
 LLM-Detektor-Findings (Ø ± $\sigma$) & 11{,}1 $\pm$ 3{,}28 & 22{,}8 $\pm$ 0{,}42 & 19{,}5 $\pm$ 0{,}53 \\
 LLM-Detektor-Findings (Min--Max)  & 4--16            & 22--23             & 19--20 \\
 Konsistenz $\sigma$               & 3{,}28           & 0{,}42             & 0{,}53 \\
@@ -821,6 +843,80 @@ Eignung BITV-Einsatz              & Nicht geeignet   & Empfohlen          & Empf
 \end{table}
 
 \clearpage
+
+\anhang{Token-Nutzung pro Modell: Input/Output (test-12-Suite)}\label{app:token_economy}
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\caption[Token-Nutzung pro Modell (test-12)]{Durchschnittliche Token-Nutzung je Run und Modell auf Basis der test-12-Suite (\texttt{num\_predict}~=~6\,144). Input-Tokens umfassen System-Prompt, serialisierte Findings und Konfigurationsparameter; Output-Tokens entsprechen der generierten Priorisierungsliste. 5\,/\,10 Runs (7b) bzw.\ 4\,/\,10 Runs (14b) erreichten das Output-Limit (Antwortabbruch); 32b-Runs blieben mit Ø\,3\,491 deutlich darunter (1\,/\,10 Abbrüche).}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Modell} & \textbf{Input-Tokens Ø} & \textbf{Output-Tokens Ø} & \textbf{Truncation} \\
+\hline
+qwen2.5-coder:7b  & 4\,451 & 4\,433 &  5/10 Runs (50\,\%) \\
+\hline
+qwen2.5-coder:14b & 5\,547 & 5\,254 &  4/10 Runs (40\,\%) \\
+\hline
+qwen3:32b         & 5\,214 & 3\,491 &  1/10 Runs (10\,\%) \\
+\hline
+\multicolumn{4}{|l|}{\textit{Gesamt (30 Runs): Input $\approx$152\,100 / Output 131\,784 Tokens}} \\
+\hline
+\end{tabular}
+\label{tab:token_economy}
+\end{table}
+
+\anhang{Effizienzmetriken und Kosten-Nutzen-Verhältnis (test-12-Suite)}\label{app:effizienz_metriken}
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\caption[Effizienzvergleich der Modelle]{Effizienzvergleich auf Basis der 30 Benchmark-Runs der test-12-Suite. \textit{LLM-Findings/s} bezieht sich auf LLM-Detektor-Findings pro Sekunde Gesamtlaufzeit.}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Modell} & \textbf{LLM-Findings Ø} & \textbf{Gesamtlaufzeit Ø (s)} & \textbf{LLM-Findings/s} & \textbf{Zusatznutzen ggü. 7b} \\
+\hline
+qwen2.5-coder:7b  & 11{,}1 & 231 & 0{,}048 & Referenz \\
+\hline
+qwen2.5-coder:14b & 22{,}8 & 420 & 0{,}054 & +105\,\% bei +82\,\% Zeitaufwand \\
+\hline
+qwen3:32b         & 19{,}5 & 701 & 0{,}028 & +76\,\% bei +203\,\% Zeitaufwand \\
+\hline
+\end{tabular}
+}%
+\label{tab:effizienz_metriken}
+\end{table}
+
+\clearpage
+
+\anhang{Über-Detektion relativ zur Ground Truth (test-12-Suite)}\label{app:overdetection}
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\caption[Über-Detektion relativ zu 12 Ground-Truth-Violations]{Vergleich der durchschnittlichen LLM-Detektor-Findings pro Run mit der Ground Truth (12 Violations) auf Basis der test-12-Suite. Die LLM-only-Betrachtung vermeidet Doppelzählungen zwischen überlappenden Detektoren.}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|p{5.3cm}|}
+\hline
+\textbf{Modell} & \textbf{LLM-Findings Ø} & \textbf{Ground Truth} & \textbf{Quote} & \textbf{Interpretation} \\
+\hline
+qwen2.5-coder:7b  & 11{,}1 & 12 & 92{,}5\,\% & nahe an der Ground Truth; niedrigste LLM-Überdetektion, aber instabile Priorisierung \\
+\hline
+qwen2.5-coder:14b & 22{,}8 & 12 & 190\,\% & deutlicher Überschuss; hoher Recall bei erhöhter Redundanz \\
+\hline
+qwen3:32b         & 19{,}5 & 12 & 162{,}5\,\% & moderater Überschuss; konsistenter als 7b und mit besserer Priorisierung \\
+\hline
+\end{tabular}
+}%
+\label{tab:overdetection}
+\end{table}
+
+\clearpage
+
 \anhang{Detektor-Konsistenz über alle 30 Runs (test-12-Suite)}\label{app:detektor_konsistenz}
 
 \begin{table}[htbp]
@@ -855,78 +951,51 @@ LLM-Detektor gesamt & 30 & 534 & 17,8 & 4--23 & modell\-abhängig & -- \\
 
 Die Tabelle zeigt, dass die Unterschiede zwischen den Detektoren selbst methodisch kaum relevant sind: axe-core, Playwright und grep liefern über alle 30 Runs exakt konstante Ergebnisse. Die tatsächlich relevante Varianz entsteht ausschließlich innerhalb des \ac{LLM}-Detektors und dort vor allem durch die Modellwahl. \texttt{qwen2.5-coder:14b} weist mit $\sigma = 0{,}42$ die höchste Konsistenz bei zugleich höchster durchschnittlicher Fundzahl auf, während \texttt{qwen2.5-coder:7b} mit $\sigma = 3{,}28$ deutlich volatiler reagiert. \texttt{qwen3:32b} ist ebenfalls sehr stabil ($\sigma = 0{,}53$), erkauft diese Stabilität jedoch mit einer wesentlich höheren Laufzeit. Für die Interpretation der Gesamtpipeline ist daher nicht die Frage entscheidend, welcher Detektor variiert, sondern welches Modell im \ac{LLM}-Detektor eingesetzt wird.
 
-\anhang{Effizienzmetriken und Kosten-Nutzen-Verhältnis (test-12-Suite)}\label{app:effizienz_metriken}
+\clearpage
+
+\anhang{Bewertung der Empfehlungsqualität pro Violation (test-12-Suite)}
+
+Die Bewertung basiert auf Run~01 von \texttt{qwen3:32b} (Tabelle~\ref{app:rohdaten}) und verwendet dieselbe dreistufige Skala wie Tabelle~\ref{tab:bewertungsskala_empfehlungen}. Stufe~2 liegt vor, wenn Dateiname, Zeilennummer und ein konkreter Code-Vorschlag vorhanden sind; Stufe~1, wenn der richtige Fix-Typ erkannt, aber kein konkreter Codekontext geliefert wird.
 
 \begin{table}[htbp]
 \centering
-\setlength{\tabcolsep}{4pt}
+\setlength{\tabcolsep}{3.5pt}
 \renewcommand{\arraystretch}{1.2}
-\caption[Effizienzvergleich der Modelle]{Effizienzvergleich auf Basis der 30 Benchmark-Runs der test-12-Suite. \textit{LLM-Findings/s} bezieht sich auf LLM-Detektor-Findings pro Sekunde Gesamtlaufzeit.}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|c|c|c|c|}
+\caption[Bewertung der Empfehlungsqualität pro Violation (test-12)]{Bewertung der Fix-Qualität für alle 12 Violations (qwen3:32b, Run~01).}
+\begin{tabular}{|c|p{4.8cm}|c|p{5.2cm}|}
 \hline
-\textbf{Modell} & \textbf{LLM-Findings Ø} & \textbf{Gesamtlaufzeit Ø (s)} & \textbf{LLM-Findings/s} & \textbf{Zusatznutzen ggü. 7b} \\
+\textbf{\#} & \textbf{Violation} & \textbf{Stufe (0--2)} & \textbf{Anmerkung (qwen3:32b)} \\
 \hline
-qwen2.5-coder:7b  & 11{,}1 & 231 & 0{,}048 & Referenz \\
+1 & \texttt{<img>} ohne alt-Attribut & 2 & Datei App.tsx:37, konkreter \texttt{alt}-Text angegeben \\
 \hline
-qwen2.5-coder:14b & 22{,}8 & 420 & 0{,}054 & +105\,\% bei +82\,\% Zeitaufwand \\
+2 & \texttt{<button>} ohne \texttt{aria-label} & 2 & \texttt{aria-label}-Wert mit sprechendem Text vorgeschlagen \\
 \hline
-qwen3:32b         & 19{,}5 & 701 & 0{,}028 & +76\,\% bei +203\,\% Zeitaufwand \\
+3 & Formularfeld ohne \texttt{<label>} & 2 & \texttt{label} + \texttt{htmlFor} + \texttt{id} vollständig ausgearbeitet \\
+\hline
+4 & Kontrastverhältnis $< 4.5:1$ & 2 & CSS-Regel mit konkreten Hex-Farben je betroffener Klasse \\
+\hline
+5 & Fokus-Outline entfernt (\texttt{outline: none}) & 2 & CSS-Klasse mit \texttt{outline: 2px solid} als Ersatz \\
+\hline
+6 & onClick ohne onKeyDown & 1 & \texttt{onKeyDown}-Muster korrekt, aber generisch; kein Dateikontext \\
+\hline
+7 & \texttt{role="button"} auf \texttt{<div>} ohne tabIndex & 2 & \texttt{tabIndex=\{0\}} + \texttt{onKeyDown} JSX-Snippet mit Kontext \\
+\hline
+8 & Modal ohne Fokus-Trap & 2 & Vollständiger \texttt{useEffect}-Fokus-Trap mit Shift+Tab-Logik \\
+\hline
+9 & Skip-Link fehlt & 2 & \texttt{<a href="\#main-content">}-Snippet mit CSS-Klasse \\
+\hline
+10 & \texttt{aria-hidden="true"} auf fokussierbarem Element & 2 & Korrektur (\texttt{aria-hidden} entfernen oder \texttt{tabIndex=\{-1\}}) mit Kontext \\
+\hline
+11 & DOM-Reihenfolge vs. visuelle Reihenfolge & 2 & CSS \texttt{order}-Property als Lösung; DOM-Reihenfolge erhalten \\
+\hline
+12 & Interaktives Element zu klein ($<24\times24$\,px) & 2 & CSS \texttt{width}/\texttt{height} auf 24\,px mit Klasse \texttt{.btn-tiny} \\
 \hline
 \end{tabular}
-}%
-\label{tab:effizienz_metriken}
+\label{tab:empfehlungsqualitaet}
 \end{table}
 
 \clearpage
 
-\anhang{Token-Nutzung pro Modell: Input/Output (test-12-Suite)}\label{app:token_economy}
-
-\begin{table}[htbp]
-\centering
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.2}
-\caption[Token-Nutzung pro Modell (test-12)]{Durchschnittliche Token-Nutzung je Run und Modell auf Basis der test-12-Suite. Input-Tokens umfassen System-Prompt, serialisierte Findings und Konfigurationsparameter; Output-Tokens entsprechen der generierten Priorisierungsliste. Alle 7b- und 14b-Runs erreichten das Output-Limit von 3\,072 (Antwortabbruch); 32b-Runs lagen im Mittel bei 2\,979.}
-\begin{tabular}{|l|c|c|c|}
-\hline
-\textbf{Modell} & \textbf{Input-Tokens Ø} & \textbf{Output-Tokens Ø} & \textbf{Truncation} \\
-\hline
-qwen2.5-coder:7b  & 3\,669 & 3\,072 & 10/10 Runs (100\,\%) \\
-\hline
-qwen2.5-coder:14b & 3\,947 & 3\,072 & 10/10 Runs (100\,\%) \\
-\hline
-qwen3:32b         & 4\,386 & 2\,979 &  6/10 Runs (60\,\%) \\
-\hline
-\multicolumn{4}{|l|}{\textit{Gesamt (30 Runs): Input $\approx$120\,400 / Output 91\,226 / Prompt $\approx$125\,800 Tokens}} \\
-\hline
-\end{tabular}
-\label{tab:token_economy}
-\end{table}
-
-\anhang{Über-Detektion relativ zur Ground Truth (test-12-Suite)}\label{app:overdetection}
-
-\begin{table}[htbp]
-\centering
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.2}
-\caption[Über-Detektion relativ zu 12 Ground-Truth-Violations]{Vergleich der durchschnittlichen LLM-Detektor-Findings pro Run mit der Ground Truth (12 Violations) auf Basis der test-12-Suite. Die LLM-only-Betrachtung vermeidet Doppelzählungen zwischen überlappenden Detektoren.}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|c|c|c|p{5.3cm}|}
-\hline
-\textbf{Modell} & \textbf{LLM-Findings Ø} & \textbf{Ground Truth} & \textbf{Quote} & \textbf{Interpretation} \\
-\hline
-qwen2.5-coder:7b  & 11{,}1 & 12 & 92{,}5\,\% & nahe an der Ground Truth; niedrigste LLM-Überdetektion, aber instabile Priorisierung \\
-\hline
-qwen2.5-coder:14b & 22{,}8 & 12 & 190\,\% & deutlicher Überschuss; hoher Recall bei erhöhter Redundanz \\
-\hline
-qwen3:32b         & 19{,}5 & 12 & 162{,}5\,\% & moderater Überschuss; konsistenter als 7b und mit besserer Priorisierung \\
-\hline
-\end{tabular}
-}%
-\label{tab:overdetection}
-\end{table}
-
-\clearpage
 \anhang{CSV-Export der Benchmark-Rohdaten (test-12-Suite)}\label{app:csv_export}
 
 Die Benchmark-Rohdaten wurden zusätzlich als CSV-Datei exportiert (\texttt{results\-/bench\-mark\-/summary.csv}). Tabelle~\ref{tab:csv_schema} dokumentiert das reale Spaltenschema, Tabelle~\ref{tab:csv_beispiel} zeigt exemplarische Zeilen (je ein Run pro Modell).
@@ -988,265 +1057,103 @@ qwen3:32b         & 1 & 12 & 8 & 19 & 4 & 2 & 6 & 289630 & 5200 & 2846 & true \\
 \end{table}
 
 \clearpage
-\anhang{Erfüllungsgrad der funktionalen und nicht-funktionalen Anforderungen}\label{app:fa_nfa_erfuellung}
+
+\anhang{Statistische Verteilung der LLM-Findings (alle 30 Runs, test-12-Suite)}\label{app:statistik_quantile}
 
 \begin{table}[htbp]
 \centering
-\setlength{\tabcolsep}{5pt}
-\renewcommand{\arraystretch}{1.3}
-\caption[Erfüllungsgrad FA und NFA]{Erfüllungsgrad der funktionalen (\ac{FA}) und nicht-funktionalen (\ac{NFA}) Anforderungen im realisierten \ac{PoC}. Grundlage: Evaluationsergebnisse der test-12-Suite (30 Runs). \checkmark~=~vollständig erfüllt; $(\sim)$~=~bedingt erfüllt; \texttimes~=~nicht erfüllt.}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|p{5cm}|c|p{6.5cm}|}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\caption[Quantilanalyse der LLM-Findings (test-12, alle 30 Runs)]{Quantilanalyse der LLM-Detektor-Findings über alle 30 Benchmark-Runs der test-12-Suite (3 Modelle $\times$ 10 Runs). Die Cluster-Struktur zeigt: 7b mit breiter Streuung (4--16), 14b und 32b mit engeren Ranges (22--23 bzw. 19--20).}
+\begin{tabular}{|l|c|p{7cm}|}
 \hline
-\textbf{Anf.} & \textbf{Beschreibung} & \textbf{Status} & \textbf{Bemerkung} \\
+\textbf{Quantil} & \textbf{Wert} & \textbf{Interpretation} \\
 \hline
-\ac{FA}-01 & Regelbasierte Accessibility-Erkennung via axe-core & \checkmark & Alle vier Violation-Kategorien werden zuverlässig detektiert. \\
+Min (0\,\%)     & 4 Findings  & absolutes Minimum (7b, Ausreißer) \\
 \hline
-\ac{FA}-02 & Dynamische Zustandserfassung via Playwright & \checkmark & Interaktionsbasierte Barrieren (z.\,B. modaler Dialog) werden erfasst; V8 nur mit \ac{LLM}-Detektor (vgl. Abschnitt~\ref{sec:recall_baseline}). \\
+Q1 (25\,\%)     & 11 Findings & 25\,\% der Runs liefern $\leq$ 11 Findings (7b-Cluster) \\
 \hline
-\ac{FA}-03 & Statische Quellcodeanalyse via grep & \checkmark & Pattern-Matching liefert datei- und zeilenspezifischen Kontext für alle getesteten Violations. \\
+Median (50\,\%) & 19{,}5 Findings & typischer Wert; entspricht dem 32b-Cluster und unteren 14b-Bereich \\
 \hline
-\ac{FA}-04 & \ac{LLM}-gestützte Analyse und Handlungsempfehlung & \checkmark & Zweistufige Strategie (Detektor + Priorisierung) umgesetzt; Fix-Qualität Stufe~2 mit \texttt{qwen3:32b} für 11/12~Violations. \\
+Q3 (75\,\%)     & 22 Findings & 75\,\% der Runs liefern $\leq$ 22 Findings (14b-Bereich) \\
 \hline
-\ac{FA}-05 & Strukturierter \acs{JSON}-Report & \checkmark & \acs{UFS}-konformer Output mit maschinenlesbarer Priorisierungsliste. \\
-\hline\hline
-\ac{NFA}-01 & Lokal-First / Datenschutz (kein Cloud-Transfer) & \checkmark & Ollama-Infrastruktur; kein Quellcode verlässt das lokale System. \\
+Max (100\,\%)   & 23 Findings & absolutes Maximum (14b, oberer Bereich) \\
 \hline
-\ac{NFA}-02 & Laufzeit $<$ 10~Min. & $(\sim)$ & \texttt{qwen2.5-coder:7b} ($\varnothing$~231\,s) und \texttt{:14b} ($\varnothing$~420\,s) erfüllen; \texttt{qwen3:32b} verletzt mit max.~937\,s (15,6~Min.) in Ausreißerläufen. \\
-\hline
-\ac{NFA}-03 & Wartbarkeit (modulare Architektur) & \checkmark & Trennung in Detection, Context-Building und Synthesis; unabhängig erweiterbar. \\
-\hline
-\ac{NFA}-04 & Reproduzierbarkeit (stabile Ausgaben) & $(\sim)$ & Temperature~0,05 und \acs{JSON}-Schema-Prompting sichern Grundstabilität; $\sigma = 0{,}53$ bei \texttt{qwen3:32b} als bestes Modell (vgl. Abschnitt~\ref{sec:effizienz_konsistenz}). Für einen \ac{PoC} ausreichend. \\
+\ac{IQR}             & 11 Findings & Streuung der mittleren 50\,\% -- spiegelt Modell-Heterogenität wider \\
 \hline
 \end{tabular}
-}%
-\label{tab:fa_nfa_erfuellung}
+\label{tab:statistik_quantile}
 \end{table}
 
+\clearpage
+
+\anhang{Screenshots der Testanwendung (test-12-Suite)}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.95\textwidth]{graphics/test12-screen1.png}
+\caption{Screenshot 1 der test-12-Suite}
+\label{fig:test12_screen1}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.95\textwidth]{graphics/test12-screen2.png}
+\caption{Screenshot 2 der test-12-Suite}
+\label{fig:test12_screen2}
+\end{figure}
+
+\clearpage
 % ══════════════════════════════════════════════════════════════════════════════
 % test-50-Suite -- Anhang-Abschnitte
 % ══════════════════════════════════════════════════════════════════════════════
 
 \clearpage
+\clearpage
+
 \anhang{test-50-Suite (kompletter Block)}\label{app:block_test50}
 
-\clearpage
-\anhang{Rohdaten: alle 30 Benchmark-Runs (test-50-Suite)}\label{app:rohdaten_50}
-
 \begin{table}[htbp]
 \centering
-\setlength{\tabcolsep}{3pt}
-\renewcommand{\arraystretch}{1.1}
-\caption[Rohdaten aller 30 Benchmark-Runs (test-50)]{Vollständige Messdaten der 30 Pipeline-Durchläufe (test-50-Suite, \texttt{num\_predict}~=~8\,192). LLM-Det.~=~Findings des LLM-Detektors; Axe/PW/Grep~=~Tool-Findings (konstant); Tokens~=~Output-Tokens; Dauer~=~Priorisierungslaufzeit in Sekunden.}
-\small
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|c|l|c|c|c|c|c|c|c|c|}
-\hline
-\textbf{Run} & \textbf{Modell} & \textbf{LLM-Det.} & \textbf{Axe} & \textbf{PW} & \textbf{Grep} & \textbf{Must} & \textbf{Nice} & \textbf{Tokens} & \textbf{Dauer\,(s)} \\
-\hline
-01 & qwen2.5-coder:7b     & 47 & 14 & 2 & 21 & 10 & 17 &  3409 & 123 \\
-02 & qwen2.5-coder:7b     & 47 & 14 & 2 & 21 & 14 & 51 &  8192 & 228 \\
-03 & qwen2.5-coder:7b     & 47 & 14 & 2 & 21 & 27 & 41 &  8192 & 232 \\
-04 & qwen2.5-coder:7b     & 47 & 14 & 2 & 21 & 26 & 34 &  8192 & 234 \\
-05 & qwen2.5-coder:7b     & 40 & 14 & 2 & 21 & 10 &  4 &  1996 &  75 \\
-06 & qwen2.5-coder:7b     & 44 & 14 & 2 & 21 & 13 & 59 &  8192 & 236 \\
-07 & qwen2.5-coder:7b     & 47 & 14 & 2 & 21 & 24 & 49 &  8192 & 241 \\
-08 & qwen2.5-coder:7b     & 47 & 14 & 2 & 21 & 24 & 23 &  5683 & 180 \\
-09 & qwen2.5-coder:7b     & 53 & 14 & 2 & 21 & 54 & 10 &  7291 & 205 \\
-10 & qwen2.5-coder:7b     & 47 & 14 & 2 & 21 & 13 & 68 &  8192 & 224 \\
-\hline
-11 & qwen2.5-coder:14b    & 45 & 14 & 2 & 21 & 50 &  8 &  8192 & 457 \\
-12 & qwen2.5-coder:14b    & 52 & 14 & 2 & 21 & 14 & 48 &  8192 & 462 \\
-13 & qwen2.5-coder:14b    & 52 & 14 & 2 & 21 & 14 & 45 &  8192 & 458 \\
-14 & qwen2.5-coder:14b    & 52 & 14 & 2 & 21 & 14 & 48 &  8192 & 480 \\
-15 & qwen2.5-coder:14b    & 52 & 14 & 2 & 21 & 14 & 45 &  8192 & 473 \\
-16 & qwen2.5-coder:14b    & 52 & 14 & 2 & 21 & 59 &  0 &  8192 & 465 \\
-17 & qwen2.5-coder:14b    & 52 & 14 & 2 & 21 & 14 & 33 &  6014 & 352 \\
-18 & qwen2.5-coder:14b    & 52 & 14 & 2 & 21 & 14 & 34 &  6239 & 361 \\
-19 & qwen2.5-coder:14b    & 52 & 14 & 2 & 21 & 14 & 47 &  8192 & 459 \\
-20 & qwen2.5-coder:14b    & 52 & 14 & 2 & 21 & 14 & 49 &  8046 & 470 \\
-\hline
-21 & qwen3:32b            & 60 & 14 & 2 & 21 & 36 & 38 &  8192 & 1084 \\
-22 & qwen3:32b            & 60 & 14 & 2 & 21 & 37 & 46 &  8192 & 1030 \\
-23 & qwen3:32b            & 62 & 14 & 2 & 21 & 66 &  0 &  8192 & 1014 \\
-24 & qwen3:32b            & 60 & 14 & 2 & 21 & 66 & 12 &  8192 & 1004 \\
-25 & qwen3:32b            & 63 & 14 & 2 & 21 & 73 &  7 &  8192 & 1008 \\
-26 & qwen3:32b            & 60 & 14 & 2 & 21 & 49 & 22 &  8192 &  996 \\
-27 & qwen3:32b            & 61 & 14 & 2 & 21 & 32 & 46 &  8192 &  998 \\
-28 & qwen3:32b            & 60 & 14 & 2 & 21 & 30 & 36 &  7179 &  885 \\
-29 & qwen3:32b            & 62 & 14 & 2 & 21 & 49 & 30 &  8192 &  995 \\
-30 & qwen3:32b            & 59 & 14 & 2 & 21 & 38 & 36 &  8192 &  987 \\
-\hline
-\end{tabular}
-}%
-\label{tab:rohdaten_runs_50}
-\end{table}
-
-\clearpage
-\anhang{Modell-Leistungsvergleich: test-50-Suite Zusammenfassung}\label{app:modell_summary_50}
-
-\begin{table}[htbp]
-\centering
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.25}
-\caption[Modell-Leistungsvergleich (test-50-Suite)]{Zusammenfassung der Leistungsmetriken für die drei evaluierten Modelle auf der test-50-Suite (je $n=10$ Runs, \texttt{num\_predict}~=~8\,192). $\sigma$~=~Stichproben-Standardabweichung der LLM-Detektor-Findings über 10~Runs.}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|c|c|c|}
-\hline
-\textbf{Metrik} & \textbf{qwen2.5-coder:7b} & \textbf{qwen2.5-coder:14b} & \textbf{qwen3:32b} \\
-\hline
-LLM-Detektor-Findings (Ø)         & 46{,}6           & 51{,}3              & 60{,}7 \\
-LLM-Detektor-Findings (Min--Max)  & 40--53           & 45--52              & 59--63 \\
-Konsistenz $\sigma$               & 3{,}20           & 2{,}21              & 1{,}25 \\
-Tool-Findings (axe/PW/grep)       & 14\,/\,2\,/\,21  & 14\,/\,2\,/\,21     & 14\,/\,2\,/\,21 \\
-Must-have Ø (Bericht)             & 21{,}5           & 22{,}1              & 47{,}6 \\
-Nice-to-have Ø (Bericht)          & 35{,}6           & 35{,}7              & 27{,}3 \\
-Gesamt-Report-Items Ø             & 57{,}1           & 57{,}8              & 74{,}9 \\
-Priorisierungsqualität            & Instabil         & Bimodal             & Plausibel \\
-Priorisierungslaufzeit Ø          & 198\,s           & 444\,s              & 1\,000\,s \\
-Priorisierungslaufzeit Min--Max   & 75--241\,s       & 352--480\,s         & 885--1\,084\,s \\
-NFA-02-Konformität                & \checkmark       & \checkmark          & \texttimes \\
-Eignung BITV-Einsatz              & Nicht geeignet   & Empfohlen           & Eingeschränkt \\
-Output-Tokens Ø                   & 6\,753           & 7\,764              & 8\,091 \\
-Output-Limit ausgeschöpft         & 6\,/\,10 (60\,\%) & 7\,/\,10 (70\,\%)  & 9\,/\,10 (90\,\%) \\
-Parsing-Erfolg                    & 100\,\%          & 100\,\%             & 100\,\% \\
-\hline
-\end{tabular}
-}%
-\label{tab:modell_summary_50}
-\end{table}
-
-\clearpage
-\anhang{Token-Nutzung pro Modell: Input/Output (test-50-Suite)}\label{app:token_economy_50}
-
-\begin{table}[htbp]
-\centering
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.2}
-\caption[Token-Nutzung pro Modell (test-50)]{Durchschnittliche Token-Nutzung je Run und Modell auf Basis der test-50-Suite (\texttt{num\_predict}~=~8\,192). Input-Tokens umfassen System-Prompt, serialisierte Findings und Konfigurationsparameter. Der höhere Input gegenüber test-12 (dort \O{}~4\,000--5\,600) reflektiert die größere Anzahl serialisierter Violations.}
-\begin{tabular}{|l|c|c|c|}
-\hline
-\textbf{Modell} & \textbf{Input-Tokens Ø} & \textbf{Output-Tokens Ø} & \textbf{Truncation} \\
-\hline
-qwen2.5-coder:7b  & 13\,196 & 6\,753 & 6\,/\,10 Runs (60\,\%) \\
-\hline
-qwen2.5-coder:14b & 13\,556 & 7\,764 & 7\,/\,10 Runs (70\,\%) \\
-\hline
-qwen3:32b         & 14\,231 & 8\,091 & 9\,/\,10 Runs (90\,\%) \\
-\hline
-\multicolumn{4}{|l|}{\textit{Gesamt (30 Runs): Input $\approx$409\,500 / Output 226\,740 Tokens}} \\
-\hline
-\end{tabular}
-\label{tab:token_economy_50}
-\end{table}
-
-\anhang{Statistische Verteilung der LLM-Findings (alle 30 Runs, test-50-Suite)}\label{app:statistik_quantile_50}
-
-\begin{table}[htbp]
-\centering
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.2}
-\caption[Quantilanalyse der LLM-Findings (test-50, alle 30 Runs)]{Quantilanalyse der LLM-Detektor-Findings über alle 30 Benchmark-Runs der test-50-Suite (3 Modelle $\times$ 10 Runs). Die engere Cluster-Struktur gegenüber test-12 zeigt die höhere Konsistenz bei größerer Violation-Zahl.}
-\begin{tabular}{|l|c|p{7cm}|}
-\hline
-\textbf{Quantil} & \textbf{Wert} & \textbf{Interpretation} \\
-\hline
-Min (0\,\%)     & 40 Findings  & absolutes Minimum (7b, Ausreißerrun) \\
-\hline
-Q1 (25\,\%)     & 47 Findings  & 25\,\% der Runs liefern $\leq$ 47 Findings (7b-Cluster) \\
-\hline
-Median (50\,\%) & 52 Findings  & Übergang 7b/14b-Cluster \\
-\hline
-Q3 (75\,\%)     & 60 Findings  & 75\,\% der Runs liefern $\leq$ 60 Findings (32b-Untergrenze) \\
-\hline
-Max (100\,\%)   & 63 Findings  & absolutes Maximum (32b) \\
-\hline
-IQR             & 13 Findings  & Streuung der mittleren 50\,\% -- geringer als test-12 (\ac{IQR}~=~11 bei niedrigerem Skalenniveau) \\
-\hline
-\end{tabular}
-\label{tab:statistik_quantile_50}
-\end{table}
-
-\clearpage
-\anhang{Über-Detektion relativ zur Ground Truth (test-50-Suite)}\label{app:overdetection_50}
-
-\begin{table}[htbp]
-\centering
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.2}
-\caption[Über-Detektion relativ zu 50 Ground-Truth-Violations]{Vergleich der durchschnittlichen LLM-Detektor-Findings pro Run mit der Ground Truth (50~Violations) auf Basis der test-50-Suite. Die LLM-only-Betrachtung vermeidet Doppelzählungen zwischen überlappenden Detektoren.}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|c|c|c|p{5.5cm}|}
-\hline
-\textbf{Modell} & \textbf{LLM-Findings Ø} & \textbf{Ground Truth} & \textbf{Quote} & \textbf{Interpretation} \\
-\hline
-qwen2.5-coder:7b  & 46{,}6 & 50 & 93{,}2\,\% & nahe an der Ground Truth; LLM liefert teils Unterdetektion bei einzelnen Runs \\
-\hline
-qwen2.5-coder:14b & 51{,}3 & 50 & 102{,}6\,\% & sehr nahe an der Ground Truth; geringste Abweichung im Mittel \\
-\hline
-qwen3:32b         & 60{,}7 & 50 & 121{,}4\,\% & erhöhter Überschuss; zugleich konsistenteste LLM-Detektion ($\sigma \approx 1{,}25$) \\
-\hline
-\end{tabular}
-}%
-\label{tab:overdetection_50}
-\end{table}
-
-\anhang{Detektor-Konsistenz über alle 30 Runs (test-50-Suite)}\label{app:detektor_konsistenz_50}
-
-\begin{table}[htbp]
-\centering
-\setlength{\tabcolsep}{3pt}
-\renewcommand{\arraystretch}{1.2}
-\scriptsize
-\caption[Detektor-Konsistenz (test-50, alle Runs)]{Konsistenzanalyse der Detektoren über alle 30 Benchmark-Runs (test-50). Die festen Detektoren bleiben vollständig deterministisch; die LLM-Varianz ist modellabhängig.}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|p{2.4cm}|p{0.8cm}|p{1.5cm}|p{1.2cm}|p{1.2cm}|p{1.7cm}|p{4.0cm}|}
-\hline
-\textbf{Detektor / Modell} & \textbf{Runs} & \textbf{Gesamt-Findings} & \textbf{Ø pro Run} & \textbf{Min--Max} & \textbf{$\sigma^2$ / $\sigma$} & \textbf{Interpretation} \\
-\hline
-axe-core    & 30 & 420 & 14{,}0  & 14--14  & 0{,}00 / 0{,}00 & vollständig deterministisch \\
-\hline
-Playwright  & 30 &  60 &  2{,}0  &  2--2   & 0{,}00 / 0{,}00 & vollständig deterministisch \\
-\hline
-grep        & 30 & 630 & 21{,}0  & 21--21  & 0{,}00 / 0{,}00 & vollständig deterministisch \\
-\hline
-qwen2.5-coder:7b  & 10 & 466 & 46{,}6 & 40--53 & 10{,}27 / 3{,}20 & höchste Streuung \\
-\hline
-qwen2.5-coder:14b & 10 & 513 & 51{,}3 & 45--52 &  4{,}90 / 2{,}21 & gute Konsistenz (1 Ausreißer) \\
-\hline
-qwen3:32b         & 10 & 607 & 60{,}7 & 59--63 &  1{,}57 / 1{,}25 & höchste Konsistenz aller Modelle \\
-\hline
-LLM-Detektor gesamt & 30 & 1586 & 52{,}9 & 40--63 & modell\-abhängig & -- \\
-\hline
-\end{tabular}
-}%
-\label{tab:detektor_konsistenz_50}
-\end{table}
-
-\anhang{CSV-Beispieldaten der Benchmark-Rohdaten (test-50-Suite)}\label{app:csv_export_50}
-
-\begin{table}[htbp]
-\centering
-\setlength{\tabcolsep}{3.5pt}
+\setlength{\tabcolsep}{5pt}
 \renewcommand{\arraystretch}{1.15}
-\caption[Beispielzeilen aus dem CSV-Export (test-50)]{Repräsentative Beispielzeilen aus \texttt{results-50/benchmark/summary.csv} (test-50-Suite; jeweils Run~01 pro Modell). Spaltenschema analog zu Tabelle~\ref{tab:csv_schema}.}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|}
+\caption[Template-Reihenfolge test-50]{Navigationsübersicht in der standardisierten Reihenfolge für die test-50-Suite.}
+\begin{tabular}{|c|p{11.4cm}|}
 \hline
-\textbf{model} & \textbf{run} & \textbf{must} & \textbf{nice} & \textbf{LLM} & \textbf{Axe} & \textbf{PW} & \textbf{Grep} & \textbf{durationMs} & \textbf{prompt} & \textbf{output} & \textbf{parse} \\
+\textbf{Nr.} & \textbf{Baustein} \\
 \hline
-qwen2.5-coder:7b  & 1 & 10 & 17 & 47 & 14 & 2 & 21 & 123084 & 13109 & 3409 & true \\
+1 & Violations-Katalog \\
 \hline
-qwen2.5-coder:14b & 1 & 50 &  8 & 45 & 14 & 2 & 21 & 456526 & 13053 & 8192 & true \\
+2 & Erkennungsrate \\
 \hline
-qwen3:32b         & 1 & 36 & 38 & 60 & 14 & 2 & 21 & 1083991 & 14171 & 8192 & true \\
+3 & Recall-Matrix \\
+\hline
+4 & Rohdaten \\
+\hline
+5 & Modellvergleich \\
+\hline
+6 & Token-Nutzung \\
+\hline
+7 & Effizienz \\
+\hline
+8 & Overdetection \\
+\hline
+9 & Konsistenz \\
+\hline
+10 & Empfehlungsqualität \\
+\hline
+11 & CSV-Auszug \\
+\hline
+12 & Statistische Verteilung \\
+\hline
+13 & Screenshots der Testsuite \\
 \hline
 \end{tabular}
-}%
-\label{tab:csv_beispiel_50}
+\label{tab:template_test50}
 \end{table}
 
 \clearpage
+
 \anhang{Accessibility-Verstöße der Testanwendung (test-50-Suite)}\label{app:accessibility_verstoesse_50}
 
 \setlength{\tabcolsep}{2.5pt}
@@ -1324,58 +1231,273 @@ V50 & \texttt{outline: none} im Modal-Button (Fokus entfernt)       & lay. & Pla
 \end{center}
 
 \clearpage
+
 \anhang{Erkennungsrate der Violations im Proof of Concept (test-50-Suite)}\label{app:erkennungsrate_poc_50}
+
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.1}
+\small
+\begin{longtable}{|c|p{5.0cm}|c|p{3.2cm}|c|p{3.8cm}|}
+\caption[Erkennungsrate der Violations (test-50)]{Erkennungsrate aller 50 Violations (test-50-Suite). \textit{Erkannt}~=~konsistent über $>\,5$ von 10~Runs je Modell; alle 50 Violations sind durch die Vollpipeline (inkl.\ 32b) erkennbar. \textit{Tatsächl. Quelle}~=~primär auslösender Detektor. Basis: alle 30~Runs (10~je Modell), Schwelle $>\,5/10$.}\label{tab:erkennungsrate_poc_50} \\
+\hline
+\textbf{\#} & \textbf{Violation} & \textbf{Erkannt} & \textbf{Tatsächl. Quelle} & \textbf{FP} & \textbf{Anmerkung} \\
+\hline
+\endfirsthead
+\caption[]{Erkennungsrate der Violations (test-50-Suite, Fortsetzung)} \\
+\hline
+\textbf{\#} & \textbf{Violation} & \textbf{Erkannt} & \textbf{Tatsächl. Quelle} & \textbf{FP} & \textbf{Anmerkung} \\
+\hline
+\endhead
+\hline
+\multicolumn{6}{|r|}{\textit{Fortsetzung auf der nächsten Seite}} \\
+\hline
+\endfoot
+\hline
+\endlastfoot
+V1  & Skip-Link fehlt & \checkmark & Playwright & - & 14b/32b kons.; 7b inst.\ (4/10) \\ \hline
+V2  & \texttt{<html>} ohne \texttt{lang} & \checkmark & axe-core & - & 14b/32b kons.; 7b selten (1/10) \\ \hline
+V3  & Logo \texttt{<img>} ohne \texttt{alt} & \checkmark & axe-core + grep & - & Alle Modelle \\ \hline
+V4  & Deko-Bild ohne \texttt{alt=""} & \checkmark & axe-core + grep & - & Alle Modelle \\ \hline
+V5  & Hamburger-Button ohne Namen & \checkmark & axe-core & - & Alle Modelle \\ \hline
+V6  & \texttt{<a>} ohne \texttt{href} & \checkmark & axe-core & - & 14b/32b kons.; 7b selten (1/10) \\ \hline
+V7  & Badge-Kontrast zu niedrig & \checkmark & axe-core & - & Alle Modelle \\ \hline
+V8  & CSS \texttt{order} $\neq$ DOM-Reihenfolge & \checkmark & LLM-Detektor & - & nur 32b kons.; 14b nie erkannt; 7b inst.\ (3/10) \\ \hline
+V9  & \texttt{<nav>} ohne \texttt{aria-label} & \checkmark & axe-core & - & Alle Modelle \\ \hline
+V10 & \texttt{onClick} auf \texttt{<li>} o.\ \texttt{onKeyDown} (1) & \checkmark & grep & - & Alle Modelle \\ \hline
+V11 & \texttt{onClick} auf \texttt{<li>} o.\ \texttt{onKeyDown} (2) & \checkmark & grep & - & Alle Modelle \\ \hline
+V12 & \texttt{role="button"} o.\ \texttt{tabIndex} (Sidebar) & \checkmark & axe-core + grep & - & Alle Modelle \\ \hline
+V13 & \texttt{onClick} auf \texttt{<li>} o.\ \texttt{onKeyDown} (3) & \checkmark & grep & - & Alle Modelle \\ \hline
+V14 & Button $<$\,24\,px (Sidebar) & \checkmark & grep (CSS) & - & Alle Modelle \\ \hline
+V15 & \texttt{aria-hidden} auf fokussierbarem Element & \checkmark & axe-core & - & Alle Modelle \\ \hline
+V16 & Überschriften-Hierarchie übersprungen & \checkmark & axe-core & - & 14b/32b kons.; 7b selten (1/10) \\ \hline
+V17 & KPI-Icon \texttt{<img>} ohne \texttt{alt} (1) & \checkmark & axe-core + grep & - & 14b/32b kons.; 7b inst.\ (5/10) \\ \hline
+V18 & KPI-Wert Kontrast zu niedrig & \checkmark & axe-core & - & Alle Modelle \\ \hline
+V19 & KPI-Icon \texttt{<img>} ohne \texttt{alt} (2) & \checkmark & axe-core + grep & - & 14b/32b kons.; 7b inst.\ (5/10) \\ \hline
+V20 & \texttt{onClick} auf \texttt{<div>} o.\ \texttt{onKeyDown} & \checkmark & grep & - & 7b/14b kons.; 32b inst.\ (5/10) \\ \hline
+V21 & \texttt{role="button"} auf \texttt{<div>} o.\ \texttt{tabIndex} & \checkmark & axe-core + grep & - & 7b/14b kons.; 32b inst.\ (5/10) \\ \hline
+V22 & Chart-Bild ohne \texttt{alt} & \checkmark & axe-core + grep & - & Alle Modelle \\ \hline
+V23 & Tabelle o.\ \texttt{<caption>} (Dashboard) & \checkmark & axe-core & - & 14b/32b kons.; 7b selten (1/10) \\ \hline
+V24 & \texttt{<th>} ohne \texttt{scope} & \checkmark & axe-core & - & 14b/32b kons.; 7b inst.\ (3/10) \\ \hline
+V25 & Status nur durch Farbe (Dashboard) & \checkmark & LLM-Detektor & - & 14b/32b kons.; 7b inst.\ (4/10) \\ \hline
+V26 & Avatar \texttt{<img>} ohne \texttt{alt} & \checkmark & axe-core + grep & - & Alle Modelle \\ \hline
+V27 & Input ohne \texttt{<label>} (Anzeigename) & \checkmark & axe-core & - & Alle Modelle \\ \hline
+V28 & Input ohne \texttt{<label>} (E-Mail) & \checkmark & axe-core & - & Alle Modelle \\ \hline
+V29 & Textarea ohne \texttt{<label>} (Bio) & \checkmark & axe-core & - & Alle Modelle \\ \hline
+V30 & Pflichtfeld ohne \texttt{required}/\texttt{aria-req.} & \checkmark & LLM-Detektor & - & Alle Modelle (LLM-Detektor) \\ \hline
+V31 & Fehlermeldung nicht progr.\ verknüpft & \checkmark & LLM-Detektor & - & Alle Modelle (LLM-Detektor) \\ \hline
+V32 & Button-Kontrast zu niedrig & \checkmark & axe-core & - & Alle Modelle \\ \hline
+V33 & \texttt{outline: none} auf Button & \checkmark & Playwright & - & Alle Modelle \\ \hline
+V34 & Statusmeldung ohne \texttt{aria-live} & \checkmark & LLM-Detektor & - & Alle Modelle (LLM-Detektor) \\ \hline
+V35 & Duplikat-ID \texttt{help-text} & \checkmark & axe-core & - & 7b/14b kons.; 32b inst.\ (5/10) \\ \hline
+V36 & \texttt{onClick} auf \texttt{<span>} o.\ \texttt{onKeyDown} & \checkmark & grep & - & 32b kons.; 7b/14b inst.\ (4--5/10) \\ \hline
+V37 & Suchfeld ohne sichtbares Label & \checkmark & axe-core & - & 32b kons.; 14b inst.; 7b selten (2/10) \\ \hline
+V38 & Tabelle o.\ \texttt{<caption>} (DataTable) & \checkmark & axe-core & - & 14b/32b kons.; 7b selten (1/10) \\ \hline
+V39 & Checkbox ohne Label (Header) & \checkmark & axe-core & - & 14b/32b kons.; 7b inst.\ (3/10) \\ \hline
+V40 & Checkbox ohne Label (Zeilen) & \checkmark & axe-core & - & 14b/32b kons.; 7b inst.\ (3/10) \\ \hline
+V41 & Status nur durch Farbe (DataTable) & \checkmark & LLM-Detektor & - & 14b/32b kons.; 7b inst.\ (3/10) \\ \hline
+V42 & Icon-Button ohne zugängl. Namen & \checkmark & axe-core & - & 14b kons.; 7b/32b inst.\ (3/10) \\ \hline
+V43 & Paginierung \texttt{<div>} ohne Keyboard & \checkmark & grep & - & Alle Modelle \\ \hline
+V44 & \texttt{<li>} mit \texttt{onClick} ohne \texttt{onKeyDown} & \checkmark & grep & - & Alle Modelle \\ \hline
+V45 & Ungelesen nur durch Farbe & \checkmark & LLM-Detektor & - & Alle Modelle (LLM-Detektor) \\ \hline
+V46 & Zeitangabe Kontrast zu niedrig & \checkmark & axe-core & - & 32b kons.; 14b inst.; 7b selten (1/10) \\ \hline
+V47 & Button $<$\,24\,px (Notif.) & \checkmark & grep (CSS) & - & 7b/32b kons.; 14b inst.\ (5/10) \\ \hline
+V48 & Modaler Dialog ohne Fokus-Trap & \checkmark & Playwright & - & 14b kons.; 32b inst.\ (5/10); 7b selten \\ \hline
+V49 & Dialog ohne \texttt{aria-labelledby} & \checkmark & axe-core & - & 7b kons.\ (8/10); 14b/32b inst.\ (5/10) \\ \hline
+V50 & \texttt{outline: none} im Modal-Button & \checkmark & Playwright & - & 32b kons.; 14b inst.\ (4/10); 7b selten \\ \hline
+\end{longtable}
+\normalsize
+
+\clearpage
+
+\anhang{Recall-Matrix: Violation × Bedingung (test-50-Suite)}\label{app:recall_matrix_50}
+
+\begin{longtable}{|c|p{5.0cm}|c|c|c|c|c|}
+\caption[Recall-Matrix aller Violations (test-50)]{Erkennungsstatus je Violation und Bedingung (test-50-Suite). \checkmark~=~konsistent erkannt ($>\,5/10$~Runs); $\sim$~=~instabil (3--5/10); $\times$~=~selten/nie ($<\,3/10$). Baseline~=~Tool-only (axe + Playwright + grep, deterministisch). Basis: alle 30~Runs (10~je Modell).}\label{tab:recall_matrix_50} \\
+\hline
+\textbf{\#} & \textbf{Violation} & \textbf{Baseline} & \textbf{+\,7b} & \textbf{+\,14b} & \textbf{+\,32b} & \textbf{LLM-exkl.} \\
+\hline
+\endfirsthead
+\caption[]{Recall-Matrix test-50-Suite (Fortsetzung)} \\
+\hline
+\textbf{\#} & \textbf{Violation} & \textbf{Baseline} & \textbf{+\,7b} & \textbf{+\,14b} & \textbf{+\,32b} & \textbf{LLM-exkl.} \\
+\hline
+\endhead
+\hline
+\multicolumn{7}{|r|}{\textit{Fortsetzung auf der nächsten Seite}} \\
+\hline
+\endfoot
+\hline
+\endlastfoot
+V1  & Skip-Link fehlt                                      & \checkmark & $\sim$     & \checkmark & \checkmark & \\ \hline
+V2  & \texttt{<html>} ohne \texttt{lang}                  & \checkmark & $\sim$     & \checkmark & \checkmark & \\ \hline
+V3  & Logo \texttt{<img>} ohne \texttt{alt}               & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+V4  & Deko-Bild ohne \texttt{alt=""}                      & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+V5  & Hamburger-Button ohne Namen                         & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+V6  & \texttt{<a>} ohne \texttt{href}                     & \checkmark & $\sim$     & $\times$   & \checkmark & \\ \hline
+V7  & Badge-Kontrast zu niedrig                           & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+V8  & CSS \texttt{order} $\neq$ DOM-Reihenfolge           & $\times$   & $\sim$     & $\times$   & \checkmark & \checkmark \\ \hline
+V9  & \texttt{<nav>} ohne \texttt{aria-label}             & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+V10 & \texttt{onClick} auf \texttt{<li>} o.\,\texttt{onKeyDown} (1) & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+V11 & \texttt{onClick} auf \texttt{<li>} o.\,\texttt{onKeyDown} (2) & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+V12 & \texttt{role="button"} o.\,\texttt{tabIndex} (Sb.) & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+V13 & \texttt{onClick} auf \texttt{<li>} o.\,\texttt{onKeyDown} (3) & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+V14 & Button $<$\,24\,px (Sidebar)                        & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+V15 & \texttt{aria-hidden} auf fokussierbarem Element     & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+V16 & Überschriften-Hierarchie übersprungen               & \checkmark & $\sim$     & \checkmark & \checkmark & \\ \hline
+V17 & KPI-Icon \texttt{<img>} ohne \texttt{alt} (1)       & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+V18 & KPI-Wert Kontrast zu niedrig                        & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+V19 & KPI-Icon \texttt{<img>} ohne \texttt{alt} (2)       & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+V20 & \texttt{onClick} auf \texttt{<div>} o.\,\texttt{onKeyDown} & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+V21 & \texttt{role="button"} auf \texttt{<div>} o.\,\texttt{tabIndex} & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+V22 & Chart-Bild ohne \texttt{alt}                        & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+V23 & Tabelle o.\,\texttt{<caption>} (Dashboard)          & \checkmark & $\sim$     & \checkmark & \checkmark & \\ \hline
+V24 & \texttt{<th>} ohne \texttt{scope}                   & \checkmark & $\sim$     & \checkmark & \checkmark & \\ \hline
+V25 & Status nur durch Farbe (Dashboard)                  & $\times$   & \checkmark & \checkmark & \checkmark & \checkmark \\ \hline
+V26 & Avatar \texttt{<img>} ohne \texttt{alt}             & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+V27 & Input ohne \texttt{<label>} (Anzeigename)           & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+V28 & Input ohne \texttt{<label>} (E-Mail)                & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+V29 & Textarea ohne \texttt{<label>} (Bio)                & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+V30 & Pflichtfeld ohne \texttt{required}/\texttt{aria-req.}& $\times$  & \checkmark & \checkmark & \checkmark & \checkmark \\ \hline
+V31 & Fehlermeldung nicht progr.\,verknüpft               & $\times$   & \checkmark & \checkmark & \checkmark & \checkmark \\ \hline
+V32 & Button-Kontrast zu niedrig                          & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+V33 & \texttt{outline: none} auf Button                   & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+V34 & Statusmeldung ohne \texttt{aria-live}               & $\times$   & \checkmark & \checkmark & \checkmark & \checkmark \\ \hline
+V35 & Duplikat-ID \texttt{help-text}                      & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+V36 & \texttt{onClick} auf \texttt{<span>} o.\,\texttt{onKeyDown} & \checkmark & $\sim$ & \checkmark & \checkmark & \\ \hline
+V37 & Suchfeld ohne sichtbares Label                      & \checkmark & $\sim$     & \checkmark & \checkmark & \\ \hline
+V38 & Tabelle o.\,\texttt{<caption>} (DataTable)          & \checkmark & $\sim$     & \checkmark & \checkmark & \\ \hline
+V39 & Checkbox ohne Label (Header)                        & \checkmark & $\sim$     & \checkmark & \checkmark & \\ \hline
+V40 & Checkbox ohne Label (Zeilen)                        & \checkmark & $\sim$     & \checkmark & \checkmark & \\ \hline
+V41 & Status nur durch Farbe (DataTable)                  & $\times$   & $\sim$     & \checkmark & \checkmark & \checkmark \\ \hline
+V42 & Icon-Button ohne zugängl. Namen                     & \checkmark & $\sim$     & \checkmark & \checkmark & \\ \hline
+V43 & Paginierung \texttt{<div>} ohne Keyboard            & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+V44 & \texttt{<li>} mit \texttt{onClick} o.\,\texttt{onKeyDown} & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+V45 & Ungelesen nur durch Farbe                           & $\times$   & \checkmark & \checkmark & \checkmark & \checkmark \\ \hline
+V46 & Zeitangabe Kontrast zu niedrig                      & \checkmark & $\sim$     & \checkmark & \checkmark & \\ \hline
+V47 & Button $<$\,24\,px (Notif.)                         & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+V48 & Modaler Dialog ohne Fokus-Trap                      & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+V49 & Dialog ohne \texttt{aria-labelledby}                & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+V50 & \texttt{outline: none} im Modal-Button              & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
+\multicolumn{2}{|c|}{\textbf{Recall}} & \textbf{43\,/\,50} & \textbf{36\,/\,50} & \textbf{48\,/\,50} & \textbf{50\,/\,50} & 7~Violations \\
+\hline
+\end{longtable}
+\normalsize
+
+\noindent\footnotesize\textbf{Hinweis:} Die Werte 14/2/21 sind Detektor-\textit{Finding}-Counts (axe/Playwright/grep), während 43/50 die Abdeckung der 50 definierten Ground-Truth-\textit{Violations} angibt; beide Kennzahlen sind daher nicht direkt gegeneinander austauschbar.\normalsize
+
+\clearpage
+
+\anhang{Rohdaten: alle 30 Benchmark-Runs (test-50-Suite)}\label{app:rohdaten_50}
 
 \begin{table}[htbp]
 \centering
-\setlength{\tabcolsep}{3.5pt}
-\renewcommand{\arraystretch}{1.2}
-\caption[Erkennungsrate der Violations (test-50)]{Detektor-Performance-Matrix für die test-50-Suite. Basis sind die Rohdaten aus Tabelle~\ref{tab:rohdaten_runs_50} sowie die vollständigen Run-01-Analysen je Modell in \texttt{results-50/benchmark/*/test-50/run-01}.}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.1}
+\caption[Rohdaten aller 30 Benchmark-Runs (test-50)]{Vollständige Messdaten der 30 Pipeline-Durchläufe (test-50-Suite, \texttt{num\_predict}~=~8\,192). LLM-Det.~=~Findings des LLM-Detektors; Axe/PW/Grep~=~Tool-Findings (konstant); Tokens~=~Output-Tokens; Dauer~=~Priorisierungslaufzeit in Sekunden.}
+\small
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{|p{4.0cm}|c|c|c|p{6.8cm}|}
+\begin{tabular}{|c|l|c|c|c|c|c|c|c|c|}
 \hline
-\textbf{Bedingung} & \textbf{Axe/PW/Grep} & \textbf{LLM-Code} & \textbf{Gesamt-Report} & \textbf{Anmerkung} \\
+\textbf{Run} & \textbf{Modell} & \textbf{LLM-Det.} & \textbf{Axe} & \textbf{PW} & \textbf{Grep} & \textbf{Must} & \textbf{Nice} & \textbf{Tokens} & \textbf{Dauer\,(s)} \\
 \hline
-Baseline (Tools only) & 37 & 0 & 37 & Deterministische Tool-Basis aus 14 (axe) + 2 (PW) + 21 (grep) Findings \\
+01 & qwen2.5-coder:7b     & 47 & 14 & 2 & 21 & 10 & 17 &  3409 & 123 \\
+02 & qwen2.5-coder:7b     & 47 & 14 & 2 & 21 & 14 & 51 &  8192 & 228 \\
+03 & qwen2.5-coder:7b     & 47 & 14 & 2 & 21 & 27 & 41 &  8192 & 232 \\
+04 & qwen2.5-coder:7b     & 47 & 14 & 2 & 21 & 26 & 34 &  8192 & 234 \\
+05 & qwen2.5-coder:7b     & 40 & 14 & 2 & 21 & 10 &  4 &  1996 &  75 \\
+06 & qwen2.5-coder:7b     & 44 & 14 & 2 & 21 & 13 & 59 &  8192 & 236 \\
+07 & qwen2.5-coder:7b     & 47 & 14 & 2 & 21 & 24 & 49 &  8192 & 241 \\
+08 & qwen2.5-coder:7b     & 47 & 14 & 2 & 21 & 24 & 23 &  5683 & 180 \\
+09 & qwen2.5-coder:7b     & 53 & 14 & 2 & 21 & 54 & 10 &  7291 & 205 \\
+10 & qwen2.5-coder:7b     & 47 & 14 & 2 & 21 & 13 & 68 &  8192 & 224 \\
 \hline
-+\,qwen2.5-coder:7b (Run~01) & 37 & 47 & 27 & Früh abgeschnittene Priorisierung (3\,409 Output-Tokens), dadurch geringe Report-Abdeckung trotz hoher LLM-Fundzahl \\
+11 & qwen2.5-coder:14b    & 45 & 14 & 2 & 21 & 50 &  8 &  8192 & 457 \\
+12 & qwen2.5-coder:14b    & 52 & 14 & 2 & 21 & 14 & 48 &  8192 & 462 \\
+13 & qwen2.5-coder:14b    & 52 & 14 & 2 & 21 & 14 & 45 &  8192 & 458 \\
+14 & qwen2.5-coder:14b    & 52 & 14 & 2 & 21 & 14 & 48 &  8192 & 480 \\
+15 & qwen2.5-coder:14b    & 52 & 14 & 2 & 21 & 14 & 45 &  8192 & 473 \\
+16 & qwen2.5-coder:14b    & 52 & 14 & 2 & 21 & 59 &  0 &  8192 & 465 \\
+17 & qwen2.5-coder:14b    & 52 & 14 & 2 & 21 & 14 & 33 &  6014 & 352 \\
+18 & qwen2.5-coder:14b    & 52 & 14 & 2 & 21 & 14 & 34 &  6239 & 361 \\
+19 & qwen2.5-coder:14b    & 52 & 14 & 2 & 21 & 14 & 47 &  8192 & 459 \\
+20 & qwen2.5-coder:14b    & 52 & 14 & 2 & 21 & 14 & 49 &  8046 & 470 \\
 \hline
-+\,qwen2.5-coder:14b (Run~01) & 37 & 45 & 58 & Hohe Fundzahl bei starker Überdetektion/Redundanz (Output-Limit 8\,192 erreicht) \\
-\hline
-+\,qwen3:32b (Run~01) & 37 & 60 & 74 & Höchste Fundzahl; vollständige Violation-Abdeckung in Tabelle~\ref{tab:empfehlungsqualitaet_50} sichtbar \\
+21 & qwen3:32b            & 60 & 14 & 2 & 21 & 36 & 38 &  8192 & 1084 \\
+22 & qwen3:32b            & 60 & 14 & 2 & 21 & 37 & 46 &  8192 & 1030 \\
+23 & qwen3:32b            & 62 & 14 & 2 & 21 & 66 &  0 &  8192 & 1014 \\
+24 & qwen3:32b            & 60 & 14 & 2 & 21 & 66 & 12 &  8192 & 1004 \\
+25 & qwen3:32b            & 63 & 14 & 2 & 21 & 73 &  7 &  8192 & 1008 \\
+26 & qwen3:32b            & 60 & 14 & 2 & 21 & 49 & 22 &  8192 &  996 \\
+27 & qwen3:32b            & 61 & 14 & 2 & 21 & 32 & 46 &  8192 &  998 \\
+28 & qwen3:32b            & 60 & 14 & 2 & 21 & 30 & 36 &  7179 &  885 \\
+29 & qwen3:32b            & 62 & 14 & 2 & 21 & 49 & 30 &  8192 &  995 \\
+30 & qwen3:32b            & 59 & 14 & 2 & 21 & 38 & 36 &  8192 &  987 \\
 \hline
 \end{tabular}
 }%
-\label{tab:erkennungsrate_poc_50}
+\label{tab:rohdaten_runs_50}
 \end{table}
 
 \clearpage
-\anhang{Recall-Matrix: Violation × Bedingung (test-50-Suite)}\label{app:recall_matrix_50}
+
+\anhang{Modell-Leistungsvergleich: test-50-Suite Zusammenfassung}\label{app:modell_summary_50}
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.25}
+\caption[Modell-Leistungsvergleich (test-50-Suite)]{Zusammenfassung der Leistungsmetriken für die drei evaluierten Modelle auf der test-50-Suite (je $n=10$ Runs, \texttt{num\_predict}~=~8\,192). $\sigma$~=~Stichproben-Standardabweichung der LLM-Detektor-Findings über 10~Runs.}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Metrik} & \textbf{qwen2.5-coder:7b} & \textbf{qwen2.5-coder:14b} & \textbf{qwen3:32b} \\
+\hline
+LLM-Detektor-Findings (Ø)         & 46{,}6           & 51{,}3              & 60{,}7 \\
+LLM-Detektor-Findings (Min--Max)  & 40--53           & 45--52              & 59--63 \\
+Konsistenz $\sigma$               & 3{,}20           & 2{,}21              & 1{,}25 \\
+Tool-Findings (axe/PW/grep)       & 14\,/\,2\,/\,21  & 14\,/\,2\,/\,21     & 14\,/\,2\,/\,21 \\
+Must-have Ø (Bericht)             & 21{,}5           & 22{,}1              & 47{,}6 \\
+Nice-to-have Ø (Bericht)          & 35{,}6           & 35{,}7              & 27{,}3 \\
+Gesamt-Report-Items Ø             & 57{,}1           & 57{,}8              & 74{,}9 \\
+Priorisierungsqualität            & Instabil         & Bimodal             & Plausibel \\
+Priorisierungslaufzeit Ø          & 198\,s           & 444\,s              & 1\,000\,s \\
+Priorisierungslaufzeit Min--Max   & 75--241\,s       & 352--480\,s         & 885--1\,084\,s \\
+NFA-02-Konformität                & \checkmark       & \checkmark          & \texttimes \\
+Eignung BITV-Einsatz              & Nicht geeignet   & Empfohlen           & Eingeschränkt \\
+Output-Tokens Ø                   & 6\,753           & 7\,764              & 8\,091 \\
+Output-Limit ausgeschöpft         & 6\,/\,10 (60\,\%) & 7\,/\,10 (70\,\%)  & 9\,/\,10 (90\,\%) \\
+Parsing-Erfolg                    & 100\,\%          & 100\,\%             & 100\,\% \\
+\hline
+\end{tabular}
+}%
+\label{tab:modell_summary_50}
+\end{table}
+
+\clearpage
+
+\anhang{Token-Nutzung pro Modell: Input/Output (test-50-Suite)}\label{app:token_economy_50}
 
 \begin{table}[htbp]
 \centering
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.2}
-\caption[Recall-Matrix test-50 (Kategorie × Bedingung)]{Recall-Matrix der test-50-Suite nach Violationstyp. Für qwen3:32b ist die Violation-Granularität aus Run~01 vollständig auswertbar (Tabelle~\ref{tab:empfehlungsqualitaet_50}); für 7b/14b liegen in den Rohdaten nur aggregierte Zählwerte vor, daher k.\,A. auf Violationsebene.}
-\begin{tabular}{|l|c|c|c|c|c|}
+\caption[Token-Nutzung pro Modell (test-50)]{Durchschnittliche Token-Nutzung je Run und Modell auf Basis der test-50-Suite (\texttt{num\_predict}~=~8\,192). Input-Tokens umfassen System-Prompt, serialisierte Findings und Konfigurationsparameter. Der höhere Input gegenüber test-12 (dort \O{}~4\,000--5\,600) reflektiert die größere Anzahl serialisierter Violations.}
+\begin{tabular}{|l|c|c|c|}
 \hline
-\textbf{Violationstyp} & \textbf{Ground Truth} & \textbf{Baseline} & \textbf{+\,7b} & \textbf{+\,14b} & \textbf{+\,32b (Run~01)} \\
+\textbf{Modell} & \textbf{Input-Tokens Ø} & \textbf{Output-Tokens Ø} & \textbf{Truncation} \\
 \hline
-Syntaktisch & 21 & 20 & k.\,A. & k.\,A. & 21 \\
+qwen2.5-coder:7b  & 13\,196 & 6\,753 & 6\,/\,10 Runs (60\,\%) \\
 \hline
-Semantisch  & 21 & 15 & k.\,A. & k.\,A. & 21 \\
+qwen2.5-coder:14b & 13\,556 & 7\,764 & 7\,/\,10 Runs (70\,\%) \\
 \hline
-Layout      & 8  & 8  & k.\,A. & k.\,A. & 8 \\
+qwen3:32b         & 14\,231 & 8\,091 & 9\,/\,10 Runs (90\,\%) \\
 \hline
-\textbf{Gesamt} & \textbf{50} & \textbf{43} & \textbf{k.\,A.} & \textbf{k.\,A.} & \textbf{50} \\
-\hline
-\multicolumn{6}{|p{15.4cm}|}{\footnotesize Baseline = ausschließlich automatische Tool-Fälle (alle nicht-\textit{manuell} markierten Violations ohne LLM-only-Fall V8). Damit ergibt sich ein Tool-only-Recall von 43\,/\,50 = 86\,\%.} \\
+\multicolumn{4}{|l|}{\textit{Gesamt (30 Runs): Input $\approx$409\,500 / Output 226\,740 Tokens}} \\
 \hline
 \end{tabular}
-\label{tab:recall_matrix_50}
+\label{tab:token_economy_50}
 \end{table}
 
-\clearpage
 \anhang{Effizienzmetriken und Kosten-Nutzen-Verhältnis (test-50-Suite)}\label{app:effizienz_metriken_50}
 
 \begin{table}[htbp]
@@ -1400,6 +1522,64 @@ qwen3:32b         & 60{,}7 & 1000 & 0{,}061 & +30{,}3\,\% bei +405\,\% Zeitaufwa
 \end{table}
 
 \clearpage
+
+\anhang{Über-Detektion relativ zur Ground Truth (test-50-Suite)}\label{app:overdetection_50}
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\caption[Über-Detektion relativ zu 50 Ground-Truth-Violations]{Vergleich der durchschnittlichen LLM-Detektor-Findings pro Run mit der Ground Truth (50~Violations) auf Basis der test-50-Suite. Die LLM-only-Betrachtung vermeidet Doppelzählungen zwischen überlappenden Detektoren.}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|p{5.5cm}|}
+\hline
+\textbf{Modell} & \textbf{LLM-Findings Ø} & \textbf{Ground Truth} & \textbf{Quote} & \textbf{Interpretation} \\
+\hline
+qwen2.5-coder:7b  & 46{,}6 & 50 & 93{,}2\,\% & nahe an der Ground Truth; LLM liefert teils Unterdetektion bei einzelnen Runs \\
+\hline
+qwen2.5-coder:14b & 51{,}3 & 50 & 102{,}6\,\% & sehr nahe an der Ground Truth; geringste Abweichung im Mittel \\
+\hline
+qwen3:32b         & 60{,}7 & 50 & 121{,}4\,\% & erhöhter Überschuss; zugleich konsistenteste LLM-Detektion ($\sigma \approx 1{,}25$) \\
+\hline
+\end{tabular}
+}%
+\label{tab:overdetection_50}
+\end{table}
+
+\anhang{Detektor-Konsistenz über alle 30 Runs (test-50-Suite)}\label{app:detektor_konsistenz_50}
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.2}
+\scriptsize
+\caption[Detektor-Konsistenz (test-50, alle Runs)]{Konsistenzanalyse der Detektoren über alle 30 Benchmark-Runs (test-50). Die festen Detektoren bleiben vollständig deterministisch; die LLM-Varianz ist modellabhängig.}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|p{2.4cm}|p{0.8cm}|p{1.5cm}|p{1.2cm}|p{1.2cm}|p{1.7cm}|p{4.0cm}|}
+\hline
+\textbf{Detektor / Modell} & \textbf{Runs} & \textbf{Gesamt-Findings} & \textbf{Ø pro Run} & \textbf{Min--Max} & \textbf{$\sigma^2$ / $\sigma$} & \textbf{Interpretation} \\
+\hline
+axe-core    & 30 & 420 & 14{,}0  & 14--14  & 0{,}00 / 0{,}00 & vollständig deterministisch \\
+\hline
+Playwright  & 30 &  60 &  2{,}0  &  2--2   & 0{,}00 / 0{,}00 & vollständig deterministisch \\
+\hline
+grep        & 30 & 630 & 21{,}0  & 21--21  & 0{,}00 / 0{,}00 & vollständig deterministisch \\
+\hline
+qwen2.5-coder:7b  & 10 & 466 & 46{,}6 & 40--53 & 10{,}27 / 3{,}20 & höchste Streuung \\
+\hline
+qwen2.5-coder:14b & 10 & 513 & 51{,}3 & 45--52 &  4{,}90 / 2{,}21 & gute Konsistenz (1 Ausreißer) \\
+\hline
+qwen3:32b         & 10 & 607 & 60{,}7 & 59--63 &  1{,}57 / 1{,}25 & höchste Konsistenz aller Modelle \\
+\hline
+LLM-Detektor gesamt & 30 & 1586 & 52{,}9 & 40--63 & modell\-abhängig & -- \\
+\hline
+\end{tabular}
+}%
+\label{tab:detektor_konsistenz_50}
+\end{table}
+
+\clearpage
+
 \anhang{Bewertung der Empfehlungsqualität pro Violation (test-50-Suite)}\label{app:empfehlungsqualitaet_50}
 
 Die Bewertung basiert auf Run~01 von \texttt{qwen3:32b} (Tabelle~\ref{app:rohdaten_50}) und verwendet dieselbe dreistufige Skala wie Tabelle~\ref{tab:bewertungsskala_empfehlungen}. Stufe~2 liegt vor, wenn Dateiname, Zeilennummer und ein konkreter Code-Vorschlag vorhanden sind; Stufe~1, wenn der richtige Fix-Typ erkannt, aber kein konkreter Codekontext geliefert wird.
@@ -1527,89 +1707,136 @@ V50 & \texttt{outline: none} Modal-Button          & 2 & Notifications.tsx:54, \
 \hline
 \end{longtable}
 
+
+
+\anhang{CSV-Beispieldaten der Benchmark-Rohdaten (test-50-Suite)}\label{app:csv_export_50}
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.15}
+\caption[Beispielzeilen aus dem CSV-Export (test-50)]{Repräsentative Beispielzeilen aus \texttt{results-50/benchmark/summary.csv} (test-50-Suite; jeweils Run~01 pro Modell). Spaltenschema analog zu Tabelle~\ref{tab:csv_schema}.}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{model} & \textbf{run} & \textbf{must} & \textbf{nice} & \textbf{LLM} & \textbf{Axe} & \textbf{PW} & \textbf{Grep} & \textbf{durationMs} & \textbf{prompt} & \textbf{output} & \textbf{parse} \\
+\hline
+qwen2.5-coder:7b  & 1 & 10 & 17 & 47 & 14 & 2 & 21 & 123084 & 13109 & 3409 & true \\
+\hline
+qwen2.5-coder:14b & 1 & 50 &  8 & 45 & 14 & 2 & 21 & 456526 & 13053 & 8192 & true \\
+\hline
+qwen3:32b         & 1 & 36 & 38 & 60 & 14 & 2 & 21 & 1083991 & 14171 & 8192 & true \\
+\hline
+\end{tabular}
+}%
+\label{tab:csv_beispiel_50}
+\end{table}
+
 \clearpage
+
+\anhang{Statistische Verteilung der LLM-Findings (alle 30 Runs, test-50-Suite)}\label{app:statistik_quantile_50}
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\caption[Quantilanalyse der LLM-Findings (test-50, alle 30 Runs)]{Quantilanalyse der LLM-Detektor-Findings über alle 30 Benchmark-Runs der test-50-Suite (3 Modelle $\times$ 10 Runs). Die engere Cluster-Struktur gegenüber test-12 zeigt die höhere Konsistenz bei größerer Violation-Zahl.}
+\begin{tabular}{|l|c|p{7cm}|}
+\hline
+\textbf{Quantil} & \textbf{Wert} & \textbf{Interpretation} \\
+\hline
+Min (0\,\%)     & 40 Findings  & absolutes Minimum (7b, Ausreißerrun) \\
+\hline
+Q1 (25\,\%)     & 47 Findings  & 25\,\% der Runs liefern $\leq$ 47 Findings (7b-Cluster) \\
+\hline
+Median (50\,\%) & 52 Findings  & Übergang 7b/14b-Cluster \\
+\hline
+Q3 (75\,\%)     & 60 Findings  & 75\,\% der Runs liefern $\leq$ 60 Findings (32b-Untergrenze) \\
+\hline
+Max (100\,\%)   & 63 Findings  & absolutes Maximum (32b) \\
+\hline
+\ac{IQR}             & 13 Findings  & Streuung der mittleren 50\,\% -- geringer als test-12 (\ac{IQR}~=~11 bei niedrigerem Skalenniveau) \\
+\hline
+\end{tabular}
+\label{tab:statistik_quantile_50}
+\end{table}
+
+\clearpage
+
+\anhang{Screenshots der Testanwendung (test-50-Suite)}\label{app:screenshots_test50}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.95\textwidth]{graphics/test-50-Bild1.png}
+\caption{Screenshot 1 der test-50-Suite}
+\label{fig:test50_screen1}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.95\textwidth]{graphics/test-50-Bild2.png}
+\caption{Screenshot 2 der test-50-Suite}
+\label{fig:test50_screen2}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.95\textwidth]{graphics/test-50-Bild3.png}
+\caption{Screenshot 3 der test-50-Suite}
+\label{fig:test50_screen3}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.95\textwidth]{graphics/test-50-Bild4.png}
+\caption{Screenshot 4 der test-50-Suite}
+\label{fig:test50_screen4}
+\end{figure}
+
+\clearpage
+
 \anhang{test-100-Suite (kompletter Block)}\label{app:block_test100}
 
-\textbf{Status:} Für die test-100-Suite sind in dieser Arbeit noch keine vollständigen 10\,x\,3-Messreihen enthalten. Die folgenden Tabellen bilden den vorgesehenen Zielaufbau ab und dienen als struktureller Platzhalter für die nächste Ausbaustufe.
-
 \begin{table}[htbp]
 \centering
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.2}
-\caption[Statusübersicht test-100-Suite]{Statusübersicht und Zielkonfiguration für die test-100-Suite.}
-\begin{tabular}{|l|c|}
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.15}
+\caption[Template-Reihenfolge test-100]{Navigationsübersicht in der standardisierten Reihenfolge für die test-100-Suite.}
+\begin{tabular}{|c|p{11.4cm}|}
 \hline
-\textbf{Parameter} & \textbf{Wert} \\
+\textbf{Nr.} & \textbf{Baustein} \\
 \hline
-Ground-Truth-Violations & 100 \\
+1 & Violations-Katalog \\
 \hline
-Geplante Runs je Modell & 3 \\
+2 & Erkennungsrate \\
 \hline
-Geplantes Output-Limit \texttt{num\_predict} & 12\,288 \\
+3 & Recall-Matrix \\
 \hline
-Aktueller Auswertungsstatus & ausstehend \\
+4 & Rohdaten \\
+\hline
+5 & Modellvergleich \\
+\hline
+6 & Token-Nutzung \\
+\hline
+7 & Effizienz \\
+\hline
+8 & Overdetection \\
+\hline
+9 & Konsistenz \\
+\hline
+10 & Empfehlungsqualität \\
+\hline
+11 & CSV-Auszug \\
+\hline
+12 & Statistische Verteilung \\
+\hline
+13 & Screenshots der Testsuite \\
 \hline
 \end{tabular}
-\label{tab:test100_status}
+\label{tab:template_test100}
 \end{table}
 
-\begin{table}[htbp]
-\centering
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.2}
-\caption[Erkennungsrate der Violations (test-100, Platzhalter)]{Geplanter Aufbau der Detektor-Performance-Matrix für test-100. Werte werden nach Durchführung der Messreihe eingetragen.}
-\begin{tabular}{|p{4.0cm}|c|c|c|p{6.8cm}|}
-\hline
-\textbf{Bedingung} & \textbf{Axe/PW/Grep} & \textbf{LLM-Code} & \textbf{Gesamt-Report} & \textbf{Anmerkung} \\
-\hline
-Baseline (Tools only) & -- & -- & -- & ausstehend \\
-\hline
-+\,qwen2.5-coder:7b & -- & -- & -- & ausstehend \\
-\hline
-+\,qwen2.5-coder:14b & -- & -- & -- & ausstehend \\
-\hline
-+\,qwen3:32b & -- & -- & -- & ausstehend \\
-\hline
-\end{tabular}
-\label{tab:erkennungsrate_poc_100}
-\end{table}
+\clearpage
 
-\begin{table}[htbp]
-\centering
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.2}
-\caption[Recall-Matrix test-100 (Platzhalter)]{Geplanter Aufbau der Recall-Matrix für test-100. Werte werden nach Durchführung der Messreihe eingetragen.}
-\begin{tabular}{|l|c|c|c|c|c|}
-\hline
-\textbf{Violationstyp} & \textbf{Ground Truth} & \textbf{Baseline} & \textbf{+\,7b} & \textbf{+\,14b} & \textbf{+\,32b} \\
-\hline
-Syntaktisch & -- & -- & -- & -- & -- \\
-\hline
-Semantisch  & -- & -- & -- & -- & -- \\
-\hline
-Layout      & -- & -- & -- & -- & -- \\
-\hline
-\textbf{Gesamt} & \textbf{100} & \textbf{--} & \textbf{--} & \textbf{--} & \textbf{--} \\
-\hline
-\end{tabular}
-\label{tab:recall_matrix_100}
-\end{table}
-
-\begin{table}[htbp]
-\centering
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.2}
-\caption[Effizienzvergleich der Modelle (test-100, Platzhalter)]{Geplanter Aufbau der Effizienz- und Kosten-Nutzen-Metriken für test-100. Werte werden nach Durchführung der Messreihe eingetragen.}
-\begin{tabular}{|l|c|c|c|c|}
-\hline
-\textbf{Modell} & \textbf{LLM-Findings Ø} & \textbf{Priorisierungslaufzeit Ø (s)} & \textbf{LLM-Findings/s} & \textbf{Zusatznutzen ggü. 7b} \\
-\hline
-qwen2.5-coder:7b  & -- & -- & -- & Referenz \\
-\hline
-qwen2.5-coder:14b & -- & -- & -- & -- \\
-\hline
-qwen3:32b         & -- & -- & -- & -- \\
-\hline
-\end{tabular}
-\label{tab:effizienz_metriken_100}
-\end{table}

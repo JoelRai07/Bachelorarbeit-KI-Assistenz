@@ -95,12 +95,12 @@ Tabelle~\ref{tab:recall_modellvergleich} zeigt den Recall nach Hinzunahme des \a
 \textbf{Bedingung} & \textbf{Erkannte V.} & \textbf{Recall} & \textbf{Neu ggü. Baseline} & \textbf{Nicht erkannt} \\
 \midrule
 Baseline (Tools only)          & 8\,/\,12  & 66,7\,\% & --                      & V2, V8, V11, V12 \\
-+\,\texttt{qwen2.5-coder:7b}   & 9\,/\,12  & 75,0\,\% & +V8                     & V2, V10*, V11, V12 \\
-+\,\texttt{qwen2.5-coder:14b}  & 11\,/\,12 & 91,7\,\% & +V2, +V8, +V12          & V11 (instabil) \\
-+\,\texttt{qwen3:32b}          & 11--12\,/\,12 & 91,7--100\,\% & +V2, +V8, +V11, +V12 & -- \\
++\,\texttt{qwen2.5-coder:7b}   & 9\,/\,12  & 75,0\,\% & +V8, +V12              & V2, V11; V3 instabil \\
++\,\texttt{qwen2.5-coder:14b}  & 12\,/\,12 & 100,0\,\% & +V2, +V8, +V11, +V12   & -- \\
++\,\texttt{qwen3:32b}          & 12\,/\,12 & 100,0\,\% & +V2, +V8, +V11, +V12   & -- \\
 \bottomrule
 \end{tabular}
-\caption[Recall-Vergleich je Bedingung und Modell]{Recall der ACE-Pipeline je Bedingung. *\texttt{qwen2.5-coder:7b} lässt V10 (aria-hidden) teilweise aus dem Report heraus -- axe-core erkennt V10 zuverlässig, das Modell übernimmt es aber nicht konsistent.}
+\caption[Recall-Vergleich je Bedingung und Modell]{Recall der ACE-Pipeline je Bedingung. \texttt{qwen2.5-coder:7b} bleibt vor allem bei V2 und V11 schwach; V3 wird nur instabil erkannt.}
 \label{tab:recall_modellvergleich}
 \end{table}
 
@@ -119,11 +119,11 @@ Für TF1 ist nicht nur der Gesamt-Recall relevant, sondern die Frage, welche \te
 \toprule
 \textbf{Kategorie} & \textbf{Violations} & \textbf{Baseline} & \textbf{+\,7b} & \textbf{+\,14b} & \textbf{+\,32b} \\
 \midrule
-Syntaktisch & V1, V2, V3, V10 & 3\,/\,4 (75\,\%) & 3\,/\,4 & 4\,/\,4 (100\,\%) & 4\,/\,4 (100\,\%) \\
+Syntaktisch & V1, V2, V3, V10 & 3\,/\,4 (75\,\%) & 2\,/\,4 & 4\,/\,4 (100\,\%) & 4\,/\,4 (100\,\%) \\
 Layout      & V4, V5, V12     & 2\,/\,3 (67\,\%) & 2\,/\,3 & 3\,/\,3 (100\,\%) & 3\,/\,3 (100\,\%) \\
-Semantisch  & V6, V7, V8, V9, V11 & 3\,/\,5 (60\,\%) & 4\,/\,5 (80\,\%) & 4\,/\,5 (80\,\%) & 5\,/\,5 (100\,\%) \\
+Semantisch  & V6, V7, V8, V9, V11 & 3\,/\,5 (60\,\%) & 4\,/\,5 (80\,\%) & 5\,/\,5 (100\,\%) & 5\,/\,5 (100\,\%) \\
 \midrule
-\textbf{Gesamt} & \textbf{12} & \textbf{8\,/\,12 (67\,\%)} & \textbf{9\,/\,12 (75\,\%)} & \textbf{11\,/\,12 (92\,\%)} & \textbf{12\,/\,12 (100\,\%)} \\
+\textbf{Gesamt} & \textbf{12} & \textbf{8\,/\,12 (67\,\%)} & \textbf{9\,/\,12 (75\,\%)} & \textbf{12\,/\,12 (100\,\%)} & \textbf{12\,/\,12 (100\,\%)} \\
 \bottomrule
 \end{tabular}
 \caption[Recall nach Verstoßkategorie und Modell]{Erkennungsleistung differenziert nach Verstoßkategorie (test-12-Suite). Werte basieren auf der Mehrzahl der zehn Runs je Modell.}
@@ -318,7 +318,9 @@ Die test-50-Messreihe wurde mit identischer Konfiguration wie test-12 durchgefü
 Die wichtigste Beobachtung der test-50-Messreihe ist, dass das Token-Budget nun systematisch erschöpft wird. Die mittleren Input-Tokens stiegen von \O{}~4\,000--5\,600 (test-12) auf \O{}~13\,200--14\,200 (test-50), da bei 50~Violations deutlich mehr Findings serialisiert werden müssen. Trotz des auf 8\,192~Tokens angehobenen Output-Limits schöpfen 60--90\,\% aller Runs das Budget vollständig aus: \texttt{qwen2.5-coder:7b} in 6\,/\,10~Runs, \texttt{qwen2.5-coder:14b} in 7\,/\,10~Runs und \texttt{qwen3:32b} in 9\,/\,10~Runs. Die ursprünglich gestellte Frage, ob das Token-Budget bei test-50 kippt, ist damit eindeutig bestätigt (vgl. Tabelle~\ref{tab:token_economy_50}).
 
 \paragraph{Detektionsleistung.}
-Die Baseline-Tools liefern auf test-50 stabil 14~axe-core-, 2~Playwright- und 21~grep-Findings (gesamt 37~Tool-Findings). Der \ac{LLM}-Detektor erzielt: \texttt{qwen2.5-coder:7b} \O{}~46{,}6~Findings ($\sigma \approx 3{,}20$; Range: 40--53), \texttt{qwen2.5-coder:14b} \O{}~51{,}3~Findings ($\sigma \approx 2{,}21$; Range: 45--52) und \texttt{qwen3:32b} \O{}~60{,}7~Findings ($\sigma \approx 1{,}25$; Range: 59--63). Bemerkenswert ist, dass \texttt{qwen3:32b} auf test-50 die höchste Konsistenz aller drei Modelle zeigt -- auf test-12 hatte \texttt{qwen2.5-coder:14b} die engste Streuung.
+Die Baseline-Tools liefern auf test-50 stabil 14~axe-core-, 2~Playwright- und 21~grep-Findings (gesamt 37~Tool-Findings). Diese Finding-Zahlen sind jedoch nicht direkt mit dem Ground-Truth-Recall (erkannte Violations von 50) gleichzusetzen, da Findings Duplikate oder semantische Überlappungen enthalten können. Für die Recall-Bewertung wird deshalb ausschließlich die Violation-Abdeckung im finalen Report mit der $>\,5/10$-Schwelle herangezogen (vgl. Anhang Tabelle~\ref{tab:recall_matrix_50}). Der \ac{LLM}-Detektor erzielt: \texttt{qwen2.5-coder:7b} \O{}~46{,}6~Findings ($\sigma \approx 3{,}20$; Range: 40--53), \texttt{qwen2.5-coder:14b} \O{}~51{,}3~Findings ($\sigma \approx 2{,}21$; Range: 45--52) und \texttt{qwen3:32b} \O{}~60{,}7~Findings ($\sigma \approx 1{,}25$; Range: 59--63). Bemerkenswert ist, dass \texttt{qwen3:32b} auf test-50 die höchste Konsistenz aller drei Modelle zeigt -- auf test-12 hatte \texttt{qwen2.5-coder:14b} die engste Streuung.
+
+Ein struktureller Effekt ist in der Recall-Matrix (Tabelle~\ref{tab:recall_matrix_50}) direkt ablesbar: Die Baseline (Tool-only) erzielt 43\,/\,50 Violations, während \texttt{qwen2.5-coder:7b} mit der vollen Pipeline nur 30\,/\,50 erreicht. Das ist kein Messfehler, sondern ein methodisch bedeutsamer Befund: Bei 50~Violations wird die LLM-Zusammenfassungsphase zum \textbf{Engpass statt zum Mehrwert} -- sie komprimiert die ohnehin vollständigen Tool-Findings unter Informationsverlust, statt sie zu ergänzen. Die Ursache liegt im Token-Budget: 7b wird in 60\,\% der Runs abgeschnitten und überspringt oder bündelt dabei instabil Tool-detektierte Violations. Erst \texttt{qwen2.5-coder:14b} (43\,/\,50) und \texttt{qwen3:32b} (44\,/\,50) erreichen wieder das Baseline-Niveau.
 
 \paragraph{Priorisierungsqualität.}
 Tabelle~\ref{tab:priorisierungsqualitaet_50} fasst das Must-have/Nice-to-have-Verhalten auf test-50 zusammen. \texttt{qwen3:32b} erzielt mit \O{}~47{,}6~Must-have die plausibelste Klassifikation relativ zur Ground Truth von 50~Violations. \texttt{qwen2.5-coder:14b} zeigt ein bimodales Muster: In acht von zehn Runs werden exakt 14~Must-have gemeldet (analog zum Trunkierungsverhalten auf test-12), in zwei Ausreißerläufen hingegen 50 bzw.\ 59~Must-have mit nur 8 bzw.\ 0~Nice-to-have -- ein klarer Token-Trunkierungseffekt, der die Kategorisierungsgrenze verschiebt. \texttt{qwen2.5-coder:7b} bleibt mit einer Range von 10--54~Must-have instabil.
@@ -432,3 +434,5 @@ Forschung / Referenzläufe & \texttt{qwen3:32b} (19,5 $\pm$ 0,53 Findings; 701\,
 \texttt{qwen3:32b} bleibt das methodisch stärkste Referenzmodell, wenn maximale Stabilität und vollständige semantische Abdeckung im Vordergrund stehen. Der Zugewinn gegenüber 14b fällt jedoch im Verhältnis zur deutlich höheren Laufzeit begrenzt aus. Für regelmäßige Entwicklungszyklen ist 32b daher eher als Referenz- oder Validierungsmodell zu verstehen als als wirtschaftliche Standardeinstellung.
 
 \texttt{qwen2.5-coder:7b} eignet sich vor allem für schnelle Vorprüfungen in CI-/CD-nahen Szenarien. Die Laufzeit ist mit 231\,s am niedrigsten, zugleich bleibt die Detektionsleistung deutlich hinter 14b und 32b zurück, und die Priorisierung ist für compliance-relevante Einsätze nicht hinreichend verlässlich. Für rechtlich oder fachlich verbindliche Accessibility-Bewertungen sollte 7b deshalb nicht als Primärmodell eingesetzt werden.
+
+%Das Modell erkennt die Violations inhaltlich, aber die Granularität der Ausgabe ist inkonsistent — es fasst zusammen, was eigentlich separat berichtet werden sollte. Das ist ein anderes Problem als Nicht-Erkennung, und du kannst argumentieren, dass Precision und Recall auf Finding-Ebene unterschiedliche Metriken brauchen.

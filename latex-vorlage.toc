@@ -109,11 +109,11 @@
 \contentsline {paragraph}{\nonumberline Priorisierungsqualität.}{62}{paragraph*.502}%
 \contentsline {paragraph}{\nonumberline Effizienz und NFA-02.}{62}{paragraph*.505}%
 \contentsline {paragraph}{\nonumberline Skalierungsvergleich test-12 vs.\ test-50.}{62}{paragraph*.507}%
-\contentsline {subsection}{\numberline {8.7.2}Geplante Evaluation an test-100}{63}{subsection.509}%
+\contentsline {subsection}{\numberline {8.7.2}Geplante Evaluation an test-100}{62}{subsection.509}%
 \contentsline {subsection}{\numberline {8.7.3}Evaluation am BWEC-Untersuchungsobjekt}{63}{subsection.510}%
 \contentsline {section}{\numberline {8.8}Beantwortung der Forschungsfragen}{63}{section.511}%
 \contentsline {subsection}{\numberline {8.8.1}Übergeordnete Forschungsfrage}{63}{subsection.512}%
-\contentsline {subsection}{\numberline {8.8.2}TF1: Erkennungsleistung nach Verstoßtyp}{63}{subsection.513}%
+\contentsline {subsection}{\numberline {8.8.2}TF1: Erkennungsleistung nach Verstoßtyp}{64}{subsection.513}%
 \contentsline {subsection}{\numberline {8.8.3}TF2: Mehrwert der Kontextkombination}{64}{subsection.516}%
 \contentsline {section}{\numberline {8.9}Modellwahl und Einsatzempfehlungen}{64}{section.517}%
 \contentsline {chapter}{\numberline {9}Fazit}{66}{chapter.519}%
@@ -128,4 +128,4 @@
 \contentsline {subsection}{\numberline {9.3.2}Mittelfristige Weiterentwicklungen}{68}{subsection.529}%
 \contentsline {subsection}{\numberline {9.3.3}Langfristige Forschungsperspektiven}{68}{subsection.530}%
 \contentsline {chapter}{Anhang}{69}{chapter*.533}%
-\contentsline {chapter}{Literaturverzeichnis}{112}{section*.788}%
+\contentsline {chapter}{Literaturverzeichnis}{121}{section*.794}%
