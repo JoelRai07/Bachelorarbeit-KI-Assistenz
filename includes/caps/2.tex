@@ -35,7 +35,7 @@ Die 13 Richtlinien unterhalb der Prinzipien werden durch insgesamt 78 testbare E
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.4\textwidth]{graphics/WCAG-Dreieck-4-Ebenen.png}
- \caption[WCAG-Schichtenmodell]{WCAG-Schichtenmodell\protect\footnote{Eigene Abbildung}}
+ \caption[\ac{WCAG}-Schichtenmodell]{\ac{WCAG}-Schichtenmodell\protect\footnote{Eigene Abbildung}}
   \label{fig:WCAG-Schichten}
 \end{figure}
 
@@ -117,7 +117,7 @@ Um Barrierefreiheitsverstöße systematisch analysieren und gezielt adressieren 
 \section{Rich-Client-Webanwendungen und Testautomatisierung}\label{kap:2.3}
 \subsection{Charakteristika und Abgrenzung}
 
-Der Begriff \textfett{Rich-Client-Webanwendung} bezeichnet Webanwendungen, bei denen ein Großteil der Anwendungslogik und Darstellungssteuerung clientseitig im Browser ausgeführt wird.\footcite[Vgl.][]{React} Im Gegensatz zu klassischen server-seitig gerenderten Anwendungen werden bei einer Single-Page Application (SPA) nach dem initialen Laden des \ac{HTML}-Rahmens ausschließlich Daten zwischen Client und Server ausgetauscht, wobei die Darstellung durch clientseitige Skriptsprachen wie JavaScript oder TypeScript direkt im Browser durch Manipulation des \ac{DOM} gesteuert wird.\footcite[Vgl.][]{ReactRender} Die zunehmende Komplexität solcher Anwendungen ist in Anhang~\ref{anhang:complexity} veranschaulicht.
+Der Begriff \textfett{Rich-Client-Webanwendung} bezeichnet Webanwendungen, bei denen ein Großteil der Anwendungslogik und Darstellungssteuerung clientseitig im Browser ausgeführt wird.\footcite[Vgl.][]{React} Im Gegensatz zu klassischen server-seitig gerenderten Anwendungen werden bei einer \ac{SPA} nach dem initialen Laden des \ac{HTML}-Rahmens ausschließlich Daten zwischen Client und Server ausgetauscht, wobei die Darstellung durch clientseitige Skriptsprachen wie JavaScript oder TypeScript direkt im Browser durch Manipulation des \ac{DOM} gesteuert wird.\footcite[Vgl.][]{ReactRender} Die zunehmende Komplexität solcher Anwendungen ist in Anhang~\ref{anhang:complexity} veranschaulicht.
 
 React, das von Meta entwickelte JavaScript-Framework, ist der dominante Ansatz für die Entwicklung solcher Anwendungen. Laut Stack Overflow Developer Survey 2024 wird React von 44,7\% aller befragten Entwicklerinnen und Entwickler eingesetzt.\footcite[Vgl.][]{Stack_Overflow_2025}
 \begin{figure}[htbp]
@@ -127,7 +127,7 @@ React, das von Meta entwickelte JavaScript-Framework, ist der dominante Ansatz f
   \label{fig:react}
 \end{figure}
 
-Für die Barrierefreiheitsanalyse sind zwei Architekturmerkmale von React besonders relevant: erstens werden Anwendungslogik und Darstellung in wiederverwendbaren \textbf{Komponenten} gekapselt, deren Kommunikation über \textbf{Props} (unveränderliche Eingabeparameter) und internen \textbf{State} (veränderlicher Zustand) erfolgt.\footcite[Vgl.][]{React} Zweitens wird die Darstellung der Komponenten mithilfe der Syntaxerweiterung JSX (bzw. TSX bei Verwendung von TypeScript) definiert, die \ac{HTML}-ähnliche Strukturen direkt in JavaScript- oder TypeScript-Code einbettet.\footcite[Vgl.][]{baiVirtualDom2022}
+Für die Barrierefreiheitsanalyse sind zwei Architekturmerkmale von React besonders relevant: erstens werden Anwendungslogik und Darstellung in wiederverwendbaren \textbf{Komponenten} gekapselt, deren Kommunikation über \textbf{Props} (unveränderliche Eingabeparameter) und internen \textbf{State} (veränderlicher Zustand) erfolgt.\footcite[Vgl.][]{React} Zweitens wird die Darstellung der Komponenten mithilfe der Syntaxerweiterung \ac{JSX} (bzw. TSX bei Verwendung von TypeScript) definiert, die \ac{HTML}-ähnliche Strukturen direkt in JavaScript- oder TypeScript-Code einbettet.\footcite[Vgl.][]{baiVirtualDom2022}
 
 \subsection{Herausforderungen für die Barrierefreiheitsprüfung} \label{Herausforderungen}
 
@@ -140,7 +140,7 @@ eine Fehlermeldung, die nach dem Absenden eines Formulars erscheint und nicht
 durch eine ARIA-Live-Region programmatisch angekündigt wird; ein Dropdown-Menü,
 das für Tastaturnutzer nicht navigierbar ist - all diese Probleme sind im initialen Seitenzustand nicht vorhanden und damit für statische Analysewerkzeuge unsichtbar.\footcites[Vgl.][S. 5--6]{he_enhancing_2025}[Vgl.][Erf.-krit. 2.4.3 \& 4.1.3]{WCAG} In React wird diese Problematik durch das State-Management verstärkt: Zustandsänderungen lösen ein erneutes Rendering einzelner Komponenten aus, wobei sich die Accessibility-Eigenschaften des resultierenden \ac{DOM} je nach State unterscheiden können.
 
-Zweitens besteht eine \textbf{Diskrepanz zwischen Quellcode und gerendertem \ac{DOM}}. In React werden Benutzeroberflächen in JSX/TSX definiert; der im Browser gerenderte \ac{DOM} ist das Ergebnis der React-Laufzeitumgebung, die diese Definitionen in \ac{DOM}-Elemente übersetzt. Ein Accessibility-Tool analysiert den gerenderten \ac{DOM}, nicht aber den Quellcode, aus dem er hervorging.\footcite[Vgl.][S. 31]{fernandesEvaluatingAccessibilityWeb2012} Für Entwicklerinnen und Entwickler ist jedoch der Quellcode der relevante Interventionspunkt.\footcite[Vgl.][]{fathallah_accessguru_2025} Ein konkretes Beispiel: eine React-Komponente \texttt{IconButton} rendert im \ac{DOM} ein \texttt{<button>}-Element mit einem \texttt{<svg>}-Icon, jedoch ohne sichtbaren Text und ohne \texttt{aria-label}. axe-core meldet den Verstoß \textit{button-has-visible-text} mit dem \ac{HTML}-Ausschnitt \texttt{<button class="btn-icon">...</button>} - ohne Hinweis darauf, dass die Ursache in der Datei \texttt{IconButton.tsx} liegt, wo das \texttt{aria-label}-Prop nicht weitergereicht wird.
+Zweitens besteht eine \textbf{Diskrepanz zwischen Quellcode und gerendertem \ac{DOM}}. In React werden Benutzeroberflächen in \ac{JSX}/TSX definiert; der im Browser gerenderte \ac{DOM} ist das Ergebnis der React-Laufzeitumgebung, die diese Definitionen in \ac{DOM}-Elemente übersetzt. Ein Accessibility-Tool analysiert den gerenderten \ac{DOM}, nicht aber den Quellcode, aus dem er hervorging.\footcite[Vgl.][S. 31]{fernandesEvaluatingAccessibilityWeb2012} Für Entwicklerinnen und Entwickler ist jedoch der Quellcode der relevante Interventionspunkt.\footcite[Vgl.][]{fathallah_accessguru_2025} Ein konkretes Beispiel: eine React-Komponente \texttt{IconButton} rendert im \ac{DOM} ein \texttt{<button>}-Element mit einem \texttt{<svg>}-Icon, jedoch ohne sichtbaren Text und ohne \texttt{aria-label}. axe-core meldet den Verstoß \textit{button-has-visible-text} mit dem \ac{HTML}-Ausschnitt \texttt{<button class="btn-icon">...</button>} - ohne Hinweis darauf, dass die Ursache in der Datei \texttt{IconButton.tsx} liegt, wo das \texttt{aria-label}-Prop nicht weitergereicht wird.
 
 Drittens erschwert die \textbf{Komponentenabstraktion} die Ursachenanalyse: eine wiederverwendbare Komponente mit einem Accessibility-Problem manifestiert sich im gerenderten \ac{DOM} an jeder Stelle, an der sie eingesetzt wird. Accessibility-Tool-Reports melden jeden einzelnen Treffer separat, ohne den Bezug zur gemeinsamen Quellkomponente herzustellen, deren einmalige Korrektur alle Treffer beseitigen würde.\footcite[Vgl.][]{abou-zahra_artificial_2018}
 
@@ -184,7 +184,7 @@ Eine für die vorliegende Arbeit zentrale Frage ist, ob diese Fähigkeiten auch 
 %Das ist noch etwas kritisch und könnte in der Diskussion nochmal aufgegriffen werden, wenn die Ergebnisse vorliegen. Ob ich außerdem die 7B Klasse benutze ist fraglich, da ich ja auch 13B Modelle lokal ausführen könnte. Das müsste ich dann aber auch begründen, warum ich das nicht tue.
 \subsection{Prompt-Engineering-Strategien} \label{Prompt}
 
-Die Qualität der Ausgaben eines \ac{LLM} hängt maßgeblich von der Formulierung der Eingabe - dem sogenannten Prompt - ab. Prompt Engineering bezeichnet die systematische Gestaltung dieser Eingaben, um die Ausgabequalität zu maximieren.\footcite[Vgl.][S. 4]{schulhoff2024promptreport} Im Folgenden werden die für diese Arbeit relevanten Strategien beschrieben, die in Kapitel \ref{kap:6} als Grundlage für das Prompt-Design des PoC dienen. 
+Die Qualität der Ausgaben eines \ac{LLM} hängt maßgeblich von der Formulierung der Eingabe - dem sogenannten Prompt - ab. Prompt Engineering bezeichnet die systematische Gestaltung dieser Eingaben, um die Ausgabequalität zu maximieren.\footcite[Vgl.][S. 4]{schulhoff2024promptreport} Im Folgenden werden die für diese Arbeit relevanten Strategien beschrieben, die in Kapitel \ref{kap:6} als Grundlage für das Prompt-Design des \ac{PoC} dienen. 
 
 \begin{itemize}
     \item \textbf{Zero-Shot Prompting} bezeichnet die direkte Anfrage ohne Beispiele oder Kontextinformationen. Das Modell nutzt ausschließlich sein vortrainiertes Wissen. Diese Strategie ist einfach umzusetzen, erzielt bei komplexen Aufgaben wie der Barrierefreiheitsanalyse jedoch häufig unzureichende Ergebnisse.\footcites[Vgl.][S. 4]{brown2020gpt3fewshot}[Vgl.][]{njifenjou_role-play_2024}

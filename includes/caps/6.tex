@@ -58,7 +58,7 @@ Die Normalisierung überführt jede Violation in ein \texttt{UnifiedFinding}. Da
 
 \begin{itemize}
   \item \textbf{Severity-Mapping:} Das \texttt{impact}-Feld von axe-core (\texttt{critical}, \texttt{serious}, \texttt{moderate}, \texttt{minor}) wird direkt auf das \texttt{severity}-Feld des \ac{UFS} abgebildet.
-  \item \textbf{WCAG-Extraktion:} Aus den axe-Tags (z.\,B. \texttt{wcag143}) werden die Erfolgskriterien (z.\,B. \texttt{1.4.3}) und die Konformitätsstufe extrahiert.
+  \item \textbf{\ac{WCAG}-Extraktion:} Aus den axe-Tags (z.\,B. \texttt{wcag143}) werden die Erfolgskriterien (z.\,B. \texttt{1.4.3}) und die Konformitätsstufe extrahiert.
   \item \textbf{Kategorie-Heuristik:} Jede Regel wird anhand ihres \texttt{ruleId} einer Kategorie der in Abschnitt~\ref{Taxonomie} eingeführten Taxonomie zugeordnet. Farbkontrast-Regeln werden als \texttt{layout} klassifiziert, ARIA-Strukturregeln als \texttt{semantisch}, alle übrigen als \texttt{syntaktisch}.
 \end{itemize}
 
@@ -78,7 +78,7 @@ Das Playwright-Modul implementiert \ac{FA}-02 (dynamische Zustandserfassung). Es
 \renewcommand{\arraystretch}{1.15}
 \begin{tabular}{@{}llll@{}}
 \toprule
-\textbf{Check-ID} & \textbf{Prüfgegenstand} & \textbf{WCAG} & \textbf{Kategorie} \\
+\textbf{Check-ID} & \textbf{Prüfgegenstand} & \textbf{\ac{WCAG}} & \textbf{Kategorie} \\
 \midrule
 \texttt{keyboard-tab-reachable} & Interaktive Elemente per Tab erreichbar & 2.1.1 (A) & semantisch \\
 \texttt{keyboard-trap-free} & Kein Keyboard-Trap nach 40 Tab-Presses & 2.1.2 (A) & semantisch \\
@@ -119,7 +119,7 @@ Zusätzlich zur Anreicherung erkennt das Modul sechs Anti-Patterns durch regulä
 \renewcommand{\arraystretch}{1.15}
 \begin{tabular}{@{}lp{5.5cm}ll@{}}
 \toprule
-\textbf{Pattern-ID} & \textbf{Beschreibung} & \textbf{WCAG} & \textbf{Kategorie} \\
+\textbf{Pattern-ID} & \textbf{Beschreibung} & \textbf{\ac{WCAG}} & \textbf{Kategorie} \\
 \midrule
 \texttt{div-span-onclick} & \texttt{onClick} auf \texttt{<div>}/\texttt{<span>} ohne Keyboard-Handler & 2.1.1 (A) & semantisch \\
 \texttt{img-missing-alt} & \texttt{<img>} ohne \texttt{alt}-Attribut & 1.1.1 (A) & syntaktisch \\
@@ -136,7 +136,7 @@ Zusätzlich zur Anreicherung erkennt das Modul sechs Anti-Patterns durch regulä
 Treffer werden nach der Normalisierung dedupliziert: Findings mit identischer \texttt{ruleId}, \texttt{componentPath} und Startzeile werden zusammengefasst. Pro Pattern werden maximal acht Treffer berücksichtigt, um eine Überrepräsentation häufiger Patterns im Token-Budget zu vermeiden.
 
 % ─────────────────────────────────────────────────────────────────────────────
-\section{LLM-Detektor-Modul}
+\section{\ac{LLM}-Detektor-Modul}
 \label{sec:impl-llm-detector}
 
 Das \ac{LLM}-Detektor-Modul ergänzt die regelbasierten Quellen um eine modellbasierte Quellcodeanalyse. Es wird nur ausgeführt, wenn der \ac{CLI}-Parameter \texttt{-{}-llm-detect} gesetzt ist und ein Quellcodepfad via \texttt{-{}-src-dir} vorliegt. Ziel ist nicht die Ersetzung bestehender Tools, sondern eine zusätzliche Detektionsquelle mit semantischem Fokus.

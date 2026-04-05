@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.9.8)  6 APR 2026 01:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.9.8)  6 APR 2026 01:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1325,12 +1325,6 @@ LaTeX Warning: Hyper reference `acro:CSS' on page V undefined on input line 14.
 LaTeX Warning: Hyper reference `acro:CSS' on page V undefined on input line 14.
 
 
-LaTeX Warning: Hyper reference `acro:JSX' on page V undefined on input line 25.
-
-
-LaTeX Warning: Hyper reference `acro:JSX' on page V undefined on input line 25.
-
-
 LaTeX Warning: Hyper reference `acro:KPI' on page V undefined on input line 27.
 
 
@@ -1402,7 +1396,7 @@ although it is yet undefined on input line 25.
 
 
 [3]
-<graphics/Diagramm1.png, id=809, 815.045pt x 152.57pt>
+<graphics/Diagramm1.png, id=815, 815.045pt x 152.57pt>
 File: graphics/Diagramm1.png Graphic file (type png)
 <use graphics/Diagramm1.png>
 Package pdftex.def Info: graphics/Diagramm1.png  used on input line 35.
@@ -1442,7 +1436,7 @@ although it is yet undefined on input line 23.
 [7]
 
 [8]
-<graphics/WCAG-Dreieck-4-Ebenen.png, id=1003, 770.88pt x 643.6547pt>
+<graphics/WCAG-Dreieck-4-Ebenen.png, id=1010, 770.88pt x 643.6547pt>
 File: graphics/WCAG-Dreieck-4-Ebenen.png Graphic file (type png)
 <use graphics/WCAG-Dreieck-4-Ebenen.png>
 Package pdftex.def Info: graphics/WCAG-Dreieck-4-Ebenen.png  used on input line 37.
@@ -1466,13 +1460,18 @@ Overfull \hbox (1.43257pt too wide) in paragraph at lines 109--110
  []
 
 (includes/taxonomie-figure.tex)
+Package acronym Info: Label `acro:SPA' newly defined as it shall be overridden
+although it is yet undefined on input line 120.
+
 
 [13]
-<graphics/react.png, id=1195, 984.67876pt x 618.05907pt>
+<graphics/react.png, id=1205, 984.67876pt x 618.05907pt>
 File: graphics/react.png Graphic file (type png)
 <use graphics/react.png>
 Package pdftex.def Info: graphics/react.png  used on input line 125.
 (pdftex.def)             Requested size: 227.62206pt x 142.86732pt.
+Package acronym Info: Label `acro:JSX' newly defined as it shall be overridden
+although it is yet undefined on input line 130.
 
 
 [14 <./graphics/react.png>]
@@ -1493,7 +1492,7 @@ Package acronym Info: Label `acro:RAG' overridden on input line 164.
 [17]
 
 [18]
-<graphics/fewshot.png, id=1393, 894.34125pt x 477.28313pt>
+<graphics/fewshot.png, id=1406, 894.34125pt x 477.28313pt>
 File: graphics/fewshot.png Graphic file (type png)
 <use graphics/fewshot.png>
 Package pdftex.def Info: graphics/fewshot.png  used on input line 202.
@@ -1657,7 +1656,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 145--145
 
 [35]
 chapter 6.
-<graphics/durchlauf.png, id=1926, 1258.7025pt x 118.4425pt>
+<graphics/durchlauf.png, id=1950, 1258.7025pt x 118.4425pt>
 File: graphics/durchlauf.png Graphic file (type png)
 <use graphics/durchlauf.png>
 Package pdftex.def Info: graphics/durchlauf.png  used on input line 13.
@@ -1754,6 +1753,10 @@ Overfull \hbox (21.62172pt too wide) in paragraph at lines 136--137
  []
 
 
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ac' on input line 139.
+
+
 
 [46]
 Package acronym Info: Label `acro:JSON' overridden on input line 149.
@@ -1795,8 +1798,6 @@ Package acronym Info: Label `acro:JSON' overridden on input line 266.
 
 [51]
 chapter 8.
-Package acronym Info: Label `acro:SPA' newly defined as it shall be overridden
-although it is yet undefined on input line 14.
 Package acronym Info: Label `acro:RAM' newly defined as it shall be overridden
 although it is yet undefined on input line 21.
 
@@ -1841,6 +1842,11 @@ Overfull \hbox (20.65909pt too wide) in paragraph at lines 118--129
 [56]
 
 [57]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ac' on input line 217.
+
+
 Overfull \hbox (0.79306pt too wide) in paragraph at lines 247--256
  [][] 
  []
@@ -1981,7 +1987,7 @@ Underfull \hbox (badness 2932) in paragraph at lines 29--30
 \T1/cmr/m/n/10.95 da-ten[], []Mo-dell-ver-gleich[], []Token-Nutzung[], []Ef-fi-zi-enz[], []�ber-
  []
 
-<graphics/Complexität.png, id=2916, 1336.24219pt x 534.49687pt>
+<graphics/Complexität.png, id=2954, 1336.24219pt x 534.49687pt>
 File: graphics/Complexität.png Graphic file (type png)
 <use graphics/Complexität.png>
 Package pdftex.def Info: graphics/Complexität.png  used on input line 42.
@@ -2590,12 +2596,12 @@ Underfull \hbox (badness 5652) in paragraph at lines 1236--1237
 [103
 
 ]
-<graphics/test12-screen1.png, id=3424, 1443.89438pt x 777.65532pt>
+<graphics/test12-screen1.png, id=3462, 1443.89438pt x 777.65532pt>
 File: graphics/test12-screen1.png Graphic file (type png)
 <use graphics/test12-screen1.png>
 Package pdftex.def Info: graphics/test12-screen1.png  used on input line 1258.
 (pdftex.def)             Requested size: 432.48051pt x 232.91869pt.
-<graphics/test12-screen2.png, id=3427, 442.65375pt x 669.2503pt>
+<graphics/test12-screen2.png, id=3465, 442.65375pt x 669.2503pt>
 File: graphics/test12-screen2.png Graphic file (type png)
 <use graphics/test12-screen2.png>
 Package pdftex.def Info: graphics/test12-screen2.png  used on input line 1265.
@@ -3074,12 +3080,12 @@ Underfull \hbox (badness 4001) in paragraph at lines 1932--1933
 [124
 
 ]
-<graphics/test-50-Bild1.png, id=3660, 1444.64719pt x 773.89125pt>
+<graphics/test-50-Bild1.png, id=3698, 1444.64719pt x 773.89125pt>
 File: graphics/test-50-Bild1.png Graphic file (type png)
 <use graphics/test-50-Bild1.png>
 Package pdftex.def Info: graphics/test-50-Bild1.png  used on input line 1946.
 (pdftex.def)             Requested size: 432.48051pt x 231.6732pt.
-<graphics/test-50-Bild2.png, id=3663, 1443.89438pt x 773.89125pt>
+<graphics/test-50-Bild2.png, id=3701, 1443.89438pt x 773.89125pt>
 File: graphics/test-50-Bild2.png Graphic file (type png)
 <use graphics/test-50-Bild2.png>
 Package pdftex.def Info: graphics/test-50-Bild2.png  used on input line 1953.
@@ -3091,12 +3097,12 @@ Package pdftex.def Info: graphics/test-50-Bild2.png  used on input line 1953.
  <./graphics/test-50-Bild1.png>]
 
 [126 <./graphics/test-50-Bild2.png>]
-<graphics/test-50-Bild3.png, id=3679, 1444.64719pt x 773.89125pt>
+<graphics/test-50-Bild3.png, id=3717, 1444.64719pt x 773.89125pt>
 File: graphics/test-50-Bild3.png Graphic file (type png)
 <use graphics/test-50-Bild3.png>
 Package pdftex.def Info: graphics/test-50-Bild3.png  used on input line 1962.
 (pdftex.def)             Requested size: 432.48051pt x 231.6732pt.
-<graphics/test-50-Bild4.png, id=3682, 1444.64719pt x 313.9228pt>
+<graphics/test-50-Bild4.png, id=3720, 1444.64719pt x 313.9228pt>
 File: graphics/test-50-Bild4.png Graphic file (type png)
 <use graphics/test-50-Bild4.png>
 Package pdftex.def Info: graphics/test-50-Bild4.png  used on input line 1969.
@@ -4031,12 +4037,12 @@ Overfull \hbox (8.78195pt too wide) in paragraph at lines 3001--3002
 \T1/cmr/m/it/10.95 Anmerkung: \T1/cmr/m/n/10.95 Tei-le der test-100-Suite ver-wen-den die-sel-ben bzw. struk-tu-rell sehr �hn-li-che Dashboard-
  []
 
-<graphics/Chat-100.png, id=4005, 1444.64719pt x 407.27156pt>
+<graphics/Chat-100.png, id=4043, 1444.64719pt x 407.27156pt>
 File: graphics/Chat-100.png Graphic file (type png)
 <use graphics/Chat-100.png>
 Package pdftex.def Info: graphics/Chat-100.png  used on input line 3005.
 (pdftex.def)             Requested size: 432.48051pt x 121.92139pt.
-<graphics/Suche-100.png, id=4008, 1442.38875pt x 447.92343pt>
+<graphics/Suche-100.png, id=4046, 1442.38875pt x 447.92343pt>
 File: graphics/Suche-100.png Graphic file (type png)
 <use graphics/Suche-100.png>
 Package pdftex.def Info: graphics/Suche-100.png  used on input line 3012.
@@ -4046,12 +4052,12 @@ Package pdftex.def Info: graphics/Suche-100.png  used on input line 3012.
 [157
 
  <./graphics/Chat-100.png> <./graphics/Suche-100.png>]
-<graphics/Einstellungen-100.png, id=4020, 1444.64719pt x 902.6222pt>
+<graphics/Einstellungen-100.png, id=4058, 1444.64719pt x 902.6222pt>
 File: graphics/Einstellungen-100.png Graphic file (type png)
 <use graphics/Einstellungen-100.png>
 Package pdftex.def Info: graphics/Einstellungen-100.png  used on input line 3021.
 (pdftex.def)             Requested size: 432.48051pt x 270.21028pt.
-<graphics/Kalender-100.png, id=4023, 1444.64719pt x 420.06938pt>
+<graphics/Kalender-100.png, id=4061, 1444.64719pt x 420.06938pt>
 File: graphics/Kalender-100.png Graphic file (type png)
 <use graphics/Kalender-100.png>
 Package pdftex.def Info: graphics/Kalender-100.png  used on input line 3028.
@@ -4061,12 +4067,12 @@ Package pdftex.def Info: graphics/Kalender-100.png  used on input line 3028.
 [158
 
  <./graphics/Einstellungen-100.png> <./graphics/Kalender-100.png>]
-<graphics/Hilfe-Center-100.png, id=4034, 1444.64719pt x 368.1253pt>
+<graphics/Hilfe-Center-100.png, id=4072, 1444.64719pt x 368.1253pt>
 File: graphics/Hilfe-Center-100.png Graphic file (type png)
 <use graphics/Hilfe-Center-100.png>
 Package pdftex.def Info: graphics/Hilfe-Center-100.png  used on input line 3037.
 (pdftex.def)             Requested size: 432.48051pt x 110.20251pt.
-<graphics/DateiUplaod-100.png, id=4037, 1444.64719pt x 338.01282pt>
+<graphics/DateiUplaod-100.png, id=4075, 1444.64719pt x 338.01282pt>
 File: graphics/DateiUplaod-100.png Graphic file (type png)
 <use graphics/DateiUplaod-100.png>
 Package pdftex.def Info: graphics/DateiUplaod-100.png  used on input line 3044.
@@ -4217,26 +4223,26 @@ Package logreq Info: Writing requests to 'latex-vorlage.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54430 strings out of 473523
- 1243184 string characters out of 5714631
- 2507900 words of memory out of 5000000
- 75550 multiletter control sequences out of 15000+600000
+ 54432 strings out of 473523
+ 1243206 string characters out of 5714631
+ 2507972 words of memory out of 5000000
+ 75551 multiletter control sequences out of 15000+600000
  592735 words of font info for 111 fonts, out of 8000000 for 9000
  1146 hyphenation exceptions out of 8191
  108i,19n,127p,10962b,2433s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-pdfTeX warning (dest): name{Hfootnote.335} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.337} has been referenced but does not exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{Hfootnote.334} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.336} has been referenced but does not exist, replaced by a fixed one
 
 
 pdfTeX warning (dest): name{Hfootnote.140} has been referenced but does not exist, replaced by a fixed one
 
  <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcsx1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0500.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on latex-vorlage.pdf (188 pages, 2921114 bytes).
+Output written on latex-vorlage.pdf (188 pages, 2927575 bytes).
 PDF statistics:
- 6482 PDF objects out of 7423 (max. 8388607)
- 1258 named destinations out of 1440 (max. 500000)
+ 6520 PDF objects out of 7423 (max. 8388607)
+ 1259 named destinations out of 1440 (max. 500000)
  1059 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -28,7 +28,7 @@ Die Analyse der bestehenden Forschungsarbeiten zeigt drei persistente Forschungs
 
 Erstens berücksichtigt keiner der untersuchten Ansätze systematisch zustandsabhängige Barrieren, die erst durch Nutzerinteraktionen in React-basierten Single-Page Applications entstehen.\footcite[Vgl.][S. 110]{tafreshipour_ma11y_2024} Zwar setzen einzelne Systeme wie \textfett{AccessGuru} Playwright zur \ac{DOM}-Extraktion ein, jedoch beschränkt sich dies auf das initiale Rendering - interaktionsbedingte Zustandswechsel werden nicht geprüft.\footcite[Vgl.][]{fathallah_accessguru_2025}
 
-Zweitens verknüpft kein bekannter Ansatz Tool-Reports mit dem Quellcode der geprüften Anwendung. \textfett{AccessGuru} selbst benennt dies als offenes Problem: die generierten Korrekturen beziehen sich auf isolierte \ac{DOM}-Snippets und nicht auf die JSX-Komponenten, in denen Entwicklerinnen und Entwickler tatsächlich eingreifen müssten.\footcite[Vgl.][]{fathallah_accessguru_2025} Die Lücke zwischen technischer Fehlererkennung und entwicklernaher Umsetzung bleibt damit ungeschlossen.
+Zweitens verknüpft kein bekannter Ansatz Tool-Reports mit dem Quellcode der geprüften Anwendung. \textfett{AccessGuru} selbst benennt dies als offenes Problem: die generierten Korrekturen beziehen sich auf isolierte \ac{DOM}-Snippets und nicht auf die \ac{JSX}-Komponenten, in denen Entwicklerinnen und Entwickler tatsächlich eingreifen müssten.\footcite[Vgl.][]{fathallah_accessguru_2025} Die Lücke zwischen technischer Fehlererkennung und entwicklernaher Umsetzung bleibt damit ungeschlossen.
 
 Drittens adressiert keine der untersuchten Arbeiten die datenschutzrechtlichen Anforderungen öffentlicher Verwaltungen: alle Systeme setzen auf cloudbasierte \ac{LLM}-\ac{API}s (primär GPT-4o), was für die \ac{BITBW} und vergleichbare Institutionen ohne vertiefte datenschutzrechtliche Prüfung nicht nutzbar ist.\footcite[Vgl.][Art. 28, 44 ff.]{dsgvo2016}
 
@@ -59,26 +59,26 @@ Die Konzeptmatrix in Tabelle \ref{tab:konzeptmatrix_haupt} fasst die zentralen M
 \multirow{2}{*}{\lhdr{2.8cm}{System}} &
 \multicolumn{3}{c|}{\textbf{Ziel}} &
 \multicolumn{3}{c|}{\textbf{Datenquellen}} &
-\multicolumn{3}{c|}{\textbf{KI-/LLM-Ansatz}} &
+\multicolumn{3}{c|}{\textbf{\ac{KI}-/\ac{LLM}-Ansatz}} &
 \multicolumn{3}{c|}{\textbf{Evaluation}} &
 \multicolumn{2}{c|}{\textbf{Kontext}} \\
 \cline{3-16}
 
 & &
-\hdr{WCAG-Konf.\ prüfen} &
+\hdr{\ac{WCAG}-Konf.\ prüfen} &
 \hdr{Barrieren korrigieren} &
 \hdr{Entwickler unterstützen} &
 \hdr{Tool-Reports (axe etc.)} &
 \hdr{Interaktionsdaten (Playwright)} &
 \hdr{Quellcode-Analyse} &
-\hdr{LLM-basiert} &
-\hdr{Kontextsensitiv / RAG} &
+\hdr{\ac{LLM}-basiert} &
+\hdr{Kontextsensitiv / \ac{RAG}} &
 \hdr{Lokal ausführbar} &
 \hdr{Automatisierte Eval.} &
 \hdr{Qualitative Eval.} &
 \hdr{Nutzerstudie} &
-\hdr{Rich-Client / SPA} &
-\hdr{Rechtl.\ Rahmen (BFSG etc.)} \\
+\hdr{Rich-Client / \ac{SPA}} &
+\hdr{Rechtl.\ Rahmen (\ac{BFSG} etc.)} \\
 \hline
 
 % ── HOCH-priorisierte Studien ────────────────────────────────
@@ -106,7 +106,7 @@ Fernández-Navarro \& Chicano (2025) & \ac{LLM} Remediation
 % ── Eigener PoC ──────────────────────────────────────────────
 
 \textbf{Martinez Campo (2026)} &
-\textbf{ACE (PoC)}
+\textbf{ACE (\ac{PoC})}
 & \yes & \yes & \yes
 & \yes & \yes & \yes
 & \yes & \yes & \yes

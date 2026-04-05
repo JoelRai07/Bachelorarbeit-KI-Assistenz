@@ -80,7 +80,7 @@ Ein weiterer Vorteil von Ollama ist die Unterstützung quantisierter Modellvaria
  
 Unabhängig von der konkreten Modellwahl lassen sich aus den funktionalen und nicht-funktionalen Anforderungen vier Eigenschaften ableiten, die ein geeignetes Modell aufweisen muss.
  
-Erstens muss das Modell \textbf{JSX und TypeScript} ohne Vorverarbeitung verarbeiten können, da der grep-Anreicherungsschritt Quellcodeausschnitte aus React-Komponenten direkt in den Prompt einbettet (\ac{FA}-03).
+Erstens muss das Modell \textbf{\ac{JSX} und TypeScript} ohne Vorverarbeitung verarbeiten können, da der grep-Anreicherungsschritt Quellcodeausschnitte aus React-Komponenten direkt in den Prompt einbettet (\ac{FA}-03).
  
 Zweitens muss das Modell \textbf{strukturierte Ausgaben} in einem vorgegebenen Format zuverlässig erzeugen, da der Report-Parser ein definiertes Must-have/Nice-to-have-Schema erwartet (\ac{FA}-05, \ac{NFA}-04).
  
@@ -135,7 +135,7 @@ Tabelle \ref{Anforderungstabelle} fasst die spezifizierten Anforderungen zusamme
 \hline
 \ac{NFA}-01 & Datenschutz und Lokal-First (kein externer \ac{API}-Aufruf) & Institutionell (\ac{DSGVO}, \ac{BITBW}) & Muss \\
 \hline
-\ac{NFA}-02 & Laufzeit $<$\,10\,min pro Seite (ohne GPU) & Praxisanforderung \ac{BITBW} & Soll \\
+\ac{NFA}-02 & Laufzeit $<$\,10\,min pro Seite (ohne \ac{GPU}) & Praxisanforderung \ac{BITBW} & Soll \\
 \hline
 \ac{NFA}-03 & Wartbarkeit und Erweiterbarkeit (modulare Architektur) & Software-Engineering Best Practice & Soll \\
 \hline

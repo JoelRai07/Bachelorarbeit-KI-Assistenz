@@ -214,7 +214,7 @@ Der Vorschlag benennt die korrekte Datei, nutzt einen React-konformen \texttt{us
 
 Über die inhaltliche Qualität hinaus ist für den produktiven Einsatz relevant, wie schnell und wie konsistent die Pipeline arbeitet. Dieser Abschnitt prüft die Konformität mit \ac{NFA}-02 (Laufzeit), analysiert die Varianz der Ergebnisse über mehrere Runs und bewertet die Token-Nutzung als Indikator für systematische Antwortabbrüche.
 
-\subsection{Laufzeit und NFA-02-Konformität}
+\subsection{Laufzeit und \ac{NFA}-02-Konformität}
 \label{sec:effizienz_laufzeit}
 
 Tabelle~\ref{tab:laufzeit_modelle} zeigt die mittleren Laufzeiten je Pipeline-Phase. Die Gesamtlaufzeit umfasst axe-core, Playwright, \ac{LLM}-Detektor (5~Chunks), Prompt-Build und \ac{LLM}-Priorisierung.
@@ -312,7 +312,7 @@ Die in den vorherigen Abschnitten präsentierten Ergebnisse basieren primär auf
 \subsection{Evaluation an test-50}
 \label{sec:eval_suiten}
 
-Die test-50-Messreihe wurde mit identischer Konfiguration wie test-12 durchgeführt: drei Modelle, je zehn Runs, \texttt{temperature}~=~0{,}05, CPU-basierte lokale Ollama-Instanz. Das Output-Token-Limit wurde entsprechend der größeren Suite auf \texttt{num\_predict}~=~8\,192 angehoben. Die vollständigen Rohdaten aller 30~Runs finden sich in Tabelle~\ref{tab:rohdaten_runs_50}.
+Die test-50-Messreihe wurde mit identischer Konfiguration wie test-12 durchgeführt: drei Modelle, je zehn Runs, \texttt{temperature}~=~0{,}05, \ac{CPU}-basierte lokale Ollama-Instanz. Das Output-Token-Limit wurde entsprechend der größeren Suite auf \texttt{num\_predict}~=~8\,192 angehoben. Die vollständigen Rohdaten aller 30~Runs finden sich in Tabelle~\ref{tab:rohdaten_runs_50}.
 
 \paragraph{Token-Budget unter Druck.}
 Die wichtigste Beobachtung der test-50-Messreihe ist, dass das Token-Budget nun systematisch erschöpft wird. Die mittleren Input-Tokens stiegen von \O{}~4\,000--5\,600 (test-12) auf \O{}~13\,200--14\,200 (test-50), da bei 50~Violations deutlich mehr Findings serialisiert werden müssen. Trotz des auf 8\,192~Tokens angehobenen Output-Limits schöpfen 60--90\,\% aller Runs das Budget vollständig aus: \texttt{qwen2.5-coder:7b} in 6\,/\,10~Runs, \texttt{qwen2.5-coder:14b} in 7\,/\,10~Runs und \texttt{qwen3:32b} in 9\,/\,10~Runs. Die ursprünglich gestellte Frage, ob das Token-Budget bei test-50 kippt, ist damit eindeutig bestätigt (vgl. Tabelle~\ref{tab:token_economy_50}).
@@ -342,7 +342,7 @@ Tabelle~\ref{tab:priorisierungsqualitaet_50} fasst das Must-have/Nice-to-have-Ve
 \label{tab:priorisierungsqualitaet_50}
 \end{table}
 
-\paragraph{Effizienz und NFA-02.}
+\paragraph{Effizienz und \ac{NFA}-02.}
 Die Gesamtlaufzeit skaliert substanziell: \texttt{qwen2.5-coder:7b} \O{}~413\,s (Range: 291--465\,s), \texttt{qwen2.5-coder:14b} \O{}~826\,s (Range: 733--871\,s), \texttt{qwen3:32b} \O{}~1\,897\,s (Range: 1\,752--2\,011\,s). Damit erfüllt auf test-50 nur \texttt{qwen2.5-coder:7b} \ac{NFA}-02; \texttt{qwen2.5-coder:14b} und \texttt{qwen3:32b} überschreiten die Zehn-Minuten-Grenze klar (vgl. Tabelle~\ref{tab:modell_summary_50}).
 
 \paragraph{Skalierungsvergleich test-12 vs.\ test-50.}
@@ -355,7 +355,7 @@ Tabelle~\ref{tab:skalierungsvergleich} quantifiziert die zentralen Skalierungsef
 \begin{tabular}{@{}lrrrrrrrrr@{}}
 \toprule
 \textbf{Modell} &
-\multicolumn{3}{c}{\textbf{LLM-Det.-Findings Ø}} &
+\multicolumn{3}{c}{\textbf{\ac{LLM}-Det.-Findings Ø}} &
 \multicolumn{3}{c}{\textbf{Dauer Ø (s)}} &
 \multicolumn{3}{c}{\textbf{Truncation}} \\
 \cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}
@@ -384,14 +384,14 @@ Die Baseline-Tools (axe-core, Playwright, grep) erkennen stabil 34\,/\,100~Viola
 \paragraph{Einordnung der Pareto-Perspektive.}
 Für die Ursachenanalyse der verbleibenden Erkennungslücken wird das Pareto-Diagramm bewusst auf \textbf{test-100 mit \texttt{qwen3:32b}} fokussiert (Abbildung~\ref{fig:graph_pareto_demo} im Anhang). Diese Auswahl kombiniert den anspruchsvollsten Skalierungsfall (100~Violations) mit der methodisch belastbarsten Modellbasis in dieser Suite (höchster Recall, zugleich nur 1\,/\,10 trunkierten Runs). Damit wird ein \textit{Best-Case-unter-Last} analysiert: Die verbleibenden Lücken sind weniger durch offensichtliche Modellschwäche als durch strukturell schwierige Violations erklärbar. Ein Vollvergleich mit separaten Pareto-Diagrammen für alle Modelle und alle Suites wäre zwar möglich, würde den Anhang jedoch deutlich aufblähen und den Erkenntnisgewinn nur begrenzt erhöhen; der Modellvergleich ist bereits über Recall-, Laufzeit-, Konsistenz- und Truncation-Grafiken abgedeckt (vgl. Anhang Abbildungen~\ref{fig:graph_recall} bis~\ref{fig:graph_truncation}).
 
-\paragraph{Laufzeit und NFA-02.}
+\paragraph{Laufzeit und \ac{NFA}-02.}
 Die Gesamtlaufzeit steigt auf test-100 deutlich an: \texttt{qwen2.5-coder:7b} \O{}~765\,s, \texttt{qwen2.5-coder:14b} \O{}~1\,550\,s, \texttt{qwen3:32b} \O{}~2\,616\,s. Damit verletzen alle drei Modelle \ac{NFA}-02 (Laufzeit $<10$~Min.) auf test-100 klar; bei strenger NFA-Auslegung ist dort kein Modell uneingeschränkt geeignet (vgl. Tabellen~\ref{tab:modell_summary_100} und~\ref{tab:suite_vergleich}). Damit ist test-100 im \ac{PoC}-Kontext nicht zeitkritisch einsetzbar; auf \ac{GPU}-beschleunigter Hardware wäre \ac{NFA}-02 jedoch realistischer erreichbar.
 
 \paragraph{Erkennungsrate, Empfehlungsqualität und CSV-Auszug.}
 Die vollständige Violation-für-Violation-Auswertung findet sich in den Anhang-Tabellen~\ref{tab:erkennungsrate_poc_100} (Erkennungsrate), \ref{tab:recall_matrix_100} (Recall-Matrix) und \ref{tab:empfehlungsqualitaet_100} (Empfehlungsqualität). Alle 73 erkannten Violations erhalten mit \texttt{qwen3:32b} Run~01 die Bewertung Stufe~2 (konkreter Dateiname, Zeile und Code-Snippet); 27 nicht erkannte Violations werden mit Stufe~0 ausgewiesen. Repräsentative Rohdatenzeilen zeigt Tabelle~\ref{tab:csv_beispiel_100}.
 
 \paragraph{Gesamteinordnung test-100.}
-Für die test-100-Suite ergibt sich damit ein klarer Trade-off: \texttt{qwen3:32b} liefert den höchsten Recall (63\,\%) und die stärkste Empfehlungsqualität, ist aber mit deutlichem Laufzeitnachteil verbunden; \texttt{qwen2.5-coder:14b} liegt bei der Erkennungsleistung darunter (53\,\%), bleibt jedoch als pragmatischer Kompromiss aus Qualität und Aufwand relevant. Für die operative Interpretation sind deshalb zwei Lesarten notwendig: \textit{strenge Sicht} (NFA-02 als Ausschlusskriterium) versus \textit{pragmatische Sicht} (Qualität/Zeit-Balance). Diese Trennung wird im Anhang explizit ausgewiesen (Tabellen~\ref{tab:modell_summary_100}, \ref{tab:suite_vergleich} und \ref{tab:einsatzempfehlungen}).
+Für die test-100-Suite ergibt sich damit ein klarer Trade-off: \texttt{qwen3:32b} liefert den höchsten Recall (63\,\%) und die stärkste Empfehlungsqualität, ist aber mit deutlichem Laufzeitnachteil verbunden; \texttt{qwen2.5-coder:14b} liegt bei der Erkennungsleistung darunter (53\,\%), bleibt jedoch als pragmatischer Kompromiss aus Qualität und Aufwand relevant. Für die operative Interpretation sind deshalb zwei Lesarten notwendig: \textit{strenge Sicht} (\ac{NFA}-02 als Ausschlusskriterium) versus \textit{pragmatische Sicht} (Qualität/Zeit-Balance). Diese Trennung wird im Anhang explizit ausgewiesen (Tabellen~\ref{tab:modell_summary_100}, \ref{tab:suite_vergleich} und \ref{tab:einsatzempfehlungen}).
 
 \subsection{Evaluation am \ac{BWEC}-Untersuchungsobjekt}
 \label{sec:eval_bwec}
