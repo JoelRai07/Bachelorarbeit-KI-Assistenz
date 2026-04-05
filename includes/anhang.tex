@@ -507,20 +507,20 @@ Enterprise-Deployment        & 14b & 32b & Produktionstaugliches Qualitätsnivea
 \centering
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.2}
-\caption[Zentrale Metriken im Suite-Vergleich]{Kompakter Orientierungsvergleich der zentralen Kennzahlen über test-12, test-50 und test-100. Für test-100 sind die Messreihen noch ausstehend.}
+\caption[Zentrale Metriken im Suite-Vergleich]{Kompakter Orientierungsvergleich der zentralen Kennzahlen über test-12, test-50 und test-100.}
 \begin{tabular}{|l|c|c|c|}
 \hline
 \textbf{Metrik} & \textbf{test-12} & \textbf{test-50} & \textbf{test-100} \\
 \hline
 Ground-Truth-Violations & 12 & 50 & 100 \\
 \hline
-Runs je Modell (aktuell) & 10 & 10 & 0 (geplant: 3) \\
+Runs je Modell & 10 & 10 & 10 \\
 \hline
-Output-Limit \texttt{num\_predict} & 6\,144 & 8\,192 & 12\,288 (geplant) \\
+Output-Limit \texttt{num\_predict} & 6\,144 & 8\,192 & 12\,288 \\
 \hline
-Beste LLM-Konsistenz $\sigma$ & 0{,}42 (14b) & 1{,}25 (32b) & k.\,A. \\
+Beste LLM-Konsistenz $\sigma$ & 0{,}42 (14b) & 1{,}25 (32b) & 3{,}23 (14b) \\
 \hline
-NFA-02-Konformität (empfohlenes Modell) & 14b: \checkmark & 14b: \checkmark & k.\,A. \\
+NFA-02-Konformität (empfohlenes Modell) & 14b: \checkmark & 14b: \checkmark & keines: \texttimes \\
 \hline
 \end{tabular}
 \label{tab:suite_vergleich}
@@ -2034,33 +2034,33 @@ V100 & \texttt{aria-hidden} auf fokussierbarem   & syn. & axe-core              
  
 \clearpage
  
-\anhang{Modell-Leistungsvergleich: test-100-Suite Zusammenfassung (qwen2.5-coder:7b)}\label{app:modell_summary_100}
- 
+\anhang{Modell-Leistungsvergleich: test-100-Suite Zusammenfassung}\label{app:modell_summary_100}
+
 \begin{table}[htbp]
 \centering
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.25}
-\caption[Modell-Leistungsvergleich (test-100-Suite)]{Zusammenfassung der Leistungsmetriken für \texttt{qwen2.5-coder:7b} auf der test-100-Suite ($n=10$ Runs, \texttt{num\_predict}~=~12\,288). Ausschließlich 7b wurde evaluiert; 14b und 32b stehen als Folgeschritt aus. Recall-Wert: vorläufige Schätzung auf Basis qualitativer Analyse der nicht-trunzierten Runs (4, 8); systemische Verifikation über alle 10 Runs ist ausstehend.}
+\caption[Modell-Leistungsvergleich (test-100-Suite)]{Zusammenfassung der Leistungsmetriken für alle drei evaluierten Modelle auf der test-100-Suite (je $n=10$ Runs, \texttt{num\_predict}~=~12\,288). $\sigma$~=~Stichproben-Standardabweichung der LLM-Detektor-Findings über 10~Runs. Recall für 14b und 32b: systematische Violation-für-Violation-Auswertung ausstehend.}
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|c|}
+\begin{tabular}{|l|c|c|c|}
 \hline
-\textbf{Metrik} & \textbf{qwen2.5-coder:7b} \\
+\textbf{Metrik} & \textbf{qwen2.5-coder:7b} & \textbf{qwen2.5-coder:14b} & \textbf{qwen3:32b} \\
 \hline
-Recall (vorläufige Schätzung)                  & $\approx$70\,\% (systemische Verifikation ausstehend) \\
-LLM-Detektor-Findings (Ø $\pm$ $\sigma$)       & 104{,}0 $\pm$ 5{,}75 \\
-LLM-Detektor-Findings (Min--Max)               & 96--110 \\
-Konsistenz $\sigma$                            & 5{,}75 \\
-Priorisierungsqualität                         & Fehlerhaft (inverse Priorisierung bestätigt) \\
-Fix-Qualität (Stufe)                           & 0--1 \\
-Priorisierungslaufzeit (Ø)                     & 365\,s \\
-LLM-Detektor-Laufzeit (Ø)                     & 394\,s \\
-Gesamtlaufzeit (Ø)                             & 765\,s \\
-Gesamtlaufzeit (Min--Max)                      & 648\,s -- 839\,s \\
-Output-Tokens Ø                                & 11\,421 \\
-Output-Limit ausgeschöpft                      & 8\,/\,10 Runs (80\,\%) \\
-Parsing-Erfolg                                 & 100\,\% \\
-NFA-02-Konformität                             & \texttimes\ (alle 10 Runs: min.\ 10{,}8\,min) \\
-Eignung BITV-Einsatz                           & Nicht geeignet \\
+Recall (Ø über Runs)                           & $\approx$70\,\% (vorläufig) & ausstehend          & ausstehend \\
+LLM-Detektor-Findings (Ø $\pm$ $\sigma$)       & 104{,}0 $\pm$ 5{,}75 & 94{,}3 $\pm$ 3{,}23 & 99{,}1 $\pm$ 5{,}63 \\
+LLM-Detektor-Findings (Min--Max)               & 96--110          & 91--100             & 93--106 \\
+Konsistenz $\sigma$                            & 5{,}75           & 3{,}23              & 5{,}63 \\
+Priorisierungsqualität                         & Fehlerhaft       & Bimodal / instabil  & Bimodal / instabil \\
+Fix-Qualität (Stufe)                           & 0--1             & ausstehend          & ausstehend \\
+Priorisierungslaufzeit (Ø)                     & 365\,s           & 821\,s              & 1\,033\,s \\
+LLM-Detektor-Laufzeit (Ø)                     & 394\,s           & 723\,s              & 1\,576\,s \\
+Gesamtlaufzeit (Ø)                             & 765\,s           & 1\,550\,s           & 2\,616\,s \\
+Gesamtlaufzeit (Min--Max)                      & 648--839\,s      & 1\,418--1\,688\,s   & 2\,172--3\,314\,s \\
+Output-Tokens Ø                                & 11\,421          & 12\,288             & 7\,360 \\
+Output-Limit ausgeschöpft                      & 8\,/\,10 (80\,\%) & 10\,/\,10 (100\,\%) & 1\,/\,10 (10\,\%) \\
+Parsing-Erfolg                                 & 100\,\%          & 100\,\%             & 100\,\% \\
+NFA-02-Konformität                             & \texttimes       & \texttimes          & \texttimes \\
+Eignung BITV-Einsatz                           & Nicht geeignet   & Nicht geeignet      & Nicht geeignet \\
 \hline
 \end{tabular}
 }%
@@ -2075,14 +2075,18 @@ Eignung BITV-Einsatz                           & Nicht geeignet \\
 \centering
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.2}
-\caption[Token-Nutzung (test-100)]{Durchschnittliche Token-Nutzung je Run (test-100-Suite, \texttt{num\_predict}~=~12\,288). 80\,\% aller Runs schöpften das Output-Limit vollständig aus; lediglich Run~4 (7\,902) und Run~8 (8\,007) wurden nicht abgeschnitten. Der Input-Token-Anstieg gegenüber test-50 (\O{}~13\,200--14\,200) reflektiert die größere Anzahl serialisierter Findings.}
+\caption[Token-Nutzung pro Modell (test-100)]{Durchschnittliche Token-Nutzung je Run und Modell auf Basis der test-100-Suite (\texttt{num\_predict}~=~12\,288). Input-Tokens umfassen System-Prompt, serialisierte Findings und Konfigurationsparameter. 14b schöpfte in allen 10~Runs das Output-Limit aus; 32b blieb mit Ø~7\,360 deutlich darunter (1\,/\,10 Abbrüche).}
 \begin{tabular}{|l|c|c|c|}
 \hline
 \textbf{Modell} & \textbf{Input-Tokens Ø} & \textbf{Output-Tokens Ø} & \textbf{Truncation} \\
 \hline
 qwen2.5-coder:7b  & 17\,503 & 11\,421 & 8\,/\,10 Runs (80\,\%) \\
 \hline
-\multicolumn{4}{|l|}{\textit{Gesamt (10 Runs): Input $\approx$175\,032 / Output 114\,213 Tokens}} \\
+qwen2.5-coder:14b & 17\,043 & 12\,288 & 10\,/\,10 Runs (100\,\%) \\
+\hline
+qwen3:32b         & 17\,197 &  7\,360 &  1\,/\,10 Runs (10\,\%) \\
+\hline
+\multicolumn{4}{|l|}{\textit{Gesamt (30 Runs): Input $\approx$517\,400 / Output 310\,700 Tokens}} \\
 \hline
 \end{tabular}
 \label{tab:token_economy_100}
@@ -2094,13 +2098,17 @@ qwen2.5-coder:7b  & 17\,503 & 11\,421 & 8\,/\,10 Runs (80\,\%) \\
 \centering
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.2}
-\caption[Effizienzvergleich (test-100)]{Effizienzvergleich auf Basis der 10 Benchmark-Runs der test-100-Suite. \textit{LLM-Findings/s} bezieht sich auf LLM-Detektor-Findings pro Sekunde Priorisierungslaufzeit.}
+\caption[Effizienzvergleich der Modelle (test-100)]{Effizienzvergleich auf Basis der 30 Benchmark-Runs der test-100-Suite. \textit{LLM-Findings/s} bezieht sich auf LLM-Detektor-Findings pro Sekunde Priorisierungslaufzeit. 7b dient als Referenz.}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|l|c|c|c|c|}
 \hline
-\textbf{Modell} & \textbf{LLM-Findings Ø} & \textbf{Priorisierungslaufzeit Ø\,(s)} & \textbf{LLM-Findings/s} & \textbf{Zusatznutzen ggü.\ test-50} \\
+\textbf{Modell} & \textbf{LLM-Findings Ø} & \textbf{Priorisierungslaufzeit Ø\,(s)} & \textbf{LLM-Findings/s} & \textbf{Zusatznutzen ggü.\ 7b} \\
 \hline
-qwen2.5-coder:7b  & 104{,}0 & 365 & 0{,}285 & +123\,\% Findings bei +84\,\% Zeitaufwand \\
+qwen2.5-coder:7b  & 104{,}0 & 365 & 0{,}285 & Referenz \\
+\hline
+qwen2.5-coder:14b &  94{,}3 & 821 & 0{,}115 & $-$9{,}3\,\% Findings bei $+$125\,\% Zeitaufwand \\
+\hline
+qwen3:32b         &  99{,}1 & 1\,033 & 0{,}096 & $-$4{,}7\,\% Findings bei $+$183\,\% Zeitaufwand \\
 \hline
 \end{tabular}
 }%
@@ -2115,39 +2123,49 @@ qwen2.5-coder:7b  & 104{,}0 & 365 & 0{,}285 & +123\,\% Findings bei +84\,\% Zeit
 \centering
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.2}
-\caption[Über-Detektion relativ zu 100 Ground-Truth-Violations]{Vergleich der durchschnittlichen LLM-Detektor-Findings pro Run mit der Ground Truth (100~Violations, test-100-Suite).}
+\caption[Über-Detektion relativ zu 100 Ground-Truth-Violations]{Vergleich der durchschnittlichen LLM-Detektor-Findings pro Run mit der Ground Truth (100~Violations, test-100-Suite). Die LLM-only-Betrachtung vermeidet Doppelzählungen mit Tool-Detektoren.}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|l|c|c|c|p{5.5cm}|}
 \hline
 \textbf{Modell} & \textbf{LLM-Findings Ø} & \textbf{Ground Truth} & \textbf{Quote} & \textbf{Interpretation} \\
 \hline
-qwen2.5-coder:7b  & 104{,}0 & 100 & 104\,\% & Leichte Überdetektion; hohe LLM-Finding-Zahl trotz inverser Priorisierung und 80\,\% Truncation \\
+qwen2.5-coder:7b  & 104{,}0 & 100 & 104\,\%  & Leichte Überdetektion; hohe LLM-Finding-Zahl trotz inverser Priorisierung und 80\,\% Truncation \\
+\hline
+qwen2.5-coder:14b &  94{,}3 & 100 &  94{,}3\,\% & Leichte Unterdetektion; alle 10~Runs bei 12\,288 Output-Tokens; Vollständigkeit durch Truncation begrenzt \\
+\hline
+qwen3:32b         &  99{,}1 & 100 &  99{,}1\,\% & Nahe an Ground Truth; 1\,/\,10~Runs trunkiert; höchste absolute Nähe zur Zielanzahl \\
 \hline
 \end{tabular}
 }%
 \label{tab:overdetection_100}
 \end{table}
  
-\anhang{Detektor-Konsistenz über alle 10 Runs (test-100-Suite)}\label{app:detektor_konsistenz_100}
+\anhang{Detektor-Konsistenz über alle 30 Runs (test-100-Suite)}\label{app:detektor_konsistenz_100}
  
 \begin{table}[htbp]
 \centering
 \setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{1.2}
 \scriptsize
-\caption[Detektor-Konsistenz (test-100, alle 10 Runs)]{Konsistenzanalyse der Detektoren über alle 10 Benchmark-Runs (test-100). Axe-core, Playwright und grep bleiben vollständig deterministisch; die Varianz entsteht ausschließlich im LLM-Detektor.}
+\caption[Detektor-Konsistenz (test-100, alle 30 Runs)]{Konsistenzanalyse der Detektoren über alle 30 Benchmark-Runs (test-100). Axe-core, Playwright und grep bleiben vollständig deterministisch; die Varianz entsteht ausschließlich im LLM-Detektor.}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|p{2.4cm}|p{0.8cm}|p{1.5cm}|p{1.2cm}|p{1.2cm}|p{1.8cm}|p{4.0cm}|}
 \hline
-\textbf{Detektor} & \textbf{Runs} & \textbf{Gesamt-Findings} & \textbf{Ø/Run} & \textbf{Min--Max} & \textbf{$\sigma^2$ / $\sigma$} & \textbf{Interpretation} \\
+\textbf{Detektor / Modell} & \textbf{Runs} & \textbf{Gesamt-Findings} & \textbf{Ø/Run} & \textbf{Min--Max} & \textbf{$\sigma^2$ / $\sigma$} & \textbf{Interpretation} \\
 \hline
-axe-core    & 10 & 110 & 11{,}0 & 11--11 & 0{,}00 / 0{,}00 & vollständig deterministisch \\
+axe-core    & 30 & 330 & 11{,}0 & 11--11 & 0{,}00 / 0{,}00 & vollständig deterministisch \\
 \hline
-Playwright  & 10 &  20 &  2{,}0 &  2--2  & 0{,}00 / 0{,}00 & vollständig deterministisch \\
+Playwright  & 30 &  60 &  2{,}0 &  2--2  & 0{,}00 / 0{,}00 & vollständig deterministisch \\
 \hline
-grep        & 10 & 240 & 24{,}0 & 24--24 & 0{,}00 / 0{,}00 & vollständig deterministisch \\
+grep        & 30 & 720 & 24{,}0 & 24--24 & 0{,}00 / 0{,}00 & vollständig deterministisch \\
 \hline
-qwen2.5-coder:7b & 10 & 1040 & 104{,}0 & 96--110 & 33{,}11 / 5{,}75 & moderate Streuung; höher als 14b/32b auf test-12 \\
+qwen2.5-coder:7b  & 10 & 1\,040 & 104{,}0 & 96--110 & 33{,}11 / 5{,}75 & höchste Streuung; 80\,\% Truncation \\
+\hline
+qwen2.5-coder:14b & 10 &   943 &  94{,}3 & 91--100 & 10{,}46 / 3{,}23 & moderate Konsistenz; 100\,\% Truncation \\
+\hline
+qwen3:32b         & 10 &   991 &  99{,}1 & 93--106 & 31{,}66 / 5{,}63 & moderate Streuung; deutlich höhere Laufzeit \\
+\hline
+LLM-Detektor gesamt & 30 & 2\,974 & 99{,}1 & 91--110 & modell\-abhängig & -- \\
 \hline
 \end{tabular}
 }%
@@ -2156,28 +2174,30 @@ qwen2.5-coder:7b & 10 & 1040 & 104{,}0 & 96--110 & 33{,}11 / 5{,}75 & moderate S
  
 \clearpage
  
-\anhang{Statistische Verteilung der LLM-Findings (alle 10 Runs, test-100-Suite)}\label{app:statistik_quantile_100}
- 
+\anhang{Statistische Verteilung der LLM-Findings (alle 10 Runs je Modell, test-100-Suite)}\label{app:statistik_quantile_100}
+
 \begin{table}[htbp]
 \centering
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.2}
-\caption[Quantilanalyse der LLM-Findings (test-100, 10 Runs)]{Quantilanalyse der LLM-Detektor-Findings über alle 10 Benchmark-Runs der test-100-Suite (\texttt{qwen2.5-coder:7b}).}
-\begin{tabular}{|l|c|p{7cm}|}
+\caption[Quantilanalyse der LLM-Findings (test-100, alle Modelle)]{Quantilanalyse der LLM-Detektor-Findings über je 10 Benchmark-Runs der test-100-Suite für alle drei Modelle.}
+\begin{tabular}{|l|c|c|c|}
 \hline
-\textbf{Quantil} & \textbf{Wert} & \textbf{Interpretation} \\
+\textbf{Quantil} & \textbf{qwen2.5-coder:7b} & \textbf{qwen2.5-coder:14b} & \textbf{qwen3:32b} \\
 \hline
-Min (0\,\%)     & 96 Findings  & absolutes Minimum (Runs 4 und 8, nicht trunkiert) \\
+Min (0\,\%)      &  96 &  91 &  93 \\
 \hline
-Q1 (25\,\%)     & 98 Findings  & unteres Cluster (Runs 2, 3, 4) \\
+Q1 (25\,\%)      &  98 &  93 &  94 \\
 \hline
-Median (50\,\%) & 106{,}5 Findings & Übergangsbereich \\
+Median (50\,\%)  & 106{,}5 & 93 & 99 \\
 \hline
-Q3 (75\,\%)     & 109 Findings & oberes Cluster (Runs 5--7, 10) \\
+Q3 (75\,\%)      & 109 &  95 & 104 \\
 \hline
-Max (100\,\%)   & 110 Findings & absolutes Maximum (Run 5) \\
+Max (100\,\%)    & 110 & 100 & 106 \\
 \hline
-\ac{IQR}        & 11 Findings  & moderate Modell-Varianz \\
+\ac{IQR}         &  11 &   2 &  10 \\
+\hline
+$\sigma$         & 5{,}75 & 3{,}23 & 5{,}63 \\
 \hline
 \end{tabular}
 \label{tab:statistik_quantile_100}
@@ -2186,14 +2206,18 @@ Max (100\,\%)   & 110 Findings & absolutes Maximum (Run 5) \\
 \clearpage
  
 \anhang{Hinweis: Ausstehende Tabellen (test-100-Suite)}\label{app:ausstehend_100}
- 
-Die folgenden Anhang-Bausteine der test-100-Suite erfordern eine systematische Violation-für-Violation-Auswertung über alle 10~Runs und sind als Folgeschritt vorgesehen:
- 
+
+Die quantitativen Metriken für alle drei Modelle (7b, 14b, 32b) wurden ergänzt. Die folgenden Anhang-Bausteine erfordern darüber hinaus eine systematische Violation-für-Violation-Auswertung der Modellausgaben und sind als Folgeschritt vorgesehen:
+
 \begin{itemize}
-  \item \textbf{Erkennungsrate} (tab:erkennungsrate\_poc\_100): Mapping jeder der 100 Ground-Truth-Violations auf die tatsächliche Erkennungsquelle je Run.
-  \item \textbf{Recall-Matrix} (tab:recall\_matrix\_100): Binarmatrix Violation~$\times$ Bedingung (Baseline / +7b), basierend auf der $>\,5/10$-Schwelle.
-  \item \textbf{Empfehlungsqualität} (tab:empfehlungsqualitaet\_100): Stufenbewertung der Fix-Qualität je Violation (0--2).
-  \item \textbf{CSV-Auszug} (tab:csv\_beispiel\_100): Repräsentative Rohdatenzeilen.
+  \item \textbf{Erkennungsrate} (tab:erkennungsrate\_poc\_100): Mapping jeder der 100 Ground-Truth-Violations auf die tatsächliche Erkennungsquelle je Run und Modell.
+  \item \textbf{Recall-Matrix} (tab:recall\_matrix\_100): Binarmatrix Violation~$\times$ Bedingung (Baseline / +7b / +14b / +32b), basierend auf der $>\,5/10$-Schwelle.
+  \item \textbf{Empfehlungsqualität} (tab:empfehlungsqualitaet\_100): Stufenbewertung der Fix-Qualität je Violation (0--2), analog zu test-12 und test-50.
+  \item \textbf{CSV-Auszug} (tab:csv\_beispiel\_100): Repräsentative Rohdatenzeilen aller drei Modelle.
 \end{itemize}
- 
-\noindent\textit{Methodischer Hinweis}: Zwei Runs (4 und 8) haben vollständige, nicht-trunkierte Berichte (7\,902 bzw.\ 8\,007 Output-Tokens). Diese Runs bilden die primäre Grundlage für die Recall-Schätzung. In den restlichen acht trunzierten Runs (je 12\,288 Tokens) ist der Nice-to-have-Abschnitt vollständig abgeschnitten, wodurch Violations, die 7b als Nice-to-have klassifiziert, in diesen Runs nicht im finalen Report erscheinen und damit unter die $>\,5/10$-Schwelle fallen. Die vorläufige Recall-Schätzung beträgt $\approx$70\,/\,100.
+
+\noindent\textit{Methodischer Hinweis (7b)}: Run~4 (7\,902 Tokens) und Run~8 (8\,007 Tokens) sind nicht trunkiert und bilden die primäre Grundlage für die vorläufige Recall-Schätzung $\approx$70\,/\,100. In den restlichen acht trunzierten Runs ist der Nice-to-have-Abschnitt abgeschnitten.
+
+\noindent\textit{Methodischer Hinweis (14b)}: Alle 10~Runs erreichten das Output-Limit (12\,288 Tokens); kein Run liefert einen vollständigen, nicht-trunzierten Bericht. Eine verlässliche Recall-Schätzung erfordert entweder eine Erhöhung von \texttt{num\_predict} oder eine manuelle Analyse der trunzierten Ausgaben.
+
+\noindent\textit{Methodischer Hinweis (32b)}: Nur Run~23 (12\,288 Tokens) ist trunkiert; die übrigen neun Runs schlossen vollständig ab (Ø~6\,578 Tokens). Die Recall-Schätzung für 32b ist damit am zuverlässigsten über die nicht-trunzierten Runs zugänglich.
