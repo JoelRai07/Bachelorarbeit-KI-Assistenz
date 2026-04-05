@@ -1,19 +1,19 @@
 \chapter{Evaluation \& Diskussion} \label{kap:7}
 
-Dieses Kapitel bewertet das in Kapitel~\ref{kap:5} konzipierte und in Kapitel~\ref{kap:6} implementierte \ac{ACE}-System anhand der in Kapitel~\ref{kap:1.3} formulierten Forschungsfragen. Abschnitt~\ref{sec:versuchsdesign} beschreibt Testobjekte, Modelle und Metriken. Abschnitte~\ref{sec:ergebnisse_recall}--\ref{sec:ergebnisse_effizienz} dokumentieren die Ergebnisse nach Recall, Priorisierungsqualität, Fix-Qualität und Effizienz. Abschnitt~\ref{sec:limitationen} diskutiert Einschränkungen der Evaluation, Abschnitt~\ref{sec:eval_erweiterung} dokumentiert die Ergebnisse der test-50-Messreihe und skizziert die geplante Erweiterung auf test-100 sowie das reale Untersuchungsobjekt, Abschnitt~\ref{sec:ff_beantwortung} beantwortet die Forschungsfragen, und Abschnitt~\ref{sec:modellwahl} leitet daraus kontextspezifische Einsatzempfehlungen ab.
+Dieses Kapitel bewertet das in Kapitel~\ref{kap:5} konzipierte und in Kapitel~\ref{kap:6} implementierte \ac{ACE}-System anhand der in Kapitel~\ref{kap:1.3} formulierten Forschungsfragen. Abschnitt~\ref{sec:versuchsdesign} beschreibt Testobjekte, Modelle und Metriken. Abschnitte~\ref{sec:ergebnisse_recall}--\ref{sec:ergebnisse_effizienz} dokumentieren die Ergebnisse nach Recall, Priorisierungsqualität, Fix-Qualität und Effizienz. Abschnitt~\ref{sec:limitationen} diskutiert Einschränkungen der Evaluation, Abschnitt~\ref{sec:eval_erweiterung} dokumentiert die Ergebnisse der test-50- und test-100-Messreihen sowie das geplante reale Untersuchungsobjekt, Abschnitt~\ref{sec:ff_beantwortung} beantwortet die Forschungsfragen, und Abschnitt~\ref{sec:modellwahl} leitet daraus kontextspezifische Einsatzempfehlungen ab.
 
 % ─────────────────────────────────────────────────────────────────────────────
 \section{Versuchsdesign}
 \label{sec:versuchsdesign}
 
-Die Evaluation ist mehrstufig angelegt: In dieser Arbeit wird zunächst die kontrollierte \textit{test-12-Suite} als primäres Untersuchungsobjekt verwendet. Eine ergänzende Messreihe auf der test-50-Suite (50~eingebettete Violations) wurde ebenfalls durchgeführt und ist in Abschnitt~\ref{sec:eval_erweiterung} dokumentiert. Evaluation an test-100 und am realen \acf{BWEC} der \ac{BITBW} verbleiben als Folgeschritte. Das folgende Unterkapitel beschreibt die Untersuchungsobjekte im Überblick.
+Die Evaluation ist mehrstufig angelegt: In dieser Arbeit wird zunächst die kontrollierte \textit{test-12-Suite} als primäres Untersuchungsobjekt verwendet. Ergänzende Messreihen auf der test-50-Suite (50~Violations) und der test-100-Suite (100~Violations) wurden ebenfalls durchgeführt und sind in Abschnitt~\ref{sec:eval_erweiterung} dokumentiert. Die Evaluation am realen \acf{BWEC} der \ac{BITBW} verbleibt als Folgeschritt. Das folgende Unterkapitel beschreibt die Untersuchungsobjekte im Überblick.
 
 \subsection{Testobjekte und Ground Truth}
 \label{sec:versuch_testobjekt}
 
 Für die Evaluation dieser Arbeit dient eine eigens entwickelte React-\ac{SPA} (\textit{test-12-Suite}) als primäres Testobjekt. Sie enthält zwölf gezielt eingebettete \ac{WCAG}-Verstöße (Tabelle~\ref{tab:accessibility_verstoesse}), die alle drei Kategorien der in Kapitel~\ref{Taxonomie} eingeführten Taxonomie abdecken: vier syntaktische (V1, V2, V3, V10), drei layout-bezogene (V4, V5, V12) und fünf semantische Verstöße (V6, V7, V8, V9, V11). Da die Ground Truth vollständig bekannt und kontrollierbar ist, lassen sich Recall und Präzision der Pipeline exakt messen. Die visuelle Gestalt der Testanwendung ist in Anhang~\ref{fig:test12_screen1} und \ref{fig:test12_screen2} dokumentiert.
 
-Zusätzlich zu test-12 wurden als Vorbereitung für zukünftige Evaluationen zwei weitere synthetische Testsuiten entwickelt: \textit{test-50} mit 50 eingebetteten Violations und \textit{test-100} mit 100 Violations. Sie sind als Skalierungsstufen konzipiert, auf denen das Token-Budget erstmals unter realem Druck steht. Als reales Untersuchungsobjekt ist der \ac{BWEC} der \ac{BITBW} vorgesehen -- eine produktiv betriebene React-\ac{SPA} mit unbekannter Ground Truth. Die Benchmarkläufe auf diesen drei Untersuchungsobjekten sind Gegenstand von Abschnitt~\ref{sec:eval_erweiterung}.
+Zusätzlich zu test-12 wurden als Vorbereitung für zukünftige Evaluationen zwei weitere synthetische Testsuiten entwickelt: \textit{test-50} mit 50 eingebetteten Violations und \textit{test-100} mit 100 Violations. Sie sind als Skalierungsstufen konzipiert, auf denen das Token-Budget erstmals unter realem Druck steht. Alle Benchmarkläufe auf test-50 und test-100 wurden abgeschlossen; die vollständigen Ergebnisse sind in Abschnitt~\ref{sec:eval_erweiterung} dokumentiert. Als reales Untersuchungsobjekt ist der \ac{BWEC} der \ac{BITBW} vorgesehen -- eine produktiv betriebene React-\ac{SPA} mit unbekannter Ground Truth (vgl. Abschnitt~\ref{sec:eval_bwec}).
 
 \subsection{Modelle, Konfiguration und Runs}
 \label{sec:versuch_modelle}
@@ -43,7 +43,7 @@ Hardware & \ac{CPU}-basiert, lokale Ollama-Instanz \\
 \label{tab:versuchsdesign_uebersicht}
 \end{table}
 
-Tabelle~\ref{tab:benchmark_runs} zeigt die geplante Verteilung der Runs auf alle vier Modellkandidaten und drei Testsuiten. Im Rahmen dieser Arbeit wurden die test-12-Läufe (30~Runs) sowie die test-50-Läufe (30~Runs) durchgeführt; die test-100-Läufe und die \ac{BWEC}-Evaluation sind als Folgeschritte geplant (vgl. Abschnitt~\ref{sec:eval_erweiterung}). \texttt{deepseek-r1:70b} konnte im verfügbaren Zeitrahmen nicht evaluiert werden; die konsolidierte Modellbewertung der drei evaluierten Modelle findet sich in Tabelle~\ref{tab:modell_summary}.
+Tabelle~\ref{tab:benchmark_runs} zeigt die geplante Verteilung der Runs auf alle vier Modellkandidaten und drei Testsuiten. Im Rahmen dieser Arbeit wurden die test-12-Läufe (30~Runs), die test-50-Läufe (30~Runs) sowie die test-100-Läufe (30~Runs, alle drei Modelle) durchgeführt; die \ac{BWEC}-Evaluation verbleibt als Folgeschritt (vgl. Abschnitt~\ref{sec:eval_bwec}). \texttt{deepseek-r1:70b} konnte aufgrund unzureichender \ac{RAM}-Kapazität nicht evaluiert werden; die konsolidierte Modellbewertung der drei evaluierten Modelle findet sich in Tabelle~\ref{tab:modell_summary_12}.
 
 \begin{table}[htbp]
 \centering
@@ -56,12 +56,12 @@ Tabelle~\ref{tab:benchmark_runs} zeigt die geplante Verteilung der Runs auf alle
 \texttt{qwen2.5-coder:7b}  & Code & 10~Runs & 10~Runs & 10~Runs\\
 \texttt{qwen2.5-coder:14b} & Code & 10~Runs & 10~Runs & 10~Runs \\
 \texttt{qwen3:32b}         & Generalist & 10~Runs & 10~Runs & 10~Runs \\
-\texttt{deepseek-r1:70b}   & Reasoning  & 3~Runs & 3~Runs & 1~Run (ausstehend) \\
+\texttt{deepseek-r1:70b}   & Reasoning  & -- & -- & -- \\
 \midrule
-\textbf{Gesamt (durchgeführt)} & & \textbf{30} & \textbf{30} & \textbf{10} \\
+\textbf{Gesamt (durchgeführt)} & & \textbf{30} & \textbf{30} & \textbf{30} \\
 \bottomrule
 \end{tabular}
-\caption[Geplante und durchgeführte Benchmark-Runs je Modell und Testsuite]{Verteilung der Benchmark-Runs auf Modelle und Testsuiten. test-50 und test-100 erhalten 10~Runs (volle statistische Vergleichbarkeit mit test-12); \texttt{num\_predict}: test-12 = 6\,144; test-50 = 8\,192; test-100 = 12\,288.}
+\caption[Durchgeführte Benchmark-Runs je Modell und Testsuite]{Verteilung der Benchmark-Runs auf Modelle und Testsuiten (je 10~Runs pro Modell und Suite). \texttt{num\_predict}: test-12 = 6\,144; test-50 = 8\,192; test-100 = 12\,288. \texttt{deepseek-r1:70b} konnte aufgrund fehlender \ac{RAM}-Kapazität nicht evaluiert werden.}
 \label{tab:benchmark_runs}
 \end{table}
 
@@ -119,7 +119,7 @@ Für TF1 ist nicht nur der Gesamt-Recall relevant, sondern die Frage, welche \te
 \toprule
 \textbf{Kategorie} & \textbf{Violations} & \textbf{Baseline} & \textbf{+\,7b} & \textbf{+\,14b} & \textbf{+\,32b} \\
 \midrule
-Syntaktisch & V1, V2, V3, V10 & 3\,/\,4 (75\,\%) & 3\,/\,4 & 4\,/\,4 (100\,\%) & 4\,/\,4 (100\,\%) \\
+Syntaktisch & V1, V2, V3, V10 & 3\,/\,4 (75\,\%) & 3\,/\,4 (75\,\%) & 4\,/\,4 (100\,\%) & 4\,/\,4 (100\,\%) \\
 Layout      & V4, V5, V12     & 2\,/\,3 (67\,\%) & 3\,/\,3 (100\,\%) & 3\,/\,3 (100\,\%) & 3\,/\,3 (100\,\%) \\
 Semantisch  & V6, V7, V8, V9, V11 & 3\,/\,5 (60\,\%) & 4\,/\,5 (80\,\%) & 5\,/\,5 (100\,\%) & 5\,/\,5 (100\,\%) \\
 \midrule
@@ -262,7 +262,7 @@ Zur Einordnung der Laufzeitkosten enthält Tabelle~\ref{tab:effizienzvergleich} 
 
 Die Standardabweichung der \ac{LLM}-Detektor-Findings unterscheidet sich zwischen den Modellen erheblich: \texttt{qwen3:32b} erreicht $\sigma = 0{,}53$ (Range: 19--20~Findings), \texttt{qwen2.5-coder:14b} erreicht $\sigma = 0{,}42$ (Range: 22--23~Findings) und zeigt damit eine beeindruckende Konsistenz. \texttt{qwen2.5-coder:7b} zeigt mit $\sigma = 3{,}28$ höhere Varianz und produziert ein breiteres Spektrum (Range: 4--16~Findings).
 
-Die festen Detektoren (axe, Playwright, grep) bleiben über alle 30~Runs vollständig deterministisch (je 4, 2 und 6 Findings), sodass die Varianz ausschließlich aus der \ac{LLM}-Stufe stammt (vgl. Tabelle~\ref{tab:modell_summary}). Die Quantilanalyse über alle 30~Runs (Tabelle~\ref{tab:statistik_quantile}) zeigt die Clusterung: Der Median liegt bei 19--20~Findings (32b-Cluster) mit Q3 bei 22~Findings (14b-Bereich) und Q1 bei 11~Findings (7b-Bereich). Das \ac{IQR} von 11 belegt die unterschiedlichen Verteilungen zwischen den Modellen.
+Die festen Detektoren (axe, Playwright, grep) bleiben über alle 30~Runs vollständig deterministisch (je 4, 2 und 6 Findings), sodass die Varianz ausschließlich aus der \ac{LLM}-Stufe stammt (vgl. Tabelle~\ref{tab:modell_summary_12}). Die Quantilanalyse über alle 30~Runs (Tabelle~\ref{tab:statistik_quantile}) zeigt die Clusterung: Der Median liegt bei 19--20~Findings (32b-Cluster) mit Q3 bei 22~Findings (14b-Bereich) und Q1 bei 11~Findings (7b-Bereich). Das \ac{IQR} von 11 belegt die unterschiedlichen Verteilungen zwischen den Modellen.
 
 In allen 30~Runs wurde der \ac{LLM}-Output erfolgreich geparst (\texttt{parsed.success: true}, 100\,\%). Das Prompt-Design mit Role-Play- und Few-Shot-Prompting zeigt damit eine hohe Formatstabilität über alle drei Modelle und unterstützt \ac{NFA}-04 (Reproduzierbarkeit).
 
@@ -282,7 +282,7 @@ Die in den vorherigen Abschnitten präsentierten Ergebnisse sind unter Berücksi
 \subsection{Externe Validität}
 \label{sec:limit_extern}
 
-Die Evaluation basiert auf einer einzelnen, synthetisch konstruierten Testsuite (test-12) mit 12~kontrollierten Violations. Zwar sind alle drei Verstoßkategorien vertreten und die Ground Truth ist vollständig bekannt, doch lässt sich die Übertragbarkeit auf produktive Anwendungen mit größeren Codebasen, komplexeren Interaktionsmustern und mehr als 12~Violations nicht direkt ableiten. Erste Skalierungseffekte liefern die abgeschlossenen test-50-Messreihen (Abschnitt~\ref{sec:eval_suiten}). Eine Evaluation an test-100 sowie am realen \ac{BWEC} verbleiben als Folgeschritte (vgl. Abschnitt~\ref{sec:eval_erweiterung}).
+Die Evaluation stützt sich auf drei synthetisch konstruierte Testsuiten (test-12, test-50, test-100). Obwohl alle drei Verstoßkategorien vertreten und die Ground Truth vollständig bekannt sind, lässt sich die Übertragbarkeit auf produktive Anwendungen mit unkontrollierter Ground Truth nicht direkt ableiten. Skalierungseffekte wurden auf test-50 (Abschnitt~\ref{sec:eval_suiten}) und test-100 (Abschnitt~\ref{sec:eval_suiten_100}) sichtbar. Die Evaluation am realen \ac{BWEC} verbleibt als Folgeschritt (vgl. Abschnitt~\ref{sec:eval_bwec}).
 
 \subsection{Interne Validität und Token-Limit-Effekt}
 \label{sec:limit_tokenlimit}
@@ -307,7 +307,7 @@ Alle Laufzeitmessungen wurden auf einem einzelnen \ac{CPU}-basierten System durc
 \section{Erweiterung auf größere Testsuiten und reales Untersuchungsobjekt}
 \label{sec:eval_erweiterung}
 
-Die in den vorherigen Abschnitten präsentierten Ergebnisse basieren auf der kontrollierten test-12-Suite mit 12~eingebetteten Violations. Ergänzend wurde die test-50-Suite mit 50~Violations evaluiert, um erste Skalierungseffekte sichtbar zu machen. Die Evaluation an test-100 und am realen \ac{BWEC} der \ac{BITBW} verbleiben als Folgeschritte.
+Die in den vorherigen Abschnitten präsentierten Ergebnisse basieren primär auf der kontrollierten test-12-Suite. Ergänzend wurden die test-50-Suite (50~Violations) und die test-100-Suite (100~Violations, alle drei Modelle) vollständig evaluiert. Die Evaluation am realen \ac{BWEC} der \ac{BITBW} verbleibt als Folgeschritt.
 
 \subsection{Evaluation an test-50}
 \label{sec:eval_suiten}
@@ -318,7 +318,7 @@ Die test-50-Messreihe wurde mit identischer Konfiguration wie test-12 durchgefü
 Die wichtigste Beobachtung der test-50-Messreihe ist, dass das Token-Budget nun systematisch erschöpft wird. Die mittleren Input-Tokens stiegen von \O{}~4\,000--5\,600 (test-12) auf \O{}~13\,200--14\,200 (test-50), da bei 50~Violations deutlich mehr Findings serialisiert werden müssen. Trotz des auf 8\,192~Tokens angehobenen Output-Limits schöpfen 60--90\,\% aller Runs das Budget vollständig aus: \texttt{qwen2.5-coder:7b} in 6\,/\,10~Runs, \texttt{qwen2.5-coder:14b} in 7\,/\,10~Runs und \texttt{qwen3:32b} in 9\,/\,10~Runs. Die ursprünglich gestellte Frage, ob das Token-Budget bei test-50 kippt, ist damit eindeutig bestätigt (vgl. Tabelle~\ref{tab:token_economy_50}).
 
 \paragraph{Detektionsleistung.}
-Die Baseline-Tools liefern auf test-50 stabil 14~axe-core-, 2~Playwright- und 21~grep-Findings (gesamt 37~Tool-Findings). Diese Finding-Zahlen sind jedoch nicht direkt mit dem Ground-Truth-Recall (erkannte Violations von 50) gleichzusetzen, da Findings Duplikate oder semantische Überlappungen enthalten können. Für die Recall-Bewertung wird deshalb ausschließlich die Violation-Abdeckung im finalen Report mit der $>\,5/10$-Schwelle herangezogen (vgl. Anhang Tabelle~\ref{tab:recall_matrix_50}). Der \ac{LLM}-Detektor erzielt: \texttt{qwen2.5-coder:7b} \O{}~46{,}6~Findings ($\sigma \approx 3{,}20$; Range: 40--53), \texttt{qwen2.5-coder:14b} \O{}~51{,}3~Findings ($\sigma \approx 2{,}21$; Range: 45--52) und \texttt{qwen3:32b} \O{}~60{,}7~Findings ($\sigma \approx 1{,}25$; Range: 59--63). Bemerkenswert ist, dass \texttt{qwen3:32b} auf test-50 die höchste Konsistenz aller drei Modelle zeigt -- auf test-12 hatte \texttt{qwen2.5-coder:14b} die engste Streuung.
+Die Baseline-Tools liefern auf test-50 stabil 14~axe-core-, 2~Playwright- und 21~grep-Findings (gesamt 37~Tool-Findings). Diese Finding-Zahlen sind jedoch nicht direkt mit dem Ground-Truth-Recall (erkannte Violations von 50) gleichzusetzen, da Findings Duplikate oder semantische Überlappungen enthalten können. Für die Recall-Bewertung wird deshalb ausschließlich die Violation-Abdeckung im finalen Report mit der $>\,5/10$-Schwelle herangezogen (vgl. Anhang Tabellen~\ref{tab:recall_matrix_50} und~\ref{tab:erkennungsrate_poc_50}). Der \ac{LLM}-Detektor erzielt: \texttt{qwen2.5-coder:7b} \O{}~46{,}6~Findings ($\sigma \approx 3{,}20$; Range: 40--53), \texttt{qwen2.5-coder:14b} \O{}~51{,}3~Findings ($\sigma \approx 2{,}21$; Range: 45--52) und \texttt{qwen3:32b} \O{}~60{,}7~Findings ($\sigma \approx 1{,}25$; Range: 59--63). Bemerkenswert ist, dass \texttt{qwen3:32b} auf test-50 die höchste Konsistenz aller drei Modelle zeigt -- auf test-12 hatte \texttt{qwen2.5-coder:14b} die engste Streuung (vgl. Tabelle~\ref{tab:modell_summary_50}).
 
 Ein struktureller Effekt ist in der Recall-Matrix (Tabelle~\ref{tab:recall_matrix_50}) direkt ablesbar: Die Baseline (Tool-only) erzielt 43\,/\,50 Violations, während \texttt{qwen2.5-coder:7b} mit der vollen Pipeline nur 36\,/\,50 erreicht. Das ist kein Messfehler, sondern ein methodisch bedeutsamer Befund: Bei 50~Violations wird die \ac{LLM}-Zusammenfassungsphase zum \textbf{Engpass statt zum Mehrwert} -- sie komprimiert die ohnehin vollständigen Tool-Findings unter Informationsverlust, statt sie zu ergänzen. Die Ursache liegt im Token-Budget: 7b wird in 60\,\% der Runs abgeschnitten und überspringt oder bündelt dabei instabil Tool-detektierte Violations. Erst \texttt{qwen2.5-coder:14b} (48\,/\,50) und \texttt{qwen3:32b} (50\,/\,50) übertreffen das Baseline-Niveau.
 
@@ -343,7 +343,7 @@ Tabelle~\ref{tab:priorisierungsqualitaet_50} fasst das Must-have/Nice-to-have-Ve
 \end{table}
 
 \paragraph{Effizienz und NFA-02.}
-Die Priorisierungslaufzeit skaliert substanziell: \texttt{qwen2.5-coder:7b} \O{}~198\,s (Range: 75--241\,s), \texttt{qwen2.5-coder:14b} \O{}~444\,s (Range: 352--480\,s), \texttt{qwen3:32b} \O{}~1\,000\,s (Range: 885--1\,084\,s). \texttt{qwen2.5-coder:7b} und \texttt{qwen2.5-coder:14b} erfüllen \ac{NFA}-02 weiterhin komfortabel; \texttt{qwen3:32b} verletzt die Zehn-Minuten-Grenze nun auch im günstigsten Einzelrun (885\,s~=~14,8~Min.) deutlich.
+Die Gesamtlaufzeit skaliert substanziell: \texttt{qwen2.5-coder:7b} \O{}~413\,s (Range: 291--465\,s), \texttt{qwen2.5-coder:14b} \O{}~826\,s (Range: 733--871\,s), \texttt{qwen3:32b} \O{}~1\,897\,s (Range: 1\,752--2\,011\,s). Damit erfüllt auf test-50 nur \texttt{qwen2.5-coder:7b} \ac{NFA}-02; \texttt{qwen2.5-coder:14b} und \texttt{qwen3:32b} überschreiten die Zehn-Minuten-Grenze klar (vgl. Tabelle~\ref{tab:modell_summary_50}).
 
 \paragraph{Skalierungsvergleich test-12 vs.\ test-50.}
 Tabelle~\ref{tab:skalierungsvergleich} quantifiziert die zentralen Skalierungseffekte. Bei einer 4,2-fachen Erhöhung der Violation-Zahl skaliert \texttt{qwen2.5-coder:7b} mit dem Faktor~4,2 annähernd proportional, während \texttt{qwen2.5-coder:14b} (+2,3×) und \texttt{qwen3:32b} (+3,1×) einen komprimierten Anstieg zeigen -- ein Hinweis darauf, dass die größeren Modelle auf test-12 stärker token-limitiert waren. Die Laufzeit skaliert unterlinear (Faktor 2,0--2,8), da Detektionsoverhead und Prompt-Infrastruktur nur partiell mit der Violation-Zahl wachsen.
@@ -352,39 +352,46 @@ Tabelle~\ref{tab:skalierungsvergleich} quantifiziert die zentralen Skalierungsef
 \centering
 \small
 \renewcommand{\arraystretch}{1.15}
-\begin{tabular}{@{}lrrrrrrrr@{}}
+\begin{tabular}{@{}lrrrrrrrrr@{}}
 \toprule
 \textbf{Modell} &
 \multicolumn{3}{c}{\textbf{LLM-Det.-Findings Ø}} &
 \multicolumn{3}{c}{\textbf{Dauer Ø (s)}} &
-\multicolumn{2}{c}{\textbf{Truncation}} \\
-\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-9}
- & \textbf{12er} & \textbf{50er} & \textbf{100er} & \textbf{12er} & \textbf{50er} & \textbf{100er} & \textbf{12er} & \textbf{50er} \\
+\multicolumn{3}{c}{\textbf{Truncation}} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}
+ & \textbf{12er} & \textbf{50er} & \textbf{100er} & \textbf{12er} & \textbf{50er} & \textbf{100er} & \textbf{12er} & \textbf{50er} & \textbf{100er} \\
 \midrule
-\texttt{qwen2.5-coder:7b}  & 11{,}1 & 46{,}6 & 104{,}0 &  97\,s  &   198\,s  & 365\,s & 50\,\% & 60\,\% \\
-\texttt{qwen2.5-coder:14b} & 22{,}8 & 51{,}3 & -- & 243\,s  &   444\,s  & -- & 40\,\% & 70\,\% \\
-\texttt{qwen3:32b}         & 19{,}5 & 60{,}7 & -- & 361\,s  & 1\,000\,s & -- & 10\,\% & 90\,\% \\
+\texttt{qwen2.5-coder:7b}  & 11{,}1 & 46{,}6 & 104{,}0 &  97\,s  &   198\,s  &   365\,s & 50\,\% & 60\,\% & 80\,\% \\
+\texttt{qwen2.5-coder:14b} & 22{,}8 & 51{,}3 &  94{,}3 & 243\,s  &   444\,s  &   821\,s & 40\,\% & 70\,\% & 100\,\% \\
+\texttt{qwen3:32b}         & 19{,}5 & 60{,}7 &  99{,}1 & 361\,s  & 1\,000\,s & 1\,033\,s & 10\,\% & 90\,\% & 10\,\% \\
 \bottomrule
 \end{tabular}
-\caption[Skalierungsvergleich test-12 vs.\ test-50 vs.\ test-100]{Vergleich von Detektionsleistung und Effizienz über alle drei Testsuiten. \textit{Dauer} entspricht der Priorisierungslaufzeit (LLM-Phase). Truncation: Anteil der Runs, der das Output-Token-Limit vollständig ausschöpft. test-100 wurde bislang nur mit 7b evaluiert (10~Runs); 14b und 32b sind als Folgeschritt geplant.}
+\caption[Skalierungsvergleich test-12 vs.\ test-50 vs.\ test-100]{Vergleich von Detektionsleistung und Effizienz über alle drei Testsuiten (je 10~Runs pro Modell). \textit{Dauer} entspricht der Priorisierungslaufzeit (LLM-Phase). \textit{Truncation}: Anteil der Runs, der das Output-Token-Limit vollständig ausschöpft (\texttt{num\_predict}: 6\,144 / 8\,192 / 12\,288).}
 \label{tab:skalierungsvergleich}
 \end{table}
 
 \subsection{Evaluation an test-100}
 \label{sec:eval_suiten_100}
 
-Für die test-100-Suite (100~eingebettete Violations, 11~Komponenten, vgl. Anhang~\ref{app:accessibility_verstoesse_100}) wurden zehn Runs mit \texttt{qwen2.5-coder:7b} durchgeführt (\texttt{num\_predict}~=~12\,288). Die Evaluation von \texttt{qwen2.5-coder:14b} und \texttt{qwen3:32b} auf test-100 ist als Folgeschritt vorgesehen.
+Die test-100-Suite (100~eingebettete Violations, 11~Komponenten, vgl. Anhang~\ref{app:accessibility_verstoesse_100}) wurde mit allen drei Modellen evaluiert: je zehn Runs pro Modell (\texttt{num\_predict}~=~12\,288), insgesamt 30~Runs.
 
 \paragraph{Token-Budget und Truncation.}
-Die Anhebung des Output-Limits auf 12\,288~Tokens erwies sich als nicht ausreichend: 80\,\% aller Runs (8\,/\,10) schöpften das Budget vollständig aus, gegenüber 60\,\% auf test-50. Lediglich Run~4 (7\,902~Output-Tokens) und Run~8 (8\,007~Output-Tokens) lieferten vollständige Berichte. Diese beiden Runs bilden die Grundlage für die Recall-Schätzung: In nicht-trunzierten Reports erscheinen $\approx$45--51~Violations im finalen Bericht, was einer vorläufigen Recall-Rate von $\approx$70\,/\,100 entspricht. Die systematische Verifikation über alle 10~Runs (Violation-für-Violation, $>\,5/10$-Schwelle) ist als Folgeschritt vorgesehen.
+Das Output-Limit von 12\,288~Tokens bewährt sich modellabhängig sehr unterschiedlich. \texttt{qwen2.5-coder:7b} schöpft das Budget in 80\,\% der Runs aus (8\,/\,10). \texttt{qwen2.5-coder:14b} erreicht in \textit{allen} 10~Runs das Token-Limit (100\,\% Truncation) -- kein Run lieferte einen vollständigen Bericht. \texttt{qwen3:32b} verhält sich gegensätzlich: nur 1\,/\,10 Runs ist trunkiert, die übrigen Runs schließen vollständig ab; der mittlere Output liegt bei 7\,360~Tokens (vgl. Tabelle~\ref{tab:token_economy_100}).
 
-\paragraph{Laufzeit.}
-Die Gesamtlaufzeit skaliert substanziell: \O{}~765\,s (Range: 648--839\,s). \textbf{Alle zehn Runs verletzen NFA-02} -- selbst der günstigste Run benötigt 648\,s~=~10{,}8\,min. Damit ist \texttt{qwen2.5-coder:7b} auf test-100 für zeitkritische Einsätze nicht geeignet.
+\paragraph{Detektionsleistung und Recall.}
+Die Baseline-Tools (axe-core, Playwright, grep) erkennen stabil 34\,/\,100~Violations. Der \ac{LLM}-Detektor erzielt: \texttt{qwen2.5-coder:7b} \O{}~104{,}0~Findings ($\sigma = 5{,}75$, Range: 96--110), \texttt{qwen2.5-coder:14b} \O{}~94{,}3~Findings ($\sigma = 3{,}23$, Range: 91--100) und \texttt{qwen3:32b} \O{}~99{,}1~Findings ($\sigma = 5{,}63$, Range: 93--106) (vgl. Tabelle~\ref{tab:modell_summary_100}). Auf Basis der Recall-Matrix (Tabelle~\ref{tab:recall_matrix_100}, Schwelle $>\,5/10$~Runs) ergibt sich: Baseline~34\,/\,100, +7b~$\approx$40\,/\,100, +14b~$\approx$53\,/\,100, +32b~$\approx$63\,/\,100. Der starke Recall-Zuwachs bei 32b gegenüber der Baseline (+29~Violations) bestätigt den LLM-Mehrwert auch bei 100~Violations; die hohe Truncation-Rate bei 7b und 14b dämpft deren Erkennungsleistung systematisch.
 
-\paragraph{Konsistenz.}
-Der \ac{LLM}-Detektor liefert \O{}~104{,}0~Findings ($\sigma = 5{,}75$, Range: 96--110). Die Streuung ist höher als bei 14b und 32b auf test-12 ($\sigma < 0{,}6$), bleibt aber im Rahmen des für 7b beobachteten Musters. Priorisierungsqualität und Recall-Verhalten zeigen das bekannte 7b-Problem: Violations werden überwiegend als Must-have klassifiziert, sodass Nice-to-have-Violations bei Truncation systematisch fehlen.
+\paragraph{Einordnung der Pareto-Perspektive.}
+Für die Ursachenanalyse der verbleibenden Erkennungslücken wird das Pareto-Diagramm bewusst auf \textbf{test-100 mit \texttt{qwen3:32b}} fokussiert (Abbildung~\ref{fig:graph_pareto_demo} im Anhang). Diese Auswahl kombiniert den anspruchsvollsten Skalierungsfall (100~Violations) mit der methodisch belastbarsten Modellbasis in dieser Suite (höchster Recall, zugleich nur 1\,/\,10 trunkierten Runs). Damit wird ein \textit{Best-Case-unter-Last} analysiert: Die verbleibenden Lücken sind weniger durch offensichtliche Modellschwäche als durch strukturell schwierige Violations erklärbar. Ein Vollvergleich mit separaten Pareto-Diagrammen für alle Modelle und alle Suites wäre zwar möglich, würde den Anhang jedoch deutlich aufblähen und den Erkenntnisgewinn nur begrenzt erhöhen; der Modellvergleich ist bereits über Recall-, Laufzeit-, Konsistenz- und Truncation-Grafiken abgedeckt (vgl. Anhang Abbildungen~\ref{fig:graph_recall} bis~\ref{fig:graph_truncation}).
 
-Eine vollständige statistische Auswertung (Recall-Matrix, Erkennungsrate, Empfehlungsqualität) findet sich in Anhang~\ref{app:ausstehend_100}.
+\paragraph{Laufzeit und NFA-02.}
+Die Gesamtlaufzeit steigt auf test-100 deutlich an: \texttt{qwen2.5-coder:7b} \O{}~765\,s, \texttt{qwen2.5-coder:14b} \O{}~1\,550\,s, \texttt{qwen3:32b} \O{}~2\,616\,s. Damit verletzen alle drei Modelle \ac{NFA}-02 (Laufzeit $<10$~Min.) auf test-100 klar; bei strenger NFA-Auslegung ist dort kein Modell uneingeschränkt geeignet (vgl. Tabellen~\ref{tab:modell_summary_100} und~\ref{tab:suite_vergleich}). Damit ist test-100 im \ac{PoC}-Kontext nicht zeitkritisch einsetzbar; auf \ac{GPU}-beschleunigter Hardware wäre \ac{NFA}-02 jedoch realistischer erreichbar.
+
+\paragraph{Erkennungsrate, Empfehlungsqualität und CSV-Auszug.}
+Die vollständige Violation-für-Violation-Auswertung findet sich in den Anhang-Tabellen~\ref{tab:erkennungsrate_poc_100} (Erkennungsrate), \ref{tab:recall_matrix_100} (Recall-Matrix) und \ref{tab:empfehlungsqualitaet_100} (Empfehlungsqualität). Alle 73 erkannten Violations erhalten mit \texttt{qwen3:32b} Run~01 die Bewertung Stufe~2 (konkreter Dateiname, Zeile und Code-Snippet); 27 nicht erkannte Violations werden mit Stufe~0 ausgewiesen. Repräsentative Rohdatenzeilen zeigt Tabelle~\ref{tab:csv_beispiel_100}.
+
+\paragraph{Gesamteinordnung test-100.}
+Für die test-100-Suite ergibt sich damit ein klarer Trade-off: \texttt{qwen3:32b} liefert den höchsten Recall (63\,\%) und die stärkste Empfehlungsqualität, ist aber mit deutlichem Laufzeitnachteil verbunden; \texttt{qwen2.5-coder:14b} liegt bei der Erkennungsleistung darunter (53\,\%), bleibt jedoch als pragmatischer Kompromiss aus Qualität und Aufwand relevant. Für die operative Interpretation sind deshalb zwei Lesarten notwendig: \textit{strenge Sicht} (NFA-02 als Ausschlusskriterium) versus \textit{pragmatische Sicht} (Qualität/Zeit-Balance). Diese Trennung wird im Anhang explizit ausgewiesen (Tabellen~\ref{tab:modell_summary_100}, \ref{tab:suite_vergleich} und \ref{tab:einsatzempfehlungen}).
 
 \subsection{Evaluation am \ac{BWEC}-Untersuchungsobjekt}
 \label{sec:eval_bwec}
@@ -409,7 +416,7 @@ Die übergeordnete Forschungsfrage kann \textbf{überwiegend positiv} beantworte
 
 \textbf{Ja} -- mit modellabhängigen Einschränkungen. Mit \texttt{qwen2.5-coder:14b} und \texttt{qwen3:32b} erkennt die vollständige Pipeline alle drei Verstoßkategorien vollständig: syntaktische Violations zu 100\,\%, layout-bezogene zu 100\,\% und semantische zu 100\,\% (vgl. Tabelle~\ref{tab:recall_kategorie}). Die größte methodische Herausforderung liegt im semantischen Bereich: Hier ist der Recall in der Baseline am niedrigsten (60\,\%), und der \ac{LLM}-Detektor leistet den größten Einzelbeitrag (+40~Prozentpunkte). Bei \texttt{qwen2.5-coder:7b} bestehen modellspezifische Grenzen: V2 und V11 werden nie erkannt.
 
-Im Vergleich zur Literatur erzielen regelbasierte Tool-Ansätze wie Testaro (Pool) oder axe-only Konfigurationen typischerweise Recall-Werte im Bereich von 55--70\,\%.\footcite[Vgl.][]{kodithuwakku_assessing_2025} Fathallah et al. (AccessGuru) erreichen mit cloud-basierten ReAct-Schleifen einen Violation Score Decrease von 0,84 auf einer Stichprobe realer Webseiten.\footcite[Vgl.][]{fathallah_accessguru_2025} Der ACE-Ansatz erzielt auf der kontrollierten test-12-Suite einen Recall von 75--100\,\% mit lokalem Modell -- ein direkter Vergleich ist aufgrund unterschiedlicher Testsuiten nicht möglich, die Größenordnung ist jedoch vergleichbar.
+Im Vergleich zur Literatur erzielen regelbasierte Tool-Ansätze wie Testaro (Pool) oder axe-only Konfigurationen typischerweise Recall-Werte im Bereich von 55--70\,\%.\footcite[Vgl.][]{kodithuwakku_assessing_2025} Fathallah et al. (AccessGuru) erreichen mit cloud-basierten ReAct-Schleifen einen Violation Score Decrease von 0,84 auf einer Stichprobe realer Webseiten.\footcite[Vgl.][]{fathallah_accessguru_2025} Der ACE-Ansatz zeigt über alle drei kontrollierten Testsuiten konsistent einen Mehrwert durch die Kontextkombination: auf test-12 steigt der Recall von 66,7\,\% (Baseline) auf bis zu 100\,\% (14b/32b), auf test-50 von 43/50 (Baseline) auf 48/50 (14b) bzw. 50/50 (32b) und auf test-100 von 34/100 (Baseline) auf ca. 53/100 (14b) bzw. ca. 63/100 (32b). Ein direkter Benchmark gegen die genannten Literaturwerte bleibt dennoch methodisch eingeschränkt, da Datensätze, Ground-Truth-Konstruktion, Metriken und Laufzeitumgebungen nicht identisch sind; die Gegenüberstellung ist daher als Größenordnungs- und Trendvergleich zu verstehen.
 
 \subsection{TF2: Mehrwert der Kontextkombination}
 \label{sec:ff_tf2}
@@ -421,7 +428,7 @@ Zusätzlich verbessert die Kontextkombination die Umsetzbarkeit der Empfehlungen
 \section{Modellwahl und Einsatzempfehlungen}
 \label{sec:modellwahl}
 
-Aus den vorstehenden Ergebnissen zu Recall, Priorisierungsqualität, Fix-Qualität und Laufzeit lassen sich folgende Einsatzempfehlungen je Anwendungskontext ableiten:
+Aus den vorstehenden Ergebnissen zu Recall, Priorisierungsqualität, Fix-Qualität und Laufzeit lassen sich folgende Einsatzempfehlungen je Anwendungskontext ableiten. Eine suiteübergreifende Einordnung findet sich ergänzend in den Anhang-Tabellen~\ref{tab:einsatzempfehlungen} und~\ref{tab:suite_vergleich}.
 
 \begin{table}[htbp]
 \centering
@@ -440,7 +447,7 @@ Forschung / Referenzläufe & \texttt{qwen3:32b} (19,5 $\pm$ 0,53 Findings; 701\,
 \label{tab:modellwahl}
 \end{table}
 
-\texttt{qwen2.5-coder:14b} stellt den besten Trade-off für den regulären Einsatz dar. Das Modell erreicht im Mittel 22,8 \ac{LLM}-Findings bei sehr geringer Streuung ($\sigma = 0{,}42$), erzielt einen Recall von 100\,\% auf der test-12-Suite und bleibt mit einer Gesamtlaufzeit von 420\,s deutlich innerhalb der formulierten Laufzeitgrenze. Damit eignet es sich als Standardmodell für qualitätssichernde Prüfungen und für produktionsnahe Accessibility-Audits.
+\texttt{qwen2.5-coder:14b} stellt den besten Trade-off für den regulären Einsatz dar. Das Modell erreicht im Mittel 22,8 \ac{LLM}-Findings bei sehr geringer Streuung ($\sigma = 0{,}42$), erzielt einen Recall von 100\,\% auf der test-12-Suite und bleibt mit einer Gesamtlaufzeit von 420\,s deutlich innerhalb der formulierten Laufzeitgrenze (vgl. Tabelle~\ref{tab:modell_summary_12}). Damit eignet es sich als Standardmodell für qualitätssichernde Prüfungen und für produktionsnahe Accessibility-Audits.
 
 \texttt{qwen3:32b} bleibt das methodisch stärkste Referenzmodell, wenn maximale Stabilität und vollständige semantische Abdeckung im Vordergrund stehen. Der Zugewinn gegenüber 14b fällt jedoch im Verhältnis zur deutlich höheren Laufzeit begrenzt aus -- beide Modelle erzielen auf test-12 identischen Recall von 100\,\%. Für regelmäßige Entwicklungszyklen ist 32b daher eher als Referenz- oder Validierungsmodell zu verstehen als als wirtschaftliche Standardeinstellung.
 
