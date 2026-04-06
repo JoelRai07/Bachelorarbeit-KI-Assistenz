@@ -1,5 +1,5 @@
 \contentsline {section}{\numberline {Anhang\ 1}Übersicht der Anhangsstruktur}{74}{section*.564}%
-\contentsline {section}{\numberline {Anhang\ 2}Komplexität von Home Pages}{74}{section*.568}%
+\contentsline {section}{\numberline {Anhang\ 2}Komplexität von Home Pages}{75}{section*.568}%
 \contentsline {section}{\numberline {Anhang\ 3}Erweiterte Konzeptmatrix}{76}{section*.573}%
 \contentsline {section}{\numberline {Anhang\ 4}Schematische Übersicht der \ac {ACE}-Pipeline}{78}{section*.578}%
 \contentsline {section}{\numberline {Anhang\ 5}System-Prompt des \ac {ACE}-Assistenzsystems}{79}{section*.583}%
@@ -9,7 +9,7 @@
 \contentsline {section}{\numberline {Anhang\ 9}Vergleich über alle Suites}{85}{section*.727}%
 \contentsline {section}{\numberline {Anhang\ 10}Bewertungsskala für die Empfehlungsqualität der \ac {LLM}-Ausgaben (generell)}{86}{section*.730}%
 \contentsline {section}{\numberline {Anhang\ 11}Erfüllungsgrad der funktionalen und nicht-funktionalen Anforderungen (generell)}{87}{section*.733}%
-\contentsline {section}{\numberline {Anhang\ 12}Reproduzierbarkeitsblatt}{89}{section*.736}%
+\contentsline {section}{\numberline {Anhang\ 12}Reproduzierbarkeitsblatt}{88}{section*.736}%
 \contentsline {section}{\numberline {Anhang\ 13}Console-Output-Auszüge eines Benchmark-Runs}{90}{section*.739}%
 \contentsline {section}{\numberline {Anhang\ 14}Threats to Validity}{91}{section*.743}%
 \contentsline {section}{\numberline {Anhang\ 15}test-12-Suite (kompletter Block)}{93}{section*.746}%

@@ -1,23 +1,24 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'latex-vorlage.blg'
-[103] biber-MSWIN64:340> INFO - === 
-[139] Biber.pm:420> INFO - Reading 'latex-vorlage.bcf'
-[269] Biber.pm:994> INFO - Found 88 citekeys in bib section 0
-[280] Biber.pm:4463> INFO - Processing section 0
-[291] Biber.pm:4654> INFO - Looking for bibtex file 'includes/literatur-datenbank.bib' for section 0
-[345] bibtex.pm:1713> INFO - LaTeX decoding ...
-[472] bibtex.pm:1519> INFO - Found BibTeX data source 'includes/literatur-datenbank.bib'
-[1100] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1100] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1100] Biber.pm:4283> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
-[1100] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
-[1226] bbl.pm:676> INFO - Writing 'latex-vorlage.bbl' with encoding 'UTF-8'
-[1339] bbl.pm:779> INFO - Output to latex-vorlage.bbl
-[1346] Biber.pm:131> WARN - legacy month field 'Apr' in entry 'BITV' is not an integer - this will probably not sort properly.
-[1346] Biber.pm:131> WARN - legacy month field 'Jul' in entry 'BITBW_2021' is not an integer - this will probably not sort properly.
-[1346] Biber.pm:131> WARN - legacy month field 'May' in entry 'Landesrecht_BW' is not an integer - this will probably not sort properly.
-[1346] Biber.pm:131> WARN - legacy month field 'Jul' in entry 'Šmite_Wohlin_Galviņa_Prikladnicki_2012' is not an integer - this will probably not sort properly.
-[1346] Biber.pm:131> WARN - ISBN '978-92-4-156418-2; 978-92-4-068800-1 (PDF); 978-92-4-068636-6 (ePUB); 978-92-4-068637-3 (Daisy); 978-92-4-068521-5 (PDF, original)' in entry 'WorldReportDisability' is invalid - run biber with '--validate_datamodel' for details.
-[1346] Biber.pm:131> WARN - legacy month field 'Dec' in entry 'bwec' is not an integer - this will probably not sort properly.
-[1346] Biber.pm:131> WARN - I didn't find a database entry for 'brynjolfssonNBERWORKINGPAPER' (section 0)
-[1346] Biber.pm:133> INFO - WARNINGS: 7
+[98] biber-MSWIN64:340> INFO - === 
+[133] Biber.pm:420> INFO - Reading 'latex-vorlage.bcf'
+[300] Biber.pm:994> INFO - Found 88 citekeys in bib section 0
+[320] Biber.pm:4463> INFO - Processing section 0
+[333] Biber.pm:4654> INFO - Looking for bibtex file 'includes/literatur-datenbank.bib' for section 0
+[391] bibtex.pm:1713> INFO - LaTeX decoding ...
+[535] bibtex.pm:1519> INFO - Found BibTeX data source 'includes/literatur-datenbank.bib'
+[1195] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1195] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1195] Biber.pm:4283> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
+[1195] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
+[1313] bbl.pm:676> INFO - Writing 'latex-vorlage.bbl' with encoding 'UTF-8'
+[1426] bbl.pm:779> INFO - Output to latex-vorlage.bbl
+[1432] Biber.pm:131> WARN - legacy month field 'Apr' in entry 'BITV' is not an integer - this will probably not sort properly.
+[1432] Biber.pm:131> WARN - legacy month field 'Jul' in entry 'BITBW_2021' is not an integer - this will probably not sort properly.
+[1432] Biber.pm:131> WARN - legacy month field 'May' in entry 'Landesrecht_BW' is not an integer - this will probably not sort properly.
+[1433] Biber.pm:131> WARN - legacy month field 'Jul' in entry 'Šmite_Wohlin_Galviņa_Prikladnicki_2012' is not an integer - this will probably not sort properly.
+[1433] Biber.pm:131> WARN - legacy month field 'Dec' in entry 'bwec' is not an integer - this will probably not sort properly.
+[1433] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\joely\AppData\Local\Temp\biber_tmp_ea0A\e672c201c8e0f1acfb439ecdc2413f6e_15388.utf8, line 851, warning: 1 characters of junk seen at toplevel
+[1433] Biber.pm:131> WARN - I didn't find a database entry for 'brynjolfssonNBERWORKINGPAPER' (section 0)
+[1433] Biber.pm:131> WARN - I didn't find a database entry for 'Anthropic_API_Docs' (section 0)
+[1433] Biber.pm:133> INFO - WARNINGS: 8

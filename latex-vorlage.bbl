@@ -77,9 +77,6 @@
       \verb{doi}
       \verb 10.1145/3192714.3192834
       \endverb
-      \verb{file}
-      \verb Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\4NUCZR9L\\Abou-Zahra et al. - 2018 - Artificial Intelligence (AI) for Web Accessibility Is Conformance Evaluation a Way Forward.pdf:application/pdf
-      \endverb
       \verb{urlraw}
       \verb https://dl.acm.org/doi/10.1145/3192714.3192834
       \endverb
@@ -145,9 +142,6 @@
       \verb{doi}
       \verb 10.14569/IJACSA.2016.071023
       \endverb
-      \verb{file}
-      \verb Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\7BPG7RZF\\Abuaddous et al. - 2016 - Web Accessibility Challenges.pdf:application/pdf
-      \endverb
       \verb{urlraw}
       \verb https://thesai.org/Publications/ViewPaper?Volume=7&Issue=10&Code=ijacsa&SerialNo=23
       \endverb
@@ -190,7 +184,7 @@
       \verb https://www.anthropic.com/claude
       \endverb
     \endentry
-    \entry{Anthropic_API_Docs}{software}{}{}
+    \entry{System_Card}{software}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=f431db65cea024a5f19eab835afefee2}{%
            family={Anthropic},
@@ -212,47 +206,10 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Claude API Docs}
-      \field{title}{Glossary - Anthropic Developer Documentation}
-      \field{urlday}{1}
-      \field{urlmonth}{3}
-      \field{urlyear}{2026}
-      \field{year}{2026}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://platform.claude.com/docs/en/about-claude/glossary
-      \endverb
-      \verb{url}
-      \verb https://platform.claude.com/docs/en/about-claude/glossary
-      \endverb
-    \endentry
-    \entry{System_Card}{software}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=f431db65cea024a5f19eab835afefee2}{%
-           family={Anthropic},
-           familyi={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{f431db65cea024a5f19eab835afefee2}
-      \strng{fullhash}{f431db65cea024a5f19eab835afefee2}
-      \strng{fullhashraw}{f431db65cea024a5f19eab835afefee2}
-      \strng{bibnamehash}{f431db65cea024a5f19eab835afefee2}
-      \strng{authorbibnamehash}{f431db65cea024a5f19eab835afefee2}
-      \strng{authornamehash}{f431db65cea024a5f19eab835afefee2}
-      \strng{authorfullhash}{f431db65cea024a5f19eab835afefee2}
-      \strng{authorfullhashraw}{f431db65cea024a5f19eab835afefee2}
-      \field{extraname}{3}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradate}{3}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
       \field{day}{17}
       \field{journaltitle}{System Card: Claude Sonnet 4.6}
       \field{month}{2}
-      \field{title}{System Card: Claude Sonnet 4.6 [Technical Report]}
+      \field{title}{System Card: Claude Sonnet 4.6}
       \field{urlday}{2}
       \field{urlmonth}{3}
       \field{urlyear}{2026}
@@ -452,9 +409,6 @@
       \verb{doi}
       \verb 10.1145/3748699.3749805
       \endverb
-      \verb{file}
-      \verb Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\YTSGK7SR\\Bassi et al. - 2025 - An Assessment of LLM-Based Auditing and Validation for Web Accessibility.pdf:application/pdf
-      \endverb
       \verb{urlraw}
       \verb https://dl.acm.org/doi/10.1145/3748699.3749805
       \endverb
@@ -528,9 +482,6 @@
       \range{pages}{14}
       \verb{doi}
       \verb 10.1145/3442188.3445922
-      \endverb
-      \verb{file}
-      \verb Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\Z8WSFNML\\Bender et al. - 2021 - On the Dangers of Stochastic Parrots Can Language Models Be Too Big .pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://dl.acm.org/doi/10.1145/3442188.3445922
@@ -791,9 +742,6 @@
       \field{urldateera}{ce}
       \field{pages}{1877\bibrangedash 1901}
       \range{pages}{25}
-      \verb{file}
-      \verb C:\Users\joely\Zotero\storage\VMB4APNJ\Brown et al. - 2020 - Language Models are Few-Shot Learners.pdf
-      \endverb
       \verb{urlraw}
       \verb https://papers.nips.cc/paper_files/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html
       \endverb
@@ -928,9 +876,6 @@
       \verb{doi}
       \verb 10.1145/3468264.3468581
       \endverb
-      \verb{file}
-      \verb Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\CYZWTEVU\\Chiou et al. - 2021 - Detecting and localizing keyboard accessibility failures in web applications.pdf:application/pdf
-      \endverb
       \verb{urlraw}
       \verb https://dl.acm.org/doi/10.1145/3468264.3468581
       \endverb
@@ -978,7 +923,6 @@
       \field{eventtitle}{2024 {IEEE} 21st Consumer Communications \& Networking Conference ({CCNC})}
       \field{issn}{2331-9860}
       \field{month}{1}
-      \field{note}{{ISSN}: 2331-9860}
       \field{shorttitle}{On the Interaction with Large Language Models for Web Accessibility}
       \field{title}{On the Interaction with Large Language Models for Web Accessibility: Implications and Challenges}
       \field{urlday}{24}
@@ -991,9 +935,6 @@
       \range{pages}{6}
       \verb{doi}
       \verb 10.1109/CCNC51664.2024.10454680
-      \endverb
-      \verb{file}
-      \verb Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\XRUFQHS7\\Delnevo et al. - 2024 - On the Interaction with Large Language Models for Web Accessibility Implications and Challenges.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://ieeexplore.ieee.org/document/10454680
@@ -1031,7 +972,7 @@
       \field{urlday}{24}
       \field{urlmonth}{2}
       \field{urlyear}{2026}
-      \field{version}{4.x}
+      \field{version}{4.10.3}
       \field{year}{2026}
       \field{dateera}{ce}
       \field{urldateera}{ce}
@@ -1129,9 +1070,6 @@
       \range{pages}{7}
       \verb{doi}
       \verb 10.1145/3696593.3696614
-      \endverb
-      \verb{file}
-      \verb Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\FBKGASS2\\Doush und Kassem - 2025 - Evaluating AI-Generated Web Code for Accessibility Compliance A Metric-Driven Approach.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://dl.acm.org/doi/10.1145/3696593.3696614
@@ -1276,9 +1214,6 @@
       \verb{doi}
       \verb 10.1145/3663547.3746360
       \endverb
-      \verb{file}
-      \verb Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\VCA4FGQZ\\Fathallah et al. - 2025 - AccessGuru Leveraging LLMs to Detect and Correct Web Accessibility Violations in HTML Code.pdf:application/pdf
-      \endverb
       \verb{urlraw}
       \verb https://dl.acm.org/doi/10.1145/3663547.3746360
       \endverb
@@ -1348,9 +1283,6 @@
       \verb{doi}
       \verb 10.1016/j.procs.2012.10.004
       \endverb
-      \verb{file}
-      \verb ScienceDirect Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\23E5IQL2\\Fernandes et al. - 2012 - Evaluating the Accessibility of Web Applications.pdf:application/pdf;ScienceDirect Snapshot:C\:\\Users\\joely\\Zotero\\storage\\H3VXZGLK\\S1877050912007661.html:text/html
-      \endverb
       \verb{urlraw}
       \verb https://www.sciencedirect.com/science/article/pii/S1877050912007661
       \endverb
@@ -1368,8 +1300,11 @@
            giveni={D\bibinitperiod},
            givenun=0}}%
       }
+      \list{location}{1}{%
+        {Sebastopol, CA}%
+      }
       \list{publisher}{1}{%
-        {O’Reilly}%
+        {O'Reilly Media}%
       }
       \strng{namehash}{2caeb722af2e88c021f73029f9740851}
       \strng{fullhash}{2caeb722af2e88c021f73029f9740851}
@@ -1385,8 +1320,9 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{isbn}{0596805527}
-      \field{title}{JavaScript: The definitive guide}
+      \field{edition}{7}
+      \field{isbn}{978-1491952023}
+      \field{title}{JavaScript: The Definitive Guide}
       \field{year}{2020}
     \endentry
     \entry{gao_retrieval_augmented_generation_2023}{article}{}{}
@@ -1438,8 +1374,8 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{eprinttype}{arXiv}
-      \field{journaltitle}{arXiv preprint arXiv:2312.10997}
+      \field{eprintclass}{cs.CL}
+      \field{eprinttype}{arxiv}
       \field{title}{Retrieval-Augmented Generation for Large Language Models: A Survey}
       \field{urlday}{1}
       \field{urlmonth}{3}
@@ -1546,9 +1482,6 @@
       \verb{doi}
       \verb 10.1145/3663548.3675658
       \endverb
-      \verb{file}
-      \verb Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\U2BPF3PW\\Gubbi Mohanbabu und Pavel - 2024 - Context-Aware Image Descriptions for Web Accessibility.pdf:application/pdf
-      \endverb
       \verb{urlraw}
       \verb https://dl.acm.org/doi/10.1145/3663548.3675658
       \endverb
@@ -1610,9 +1543,6 @@
       \verb{doi}
       \verb 10.1145/3701716.3715552
       \endverb
-      \verb{file}
-      \verb Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\ZYA7HC9M\\Guriță und Vatavu - 2025 - Insights and Implications of Evaluating Accessibility Compliance in AI-Generated Web Interfaces.pdf:application/pdf
-      \endverb
       \verb{urlraw}
       \verb https://dl.acm.org/doi/10.1145/3701716.3715552
       \endverb
@@ -1644,21 +1574,13 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Insights from Googlers into our products, technology, and the Google culture}
-      \field{day}{19}
-      \field{langid}{english}
-      \field{month}{11}
-      \field{title}{Automatic captions in {YouTube}}
-      \field{titleaddon}{Official Google Blog}
+      \field{note}{Official Google Blog}
+      \field{title}{Automatic captions in YouTube}
       \field{urlday}{4}
       \field{urlmonth}{3}
       \field{urlyear}{2026}
       \field{year}{2009}
-      \field{dateera}{ce}
       \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\joely\\Zotero\\storage\\GN48LQU9\\automatic-captions-in-youtube.html:text/html
-      \endverb
       \verb{urlraw}
       \verb https://googleblog.blogspot.com/2009/11/automatic-captions-in-youtube.html
       \endverb
@@ -1719,9 +1641,6 @@
       \range{pages}{-1}
       \verb{doi}
       \verb 10.1145/3729371
-      \endverb
-      \verb{file}
-      \verb Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\RH5HIN7F\\He et al. - 2025 - Enhancing Web Accessibility Automated Detection of Issues with Generative AI.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://dl.acm.org/doi/10.1145/3729371
@@ -1931,9 +1850,6 @@
       \verb{eprint}
       \verb 2401.16450 [cs]
       \endverb
-      \verb{file}
-      \verb Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\ACKUU7VH\\Huang et al. - 2024 - ACCESS Prompt Engineering for Automated Web Accessibility Violation Corrections.pdf:application/pdf;Snapshot:C\:\\Users\\joely\\Zotero\\storage\\IKR8U7DD\\2401.html:text/html
-      \endverb
       \verb{urlraw}
       \verb http://arxiv.org/abs/2401.16450
       \endverb
@@ -2049,9 +1965,6 @@
       \endverb
       \verb{eprint}
       \verb 2311.05232 [cs]
-      \endverb
-      \verb{file}
-      \verb Preprint PDF:C\:\\Users\\joely\\Zotero\\storage\\PIXY9PQH\\Huang et al. - 2025 - A Survey on Hallucination in Large Language Models Principles, Taxonomy, Challenges, and Open Quest.pdf:application/pdf;Snapshot:C\:\\Users\\joely\\Zotero\\storage\\V7ZF9NHR\\2311.html:text/html
       \endverb
       \verb{urlraw}
       \verb http://arxiv.org/abs/2311.05232
@@ -2230,7 +2143,7 @@
       \field{eprinttype}{arxiv}
       \field{month}{11}
       \field{number}{{arXiv}:2409.12186}
-      \field{title}{Qwen2.5-Coder [Technical Report]}
+      \field{title}{Qwen2.5-Coder Technical Report}
       \field{urlday}{15}
       \field{urlmonth}{3}
       \field{urlyear}{2026}
@@ -2242,9 +2155,6 @@
       \endverb
       \verb{eprint}
       \verb 2409.12186 [cs]
-      \endverb
-      \verb{file}
-      \verb Preprint PDF:C\:\\Users\\joely\\Zotero\\storage\\5QP99WXI\\Hui et al. - 2024 - Qwen2.5-Coder Technical Report.pdf:application/pdf;Snapshot:C\:\\Users\\joely\\Zotero\\storage\\H3BI7363\\2409.html:text/html
       \endverb
       \verb{urlraw}
       \verb http://arxiv.org/abs/2409.12186
@@ -2291,7 +2201,6 @@
       \field{isbn}{978-3-11-033729-7}
       \field{langid}{german}
       \field{month}{5}
-      \field{note}{Google-Books-{ID}: T5ylCQA\-AQBAJ}
       \field{pagetotal}{292}
       \field{shorttitle}{Barrierefreie Informationssysteme}
       \field{title}{Barrierefreie Informationssysteme: Zugänglichkeit für Menschen mit Behinderung in Theorie und Praxis}
@@ -2345,9 +2254,6 @@
       \verb{doi}
       \verb 10.1109/ICARC64760.2025.10963173
       \endverb
-      \verb{file}
-      \verb Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\UAMNXE6I\\Kodithuwakku und Wickramaarachchi - 2025 - Assessing the Limits of Automated Accessibility Testing Insights for QA Engineers and Tool Develope.pdf:application/pdf
-      \endverb
       \verb{urlraw}
       \verb https://ieeexplore.ieee.org/document/10963173
       \endverb
@@ -2386,15 +2292,6 @@
       \field{isbn}{978-1-4666-4438-0}
       \field{title}{Assistive Technologies and Computer Access for Motor Disabilities}
       \field{year}{2013}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\joely\\Zotero\\storage\\9S78JYLV\\75832.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://www.igi-global.com/book/assistive-technologies-computer-access-motor/75832
-      \endverb
-      \verb{url}
-      \verb https://www.igi-global.com/book/assistive-technologies-computer-access-motor/75832
-      \endverb
     \endentry
     \entry{krok_digital_2024}{article}{}{}
       \name{author}{1}{}{%
@@ -2435,9 +2332,6 @@
       \field{urldateera}{ce}
       \field{pages}{857\bibrangedash 876}
       \range{pages}{20}
-      \verb{file}
-      \verb Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\94LQGZB4\\Krok - 2024 - Digital Accessibility as an Essential Element of an Inclusive Organization.pdf:application/pdf
-      \endverb
       \verb{urlraw}
       \verb https://ersj.eu/journal/3752
       \endverb
@@ -2477,9 +2371,6 @@
       \field{urlyear}{2026}
       \field{year}{2026}
       \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\joely\\Zotero\\storage\\EKWFBDAK\\b1caa4c3a185629299ec234d2314e190.html:text/html
-      \endverb
       \verb{urlraw}
       \verb https://gist.github.com/tkrotoff/b1caa4c3a185629299ec234d2314e190
       \endverb
@@ -2600,9 +2491,6 @@
       \field{title}{Research Methods in Human-Computer Interaction}
       \field{year}{2017}
       \field{dateera}{ce}
-      \verb{file}
-      \verb PDF:C\:\\Users\\joely\\Zotero\\storage\\RLQB4NW6\\2017 - Research Methods in Human-Computer Interaction.pdf:application/pdf
-      \endverb
     \endentry
     \entry{lewisRetrievalAugmentedGenerationKnowledgeIntensive2021}{inproceedings}{}{}
       \name{author}{12}{}{%
@@ -2802,9 +2690,6 @@
       \verb{doi}
       \verb 10.1145/3556979
       \endverb
-      \verb{file}
-      \verb Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\YMIHPVW8\\Manca et al. - 2023 - The Transparency of Automatic Web Accessibility Evaluation Tools Design Criteria, State of the Art,.pdf:application/pdf
-      \endverb
       \verb{urlraw}
       \verb https://dl.acm.org/doi/10.1145/3556979
       \endverb
@@ -2998,9 +2883,6 @@
       \verb{doi}
       \verb 10.1145/2858036.2858116
       \endverb
-      \verb{file}
-      \verb Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\A8WKLNMZ\\Morris et al. - 2016 - With most of it being pictures now, I rarely use it Understanding Twitter's Evolving Accessibilit.pdf:application/pdf
-      \endverb
       \verb{urlraw}
       \verb https://dl.acm.org/doi/10.1145/2858036.2858116
       \endverb
@@ -3085,9 +2967,6 @@
       \verb{doi}
       \verb 10.1145/3132525.3132530
       \endverb
-      \verb{file}
-      \verb Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\HLJ6CRYF\\Morrison et al. - 2017 - Imagining Artificial Intelligence Applications with People with Visual Disabilities using Tactile Id.pdf:application/pdf
-      \endverb
       \verb{urlraw}
       \verb https://dl.acm.org/doi/10.1145/3132525.3132530
       \endverb
@@ -3141,9 +3020,6 @@
       \range{pages}{3}
       \verb{doi}
       \verb 10.1145/3677846.3679054
-      \endverb
-      \verb{file}
-      \verb Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\DYQ4DTFE\\Mowar - 2024 - Accessibility in AI-Assisted Web Development.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://dl.acm.org/doi/10.1145/3677846.3679054
@@ -3215,9 +3091,6 @@
       \verb{eprint}
       \verb 2406.18460 [cs]
       \endverb
-      \verb{file}
-      \verb Preprint PDF:C\:\\Users\\joely\\Zotero\\storage\\VFSJ2W6M\\Njifenjou et al. - 2024 - Role-Play Zero-Shot Prompting with Large Language Models for Open-Domain Human-Machine Conversation.pdf:application/pdf;Snapshot:C\:\\Users\\joely\\Zotero\\storage\\CDPPW7DY\\2406.html:text/html
-      \endverb
       \verb{urlraw}
       \verb http://arxiv.org/abs/2406.18460
       \endverb
@@ -3284,9 +3157,9 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{eprinttype}{arXiv}
-      \field{journaltitle}{arXiv preprint arXiv:2303.08774}
-      \field{title}{GPT-4 [Technical Report]}
+      \field{eprintclass}{cs.CL}
+      \field{eprinttype}{arxiv}
+      \field{title}{GPT-4 Technical Report}
       \field{urlday}{1}
       \field{urlmonth}{3}
       \field{urlyear}{2026}
@@ -3334,47 +3207,6 @@
       \endverb
       \verb{url}
       \verb https://developers.openai.com/api/reference/resources/completions/methods/create/
-      \endverb
-    \endentry
-    \entry{WorldReportDisability}{book}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=8179b1fdebe9235e54501d2878c47e1b}{%
-           family={Organization},
-           familyi={O\bibinitperiod},
-           given={World\bibnamedelima Health},
-           giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {World Health Organization}%
-      }
-      \strng{namehash}{8179b1fdebe9235e54501d2878c47e1b}
-      \strng{fullhash}{8179b1fdebe9235e54501d2878c47e1b}
-      \strng{fullhashraw}{8179b1fdebe9235e54501d2878c47e1b}
-      \strng{bibnamehash}{8179b1fdebe9235e54501d2878c47e1b}
-      \strng{authorbibnamehash}{8179b1fdebe9235e54501d2878c47e1b}
-      \strng{authornamehash}{8179b1fdebe9235e54501d2878c47e1b}
-      \strng{authorfullhash}{8179b1fdebe9235e54501d2878c47e1b}
-      \strng{authorfullhashraw}{8179b1fdebe9235e54501d2878c47e1b}
-      \field{sortinit}{O}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{978-92-4-156418-2; 978-92-4-068800-1 (PDF); 978-92-4-068636-6 (ePUB); 978-92-4-068637-3 (Daisy); 978-92-4-068521-5 (PDF, original)}
-      \field{langid}{english}
-      \field{note}{WHO Library Cataloguing-in-Publication Data. NLM classification: HV 1553}
-      \field{title}{World Report on Disability}
-      \field{urlday}{4}
-      \field{urlmonth}{3}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.who.int/teams/noncommunicable-diseases/sensory-functions-disability-and-rehabilitation/world-report-on-disability
-      \endverb
-      \verb{url}
-      \verb https://www.who.int/teams/noncommunicable-diseases/sensory-functions-disability-and-rehabilitation/world-report-on-disability
       \endverb
     \endentry
     \entry{paterno_how_2025}{inproceedings}{}{}
@@ -3441,9 +3273,6 @@
       \range{pages}{8}
       \verb{doi}
       \verb 10.1145/3750069.3750310
-      \endverb
-      \verb{file}
-      \verb Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\Y72CEJ75\\Paternò et al. - 2025 - How an LLM Can Improve Automatic Web Accessibility Validation .pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://dl.acm.org/doi/10.1145/3750069.3750310
@@ -3558,9 +3387,6 @@
       \verb{doi}
       \verb 10.1109/ACCESS.2020.3001766
       \endverb
-      \verb{file}
-      \verb Volltext:C\:\\Users\\joely\\Zotero\\storage\\KMMD2QDR\\Pérez et al. - 2020 - Longitudinal Study of Two Virtual Cursors for People With Motor Impairments A Performance and Satis.pdf:application/pdf
-      \endverb
     \endentry
     \entry{pool_testaro_2023}{inproceedings}{}{}
       \name{author}{1}{}{%
@@ -3609,9 +3435,6 @@
       \range{pages}{4}
       \verb{doi}
       \verb 10.1145/3597638.3614505
-      \endverb
-      \verb{file}
-      \verb Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\WI7MG7P4\\Pool - 2023 - Testaro Efficient Ensemble Testing for Web Accessibility.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://dl.acm.org/doi/10.1145/3597638.3614505
@@ -3674,9 +3497,6 @@
       \field{urldateera}{ce}
       \verb{doi}
       \verb 10.61978/digitus.v3i2.957
-      \endverb
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\joely\\Zotero\\storage\\PVIFI3NZ\\396366120_Policy_in_Practice_A_Systematic_Review_of_WCAG_22_and_ADA_2024_Effects_on_Web_and_Mob.html:text/html
       \endverb
       \verb{urlraw}
       \verb https://www.researchgate.net/publication/396366120_Policy_in_Practice_A_Systematic_Review_of_WCAG_22_and_ADA_2024_Effects_on_Web_and_Mobile_Accessibility
@@ -3967,8 +3787,8 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{eprinttype}{arXiv}
-      \field{journaltitle}{arXiv preprint arXiv:2406.06608}
+      \field{eprintclass}{cs.CL}
+      \field{eprinttype}{arxiv}
       \field{title}{The Prompt Report: A Systematic Survey of Prompting Techniques}
       \field{urlday}{9}
       \field{urlmonth}{3}
@@ -4035,9 +3855,6 @@
       \range{pages}{10}
       \verb{doi}
       \verb 10.1145/3721146.3721944
-      \endverb
-      \verb{file}
-      \verb Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\YKZQR3HL\\Silvestre und Pietzuch - 2025 - Systems Opportunities for LLM Fine-Tuning using Reinforcement Learning.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://dl.acm.org/doi/10.1145/3721146.3721944
@@ -4214,9 +4031,6 @@
       \verb{doi}
       \verb 10.1145/3702038.3702090
       \endverb
-      \verb{file}
-      \verb Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\CQU5EUQU\\Souza et al. - 2024 - Accessibility Evaluation of Web Systems for People with Visual Impairments Findings from a Literatu.pdf:application/pdf
-      \endverb
       \verb{urlraw}
       \verb https://dl.acm.org/doi/10.1145/3702038.3702090
       \endverb
@@ -4329,9 +4143,6 @@
       \range{pages}{12}
       \verb{doi}
       \verb 10.1145/3650212.3652113
-      \endverb
-      \verb{file}
-      \verb Full Text PDF:C\:\\Users\\joely\\Zotero\\storage\\XA3KK9IK\\Tafreshipour et al. - 2024 - Ma11y A Mutation Framework for Web Accessibility Testing.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://dl.acm.org/doi/10.1145/3650212.3652113
@@ -4769,7 +4580,6 @@
       \field{day}{19}
       \field{eprintclass}{cs.CL}
       \field{eprinttype}{arXiv}
-      \field{journaltitle}{arXiv preprint arXiv:2307.09288}
       \field{month}{7}
       \field{title}{Llama 2: Open Foundation and Fine-Tuned Chat Models}
       \field{urlday}{1}
@@ -4874,9 +4684,6 @@
       \endverb
       \verb{eprint}
       \verb 2308.05342 [cs]
-      \endverb
-      \verb{file}
-      \verb Preprint PDF:C\:\\Users\\joely\\Zotero\\storage\\4QF6E5SJ\\Wang und Zhao - 2024 - Metacognitive Prompting Improves Understanding in Large Language Models.pdf:application/pdf;Snapshot:C\:\\Users\\joely\\Zotero\\storage\\4THUQG5D\\2308.html:text/html
       \endverb
       \verb{urlraw}
       \verb http://arxiv.org/abs/2308.05342
@@ -5020,9 +4827,6 @@
       \field{urlmonth}{3}
       \field{urlyear}{2026}
       \field{urldateera}{ce}
-      \verb{file}
-      \verb WebAIM\: Keyboard Accessibility:C\:\\Users\\joely\\Zotero\\storage\\X2AKLGY9\\keyboard.html:text/html
-      \endverb
       \verb{urlraw}
       \verb https://webaim.org/techniques/keyboard/
       \endverb
@@ -5323,6 +5127,47 @@
       \verb https://proceedings.neurips.cc/paper_files/paper/2022/file/9d5609613524ecf4f15af0f7b31abca4-Paper-Conference.pdf
       \endverb
     \endentry
+    \entry{WorldReportDisability}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=531217507bec092b6ec36c0f78f46736}{%
+           family={{World Health Organization}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Geneva}%
+      }
+      \list{publisher}{1}{%
+        {World Health Organization}%
+      }
+      \strng{namehash}{531217507bec092b6ec36c0f78f46736}
+      \strng{fullhash}{531217507bec092b6ec36c0f78f46736}
+      \strng{fullhashraw}{531217507bec092b6ec36c0f78f46736}
+      \strng{bibnamehash}{531217507bec092b6ec36c0f78f46736}
+      \strng{authorbibnamehash}{531217507bec092b6ec36c0f78f46736}
+      \strng{authornamehash}{531217507bec092b6ec36c0f78f46736}
+      \strng{authorfullhash}{531217507bec092b6ec36c0f78f46736}
+      \strng{authorfullhashraw}{531217507bec092b6ec36c0f78f46736}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-92-4-156418-2}
+      \field{title}{World Report on Disability}
+      \field{urlday}{4}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2011}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.who.int/teams/noncommunicable-diseases/sensory-functions-disability-and-rehabilitation/world-report-on-disability
+      \endverb
+      \verb{url}
+      \verb https://www.who.int/teams/noncommunicable-diseases/sensory-functions-disability-and-rehabilitation/world-report-on-disability
+      \endverb
+    \endentry
     \entry{WHO}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=531217507bec092b6ec36c0f78f46736}{%
@@ -5340,6 +5185,7 @@
       \strng{authornamehash}{531217507bec092b6ec36c0f78f46736}
       \strng{authorfullhash}{531217507bec092b6ec36c0f78f46736}
       \strng{authorfullhashraw}{531217507bec092b6ec36c0f78f46736}
+      \field{extraname}{2}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{extradatescope}{labelyear}
@@ -5451,14 +5297,15 @@
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{extradate}{1}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{W3C WAI}
-      \field{title}{Evaluation-Tool-List}
+      \field{title}{Evaluation Tool List}
       \field{urlday}{28}
       \field{urlmonth}{2}
       \field{urlyear}{2026}
+      \field{year}{2026}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.w3.org/WAI/test-evaluate/tools/list/
@@ -5574,9 +5421,6 @@
       \field{year}{2022}
       \field{dateera}{ce}
       \field{urldateera}{ce}
-      \verb{file}
-      \verb C:\Users\joely\Zotero\storage\L4DXZILV\Yao et al. - 2022 - ReAct Synergizing Reasoning and Acting in Language Models.pdf
-      \endverb
       \verb{urlraw}
       \verb https://openreview.net/forum?id=WE_vluYUL-X
       \endverb
@@ -5623,6 +5467,7 @@
       \keyw{Methodik}
     \endentry
   \enddatalist
+  \missing{Anthropic_API_Docs}
   \missing{brynjolfssonNBERWORKINGPAPER}
 \endrefsection
 \endinput

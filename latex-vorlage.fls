@@ -42,6 +42,10 @@ INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\base\inputenc.sty
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\base\fontenc.sty
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\base\fontenc.sty
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1095.tfm
+INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\xurl\xurl.sty
+INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\xurl\xurl.sty
+INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\url\url.sty
+INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\url\url.sty
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.sty
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.sty
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstpatch.sty
@@ -144,8 +148,6 @@ INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\logreq\logreq.sty
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\logreq\logreq.def
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\logreq\logreq.def
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\logreq\logreq.def
-INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\url\url.sty
-INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\url\url.sty
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-dm.def
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-dm.def
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-dm.def
@@ -445,8 +447,6 @@ INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryplotmarks.code.tex
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgflibraryplotmarks.code.tex
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgflibraryplotmarks.code.tex
-INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\xurl\xurl.sty
-INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\tex\latex\xurl\xurl.sty
 INPUT .\latex-vorlage.aux
 INPUT .\latex-vorlage.aux
 INPUT latex-vorlage.aux
