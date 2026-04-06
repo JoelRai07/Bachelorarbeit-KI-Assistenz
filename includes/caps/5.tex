@@ -59,6 +59,16 @@ Die Notwendigkeit einer Normalisierungsschicht ergibt sich aus der Heterogenitä
 
 Das \ac{UFS} überführt daher alle Findings in eine einheitliche TypeScript-Schnittstelle. Listing~\ref{lst:ufs} zeigt das Interface, wie es im \ac{PoC} implementiert ist.
 
+\lstset{
+  basicstyle=\ttfamily\scriptsize,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{red},
+    numbers=left,
+    numberstyle=\tiny,
+    breaklines=true,
+    frame=single
+}
 \begin{lstlisting}[language=JavaScript, caption={TypeScript-Interface des Unified Finding Schema}, label={lst:ufs}]
 export type FindingSource = "axe" | "playwright" | "grep" | "llm";
 export type Severity = "critical" | "serious" | "moderate" | "minor";

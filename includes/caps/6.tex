@@ -29,7 +29,17 @@ Tabelle~\ref{tab:dependencies} listet die wesentlichen Abhängigkeiten des Proje
 
 Die Projektstruktur folgt einer flachen Modulstruktur, bei der jedes Modul in \texttt{src/modules/} sowohl die Datenerhebung als auch die Normalisierung in das \ac{UFS} übernimmt:
 
-\begin{lstlisting}[language={}, caption={Projektstruktur des \acs{PoC}}, label={lst:projektstruktur}]
+\lstset{
+  basicstyle=\ttfamily\scriptsize,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{red},
+    numbers=left,
+    numberstyle=\tiny,
+    breaklines=true,
+    frame=single
+}
+\begin{lstlisting}[language={}, caption={Projektstruktur des \acs{PoC}}, label={lst:projektstruktur}, basicstyle=\ttfamily\scriptsize]
 ACE/
   src/
     index.ts          # Pipeline-Orchestrierung und CLI
@@ -168,6 +178,17 @@ Der \ac{PoC} nutzt deshalb beide Ansätze komplementär: grep als stabile Baseli
 
 Ein typischer Detektionsfall läuft wie folgt ab: In einer Komponente enthält ein \texttt{<div>} einen \texttt{onClick}-Handler ohne tastaturäquivalentes Ereignis. Das Modell meldet dazu ein Finding mit Datei- und Zeilenbezug sowie Evidenztext. Dieses Finding wird normalisiert, dedupliziert und als \texttt{source="llm"} in das \ac{UFS} überführt, bevor es in der Priorisierungsphase gemeinsam mit den toolbasierten Findings verarbeitet wird.
 
+\lstset{
+  basicstyle=\ttfamily\scriptsize,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{red},
+    numbers=left,
+    numberstyle=\tiny,
+    breaklines=true,
+    frame=single
+}
+
 \begin{lstlisting}[language={}, caption={Beispiel eines validierten \ac{LLM}-Detektor-Findings (vereinfacht)}]
 {
   "title": "Klickbare div-Komponente ohne Tastaturbedienung",
@@ -209,7 +230,7 @@ Regel~6 adressiert gezielt das in Abschnitt~\ref{kap:2.4} beschriebene Halluzina
 
 \subsection{Token-Budget-Steuerung}
 
-Wie in Abschnitt~\ref{sec:kontextualisierung} beschrieben, ist das Kontextfenster lokaler Modelle begrenzt. Der Prompt-Builder reserviert feste Anteile für den System-Prompt und die Modellausgabe; der verbleibende Platz steht für die serialisierten Findings zur Verfügung.\footnote{Beim eingesetzten Qwen2.5-Coder beträgt das Kontextfenster 32.768~Tokens. Nach Abzug von System-Prompt und Output-Reserve verbleiben ca.~24.000~Tokens für die Findings.}
+Wie in Abschnitt~\ref{sec:kontextualisierung} beschrieben, ist das Kontextfenster lokaler Modelle begrenzt. Der Prompt-Builder reserviert feste Anteile für den System-Prompt und die Modellausgabe; der verbleibende Platz steht für die serialisierten Findings zur Verfügung.\footnote{Beim eingesetzten Qwen2.5-Coder beträgt das Kontextfenster 32.768~Tokens. Nach Abzug von System-Prompt und Output-Reserve verbleiben ca.~24.000~Tokens für die Findings. Vgl. Anhang \ref{app:tokenbudget}}
 
 Übersteigt die Gesamtmenge der Findings dieses Budget, werden alle Findings quellenübergreifend nach Schweregrad sortiert und von unten abgeschnitten. Findings mit Severity \texttt{critical} und \texttt{serious} haben dabei Vorrang. Der User-Prompt enthält einen expliziten Hinweis, wenn Findings aus Budgetgründen weggelassen wurden.
 
@@ -217,7 +238,17 @@ Wie in Abschnitt~\ref{sec:kontextualisierung} beschrieben, ist das Kontextfenste
 
 Jedes Finding wird in ein kompaktes Textformat serialisiert, das die wesentlichen Informationen auf wenige Zeilen komprimiert:
 
-\begin{lstlisting}[language={}, caption={Serialisiertes Finding im Prompt}, label={lst:serialized}]
+\lstset{
+  basicstyle=\ttfamily\scriptsize,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{red},
+    numbers=left,
+    numberstyle=\tiny,
+    breaklines=true,
+    frame=single
+}
+\begin{lstlisting}[language={}, caption={Serialisiertes Finding im Prompt}, label={lst:serialized}, basicstyle=\ttfamily\scriptsize]
 [axe-007] CRITICAL | color-contrast | \ac{WCAG} 1.4.3 (AA)
 Beschreibung: Element hat unzureichenden Farbkontrast
 Element: .sidebar > .nav-link

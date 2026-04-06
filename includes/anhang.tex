@@ -285,6 +285,16 @@ Konzeptmatrix nach Webster Watson\footnotemark: Vollständige Übersicht aller a
 
 Der folgende System-Prompt wird dem Sprachmodell bei jedem Pipeline-Durchlauf übergeben. Er implementiert die in Abschnitt~\ref{sec:kontextualisierung} beschriebenen Prompt-Engineering-Strategien Role-Play Prompting und Few-Shot Prompting (vgl. Abschnitt~\ref{sec:impl-prompt}).
 
+\lstset{
+  basicstyle=\ttfamily\scriptsize,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{red},
+    numbers=left,
+    numberstyle=\tiny,
+    breaklines=true,
+    frame=single
+}
 \begin{lstlisting}[language={}, caption={Vollständiger System-Prompt des \ac{ACE}-Assistenzsystems (aus \texttt{src/prompt.ts})}, label={lst:systemprompt}, basicstyle=\ttfamily\scriptsize, breaklines=true]
 Du bist ein erfahrener Barrierefreiheitsexperte für React/TypeScript-Webanwendungen.
 Deine Aufgabe ist es, Findings aus vier Analysequellen (axe-core, Playwright, grep
@@ -388,6 +398,17 @@ Damit ergibt sich für Stufe~1 kein globales Einzelbudget, sondern ein \textbf{c
 \medskip
 \noindent\textbf{System-Prompt (\ac{LLM}-Detektor):}
 
+\lstset{
+  basicstyle=\ttfamily\scriptsize,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{red},
+    numbers=left,
+    numberstyle=\tiny,
+    breaklines=true,
+    frame=single
+}
+
 \begin{lstlisting}[language={}, caption={System-Prompt der \ac{LLM}-Detektor-Phase (aus \texttt{src/modules/llmDetector.ts})}, label={lst:detektorsystemprompt}, basicstyle=\ttfamily\scriptsize, breaklines=true]
 Du bist ein präziser Accessibility-Reviewer für React/TypeScript.
 Analysiere NUR den gegebenen Codechunk.
@@ -418,6 +439,17 @@ Regeln:
 
 \medskip
 \noindent\textbf{User-Prompt-Template (\ac{LLM}-Detektor, vereinfacht):}
+
+\lstset{
+  basicstyle=\ttfamily\scriptsize,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{red},
+    numbers=left,
+    numberstyle=\tiny,
+    breaklines=true,
+    frame=single
+}
 
 \begin{lstlisting}[language={}, caption={User-Prompt-Template der \ac{LLM}-Detektor-Phase; \texttt{<Chunk-Nr>}, \texttt{<Dateiliste>} und \texttt{<Code>} werden zur Laufzeit eingesetzt (aus \texttt{src/modules/llmDetector.ts})}, label={lst:detektoruserprompt}, basicstyle=\ttfamily\scriptsize, breaklines=true]
 Aufgabe: Finde Barrierefreiheitsprobleme im folgenden Codechunk.
@@ -494,22 +526,22 @@ Gib nur JSON zurück: {"findings": [...]}
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.2}
 \caption[Modellempfehlungen nach Anwendungsszenario]{Konsolidierte Modellwahl in Abhängigkeit vom Einsatzkontext auf Basis von test-12, test-50 und test-100. Primär: bevorzugtes Modell; Sekundär: Alternative. Die Empfehlungen für 7b gelten ausschließlich für nicht-compliance-relevante Szenarien.}
-\begin{tabular}{|p{5.0cm}|c|c|p{5.6cm}|}
-\hline
+\begin{tabular}{p{5.0cm}ccp{5.6cm}}
+\toprule
 \textbf{Szenario} & \textbf{Primär} & \textbf{Sekundär} & \textbf{Begründung} \\
-\hline
+\midrule
 \ac{CICD}-Rauchtest (nicht compliance-relevant) & 7b & 14b & Schnellstes Feedback; inverse Priorisierung hier tolerierbar \\
-\hline
+\addlinespace
 Regulärer Entwicklungszyklus & 14b & 32b & Bester Kompromiss aus Recall, Priorisierung und Laufzeit \\
-\hline
-\ac{BITV}-Compliance-Audit        & 14b & 32b & 14b liefert robustes Qualitäts-/Laufzeitprofil über die Suites; 32b als Zweitmeinung \\
-\hline
-Abnahmeprüfung / Endaudit    & 32b & 14b & Höchste inhaltliche Abdeckung; 14b als zeitlich stabilere Gegenprüfung \\
-\hline
-Prototyp / MVP               & 7b  & -  & Schnelle Iteration; für finale Abnahme durch 14b/32b ersetzen \\
-\hline
-Enterprise-Deployment        & 14b & 32b & Produktionstauglich im zweistufigen Betrieb: CI-Schnellcheck + verbindlicher Compliance-Gate außerhalb des engen CI-Zeitfensters \\
-\hline
+\addlinespace
+\ac{BITV}-Compliance-Audit & 14b & 32b & 14b liefert robustes Qualitäts-/Laufzeitprofil über die Suites; 32b als Zweitmeinung \\
+\addlinespace
+Abnahmeprüfung / Endaudit & 32b & 14b & Höchste inhaltliche Abdeckung; 14b als zeitlich stabilere Gegenprüfung \\
+\addlinespace
+Prototyp / MVP & 7b & -- & Schnelle Iteration; für finale Abnahme durch 14b/32b ersetzen \\
+\addlinespace
+Enterprise-Deployment & 14b & 32b & Produktionstauglich im zweistufigen Betrieb: CI-Schnellcheck + verbindlicher Compliance-Gate \\
+\bottomrule
 \end{tabular}
 \label{tab:einsatzempfehlungen}
 \end{table}
@@ -554,16 +586,16 @@ Pragmatische \ac{BITV}-Eignung (Qualität/Zeit) & 14b: empfohlen & 14b: empfohle
 \setlength{\tabcolsep}{3.5pt}
 \renewcommand{\arraystretch}{1.2}
 \caption[Bewertungsskala der Empfehlungsqualität]{Bewertungsskala für die Empfehlungsqualität der \ac{LLM}-Ausgaben über alle drei Testsuites (test-12, test-50 und test-100).}
-\begin{tabular}{|c|p{2.8cm}|p{7.2cm}|}
-\hline
+\begin{tabular}{cp{2.8cm}p{7.2cm}}
+\toprule
 \textbf{Stufe} & \textbf{Bezeichnung} & \textbf{Kriterium} \\
-\hline
-2 & Konkret & Enthält Dateiname, Zeilennummer und einen konkreten Fix-Vorschlag (z.\,B. \texttt{aria-label="..."}). \\
-\hline
+\midrule
+2 & Konkret   & Enthält Dateiname, Zeilennummer und einen konkreten Fix-Vorschlag (z.\,B. \texttt{aria-label="..."}). \\
+\addlinespace
 1 & Teilweise & Enthält den richtigen Fix-Typ, jedoch ohne konkreten Codekontext (z.\,B. \glqq{}Füge ein aria-label hinzu\grqq). \\
-\hline
+\addlinespace
 0 & Generisch & Beschreibt lediglich das Problem, ohne einen umsetzbaren Lösungsvorschlag. \\
-\hline
+\bottomrule
 \end{tabular}
 \label{tab:bewertungsskala_empfehlungen}
 \end{table}
@@ -676,6 +708,16 @@ Playwright-Version & 1.50.1 \\
 \anhang{Console-Output-Auszüge eines Benchmark-Runs}\label{app:console_output}
 
 \noindent\textit{Hinweis:} Im Folgenden wird eine repräsentative Console-Ausgaben eines erfolgreichen Runs dokumentiert. Sie zeigt die typische Pipeline-Ausführung: Initialisierung, Tool-Ausführungen, \ac{LLM}-Detektor-Phase, Priorisierung und finaler Report-Export.
+\lstset{
+  basicstyle=\ttfamily\scriptsize,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{red},
+    numbers=left,
+    numberstyle=\tiny,
+    breaklines=true,
+    frame=single
+}
 
 \begin{lstlisting}[language={}, caption={Console-Output eines erfolgreichen Benchmark-Runs}, label={lst:console_output_sample}, basicstyle=\ttfamily\scriptsize, breaklines=true]
 [INFO] Pipeline initialized
@@ -746,7 +788,7 @@ Priorisierungs\-qualität & Die Fix-Konkretheit wurde über eine Skala von 0 bis
 \centering
 \setlength{\tabcolsep}{5pt}
 \renewcommand{\arraystretch}{1.15}
-\caption[Template-Reihenfolge test-12]{Navigationsübersicht in der standardisierten Reihenfolge für die test-12-Suite.}
+\caption[Navigationsübersicht test-12-Suite]{Navigationsübersicht in der standardisierten Reihenfolge für die test-12-Suite.}
 \begin{tabular}{|c|p{11.4cm}|}
 \hline
 \textbf{Nr.} & \textbf{Baustein} \\
@@ -1285,7 +1327,7 @@ $\sigma$             &  5{,}35     & Standardabweichung über alle 30 Runs \\
 \centering
 \setlength{\tabcolsep}{5pt}
 \renewcommand{\arraystretch}{1.15}
-\caption[Template-Reihenfolge test-50]{Navigationsübersicht in der standardisierten Reihenfolge für die test-50-Suite.}
+\caption[Navigationsübersicht test-50-Suite]{Navigationsübersicht in der standardisierten Reihenfolge für die test-50-Suite.}
 \begin{tabular}{|c|p{11.4cm}|}
 \hline
 \textbf{Nr.} & \textbf{Baustein} \\
@@ -1985,7 +2027,7 @@ $\sigma$             &  6{,}38      & Standardabweichung über alle 30 Runs \\
 \centering
 \setlength{\tabcolsep}{5pt}
 \renewcommand{\arraystretch}{1.15}
-\caption[Template-Reihenfolge test-100]{Navigationsübersicht in der standardisierten Reihenfolge für die test-100-Suite.}
+\caption[Navigationsübersicht test-100-Suite]{Navigationsübersicht in der standardisierten Reihenfolge für die test-100-Suite.}
 \begin{tabular}{|c|p{11.4cm}|}
 \hline
 \textbf{Nr.} & \textbf{Baustein} \\

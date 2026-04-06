@@ -25,7 +25,7 @@
 \contentsline {table}{\numberline {24}{\ignorespaces Erfüllungsgrad \ac {FA} und \ac {NFA}}}{87}{table.734}%
 \contentsline {table}{\numberline {25}{\ignorespaces Umgebungs- und Konfigurationsparameter}}{89}{table.737}%
 \contentsline {table}{\numberline {26}{Threats to Validity}}{91}{table.9.26}%
-\contentsline {table}{\numberline {27}{\ignorespaces Template-Reihenfolge test-12}}{93}{table.747}%
+\contentsline {table}{\numberline {27}{\ignorespaces Navigationsübersicht test-12-Suite}}{93}{table.747}%
 \contentsline {table}{\numberline {28}{\ignorespaces Accessibility-Verstöße (test-12)}}{94}{table.750}%
 \contentsline {table}{\numberline {29}{\ignorespaces Erkennungsrate der Violations (test-12)}}{95}{table.753}%
 \contentsline {table}{\numberline {30}{\ignorespaces Recall-Matrix (test-12)}}{96}{table.756}%
@@ -39,7 +39,7 @@
 \contentsline {table}{\numberline {38}{\ignorespaces CSV-Spaltenschema}}{102}{table.780}%
 \contentsline {table}{\numberline {39}{\ignorespaces Beispielzeilen aus dem CSV-Export (test-12)}}{102}{table.781}%
 \contentsline {table}{\numberline {40}{\ignorespaces Quantilanalyse der \ac {LLM}-Findings (test-12, alle 30 Runs)}}{103}{table.784}%
-\contentsline {table}{\numberline {41}{\ignorespaces Template-Reihenfolge test-50}}{106}{table.795}%
+\contentsline {table}{\numberline {41}{\ignorespaces Navigationsübersicht test-50-Suite}}{106}{table.795}%
 \contentsline {table}{\numberline {42}{Accessibility-Verstöße (test-50)}}{107}{table.9.42}%
 \contentsline {table}{\numberline {43}{Erkennungsrate der Violations (test-50)}}{110}{table.9.43}%
 \contentsline {table}{\numberline {44}{Recall-Matrix (test-50)}}{113}{table.9.44}%
@@ -52,7 +52,7 @@
 \contentsline {table}{\numberline {51}{Empfehlungsqualität (test-50)}}{120}{table.9.51}%
 \contentsline {table}{\numberline {52}{\ignorespaces Beispielzeilen aus dem CSV-Export (test-50)}}{123}{table.824}%
 \contentsline {table}{\numberline {53}{\ignorespaces Quantilanalyse der \ac {LLM}-Findings (test-50, alle 30 Runs)}}{124}{table.827}%
-\contentsline {table}{\numberline {54}{\ignorespaces Template-Reihenfolge test-100}}{128}{table.844}%
+\contentsline {table}{\numberline {54}{\ignorespaces Navigationsübersicht test-100-Suite}}{128}{table.844}%
 \contentsline {table}{\numberline {55}{Accessibility-Verstöße (test-100)}}{129}{table.9.55}%
 \contentsline {table}{\numberline {56}{Erkennungsrate der Violations (test-100)}}{133}{table.9.56}%
 \contentsline {table}{\numberline {57}{Recall-Matrix (test-100)}}{138}{table.9.57}%

@@ -188,6 +188,16 @@ Die Bewertungsskala (Tabelle~\ref{tab:bewertungsskala_empfehlungen}) unterscheid
 \paragraph{Fallbeispiel 1 -- Konkrete Empfehlung (Stufe~2, qwen3:32b).}
 Für V8 (Modaler Dialog ohne Fokus-Trap) generiert \texttt{qwen3:32b}:
 
+\lstset{
+  basicstyle=\ttfamily\scriptsize,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{red},
+    numbers=left,
+    numberstyle=\tiny,
+    breaklines=true,
+    frame=single
+}
 \begin{lstlisting}[language={}, basicstyle=\ttfamily\scriptsize, breaklines=true]
 // ContactForm.tsx -- Fokus-Trap implementieren
 useEffect(() => {
