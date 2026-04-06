@@ -599,6 +599,7 @@ INPUT .\graphics\react.png
 INPUT .\graphics\react.png
 INPUT .\graphics\react.png
 INPUT .\graphics\react.png
+INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx0900.tfm
 INPUT .\graphics\fewshot.png
 INPUT .\graphics\fewshot.png
 INPUT .\graphics\fewshot.png
@@ -613,7 +614,6 @@ INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm050
 INPUT .\includes\caps\4.tex
 INPUT .\includes\caps\4.tex
 INPUT includes\caps\4.tex
-INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx0900.tfm
 INPUT .\includes\caps\5.tex
 INPUT .\includes\caps\5.tex
 INPUT includes\caps\5.tex
@@ -776,10 +776,10 @@ INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\eci
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecit1095.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk
-INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx0900.pk
-INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx0900.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0500.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0500.pk
+INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx0900.pk
+INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx0900.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0800.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0800.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt0800.pk

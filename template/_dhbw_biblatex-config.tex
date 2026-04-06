@@ -177,12 +177,27 @@
 \DeclareFieldFormat[article,book,inbook,inproceedings,manual,misc,phdthesis,thesis,online,report]{title}{#1\isdot}
 
 \newcommand{\literaturverzeichnis}{%
-% nur Literaturverzeichnis
-% (als eigenes Kapitel)
+% Literaturverzeichnis aufgeteilt nach Quellentypen
 \phantomsection
 \addcontentsline{toc}{chapter}{\refname}
 \spezialkopfzeile{\refname}
 \defbibheading{lit}{\chapter*{\refname}}
+\defbibheading{litabschnitt}[Literaturverzeichnis]{\section*{##1}}
 \label{chapter:quellen}
-\printbibliography[heading=lit,notkeyword=ausblenden]
+% Filter für kombinierte Typen
+\defbibfilter{papers}{type=article or type=inproceedings}
+\defbibfilter{buecher}{type=book or type=collection or type=incollection}
+\defbibfilter{internetmedien}{type=online}
+\defbibfilter{techniksoftware}{type=software}
+\defbibfilter{rechtstandards}{type=legislation}
+\defbibfilter{sonstigequellen}{type=misc}
+% Hauptüberschrift (ohne Einträge)
+\printbibheading[heading=lit]
+% Unterabschnitte nach Quellentyp
+\printbibliography[filter=papers,  notkeyword=ausblenden, heading=litabschnitt, title={Wissenschaftliche Artikel und Konferenzbeiträge}]
+\printbibliography[filter=buecher, notkeyword=ausblenden, heading=litabschnitt, title={Bücher und Sammelwerke}]
+\printbibliography[filter=internetmedien, notkeyword=ausblenden, heading=litabschnitt, title={Internetquellen und Medien}]
+\printbibliography[filter=techniksoftware, notkeyword=ausblenden, heading=litabschnitt, title={Technische Dokumentation und Software}]
+\printbibliography[filter=rechtstandards, notkeyword=ausblenden, heading=litabschnitt, title={Rechtliche Grundlagen und Standards}]
+\printbibliography[filter=sonstigequellen, notkeyword=ausblenden, heading=litabschnitt, title={Sonstige Quellen}]
 }

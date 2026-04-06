@@ -155,7 +155,7 @@
       \verb https://thesai.org/Publications/ViewPaper?Volume=7&Issue=10&Code=ijacsa&SerialNo=23
       \endverb
     \endentry
-    \entry{anthropic2026claude}{online}{}{}
+    \entry{anthropic2026claude}{software}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=f431db65cea024a5f19eab835afefee2}{%
            family={{Anthropic}},
@@ -190,7 +190,7 @@
       \verb https://www.anthropic.com/claude
       \endverb
     \endentry
-    \entry{System_Card}{misc}{}{}
+    \entry{Anthropic_API_Docs}{software}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=f431db65cea024a5f19eab835afefee2}{%
            family={Anthropic},
@@ -212,24 +212,22 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{day}{17}
-      \field{journaltitle}{System Card: Claude Sonnet 4.6}
-      \field{month}{2}
-      \field{title}{System Card: Claude Sonnet 4.6}
-      \field{urlday}{2}
+      \field{journaltitle}{Claude API Docs}
+      \field{title}{Glossary - Anthropic Developer Documentation}
+      \field{urlday}{1}
       \field{urlmonth}{3}
       \field{urlyear}{2026}
       \field{year}{2026}
       \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf
+      \verb https://platform.claude.com/docs/en/about-claude/glossary
       \endverb
       \verb{url}
-      \verb https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf
+      \verb https://platform.claude.com/docs/en/about-claude/glossary
       \endverb
     \endentry
-    \entry{Anthropic_API_Docs}{misc}{}{}
+    \entry{System_Card}{software}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=f431db65cea024a5f19eab835afefee2}{%
            family={Anthropic},
@@ -248,20 +246,24 @@
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{extradate}{3}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Claude API Docs}
-      \field{title}{Resources}
-      \field{urlday}{1}
+      \field{day}{17}
+      \field{journaltitle}{System Card: Claude Sonnet 4.6}
+      \field{month}{2}
+      \field{title}{System Card: Claude Sonnet 4.6 [Technical Report]}
+      \field{urlday}{2}
       \field{urlmonth}{3}
       \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://platform.claude.com/docs/en/about-claude/glossary
+      \verb https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf
       \endverb
       \verb{url}
-      \verb https://platform.claude.com/docs/en/about-claude/glossary
+      \verb https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf
       \endverb
     \endentry
     \entry{baiVirtualDom2022}{article}{}{}
@@ -289,7 +291,11 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv}
       \field{title}{A Fast Compiler-Augmented Virtual DOM for the Web}
+      \field{urlday}{5}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
       \field{year}{2022}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://arxiv.org/abs/2202.08409
       \endverb
@@ -533,7 +539,7 @@
       \verb https://dl.acm.org/doi/10.1145/3442188.3445922
       \endverb
     \endentry
-    \entry{BITBW_2021}{misc}{}{}
+    \entry{BITBW_2021}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=c1dd1ae77076811036c172175f19f3f1}{%
            family={BITBW},
@@ -568,13 +574,13 @@
       \verb https://bitbw.de/neuigkeiten/artikel/6-jahre-bitbw-1
       \endverb
     \endentry
-    \entry{brown2020gpt3fewshot}{misc}{}{}
+    \entry{brown2020gpt3fewshot}{inproceedings}{}{}
       \name{author}{31}{}{%
-        {{un=0,uniquepart=base,hash=7c16e8d36475e58d4f2d161e6ecb7704}{%
+        {{un=0,uniquepart=base,hash=ad9f5a3d8c696d78ce2a831ce8ac7524}{%
            family={Brown},
            familyi={B\bibinitperiod},
-           given={Tom\bibnamedelima B.},
-           giveni={T\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod},
            givenun=0}}%
         {{un=0,uniquepart=base,hash=d4543c3bcd6aaf414da4296b349603e5}{%
            family={Mann},
@@ -597,7 +603,7 @@
         {{un=0,uniquepart=base,hash=1e2dad58400c2dd6405837788e785d19}{%
            family={Kaplan},
            familyi={K\bibinitperiod},
-           given={Jared\bibnamedelima D.},
+           given={Jared\bibnamedelima D},
            giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
            givenun=0}}%
         {{un=0,uniquepart=base,hash=4164e43d8cf919f5e3f8d80f5ea23f36}{%
@@ -666,11 +672,11 @@
            given={Aditya},
            giveni={A\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=18becbb5ea500211a8219e94dd0a975c}{%
+        {{un=0,uniquepart=base,hash=84650a9afb83d2e878b03bef608700cf}{%
            family={Ziegler},
            familyi={Z\bibinitperiod},
-           given={Daniel\bibnamedelima M.},
-           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
            givenun=0}}%
         {{un=0,uniquepart=base,hash=495187f3a2c93ddb8083bd18a5702527}{%
            family={Wu},
@@ -684,10 +690,10 @@
            given={Clemens},
            giveni={C\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=68a04c5006dbbf98f7719709540c6b56}{%
+        {{un=0,uniquepart=base,hash=07acc23f6ec051b64b82cd33255c0a69}{%
            family={Hesse},
            familyi={H\bibinitperiod},
-           given={Christopher},
+           given={Chris},
            giveni={C\bibinitperiod},
            givenun=0}}%
         {{un=0,uniquepart=base,hash=fb15a691583ec94aafe0be6e7da4878f}{%
@@ -757,86 +763,45 @@
            giveni={D\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{0884233a667161739ddd01569813457f}
-      \strng{fullhash}{d03fc0ef29cf288adac1ad57db6f5e3f}
-      \strng{fullhashraw}{d03fc0ef29cf288adac1ad57db6f5e3f}
-      \strng{bibnamehash}{d03fc0ef29cf288adac1ad57db6f5e3f}
-      \strng{authorbibnamehash}{d03fc0ef29cf288adac1ad57db6f5e3f}
-      \strng{authornamehash}{0884233a667161739ddd01569813457f}
-      \strng{authorfullhash}{d03fc0ef29cf288adac1ad57db6f5e3f}
-      \strng{authorfullhashraw}{d03fc0ef29cf288adac1ad57db6f5e3f}
+      \list{publisher}{1}{%
+        {Curran Associates, Inc.}%
+      }
+      \strng{namehash}{85437fe07696e4c57f916c83d4ba5581}
+      \strng{fullhash}{28676992274ff1a4ebfa6e23ba7b2efd}
+      \strng{fullhashraw}{28676992274ff1a4ebfa6e23ba7b2efd}
+      \strng{bibnamehash}{28676992274ff1a4ebfa6e23ba7b2efd}
+      \strng{authorbibnamehash}{28676992274ff1a4ebfa6e23ba7b2efd}
+      \strng{authornamehash}{85437fe07696e4c57f916c83d4ba5581}
+      \strng{authorfullhash}{28676992274ff1a4ebfa6e23ba7b2efd}
+      \strng{authorfullhashraw}{28676992274ff1a4ebfa6e23ba7b2efd}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{day}{22}
-      \field{eprintclass}{cs.CL}
-      \field{eprinttype}{arxiv}
-      \field{month}{7}
-      \field{note}{Definition von zero-/one-/few-shot (in-context learning) auf S.~4}
-      \field{title}{Language Models are Few-Shot Learners}
-      \field{urlday}{28}
-      \field{urlmonth}{2}
+      \field{booktitle}{Advances in {{Neural Information Processing Systems}}}
+      \field{title}{Language {{Models}} Are {{Few-Shot Learners}}}
+      \field{urlday}{6}
+      \field{urlmonth}{4}
       \field{urlyear}{2026}
+      \field{volume}{33}
       \field{year}{2020}
       \field{dateera}{ce}
       \field{urldateera}{ce}
-      \verb{eprint}
-      \verb 2005.14165
+      \field{pages}{1877\bibrangedash 1901}
+      \range{pages}{25}
+      \verb{file}
+      \verb C:\Users\joely\Zotero\storage\VMB4APNJ\Brown et al. - 2020 - Language Models are Few-Shot Learners.pdf
       \endverb
       \verb{urlraw}
-      \verb https://arxiv.org/abs/2005.14165
+      \verb https://papers.nips.cc/paper_files/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html
       \endverb
       \verb{url}
-      \verb https://arxiv.org/abs/2005.14165
+      \verb https://papers.nips.cc/paper_files/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html
       \endverb
     \endentry
-    \entry{brynjolfssonNBERWORKINGPAPER}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=7bd9f54569cb8c0301da00ed49b5a752}{%
-           family={Brynjolfsson},
-           familyi={B\bibinitperiod},
-           given={Erik},
-           giveni={E\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=9549ba5d9e9696208664346821d3ac14}{%
-           family={Li},
-           familyi={L\bibinitperiod},
-           given={Danielle},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=821532b907beea089b725316bfc03965}{%
-           family={Raymond},
-           familyi={R\bibinitperiod},
-           given={Lindsey\bibnamedelima R},
-           giveni={L\bibinitperiod\bibinitdelim R\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{f3a10e7583539c6c6ec680050450f703}
-      \strng{fullhash}{f3a10e7583539c6c6ec680050450f703}
-      \strng{fullhashraw}{f3a10e7583539c6c6ec680050450f703}
-      \strng{bibnamehash}{f3a10e7583539c6c6ec680050450f703}
-      \strng{authorbibnamehash}{f3a10e7583539c6c6ec680050450f703}
-      \strng{authornamehash}{f3a10e7583539c6c6ec680050450f703}
-      \strng{authorfullhash}{f3a10e7583539c6c6ec680050450f703}
-      \strng{authorfullhashraw}{f3a10e7583539c6c6ec680050450f703}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{New {AI} tools have the potential to change the way workers perform and learn, but little is known about their impacts on the job. In this paper, we study the staggered introduction of a generative {AI}-based conversational assistant using data from 5,179 customer support agents. Access to the tool increases productivity, as measured by issues resolved per hour, by 14\% on average, including a 34\% improvement for novice and low-skilled workers but with minimal impact on experienced and highly skilled workers. We provide suggestive evidence that the {AI} model disseminates the best practices of more able workers and helps newer workers move down the experience curve. In addition, we find that {AI} assistance improves customer sentiment, increases employee retention, and may lead to worker learning. Our results suggest that access to generative {AI} can increase productivity, with large heterogeneity in effects across workers.}
-      \field{langid}{english}
-      \field{title}{Generative AI at Work}
-      \field{year}{2023}
-      \verb{file}
-      \verb PDF:C\:\\Users\\joely\\Zotero\\storage\\QQZLVKWN\\Brynjolfsson et al. - NBER WORKING PAPER SERIES.pdf:application/pdf
-      \endverb
-    \endentry
-    \entry{BFSGGesetz}{misc}{}{}
+    \entry{BFSGGesetz}{legislation}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=2cbc78ce06cb57e73f663d102eba3a66}{%
            family={{Bundesamt der Justiz und für Verbraucherschutz}},
@@ -868,7 +833,7 @@
       \verb https://www.gesetze-im-internet.de/bfsg/
       \endverb
     \endentry
-    \entry{BITV}{misc}{}{}
+    \entry{BITV}{legislation}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=ca9e1064e1d32641b807916e8e7c4ede}{%
            family={{Bundesministerium für Digitales und Staatsmodernisierung}},
@@ -1061,14 +1026,12 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Accessibility engine for automated Web {UI} testing}
-      \field{day}{24}
-      \field{month}{2}
-      \field{note}{original-date: 2015-06-10T15:26:45Z}
-      \field{title}{dequelabs/axe-core}
+      \field{abstract}{Accessibility engine for automated Web UI testing}
+      \field{title}{axe-core: Accessibility engine for automated Web UI testing}
       \field{urlday}{24}
       \field{urlmonth}{2}
       \field{urlyear}{2026}
+      \field{version}{4.x}
       \field{year}{2026}
       \field{dateera}{ce}
       \field{urldateera}{ce}
@@ -1078,9 +1041,9 @@
       \verb{url}
       \verb https://github.com/dequelabs/axe-core
       \endverb
-      \keyw{accessibility,a11y,axe,Gering,Referenz}
+      \keyw{accessibility,a11y,axe,Referenz}
     \endentry
-    \entry{BFSG}{misc}{}{}
+    \entry{BFSG}{legislation}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=52429adfda2017e33d1c548712accf73}{%
            family={{Deutscher Bundestag}},
@@ -1220,7 +1183,7 @@
       \verb https://eur-lex.europa.eu/eli/reg/2016/679/oj
       \endverb
     \endentry
-    \entry{EAA}{misc}{}{}
+    \entry{EAA}{legislation}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=a1b813a6e85874b4c945aec2cdbea74c}{%
            family={{European Commission}},
@@ -1475,15 +1438,32 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
       \field{journaltitle}{arXiv preprint arXiv:2312.10997}
       \field{title}{Retrieval-Augmented Generation for Large Language Models: A Survey}
+      \field{urlday}{1}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
       \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{eprint}
+      \verb 2312.10997
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2312.10997
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2312.10997
+      \endverb
     \endentry
-    \entry{Lighthouse}{misc}{}{}
+    \entry{Lighthouse}{software}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=8b36e9207c24c76e6719268e49201d94}{%
-           family={Google},
+           family={{Google}},
            familyi={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Chrome for Developers}%
       }
       \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
       \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
@@ -1499,9 +1479,8 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Chrome for Developers}
       \field{month}{9}
-      \field{title}{Lighthouse : Chrome for developers}
+      \field{title}{Lighthouse: Automated auditing, performance, and accessibility tool for web pages}
       \field{urlday}{28}
       \field{urlmonth}{2}
       \field{urlyear}{2026}
@@ -1865,7 +1844,7 @@
       \field{pages}{75\bibrangedash 105}
       \range{pages}{31}
     \endentry
-    \entry{huang_access_2024}{misc}{}{}
+    \entry{huang_access_2024}{inproceedings}{}{}
       \name{author}{8}{}{%
         {{un=1,uniquepart=given,hash=eddeb0790aa8c16ddd415bc21af372cf}{%
            family={Huang},
@@ -2082,7 +2061,7 @@
       \endverb
       \keyw{Computer Science - Computation and Language}
     \endentry
-    \entry{hui2024qwen25coder}{misc}{}{}
+    \entry{hui2024qwen25coder}{inproceedings}{}{}
       \name{author}{24}{}{%
         {{un=0,uniquepart=base,hash=f34c34e7bfee1c214b840e1406f93b43}{%
            family={Hui},
@@ -2251,7 +2230,7 @@
       \field{eprinttype}{arxiv}
       \field{month}{11}
       \field{number}{{arXiv}:2409.12186}
-      \field{title}{Qwen2.5-Coder Technical Report}
+      \field{title}{Qwen2.5-Coder [Technical Report]}
       \field{urlday}{15}
       \field{urlmonth}{3}
       \field{urlyear}{2026}
@@ -2508,7 +2487,7 @@
       \verb https://gist.github.com/tkrotoff/b1caa4c3a185629299ec234d2314e190
       \endverb
     \endentry
-    \entry{bwec}{misc}{}{}
+    \entry{bwec}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=2f9dda1a4a89629c5739ab1f7bd58a4a}{%
            family={{Land Baden-Württemberg}},
@@ -2543,7 +2522,7 @@
       \verb https://www.baden-wuerttemberg.de/de/service/presse/pressemitteilung/pid/neuer-bw-empfangsclient-treibt-digitalisierung-der-verwaltung-voran-1
       \endverb
     \endentry
-    \entry{Landesrecht_BW}{misc}{}{}
+    \entry{Landesrecht_BW}{legislation}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=41b35bb83b4cdd1dd2bed7bf094b61db}{%
            family={{Landesrecht BW}},
@@ -2625,7 +2604,7 @@
       \verb PDF:C\:\\Users\\joely\\Zotero\\storage\\RLQB4NW6\\2017 - Research Methods in Human-Computer Interaction.pdf:application/pdf
       \endverb
     \endentry
-    \entry{lewisRetrievalAugmentedGenerationKnowledgeIntensive2021}{misc}{}{}
+    \entry{lewisRetrievalAugmentedGenerationKnowledgeIntensive2021}{inproceedings}{}{}
       \name{author}{12}{}{%
         {{un=0,uniquepart=base,hash=ecbe786a5668bf643d74bb24fe1c3cfe}{%
            family={Lewis},
@@ -2700,8 +2679,35 @@
            giveni={D\bibinitperiod},
            givenun=0}}%
       }
+      \name{editor}{5}{}{%
+        {{hash=6c15b92d4ebdbfae091f6548dc7543ae}{%
+           family={Larochelle},
+           familyi={L\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=6cb5af0e649387de5bbfdb150cc7a786}{%
+           family={Ranzato},
+           familyi={R\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ae95119be0d9d86ffdec9f3142af353e}{%
+           family={Hadsell},
+           familyi={H\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=20f36d8aae4f5467e0c03ccdaee4076a}{%
+           family={Balcan},
+           familyi={B\bibinitperiod},
+           given={M.F.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=006d527428ae3b86c2093d6d28e16072}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
       \list{publisher}{1}{%
-        {arXiv}%
+        {Curran Associates, Inc.}%
       }
       \strng{namehash}{f238c3bfc4b30650dd17e65c4aadfc66}
       \strng{fullhash}{22489b764620b23a8cc8547a492f0763}
@@ -2711,40 +2717,29 @@
       \strng{authornamehash}{f238c3bfc4b30650dd17e65c4aadfc66}
       \strng{authorfullhash}{22489b764620b23a8cc8547a492f0763}
       \strng{authorfullhashraw}{22489b764620b23a8cc8547a492f0763}
+      \strng{editorbibnamehash}{01684a8bcecde64514068030e781dc4f}
+      \strng{editornamehash}{1bb757b97fffae621331dd700b5a7ca9}
+      \strng{editorfullhash}{01684a8bcecde64514068030e781dc4f}
+      \strng{editorfullhashraw}{01684a8bcecde64514068030e781dc4f}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Large pre-trained language models have been shown to store factual knowledge in their parameters, and achieve state-of-the-art results when fine-tuned on downstream {NLP} tasks. However, their ability to access and precisely manipulate knowledge is still limited, and hence on knowledge-intensive tasks, their performance lags behind task-specific architectures. Additionally, providing provenance for their decisions and updating their world knowledge remain open research problems. Pre-trained models with a differentiable access mechanism to explicit non-parametric memory can overcome this issue, but have so far been only investigated for extractive downstream tasks. We explore a general-purpose fine-tuning recipe for retrieval-augmented generation ({RAG}) -- models which combine pre-trained parametric and non-parametric memory for language generation. We introduce {RAG} models where the parametric memory is a pre-trained seq2seq model and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural retriever. We compare two {RAG} formulations, one which conditions on the same retrieved passages across the whole generated sequence, the other can use different passages per token. We fine-tune and evaluate our models on a wide range of knowledge-intensive {NLP} tasks and set the state-of-the-art on three open domain {QA} tasks, outperforming parametric seq2seq models and task-specific retrieve-and-extract architectures. For language generation tasks, we find that {RAG} models generate more specific, diverse and factual language than a state-of-the-art parametric-only seq2seq baseline.}
-      \field{day}{12}
-      \field{eprinttype}{arxiv}
-      \field{month}{4}
-      \field{number}{{arXiv}:2005.11401}
-      \field{title}{Retrieval-Augmented Generation for Knowledge-Intensive {NLP} Tasks}
-      \field{urlday}{5}
-      \field{urlmonth}{3}
-      \field{urlyear}{2026}
-      \field{year}{2021}
+      \field{booktitle}{Advances in Neural Information Processing Systems}
+      \field{title}{Retrieval-Augmented Generation for Knowledge-Intensive {{NLP}} Tasks}
+      \field{volume}{33}
+      \field{year}{2020}
       \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.48550/arXiv.2005.11401
-      \endverb
-      \verb{eprint}
-      \verb 2005.11401 [cs]
-      \endverb
-      \verb{file}
-      \verb Preprint PDF:C\:\\Users\\joely\\Zotero\\storage\\DVWZUGFX\\Lewis et al. - 2021 - Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.pdf:application/pdf;Snapshot:C\:\\Users\\joely\\Zotero\\storage\\V87AF4ZP\\2005.html:text/html
-      \endverb
+      \field{pages}{9459\bibrangedash 9474}
+      \range{pages}{16}
       \verb{urlraw}
-      \verb http://arxiv.org/abs/2005.11401
+      \verb https://proceedings.neurips.cc/paper_files/paper/2020/file/6b493230205f780e1bc26945df7481e5-Paper.pdf
       \endverb
       \verb{url}
-      \verb http://arxiv.org/abs/2005.11401
+      \verb https://proceedings.neurips.cc/paper_files/paper/2020/file/6b493230205f780e1bc26945df7481e5-Paper.pdf
       \endverb
-      \keyw{Computer Science - Computation and Language,Computer Science - Machine Learning}
     \endentry
     \entry{manca_transparency_2023}{article}{}{}
       \name{author}{4}{}{%
@@ -2818,7 +2813,7 @@
       \endverb
       \keyw{Hoch}
     \endentry
-    \entry{React}{misc}{}{}
+    \entry{ReactRender}{software}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=6c56f762d9ebe73063cd2d157e97351f}{%
            family={{Meta Open Source}},
@@ -2837,23 +2832,24 @@
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{extradate}{1}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{React Blog RSS}
-      \field{title}{React}
+      \field{title}{React Documentation: Render and Commit}
       \field{urlday}{5}
       \field{urlmonth}{3}
       \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://react.dev/
+      \verb https://react.dev/learn/render-and-commit
       \endverb
       \verb{url}
-      \verb https://react.dev/
+      \verb https://react.dev/learn/render-and-commit
       \endverb
     \endentry
-    \entry{ReactRender}{misc}{}{}
+    \entry{React}{software}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=6c56f762d9ebe73063cd2d157e97351f}{%
            family={{Meta Open Source}},
@@ -2872,26 +2868,27 @@
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{extradate}{2}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{React}
-      \field{title}{Render and Commit}
+      \field{title}{React: A JavaScript library for building user interfaces}
       \field{urlday}{5}
       \field{urlmonth}{3}
       \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://react.dev/learn/render-and-commit
+      \verb https://react.dev/
       \endverb
       \verb{url}
-      \verb https://react.dev/learn/render-and-commit
+      \verb https://react.dev/
       \endverb
     \endentry
-    \entry{playwright}{online}{}{}
+    \entry{playwright}{software}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=140864078aeca1c7c35b4beb33c53c34}{%
-           family={Microsoft},
+           family={{Microsoft}},
            familyi={M\bibinitperiod}}}%
       }
       \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
@@ -2908,24 +2905,20 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Introduction}
       \field{langid}{english}
-      \field{title}{Installation {|} Playwright}
+      \field{title}{Playwright: Fast and reliable end-to-end testing for modern web apps}
       \field{urlday}{24}
       \field{urlmonth}{2}
       \field{urlyear}{2026}
       \field{year}{2026}
       \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\joely\\Zotero\\storage\\227GZYJU\\intro.html:text/html
-      \endverb
       \verb{urlraw}
       \verb https://playwright.dev/docs/intro
       \endverb
       \verb{url}
       \verb https://playwright.dev/docs/intro
       \endverb
-      \keyw{Gering,Referenz}
+      \keyw{Referenz}
     \endentry
     \entry{morrisMostItBeing2016}{inproceedings}{}{}
       \name{author}{6}{}{%
@@ -3160,7 +3153,7 @@
       \endverb
       \keyw{Mittel,Vielleicht}
     \endentry
-    \entry{njifenjou_role-play_2024}{misc}{}{}
+    \entry{njifenjou_role-play_2024}{inproceedings}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=580b6687aa1fc70aa19e99b8cbbdf6f1}{%
            family={Njifenjou},
@@ -3233,11 +3226,14 @@
       \endverb
       \keyw{Computer Science - Human-Computer Interaction,Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Gering,Nicht}
     \endentry
-    \entry{Ollama}{misc}{}{}
+    \entry{Ollama}{software}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=c23e8db458397f37c8e8d98e94e55a18}{%
-           family={Ollama},
+           family={{Ollama}},
            familyi={O\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Ollama}%
       }
       \strng{namehash}{c23e8db458397f37c8e8d98e94e55a18}
       \strng{fullhash}{c23e8db458397f37c8e8d98e94e55a18}
@@ -3250,14 +3246,15 @@
       \field{sortinit}{O}
       \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Ollama}
-      \field{title}{Quickstart}
+      \field{title}{Ollama Documentation: Quickstart Guide}
       \field{urlday}{4}
       \field{urlmonth}{3}
       \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://docs.ollama.com/quickstart
@@ -3289,7 +3286,7 @@
       \field{labeltitlesource}{title}
       \field{eprinttype}{arXiv}
       \field{journaltitle}{arXiv preprint arXiv:2303.08774}
-      \field{title}{GPT-4 Technical Report}
+      \field{title}{GPT-4 [Technical Report]}
       \field{urlday}{1}
       \field{urlmonth}{3}
       \field{urlyear}{2026}
@@ -3305,7 +3302,7 @@
       \verb https://arxiv.org/abs/2303.08774
       \endverb
     \endentry
-    \entry{OpenAI_Developers}{misc}{}{}
+    \entry{OpenAI_Developers}{software}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=0523b13262b12c215d8009938f5c14f1}{%
            family={{OpenAI}},
@@ -3688,7 +3685,7 @@
       \verb https://www.researchgate.net/publication/396366120_Policy_in_Practice_A_Systematic_Review_of_WCAG_22_and_ADA_2024_Effects_on_Web_and_Mobile_Accessibility
       \endverb
     \endentry
-    \entry{Robie}{misc}{}{}
+    \entry{Robie}{software}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=51022c9184a5719b844bfcb8a01fa84f}{%
            family={Robie},
@@ -4227,7 +4224,7 @@
       \verb https://dl.acm.org/doi/10.1145/3702038.3702090
       \endverb
     \endentry
-    \entry{Stack_Overflow_2025}{misc}{}{}
+    \entry{Stack_Overflow_2025}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=84d7dc19766c446f5e4084e8fce87f82}{%
            family={{Stack Overflow}},
@@ -4791,7 +4788,7 @@
       \verb https://arxiv.org/abs/2307.09288
       \endverb
     \endentry
-    \entry{OHCHR}{misc}{}{}
+    \entry{OHCHR}{legislation}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=3cc54e2c0d69c1b76b4d49edb22dd6d1}{%
            family={{United Nations}},
@@ -4805,10 +4802,8 @@
       \strng{authornamehash}{3cc54e2c0d69c1b76b4d49edb22dd6d1}
       \strng{authorfullhash}{3cc54e2c0d69c1b76b4d49edb22dd6d1}
       \strng{authorfullhashraw}{3cc54e2c0d69c1b76b4d49edb22dd6d1}
-      \field{extraname}{1}
       \field{sortinit}{U}
       \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
-      \field{extradate}{1}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -4830,48 +4825,7 @@
       \verb https://www.ohchr.org/en/instruments-mechanisms/instruments/convention-rights-persons-disabilities
       \endverb
     \endentry
-    \entry{un_crpd_2006}{online}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=3cc54e2c0d69c1b76b4d49edb22dd6d1}{%
-           family={{United Nations}},
-           familyi={U\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {United Nations}%
-      }
-      \strng{namehash}{3cc54e2c0d69c1b76b4d49edb22dd6d1}
-      \strng{fullhash}{3cc54e2c0d69c1b76b4d49edb22dd6d1}
-      \strng{fullhashraw}{3cc54e2c0d69c1b76b4d49edb22dd6d1}
-      \strng{bibnamehash}{3cc54e2c0d69c1b76b4d49edb22dd6d1}
-      \strng{authorbibnamehash}{3cc54e2c0d69c1b76b4d49edb22dd6d1}
-      \strng{authornamehash}{3cc54e2c0d69c1b76b4d49edb22dd6d1}
-      \strng{authorfullhash}{3cc54e2c0d69c1b76b4d49edb22dd6d1}
-      \strng{authorfullhashraw}{3cc54e2c0d69c1b76b4d49edb22dd6d1}
-      \field{extraname}{2}
-      \field{sortinit}{U}
-      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
-      \field{extradate}{2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{day}{13}
-      \field{month}{12}
-      \field{title}{Convention on the Rights of Persons with Disabilities}
-      \field{urlday}{4}
-      \field{urlmonth}{3}
-      \field{urlyear}{2026}
-      \field{year}{2006}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.un.org/disabilities/documents/convention/convoptprot-e.pdf
-      \endverb
-      \verb{url}
-      \verb https://www.un.org/disabilities/documents/convention/convoptprot-e.pdf
-      \endverb
-    \endentry
-    \entry{wangMetacognitivePromptingImproves2024}{misc}{}{}
+    \entry{wangMetacognitivePromptingImproves2024}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{un=1,uniquepart=given,hash=a48cdbcd19a30fd4053a4d8a78536c8f}{%
            family={Wang},
@@ -4932,7 +4886,7 @@
       \endverb
       \keyw{Computer Science - Artificial Intelligence,Computer Science - Computation and Language}
     \endentry
-    \entry{WebAIM19}{misc}{}{}
+    \entry{WebAIM19}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=790eee551afe5a8832859712ba1b5f4f}{%
            family={WebAIM},
@@ -4968,7 +4922,7 @@
       \verb https://webaim.org/projects/million/2019
       \endverb
     \endentry
-    \entry{WebAIM}{misc}{}{}
+    \entry{WebAIM}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=790eee551afe5a8832859712ba1b5f4f}{%
            family={WebAIM},
@@ -5004,7 +4958,7 @@
       \verb https://webaim.org/projects/million/
       \endverb
     \endentry
-    \entry{WAVE}{misc}{}{}
+    \entry{WAVE}{software}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=790eee551afe5a8832859712ba1b5f4f}{%
            family={WebAIM},
@@ -5245,7 +5199,7 @@
       \verb https://arxiv.org/abs/2206.07682
       \endverb
     \endentry
-    \entry{wei2022chainofthought}{misc}{}{}
+    \entry{wei2022chainofthought}{inproceedings}{}{}
       \name{author}{9}{ul=2}{%
         {{un=0,uniquepart=base,hash=61331a11b490f3d927555985facd25b3}{%
            family={Wei},
@@ -5271,11 +5225,11 @@
            given={Maarten},
            giveni={M\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=a096e9107f0463212211c4510c6fa470}{%
-           family={Ichter},
-           familyi={I\bibinitperiod},
-           given={Brian},
-           giveni={B\bibinitperiod},
+        {{un=0,uniquepart=base,hash=5e60cdd23d7f33ec86e49a7b10e86129}{%
+           family={{ichter}},
+           familyi={i\bibinitperiod},
+           given={brian},
+           giveni={b\bibinitperiod},
            givenun=0}}%
         {{un=0,uniquepart=base,hash=61e00ed0c44b8bddb9077a74a4ac1167}{%
            family={Xia},
@@ -5292,7 +5246,7 @@
         {{un=0,uniquepart=base,hash=c636f146591d51579a8119b777394878}{%
            family={Le},
            familyi={L\bibinitperiod},
-           given={Quoc\bibnamedelima V.},
+           given={Quoc\bibnamedelima V},
            giveni={Q\bibinitperiod\bibinitdelim V\bibinitperiod},
            givenun=0}}%
         {{un=0,uniquepart=base,hash=797f9a226fd7356db5edc6feba1a0e87}{%
@@ -5302,30 +5256,74 @@
            giveni={D\bibinitperiod},
            givenun=0}}%
       }
+      \name{editor}{6}{}{%
+        {{hash=bf08b65cce4ebf8ed71a0b3f7c1dfa1d}{%
+           family={Koyejo},
+           familyi={K\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f9e146884d45b458408eba9ec6ba0cc9}{%
+           family={Mohamed},
+           familyi={M\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1cc9a6fef261c6c620d53b6fe154022a}{%
+           family={Agarwal},
+           familyi={A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=cbb0ac3a625af607c7b2347f3a1f6eec}{%
+           family={Belgrave},
+           familyi={B\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=0f841893a4e03c6a159374cc7136b961}{%
+           family={Cho},
+           familyi={C\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=6d9c5f3daf57997af27b3617ec7d1fe9}{%
+           family={Oh},
+           familyi={O\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Curran Associates, Inc.}%
+      }
       \strng{namehash}{b14663f4d0bd3b59eb629fe8a9acd724}
-      \strng{fullhash}{0a6023425e9f1a427e86985342d6f7ef}
-      \strng{fullhashraw}{0a6023425e9f1a427e86985342d6f7ef}
-      \strng{bibnamehash}{0a6023425e9f1a427e86985342d6f7ef}
-      \strng{authorbibnamehash}{0a6023425e9f1a427e86985342d6f7ef}
+      \strng{fullhash}{84c869427df2bcc99b6d065525eb6829}
+      \strng{fullhashraw}{84c869427df2bcc99b6d065525eb6829}
+      \strng{bibnamehash}{84c869427df2bcc99b6d065525eb6829}
+      \strng{authorbibnamehash}{84c869427df2bcc99b6d065525eb6829}
       \strng{authornamehash}{b14663f4d0bd3b59eb629fe8a9acd724}
-      \strng{authorfullhash}{0a6023425e9f1a427e86985342d6f7ef}
-      \strng{authorfullhashraw}{0a6023425e9f1a427e86985342d6f7ef}
+      \strng{authorfullhash}{84c869427df2bcc99b6d065525eb6829}
+      \strng{authorfullhashraw}{84c869427df2bcc99b6d065525eb6829}
+      \strng{editorbibnamehash}{149e334d093f657bc216da323592d003}
+      \strng{editornamehash}{ef48c9a3cb05b7d5bc7df5bc7eec0b92}
+      \strng{editorfullhash}{149e334d093f657bc216da323592d003}
+      \strng{editorfullhashraw}{149e334d093f657bc216da323592d003}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{eprintclass}{cs.CL}
-      \field{eprinttype}{arxiv}
-      \field{note}{Definition von Chain-of-Thought Prompting auf S.~2}
+      \field{booktitle}{Advances in Neural Information Processing Systems}
       \field{title}{Chain-of-Thought Prompting Elicits Reasoning in Large Language Models}
+      \field{volume}{35}
       \field{year}{2022}
-      \verb{eprint}
-      \verb 2201.11903
+      \field{dateera}{ce}
+      \field{pages}{24824\bibrangedash 24837}
+      \range{pages}{14}
+      \verb{urlraw}
+      \verb https://proceedings.neurips.cc/paper_files/paper/2022/file/9d5609613524ecf4f15af0f7b31abca4-Paper-Conference.pdf
+      \endverb
+      \verb{url}
+      \verb https://proceedings.neurips.cc/paper_files/paper/2022/file/9d5609613524ecf4f15af0f7b31abca4-Paper-Conference.pdf
       \endverb
     \endentry
-    \entry{WHO}{misc}{}{}
+    \entry{WHO}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=531217507bec092b6ec36c0f78f46736}{%
            family={{World Health Organization}},
@@ -5361,7 +5359,7 @@
       \verb https://www.who.int/health-topics/disability#tab=tab_1
       \endverb
     \endentry
-    \entry{WCAG2.1}{misc}{}{}
+    \entry{WCAG2.1}{legislation}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=66c3509f57565d7fbe270a57a403004c}{%
            family={{World Wide Web Consortium (W3C)}},
@@ -5398,7 +5396,7 @@
       \verb https://www.w3.org/TR/WCAG21/
       \endverb
     \endentry
-    \entry{WCAG}{misc}{}{}
+    \entry{WCAG}{legislation}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=66c3509f57565d7fbe270a57a403004c}{%
            family={{World Wide Web Consortium (W3C)}},
@@ -5434,7 +5432,7 @@
       \verb https://www.w3.org/TR/WCAG22/
       \endverb
     \endentry
-    \entry{WAITools}{misc}{}{}
+    \entry{WAITools}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=66c3509f57565d7fbe270a57a403004c}{%
            family={{World Wide Web Consortium (W3C)}},
@@ -5469,7 +5467,7 @@
       \verb https://www.w3.org/WAI/test-evaluate/tools/list/
       \endverb
     \endentry
-    \entry{WAI}{misc}{}{}
+    \entry{WAI}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=66c3509f57565d7fbe270a57a403004c}{%
            family={{World Wide Web Consortium (W3C)}},
@@ -5504,7 +5502,7 @@
       \verb https://www.w3.org/WAI/
       \endverb
     \endentry
-    \entry{yao2022react}{misc}{}{}
+    \entry{yao2022react}{inproceedings}{}{}
       \name{author}{7}{}{%
         {{un=0,uniquepart=base,hash=5c1b62cbd4e181d818b927549813cf73}{%
            family={Yao},
@@ -5536,11 +5534,11 @@
            given={Izhak},
            giveni={I\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=997c3143c2e5d593e816d2ff704fbf98}{%
+        {{un=0,uniquepart=base,hash=449f10d1859ccbfe31e7e810d098efd7}{%
            family={Narasimhan},
            familyi={N\bibinitperiod},
-           given={Karthik},
-           giveni={K\bibinitperiod},
+           given={Karthik\bibnamedelima R.},
+           giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod},
            givenun=0}}%
         {{un=0,uniquepart=base,hash=2923de2da7f9b32b957552e414b6bc16}{%
            family={Cao},
@@ -5550,37 +5548,40 @@
            givenun=0}}%
       }
       \strng{namehash}{4ae4be538df04cfc1571685175562cad}
-      \strng{fullhash}{6f22c9f891fbcfb7465b1c3157b57023}
-      \strng{fullhashraw}{6f22c9f891fbcfb7465b1c3157b57023}
-      \strng{bibnamehash}{6f22c9f891fbcfb7465b1c3157b57023}
-      \strng{authorbibnamehash}{6f22c9f891fbcfb7465b1c3157b57023}
+      \strng{fullhash}{b7ce37415173417fbdd9f43b0776521f}
+      \strng{fullhashraw}{b7ce37415173417fbdd9f43b0776521f}
+      \strng{bibnamehash}{b7ce37415173417fbdd9f43b0776521f}
+      \strng{authorbibnamehash}{b7ce37415173417fbdd9f43b0776521f}
       \strng{authornamehash}{4ae4be538df04cfc1571685175562cad}
-      \strng{authorfullhash}{6f22c9f891fbcfb7465b1c3157b57023}
-      \strng{authorfullhashraw}{6f22c9f891fbcfb7465b1c3157b57023}
+      \strng{authorfullhash}{b7ce37415173417fbdd9f43b0776521f}
+      \strng{authorfullhashraw}{b7ce37415173417fbdd9f43b0776521f}
       \field{sortinit}{Y}
       \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprintclass}{cs.CL}
-      \field{eprinttype}{arxiv}
-      \field{month}{3}
-      \field{note}{Definition/Intuition von ReAct (interleaved reasoning+acting) auf S.~2; publiziert bei ICLR 2023}
-      \field{title}{ReAct: Synergizing Reasoning and Acting in Language Models}
-      \field{urlday}{28}
-      \field{urlmonth}{2}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{While large language models (LLMs) have demonstrated impressive capabilities across tasks in language understanding and interactive decision making, their abilities for reasoning (e.g. chain-of-thought prompting) and acting (e.g. action plan generation) have primarily been studied as separate topics. In this paper, we explore the use of LLMs to generate both reasoning traces and task-specific actions in an interleaved manner, allowing for greater synergy between the two: reasoning traces help the model induce, track, and update action plans as well as handle exceptions, while actions allow it to interface with external sources, such as knowledge bases or environments, to gather additional information. We apply our approach, named ReAct, to a diverse set of language and decision making tasks and demonstrate its effectiveness over state-of-the-art baselines, as well as improved human interpretability and trustworthiness over methods without reasoning or acting components. Concretely, on question answering (HotpotQA) and fact verification (Fever), ReAct overcomes issues of hallucination and error propagation prevalent in chain-of-thought reasoning by interacting with a simple Wikipedia API, and generates human-like task-solving trajectories that are more interpretable than baselines without reasoning traces. On two interactive decision making benchmarks (ALFWorld and WebShop), ReAct outperforms imitation and reinforcement learning methods by an absolute success rate of 34\% and 10\% respectively, while being prompted with only one or two in-context examples.}
+      \field{day}{29}
+      \field{eventtitle}{The {{Eleventh International Conference}} on {{Learning Representations}}}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{shorttitle}{{{ReAct}}}
+      \field{title}{{{ReAct}}: {{Synergizing Reasoning}} and {{Acting}} in {{Language Models}}}
+      \field{urlday}{6}
+      \field{urlmonth}{4}
       \field{urlyear}{2026}
-      \field{year}{2023}
+      \field{year}{2022}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
-      \verb{eprint}
-      \verb 2210.03629
+      \verb{file}
+      \verb C:\Users\joely\Zotero\storage\L4DXZILV\Yao et al. - 2022 - ReAct Synergizing Reasoning and Acting in Language Models.pdf
       \endverb
       \verb{urlraw}
-      \verb https://arxiv.org/pdf/2210.03629
+      \verb https://openreview.net/forum?id=WE_vluYUL-X
       \endverb
       \verb{url}
-      \verb https://arxiv.org/pdf/2210.03629
+      \verb https://openreview.net/forum?id=WE_vluYUL-X
       \endverb
     \endentry
     \entry{yin_case_2018}{book}{}{}
@@ -5622,6 +5623,7 @@
       \keyw{Methodik}
     \endentry
   \enddatalist
+  \missing{brynjolfssonNBERWORKINGPAPER}
 \endrefsection
 \endinput
 
