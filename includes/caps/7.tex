@@ -6,14 +6,14 @@ Dieses Kapitel bewertet das in Kapitel~\ref{kap:5} konzipierte und in Kapitel~\r
 \section{Versuchsdesign}
 \label{sec:versuchsdesign}
 
-Die Evaluation ist mehrstufig angelegt: In dieser Arbeit wird zunächst die kontrollierte \textit{test-12-Suite} als primäres Untersuchungsobjekt verwendet. Ergänzende Messreihen auf der test-50-Suite (50~Violations) und der test-100-Suite (100~Violations) wurden ebenfalls durchgeführt und sind in Abschnitt~\ref{sec:eval_erweiterung} dokumentiert. Die Evaluation am realen \acf{BWEC} der \ac{BITBW} verbleibt als Folgeschritt. Das folgende Unterkapitel beschreibt die Untersuchungsobjekte im Überblick.
+Die Evaluation ist mehrstufig angelegt und folgt einer bewussten Stufenlogik: Die \textit{test-12-Suite} dient als methodische \textbf{Kalibrierungsphase} -- bei vollständig bekannter Ground Truth lässt sich prüfen, ob die Pipeline prinzipiell korrekt funktioniert und alle Verstoßkategorien grundsätzlich erkennt. Die \textit{test-100-Suite} bildet die eigentliche \textbf{Belastungsprüfung}: Erst hier gerät das Token-Budget unter Druck, treten Skalierungseffekte auf und werden Modellunterschiede unter realistischerer Last sichtbar. Die test-50-Suite fungiert als Zwischenstufe. Die Evaluation am realen \acf{BWEC} der \ac{BITBW} verbleibt als Folgeschritt. Das folgende Unterkapitel beschreibt die Untersuchungsobjekte im Überblick.
 
 \subsection{Testobjekte und Ground Truth}
 \label{sec:versuch_testobjekt}
 
-Für die Evaluation dieser Arbeit dient eine eigens entwickelte React-\ac{SPA} (\textit{test-12-Suite}) als primäres Testobjekt. Sie enthält zwölf gezielt eingebettete \ac{WCAG}-Verstöße (Tabelle~\ref{tab:accessibility_verstoesse}), die alle drei Kategorien der in Kapitel~\ref{Taxonomie} eingeführten Taxonomie abdecken: vier syntaktische (V1, V2, V3, V10), drei layout-bezogene (V4, V5, V12) und fünf semantische Verstöße (V6, V7, V8, V9, V11). Da die Ground Truth vollständig bekannt und kontrollierbar ist, lassen sich Recall und Präzision der Pipeline exakt messen. Die visuelle Gestalt der Testanwendung ist in Anhang~\ref{fig:test12_screen1} und \ref{fig:test12_screen2} dokumentiert.
+Die \textit{test-12-Suite} ist eine eigens entwickelte React-\ac{SPA} mit zwölf gezielt eingebetteten \ac{WCAG}-Verstößen (Tabelle~\ref{tab:accessibility_verstoesse}), die alle drei Kategorien der in Kapitel~\ref{Taxonomie} eingeführten Taxonomie abdecken: vier syntaktische (V1, V2, V3, V10), drei layout-bezogene (V4, V5, V12) und fünf semantische Verstöße (V6, V7, V8, V9, V11). Da die Ground Truth vollständig bekannt und kontrollierbar ist, eignet sie sich als \textbf{Kalibrierungsphase}: Es lässt sich exakt prüfen, ob alle Detektionsquellen korrekt angebunden sind, die Normalisierung funktioniert und das LLM-Modell die Pipeline-Ausgaben grundsätzlich verarbeiten kann. Aufgrund der geringen Komplexität der Suite sind die erzielten Recall-Werte jedoch nicht als repräsentativ für reale Anwendungen zu interpretieren. Die visuelle Gestalt der Testanwendung ist in Anhang~\ref{fig:test12_screen1} und \ref{fig:test12_screen2} dokumentiert.
 
-Zusätzlich zu test-12 wurden als Vorbereitung für zukünftige Evaluationen zwei weitere synthetische Testsuiten entwickelt: \textit{test-50} mit 50 eingebetteten Violations und \textit{test-100} mit 100 Violations. Sie sind als Skalierungsstufen konzipiert, auf denen das Token-Budget erstmals unter realem Druck steht. Alle Benchmarkläufe auf test-50 und test-100 wurden abgeschlossen; die vollständigen Ergebnisse sind in Abschnitt~\ref{sec:eval_erweiterung} dokumentiert. Als reales Untersuchungsobjekt ist der \ac{BWEC} der \ac{BITBW} vorgesehen -- eine produktiv betriebene React-\ac{SPA} mit unbekannter Ground Truth (vgl. Abschnitt~\ref{sec:eval_bwec}).
+Die \textit{test-100-Suite} (100~Violations, 11~Komponenten, vgl. Anhang~\ref{app:accessibility_verstoesse_100}) bildet die eigentliche \textbf{Belastungsprüfung}: Erst bei 100~Violations gerät das Token-Budget systematisch unter Druck, treten Trunkierungseffekte auf und werden Modellunterschiede unter annähernd realistischer Last messbar. Die test-50-Suite (50~Violations) dient als Zwischenstufe. Alle Benchmarkläufe auf allen drei Suiten wurden abgeschlossen; die Ergebnisse für test-12 werden in Abschnitten~\ref{sec:ergebnisse_recall}--\ref{sec:ergebnisse_effizienz} ausgewertet, die Ergebnisse für test-50 und test-100 in Abschnitt~\ref{sec:eval_erweiterung}. Als reales Untersuchungsobjekt ist der \ac{BWEC} der \ac{BITBW} vorgesehen -- eine produktiv betriebene React-\ac{SPA} mit unbekannter Ground Truth (vgl. Abschnitt~\ref{sec:eval_bwec}).
 
 \subsection{Modelle, Konfiguration und Runs}
 \label{sec:versuch_modelle}
@@ -314,10 +314,10 @@ Alle drei Modelle erzeugen in einzelnen Runs Findings ohne belastbare Grundlage.
 Alle Laufzeitmessungen wurden auf einem einzelnen \ac{CPU}-basierten System durchgeführt. Auf \ac{GPU}-beschleunigter Hardware oder mit quantisierten Modellversionen wären erheblich kürzere Laufzeiten zu erwarten, sodass \ac{NFA}-02 dann auch für 32b klar erfüllbar wäre.
 
 % ─────────────────────────────────────────────────────────────────────────────
-\section{Erweiterung auf größere Testsuiten und reales Untersuchungsobjekt}
+\section{Belastungsprüfung: test-50 und test-100}
 \label{sec:eval_erweiterung}
 
-Die in den vorherigen Abschnitten präsentierten Ergebnisse basieren primär auf der kontrollierten test-12-Suite. Ergänzend wurden die test-50-Suite (50~Violations) und die test-100-Suite (100~Violations, alle drei Modelle) vollständig evaluiert. Die Evaluation am realen \ac{BWEC} der \ac{BITBW} verbleibt als Folgeschritt.
+Die in den vorherigen Abschnitten präsentierten Kalibrierungsergebnisse (test-12) zeigen, dass die Pipeline korrekt funktioniert und alle Verstoßkategorien grundsätzlich erkennbar sind. Dieser Abschnitt dokumentiert die eigentliche Belastungsprüfung: die test-50-Suite (50~Violations) als Zwischenstufe sowie die test-100-Suite (100~Violations) als primäres Skalierungsobjekt, an dem Tokenbudget-Effekte, Modellunterschiede und Erkennungsgrenzen unter realistischerer Last sichtbar werden. Die Evaluation am realen \ac{BWEC} der \ac{BITBW} verbleibt als Folgeschritt.
 
 \subsection{Evaluation an test-50}
 \label{sec:eval_suiten}
@@ -356,29 +356,7 @@ Tabelle~\ref{tab:priorisierungsqualitaet_50} fasst das Must-have/Nice-to-have-Ve
 Die Gesamtlaufzeit skaliert substanziell: \texttt{qwen2.5-coder:7b} \O{}~413\,s (Range: 291--465\,s), \texttt{qwen2.5-coder:14b} \O{}~826\,s (Range: 733--871\,s), \texttt{qwen3:32b} \O{}~1\,897\,s (Range: 1\,752--2\,011\,s). Damit erfüllt auf test-50 nur \texttt{qwen2.5-coder:7b} \ac{NFA}-02; \texttt{qwen2.5-coder:14b} und \texttt{qwen3:32b} überschreiten die Zehn-Minuten-Grenze klar (vgl. Tabelle~\ref{tab:modell_summary_50}).
 
 \paragraph{Skalierungsvergleich test-12 vs.\ test-50.}
-Tabelle~\ref{tab:skalierungsvergleich} quantifiziert die zentralen Skalierungseffekte. Bei einer 4,2-fachen Erhöhung der Violation-Zahl skaliert \texttt{qwen2.5-coder:7b} mit dem Faktor~4,2 annähernd proportional, während \texttt{qwen2.5-coder:14b} (+2,3×) und \texttt{qwen3:32b} (+3,1×) einen komprimierten Anstieg zeigen -- ein Hinweis darauf, dass die größeren Modelle auf test-12 stärker token-limitiert waren. Die Laufzeit skaliert unterlinear (Faktor 2,0--2,8), da Detektionsoverhead und Prompt-Infrastruktur nur partiell mit der Violation-Zahl wachsen.
-
-\begin{table}[htbp]
-\centering
-\small
-\renewcommand{\arraystretch}{1.15}
-\begin{tabular}{@{}lrrrrrrrrr@{}}
-\toprule
-\textbf{Modell} &
-\multicolumn{3}{c}{\textbf{\ac{LLM}-Det.-Findings Ø}} &
-\multicolumn{3}{c}{\textbf{Dauer Ø (s)}} &
-\multicolumn{3}{c}{\textbf{Truncation}} \\
-\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}
- & \textbf{12er} & \textbf{50er} & \textbf{100er} & \textbf{12er} & \textbf{50er} & \textbf{100er} & \textbf{12er} & \textbf{50er} & \textbf{100er} \\
-\midrule
-\texttt{qwen2.5-coder:7b}  & 11{,}1 & 46{,}6 & 104{,}0 &  97\,s  &   198\,s  &   365\,s & 50\,\% & 60\,\% & 80\,\% \\
-\texttt{qwen2.5-coder:14b} & 22{,}8 & 51{,}3 &  94{,}3 & 243\,s  &   444\,s  &   821\,s & 40\,\% & 70\,\% & 100\,\% \\
-\texttt{qwen3:32b}         & 19{,}5 & 60{,}7 &  99{,}1 & 361\,s  & 1\,000\,s & 1\,033\,s & 10\,\% & 90\,\% & 10\,\% \\
-\bottomrule
-\end{tabular}
-\caption[Skalierungsvergleich test-12 vs.\ test-50 vs.\ test-100]{Vergleich von Detektionsleistung und Effizienz über alle drei Testsuiten (je 10~Runs pro Modell). \textit{Dauer} entspricht der Priorisierungslaufzeit (\ac{LLM}-Phase). \textit{Truncation}: Anteil der Runs, der das Output-Token-Limit vollständig ausschöpft (\texttt{num\_predict}: 6\,144 / 8\,192 / 12\,288).}
-\label{tab:skalierungsvergleich}
-\end{table}
+Tabelle~\ref{tab:skalierungsvergleich} im Anhang quantifiziert die zentralen Skalierungseffekte. Bei einer 4,2-fachen Erhöhung der Violation-Zahl skaliert \texttt{qwen2.5-coder:7b} mit dem Faktor~4,2 annähernd proportional, während \texttt{qwen2.5-coder:14b} (+2,3×) und \texttt{qwen3:32b} (+3,1×) einen komprimierten Anstieg zeigen -- ein Hinweis darauf, dass die größeren Modelle auf test-12 stärker token-limitiert waren. Die Laufzeit skaliert unterlinear (Faktor 2,0--2,8), da Detektionsoverhead und Prompt-Infrastruktur nur partiell mit der Violation-Zahl wachsen.
 
 \subsection{Evaluation an test-100}
 \label{sec:eval_suiten_100}

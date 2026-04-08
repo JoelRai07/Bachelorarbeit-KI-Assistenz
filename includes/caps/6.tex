@@ -6,7 +6,7 @@ Dieses Kapitel beschreibt die prototypische Umsetzung des in Kapitel~\ref{kap:5}
 \section{Technischer Rahmen und Projektstruktur}
 \label{sec:techstack}
 
-Der \ac{PoC} ist als Node.js-Anwendung in TypeScript implementiert. Die Wahl von TypeScript ergibt sich aus der Nähe zum Untersuchungsgegenstand (React/TypeScript) und ermöglicht die typsichere Definition des \ac{UFS} (vgl. Listing~\ref{lst:ufs}). Als Laufzeitumgebung wird Node.js ab Version~20 eingesetzt; die Ausführung erfolgt über \texttt{tsx}, einen TypeScript-Runner, der Kompilierung und Ausführung in einem Schritt verbindet. Auf ein zusätzliches Framework wurde bewusst verzichtet, um den \ac{PoC} minimal zu halten.
+Der \ac{PoC} ist als Node.js-Anwendung in TypeScript implementiert.\footcite[Vgl.][]{JavaScriptSyntaxTypesa} Die Wahl von TypeScript ergibt sich aus der technologischen Nähe zum Untersuchungsgegenstand: Der BWEC ist als Anwendung in ein TypeScript-basiertes Monorepo eingebettet, sodass der \ac{PoC} im selben technologischen Kontext entwickelt wird. Dies erleichtert sowohl die Integration als auch eine mögliche Übertragung auf weitere Anwendungen innerhalb vergleichbarer Architekturen. Zugleich ermöglicht TypeScript eine typsichere Definition des \ac{UFS} (vgl. Listing~\ref{lst:ufs}). Als Laufzeitumgebung wird Node.js ab Version~24 eingesetzt; die Ausführung erfolgt über \texttt{tsx}, einen TypeScript-Runner, der Kompilierung und Ausführung in einem Schritt verbindet. Auf ein zusätzliches Framework wurde bewusst verzichtet, um den \ac{PoC} minimal zu halten.
 
 Tabelle~\ref{tab:dependencies} listet die wesentlichen Abhängigkeiten des Projekts.
 
@@ -20,7 +20,7 @@ Tabelle~\ref{tab:dependencies} listet die wesentlichen Abhängigkeiten des Proje
 \texttt{playwright} & 1.50 & Browser-Automatisierung für Interaktionschecks \\
 \texttt{@axe-core/playwright} & 4.10 & axe-core-Integration in Playwright \\
 \texttt{dotenv} & 17.3 & Umgebungsvariablen aus \texttt{.env}-Datei laden \\
-\texttt{tsx} & 4.21 & TypeScript-Runner (Monorepo-Dependency) \\
+\texttt{tsx} & 6.5.7 & TypeScript-Runner (Monorepo-Dependency) \\
 \bottomrule
 \end{tabular}
 \caption{Wesentliche Abhängigkeiten des \acs{PoC}}
@@ -29,15 +29,18 @@ Tabelle~\ref{tab:dependencies} listet die wesentlichen Abhängigkeiten des Proje
 
 Die Projektstruktur folgt einer flachen Modulstruktur, bei der jedes Modul in \texttt{src/modules/} sowohl die Datenerhebung als auch die Normalisierung in das \ac{UFS} übernimmt:
 
+% Globale lstset-Einstellung für Kapitel 6
 \lstset{
   basicstyle=\ttfamily\scriptsize,
-    keywordstyle=\color{blue},
-    commentstyle=\color{gray},
-    stringstyle=\color{red},
-    numbers=left,
-    numberstyle=\tiny,
-    breaklines=true,
-    frame=single
+  keywordstyle=\color{blue},
+  commentstyle=\color{gray},
+  stringstyle=\color{red},
+  numbers=left,
+  numberstyle=\tiny,
+  breaklines=true,
+  frame=single,
+  aboveskip=4pt,
+  belowskip=4pt
 }
 \begin{lstlisting}[language={}, caption={Projektstruktur des \acs{PoC}}, label={lst:projektstruktur}, basicstyle=\ttfamily\scriptsize]
 ACE/
@@ -178,17 +181,6 @@ Der \ac{PoC} nutzt deshalb beide Ansätze komplementär: grep als stabile Baseli
 
 Ein typischer Detektionsfall läuft wie folgt ab: In einer Komponente enthält ein \texttt{<div>} einen \texttt{onClick}-Handler ohne tastaturäquivalentes Ereignis. Das Modell meldet dazu ein Finding mit Datei- und Zeilenbezug sowie Evidenztext. Dieses Finding wird normalisiert, dedupliziert und als \texttt{source="llm"} in das \ac{UFS} überführt, bevor es in der Priorisierungsphase gemeinsam mit den toolbasierten Findings verarbeitet wird.
 
-\lstset{
-  basicstyle=\ttfamily\scriptsize,
-    keywordstyle=\color{blue},
-    commentstyle=\color{gray},
-    stringstyle=\color{red},
-    numbers=left,
-    numberstyle=\tiny,
-    breaklines=true,
-    frame=single
-}
-
 \begin{lstlisting}[language={}, caption={Beispiel eines validierten \ac{LLM}-Detektor-Findings (vereinfacht)}]
 {
   "title": "Klickbare div-Komponente ohne Tastaturbedienung",
@@ -238,16 +230,6 @@ Wie in Abschnitt~\ref{sec:kontextualisierung} beschrieben, ist das Kontextfenste
 
 Jedes Finding wird in ein kompaktes Textformat serialisiert, das die wesentlichen Informationen auf wenige Zeilen komprimiert:
 
-\lstset{
-  basicstyle=\ttfamily\scriptsize,
-    keywordstyle=\color{blue},
-    commentstyle=\color{gray},
-    stringstyle=\color{red},
-    numbers=left,
-    numberstyle=\tiny,
-    breaklines=true,
-    frame=single
-}
 \begin{lstlisting}[language={}, caption={Serialisiertes Finding im Prompt}, label={lst:serialized}, basicstyle=\ttfamily\scriptsize]
 [axe-007] CRITICAL | color-contrast | \ac{WCAG} 1.4.3 (AA)
 Beschreibung: Element hat unzureichenden Farbkontrast

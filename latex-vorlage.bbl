@@ -749,6 +749,68 @@
       \verb https://papers.nips.cc/paper_files/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html
       \endverb
     \endentry
+    \entry{brynjolfssonGenerativeAIWork2025}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=7bd9f54569cb8c0301da00ed49b5a752}{%
+           family={Brynjolfsson},
+           familyi={B\bibinitperiod},
+           given={Erik},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9549ba5d9e9696208664346821d3ac14}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Danielle},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=526a7239b4cbed8ac82f3731346cd822}{%
+           family={Raymond},
+           familyi={R\bibinitperiod},
+           given={Lindsey},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{52c6338e9f79371688e62392e04268b3}
+      \strng{fullhash}{52c6338e9f79371688e62392e04268b3}
+      \strng{fullhashraw}{52c6338e9f79371688e62392e04268b3}
+      \strng{bibnamehash}{52c6338e9f79371688e62392e04268b3}
+      \strng{authorbibnamehash}{52c6338e9f79371688e62392e04268b3}
+      \strng{authornamehash}{52c6338e9f79371688e62392e04268b3}
+      \strng{authorfullhash}{52c6338e9f79371688e62392e04268b3}
+      \strng{authorfullhashraw}{52c6338e9f79371688e62392e04268b3}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We study the staggered introduction of a generative AI–based conversational assistant using data from 5,172 customer-support agents. Access to AI assistance increases worker productivity, as measured by issues resolved per hour, by 15\% on average, with substantial heterogeneity across workers. The effects vary significantly across different agents. Less experienced and lower-skilled workers improve both the speed and quality of their output, while the most experienced and highest-skilled workers see small gains in speed and small declines in quality. We also find evidence that AI assistance facilitates worker learning and improves English fluency, particularly among international agents. While AI systems improve with more training data, we find that the gains from AI adoption are largest for moderately rare problems, where human agents have less baseline experience but the system still has adequate training data. Finally, we provide evidence that AI assistance improves the experience of work along several dimensions: customers are more polite and less likely to ask to speak to a manager.}
+      \field{day}{1}
+      \field{issn}{0033-5533}
+      \field{journaltitle}{The Quarterly Journal of Economics}
+      \field{month}{5}
+      \field{number}{2}
+      \field{shortjournal}{Q J Econ}
+      \field{title}{Generative {{AI}} at {{Work}}*}
+      \field{urlday}{6}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{140}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{889\bibrangedash 942}
+      \range{pages}{54}
+      \verb{doi}
+      \verb 10.1093/qje/qjae044
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/qje/qjae044
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/qje/qjae044
+      \endverb
+    \endentry
     \entry{BFSGGesetz}{legislation}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=2cbc78ce06cb57e73f663d102eba3a66}{%
@@ -1290,6 +1352,49 @@
       \verb https://www.sciencedirect.com/science/article/pii/S1877050912007661
       \endverb
       \keyw{Web accessibility,Automated evaluation,Web application,Web browser processing,Web science}
+    \endentry
+    \entry{fernándeznavarro2026automatedllmbasedaccessibilityremediation}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f27d8badb7cc34a05496e41ea52ff1ae}{%
+           family={Fernández-Navarro},
+           familyi={F\bibinithyphendelim N\bibinitperiod},
+           given={Carla},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=17d0a7723cd1a5b697e0a40398159f71}{%
+           family={Chicano},
+           familyi={C\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{080bfbd9acbaf3c0a94036965a98533b}
+      \strng{fullhash}{080bfbd9acbaf3c0a94036965a98533b}
+      \strng{fullhashraw}{080bfbd9acbaf3c0a94036965a98533b}
+      \strng{bibnamehash}{080bfbd9acbaf3c0a94036965a98533b}
+      \strng{authorbibnamehash}{080bfbd9acbaf3c0a94036965a98533b}
+      \strng{authornamehash}{080bfbd9acbaf3c0a94036965a98533b}
+      \strng{authorfullhash}{080bfbd9acbaf3c0a94036965a98533b}
+      \strng{authorfullhashraw}{080bfbd9acbaf3c0a94036965a98533b}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.SE}
+      \field{eprinttype}{arXiv}
+      \field{title}{Automated LLM-Based Accessibility Remediation: From Conventional Websites to Angular Single-Page Applications}
+      \field{year}{2026}
+      \verb{eprint}
+      \verb 2602.17887
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2602.17887
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2602.17887
+      \endverb
     \endentry
     \entry{Flanagan_2020}{book}{}{}
       \name{author}{1}{}{%
@@ -2164,6 +2269,29 @@
       \endverb
       \keyw{Computer Science - Computation and Language}
     \endentry
+    \entry{JavaScriptSyntaxTypesa}{software}{}{}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{abstract}{TypeScript extends JavaScript by adding types to the language. TypeScript speeds up your development experience by catching errors and providing fixes before you even run your code.}
+      \field{langid}{english}
+      \field{title}{{{JavaScript With Syntax For Types}}.}
+      \field{urlday}{14}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\joely\Zotero\storage\GJECNN3U\www.typescriptlang.org.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.typescriptlang.org/
+      \endverb
+      \verb{url}
+      \verb https://www.typescriptlang.org/
+      \endverb
+    \endentry
     \entry{kerkmann_barrierefreie_2015}{book}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=6c3cb1b30388e65abb86abae5d2cd32a}{%
@@ -2491,6 +2619,70 @@
       \field{title}{Research Methods in Human-Computer Interaction}
       \field{year}{2017}
       \field{dateera}{ce}
+    \endentry
+    \entry{Leedy2025Accessibility}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=6dc797ea3a880d13a6918945bc1738c9}{%
+           family={Leedy},
+           familyi={L\bibinitperiod},
+           given={Katelyn},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=808e58eaebc7f010c54bb72c311fb3bb}{%
+           family={Preston},
+           familyi={P\bibinitperiod},
+           given={Makenzie},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=201b2545207ed92d8b8a25f22e8498be}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Jinjuan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=785c3938ac95a06073e6ac573b8199a7}{%
+           family={Rezwana},
+           familyi={R\bibinitperiod},
+           given={Jeba},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{9d600a259dfed9b8faaa706d130b1e3b}
+      \strng{fullhash}{30d08c2fd397e08614513f9e88652b50}
+      \strng{fullhashraw}{30d08c2fd397e08614513f9e88652b50}
+      \strng{bibnamehash}{30d08c2fd397e08614513f9e88652b50}
+      \strng{authorbibnamehash}{30d08c2fd397e08614513f9e88652b50}
+      \strng{authornamehash}{9d600a259dfed9b8faaa706d130b1e3b}
+      \strng{authorfullhash}{30d08c2fd397e08614513f9e88652b50}
+      \strng{authorfullhashraw}{30d08c2fd397e08614513f9e88652b50}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 28th International Academic Mindtrek Conference (Mindtrek '25)}
+      \field{month}{11}
+      \field{title}{Accessibility in the Age of Generative AI Web Based Builders: Evaluating Web Design Tools for Inclusive Practices}
+      \field{year}{2025}
+      \true{nocite}
+      \field{pages}{304\bibrangedash 314}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1145/3757980.3757989
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3757980.3757989
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3757980.3757989
+      \endverb
     \endentry
     \entry{lewisRetrievalAugmentedGenerationKnowledgeIntensive2021}{inproceedings}{}{}
       \name{author}{12}{}{%
@@ -3863,59 +4055,6 @@
       \verb https://dl.acm.org/doi/10.1145/3721146.3721944
       \endverb
     \endentry
-    \entry{Šmite_Wohlin_Galviņa_Prikladnicki_2012}{article}{}{}
-      \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=c47ac0accd9cf7c7846c338787fa3a5f}{%
-           family={Šmite},
-           familyi={Š\bibinitperiod},
-           given={Darja},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=e1ce15e2eeb53e3fc8c6035fd761594b}{%
-           family={Wohlin},
-           familyi={W\bibinitperiod},
-           given={Claes},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=ae5ef51d49a594e068434fe4d95c22c4}{%
-           family={Galviņa},
-           familyi={G\bibinitperiod},
-           given={Zane},
-           giveni={Z\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=bdaaed9a3cc66b81c3a29c6497bac264}{%
-           family={Prikladnicki},
-           familyi={P\bibinitperiod},
-           given={Rafael},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{bea043c9a6b5b8f1172c2db8b54892ad}
-      \strng{fullhash}{43c0bb990f0cb41e6f30ca665e61bcbc}
-      \strng{fullhashraw}{43c0bb990f0cb41e6f30ca665e61bcbc}
-      \strng{bibnamehash}{43c0bb990f0cb41e6f30ca665e61bcbc}
-      \strng{authorbibnamehash}{43c0bb990f0cb41e6f30ca665e61bcbc}
-      \strng{authornamehash}{bea043c9a6b5b8f1172c2db8b54892ad}
-      \strng{authorfullhash}{43c0bb990f0cb41e6f30ca665e61bcbc}
-      \strng{authorfullhashraw}{43c0bb990f0cb41e6f30ca665e61bcbc}
-      \field{sortinit}{Š}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Empirical Software Engineering}
-      \field{month}{7}
-      \field{number}{1}
-      \field{title}{An empirically based terminology and taxonomy for Global Software Engineering}
-      \field{volume}{19}
-      \field{year}{2012}
-      \field{pages}{105\bibrangedash 153}
-      \range{pages}{49}
-      \verb{doi}
-      \verb 10.1007/s10664-012-9217-9
-      \endverb
-    \endentry
     \entry{sommerville2016software}{book}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=70341b3bfcce7026902f4eb1e4111b58}{%
@@ -4633,6 +4772,85 @@
       \endverb
       \verb{url}
       \verb https://www.ohchr.org/en/instruments-mechanisms/instruments/convention-rights-persons-disabilities
+      \endverb
+    \endentry
+    \entry{vaswani2023attentionneed}{inproceedings}{}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=7f28e84700536646dd6620a0db07ad09}{%
+           family={Vaswani},
+           familyi={V\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=62efade83d70f0323fe248755e6c90c5}{%
+           family={Shazeer},
+           familyi={S\bibinitperiod},
+           given={Noam},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=06649ebab1ea5cac0250746a19764975}{%
+           family={Parmar},
+           familyi={P\bibinitperiod},
+           given={Niki},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=831027ee0ebf22375e2a86afc1881909}{%
+           family={Uszkoreit},
+           familyi={U\bibinitperiod},
+           given={Jakob},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2fd2982e30ebcec93ec1cf76e0d797fd}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Llion},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=27b07e4eacbf4ef7a1438e3badb7dd8d}{%
+           family={Gomez},
+           familyi={G\bibinitperiod},
+           given={Aidan\bibnamedelima N.},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f2bc899b1160163417da7bf510f15d33}{%
+           family={Kaiser},
+           familyi={K\bibinitperiod},
+           given={Lukasz},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=95595a0fefb86187cbc36e551017d332}{%
+           family={Polosukhin},
+           familyi={P\bibinitperiod},
+           given={Illia},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{fullhash}{f82970bbd2bdd7a002d2af62b743d5cc}
+      \strng{fullhashraw}{f82970bbd2bdd7a002d2af62b743d5cc}
+      \strng{bibnamehash}{f82970bbd2bdd7a002d2af62b743d5cc}
+      \strng{authorbibnamehash}{f82970bbd2bdd7a002d2af62b743d5cc}
+      \strng{authornamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{authorfullhash}{f82970bbd2bdd7a002d2af62b743d5cc}
+      \strng{authorfullhashraw}{f82970bbd2bdd7a002d2af62b743d5cc}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CL}
+      \field{eprinttype}{arXiv}
+      \field{title}{Attention Is All You Need}
+      \field{year}{2023}
+      \verb{eprint}
+      \verb 1706.03762
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1706.03762
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1706.03762
       \endverb
     \endentry
     \entry{wangMetacognitivePromptingImproves2024}{inproceedings}{}{}
@@ -5466,9 +5684,91 @@
       \field{dateera}{ce}
       \keyw{Methodik}
     \endentry
+    \entry{yuClutteredClearImproving2025}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=d751d70cfa8dcaaf8e97848f41323664}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Yaman},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cb7163949a5932d4376d48c5e707ffd1}{%
+           family={Ryskeldiev},
+           familyi={R\bibinitperiod},
+           given={Bektur},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d1714cbce894d206aea2aefd6983a50c}{%
+           family={Tsutsui},
+           familyi={T\bibinitperiod},
+           given={Ayaka},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6ca5302f9521d81f3a8b94e3cb8190b8}{%
+           family={Gillingham},
+           familyi={G\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a84866b4900b3fe9a714de1f78dbf282}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yang},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{d224b0034e96993be620ce4ceac04c6c}
+      \strng{fullhash}{945b9efaff34024ffce0a3790dbe87b3}
+      \strng{fullhashraw}{945b9efaff34024ffce0a3790dbe87b3}
+      \strng{bibnamehash}{945b9efaff34024ffce0a3790dbe87b3}
+      \strng{authorbibnamehash}{945b9efaff34024ffce0a3790dbe87b3}
+      \strng{authornamehash}{d224b0034e96993be620ce4ceac04c6c}
+      \strng{authorfullhash}{945b9efaff34024ffce0a3790dbe87b3}
+      \strng{authorfullhashraw}{945b9efaff34024ffce0a3790dbe87b3}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Blind and low vision users often face significant barriers when navigating online shopping websites using screen readers. Complex layouts, unclear content hierarchies, and visually driven designs create a frustrating and inefficient browsing experience, particularly on unfamiliar platforms. While prior accessibility tools focus on isolated elements such as product descriptions or image alt text, they often fall short of addressing the structural and navigational challenges screen reader users encounter across entire webpages. In this work, we explore how Generative AI (GenAI) can be leveraged to improve the accessibility of shopping websites by automatically restructuring their HTML content. We conducted a three-phase study: formative interviews with screen reader users, system development of a GenAI-powered browser extension, and user evaluation through both automated audits and real-world testing. Our tool dynamically reorganizes web content to better align with screen reader navigation patterns. Results from user studies with blind and low vision participants show that the GenAI-generated pages significantly improve navigation efficiency, content clarity, and overall usability. Participants highlighted benefits such as more logical section order and reduced browsing fatigue. Our findings demonstrate the potential of GenAI to support comprehensive, user-centered accessibility improvements directly within the structure of existing websites.}
+      \field{booktitle}{Proceedings of the 27th {{International ACM SIGACCESS Conference}} on {{Computers}} and {{Accessibility}}}
+      \field{day}{22}
+      \field{isbn}{979-8-4007-0676-9}
+      \field{month}{10}
+      \field{series}{{{ASSETS}} '25}
+      \field{shorttitle}{From {{Cluttered}} to {{Clear}}}
+      \field{title}{From {{Cluttered}} to {{Clear}}: {{Improving}} the {{Web Accessibility Design}} for {{Screen Reader Users}} in {{E-commerce With Generative AI}}}
+      \field{urlday}{8}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \field{pages}{1\bibrangedash 19}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1145/3663547.3746353
+      \endverb
+      \verb{file}
+      \verb C:\Users\joely\Zotero\storage\YI8LUYW9\Yu et al. - 2025 - From Cluttered to Clear Improving the Web Accessibility Design for Screen Reader Users in E-commerc.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3663547.3746353
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3663547.3746353
+      \endverb
+    \endentry
   \enddatalist
   \missing{Anthropic_API_Docs}
-  \missing{brynjolfssonNBERWORKINGPAPER}
 \endrefsection
 \endinput
 

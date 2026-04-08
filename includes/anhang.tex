@@ -4,6 +4,9 @@
 % damit im Anhang überall \ac{Kürzel} genutzt werden kann und das Paket
 % direkt die Kurzform ausgibt statt Erst-Nennung + Kurzform.
 \acused{ACE}\acused{API}\acused{AST}\acused{BFSG}\acused{BITBW}\acused{BITV}\acused{BWEC}\acused{CLI}\acused{CPU}\acused{CSS}\acused{DSR}\acused{DOM}\acused{DSGVO}\acused{EAA}\acused{FA}\acused{GPU}\acused{HTML}\acused{HTTP}\acused{IQR}\acused{JSON}\acused{JSX}\acused{KI}\acused{KPI}\acused{LLM}\acused{NFA}\acused{PoC}\acused{PW}\acused{RAG}\acused{RAM}\acused{SPA}\acused{TF}\acused{UFS}\acused{UI}\acused{URL}\acused{W3C}\acused{WAI}\acused{WCAG}\acused{WHO}
+% Einträge der Konzeptmatrix, die im Fließtext nicht direkt zitiert werden,
+% aber im Literaturverzeichnis erscheinen sollen:
+\nocite{yuClutteredClearImproving2025, Leedy2025Accessibility}
 
 \listofanhang
 \clearpage
@@ -106,7 +109,7 @@ Paternò et al.\ (2025) & TeVal
 Tafreshipour et al.\ (2024) & Ma11y
 & \yes &   &   & \yes & \yes &   &   &   &   & \yes &   &   &   &   \\ \hline
 
-Fernández-Navarro \& Chicano (2025) & \ac{LLM} Remediation
+Fernández-Navarro \& Chicano (2026) & \ac{LLM} Remediation
 & \yes & \yes & \yes & \yes &   & \yes & \yes &   &   & \yes &   &   & \yes &   \\ \hline
 
 
@@ -137,9 +140,6 @@ Kodithuwakku \& Wick.\ (2025) & Tool Eval.
 
 Manca et al.\ (2023) & Transparency
 & \yes &   & \yes & \yes &   &   &   &   &   &   & \yes & \yes &   &   \\ \hline
-
-Jiang \& Nam (2025) & Cursor Rules
-&   &   & \yes &   &   & \yes & \yes &   &   &   & \yes &   &   &   \\ \hline
 
 Gubbi Mohanbabu \& Pavel (2024) & Context-Aware Img.
 & \yes & \yes &   &   &   &   & \yes & \yes &   & \yes & \yes & \yes &   &   \\ \hline
@@ -578,6 +578,28 @@ Pragmatische \ac{BITV}-Eignung (Qualität/Zeit) & 14b: empfohlen & 14b: empfohle
 
 \noindent\textit{Hinweis:} Im Suite-Vergleich werden zwei Perspektiven getrennt ausgewiesen: \textit{strenge Sicht} (\ac{NFA}-02 als Ausschlusskriterium) und \textit{pragmatische Sicht} (Balance aus Erkennungsqualität und Zeitaufwand).
 
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}lrrrrrrrrr@{}}
+\toprule
+\textbf{Modell} &
+\multicolumn{3}{c}{\textbf{\ac{LLM}-Det.-Findings Ø}} &
+\multicolumn{3}{c}{\textbf{Dauer Ø (s)}} &
+\multicolumn{3}{c}{\textbf{Truncation}} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}
+ & \textbf{12er} & \textbf{50er} & \textbf{100er} & \textbf{12er} & \textbf{50er} & \textbf{100er} & \textbf{12er} & \textbf{50er} & \textbf{100er} \\
+\midrule
+\texttt{qwen2.5-coder:7b}  & 11{,}1 & 46{,}6 & 104{,}0 &  97\,s  &   198\,s  &   365\,s & 50\,\% & 60\,\% & 80\,\% \\
+\texttt{qwen2.5-coder:14b} & 22{,}8 & 51{,}3 &  94{,}3 & 243\,s  &   444\,s  &   821\,s & 40\,\% & 70\,\% & 100\,\% \\
+\texttt{qwen3:32b}         & 19{,}5 & 60{,}7 &  99{,}1 & 361\,s  & 1\,000\,s & 1\,033\,s & 10\,\% & 90\,\% & 10\,\% \\
+\bottomrule
+\end{tabular}
+\caption[Skalierungsvergleich test-12 vs.\ test-50 vs.\ test-100]{Vergleich von Detektionsleistung und Effizienz über alle drei Testsuiten (je 10~Runs pro Modell). \textit{Dauer} entspricht der Priorisierungslaufzeit (\ac{LLM}-Phase). \textit{Truncation}: Anteil der Runs, der das Output-Token-Limit vollständig ausschöpft (\texttt{num\_predict}: 6\,144 / 8\,192 / 12\,288).}
+\label{tab:skalierungsvergleich}
+\end{table}
+
 \clearpage
 \anhang{Bewertungsskala für die Empfehlungsqualität der \ac{LLM}-Ausgaben (generell)}
 
@@ -707,7 +729,7 @@ Playwright-Version & 1.50.1 \\
 
 \anhang{Console-Output-Auszüge eines Benchmark-Runs}\label{app:console_output}
 
-\noindent\textit{Hinweis:} Im Folgenden wird eine repräsentative Console-Ausgaben eines erfolgreichen Runs dokumentiert. Sie zeigt die typische Pipeline-Ausführung: Initialisierung, Tool-Ausführungen, \ac{LLM}-Detektor-Phase, Priorisierung und finaler Report-Export.
+Im Folgenden wird eine repräsentative Console-Ausgabe eines erfolgreichen Runs im \ac{BWEC} (mit Maxfiles: 5) dokumentiert. Sie zeigt die typische Pipeline-Ausführung: Initialisierung, Tool-Ausführungen, \ac{LLM}-Detektor-Phase (in Chunks basiert), Priorisierung und finaler Report-Export.
 \lstset{
   basicstyle=\ttfamily\scriptsize,
     keywordstyle=\color{blue},
@@ -720,7 +742,117 @@ Playwright-Version & 1.50.1 \\
 }
 
 \begin{lstlisting}[language={}, caption={Console-Output eines erfolgreichen Benchmark-Runs}, label={lst:console_output_sample}, basicstyle=\ttfamily\scriptsize, breaklines=true]
-[INFO] Pipeline initialized
+> ace-assistant@0.1.0 analyze:llm-detector /home/campo@BITBW.BWL.NET/Desktop/typescript-monorepo/ace
+> tsx src/index.ts --llm-detect -- --url http://localhost:5174 --src-dir ../anita/frontend/src
+
+[dotenv@17.3.1] injecting env (13) from .env -- tip: specify custom .env file path with { path: '/custom/path/.env' }
++------------------------------------------------------+
+|   ACE-assistant - Barrierefreiheits-Analysepipeline  |
++------------------------------------------------------+
+  Ziel:     http://localhost:5174
+  Modell:   qwen2.5-coder:14b
+  src-dir:  ../anita/frontend/src
+  Modus:    --llm-detect (LLM liest Quellcode als zusätzliche Quelle)
+
+
+-- axe-core --------------------------------------------
+[axe] Starte Analyse: http://localhost:5174
+[axe] Fertig - 2 Violations, 26 Passes, 1 Incomplete
+[axe] 10 Findings nach Normalisierung
+
+-- Playwright Checks -----------------------------------
+[playwright] Starte 7 Checks: http://localhost:5174
+[playwright] [OK] keyboard-tab-reachable
+[playwright] [OK] keyboard-trap-free
+[playwright] [FAIL] focus-visible
+[playwright] [FAIL] skip-link-present
+[playwright] [OK] page-title-present
+[playwright] [OK] html-lang-present
+[playwright] [OK] focus-after-dialog
+[playwright] 2 Findings nach Normalisierung
+
+-- Code-Anreicherung -----------------------------------
+[code:enrich]  selector="span[data-kc-msg="loginAccountTitle"]" -> terms=[data-kc-msg="loginAccountTitle", loginAccountTitle]
+[code:enrich]  selector="span[data-kc-msg="email"]" -> terms=[data-kc-msg="email", email]
+[code:enrich]  selector="span[data-kc-msg="password"]" -> terms=[data-kc-msg="password", password]
+[code:enrich]  selector="span[data-kc-msg="doForgotPassword"]" -> terms=[data-kc-msg="doForgotPassword", doForgotPassword]
+[code:enrich]  selector=":root" -> terms=[]
+[code:enrich]  html-fallback -> terms=[loginLink, loginFooterItem, href="https://bw-ec.localhost:5174/"]
+[code:enrich]  selector=".loginLink.loginFooterItem[rel="noreferrer"]:nth-child(2)" -> terms=[loginLink, loginFooterItem, rel="noreferrer", noreferrer]
+[code:enrich]  html-fallback -> terms=[loginLink, loginFooterItem, href="https://bw-ec.localhost:5174//impressum"]
+[code:enrich]  selector=".loginLink.loginFooterItem[rel="noreferrer"]:nth-child(3)" -> terms=[loginLink, loginFooterItem, rel="noreferrer", noreferrer]
+[code:enrich]  html-fallback -> terms=[loginLink, loginFooterItem, href="https://bw-ec.localhost:5174//datenschutz"]
+[code:enrich]  selector="a[href$="www.bitbw.de"]" -> terms=[bitbw]
+[code:enrich]  html-fallback -> terms=[loginLink, loginFooterItem, href="https://www.bitbw.de"]
+[code:enrich]  selector="img[width="120"]" -> terms=[width="120", 120]
+[code:enrich]  selector=".bitbwLogoSvg" -> terms=[bitbwLogoSvg]
+[code:enrich]  html-fallback -> terms=[bitbwLogoSvg]
+[code:enrich]  selector="input#password" -> terms=[id="password", id='password']
+[code] 7/11 Findings mit Quellcode angereichert
+
+-- Code Pattern-Findings -------------------------------
+[code] div-span-onclick: 4 Treffer
+[code] img-missing-alt: 3 Treffer
+[code] label-missing-htmlfor: 1 Treffer
+[code] 8 Pattern-Findings nach Deduplizierung (8 vor Dedup)
+
+-- LLM Codeanalyse -------------------------------------
+[llm-detector] Starte Analyse für 5 Dateien in 3 Chunk(s)
+[llm-detector] Chunk 1/3 gestartet (Dateien: app.component.tsx, app.module.css, auth/auth.config.ts)
+[ollama] Sende Prompt an qwen2.5-coder:14b ...
+[ollama] Fertig in 487.1s - 1508 Prompt-Tokens, 314 Output-Tokens
+[llm-detector] Chunk 1: 2 Findings
+[llm-detector] Chunk 2/3 gestartet (Dateien: auth/common/components/hasRole/hasRole.component.tsx)
+[ollama] Sende Prompt an qwen2.5-coder:14b ...
+[ollama] Fertig in 79.7s - 824 Prompt-Tokens, 13 Output-Tokens
+[llm-detector] Chunk 2: keine validen Findings
+[llm-detector] Chunk 2: Response-Vorschau: ```json { "findings": [] } ```
+[llm-detector] Chunk 3/3 gestartet (Dateien: auth/common/contexts/auth/auth.context.tsx)
+[ollama] Sende Prompt an qwen2.5-coder:14b ...
+[ollama] Fertig in 180.4s - 1353 Prompt-Tokens, 13 Output-Tokens
+[llm-detector] Chunk 3: keine validen Findings
+[llm-detector] Chunk 3: Response-Vorschau: ```json { "findings": [] } ```
+[llm-detector] 2 Findings nach Deduplizierung
+
+-- Prompt Builder --------------------------------------
+[prompt] ~4372 Tokens geschätzt (Budget: 65536, Input: 40560)
+
+-- Ollama LLM ------------------------------------------
+[ollama] Sende Prompt an qwen2.5-coder:14b ...
+[ollama] Fertig in 4522.5s - 4579 Prompt-Tokens, 3356 Output-Tokens
+
+-- Output Formatter ------------------------------------
+[output] Parsing erfolgreich - 14 Must-have, 8 Nice-to-have
++------------------------------------------------------+
+|                  Analyse abgeschlossen               |
++------------------------------------------------------+
+  Findings gesamt:  22
+    axe-core:       10
+    Playwright:     2
+    grep-Pattern:   8
+    LLM-Code:       2
+  Kritisch:         5 critical, 8 serious, 8 moderate
+
+  Laufzeit pro Phase:
+    axe-core:       6.6s
+    Playwright:     6.2s
+    Code-Enrich:    0.2s
+    Code-Pattern:   0.0s
+    LLM-Detektor:   747.2s (3 Chunk(s))
+    Prompt-Build:   0.0s
+    LLM:            4522.5s
+    Output:         0.0s
+    Gesamt:         5282.7s
+
+  Code-Anreicherung: 7/11 (64%)
+
+  Token-Vergleich:
+    Geschätzt:      ~4372
+    Tatsächlich:    4579 (Prompt) + 3356 (Output)
+
+  Markdown:  /home/campo@BITBW.BWL.NET/Desktop/typescript-monorepo/ace/results/analysis-2026-04-08T18-21-17.md
+  JSON:      /home/campo@BITBW.BWL.NET/Desktop/typescript-monorepo/ace/results/analysis-2026-04-08T18-21-17.json
+
 \end{lstlisting}
 
 \clearpage

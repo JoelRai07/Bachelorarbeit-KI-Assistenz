@@ -14,6 +14,8 @@ Abu Doush und Kassem (2024) zeigten, dass strukturierte Prompts die Qualität \a
 
 Den aktuellen Stand der Technik repräsentiert \textfett{AccessGuru} von Fathallah et al. (2025).\footcite[Vgl.][]{fathallah_accessguru_2025} Das System kombiniert eine zweistufige Pipeline - regelbasierte Detection via Playwright und \textfett{axe-core}, anschließend \ac{LLM}-basierte Korrektur durch GPT-4o mit Role-Play, Contextual und Metacognitive Prompting. Corrective Re-Prompting verbessert den Violation Score Decrease von 0,72 auf 0,84 bei einer semantischen Ähnlichkeit von 77\% zu menschlichen Referenzlösungen. Als offenes Problem benennen die Autoren die fehlende Verknüpfung korrigierter \ac{HTML}-Snippets mit dem Quellcode der geprüften Anwendung.
 
+Fernández-Navarro und Chicano (2026) erweitern diesen Ansatz um eine direkte Quellcode-Korrektur und adressieren damit explizit die Lücke zwischen \ac{DOM}-Korrektur und entwicklerseitiger Umsetzung.\footcite[Vgl.][]{fernándeznavarro2026automatedllmbasedaccessibilityremediation} Ihr Tool operiert in zwei Modi: Für statische Webseiten modifiziert es den gerenderten \ac{DOM} direkt via BeautifulSoup; für Angular-\ac{SPA}s injiziert es Korrekturen auf Basis einer Abstract-Syntax-Tree-Analyse gezielt in die tatsächlichen Komponentendateien (\texttt{.component.html}, \texttt{.component.ts}). Als Detektions-Backend kommt axe-core zum Einsatz, die Generierung der Fixes übernimmt GPT-4o, einschließlich multimodaler Bildbeschreibung für \texttt{alt}-Attribute. Eine mehrstufige Validierung -- axe-core-Re-Scan nach Korrektur sowie Angular-Build-Check (\texttt{ng build}) -- stellt sicher, dass keine neuen Verstöße eingeführt oder die Anwendung in einen nicht-kompilierbaren Zustand versetzt wird. In der Evaluation über 12 öffentliche Websites und 6 Open-Source-Angular-Projekte erreicht das System eine Remediation Rate von durchschnittlich 80,4\% (statische Sites) und 86,0\% (Angular-\ac{SPA}s) bei 100\% Build Integrity.\footcite[Vgl.][]{fernándeznavarro2026automatedllmbasedaccessibilityremediation} Der Ansatz beschränkt sich jedoch auf Angular und setzt auf cloudbasiertes GPT-4o; eine Übertragung auf React wird von den Autoren als kurzfristiger Folgeschritt benannt.
+
 \section{Hybride Pipelines und Ensemble-Testing}
 
 Huang et al. entwickelten 2024 mit \textfett{ACCESS} ein System, das Prompt Engineering gezielt zur automatisierten Barrierefreiheitskorrektur einsetzt und dabei verschiedene Strategien systematisch vergleicht.\footcite[Vgl.][S. 7,9]{huang_access_2024} Der Vergleich von ReAct, Chain-of-Thought und Few-Shot Prompting zeigt, dass ReAct mit einem Severity Score Reduction von 51,3\% alle anderen Strategien übertrifft - ein Ergebnis, das die Bedeutung iterativer, werkzeuggestützter Reasoning-Strategien für diese Aufgabe unterstreicht. 
@@ -100,7 +102,7 @@ Paternò et al.\ (2025) & TeVal
 Tafreshipour et al.\ (2024) & Ma11y
 & \yes &   &   & \yes & \yes &   &   &   &   & \yes &   &   &   &   \\ \hline
 
-Fernández-Navarro \& Chicano (2025) & \ac{LLM} Remediation
+Fernández-Navarro \& Chicano (2026) & \ac{LLM} Remediation
 & \yes & \yes & \yes & \yes &   & \yes & \yes &   &   & \yes &   &   & \yes &   \\ \hline
 
 % ── Eigener PoC ──────────────────────────────────────────────
