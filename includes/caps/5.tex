@@ -15,7 +15,7 @@ Die Architektur des Systems folgt einer sequenziellen Datenpipeline, die vier An
   \label{fig:pipeline}
 \end{figure}
 
-Die Pipeline gliedert sich in fünf Phasen: die Datenerhebung durch axe-core, Playwright und grep, die optionale \ac{LLM}-basierte Quellcodeanalyse, die Normalisierung der Rohdaten in das \ac{UFS}, die Prompt-Konstruktion mit Token-Budget-Steuerung sowie die Inferenz durch das lokale Sprachmodell und die anschließende Ausgabe.
+Die Pipeline gliedert sich in fünf Phasen: die Datenerhebung durch axe-core, Playwright und grep, die \ac{LLM}-gestützte Quellcodeanalyse, die Normalisierung der Rohdaten in das \ac{UFS}, die Prompt-Konstruktion mit Token-Budget-Steuerung sowie die Inferenz durch das lokale Sprachmodell und die anschließende Ausgabe.
 
 \subsection{Analysequellen}
 
@@ -141,4 +141,4 @@ Es ist anzumerken, dass das Ausgabeformat durch einen System-Prompt vorgegeben w
 
 % ─────────────────────────────────────────────────────────────────────────────
 
-Zusammenfassend ergibt sich aus den Anforderungen, der Theorie und den identifizierten Forschungslücken ein System, das vier komplementäre Analysequellen über ein einheitliches Datenmodell (\ac{UFS}) zusammenführt und in einer zweistufigen \ac{LLM}-Strategie verarbeitet: Stufe~1 für optionale \ac{LLM}-Codefindings und Stufe~2 für die quellenübergreifende Priorisierung. Kapitel~\ref{kap:6} beschreibt die prototypische Umsetzung dieser Konzeption.
+Zusammenfassend ergibt sich aus den Anforderungen, der Theorie und den identifizierten Forschungslücken ein System, das vier komplementäre Analysequellen über ein einheitliches Datenmodell (\ac{UFS}) zusammenführt und in einer zweistufigen \ac{LLM}-Strategie verarbeitet: Stufe~1 für \ac{LLM}-basierte Codefindings und Stufe~2 für die quellenübergreifende Priorisierung. Kapitel~\ref{kap:6} beschreibt die prototypische Umsetzung dieser Konzeption.
