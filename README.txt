@@ -23,3 +23,10 @@ Warum nicht einfach automatisch zusammenführen?
 Weil man dabei echte Treffer verlieren kann.
 Wenn zwei ähnlich klingende Befunde fälschlich gemerged werden, verschwindet evtl. ein relevanter Hinweis.
 Das wäre ein False Negative (ein echtes Problem wird nicht mehr gemeldet).
+
+
+SEO
+CI/CD
+
+
+Bewerte meine Arbeit. Das ist meine vollständige Bachelorarbeit (eigentlich nicht vollständig weil ich über dem Limit bin). Gebe mir auch eine Gesamtnote und oder Noten für jedes Kapitel. Sei objektiv und ehrlich. Was kann ich noch besser machen? Ist das, das niveaou einer Bachelorarbeit?

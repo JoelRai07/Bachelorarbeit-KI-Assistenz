@@ -106,7 +106,7 @@ Paternò et al.\ (2025) & TeVal
 Tafreshipour et al.\ (2024) & Ma11y
 & \yes &   &   & \yes & \yes &   &   &   &   & \yes &   &   &   &   \\ \hline
 
-Fernández-Navarro \& Chicano (2025) & \ac{LLM} Remediation
+Fernández-Navarro \& Chicano (2026) & \ac{LLM} Remediation
 & \yes & \yes & \yes & \yes &   & \yes & \yes &   &   & \yes &   &   & \yes &   \\ \hline
 
 
@@ -579,7 +579,7 @@ Pragmatische \ac{BITV}-Eignung (Qualität/Zeit) & 14b: empfohlen, 32b: eingeschr
 \noindent\textit{Hinweis:} Im Suite-Vergleich werden zwei Perspektiven getrennt ausgewiesen: \textit{strenge Sicht} (\ac{NFA}-02 als Ausschlusskriterium) und \textit{pragmatische Sicht} (Balance aus Erkennungsqualität und Zeitaufwand).
 
 \clearpage
-\anhang{Bewertungsskala für die Empfehlungsqualität der \ac{LLM}-Ausgaben (generell)}\label{app:bewertungsskala_empfehlungen}
+\anhang{Bewertungsskala für die Empfehlungsqualität der \ac{LLM}-Ausgaben}\label{app:bewertungsskala_empfehlungen}
 
 \begin{table}[htbp]
 \centering
@@ -601,7 +601,7 @@ Pragmatische \ac{BITV}-Eignung (Qualität/Zeit) & 14b: empfohlen, 32b: eingeschr
 \end{table}
 
 \clearpage
-\anhang{Erfüllungsgrad der funktionalen und nicht-funktionalen Anforderungen (generell)}\label{app:fa_nfa_erfuellung}
+\anhang{Erfüllungsgrad der funktionalen und nicht-funktionalen Anforderungen}\label{app:fa_nfa_erfuellung}
 
 \begin{table}[htbp]
 \centering
@@ -960,7 +960,7 @@ Priorisierungs\-qualität & Die Fix-Konkretheit wurde über eine Skala von 0 bis
 \centering
 \setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{1.1}
-\caption[Rohdaten Benchmark-Runs (test-12)]{Vollständige Messdaten der 30 Pipeline-Durchläufe. \ac{LLM}-Det.~=~Findings des \ac{LLM}-Detektors; Axe/\ac{PW}/Grep~=~Tool-Findings (konstant); Tokens~=~Output-Tokens; Dauer~=~Gesamtlaufzeit in Sekunden.}
+\caption[Rohdaten Benchmark-Runs (test-12)]{Vollständige Messdaten der 30 Pipeline-Durchläufe. \ac{LLM}-Det.~=~Findings des \ac{LLM}-Detektors; Axe/\ac{PW}/Grep~=~Tool-Findings (konstant); Tokens~=~Output-Tokens; Dauer~=~Priorisierungslaufzeit in Sekunden.}
 \small
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|l|c|c|c|c|c|c|c|}
@@ -1602,7 +1602,7 @@ V50 & \texttt{outline: none} im Modal-Button              & \checkmark & \checkm
 \centering
 \setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{1.1}
-\caption[Rohdaten Benchmark-Runs (test-50)]{Vollständige Messdaten der 30 Pipeline-Durchläufe (\texttt{num\_predict}~=~8\,192). \ac{LLM}-Det.~=~Findings des \ac{LLM}-Detektors; Axe/\ac{PW}/Grep~=~Tool-Findings (konstant); Tokens~=~Output-Tokens; Dauer~=~Gesamtlaufzeit in Sekunden.}
+\caption[Rohdaten Benchmark-Runs (test-50)]{Vollständige Messdaten der 30 Pipeline-Durchläufe (\texttt{num\_predict}~=~8\,192). \ac{LLM}-Det.~=~Findings des \ac{LLM}-Detektors; Axe/\ac{PW}/Grep~=~Tool-Findings (konstant); Tokens~=~Output-Tokens; Dauer~=~Priorisierungslaufzeit in Sekunden.}
 \small
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|l|c|c|c|c|c|c|c|c|}
@@ -2476,7 +2476,7 @@ V100 & \texttt{aria-hidden} auf fokuss.\ El. (HC)              & $\times$   & $\
 \centering
 \setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{1.1}
-\caption[Rohdaten Benchmark-Runs (test-100)]{Vollständige Messdaten der 30 Pipeline-Durchläufe (\texttt{num\_predict}~=~12\,288). \ac{LLM}-Det.~=~Findings des \ac{LLM}-Detektors; Axe/\ac{PW}/Grep~=~Tool-Findings (konstant je Run); Tokens~=~Output-Tokens; Dauer~=~Gesamtlaufzeit in Sekunden.}
+\caption[Rohdaten Benchmark-Runs (test-100)]{Vollständige Messdaten der 30 Pipeline-Durchläufe (\texttt{num\_predict}~=~12\,288). \ac{LLM}-Det.~=~Findings des \ac{LLM}-Detektors; Axe/\ac{PW}/Grep~=~Tool-Findings (konstant je Run); Tokens~=~Output-Tokens; Dauer~=~Priorisierungslaufzeit in Sekunden.}
 \small
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|l|c|c|c|c|c|c|c|}
@@ -3474,7 +3474,7 @@ $\sigma$         & 5{,}75 & 3{,}23 & 5{,}63 \\
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.2}
 \caption[Rohdaten \ac{BWEC} (\texttt{maxfiles}=100)]{Rohdaten der \ac{BWEC}-Messreihe bei \texttt{maxfiles}~=~100. Det.~=~\ac{LLM}-Detektor-Findings; OutTok.~=~Output-Tokens; Trunc.~=~Truncation der Priorisierungsphase.}
-\resizebox{\textwidth}{!}{%
+\small
 \begin{tabular}{|c|l|r|r|c|r|r|r|}
 \hline
 \textbf{Run} & \textbf{Modell} & \textbf{Det.} & \textbf{OutTok.} & \textbf{Trunc.} & \textbf{Must} & \textbf{Nice} & \textbf{Dauer (s)} \\
@@ -3498,7 +3498,6 @@ $\sigma$         & 5{,}75 & 3{,}23 & 5{,}63 \\
 09 & 32b           & 35 &  7\,616 & nein       & 39 &  16 & 2\,194 \\
 \hline
 \end{tabular}
-}%
 \label{tab:rohdaten_bwec}
 \end{table}
 
@@ -3564,7 +3563,7 @@ Für 7b wurden die Mittelwerte ohne Run~03 berechnet, da dieser Run als dokument
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.2}
 \caption[Rohdaten \ac{BWEC} (\texttt{maxfiles}=500)]{Rohdaten der \ac{BWEC}-Messreihe bei \texttt{maxfiles}~=~500. PromptTok.~=~Prompt-Tokens; OutTok.~=~Output-Tokens.}
-\resizebox{\textwidth}{!}{%
+\small
 \begin{tabular}{|c|l|r|r|r|r|r|r|}
 \hline
 \textbf{Run} & \textbf{Modell} & \textbf{Det.} & \textbf{PromptTok.} & \textbf{OutTok.} & \textbf{Must} & \textbf{Nice} & \textbf{Dauer (s)} \\
@@ -3588,7 +3587,6 @@ Für 7b wurden die Mittelwerte ohne Run~03 berechnet, da dieser Run als dokument
 09$^{\S}$ & 32b      & 400 & 40\,960  & 24\,576 &   0 &  0 & 17\,517 \\
 \hline
 \end{tabular}
-}%
 \label{tab:rohdaten_bwec500}
 \end{table}
 

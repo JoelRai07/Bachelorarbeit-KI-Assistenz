@@ -1430,73 +1430,6 @@
       \field{title}{JavaScript: The Definitive Guide}
       \field{year}{2020}
     \endentry
-    \entry{gao_retrieval_augmented_generation_2023}{article}{}{}
-      \true{moreauthor}
-      \true{morelabelname}
-      \name{author}{5}{}{%
-        {{un=1,uniquepart=given,hash=572def57560315de76cedfc3e17c2eb2}{%
-           family={Gao},
-           familyi={G\bibinitperiod},
-           given={Yunfan},
-           giveni={Y\bibinitperiod},
-           givenun=1}}%
-        {{un=0,uniquepart=base,hash=bdc1e50b7faa4f8d1a9844199179e6c2}{%
-           family={Xiong},
-           familyi={X\bibinitperiod},
-           given={Yun},
-           giveni={Y\bibinitperiod},
-           givenun=0}}%
-        {{un=1,uniquepart=given,hash=03e7985fe5e84b74e9f01c4cdbaaee9c}{%
-           family={Gao},
-           familyi={G\bibinitperiod},
-           given={Xinyu},
-           giveni={X\bibinitperiod},
-           givenun=1}}%
-        {{un=0,uniquepart=base,hash=1323e158133aeccd50d492ffcfe03358}{%
-           family={Jia},
-           familyi={J\bibinitperiod},
-           given={Kang},
-           giveni={K\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=e18831109aca3576aef2988db56df4a3}{%
-           family={Pan},
-           familyi={P\bibinitperiod},
-           given={Jinliang},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{f1678cfa142d8029151d4faacf40f176}
-      \strng{fullhash}{c0efd343273b63acd9526e1071b98c9d}
-      \strng{fullhashraw}{c0efd343273b63acd9526e1071b98c9d}
-      \strng{bibnamehash}{c0efd343273b63acd9526e1071b98c9d}
-      \strng{authorbibnamehash}{c0efd343273b63acd9526e1071b98c9d}
-      \strng{authornamehash}{f1678cfa142d8029151d4faacf40f176}
-      \strng{authorfullhash}{c0efd343273b63acd9526e1071b98c9d}
-      \strng{authorfullhashraw}{c0efd343273b63acd9526e1071b98c9d}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprintclass}{cs.CL}
-      \field{eprinttype}{arxiv}
-      \field{title}{Retrieval-Augmented Generation for Large Language Models: A Survey}
-      \field{urlday}{1}
-      \field{urlmonth}{3}
-      \field{urlyear}{2026}
-      \field{year}{2023}
-      \field{urldateera}{ce}
-      \verb{eprint}
-      \verb 2312.10997
-      \endverb
-      \verb{urlraw}
-      \verb https://arxiv.org/abs/2312.10997
-      \endverb
-      \verb{url}
-      \verb https://arxiv.org/abs/2312.10997
-      \endverb
-    \endentry
     \entry{Lighthouse}{software}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=8b36e9207c24c76e6719268e49201d94}{%
@@ -1655,43 +1588,6 @@
       \verb https://dl.acm.org/doi/10.1145/3701716.3715552
       \endverb
       \keyw{Mittel}
-    \endentry
-    \entry{harrenstienAutomaticCaptionsYouTube}{online}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=35f8361c73dcd96057a5d817b7e6d310}{%
-           family={Harrenstien},
-           familyi={H\bibinitperiod},
-           given={Ken},
-           giveni={K\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{35f8361c73dcd96057a5d817b7e6d310}
-      \strng{fullhash}{35f8361c73dcd96057a5d817b7e6d310}
-      \strng{fullhashraw}{35f8361c73dcd96057a5d817b7e6d310}
-      \strng{bibnamehash}{35f8361c73dcd96057a5d817b7e6d310}
-      \strng{authorbibnamehash}{35f8361c73dcd96057a5d817b7e6d310}
-      \strng{authornamehash}{35f8361c73dcd96057a5d817b7e6d310}
-      \strng{authorfullhash}{35f8361c73dcd96057a5d817b7e6d310}
-      \strng{authorfullhashraw}{35f8361c73dcd96057a5d817b7e6d310}
-      \field{sortinit}{H}
-      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Official Google Blog}
-      \field{title}{Automatic captions in YouTube}
-      \field{urlday}{4}
-      \field{urlmonth}{3}
-      \field{urlyear}{2026}
-      \field{year}{2009}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://googleblog.blogspot.com/2009/11/automatic-captions-in-youtube.html
-      \endverb
-      \verb{url}
-      \verb https://googleblog.blogspot.com/2009/11/automatic-captions-in-youtube.html
-      \endverb
     \endentry
     \entry{he_enhancing_2025}{article}{}{}
       \name{author}{3}{}{%
@@ -5281,47 +5177,6 @@
       \verb https://proceedings.neurips.cc/paper_files/paper/2022/file/9d5609613524ecf4f15af0f7b31abca4-Paper-Conference.pdf
       \endverb
     \endentry
-    \entry{WorldReportDisability}{book}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=531217507bec092b6ec36c0f78f46736}{%
-           family={{World Health Organization}},
-           familyi={W\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Geneva}%
-      }
-      \list{publisher}{1}{%
-        {World Health Organization}%
-      }
-      \strng{namehash}{531217507bec092b6ec36c0f78f46736}
-      \strng{fullhash}{531217507bec092b6ec36c0f78f46736}
-      \strng{fullhashraw}{531217507bec092b6ec36c0f78f46736}
-      \strng{bibnamehash}{531217507bec092b6ec36c0f78f46736}
-      \strng{authorbibnamehash}{531217507bec092b6ec36c0f78f46736}
-      \strng{authornamehash}{531217507bec092b6ec36c0f78f46736}
-      \strng{authorfullhash}{531217507bec092b6ec36c0f78f46736}
-      \strng{authorfullhashraw}{531217507bec092b6ec36c0f78f46736}
-      \field{extraname}{1}
-      \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{978-92-4-156418-2}
-      \field{title}{World Report on Disability}
-      \field{urlday}{4}
-      \field{urlmonth}{3}
-      \field{urlyear}{2026}
-      \field{year}{2011}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.who.int/teams/noncommunicable-diseases/sensory-functions-disability-and-rehabilitation/world-report-on-disability
-      \endverb
-      \verb{url}
-      \verb https://www.who.int/teams/noncommunicable-diseases/sensory-functions-disability-and-rehabilitation/world-report-on-disability
-      \endverb
-    \endentry
     \entry{WHO}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=531217507bec092b6ec36c0f78f46736}{%
@@ -5339,7 +5194,6 @@
       \strng{authornamehash}{531217507bec092b6ec36c0f78f46736}
       \strng{authorfullhash}{531217507bec092b6ec36c0f78f46736}
       \strng{authorfullhashraw}{531217507bec092b6ec36c0f78f46736}
-      \field{extraname}{2}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{extradatescope}{labelyear}

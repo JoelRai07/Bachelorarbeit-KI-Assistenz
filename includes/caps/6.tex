@@ -8,28 +8,10 @@ Dieses Kapitel beschreibt die prototypische Umsetzung des in Kapitel~\ref{kap:5}
 
 Der \ac{PoC} ist als Node.js-Anwendung in TypeScript implementiert.\footcite[Vgl.][]{JavaScriptSyntaxTypesa} Die Wahl von TypeScript ergibt sich aus der technologischen Nähe zum Untersuchungsgegenstand: Der \ac{BWEC} ist in ein TypeScript-basiertes Monorepo eingebettet, sodass auch der \ac{PoC} im selben technologischen Kontext entwickelt wird. Dies erleichtert sowohl die Integration als auch eine mögliche Übertragung auf weitere Anwendungen innerhalb vergleichbarer Architekturen. Zugleich ermöglicht TypeScript eine typsichere Definition des \ac{UFS} (vgl. Listing~\ref{lst:ufs}). Als Laufzeitumgebung wird Node.js ab Version~24 eingesetzt; die Ausführung erfolgt über \texttt{tsx}, einen TypeScript-Runner, der Kompilierung und Ausführung in einem Schritt verbindet. Auf ein zusätzliches Framework wurde bewusst verzichtet, um den \ac{PoC} minimal zu halten.
 
-Tabelle~\ref{tab:dependencies} listet die wesentlichen Abhängigkeiten des Projekts.
-
-\begin{table}[H]
-\centering
-\renewcommand{\arraystretch}{1.15}
-\begin{tabular}{@{}llp{6.5cm}@{}}
-\toprule
-\textbf{Paket} & \textbf{Version} & \textbf{Zweck} \\
-\midrule
-\texttt{playwright} & 1.50 & Browser-Automatisierung für Interaktionschecks\footcite[Vgl.][]{playwright} \\
-\texttt{@axe-core/playwright} & 4.10 & axe-core-Integration in Playwright \\
-\texttt{dotenv} & 17.3 & Umgebungsvariablen aus \texttt{.env}-Datei laden \\
-\texttt{tsx} & 6.5.7 & TypeScript-Runner (Monorepo-Dependency) \\
-\bottomrule
-\end{tabular}
-\caption{Wesentliche Abhängigkeiten des \acs{PoC}}
-\label{tab:dependencies}
-\end{table}
+Als Kernabhängigkeiten dienen \texttt{playwright}@1.50 für die Browser-Automatisierung,\footcite[Vgl.][]{playwright} \texttt{@axe-core/playwright}@4.10 für die axe-core-Integration sowie \texttt{dotenv}@17.3 für die Konfigurationsverwaltung und \texttt{tsx}@6.5.7 als TypeScript-Runner.
 
 Die Projektstruktur folgt einer flachen Modulstruktur, bei der jedes Modul in \texttt{src/modules/} sowohl die Datenerhebung als auch die Normalisierung in das \ac{UFS} übernimmt:
 
-% Globale lstset-Einstellung für Kapitel 6
 \lstset{
   basicstyle=\ttfamily\scriptsize,
   keywordstyle=\color{blue},
@@ -45,18 +27,18 @@ Die Projektstruktur folgt einer flachen Modulstruktur, bei der jedes Modul in \t
 \begin{lstlisting}[language={}, caption={Projektstruktur des \acs{PoC}}, label={lst:projektstruktur}, basicstyle=\ttfamily\scriptsize]
 ACE/
   src/
-    index.ts          # Pipeline-Orchestrierung und CLI
-    types.ts          # UnifiedFinding, PipelineMetrics
-    config.ts         # Zentrale Konfiguration (Env-Vars)
-    prompt.ts         # Prompt-Builder mit Token-Budget
-    ollama.ts         # HTTP-Client fuer Ollama
-    output.ts         # Markdown- und JSON-Report-Formatter
+    index.ts
+    types.ts
+    config.ts
+    prompt.ts
+    ollama.ts
+    output.ts
     modules/
-      axe.ts          # axe-core: Collector + Normalizer
-      playwright.ts   # Playwright: 7 Checks + Normalizer
-      code.ts         # grep: Anreicherung + Pattern-Findings
-      llmDetector.ts  # LLM-Codeanalyse: semantische Findings (JSON)
-  results/            # Generierte Reports (nicht versioniert)
+      axe.ts
+      playwright.ts
+      code.ts
+      llmDetector.ts
+  results/
 \end{lstlisting}
 
 Die Pipeline wird über \texttt{src/index.ts} orchestriert und unterstützt fünf \ac{CLI}-Flags: \texttt{-{}-url} (Ziel-\acs{URL}), \texttt{-{}-src-dir} (Quellcode-Pfad), \texttt{-{}-skip-llm} (Prompt speichern ohne finale Priorisierung), \texttt{-{}-axe-only} (nur axe-core ausführen) und \texttt{-{}-llm-detect} (zusätzliche \ac{LLM}-Codeanalyse aktivieren). Die Konfiguration -- einschließlich Ollama-\acs{URL}, Modellname und Timeout-Werte -- erfolgt zentral in \texttt{config.ts} und kann über Umgebungsvariablen überschrieben werden.
@@ -146,7 +128,7 @@ Zusätzlich zur Anreicherung erkennt das Modul sechs Anti-Patterns durch regulä
 \label{tab:grep-patterns}
 \end{table}
 
-Treffer werden nach der Normalisierung dedupliziert: Findings mit identischer \texttt{ruleId}, \texttt{componentPath} und Startzeile werden zusammengefasst. Pro Pattern werden maximal acht Treffer berücksichtigt, um eine Überrepräsentation häufiger Patterns im Token-Budget zu vermeiden.
+Treffer werden nach der Normalisierung dedupliziert und auf maximal acht Treffer pro Pattern begrenzt, um eine Überrepräsentation im Token-Budget zu vermeiden (vgl. Abschnitt~\ref{sec:kontextualisierung}).
 
 % ─────────────────────────────────────────────────────────────────────────────
 \section{\ac{LLM}-Detektor-Modul}
@@ -157,10 +139,12 @@ Das \ac{LLM}-Detektor-Modul ergänzt die regelbasierten Quellen um eine modellba
 Die Verarbeitung erfolgt in fünf Schritten:
 
 \begin{enumerate}
-  \item \textbf{Dateiselektion:} Das Modul sammelt rekursiv Dateien mit den Endungen \texttt{.tsx}, \texttt{.ts}, \texttt{.jsx}, \texttt{.js} und \texttt{.css}. Die Anzahl der analysierten Dateien ist über \texttt{LLM\_DETECT\_MAX\_FILES} begrenzbar (Default: 60; in den Benchmarkläufen auf 25 reduziert, um die Laufzeit auf der test-12-Suite zu begrenzen).
-  \item \textbf{Chunking:} Die Dateien werden mit Zeilennummern versehen und in Text-Chunks aufgeteilt. Die Chunk-Größe ist über \texttt{LLM\_DETECT\_CHUNK\_CHARS} konfigurierbar (in den Benchmarkläufen: 4000 Zeichen), damit der Kontext robust verarbeitet werden kann.
-  \item \textbf{Detektionsprompt:} Für jeden Chunk wird ein eigener Prompt erzeugt. Dieser verlangt \textit{ausschließlich} \acs{JSON} im fest definierten Schema (u.\,a. \texttt{ruleId}, \texttt{wcagCriteria}, \texttt{filePath}, \texttt{startLine}, \texttt{endLine}, \texttt{evidence}, \texttt{fixSuggestion}).\footnote{Der vollständige System- und User-Prompt der Detektor-Phase ist in Anhang~\ref{app:detektorprompt} dokumentiert.}
-  \item \textbf{Parsing und Validierung:} Antworten werden primär als \acs{JSON} extrahiert und validiert. Für Formatabweichungen ist ein Fallback implementiert, der semi-strukturierte Markdown-Ausgaben in das Zielformat überführt.
+  \item \textbf{Dateiselektion:} Das Modul sammelt rekursiv Dateien mit den Endungen \texttt{.tsx}, \texttt{.ts}, \texttt{.jsx}, \texttt{.js} und \texttt{.css}. Die Anzahl der analysierten Dateien ist über \texttt{LLM\_DETECT\_MAX\_FILES} begrenzbar (Default: 60; in den Benchmarkläufen auf 25 reduziert).
+  \item \textbf{Chunking:} Die Dateien werden mit Zeilennummern versehen und in Text-Chunks aufgeteilt. Die Chunk-Größe ist über \texttt{LLM\_DETECT\_CHUNK\_CHARS} konfigurierbar (Benchmarkläufe: 4\,000 Zeichen).
+  \item \textbf{Detektionsprompt:} Für jeden Chunk wird ein eigener Prompt erzeugt, der ausschließlich \acs{JSON} im fest definierten Schema verlangt.\footnote{Der vollständige System- und User-Prompt der Detektor-Phase ist in Anhang~\ref{app:detektorprompt} dokumentiert.}
+  % KÜRZUNG: Schritte 4 und 5 von je einem Absatz auf je einen Satz komprimiert –
+  % technische Details stehen vollständig im Anhang-Prompt.
+  \item \textbf{Parsing und Validierung:} Antworten werden als \acs{JSON} extrahiert und validiert; ein Fallback überführt Formatabweichungen in das Zielformat.
   \item \textbf{Normalisierung und Deduplizierung:} Valide Einträge werden als \texttt{source="llm"} in das \ac{UFS} überführt und über den Schlüssel \texttt{ruleId|filePath|startLine} dedupliziert.
 \end{enumerate}
 
@@ -179,7 +163,7 @@ Der \ac{PoC} nutzt daher beide Ansätze komplementär: grep als stabile Baseline
 
 \subsection{Beispielhafter Ablauf eines \ac{LLM}-Findings}
 
-Ein typischer Detektionsfall läuft wie folgt ab: In einer Komponente enthält ein \texttt{<div>} einen \texttt{onClick}-Handler ohne tastaturäquivalentes Ereignis. Das Modell meldet dazu ein Finding mit Datei- und Zeilenbezug sowie Evidenztext. Dieses Finding wird normalisiert, dedupliziert und als \texttt{source="llm"} in das \ac{UFS} überführt, bevor es in der Priorisierungsphase gemeinsam mit den toolbasierten Findings verarbeitet wird.
+Ein typischer Detektionsfall läuft wie folgt ab: In einer Komponente enthält ein \texttt{<div>} einen \texttt{onClick}-Handler ohne tastaturäquivalentes Ereignis. Das Modell meldet dazu ein Finding mit Datei- und Zeilenbezug sowie Evidenztext, das normalisiert, dedupliziert und als \texttt{source="llm"} in das \ac{UFS} überführt wird, bevor es in der Priorisierungsphase verarbeitet wird.
 
 \begin{lstlisting}[language={}, caption={Beispiel eines validierten \ac{LLM}-Detektor-Findings (vereinfacht)}]
 {
@@ -193,7 +177,7 @@ Ein typischer Detektionsfall läuft wie folgt ab: In einer Komponente enthält e
   "startLine": 45,
   "endLine": 49,
   "evidence": "<div ... onClick={() => setTopic(t)}>",
-  "fixSuggestion": "button verwenden oder onKeyDown fuer Enter/Space ergänzen"
+  "fixSuggestion": "button verwenden oder onKeyDown fuer Enter/Space ergaenzen"
 }
 \end{lstlisting}
 
@@ -228,27 +212,18 @@ Wie in Abschnitt~\ref{sec:kontextualisierung} beschrieben, ist das Kontextfenste
 
 \subsection{Serialisierung}
 
-Jedes Finding wird in ein kompaktes Textformat serialisiert, das die wesentlichen Informationen auf wenige Zeilen komprimiert:
-
-\begin{lstlisting}[language={}, caption={Serialisiertes Finding im Prompt}, label={lst:serialized}, basicstyle=\ttfamily\scriptsize]
-[axe-007] CRITICAL | color-contrast | \ac{WCAG} 1.4.3 (AA)
-Beschreibung: Element hat unzureichenden Farbkontrast
-Element: .sidebar > .nav-link
-Datei: components/Sidebar.tsx:42-52
-Code:
-42: <a className="nav-link" href="/dashboard">
-43:   Dashboard
-44: </a>
-\end{lstlisting}
-
-Die Serialisierung begrenzt Beschreibungen auf 300~Zeichen und Code-Snippets auf 20~Zeilen, um den Token-Verbrauch je Finding vorhersagbar zu halten.
+Jedes Finding wird in ein kompaktes Textformat serialisiert, das die wesentlichen Informationen auf wenige Zeilen komprimiert. Beschreibungen werden auf 300~Zeichen und Code-Snippets auf 20~Zeilen begrenzt, um den Token-Verbrauch je Finding vorhersagbar zu halten. Das vollständige Serialisierungsformat ist im System-Prompt-Beispiel in 
+Anhang~\ref{app:systemprompt} illustriert.
 
 % ─────────────────────────────────────────────────────────────────────────────
 \section{Ollama-Client und Output-Formatter}
 \label{sec:impl-ollama}
 \label{sec:impl-output}
 
-Der Ollama-Client kapselt den \acs{HTTP}-Aufruf an die lokale Ollama-Instanz (\texttt{localhost:11434}). Die Anfrage nutzt den \texttt{/api/generate}-Endpunkt mit den Parametern \texttt{temperature: 0.05} (\ac{NFA}-04) und \texttt{num\_predict: 6144} für die Priorisierungsantwort (in den für die Evaluation genutzten Benchmarkläufen wurden suiteabhängige Werte eingesetzt: 6\,144 (test-12), 8\,192 (test-50), 12\,288 (test-100); vgl. Tabelle~\ref{tab:benchmark_runs} und Abschnitt~\ref{sec:limit_tokenlimit}). Die niedrige \texttt{temperature}-Einstellung reduziert den Nicht-Determinismus der Ausgaben (vgl. Abschnitt~\ref{kap:2.4}), ohne sie vollständig zu eliminieren. Der Client verwendet ein konfigurierbares Timeout (Default: drei Stunden), da die Inferenz auf \ac{CPU}-basierten Systemen je nach Modellgröße mehrere Minuten bis deutlich länger in Anspruch nehmen kann. Die Antwort von Ollama enthält neben dem generierten Text auch die tatsächliche Anzahl der Prompt- und Output-Tokens (\texttt{prompt\_eval\_count}, \texttt{eval\_count}), die für die Evaluation in Kapitel~\ref{kap:7} erfasst werden.
+Der Ollama-Client kapselt den \acs{HTTP}-Aufruf an die lokale Ollama-Instanz (\texttt{localhost:11434}). Die Anfrage nutzt den \texttt{/api/generate}-Endpunkt mit \texttt{temperature:~0.05} (\ac{NFA}-04).%
+% KÜRZUNG: Suiteabhängige num_predict-Werte in Fußnote verschoben, da Implementierungsdetail.
+\footnote{Der Standardwert \texttt{num\_predict}~=~6\,144 gilt für den operativen Betrieb. In den Benchmarkläufen wurden suiteabhängige Werte eingesetzt: 6\,144 (test-12), 8\,192 (test-50) und 12\,288 (test-100); vgl. Tabelle~\ref{tab:benchmark_runs} und Abschnitt~\ref{sec:limit_tokenlimit}.}
+Die niedrige \texttt{temperature}-Einstellung reduziert den Nicht-Determinismus der Ausgaben (vgl. Abschnitt~\ref{kap:2.4}), ohne sie vollständig zu eliminieren. Der Client verwendet ein konfigurierbares Timeout (Default: drei Stunden), da die Inferenz auf \ac{CPU}-basierten Systemen je nach Modellgröße mehrere Minuten in Anspruch nehmen kann. Die Antwort von Ollama enthält neben dem generierten Text auch die tatsächliche Anzahl der Prompt- und Output-Tokens (\texttt{prompt\_eval\_count}, \texttt{eval\_count}), die für die Evaluation in Kapitel~\ref{kap:7} erfasst werden.
 
 Der Output-Formatter erzeugt pro Analysedurchlauf zwei Dateien: einen Markdown-Report für die menschliche Lesbarkeit und einen \acs{JSON}-Report für die maschinelle Weiterverarbeitung (\ac{FA}-05). Der Markdown-Report enthält einen Metadaten-Header (\acs{URL}, Modell, Zeitstempel, Token-Statistiken), die Roh-Ausgabe des Sprachmodells sowie eine Metriken-Tabelle mit den Laufzeiten aller Pipeline-Phasen. Der \acs{JSON}-Report speichert zusätzlich das Parsing-Ergebnis der \ac{LLM}-Antwort: Der Formatter versucht, die Markdown-Ausgabe in Must-have- und Nice-to-have-Einträge zu zerlegen. Schlägt dieses Parsing fehl -- etwa weil das Modell das vorgegebene Format nicht einhält --, wird dies im Report dokumentiert (\texttt{parsed.success: false}).
 
@@ -256,7 +231,7 @@ Der Output-Formatter erzeugt pro Analysedurchlauf zwei Dateien: einen Markdown-R
 \section{Pipeline-Orchestrierung}
 \label{sec:impl-pipeline}
 
-Die Pipeline-Orchestrierung in \texttt{index.ts} verkettet alle Module in der im Anhang dargestellten Reihenfolge (vgl. Anhang~\ref{app:ace-pipeline-schema}, Abbildung~\ref{fig:ace-pipeline-schema}). Jede Phase wird einzeln zeitgemessen, um die in \ac{NFA}-02 geforderte Laufzeitanalyse in Kapitel~\ref{kap:7} zu ermöglichen. Die Metriken werden in einem \texttt{PipelineMetrics}-Objekt gesammelt, das neben den Phasenzeiten auch Token-Schätzungen, Anreicherungsquoten und Deduplizierungsstatistiken enthält. Die in Kapitel~\ref{kap:7} ausgewerteten Kennzahlen -- Laufzeit je Phase, Anzahl der \ac{LLM}-Detektor-Findings, Output-Token-Nutzung sowie Parsing-Erfolg -- werden direkt aus diesem Objekt in die pro Durchlauf erzeugten \acs{JSON}-Reports geschrieben.
+Die Pipeline-Orchestrierung in \texttt{index.ts} verkettet alle Module in der im Anhang dargestellten Reihenfolge (vgl. Anhang~\ref{app:ace-pipeline-schema}, Abbildung~\ref{fig:ace-pipeline-schema}). Jede Phase wird einzeln zeitgemessen, um die in \ac{NFA}-02 geforderte Laufzeitanalyse in Kapitel~\ref{kap:7} zu ermöglichen. Die Metriken werden in einem \texttt{PipelineMetrics}-Objekt gesammelt, das neben den Phasenzeiten auch Token-Schätzungen, Anreicherungsquoten und Deduplizierungsstatistiken enthält.
 
 Der Ablauf eines vollständigen Durchlaufs ist:
 
@@ -276,6 +251,4 @@ Der \texttt{-{}-skip-llm}-Modus speichert den fertigen Prompt als Textdatei, ohn
 \section{Beispielabläufe am Untersuchungsobjekt}
 \label{sec:beispielablaeufe}
 
-Ein vollständiger Durchlauf auf der test-12-Suite erzeugt konsistent Findings aus allen vier Quellen (axe-core, Playwright, grep, \ac{LLM}-Detektor) und überführt diese in einen einheitlichen \acs{JSON}-Report sowie einen priorisierten Markdown-Report. Für die 30 Benchmarkläufe (je 10 Runs mit \texttt{qwen2.5-coder:7b}, \texttt{qwen2.5-coder:14b}, \texttt{qwen3:32b}) zeigt sich ein stabiler Baseline-Beitrag der regelbasierten Quellen (axe: 4, Playwright: 2, grep: 6 Findings pro Lauf) und ein modellabhängiger Zusatzbeitrag des \ac{LLM}-Detektors (7b: \O{}~10,3; 14b: \O{}~19,8; 32b: \O{}~19,2).
-
-Die Ergebnisse bestätigen den beabsichtigten Nutzen der kombinierten Pipeline: Regelbasierte Quellen liefern reproduzierbare Pflichtbefunde, während die \ac{LLM}-gestützte Codeanalyse zusätzliche semantische Violations identifiziert, die in der Tool-Baseline nicht oder nur instabil detektierbar sind. Die detaillierte Auswertung mit Recall-Matrix, Rohdaten und Modellvergleich ist in Kapitel~\ref{kap:7} sowie im Anhang (Tabellen~\ref{tab:recall_matrix} bis \ref{tab:modell_summary_12}) dokumentiert.
+Ein vollständiger Durchlauf auf der test-12-Suite erzeugt stabil Findings aus allen vier Quellen (axe: 4, Playwright: 2, grep: 6) sowie einen modellabhängigen Beitrag des \ac{LLM}-Detektors. Die detaillierte Auswertung mit Recall-Matrix, Rohdaten und Modellvergleich ist in Kapitel~\ref{kap:7} dokumentiert.
