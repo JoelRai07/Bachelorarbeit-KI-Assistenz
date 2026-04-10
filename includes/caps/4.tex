@@ -4,38 +4,38 @@ In diesem Kapitel werden die Grundlagen für das in Kapitel \ref{kap:5} beschrie
 
 \section{Problemkontext und Handlungsbedarf}\label{kap:4.1}
 
-Die \ac{BITBW} entwickelt und betreibt als zentraler IT-Dienstleisterin der Landesverwaltung Baden-Württemberg eine Vielzahl webbasierter Anwendungen.\footcite[Vgl.][]{BITBW_2021} Alle diese Anwendungen unterliegen den gesetzlichen Anforderungen der \ac{BITV} 2.0, die \ac{WCAG} 2.2 auf Konformitätsstufe AA als verbindlichen Maßstab definiert.\footcite[Vgl.][]{BITV} In der Praxis erfolgt die Barrierefreiheitsprüfung heute überwiegend manuell oder durch den Einsatz einzelner regelbasierter Tools - ein Vorgehen, das in zweifacher Hinsicht problematisch ist: manuelle Audits sind personalintensiv und skalieren unzureichend mit der Anzahl zu betreuender Anwendungen; regelbasierte Tools erfassen, wie in Kapitel \ref{tools} dargelegt, nur einen Bruchteil tatsächlich vorhandener Barrieren.\footcite[Vgl.][S. 8-9]{tafreshipour_ma11y_2024}
+Die \ac{BITBW} entwickelt und betreibt als zentrale IT-Dienstleisterin der Landesverwaltung Baden-Württemberg eine Vielzahl webbasierter Anwendungen.\footcite[Vgl.][]{BITBW_2021} Alle diese Anwendungen unterliegen den gesetzlichen Anforderungen der \ac{BITV} 2.0, die \ac{WCAG} 2.2 auf Konformitätsstufe AA als verbindlichen Maßstab definiert.\footcite[Vgl.][]{BITV} In der Praxis erfolgt die Barrierefreiheitsprüfung heute überwiegend manuell oder durch den Einsatz einzelner regelbasierter Tools -- ein Vorgehen, das aus zwei Gründen problematisch ist: Manuelle Audits sind personalintensiv und skalieren nur unzureichend mit der Anzahl zu betreuender Anwendungen; regelbasierte Tools erfassen, wie in Kapitel~\ref{tools} dargelegt, nur einen Bruchteil der tatsächlich vorhandenen Barrieren.\footcite[Vgl.][S. 8-9]{tafreshipour_ma11y_2024}
 
 Im Sinne des Design-Science-Research-Paradigmas ist der Ausgangspunkt die Identifikation eines praxisrelevanten Problems, für das bestehende Lösungen unzureichend sind.\footcite[Vgl.][S. 79]{hevner2004dsr} Aus der Analyse der Forschungsliteratur (Kapitel \ref{kap:3}) und den Rahmenbedingungen der \ac{BITBW} lassen sich drei zentrale Problemfelder ableiten.\footcite[Vgl.][S. 52--55]{peffers2007dsrm}
 
-Zum einen ist in der betrachteten Literatur kein Ansatz erkennbar, der nicht nur den anfänglichen \ac{DOM}-Zustand prüft, sondern auch Barrieren erkennt, die erst durch typische Nutzerinteraktionen in React-Anwendungen sichtbar werden.\footcite[Vgl.][]{fathallah_accessguru_2025} Zum anderen fehlt bislang eine Lösung, die die Ergebnisse einer allgemeinen \ac{DOM}-Analyse so verständlich und praxisnah aufbereitet, dass Entwickler gezielt für einzelne Quellcodedateien und Komponenten konkrete Verbesserungen ableiten können. Außerdem setzen alle bekannten Forschungsprototypen auf cloudbasierte \ac{LLM}-\ac{API}s - ein Ansatz, der für die \ac{BITBW} aus Datenschutzgründen nicht ohne Weiteres in Frage kommt.\footcite[Vgl.][Art. 28, 44 ff.]{dsgvo2016}\footnote{Siehe Kapitel \ref{datenschutz}}
+Zum einen ist in der betrachteten Literatur kein Ansatz erkennbar, der nicht nur den anfänglichen \ac{DOM}-Zustand prüft, sondern auch Barrieren erkennt, die erst durch typische Nutzerinteraktionen in React-Anwendungen sichtbar werden.\footcite[Vgl.][]{fathallah_accessguru_2025} Zum anderen fehlt bislang eine Lösung, die die Ergebnisse einer allgemeinen \ac{DOM}-Analyse so verständlich und praxisnah aufbereitet, dass Entwicklerinnen und Entwickler gezielt für einzelne Quellcodedateien und Komponenten konkrete Verbesserungen ableiten können. Außerdem setzen alle bekannten Forschungsprototypen auf cloudbasierte \ac{LLM}-\ac{API}s - ein Ansatz, der für die \ac{BITBW} aus Datenschutzgründen nicht ohne Weiteres infrage kommt.\footcite[Vgl.][Art. 28, 44 ff.]{dsgvo2016}\footnote{Siehe Kapitel \ref{datenschutz}}
 
 Aus diesen drei Dimensionen leitet sich das Ziel der vorliegenden Arbeit ab: die Entwicklung eines lokal ausführbaren, \ac{LLM}-gestützten Assistenzsystems, das axe-core-Violation-Reports, Playwright-Interaktionsdaten und statische Quellcodeanalyse kombiniert, um entwicklernahe Handlungsempfehlungen für React-basierte Webanwendungen zu generieren.\footnote{Siehe Kapitel \ref{kap:1.3}}
 
 \section{\acf{FA}} \label{kap:4.2}
 
-\acf{FA} beschreiben, was ein System leisten soll - d.\,h. welche Funktionen und Dienste es seinen Nutzerinnen und Nutzern bereitstellt.\footcite[Vgl.][S. 6-9]{sommerville2016software}  Die folgenden Anforderungen wurden aus der Problemanalyse (Abschnitt \ref{kap:4.1}), den Forschungslücken (Abschnitt \ref{Forschungslücken}) sowie einer Analyse vergleichbarer Systeme aus der Literatur abgeleitet.
+\acf{FA} beschreiben, was ein System leisten soll - d.\,h. welche Funktionen und Dienste es seinen Nutzerinnen und Nutzern bereitstellt.\footcite[Vgl.][S. 6-9]{sommerville2016software}  Die folgenden Anforderungen ergeben sich aus der Problemanalyse (Abschnitt \ref{kap:4.1}), den Forschungslücken (Abschnitt \ref{Forschungslücken}) sowie einer Analyse vergleichbarer Systeme aus der Literatur.
 
 \textfett{\acs{FA}-01 Regelbasierte Accessibility-Erkennung}
 
-Das System muss den \ac{BWEC} automatisiert auf Barrierefreiheitsverstöße nach \ac{WCAG} 2.2 Level A und AA prüfen.\footcite[Vgl.][]{bwec,WCAG} Die Prüfung basiert auf axe-core als Detection-Backend. Dessen Regelkatalog deckt einen wesentlichen Teil der syntaktisch und algorithmisch prüfbaren Verstöße gegen \ac{WCAG} 2.0, 2.1 und 2.2 ab\footcite[Vgl.][]{WCAG}, ersetzt jedoch keine vollständige manuelle Barrierefreiheitsprüfung.\footcite[Vgl.][]{axe} Der Output je Verstoß umfasst mindestens: Regel-ID (Zur Identifikation), Schweregrad (critical/serious/moderate/minor) sowie ein \ac{HTML}-Ausschnitt des betroffenen Elements. %sowie XPath-Selektor.
+Das System muss den \ac{BWEC} automatisiert auf Barrierefreiheitsverstöße nach \ac{WCAG} 2.2 Level A und AA prüfen.\footcite[Vgl.][]{bwec,WCAG} Die Prüfung basiert auf axe-core als Detection-Backend. Dessen Regelkatalog deckt einen wesentlichen Teil der syntaktisch und algorithmisch prüfbaren Verstöße gegen \ac{WCAG} 2.0, 2.1 und 2.2 ab\footcite[Vgl.][]{WCAG}, ersetzt jedoch keine vollständige manuelle Barrierefreiheitsprüfung.\footcite[Vgl.][]{axe} Der Output je Verstoß umfasst mindestens: Regel-ID (zur Identifikation), Schweregrad (critical/serious/moderate/minor) sowie ein \ac{HTML}-Ausschnitt des betroffenen Elements. %sowie XPath-Selektor.
 
 \textfett{\acs{FA}-02 Dynamische Zustandserfassung via Playwright}
 
-Das System muss über Playwright definierte Interaktionssequenzen ausführen. Darunter fallen Seitenaufbau, Formularbefüllung, Absende-Aktionen und Fokus-Navigation, die für jeden resultierenden \ac{DOM}-Zustand eine axe-core-Prüfung anstoßen.\footcite[Vgl.][]{playwright} Damit werden Barrieren erfasst, die im initialen Seitenzustand nicht vorhanden sind.\footnote{Siehe Kapitel \ref{Herausforderungen}}
+Das System muss über Playwright definierte Interaktionssequenzen ausführen. Dazu zählen Seitenaufbau, Formularbefüllung, Absendeaktionen und Fokusnavigation, die für jeden resultierenden \ac{DOM}-Zustand eine axe-core-Prüfung anstoßen.\footcite[Vgl.][]{playwright} Damit werden Barrieren erfasst, die im initialen Seitenzustand nicht vorhanden sind.\footnote{Siehe Kapitel \ref{Herausforderungen}}
 
 \textfett{\acs{FA}-03 Statische Quellcodeanalyse}
 
-Das System muss den Quellcode der geprüften React-Anwendung automatisiert nach Mustern durchsuchen, die auf Barrierefreiheitsprobleme hindeuten: fehlende \texttt{aria}-Attribute, \texttt{onClick}-Handler auf Nicht-interaktiven Elementen, fehlende \texttt{alt}-Attribute, Verwendung veralteter \ac{HTML}-Elemente sowie fehlende Formular-Assoziationen.\footnote{Siehe Kapitel \ref{kap:2.1}}
+Das System muss den Quellcode der geprüften React-Anwendung automatisiert nach Mustern durchsuchen, die auf Barrierefreiheitsprobleme hindeuten: fehlende \texttt{aria}-Attribute, \texttt{onClick}-Handler auf nicht-interaktiven Elementen, fehlende \texttt{alt}-Attribute, Verwendung veralteter \ac{HTML}-Elemente sowie fehlende Formular-Assoziationen.\footnote{Siehe Kapitel \ref{kap:2.1}}
 
 \textfett{\ac{FA}-04 \ac{LLM}-gestützte Analyse und Handlungsempfehlung}
 
-Das System muss die Ergebnisse aus \ac{FA}-01, \ac{FA}-02 und \ac{FA}-03 zu einem strukturierten Kontext zusammenführen und an ein lokal ausgeführtes Sprachmodell übergeben. Das Sprachmodell erhält einen kombinierten Prompt\footnote{Siehe Abschnitt~\ref{sec:kontextualisierung}} und generiert daraus eine Handlungsempfehlung im Format Must-have/Nice-to-have je Verstoß und mit Angabe der betroffenen Datei.
+Das System muss die Ergebnisse aus \ac{FA}-01, \ac{FA}-02 und \ac{FA}-03 zu einem strukturierten Kontext zusammenführen und an ein lokal ausgeführtes Sprachmodell übergeben. Das Sprachmodell erhält einen kombinierten Prompt\footnote{Siehe Abschnitt~\ref{sec:kontextualisierung}} und generiert daraus je Verstoß eine Handlungsempfehlung im Format Must-have/Nice-to-have unter Angabe der betroffenen Datei.
 %\footcite[Vgl.][]{doush_evaluating_2025,fathallah_accessguru_2025,paterno_how_2025}
 
 \textfett{\ac{FA}-05 Strukturierter \acs{JSON}-Output}
 
-Das System muss seine Ergebnisse in einem maschinenlesbaren \acs{JSON}-Format ausgeben.\footcite[Vgl.][]{paterno_how_2025,pool_testaro_2023} Der Report enthält je Befund: Verstoß-ID, Kategorie (syntaktisch/semantisch/layout)\footcite[Vgl.][]{fathallah_accessguru_2025}\footnote{Siehe Kapitel \ref{Taxonomie}}, Schweregrad, betroffene Datei(en), Handlungsempfehlung (Must-have/Nice-to-have), \ac{WCAG}-Erfolgs\-kri\-terium und - falls vorhanden - den relevanten Quellcode-Ausschnitt. Das strukturierte For\-mat erleichtert die Weiterverarbeitung und Integration der Ergebnisse in bestehende Entwicklungsprozesse.
+Das System muss seine Ergebnisse in einem maschinenlesbaren \acs{JSON}-Format ausgeben.\footcite[Vgl.][]{paterno_how_2025,pool_testaro_2023} Der Report enthält je Befund: Verstoß-ID, Kategorie (syntaktisch/semantisch/layout)\footcite[Vgl.][]{fathallah_accessguru_2025}\footnote{Siehe Kapitel \ref{Taxonomie}}, Schweregrad, betroffene Datei(en), Handlungsempfehlung (Must-have/Nice-to-have), \ac{WCAG}-Erfolgs\-kri\-terium und -- falls vorhanden -- den relevanten Quellcode-Ausschnitt. Das strukturierte For\-mat erleichtert die Weiterverarbeitung und Integration der Ergebnisse in bestehende Entwicklungsprozesse.
 
 \section{\acf{NFA}}\label{kap:4.3}
 
@@ -47,17 +47,17 @@ Das System muss vollständig ohne externe \ac{API}-Aufrufe betreibbar sein. Wede
 
 \textfett{\ac{NFA}-02 Laufzeit und Praktikabilität}
 
-Der vollständige Analyselauf - von der Playwright-Initialisierung bis zum fertigen \acs{JSON}-Report - muss auf einem Entwicklungsrechner in einer für den Entwicklungsalltag akzeptablen Zeit abschließen. Als Richtwert gilt eine Gesamtlaufzeit von unter zehn Minuten für eine einzelne Seite mit bis zu 20 axe-Verstößen. Diese Anforderung begrenzt die Komplexität der eingesetzten Prompt-Kette und schließt mehrstufige Reasoning-Schleifen (wie iteratives Corrective Re-Prompting)\footnote{Siehe Kapitel \ref{Prompt}} aus dem Scope des \ac{PoC} aus.
+Der vollständige Analyselauf -- von der Playwright-Initialisierung bis zum fertigen \acs{JSON}-Report -- muss auf einem Entwicklungsrechner in einer für den Entwicklungsalltag akzeptablen Zeit abschließen. Als Richtwert gilt eine Gesamtlaufzeit von unter zehn Minuten für eine einzelne Seite mit bis zu 20 axe-Verstößen. Diese Anforderung begrenzt die Komplexität der eingesetzten Prompt-Kette und schließt mehrstufige Reasoning-Schleifen (wie iteratives Corrective Re-Prompting)\footnote{Siehe Kapitel \ref{Prompt}} aus dem Scope des \ac{PoC} aus.
 
 \textfett{\ac{NFA}-03 Wartbarkeit und Erweiterbarkeit}
 
-Die Systemarchitektur muss eine klare modulare Trennung der Komponenten (Detection, Context-Building, Synthesis) vorsehen, sodass einzelne Komponenten - etwa die Playwright-Skripte oder der Prompt - unabhängig angepasst oder ausgetauscht werden können.
+Die Systemarchitektur muss eine modulare Trennung der Komponenten (Detection, Context-Building, Synthesis) vorsehen, sodass einzelne Komponenten - etwa die Playwright-Skripte oder der Prompt - unabhängig angepasst oder ausgetauscht werden können.
 
 \textfett{\ac{NFA}-04 Reproduzierbarkeit}
 
-Das System muss deterministisch genug sein, dass zwei aufeinanderfolgende Analyseläufe auf derselben Anwendungsversion im Wesentlichen dieselben Befunde produzieren. Da \ac{LLM}s inhärent probabilistisch sind, wird Reproduzierbarkeit durch eine feste Temperatur-Einstellung (Temperature = 0.05) für das Sprachmodell und durch strukturierte Ausgabeformate (\acs{JSON}-Schema im Prompt) sichergestellt.\footcites[Vgl.][Temperature]{OpenAI_Developers}[Vgl.][Temperature]{Anthropic_API_Docs}
+Das System muss deterministisch genug sein, dass zwei aufeinanderfolgende Analyseläufe auf derselben Anwendungsversion im Wesentlichen dieselben Befunde produzieren. Da \ac{LLM}s inhärent probabilistisch sind, wird Reproduzierbarkeit durch eine feste Temperatur-Einstellung (\texttt{temperature} = 0.05) für das Sprachmodell und durch strukturierte Ausgabeformate (\acs{JSON}-Schema im Prompt) sichergestellt.\footcites[Vgl.][Temperature]{OpenAI_Developers}[Vgl.][Temperature]{Anthropic_API_Docs}
 
-\section{Lokale Inferenzinfrastruktur: Ollama}\label{kap:4.4}
+\section{Lokale Inferenzinfrastruktur und Modellkandidaten}\label{kap:4.4}
  
 % ── Geändert gegenüber Originalversion ──────────────────────────────────────
 % Begründung: Die ursprüngliche Version dieses Abschnitts behandelte qwen2.5-coder:7b
@@ -68,11 +68,11 @@ Das System muss deterministisch genug sein, dass zwei aufeinanderfolgende Analys
 % erfolgen in Kapitel 5.2 bzw. Kapitel 7.
 % ─────────────────────────────────────────────────────────────────────────────
  
-Die Wahl der Inferenzinfrastruktur ist durch \ac{NFA}-01 (Lokal-First) strukturell vorgegeben: Cloudbasierte Modell-\ac{API}s wie die OpenAI API oder Anthropic Claude scheiden aus, da ihre Nutzung die Übermittlung potenziell schützenswerter Quellcodeausschnitte und \ac{DOM}-Inhalte an externe Server erfordert. Dies ist im Kontext öffentlicher Verwaltung ohne gesonderte datenschutzrechtliche Prüfung nicht zulässig.\footcite[Vgl.][Art. 28 und Art. 44 ff.]{dsgvo2016}
+Die Wahl der Inferenzinfrastruktur ist durch \ac{NFA}-01 (Lokal-First) strukturell vorgegeben: Cloudbasierte Modell-\ac{API}s wie die OpenAI-\ac{API} oder die Claude-\ac{API} von Anthropic scheiden aus, da ihre Nutzung die Übermittlung potenziell schützenswerter Quellcodeausschnitte und \ac{DOM}-Inhalte an externe Server erfordert. Dies ist im Kontext öffentlicher Verwaltung ohne gesonderte datenschutzrechtliche Prüfung nicht zulässig.\footcite[Vgl.][Art. 28 und Art. 44 ff.]{dsgvo2016}
  
 \subsection{Ollama als Laufzeitumgebung}
  
-Ollama ist ein quelloffenes Werkzeug, das die lokale Ausführung von \ac{LLM}s über eine einheitliche REST-\ac{API} ermöglicht.\footcite[Vgl.][]{Ollama} Die Modellverwaltung -- Download, Quantisierung und Speicherverwaltung -- wird durch eine einfach zu bedienende \ac{CLI} abstrahiert: Modelle lassen sich mit \texttt{ollama pull <modell>} herunterladen und mit \texttt{ollama run <modell>} starten. Die REST-\ac{API} ist kompatibel mit der OpenAI-\ac{API}-Spezifikation, wodurch sich bestehende Node.js-Bibliotheken ohne größeren Anpassungsaufwand integrieren lassen. Für den vorliegenden \ac{PoC} ist Ollama die einzige zusätzliche Infrastrukturkomponente, die neben einer Standard-Node.js-Installation benötigt wird.
+Ollama ist ein quelloffenes Werkzeug, das die lokale Ausführung von \ac{LLM}s über eine einheitliche REST-\ac{API} ermöglicht.\footcite[Vgl.][]{Ollama} Die Modellverwaltung -- Download, Quantisierung und Speicherverwaltung -- wird über eine einfach zu bedienende \ac{CLI} abstrahiert: Modelle lassen sich mit \texttt{ollama pull <modell>} herunterladen und mit \texttt{ollama run <modell>} starten. Die REST-\ac{API} ist kompatibel mit der OpenAI-\ac{API}-Spezifikation, wodurch sich bestehende Node.js-Bibliotheken ohne größeren Anpassungsaufwand integrieren lassen. Für den vorliegenden \ac{PoC} ist Ollama die einzige zusätzliche Infrastrukturkomponente, die neben einer Standard-Node.js-Installation benötigt wird.
  
 Ein weiterer Vorteil von Ollama ist die Unterstützung quantisierter Modellvarianten (z.\,B. Q4\_K\_M), die eine speichereffiziente Ausführung auf \ac{CPU}-basierten Systemen ohne dedizierte Grafikkarte ermöglichen. Dies ist für den Betrieb auf Entwicklungsrechnern der \ac{BITBW} relevant, da nicht von der Verfügbarkeit dedizierter \ac{GPU}-Hardware ausgegangen werden kann.
  
@@ -86,7 +86,7 @@ Zweitens muss das Modell \textbf{strukturierte Ausgaben} in einem vorgegebenen F
  
 Drittens muss das Modell innerhalb eines \textbf{Kontextfensters von mindestens 8.192 Tokens} arbeiten, um mehrere Violation-Reports, relevante Quellcodeausschnitte und den System-Prompt in einer einzigen Anfrage verarbeiten zu können (\ac{FA}-04).
  
-Viertens muss das Modell \textbf{auf \ac{CPU}-basierten Systemen} mit akzeptabler Latenz betreibbar sein, was die praktisch einsetzbare Parameterzahl auf ca. 7--32 Milliarden Parameter begrenzt (\ac{NFA}-02).\footcite[Vgl.][S. 3]{hui2024qwen25coder}
+Viertens muss das Modell \textbf{auf \ac{CPU}-basierten Systemen} mit akzeptabler Latenz betreibbar sein, was die praktisch einsetzbare Modellgröße auf etwa 7--32 Milliarden Parameter begrenzt (\ac{NFA}-02).\footcite[Vgl.][S. 3]{hui2024qwen25coder}
  
 Die Auswahl konkreter Modellkandidaten, die diese Anforderungen erfüllen, sowie deren vergleichende Evaluation werden in Kapitel~\ref{sec:kontextualisierung} bzw. Kapitel~\ref{kap:7} behandelt.
 
@@ -101,7 +101,7 @@ Für die Evaluation in Kapitel~\ref{kap:7} werden vier lokal ausführbare Modell
 	\item \texttt{deepseek-r1:70b}
 \end{itemize}
 
-Die Auswahl folgt einem bewussten Größen- und Fähigkeitsvergleich entlang der Anforderungen aus Abschnitt~\ref{kap:4.3}: 7B und 14B repräsentieren ressourcenschonende Modelle für den operativen Lokalbetrieb, 32B einen mittleren Kompromiss aus Qualität und Laufzeit, 70B ein leistungsstarkes Referenzmodell mit höherem Rechenbedarf. Dadurch kann empirisch untersucht werden, wie sich Modellgröße auf Erkennungsqualität, Formatstabilität und Laufzeit auswirkt.
+Die Auswahl folgt einem bewussten Vergleich unterschiedlicher Modellgrößen und Fähigkeitsniveaus entlang der Anforderungen aus Abschnitt~\ref{kap:4.3}: 7B und 14B repräsentieren ressourcenschonende Modelle für den operativen Lokalbetrieb, 32B einen mittleren Kompromiss aus Qualität und Laufzeit, 70B ein leistungsstarkes Referenzmodell mit höherem Rechenbedarf. Dadurch kann empirisch untersucht werden, wie sich Modellgröße auf Erkennungsqualität, Formatstabilität und Laufzeit auswirkt.
  
 \subsection{Zusammenfassung der Anforderungen}
  
@@ -147,4 +147,4 @@ Tabelle \ref{Anforderungstabelle} fasst die spezifizierten Anforderungen zusamme
 \label{tab:anforderungen}
 \end{table}
  
-Die Anforderungen \ac{FA}-01 bis \ac{FA}-05 und \ac{NFA}-01 bis \ac{NFA}-04 bilden die verbindliche Grundlage für das Systemdesign in Kapitel~\ref{kap:5}. \ac{NFA}-01 (Lokal-First) hat dabei Vorrang vor allen anderen Anforderungen und schränkt den Lösungsraum strukturell ein: Alle Designentscheidungen müssen mit dem Betrieb auf lokaler Infrastruktur vereinbar sein.
+Die Anforderungen \ac{FA}-01 bis \ac{FA}-05 und \ac{NFA}-01 bis \ac{NFA}-04 bilden die verbindliche Grundlage für das Systemdesign in Kapitel~\ref{kap:5}. \ac{NFA}-01 (Lokal-First) hat dabei Vorrang vor allen anderen Anforderungen und schränkt den Lösungsraum strukturell ein. Alle Designentscheidungen müssen mit dem Betrieb auf lokaler Infrastruktur vereinbar sein.

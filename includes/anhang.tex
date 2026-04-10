@@ -3,7 +3,7 @@
 % Alle im Verzeichnis definierten Abkürzungen als "used" markieren,
 % damit im Anhang überall \ac{Kürzel} genutzt werden kann und das Paket
 % direkt die Kurzform ausgibt statt Erst-Nennung + Kurzform.
-\acused{ACE}\acused{API}\acused{AST}\acused{BFSG}\acused{BITBW}\acused{BITV}\acused{BWEC}\acused{CLI}\acused{CPU}\acused{CSS}\acused{DSR}\acused{DOM}\acused{DSGVO}\acused{EAA}\acused{FA}\acused{GPU}\acused{HTML}\acused{HTTP}\acused{IQR}\acused{JSON}\acused{JSX}\acused{KI}\acused{KPI}\acused{LLM}\acused{NFA}\acused{PoC}\acused{PW}\acused{RAG}\acused{RAM}\acused{SPA}\acused{TF}\acused{UFS}\acused{UI}\acused{URL}\acused{W3C}\acused{WAI}\acused{WCAG}\acused{WHO}
+\acused{ACE}\acused{API}\acused{AST}\acused{BFSG}\acused{BITBW}\acused{BITV}\acused{BWEC}\acused{CLI}\acused{CICD}\acused{CPU}\acused{CSS}\acused{DSR}\acused{DOM}\acused{DSGVO}\acused{EAA}\acused{FA}\acused{GPU}\acused{HTML}\acused{HTTP}\acused{IQR}\acused{JSON}\acused{JSX}\acused{KI}\acused{KPI}\acused{LLM}\acused{NFA}\acused{PoC}\acused{PW}\acused{RAG}\acused{RAM}\acused{SPA}\acused{TF}\acused{UFS}\acused{UI}\acused{URL}\acused{W3C}\acused{WAI}\acused{WCAG}\acused{WHO}
 
 \listofanhang
 \clearpage
@@ -18,9 +18,9 @@
 \hline
 \textbf{Bereich} & \textbf{Inhalte} \\
 \hline
-\hyperref[app:block_generell]{Generell} & \hyperref[anhang:complexity]{Komplexität von Home Pages}, \hyperref[app:konzeptmatrix]{Konzeptmatrix}, \hyperref[app:ace-pipeline-schema]{Pipeline-Schema}, \hyperref[app:systemprompt]{System-Prompt}, \hyperref[app:detektorprompt]{\ac{LLM}-Detektor-Prompts}, \hyperref[app:tokenbudget]{Token-Budget}, \hyperref[app:einsatzempfehlungen]{konsolidierte Empfehlung}, \hyperref[app:suite_vergleich]{Suite-Vergleich}, \hyperref[tab:bewertungsskala_empfehlungen]{Bewertungsskala}, \hyperref[app:fa_nfa_erfuellung]{\ac{FA}/\ac{NFA}-Erfüllungsgrad}, \hyperref[app:reproducibility]{Reproduzierbarkeitsblatt}, \hyperref[app:console_output]{Console-Output-Auszüge}, \hyperref[app:threats_to_validity]{Threats to Validity} \\
+\hyperref[app:block_generell]{Generell} & \hyperref[anhang:complexity]{Komplexität von Home Pages}, \hyperref[app:konzeptmatrix]{Konzeptmatrix}, \hyperref[app:ace-pipeline-schema]{Pipeline-Schema}, \hyperref[app:systemprompt]{System-Prompt}, \hyperref[app:detektorprompt]{\ac{LLM}-Detektor-Prompts}, \hyperref[app:tokenbudget]{Token-Budget}, \hyperref[app:einsatzempfehlungen]{konsolidierte Empfehlung}, \hyperref[app:suite_vergleich]{Suite-Vergleich}, \hyperref[app:bewertungsskala_empfehlungen]{Bewertungsskala}, \hyperref[app:fa_nfa_erfuellung]{\ac{FA}/\ac{NFA}-Erfüllungsgrad}, \hyperref[app:reproducibility]{Reproduzierbarkeitsblatt}, \hyperref[app:console_output]{Console-Output-Auszüge}, \hyperref[app:threats_to_validity]{Threats to Validity} \\
 \hline
-\hyperref[app:graph_intro]{Vergleichsgrafiken} & \hyperref[app:graph_recall]{Recall und Überschuss}, \hyperref[app:graph_laufzeit]{Laufzeit-Skalierung}, \hyperref[app:graph_sigma]{Konsistenz ($\sigma$)}, \hyperref[app:graph_overdetektion]{Recall\,/\,Überschuss (Suite-Gruppen)}, \hyperref[app:graph_truncation]{Truncation-Rate}, \hyperref[app:graph_heatmap_demo]{Heatmap Recall}, \hyperref[app:graph_must_nice_demo]{Must-/Nice-to-have-Verteilung} \\
+\hyperref[app:graph_intro]{Vergleichsgrafiken} & \hyperref[app:graph_recall]{Recall-Degradation}, \hyperref[app:graph_laufzeit]{Laufzeit-Skalierung}, \hyperref[app:graph_sigma]{Konsistenz ($\sigma$)}, \hyperref[app:graph_overdetektion]{Recall\,/\,Überschuss (Suite-Gruppen)}, \hyperref[app:graph_truncation]{Truncation-Rate}, \hyperref[app:graph_heatmap_demo]{Heatmap Recall}, \hyperref[app:graph_must_nice_demo]{Must-/Nice-to-have-Verteilung} \\
 \hline
 \hyperref[app:block_test12]{test-12-Block} & \hyperref[app:accessibility_verstoesse_12]{Violations-Katalog}, \hyperref[app:erkennungsrate_poc_12]{Erkennungsrate}, \hyperref[app:recall_matrix_12]{Recall-Matrix}, \hyperref[app:rohdaten_12]{Rohdaten}, \hyperref[app:modell_summary_12]{Modellvergleich}, \hyperref[app:token_economy_12]{Token-Nutzung}, \hyperref[app:effizienz_metriken_12]{Effizienz}, \hyperref[app:overdetection_12]{Über-Detektion}, \hyperref[app:detektor_konsistenz_12]{Konsistenz}, \hyperref[app:empfehlungsqualitaet_12]{Empfehlungsqualität}, \hyperref[app:csv_export_12]{CSV-Auszug}, \hyperref[app:statistik_quantile_12]{Statistische Verteilung}, \hyperref[app:screenshots_test12]{Screenshots der Testsuite} \\
 \hline
@@ -28,7 +28,7 @@
 \hline
 \hyperref[app:block_test100]{test-100-Block} & \hyperref[app:accessibility_verstoesse_100]{Violations-Katalog}, \hyperref[app:erkennungsrate_poc_100]{Erkennungsrate}, \hyperref[app:recall_matrix_100]{Recall-Matrix}, \hyperref[app:rohdaten_100]{Rohdaten}, \hyperref[app:modell_summary_100]{Modellvergleich}, \hyperref[app:token_economy_100]{Token-Nutzung}, \hyperref[app:effizienz_metriken_100]{Effizienz}, \hyperref[app:overdetection_100]{Über-Detektion}, \hyperref[app:stichprobe_plausibilitaet]{Stichproben-Plausibilisierung}, \hyperref[app:detektor_konsistenz_100]{Konsistenz}, \hyperref[app:empfehlungsqualitaet_100]{Empfehlungsqualität}, \hyperref[app:csv_beispiel_100]{CSV-Auszug}, \hyperref[app:statistik_quantile_100]{Statistische Verteilung}, \hyperref[app:graph_pareto_demo]{Pareto-Diagramm}, \hyperref[app:graph_boxplot_demo]{Boxplot Laufzeiten}, \hyperref[app:graph_pipeline_demo]{Pipeline-Diagramm}, \hyperref[app:screenshots_test100]{Screenshots der Testsuite} \\
 \hline
-\hyperref[app:block_bwec]{\ac{BWEC}-Block} & \hyperref[tab:rohdaten_bwec]{Rohdaten (maxfiles=100)}, \hyperref[tab:modell_summary_bwec]{Modellvergleich}, \hyperref[tab:rohdaten_bwec500]{Rohdaten (maxfiles=500)} \\
+\hyperref[app:block_bwec]{\ac{BWEC}-Block} & \hyperref[app:rohdaten_bwec]{Rohdaten (maxfiles=100)}, \hyperref[app:modell_summary_bwec]{Modellvergleich (maxfiles=100)}, \hyperref[app:rohdaten_bwec500]{Rohdaten (maxfiles=500)}, \hyperref[app:modell_summary_bwec500]{Modellvergleich (maxfiles=500)} \\
 \hline
 \end{tabular}
 \label{tab:anhang_overview}
@@ -567,9 +567,9 @@ Output-Limit \texttt{num\_predict} & 6\,144 & 8\,192 & 12\,288 \\
 \hline
 Beste \ac{LLM}-Konsistenz $\sigma$ & 0{,}42 (14b) & 1{,}25 (32b) & 3{,}23 (14b) \\
 \hline
-\ac{NFA}-02-Konformität (strenge Sicht) & 14b: \checkmark & 14b: \checkmark & keines: \texttimes \\
+\ac{NFA}-02-Konformität (strenge Sicht) & 7b, 14b: \checkmark & 7b: \checkmark & keines: \texttimes \\
 \hline
-Pragmatische \ac{BITV}-Eignung (Qualität/Zeit) & 14b: empfohlen & 14b: empfohlen & 14b: empfohlen, 32b: eingeschränkt \\
+Pragmatische \ac{BITV}-Eignung (Qualität/Zeit) & 14b: empfohlen, 32b: eingeschränkt & 14b: empfohlen, 32b: eingeschränkt & 14b: empfohlen, 32b: eingeschränkt \\
 \hline
 \end{tabular}
 }%
@@ -579,7 +579,7 @@ Pragmatische \ac{BITV}-Eignung (Qualität/Zeit) & 14b: empfohlen & 14b: empfohle
 \noindent\textit{Hinweis:} Im Suite-Vergleich werden zwei Perspektiven getrennt ausgewiesen: \textit{strenge Sicht} (\ac{NFA}-02 als Ausschlusskriterium) und \textit{pragmatische Sicht} (Balance aus Erkennungsqualität und Zeitaufwand).
 
 \clearpage
-\anhang{Bewertungsskala für die Empfehlungsqualität der \ac{LLM}-Ausgaben (generell)}
+\anhang{Bewertungsskala für die Empfehlungsqualität der \ac{LLM}-Ausgaben (generell)}\label{app:bewertungsskala_empfehlungen}
 
 \begin{table}[htbp]
 \centering
@@ -613,23 +613,23 @@ Pragmatische \ac{BITV}-Eignung (Qualität/Zeit) & 14b: empfohlen & 14b: empfohle
 \hline
 \textbf{Anf.} & \textbf{Beschreibung} & \textbf{Status} & \textbf{Bemerkung} \\
 \hline
-\ac{FA}-01 & Regelbasierte Accessibility-Erkennung via axe-core & \checkmark & Alle vier Violation-Kategorien werden zuverlässig detektiert. \\
+\ac{FA}-01 & Regelbasierte Accessibility-Erkennung via axe-core & \checkmark & axe-core ist vollständig integriert und liefert auf allen Suites stabile, deterministische Baseline-Findings; die Abdeckung bleibt jedoch auf automatisierbare Regelverstöße begrenzt. \\
 \hline
-\ac{FA}-02 & Dynamische Zustandserfassung via Playwright & \checkmark & Interaktionsbasierte Barrieren (z.\,B. modaler Dialog) werden erfasst; V8 nur mit \ac{LLM}-Detektor (vgl. Abschnitt~\ref{sec:recall_baseline}). \\
+\ac{FA}-02 & Dynamische Zustandserfassung via Playwright & \checkmark & Generische Interaktionschecks (z.\,B. Skip-Link, Fokusindikator) sind umgesetzt und liefern stabile Findings; modalspezifische Fokus-Traps werden jedoch nicht in allen Suites zuverlässig erfasst. \\
 \hline
-\ac{FA}-03 & Statische Quellcodeanalyse via grep & \checkmark & Pattern-Matching liefert datei- und zeilenspezifischen Kontext für alle getesteten Violations. \\
+\ac{FA}-03 & Statische Quellcodeanalyse via grep & \checkmark & Pattern-Matching und Kontextanreicherung liefern datei- und zeilenspezifischen Kontext für grep-basierte bzw. angereicherte Befunde; eine vollständige Quellcodeabdeckung aller Violations ist damit nicht verbunden. \\
 \hline
-\ac{FA}-04 & \ac{LLM}-gestützte Analyse und Handlungsempfehlung & \checkmark & Zweistufige Strategie (Detektor + Priorisierung) umgesetzt; Fix-Qualität Stufe~2 mit \texttt{qwen3:32b} für 11/12~Violations. \\
+\ac{FA}-04 & \ac{LLM}-gestützte Analyse und Handlungsempfehlung & \checkmark & Zweistufige Strategie (Detektor + Priorisierung) umgesetzt; Fix-Qualität mit \texttt{qwen3:32b} auf test-12 überwiegend Stufe~2. \\
 \hline
-\ac{FA}-05 & Strukturierter \acs{JSON}-Report & \checkmark & \acs{UFS}-konformer Output mit maschinenlesbarer Priorisierungsliste. \\
+\ac{FA}-05 & Strukturierter \acs{JSON}-Report & \checkmark & Maschinenlesbarer \acs{JSON}-Output und separate Report-Artefakte sind implementiert; Parsing-Erfolg in den Benchmarkläufen 100\,\%. \\
 \hline\hline
 \ac{NFA}-01 & Lokal-First / Datenschutz (kein Cloud-Transfer) & \checkmark & Ollama-Infrastruktur; kein Quellcode verlässt das lokale System. \\
 \hline
-\ac{NFA}-02 & Laufzeit $<$ 10~Min. & $ \sim $ & In test-12 erfüllt (7b/14b), in test-50 und test-100 jedoch teilweise bzw. klar verletzt. Daher gilt: \textit{strenge Bewertung} (\ac{NFA}-02 als K.-o.) $\Rightarrow$ kein Modell uneingeschränkt geeignet auf test-100; \textit{pragmatische Bewertung} (Qualität/Zeit-Balance) $\Rightarrow$ 14b/32b weiterhin als geeignete Optionen. \\
+\ac{NFA}-02 & Laufzeit $<$ 10~Min. & $(\sim)$ & In test-12 erfüllen 7b und 14b die Anforderung, in test-50 nur 7b; in test-100 überschreiten alle drei Modelle die Zehn-Minuten-Grenze. \\
 \hline
 \ac{NFA}-03 & Wartbarkeit (modulare Architektur) & \checkmark & Trennung in Detection, Context-Building und Synthesis; unabhängig erweiterbar. \\
 \hline
-\ac{NFA}-04 & Reproduzierbarkeit (stabile Ausgaben) & $ \sim $ & Temperature~0,05 und \acs{JSON}-Schema-Prompting sichern Grundstabilität; $\sigma = 0{,}53$ bei \texttt{qwen3:32b} als bestes Modell (vgl. Abschnitt~\ref{sec:effizienz_konsistenz}). Für einen \ac{PoC} ausreichend. \\
+\ac{NFA}-04 & Reproduzierbarkeit (stabile Ausgaben) & $(\sim)$ & Temperature~0,05 und \acs{JSON}-Schema-Prompting sichern Grundstabilität; auf test-12 zeigt 14b mit $\sigma = 0{,}42$ die höchste Konsistenz, auf größeren Suites steigt die Varianz jedoch an. \\
 \hline
 \end{tabular}
 }%
@@ -655,7 +655,7 @@ Pragmatische \ac{BITV}-Eignung (Qualität/Zeit) & 14b: empfohlen & 14b: empfohle
 \hline
 \ac{RAM} & 128 GB \\
 \hline
-\ac{GPU} & [falls genutzt: Modell, VRAM; sonst: keine] \\
+\ac{GPU} & keine (CPU-basierte Ausführung) \\
 \hline
 Speicher & 4TB \\
 \hline
@@ -707,7 +707,7 @@ Playwright-Version & 1.50.1 \\
 
 \anhang{Console-Output-Auszüge eines Benchmark-Runs}\label{app:console_output}
 
-\noindent\textit{Hinweis:} Im Folgenden wird eine repräsentative Console-Ausgaben eines erfolgreichen Runs dokumentiert. Sie zeigt die typische Pipeline-Ausführung: Initialisierung, Tool-Ausführungen, \ac{LLM}-Detektor-Phase, Priorisierung und finaler Report-Export.
+\noindent\textit{Hinweis:} Im Folgenden wird ein repräsentativer Console-Output eines erfolgreichen Runs dokumentiert. Sie zeigt die typische Pipeline-Ausführung: Initialisierung, Tool-Ausführungen, \ac{LLM}-Detektor-Phase, Priorisierung und finaler Report-Export.
 \lstset{
   basicstyle=\ttfamily\scriptsize,
     keywordstyle=\color{blue},
@@ -759,13 +759,13 @@ Ground-Truth-Genauigkeit & Die 100 Violations wurden manuell in die Testanwendun
 \hline
 \multicolumn{3}{|l|}{\textbf{Externe Validität: Generalisierbarkeit}} \\
 \hline
-Testanwendungs-Spezifik & Die bisherige Evaluation basiert auf einer monolithischen React-\ac{SPA} als kontrollierter Testumgebung; reale Unternehmensanwendungen waren in der Hauptmessung noch nicht enthalten & Die Ergebnisse sind zunächst vor allem auf vergleichbare \ac{SPA}-Umgebungen übertragbar. Eine breitere Generalisierung erfordert zusätzliche Tests an realen Anwendungssystemen. \\
+Testanwendungs-Spezifik & Die Hauptevaluation basiert auf drei synthetischen React-Testsuites mit bekannter Ground Truth; der reale \ac{BWEC} wurde ergänzend ohne Ground Truth qualitativ betrachtet & Die Ergebnisse sind primär auf vergleichbare React-/\ac{SPA}-Umgebungen übertragbar. Eine breitere Generalisierung erfordert zusätzliche Ground-Truth-basierte Tests an realen Anwendungssystemen. \\
 \hline
 \ac{WCAG}-Coverage & Abgedeckt werden zentrale \ac{WCAG}-Kriterien aus den Bereichen 1.x bis 4.1.x, jedoch kein vollständiger Kriterienkatalog & Für eine an \ac{WCAG} AA orientierte Bewertung ist die Abdeckung ausreichend. Aussagen zu AAA bleiben nur eingeschränkt möglich. \\
 \hline
 Modell\-verfügbarkeit & Evaluiert wurden ausschließlich lokal ausgeführte Modelle (qwen2.5, qwen3) & Der Fokus liegt bewusst auf einem datenschutzfreundlichen Local-First-Ansatz. Die Ergebnisse lassen sich daher nicht unmittelbar auf Cloud-Modelle übertragen. \\
 \hline
-Skalierbarkeit & Untersucht wurden in der bisherigen Hauptmessung die Testumgebungen test-50 und test-100; großskalige reale Codebasen waren bislang nicht Bestandteil der systematischen Auswertung & Das Verfahren ist durch Chunking grundsätzlich skalierbar. Praktische Grenzen bei Laufzeit und Ressourcenbedarf sollten durch ergänzende Tests an realen Codebasen weiter geprüft werden. \\
+Skalierbarkeit & Ground-Truth-basiert wurden die Testsuites test-50 und test-100 untersucht; ergänzend wurde mit \ac{BWEC}-500 auch eine große reale Codebasis qualitativ erprobt, jedoch ohne Recall-Metrik & Das Verfahren ist durch Chunking grundsätzlich skalierbar. Praktische Grenzen bei Laufzeit, Kontextfenster und Priorisierungsstabilität wurden im \ac{BWEC}-500-Experiment sichtbar und sollten in künftigen Studien weiter untersucht werden. \\
 \hline
 \multicolumn{3}{|l|}{\textbf{Konstruktvalidität: Repräsentation der Konstrukte}} \\
 \hline
@@ -1318,7 +1318,6 @@ $\sigma$             &  5{,}35     & Standardabweichung über alle 30 Runs \\
 % test-50-Suite -- Anhang-Abschnitte
 % ══════════════════════════════════════════════════════════════════════════════
 
-\clearpage
 \clearpage
 
 \anhang{test-50-Suite (kompletter Block)}\label{app:block_test50}
@@ -2644,7 +2643,7 @@ qwen3:32b         &  99{,}1 & 100 &  99{,}1\,\% & Nahe an Ground Truth; 1\,/\,10
 
 \anhang{Stichproben-Plausibilisierung des finalen Reports (\texttt{qwen3:32b}, Run~01 \& Run~03, test-100)}\label{app:stichprobe_plausibilitaet}
 
-\noindent Da die Überdetektions-Quote ausschließlich eine Mengenrelation zwischen \ac{LLM}-Detektor-Rohoutput und Ground Truth misst, wurde eine manuelle Stichprobenprüfung an zwei Runs durchgeführt, um die inhaltliche Qualität des finalen Reports einzuschätzen. Grundlage ist \texttt{qwen3:32b} auf test-100: Run~01 ist vollständig (keine Truncation, 72~Report-Einträge), Run~03 ist trunkiert (12\,288~Output-Tokens ausgeschöpft, 104~Einträge). Jeder Eintrag wurde dem Quellcode unter \texttt{test/test-100/src/} sowie dem Ground-Truth-Katalog (Tabelle~\ref{tab:violations_100}) zugeordnet.
+\noindent Da die Überdetektions-Quote ausschließlich eine Mengenrelation zwischen \ac{LLM}-Detektor-Rohoutput und Ground Truth misst, wurde eine manuelle Stichprobenprüfung an zwei Runs durchgeführt, um die inhaltliche Qualität des finalen Reports einzuschätzen. Grundlage ist \texttt{qwen3:32b} auf test-100: Run~01 ist vollständig (keine Truncation, 72~Report-Einträge), Run~03 ist trunkiert (12\,288~Output-Tokens ausgeschöpft, 104~Einträge). Jeder Eintrag wurde dem Quellcode unter \texttt{test/test-100/src/} sowie dem Ground-Truth-Katalog (Tabelle~\ref{tab:accessibility_verstoesse_100}) zugeordnet.
 
 \begin{table}[htbp]
 \centering
@@ -3258,9 +3257,9 @@ $\sigma$         & 5{,}75 & 3{,}23 & 5{,}63 \\
 
 \clearpage
 
-\anhang{Recall und Überschuss – nach Suite gruppiert}\label{app:graph_overdetektion}
+\anhang{Recall und Überschuss - nach Suite gruppiert}\label{app:graph_overdetektion}
 
-\noindent Das Diagramm zeigt für jedes Modell, welcher Anteil der \ac{LLM}-Detektor-Rohfindings dem tatsächlichen Recall entspricht (dunkler Balkenanteil) und welcher Anteil darüber hinausgeht (heller Anteil: Quell-Duplikate, Mehrfachinstanzen, nicht eindeutig zugeordnete Findings). In test-12 liegt der Überschuss bei 14b und 32b besonders hoch, weil axe-core und \ac{LLM}-Detektor viele der 12~Violations unabhängig voneinander finden (Quell-Duplikate). In test-100 bleibt der Recall trotz annähernd gleichem Gesamtvolumen auf 40--63\,\%, da der Überschuss einen großen Teil der Rohfindings ausmacht. Die Linie bei 100\,\% markiert die Ground-Truth-Menge. Datenbasis: Recall aus Tabellen~\ref{tab:modell_summary_12}, \ref{tab:modell_summary_50}, \ref{tab:modell_summary_100}; Überschuss~= LLM-Detektor-Rohfindings minus Recall (vgl. Tabellen~\ref{tab:overdetection}, \ref{tab:overdetection_50}, \ref{tab:overdetection_100}).
+\noindent Das Diagramm zeigt für jedes Modell, welcher Anteil der \ac{LLM}-Detektor-Rohfindings dem tatsächlichen Recall entspricht (dunkler Balkenanteil) und welcher Anteil darüber hinausgeht (heller Anteil: Quell-Duplikate, Mehrfachinstanzen, nicht eindeutig zugeordnete Findings). In test-12 liegt der Überschuss bei 14b und 32b besonders hoch, weil axe-core und \ac{LLM}-Detektor viele der 12~Violations unabhängig voneinander finden (Quell-Duplikate). In test-100 bleibt der Recall trotz annähernd gleichem Gesamtvolumen auf 40--63\,\%, da der Überschuss einen großen Teil der Rohfindings ausmacht. Die Linie bei 100\,\% markiert die Ground-Truth-Menge. Datenbasis: Recall aus Tabellen~\ref{tab:modell_summary_12}, \ref{tab:modell_summary_50}, \ref{tab:modell_summary_100}; Überschuss~= \ac{LLM}-Detektor-Rohfindings minus Recall (vgl. Tabellen~\ref{tab:overdetection}, \ref{tab:overdetection_50}, \ref{tab:overdetection_100}).
 
 \begin{figure}[htbp]
 \centering
@@ -3439,81 +3438,211 @@ $\sigma$         & 5{,}75 & 3{,}23 & 5{,}63 \\
 % ═══════════════════════════════════════════════════════════════════
 \clearpage
 \phantomsection\label{app:block_bwec}
-\anhang{\ac{BWEC}-Block: Reales Untersuchungsobjekt}
+\anhang{\ac{BWEC}-Block (kompletter Block)}
 
-\anhang{Rohdaten: \ac{BWEC}-Messreihe (\texttt{maxfiles}~=~100, 66~Chunks)}\label{app:rohdaten_bwec}
+\noindent\textit{Hinweis:} Der \ac{BWEC}-Block dokumentiert die explorative Erprobung des \ac{PoC} am realen Untersuchungsobjekt ohne Ground Truth. Im Unterschied zu test-12, test-50 und test-100 stehen hier daher vor allem Laufzeit-, Skalierungs- und Robustheitsbeobachtungen im Vordergrund.
 
-\noindent\textbf{Konfiguration:} \texttt{OLLAMA\_NUM\_CTX}~=~65\,536; \texttt{OLLAMA\_NUM\_PREDICT}~=~24\,576; \texttt{LLM\_DETECT\_NUM\_PREDICT}~=~4\,096; Chunk-Größe~=~4\,000~Zeichen. Tool-Findings über alle Runs konstant: axe-core~=~10, Playwright~=~2, grep~=~8. \dag~Run-03 von \texttt{qwen2.5-coder:7b} als Ausreißer markiert: Priorisierungsphase erzeugte 205~Nice-to-have-Einträge und schöpfte das Output-Budget vollständig aus.
-
-\vspace{4pt}
-\setlength{\tabcolsep}{3pt}
-\renewcommand{\arraystretch}{1.18}
-\small
-\begin{tabular}{|c|l|r|r|r|r|r|r|}
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.15}
+\caption[Navigationsübersicht \ac{BWEC}-Block]{Navigationsübersicht in der standardisierten Reihenfolge für den \ac{BWEC}-Block.}
+\begin{tabular}{|c|p{11.4cm}|}
 \hline
-\textbf{Run} & \textbf{Modell} & \textbf{LLM-Det.} & \textbf{OutTok} & \textbf{Trunc.} & \textbf{Must} & \textbf{Nice} & \textbf{Ges.\,ms} \\
+\textbf{Nr.} & \textbf{Baustein} \\
 \hline
-01 & qwen2.5-coder:7b  & 14 & 3\,369  & \xmark & 5  & 22  & 318\,593 \\
-02 & qwen2.5-coder:7b  & 15 & 3\,400  & \xmark & 5  & 23  & 336\,752 \\
-03$^{\dag}$ & qwen2.5-coder:7b & 16 & 24\,576 & \xmark* & 4 & 205 & 906\,677 \\
+1 & \hyperref[app:rohdaten_bwec]{Rohdaten (\texttt{maxfiles}~=~100)} \\
 \hline
-04 & qwen2.5-coder:14b & 22 & 6\,557  & \xmark & 42 & 0   & 832\,744 \\
-05 & qwen2.5-coder:14b & 22 & 6\,485  & \xmark & 37 & 5   & 827\,809 \\
-06 & qwen2.5-coder:14b & 22 & 6\,230  & \xmark & 42 & 0   & 810\,823 \\
+2 & \hyperref[app:modell_summary_bwec]{Modell-Leistungsvergleich (\texttt{maxfiles}~=~100)} \\
 \hline
-07 & qwen3:32b         & 30 & 7\,302  & \xmark & 36 & 14  & 2\,104\,031 \\
-08 & qwen3:32b         & 31 & 7\,152  & \xmark & 37 & 14  & 2\,087\,527 \\
-09 & qwen3:32b         & 35 & 7\,616  & \xmark & 39 & 16  & 2\,193\,601 \\
+3 & \hyperref[app:rohdaten_bwec500]{Rohdaten (\texttt{maxfiles}~=~500)} \\
+\hline
+4 & \hyperref[app:modell_summary_bwec500]{Modell-Leistungsvergleich (\texttt{maxfiles}~=~500)} \\
 \hline
 \end{tabular}
-\begin{minipage}{\textwidth}\vspace{4pt}\footnotesize *\,Output-Token-Zahl entspricht dem Budget-Limit; \texttt{tokensBudgetTruncated}-Flag zeigte dennoch \texttt{false} (Detektionslücke im Tracking-Code).\end{minipage}
-\label{tab:rohdaten_bwec}
+\label{tab:template_bwec}
+\end{table}
 
 \clearpage
 
-\anhang{Modellvergleich: \ac{BWEC} (\texttt{maxfiles}~=~100)}\label{app:modell_summary_bwec}
+\anhang{Rohdaten: \ac{BWEC}-Messreihe (\texttt{maxfiles}~=~100, 66~Chunks)}\label{app:rohdaten_bwec}
 
+\noindent\textbf{Konfiguration:} \texttt{OLLAMA\_NUM\_CTX}~=~65\,536; \texttt{OLLAMA\_NUM\_PREDICT}~=~24\,576; \texttt{LLM\_DETECT\_NUM\_PREDICT}~=~4\,096; Chunk-Größe~=~4\,000~Zeichen. Tool-Findings über alle Runs konstant: axe-core~=~10, Playwright~=~2, grep~=~8. Run~03 von 7b wird als Ausreißer markiert, da die Priorisierungsphase 205~Nice-to-have-Einträge erzeugte und das Output-Budget vollständig ausschöpfte.
+
+\begin{table}[htbp]
+\centering
 \setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.25}
-\small
-\begin{tabular}{|l|r|r|r|r|r|r|r|}
+\renewcommand{\arraystretch}{1.2}
+\caption[Rohdaten \ac{BWEC} (\texttt{maxfiles}=100)]{Rohdaten der \ac{BWEC}-Messreihe bei \texttt{maxfiles}~=~100. Det.~=~\ac{LLM}-Detektor-Findings; OutTok.~=~Output-Tokens; Trunc.~=~Truncation der Priorisierungsphase.}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|l|r|r|c|r|r|r|}
 \hline
-\textbf{Modell} & \textbf{Ø LLM-Det.} & \textbf{$\sigma$} & \textbf{Ø Must} & \textbf{Ø Nice} & \textbf{Ø Total (ms)} & \textbf{NFA-02} & \textbf{Trunc.} \\
+\textbf{Run} & \textbf{Modell} & \textbf{Det.} & \textbf{OutTok.} & \textbf{Trunc.} & \textbf{Must} & \textbf{Nice} & \textbf{Dauer (s)} \\
 \hline
-qwen2.5-coder:7b\,$^{\dag}$  & 14,5 & 0,7 &  5,0 & 22,5 & 327\,673  & \checkmark & 0\,/\,2 \\
-qwen2.5-coder:14b             & 22,0 & 0,0 & 40,3 &  1,7 & 823\,792  & $\times$   & 0\,/\,3 \\
-qwen3:32b                     & 32,0 & 2,6 & 37,3 & 14,7 & 2\,128\,386 & $\times$ & 0\,/\,3 \\
+01 & 7b            & 14 &  3\,369 & nein       &  5 &  22 &   319 \\
+\hline
+02 & 7b            & 15 &  3\,400 & nein       &  5 &  23 &   337 \\
+\hline
+03$^{\dag}$ & 7b   & 16 & 24\,576 & nein$^{*}$ &  4 & 205 &   907 \\
+\hline
+04 & 14b           & 22 &  6\,557 & nein       & 42 &   0 &   833 \\
+\hline
+05 & 14b           & 22 &  6\,485 & nein       & 37 &   5 &   828 \\
+\hline
+06 & 14b           & 22 &  6\,230 & nein       & 42 &   0 &   811 \\
+\hline
+07 & 32b           & 30 &  7\,302 & nein       & 36 &  14 & 2\,104 \\
+\hline
+08 & 32b           & 31 &  7\,152 & nein       & 37 &  14 & 2\,088 \\
+\hline
+09 & 32b           & 35 &  7\,616 & nein       & 39 &  16 & 2\,194 \\
 \hline
 \end{tabular}
-\begin{minipage}{\textwidth}\vspace{4pt}\footnotesize $^{\dag}$~Mittelwert über 2~stabile Runs (Run-03 ausgeschlossen). NFA-02: Laufzeit $<$~600\,s. $\sigma$~=~Stichproben-Standardabweichung der LLM-Detektor-Findings.\end{minipage}
+}%
+\label{tab:rohdaten_bwec}
+\end{table}
+
+{\footnotesize\noindent
+Modellkürzel: 7b~=~\texttt{qwen2.5-coder:7b}, 14b~=~\texttt{qwen2.5-coder:14b}, 32b~=~\texttt{qwen3:32b}.\\
+$^{\dag}$~Ausreißer; aus Mittelwertberechnungen ausgeschlossen: Priorisierungsphase erzeugte 205~Nice-to-have-Einträge und schöpfte das Output-Budget (24\,576~Tokens) vollständig aus.\\
+$^{*}$~Das \texttt{tokensBudgetTruncated}-Flag zeigte dennoch \texttt{false} (Tracking-Lücke im Code).
+}
+
+\clearpage
+
+\anhang{Modell-Leistungsvergleich: \ac{BWEC} (\texttt{maxfiles}~=~100)}\label{app:modell_summary_bwec}
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.25}
+\caption[Modell-Leistungsvergleich \ac{BWEC} (\texttt{maxfiles}=100)]{Zusammenfassung der Leistungsmetriken für die drei evaluierten Modelle auf dem realen Untersuchungsobjekt \ac{BWEC} (\texttt{maxfiles}~=~100). Aufgrund fehlender Ground Truth werden keine Recall-Metriken ausgewiesen.}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Metrik} & \textbf{7b} & \textbf{14b} & \textbf{32b} \\
+\hline
+\ac{LLM}-Detektor-Findings (Ø $\pm$ $\sigma$) & 14{,}5 $\pm$ 0{,}7 & 22{,}0 $\pm$ 0{,}0 & 32{,}0 $\pm$ 2{,}6 \\
+\hline
+\ac{LLM}-Detektor-Findings (Min--Max) & 14--15 & 22--22 & 30--35 \\
+\hline
+Output-Tokens (Ø) & 3\,385 & 6\,424 & 7\,357 \\
+\hline
+Must-have im Bericht (Ø) & 5{,}0 & 40{,}3 & 37{,}3 \\
+\hline
+Nice-to-have im Bericht (Ø) & 22{,}5 & 1{,}7 & 14{,}7 \\
+\hline
+Gesamt-Report-Items (Ø) & 27{,}5 & 42{,}0 & 52{,}0 \\
+\hline
+Gesamtlaufzeit (Ø) & 328\,s & 824\,s & 2\,129\,s \\
+\hline
+Gesamtlaufzeit (Min--Max) & 319--337\,s & 811--833\,s & 2\,088--2\,194\,s \\
+\hline
+\ac{NFA}-02-Konformität & Erfüllt & Nicht erfüllt & Nicht erfüllt \\
+\hline
+Priorisierungsstatus & 2/3 stabil, 1 Ausreißer & stabil & stabil \\
+\hline
+\end{tabular}
+}%
 \label{tab:modell_summary_bwec}
+\end{table}
+
+{\footnotesize\noindent
+Modellkürzel: 7b~=~\texttt{qwen2.5-coder:7b}, 14b~=~\texttt{qwen2.5-coder:14b}, 32b~=~\texttt{qwen3:32b}.\\
+Für 7b wurden die Mittelwerte ohne Run~03 berechnet, da dieser Run als dokumentierter Ausreißer klassifiziert wurde.\\
+\textbf{Gesamt-Report-Items}~=~Must-have~+~Nice-to-have. $\sigma$~=~Stichproben-Standardabweichung der \ac{LLM}-Detektor-Findings.
+}
 
 \clearpage
 
 \anhang{Rohdaten: \ac{BWEC}-Messreihe (\texttt{maxfiles}~=~500, 330~Chunks)}\label{app:rohdaten_bwec500}
 
-\noindent\textbf{Konfiguration:} Identisch zu Tabelle~\ref{tab:rohdaten_bwec}; lediglich \texttt{maxfiles}~=~500 (330~\ac{LLM}-Detektor-Chunks statt 66). Tool-Findings konstant (axe=10, Playwright=2, grep=8). \ddag~Priorisierungsphase fehlgeschlagen (Must=0, Nice=0). \dag~Priorisierungsphase partiell (nur Must-have; Nice-to-have abgeschnitten).
+\noindent\textbf{Konfiguration:} Identisch zu Anhang~\ref{app:rohdaten_bwec}; lediglich \texttt{maxfiles}~=~500 (330~\ac{LLM}-Detektor-Chunks statt 66). Tool-Findings konstant: axe-core~=~10, Playwright~=~2, grep~=~8. \dag~markiert partielle Priorisierung (nur Must-have), \ddag~vollständige Truncation der Priorisierungsphase, \S~einen fehlgeschlagenen bzw. kollabierten Priorisierungsoutput.
 
-\vspace{4pt}
-\setlength{\tabcolsep}{3pt}
-\renewcommand{\arraystretch}{1.18}
-\small
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\caption[Rohdaten \ac{BWEC} (\texttt{maxfiles}=500)]{Rohdaten der \ac{BWEC}-Messreihe bei \texttt{maxfiles}~=~500. PromptTok.~=~Prompt-Tokens; OutTok.~=~Output-Tokens.}
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|l|r|r|r|r|r|r|}
 \hline
-\textbf{Run} & \textbf{Modell} & \textbf{LLM-Det.} & \textbf{PromptTok} & \textbf{OutTok} & \textbf{Must} & \textbf{Nice} & \textbf{Ges.\,ms} \\
+\textbf{Run} & \textbf{Modell} & \textbf{Det.} & \textbf{PromptTok.} & \textbf{OutTok.} & \textbf{Must} & \textbf{Nice} & \textbf{Dauer (s)} \\
 \hline
-01 & qwen2.5-coder:7b  & 258 & -- &  6\,499 &  5 & 38 & 2\,218\,692 \\
-02 & qwen2.5-coder:7b  & 253 & -- &  8\,014 &  7 & 47 & 2\,225\,685 \\
-03 & qwen2.5-coder:7b  & 261 & -- &  2\,022 & 10 &  0 & 2\,168\,629 \\
+01 & 7b              & 258 & --       &  6\,499 &   5 & 38 &  2\,219 \\
 \hline
-04$^{\dag}$ & qwen2.5-coder:14b & 268 & 32\,080 & 24\,576 & 192 & 0 & 5\,524\,042 \\
-05$^{\dag}$ & qwen2.5-coder:14b & 271 & 32\,252 & 24\,576 & 176 & 0 & 5\,525\,275 \\
-06$^{\ddag}$ & qwen2.5-coder:14b & 274 & 32\,768 & 2\,213 &  0 & 0 & 4\,242\,122 \\
+02 & 7b              & 253 & --       &  8\,014 &   7 & 47 &  2\,226 \\
 \hline
-07$^{\ddag}$ & qwen3:32b & 418 & 40\,960 & 11\,450 & 0 & 0 & 13\,653\,425 \\
-08$^{\ddag}$ & qwen3:32b & 426 & 40\,960 &  3\,442 & 0 & 0 & 13\,480\,972 \\
-09$^{\ddag}$ & qwen3:32b & 400 & 40\,960 & 24\,576 & 0 & 0 & 17\,516\,889 \\
+03$^{\dag}$ & 7b     & 261 & --       &  2\,022 &  10 &  0 &  2\,169 \\
+\hline
+04$^{\ddag}$ & 14b   & 268 & 32\,080  & 24\,576 & 192 &  0 &  5\,524 \\
+\hline
+05$^{\ddag}$ & 14b   & 271 & 32\,252  & 24\,576 & 176 &  0 &  5\,525 \\
+\hline
+06$^{\S}$ & 14b      & 274 & 32\,768  &  2\,213 &   0 &  0 &  4\,242 \\
+\hline
+07$^{\S}$ & 32b      & 418 & 40\,960  & 11\,450 &   0 &  0 & 13\,653 \\
+\hline
+08$^{\S}$ & 32b      & 426 & 40\,960  &  3\,442 &   0 &  0 & 13\,481 \\
+\hline
+09$^{\S}$ & 32b      & 400 & 40\,960  & 24\,576 &   0 &  0 & 17\,517 \\
 \hline
 \end{tabular}
-\begin{minipage}{\textwidth}\vspace{4pt}\footnotesize 32b: Prompt-Tokens~=~40\,960 = NUM\_CTX\,$-$\,NUM\_PREDICT (65\,536\,$-$\,24\,576); Eingabe-Kontext vollständig gesättigt. 14b Run-04/05: Output-Token entspricht Budget-Limit (Truncation); 14b Run-06: Ausgabe kollabiert auf 2\,213~Tokens. Alle 32b-Runs: \texttt{tokensBudgetTruncated}~=~\texttt{true}; kein parsebarer Report.\end{minipage}
+}%
 \label{tab:rohdaten_bwec500}
+\end{table}
+
+{\footnotesize\noindent
+Modellkürzel: 7b~=~\texttt{qwen2.5-coder:7b}, 14b~=~\texttt{qwen2.5-coder:14b}, 32b~=~\texttt{qwen3:32b}.\\
+$^{\dag}$~Priorisierungsphase partiell: nur Must-have ausgegeben, Nice-to-have abgeschnitten.\\
+$^{\ddag}$~Output-Budget (24\,576~Tokens) vollständig ausgeschöpft; Report unvollständig.\\
+$^{\S}$~Priorisierungsphase fehlgeschlagen bzw.\ kollabiert (Must~=~0, Nice~=~0, kein parsebarer Report). Bei 32b gilt PromptTok.~=~40\,960~=~NUM\_CTX\,$-$\,NUM\_PREDICT; der Eingabekontext war damit vollständig gesättigt.
+}
+
+\clearpage
+
+\anhang{Modell-Leistungsvergleich: \ac{BWEC} (\texttt{maxfiles}~=~500)}\label{app:modell_summary_bwec500}
+
+\noindent Die Konfiguration war identisch zu \texttt{maxfiles}~=~100; lediglich der Dateirahmen wurde auf 500~Quelldateien (330~Chunks) ausgedehnt. Die Faktoren beziehen sich auf die jeweiligen Basiswerte aus Tabelle~\ref{tab:modell_summary_bwec}.
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.25}
+\caption[Modell-Leistungsvergleich \ac{BWEC} (\texttt{maxfiles}=500)]{Zusammenfassung der Leistungsmetriken für die drei evaluierten Modelle auf dem realen Untersuchungsobjekt \ac{BWEC} bei \texttt{maxfiles}~=~500.}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Metrik} & \textbf{7b} & \textbf{14b} & \textbf{32b} \\
+\hline
+\ac{LLM}-Detektor-Findings (Ø $\pm$ $\sigma$) & 257{,}3 $\pm$ 4{,}0 & 271{,}0 $\pm$ 3{,}0 & 414{,}7 $\pm$ 13{,}3 \\
+\hline
+\ac{LLM}-Detektor-Findings (Min--Max) & 253--261 & 268--274 & 400--426 \\
+\hline
+Prompt-Tokens (Ø) & -- & 32\,367 & 40\,960 \\
+\hline
+Output-Tokens (Ø) & 5\,512 & 17\,122 & 13\,156 \\
+\hline
+Gesamtlaufzeit (Ø) & 2\,205\,s & 5\,097\,s & 14\,884\,s \\
+\hline
+Gesamtlaufzeit (Min--Max) & 2\,169--2\,226\,s & 4\,242--5\,525\,s & 13\,481--17\,517\,s \\
+\hline
+Findings-Faktor ggü. \texttt{maxfiles}=100 & 17{,}7$\times$ & 12{,}3$\times$ & 13{,}0$\times$ \\
+\hline
+Zeit-Faktor ggü. \texttt{maxfiles}=100 & 6{,}7$\times$ & 6{,}2$\times$ & 7{,}0$\times$ \\
+\hline
+\ac{NFA}-02-Konformität & Nicht erfüllt & Nicht erfüllt & Nicht erfüllt \\
+\hline
+Priorisierungsstatus & partiell (1/3) & Truncation (2/3), Kollaps (1/3) & fehlgeschlagen (3/3) \\
+\hline
+\end{tabular}
+}%
+\label{tab:modell_summary_bwec500}
+\end{table}
+
+{\footnotesize\noindent
+Modellkürzel: 7b~=~\texttt{qwen2.5-coder:7b}, 14b~=~\texttt{qwen2.5-coder:14b}, 32b~=~\texttt{qwen3:32b}.\\
+\textbf{Findings-Faktor}~=~Ø \ac{LLM}-Detektor-Findings bei \texttt{maxfiles}~=~500 relativ zu \texttt{maxfiles}~=~100.\\
+\textbf{Zeit-Faktor}~=~Ø Gesamtlaufzeit bei \texttt{maxfiles}~=~500 relativ zu \texttt{maxfiles}~=~100.\\
+Die Ergebnisse zeigen eine deutlich nicht-lineare Skalierung der Priorisierungsphase: Während die Laufzeit etwa 6--7-fach steigt, wächst die Zahl der \ac{LLM}-Detektor-Findings je nach Modell um den Faktor 12--18.
+}
