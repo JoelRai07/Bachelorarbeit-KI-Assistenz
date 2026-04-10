@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber latex-vorlage"] 1775858747.77474 "latex-vorlage.bcf" "latex-vorlage.bbl" "latex-vorlage" 1775858793.85613 0
+["biber latex-vorlage"] 1775858747.77474 "latex-vorlage.bcf" "latex-vorlage.bbl" "latex-vorlage" 1775859676.40032 0
   "includes/literatur-datenbank.bib" 1775683263 98008 0f3ed75cafd28b36a9d23fa3eaa9bddc ""
-  "latex-vorlage.bcf" 1775858793 125626 767eab8694b2aba03d5c5f6e769c52a7 "pdflatex"
+  "latex-vorlage.bcf" 1775859675 125626 767eab8694b2aba03d5c5f6e769c52a7 "pdflatex"
   (generated)
   "latex-vorlage.bbl"
   "latex-vorlage.blg"
   (rewritten before read)
-["pdflatex"] 1775858783.35116 "c:/Users/joely/OneDrive/Desktop/BA/latex-vorlage_v2.1/latex-vorlage.tex" "latex-vorlage.pdf" "latex-vorlage" 1775858793.85742 0
+["pdflatex"] 1775859666.89707 "c:/Users/joely/OneDrive/Desktop/BA/latex-vorlage_v2.1/latex-vorlage.tex" "latex-vorlage.pdf" "latex-vorlage" 1775859676.40147 0
   "C:/Users/joely/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1775835912 81107 70b8516c68c2e617189c5e44bfd16b96 ""
   "C:/Users/joely/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx0600.pk" 1772479256 14788 597b7651f7441782aaed91b4ca41da65 ""
   "C:/Users/joely/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx0800.pk" 1720700301 19872 48ad9cc151b0d834b403dc2fb7fb0d1d ""
@@ -359,7 +359,7 @@
   "C:/Users/joely/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
   "C:/Users/joely/AppData/Local/Programs/MiKTeX/tex/latex/xurl/xurl.sty" 1641733940 4675 e4b8c405820368c2dfb03526e16d725a ""
   "_dhbw_authoryear.bbx" 1759873949 7837 f87e54d043d6b585fe5dd3ffac528549 ""
-  "c:/Users/joely/OneDrive/Desktop/BA/latex-vorlage_v2.1/latex-vorlage.tex" 1775434349 2503 da8021c21eacdd2b72e5b57e9590ad02 ""
+  "c:/Users/joely/OneDrive/Desktop/BA/latex-vorlage_v2.1/latex-vorlage.tex" 1775858819 2503 da8021c21eacdd2b72e5b57e9590ad02 ""
   "graphics/Chat-100.png" 1775414311 34144 c2dec28b4d2139f47c4818af60a929d5 ""
   "graphics/Complexität.png" 1773052900 107911 4c770257c8caae9ab77a1b0f3bd8d8f9 ""
   "graphics/DateiUplaod-100.png" 1775414297 28751 27b27c9a438b519e6a27e5c3a342b8a4 ""
@@ -389,17 +389,17 @@
   "includes/extra/abkuerzungen.tex" 1775856569 1710 b8b657a8c31b7c3f38d62a6c5f6c0afd ""
   "includes/extra/abstract.tex" 1775858787 2653 8a654b2452a409b8b7d2dab04f5dc97e ""
   "includes/extra/config.tex" 1771866707 3135 bc48fe184cedb834779fa276ff42e027 ""
-  "includes/extra/erklaerung_ki.tex" 1775474773 5404 a055c0784516d49a15c3a0f6efdfd345 ""
+  "includes/extra/erklaerung_ki.tex" 1775859662 5334 aeb7c8d64a38021604a8264219e4f004 ""
   "includes/taxonomie-figure.tex" 1773054193 2408 b59a465cadf790d3d9fa68c4700d0988 ""
-  "latex-vorlage.app" 1775858793 8831 0ef89c992b98b0391e4cb4f51f16f172 "pdflatex"
-  "latex-vorlage.aux" 1775858792 182375 31cd84ba1dd17d6da0c27f8f795fcbee "pdflatex"
+  "latex-vorlage.app" 1775859675 8831 0ef89c992b98b0391e4cb4f51f16f172 "pdflatex"
+  "latex-vorlage.aux" 1775859675 182357 5f0d7846e9a6fd7cba6195dfed603030 "pdflatex"
   "latex-vorlage.bbl" 1775858751 262927 7fa878c2c2c74905b7a593649d22a8b2 "biber latex-vorlage"
-  "latex-vorlage.lof" 1775858793 3488 45541d20d3cce2466fecae473a77c2a8 "pdflatex"
-  "latex-vorlage.lot" 1775858793 7959 7a0407d1915b4879a7327a5f945ac739 "pdflatex"
-  "latex-vorlage.out" 1775858786 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "latex-vorlage.run.xml" 1775858793 2428 2d119b512bd1d4ff1381f82b4891beaf "pdflatex"
-  "latex-vorlage.tex" 1775434349 2503 da8021c21eacdd2b72e5b57e9590ad02 ""
-  "latex-vorlage.toc" 1775858793 13206 c1f663c3d5be16c9238dca4d91a15ca8 "pdflatex"
+  "latex-vorlage.lof" 1775859675 3488 45541d20d3cce2466fecae473a77c2a8 "pdflatex"
+  "latex-vorlage.lot" 1775859675 7959 7a0407d1915b4879a7327a5f945ac739 "pdflatex"
+  "latex-vorlage.out" 1775859669 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "latex-vorlage.run.xml" 1775859675 2428 2d119b512bd1d4ff1381f82b4891beaf "pdflatex"
+  "latex-vorlage.tex" 1775858819 2503 da8021c21eacdd2b72e5b57e9590ad02 ""
+  "latex-vorlage.toc" 1775859675 13206 c1f663c3d5be16c9238dca4d91a15ca8 "pdflatex"
   "template/_dhbw_biblatex-config.tex" 1775472934 6888 0dcc4ce2c10e2c48ff5ad8655b21e3d7 ""
   "template/_dhbw_deckblatt.tex" 1771866037 2389 d1e60105213bd1a7b30d1fed387a3aac ""
   "template/_dhbw_erklaerung.tex" 1771866037 924 13f182951ae36c7ba91049ce26ef857d ""
