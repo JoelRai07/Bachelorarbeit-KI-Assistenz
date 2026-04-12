@@ -1,27 +1,27 @@
 \contentsline {section}{\numberline {Anhang\ 1}Übersicht der Anhangsstruktur}{69}{section*.545}%
 \contentsline {section}{\numberline {Anhang\ 2}Komplexität von Home Pages}{70}{section*.549}%
 \contentsline {section}{\numberline {Anhang\ 3}Framework-Popularität (Frontend)}{70}{section*.554}%
-\contentsline {section}{\numberline {Anhang\ 4}Laufzeit und Effizienz der Pipeline-Modelle}{71}{section*.559}%
-\contentsline {section}{\numberline {Anhang\ 5}Playwright-Checks und grep-Patterns}{72}{section*.563}%
-\contentsline {section}{\numberline {Anhang\ 6}Erweiterte Konzeptmatrix}{73}{section*.567}%
-\contentsline {section}{\numberline {Anhang\ 7}Schematische Übersicht der \ac {ACE}-Pipeline}{75}{section*.572}%
-\contentsline {section}{\numberline {Anhang\ 8}System-Prompt des \ac {ACE}-Assistenzsystems}{76}{section*.575}%
-\contentsline {section}{\numberline {Anhang\ 9}Prompts der \ac {LLM}-Detektor-Phase}{78}{section*.668}%
-\contentsline {section}{\numberline {Anhang\ 10}Aufteilung des Token-Budgets}{80}{section*.711}%
-\contentsline {section}{\numberline {Anhang\ 11}Empfehlung nach Anwendungsszenario (konsolidiert)}{81}{section*.714}%
-\contentsline {section}{\numberline {Anhang\ 12}Vergleich über alle Suites}{82}{section*.717}%
-\contentsline {section}{\numberline {Anhang\ 13}Bewertungsskala für die Empfehlungsqualität der \ac {LLM}-Ausgaben}{83}{section*.720}%
-\contentsline {section}{\numberline {Anhang\ 14}Erfüllungsgrad der funktionalen und nicht-funktionalen Anforderungen}{84}{section*.723}%
-\contentsline {section}{\numberline {Anhang\ 15}Reproduzierbarkeitsblatt}{86}{section*.726}%
-\contentsline {section}{\numberline {Anhang\ 16}Console-Output-Auszüge eines Benchmark-Runs}{88}{section*.729}%
-\contentsline {section}{\numberline {Anhang\ 17}Threats to Validity}{89}{section*.733}%
-\contentsline {section}{\numberline {Anhang\ 18}test-12-Suite (kompletter Block)}{91}{section*.736}%
-\contentsline {section}{\numberline {Anhang\ 19}Accessibility-Verstöße der Testanwendung und zugehörige Prüfquellen (test-12-Suite)}{92}{section*.739}%
-\contentsline {section}{\numberline {Anhang\ 20}Erkennungsrate der Violations im Proof of Concept (test-12-Suite)}{93}{section*.742}%
-\contentsline {section}{\numberline {Anhang\ 21}Recall-Matrix: Violation × Bedingung (test-12-Suite)}{94}{section*.747}%
-\contentsline {section}{\numberline {Anhang\ 22}Rohdaten: alle 30 Benchmark-Runs (test-12-Suite)}{95}{section*.750}%
-\contentsline {section}{\numberline {Anhang\ 23}Modell-Leistungsvergleich: test-12-Suite Zusammenfassung}{96}{section*.753}%
-\contentsline {section}{\numberline {Anhang\ 24}Token-Nutzung pro Modell: Input/Output (test-12-Suite)}{97}{section*.756}%
+\contentsline {section}{\numberline {Anhang\ 4}Playwright-Checks und grep-Patterns}{71}{section*.559}%
+\contentsline {section}{\numberline {Anhang\ 5}Erweiterte Konzeptmatrix}{72}{section*.563}%
+\contentsline {section}{\numberline {Anhang\ 6}Schematische Übersicht der \ac {ACE}-Pipeline}{74}{section*.568}%
+\contentsline {section}{\numberline {Anhang\ 7}System-Prompt des \ac {ACE}-Assistenzsystems}{75}{section*.571}%
+\contentsline {section}{\numberline {Anhang\ 8}Prompts der \ac {LLM}-Detektor-Phase}{77}{section*.664}%
+\contentsline {section}{\numberline {Anhang\ 9}Aufteilung des Token-Budgets}{79}{section*.707}%
+\contentsline {section}{\numberline {Anhang\ 10}Empfehlung nach Anwendungsszenario (konsolidiert)}{80}{section*.710}%
+\contentsline {section}{\numberline {Anhang\ 11}Vergleich über alle Suites}{81}{section*.713}%
+\contentsline {section}{\numberline {Anhang\ 12}Bewertungsskala für die Empfehlungsqualität der \ac {LLM}-Ausgaben}{82}{section*.716}%
+\contentsline {section}{\numberline {Anhang\ 13}Erfüllungsgrad der funktionalen und nicht-funktionalen Anforderungen}{83}{section*.719}%
+\contentsline {section}{\numberline {Anhang\ 14}Reproduzierbarkeitsblatt}{85}{section*.722}%
+\contentsline {section}{\numberline {Anhang\ 15}Console-Output-Auszüge eines Benchmark-Runs}{87}{section*.725}%
+\contentsline {section}{\numberline {Anhang\ 16}Threats to Validity}{88}{section*.729}%
+\contentsline {section}{\numberline {Anhang\ 17}test-12-Suite (kompletter Block)}{90}{section*.732}%
+\contentsline {section}{\numberline {Anhang\ 18}Accessibility-Verstöße der Testanwendung und zugehörige Prüfquellen (test-12-Suite)}{91}{section*.735}%
+\contentsline {section}{\numberline {Anhang\ 19}Erkennungsrate der Violations im Proof of Concept (test-12-Suite)}{92}{section*.738}%
+\contentsline {section}{\numberline {Anhang\ 20}Recall-Matrix: Violation × Bedingung (test-12-Suite)}{93}{section*.743}%
+\contentsline {section}{\numberline {Anhang\ 21}Rohdaten: alle 30 Benchmark-Runs (test-12-Suite)}{94}{section*.746}%
+\contentsline {section}{\numberline {Anhang\ 22}Modell-Leistungsvergleich: test-12-Suite Zusammenfassung}{95}{section*.749}%
+\contentsline {section}{\numberline {Anhang\ 23}Token-Nutzung pro Modell: Input/Output (test-12-Suite)}{96}{section*.752}%
+\contentsline {section}{\numberline {Anhang\ 24}Laufzeit und Effizienz der Pipeline-Modelle (test-12-Suite)}{97}{section*.755}%
 \contentsline {section}{\numberline {Anhang\ 25}Effizienzmetriken und Kosten-Nutzen-Verhältnis (test-12-Suite)}{97}{section*.759}%
 \contentsline {section}{\numberline {Anhang\ 26}Über-Detektion relativ zur Ground Truth (test-12-Suite)}{98}{section*.762}%
 \contentsline {section}{\numberline {Anhang\ 27}Detektor-Konsistenz über alle 30 Runs (test-12-Suite)}{98}{section*.765}%
@@ -72,7 +72,8 @@
 \contentsline {section}{\numberline {Anhang\ 72}Heatmap der Recall-Werte}{167}{section*.929}%
 \contentsline {section}{\numberline {Anhang\ 73}Gestapeltes Balkendiagramm: Must-have vs. Nice-to-have}{168}{section*.932}%
 \contentsline {section}{\numberline {Anhang\ 74}\ac {BWEC}-Block (kompletter Block)}{169}{section*.936}%
-\contentsline {section}{\numberline {Anhang\ 75}Rohdaten: \ac {BWEC}-Messreihe (\texttt {maxfiles}~=~100, 66~Chunks)}{170}{section*.939}%
-\contentsline {section}{\numberline {Anhang\ 76}Modell-Leistungsvergleich: \ac {BWEC} (\texttt {maxfiles}~=~100)}{171}{section*.942}%
-\contentsline {section}{\numberline {Anhang\ 77}Rohdaten: \ac {BWEC}-Messreihe (\texttt {maxfiles}~=~500, 330~Chunks)}{172}{section*.945}%
-\contentsline {section}{\numberline {Anhang\ 78}Modell-Leistungsvergleich: \ac {BWEC} (\texttt {maxfiles}~=~500)}{173}{section*.948}%
+\contentsline {section}{\numberline {Anhang\ 75}Detektionsquellen-Übersicht: \ac {BWEC}}{170}{section*.939}%
+\contentsline {section}{\numberline {Anhang\ 76}Rohdaten: \ac {BWEC}-Messreihe (\texttt {maxfiles}~=~100, 66~Chunks)}{171}{section*.943}%
+\contentsline {section}{\numberline {Anhang\ 77}Modell-Leistungsvergleich: \ac {BWEC} (\texttt {maxfiles}~=~100)}{172}{section*.946}%
+\contentsline {section}{\numberline {Anhang\ 78}Rohdaten: \ac {BWEC}-Messreihe (\texttt {maxfiles}~=~500, 330~Chunks)}{173}{section*.949}%
+\contentsline {section}{\numberline {Anhang\ 79}Modell-Leistungsvergleich: \ac {BWEC} (\texttt {maxfiles}~=~500)}{174}{section*.952}%

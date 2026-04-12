@@ -11,7 +11,6 @@ Bewerte meine Arbeit. Das ist meine vollständige Bachelorarbeit (eigentlich nic
 
 Fehlervergleich 
 Anhang 64 Missleading
-
 Plausibilisierung 
 Fazit: Plausibilisierung oder Manuelle Überprüfung
 Überdetektion -> Probleme? Glätten? Usw. Evntll. text addressieren
@@ -20,9 +19,11 @@ Weil man dabei echte Treffer verlieren kann.
 Wenn zwei ähnlich klingende Befunde fälschlich gemerged werden, verschwindet evtl. ein relevanter Hinweis.
 Das wäre ein False Negative (ein echtes Problem wird nicht mehr gemeldet).
 
-
-Z. 289 7.tex priorisierungsqualitaet_50
-
-Anhang Metriken zum BWEC stehen nicht. Nirgendswo steht wie viele Findings jedes Tool hat. Die Ergebnisse vom BWEC sind in results gespeichert
-
-Zweitens: Die Tabellen ab "Laufzeit und Effizienz der Pipeline-Modelle" sind nicht an der richtigen Stelle. Sie sollten eigentlich woanders hinaus
+Fragen für nächstes Mal:
+Stimmt das Token Budget Bild noch wenn man den text liest?
+Referenzen auf den neuen Anhang Detektionsquellen_Übersicht_BWEC im Text notwendig?
+Sehr unschöne tabelle "Vergleich über alle Suites
+Tab. 18: Kompakter Orientierungsvergleich der zentralen Kennzahlen über test-12, test-50 und
+test-100." da sie zu breit ist und mit resizebox alles megakomprimiert wird
+Ist die Reihenfolge der Anhänge gut so oder sollte noch was verändert werden?
+Sollte tabelle vergleich über alle suites nicht zu den anderen grafiken kommen die vergleiche machen?
