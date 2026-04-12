@@ -40,12 +40,12 @@ grep & \ac{DOM}/Quellcode-Diskrepanz\footcite[Vgl.][]{fathallah_accessguru_2025}
 \ac{LLM}-Codeanalyse & Semantische Muster jenseits fester Regex-Regeln & semantisch, syntaktisch, layout & Abschnitt~\ref{sec:kontextualisierung} \\
 \bottomrule
 \end{tabular}
-\caption{Zuordnung der Analysequellen zu adressierten Problemen, Verstoßtypen und theoretischer Herleitung}
+\caption{Zuordnung der Analysequellen zu adressierten Problemen, Verstoßtypen und theoretischer Herleitung.}
 \label{tab:tool-mapping}
 \end{table}
 
 % ─────────────────────────────────────────────────────────────────────────────
-\subsection{\acf{UFS}}
+\subsection{\acl{UFS}}
 \label{sec:ufs}
 
 Die Notwendigkeit einer Normalisierungsschicht ergibt sich aus der Heterogenität der Quellformate.\footcite[Vgl.][]{pool_testaro_2023} Konkret liefert axe-core Objekte mit \texttt{impact}-Stufen und \ac{DOM}-Selektorketten, Playwright gibt boolesche \texttt{passed}-Felder zurück, grep produziert Datei-Zeilen-Tupel, und die \ac{LLM}-Codeanalyse liefert \acs{JSON}-Objekte mit Evidenz- und Zeilenfeldern. Eine quellenübergreifende Deduplizierung oder Priorisierung wäre auf dieser Basis nicht möglich. Zudem enthalten rohe axe-core-Ausgaben vollständige \ac{DOM}-Snapshots und ausführliche Hilfetexte, die für die \ac{LLM}-Inferenz das Token-Budget unnötig belasten.

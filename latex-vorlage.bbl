@@ -811,38 +811,6 @@
       \verb https://doi.org/10.1093/qje/qjae044
       \endverb
     \endentry
-    \entry{BFSGGesetz}{legislation}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=2cbc78ce06cb57e73f663d102eba3a66}{%
-           family={{Bundesamt der Justiz und für Verbraucherschutz}},
-           familyi={B\bibinitperiod}}}%
-      }
-      \strng{namehash}{2cbc78ce06cb57e73f663d102eba3a66}
-      \strng{fullhash}{2cbc78ce06cb57e73f663d102eba3a66}
-      \strng{fullhashraw}{2cbc78ce06cb57e73f663d102eba3a66}
-      \strng{bibnamehash}{2cbc78ce06cb57e73f663d102eba3a66}
-      \strng{authorbibnamehash}{2cbc78ce06cb57e73f663d102eba3a66}
-      \strng{authornamehash}{2cbc78ce06cb57e73f663d102eba3a66}
-      \strng{authorfullhash}{2cbc78ce06cb57e73f663d102eba3a66}
-      \strng{authorfullhashraw}{2cbc78ce06cb57e73f663d102eba3a66}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Gesetz zur Umsetzung der Richtlinie (EU) 2019/882 des Europäischen Parlaments und des Rates über die Barrierefreiheitsanforderungen für Produkte und Dienstleistungen 1}
-      \field{urlday}{24}
-      \field{urlmonth}{2}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.gesetze-im-internet.de/bfsg/
-      \endverb
-      \verb{url}
-      \verb https://www.gesetze-im-internet.de/bfsg/
-      \endverb
-    \endentry
     \entry{BITV}{legislation}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=ca9e1064e1d32641b807916e8e7c4ede}{%
@@ -1715,14 +1683,57 @@
       \endverb
       \keyw{Mittel}
     \endentry
+    \entry{hevnerChatterjeeDesignResearch2010}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=1,uniquepart=given,hash=d9ddca3b1b7af0f96d62a62424bd939a}{%
+           family={Hevner},
+           familyi={H\bibinitperiod},
+           given={Alan},
+           giveni={A\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=edf3e165ce4429b30d49e353a7d1417a}{%
+           family={Chatterjee},
+           familyi={C\bibinitperiod},
+           given={Samir},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York, NY}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{aec596f25e71075259e73bc2be95a95e}
+      \strng{fullhash}{aec596f25e71075259e73bc2be95a95e}
+      \strng{fullhashraw}{aec596f25e71075259e73bc2be95a95e}
+      \strng{bibnamehash}{aec596f25e71075259e73bc2be95a95e}
+      \strng{authorbibnamehash}{aec596f25e71075259e73bc2be95a95e}
+      \strng{authornamehash}{aec596f25e71075259e73bc2be95a95e}
+      \strng{authorfullhash}{aec596f25e71075259e73bc2be95a95e}
+      \strng{authorfullhashraw}{aec596f25e71075259e73bc2be95a95e}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Integrated Series in Information Systems}
+      \field{title}{Design Research in Information Systems: Theory and Practice}
+      \field{volume}{22}
+      \field{year}{2010}
+      \verb{doi}
+      \verb 10.1007/978-1-4419-5653-8
+      \endverb
+    \endentry
     \entry{hevner2004dsr}{article}{}{}
       \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=e054261c7f1739e1ba1db0a45e385c1b}{%
+        {{un=1,uniquepart=given,hash=e054261c7f1739e1ba1db0a45e385c1b}{%
            family={Hevner},
            familyi={H\bibinitperiod},
            given={Alan\bibnamedelima R.},
            giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=0,uniquepart=base,hash=5aec260b5b1381edc4b8ff6755f2d543}{%
            family={March},
            familyi={M\bibinitperiod},
@@ -2186,6 +2197,50 @@
       \endverb
       \verb{url}
       \verb https://www.typescriptlang.org/
+      \endverb
+    \endentry
+    \entry{jurafskyMartinSpeechLanguageProcessing2026}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=bd33d7a70284b5ead9c7985cb5c9929c}{%
+           family={Jurafsky},
+           familyi={J\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9ed8bee488b2703da341cded66bf83cb}{%
+           family={Martin},
+           familyi={M\bibinitperiod},
+           given={James\bibnamedelima H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b5e6a2accdc2023c51f42c6ec010d19b}
+      \strng{fullhash}{b5e6a2accdc2023c51f42c6ec010d19b}
+      \strng{fullhashraw}{b5e6a2accdc2023c51f42c6ec010d19b}
+      \strng{bibnamehash}{b5e6a2accdc2023c51f42c6ec010d19b}
+      \strng{authorbibnamehash}{b5e6a2accdc2023c51f42c6ec010d19b}
+      \strng{authornamehash}{b5e6a2accdc2023c51f42c6ec010d19b}
+      \strng{authorfullhash}{b5e6a2accdc2023c51f42c6ec010d19b}
+      \strng{authorfullhashraw}{b5e6a2accdc2023c51f42c6ec010d19b}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3rd}
+      \field{note}{Online manuscript released January 6, 2026}
+      \field{title}{Speech and Language Processing: An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition with Language Models}
+      \field{urlday}{12}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://web.stanford.edu/~jurafsky/slp3/
+      \endverb
+      \verb{url}
+      \verb https://web.stanford.edu/~jurafsky/slp3/
       \endverb
     \endentry
     \entry{kerkmann_barrierefreie_2015}{book}{}{}
@@ -3887,6 +3942,38 @@
       \verb https://dl.acm.org/doi/10.1145/3721146.3721944
       \endverb
     \endentry
+    \entry{sommervilleSoftwareEngineering2015}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=70341b3bfcce7026902f4eb1e4111b58}{%
+           family={Sommerville},
+           familyi={S\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Pearson}%
+      }
+      \strng{namehash}{70341b3bfcce7026902f4eb1e4111b58}
+      \strng{fullhash}{70341b3bfcce7026902f4eb1e4111b58}
+      \strng{fullhashraw}{70341b3bfcce7026902f4eb1e4111b58}
+      \strng{bibnamehash}{70341b3bfcce7026902f4eb1e4111b58}
+      \strng{authorbibnamehash}{70341b3bfcce7026902f4eb1e4111b58}
+      \strng{authornamehash}{70341b3bfcce7026902f4eb1e4111b58}
+      \strng{authorfullhash}{70341b3bfcce7026902f4eb1e4111b58}
+      \strng{authorfullhashraw}{70341b3bfcce7026902f4eb1e4111b58}
+      \field{extraname}{1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{10th}
+      \field{isbn}{9781292096131}
+      \field{title}{Software Engineering}
+      \field{year}{2015}
+    \endentry
     \entry{sommerville2016software}{book}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=70341b3bfcce7026902f4eb1e4111b58}{%
@@ -3907,6 +3994,7 @@
       \strng{authornamehash}{70341b3bfcce7026902f4eb1e4111b58}
       \strng{authorfullhash}{70341b3bfcce7026902f4eb1e4111b58}
       \strng{authorfullhashraw}{70341b3bfcce7026902f4eb1e4111b58}
+      \field{extraname}{2}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{extradatescope}{labelyear}
@@ -5475,7 +5563,6 @@
       \keyw{Methodik}
     \endentry
   \enddatalist
-  \missing{Anthropic_API_Docs}
 \endrefsection
 \endinput
 

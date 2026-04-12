@@ -52,8 +52,10 @@
 \pagenumbering{arabic}
 
 %%% Ihr eigentlicher Inhalt %%%
-% Empfehlung: strukturieren Sie Ihren Text in einzelnen Dateien 
+% Empfehlung: strukturieren Sie Ihren Text in einzelnen Dateien
 % und binden Sie diese hier mit \input{includes/dateiname.tex} ein
+\acresetall          % Abkürzungen für den Haupttext zurücksetzen (Abstract hat sie verbraucht)
+\acused{CI}\acused{CICD}  % CI und CI/CD absichtlich nicht ausschreiben
 \input{includes/caps/1.tex}
 \input{includes/caps/2.tex}
 \input{includes/caps/3.tex}

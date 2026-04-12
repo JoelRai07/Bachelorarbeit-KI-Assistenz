@@ -12,9 +12,9 @@ Dieses abschließende Kapitel fasst die Ergebnisse der vorliegenden Arbeit zusam
 
 Mit dem \ac{ACE}-System wurde ein \ac{DSR}-Artefakt entwickelt, das regelbasierte Prüfung, Interaktionsanalyse, Quellcodekontext und \ac{LLM}-gestützte Auswertung in einer Pipeline zusammenführt. Die Hauptevaluation erfolgte auf 90 Benchmarkläufen (3 Modelle $\times$ 10 Runs je Testsuite) über die drei synthetischen Testsuiten test-12, test-50 und test-100.
 
-Im Rahmen dieser synthetischen Evaluation kann \textbf{TF1} bestätigt werden. Die kombinierte Pipeline erzielt auf der test-100-Suite mit \texttt{qwen3:32b} einen konsistenten Recall von 63\,/\,100~Violations und liegt damit deutlich über der Tool-only-Baseline von 34\,/\,100. Die Arbeit zeigt damit keinen vollautomatischen Ersatz manueller Accessibility-Prüfung, sondern eine substanzielle Erweiterung bestehender Toolketten.
+Im Rahmen dieser synthetischen Evaluation kann \textbf{\acs{TF}1} bestätigt werden. Die kombinierte Pipeline erzielt auf der test-100-Suite mit \texttt{qwen3:32b} einen konsistenten Recall von 63\,/\,100~Violations und liegt damit deutlich über der Tool-only-Baseline von 34\,/\,100. Die Arbeit zeigt damit keinen vollautomatischen Ersatz manueller Accessibility-Prüfung, sondern eine substanzielle Erweiterung bestehender Toolketten.
 
-\textbf{TF2} wird durch die Ergebnisse überwiegend gestützt. Auf der test-12-Suite erreicht \texttt{qwen3:32b} für 11\,/\,12~Violations eine Empfehlungsqualität der Stufe~2, also konkrete, entwicklungsnahe Fix-Vorschläge mit Dateibezug und umsetzbarem Codekontext. Die Aussage ist jedoch bewusst vorsichtig zu interpretieren: Da keine isolierte Ablationsstudie ohne Quellcodekontext durchgeführt wurde, lässt sich der Effekt nicht kausal einem einzelnen Kontextbaustein zuschreiben, sondern nur der Gesamtarchitektur der Pipeline. Detailwerte finden sich in den Tabellen~\ref{tab:recall_matrix}, \ref{tab:modell_summary_12}, \ref{tab:recall_matrix_100} und \ref{tab:empfehlungsqualitaet}.
+\textbf{\acs{TF}2} wird auf der Kalibrierungssuite vollständig bestätigt; auf den Belastungssuiten limitieren Token-Budget-Restriktionen den Effekt, sowohl bei der Erkennungsleistung als auch bei der Empfehlungsqualität. Die Ablationsanalyse in Tabelle~\ref{tab:ablation} zeigt, dass der Recall-Zuwachs von der Tool-Baseline (8\,/\,12; 66{,}7\,\%) auf die vollständige Pipeline (12\,/\,12; 100\,\%) kausal auf den \ac{LLM}-Detektor (Stufe~1) zurückzuführen ist. Der Priorisierer (Stufe~2) kann konstruktionsbedingt keine Violations erkennen, die nicht bereits in seinem Input enthalten sind, und beeinflusst somit ausschließlich die Priorisierungsqualität, nicht jedoch den Recall. Hinsichtlich der Empfehlungsqualität erreicht \texttt{qwen3:32b} auf test-12 für 11\,/\,12 Violations die Stufe~2. Dies entspricht konkreten, entwicklungsnahen Verbesserungsvorschlägen mit Dateibezug und umsetzungsnahem Codekontext. Diese Aussage ist jedoch bewusst vorsichtig zu interpretieren, da sich die Ablationsanalyse auf test-12 beschränkt. Eine Generalisierung auf größere Suites müsste durch weitere Experimente abgesichert werden. Detaillierte Werte finden sich in den Tabellen~\ref{tab:ablation}, \ref{tab:recall_matrix}, \ref{tab:modell_summary_12}, \ref{tab:recall_matrix_100} und \ref{tab:empfehlungsqualitaet}.
 
 \subsection{Erfüllung der funktionalen und nicht-funktionalen Anforderungen}
 \label{sec:fazit_anforderungen}
@@ -47,25 +47,18 @@ Drittens wurde keine vollständige Precision-Evaluation über alle Runs der gro�
 \section{Ausblick}
 \label{sec:fazit_ausblick}
 
-\subsection{Kurzfristige Erweiterungen}
-\label{sec:ausblick_kurz}
+\subsection{Kurz- und mittelfristige Weiterentwicklungen}
+\label{sec:ausblick_kurz_mittel}
 
-Kurzfristig erscheinen vier Weiterentwicklungen besonders naheliegend. Erstens sollte der \ac{BWEC}-Block um eine systematische manuelle Plausibilisierung ergänzt werden, etwa durch einen Expertenabgleich der generierten Findings mit dem tatsächlichen Quellcode sowie durch eine referenzielle Baseline ohne \ac{LLM}-Anteile.
+Kurzfristig sind vier Erweiterungen naheliegend:
+\begin{enumerate}
+    \item \textbf{Manuelle Plausibilisierung des \ac{BWEC}-Blocks:} Expertenabgleich der Pipeline-Ergebnisse mit einer referenziellen Baseline.
+    \item \textbf{Gezielte Playwright-Interaktionsprüfungen:} Erweiterung der Checks um Fokus-Traps und Dialog-Navigation.
+    \item \textbf{Deduplikations- und Konsolidierungslogik:} Nachgelagerte Zusammenführung überlappender Findings aus den vier Detektionsquellen.
+    \item \textbf{Formalisierung der Stichprobenprüfung:} Integration als fester Workflow-Bestandteil zur systematischen Quantifizierung von Halluzinationsraten und Deduplikationsbedarf.
+\end{enumerate}
 
-Zweitens sollte die Playwright-Komponente um gezielte Interaktionsprüfungen erweitert werden, insbesondere für Fokus-Traps, Dialog-Navigation und komplexere Keyboard-Flows.
-
-Drittens wäre eine nachgelagerte Deduplikations- und Konsolidierungslogik sinnvoll. Eine regelbasierte Konsolidierung zwischen den vier Detektionsquellen könnte die Report-Qualität erhöhen und zugleich das Prompt-Budget der Priorisierungsphase entlasten.
-
-Viertens sollte die manuelle Stichprobenprüfung als formalisierter Bestandteil des Workflows etabliert werden, um Halluzinationsraten, Deduplikationsbedarf und praktische Nutzbarkeit systematischer zu quantifizieren.
-
-\subsection{Mittelfristige Weiterentwicklungen}
-\label{sec:ausblick_mittel}
-
-Mittelfristig stehen vor allem Verbesserungen der Skalierbarkeit im Vordergrund. Die Priorisierungsphase könnte hierarchisch umgebaut werden: Anstatt alle Findings in einen einzigen großen Prompt zu überführen, wären mehrstufige Zusammenfassungs- oder Clusterverfahren denkbar. Gerade die \ac{BWEC}-Messungen legen nahe, dass hier das zentrale technische Bottleneck der aktuellen Architektur liegt.
-
-Darüber hinaus könnte die Zustandsprüfung ausgebaut werden, indem axe-core auf mehreren systematisch durchlaufenen \ac{DOM}-Zuständen ausgeführt wird -- kombiniert mit intelligenten Sampling-Strategien, um Laufzeit und Findingzahl beherrschbar zu halten.
-
-Schließlich bietet der strukturierte \acs{JSON}-Report eine Grundlage für nachgelagerte Automatisierung: priorisierte Findings könnten direkt in Issue-Tracker überführt oder als Kontext für Code-Assistenzsysteme genutzt werden.
+Mittelfristig stehen Verbesserungen der Skalierbarkeit im Vordergrund: Die Priorisierungsphase könnte hierarchisch umgebaut werden -- statt eines einzigen großen Prompts wären mehrstufige Cluster- oder Zusammenfassungsverfahren denkbar, da die \ac{BWEC}-Messungen das zentrale technische Bottleneck in diesem Schritt verorten. Ergänzend könnte axe-core auf mehreren systematisch durchlaufenen \ac{DOM}-Zuständen ausgeführt werden, und der strukturierte \acs{JSON}-Report könnte als Grundlage für nachgelagerte Automatisierung dienen -- etwa die direkte Überführung priorisierter Findings in Issue-Tracker oder Code-Assistenzsysteme.
 
 \subsection{Langfristige Forschungsperspektiven}
 \label{sec:ausblick_lang}

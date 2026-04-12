@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/joely/OneDrive/Desktop/BA/**)",
+      "Bash(grep -E \"\\\\\\\\\\\\\\\\caption.*\\\\\\\\}$\" \"c:/Users/joely/OneDrive/Desktop/BA/latex-vorlage_v2.1/includes/anhang.tex\")"
+    ]
+  }
+}

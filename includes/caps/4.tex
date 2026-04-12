@@ -1,24 +1,20 @@
 \chapter{Analyse und Anforderungen} \label{kap:4}
 
-In diesem Kapitel werden die Grundlagen für das in Kapitel \ref{kap:5} beschriebene Systemdesign erarbeitet. Abschnitt \ref{kap:4.1} analysiert den Problemkontext und leitet daraus den konkreten Handlungsbedarf ab. Abschnitte \ref{kap:4.2} und \ref{kap:4.3} spezifizieren funktionale bzw. nicht-funktionale Anforderungen an das zu entwickelnde System. Abschnitt \ref{kap:4.4} begründet die Auswahl des eingesetzten Sprachmodells.
+In diesem Kapitel werden die Grundlagen für das in Kapitel~\ref{kap:5} beschriebene Systemdesign erarbeitet. Abschnitt~\ref{kap:4.1} analysiert den Problemkontext und leitet daraus den konkreten Handlungsbedarf ab. Abschnitte~\ref{kap:4.2} und~\ref{kap:4.3} spezifizieren funktionale bzw. nicht-funktionale Anforderungen an das zu entwickelnde System. Abschnitt~\ref{kap:4.4} begründet die Auswahl des eingesetzten Sprachmodells.
 
 \section{Problemkontext und Handlungsbedarf}\label{kap:4.1}
 
 Wie in Kapitel~\ref{kap:1} dargelegt, unterliegen alle von der \ac{BITBW} entwickelten und betriebenen Webanwendungen den gesetzlichen Anforderungen der \ac{BITV} 2.0, die \ac{WCAG} 2.2 auf Konformitätsstufe AA als verbindlichen Maßstab definiert.\footcite[Vgl.][]{BITV} In der Praxis erfolgt die Barrierefreiheitsprüfung heute überwiegend manuell oder durch den Einsatz einzelner regelbasierter Tools -- ein Vorgehen, das aus zwei Gründen problematisch ist: Manuelle Audits sind personalintensiv und skalieren nur unzureichend mit der Anzahl zu betreuender Anwendungen; regelbasierte Tools erfassen, wie in Kapitel~\ref{tools} dargelegt, nur einen Bruchteil der tatsächlich vorhandenen Barrieren.\footcite[Vgl.][S. 8-9]{tafreshipour_ma11y_2024}
 
-Im Sinne des Design-Science-Research-Paradigmas ist der Ausgangspunkt die Identifikation eines praxisrelevanten Problems, für das bestehende Lösungen unzureichend sind.\footcite[Vgl.][S. 79]{hevner2004dsr} Aus der Analyse der Forschungsliteratur (Kapitel \ref{kap:3}) und den Rahmenbedingungen der \ac{BITBW} lassen sich drei zentrale Problemfelder ableiten.\footcite[Vgl.][S. 52--55]{peffers2007dsrm}
+Die in Kapitel~\ref{kap:3} identifizierten drei Forschungslücken -- fehlende Zustandserfassung durch Interaktionen, fehlende Quellcode-Verknüpfung sowie die Unvereinbarkeit cloudbasierter \ac{LLM}-\ac{API}s mit den Datenschutzanforderungen öffentlicher Verwaltungen (vgl. Abschnitt~\ref{datenschutz}) -- bilden den Ausgangspunkt der Anforderungserhebung.\footcites[Vgl.][S. 79]{hevnerChatterjeeDesignResearch2010}[Vgl.][S. 9--11, 23--24]{hevnerChatterjeeDesignResearch2010} Daraus leitet sich das Systemziel ab: ein lokal ausführbares, \ac{LLM}-gestütztes Assistenzsystem, das axe-core-Reports, Playwright-Interaktionsdaten und statische Quellcodeanalyse kombiniert (vgl. Abschnitt~\ref{kap:1.3}).\footcite[Vgl.][S. 9--11, 23--24]{hevnerChatterjeeDesignResearch2010}
 
-Zum einen ist in der betrachteten Literatur kein Ansatz erkennbar, der nicht nur den anfänglichen \ac{DOM}-Zustand prüft, sondern auch Barrieren erkennt, die erst durch typische Nutzerinteraktionen in React-Anwendungen sichtbar werden.\footcite[Vgl.][]{fathallah_accessguru_2025} Zum anderen fehlt bislang eine Lösung, die die Ergebnisse einer allgemeinen \ac{DOM}-Analyse so verständlich und praxisnah aufbereitet, dass Entwicklerinnen und Entwickler gezielt für einzelne Quellcodedateien und Komponenten konkrete Verbesserungen ableiten können. Außerdem setzen alle bekannten Forschungsprototypen auf cloudbasierte \ac{LLM}-\ac{API}s -- ein Ansatz, der für die \ac{BITBW} aus Datenschutzgründen nicht ohne Weiteres infrage kommt.\footcite[Vgl.][Art. 28, 44 ff.]{dsgvo2016}\footnote{Siehe Kapitel \ref{datenschutz}}
+\section{\acl{FA}} \label{kap:4.2}
 
-Aus diesen drei Dimensionen leitet sich das Ziel der vorliegenden Arbeit ab: die Entwicklung eines lokal ausführbaren, \ac{LLM}-gestützten Assistenzsystems, das axe-core-Violation-Reports, Playwright-Interaktionsdaten und statische Quellcodeanalyse kombiniert, um entwicklernahe Handlungsempfehlungen für React-basierte Webanwendungen zu generieren.\footnote{Siehe Kapitel \ref{kap:1.3}}
-
-\section{\acf{FA}} \label{kap:4.2}
-
-\acf{FA} beschreiben, was ein System leisten soll.\footcite[Vgl.][S. 6-9]{sommerville2016software} Die folgenden Anforderungen ergeben sich aus der Problemanalyse (Abschnitt \ref{kap:4.1}), den Forschungslücken (Abschnitt \ref{Forschungslücken}) sowie einer Analyse vergleichbarer Systeme aus der Literatur.
+\acf{FA} beschreiben, was ein System leisten soll.\footcite[Vgl.][S. 6-9]{sommerville2016software} Die folgenden Anforderungen ergeben sich aus der Problemanalyse (Abschnitt~\ref{kap:4.1}), den Forschungslücken (Abschnitt~\ref{Forschungslücken}) sowie einer Analyse vergleichbarer Systeme aus der Literatur.
 
 \textfett{\acs{FA}-01 Regelbasierte Accessibility-Erkennung}
 
-Das System muss den \ac{BWEC} automatisiert auf Barrierefreiheitsverstöße nach \ac{WCAG} 2.2 Level A und AA prüfen.\footcite[Vgl.][]{bwec,WCAG} Die Prüfung basiert auf axe-core als Detection-Backend.\footcite[Vgl.][]{axe} Der Output je Verstoß umfasst mindestens: Regel-ID, Schweregrad (critical/serious/moderate/minor) sowie ein \ac{HTML}-Ausschnitt des betroffenen Elements.
+Das System muss den \ac{BWEC} automatisiert auf Barrierefreiheitsverstöße nach \ac{WCAG} 2.2 Level A und AA prüfen.\footcite[Vgl.][]{bwec,WCAG} Die Prüfung basiert auf axe-core als Detection-Backend.\footcite[Vgl.][]{axe} Der Output je Verstoß umfasst mindestens: Regel-ID, Schweregrad (critical/serious/moderate/minor) sowie ein \acs{HTML}-Ausschnitt des betroffenen Elements.
 
 \textfett{\acs{FA}-02 Dynamische Zustandserfassung via Playwright}
 
@@ -36,7 +32,7 @@ Das System muss die Ergebnisse aus \ac{FA}-01, \ac{FA}-02 und \ac{FA}-03 zu eine
 
 Das System muss seine Ergebnisse in einem maschinenlesbaren \acs{JSON}-Format ausgeben.\footcite[Vgl.][]{paterno_how_2025,pool_testaro_2023} Der Report enthält je Befund: Verstoß-ID, Kategorie (syntaktisch/semantisch/layout), Schweregrad, betroffene Datei(en), Handlungsempfehlung (Must-have/Nice-to-have), \ac{WCAG}-Erfolgskriterium und -- falls vorhanden -- den relevanten Quellcode-Ausschnitt.
 
-\section{\acf{NFA}}\label{kap:4.3}
+\section{\acl{NFA}}\label{kap:4.3}
 
 \acf{NFA} beschreiben Qualitätseigenschaften des Systems. Sie haben für das vorliegende System besonderes Gewicht, da der Betriebskontext der \ac{BITBW} (öffentliche Verwaltung, lokale Infrastruktur) strenge Rahmenbedingungen setzt.
 
@@ -54,7 +50,7 @@ Die Systemarchitektur muss eine modulare Trennung der Komponenten (Detection, Co
 
 \textfett{\ac{NFA}-04 Reproduzierbarkeit}
 
-Das System muss deterministisch genug sein, dass zwei aufeinanderfolgende Analyseläufe auf derselben Anwendungsversion im Wesentlichen dieselben Befunde produzieren. Reproduzierbarkeit wird durch eine feste Temperatur-Einstellung (\texttt{temperature} = 0.05) und durch strukturierte Ausgabeformate (\acs{JSON}-Schema im Prompt) sichergestellt.\footcites[Vgl.][Temperature]{OpenAI_Developers}[Vgl.][Temperature]{Anthropic_API_Docs}
+Das System muss deterministisch genug sein, dass zwei aufeinanderfolgende Analyseläufe auf derselben Anwendungsversion im Wesentlichen dieselben Befunde produzieren. Reproduzierbarkeit wird durch eine feste Temperatur-Einstellung (\texttt{temperature} = 0.05) und durch strukturierte Ausgabeformate (\acs{JSON}-Schema im Prompt) sichergestellt.\footcites[Vgl.][Temperature]{OpenAI_Developers}[Vgl.][Temperature]{anthropic2026claude}
 
 \section{Lokale Inferenzinfrastruktur und Modellkandidaten}\label{kap:4.4}
 
@@ -76,7 +72,7 @@ Für die Evaluation in Kapitel~\ref{kap:7} werden vier lokal ausführbare Modell
 
 \subsection{Zusammenfassung der Anforderungen}
 
-Tabelle \ref{Anforderungstabelle} fasst die spezifizierten Anforderungen zusammen und gibt jeweils den Ursprung und die Priorität an.
+Tabelle~\ref{Anforderungstabelle} fasst die spezifizierten Anforderungen zusammen und gibt jeweils den Ursprung und die Priorität an.
 
 \begin{table}[h]
 \centering

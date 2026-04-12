@@ -25,7 +25,7 @@ Die Projektstruktur folgt einer flachen Modulstruktur, bei der jedes Modul in \t
   belowskip=4pt
 }
 \begin{lstlisting}[language={}, caption={Projektstruktur des \acs{PoC}}, label={lst:projektstruktur}, basicstyle=\ttfamily\scriptsize]
-ACE/
+ace/
   src/
     index.ts
     types.ts
@@ -65,28 +65,7 @@ Zu beachten ist, dass axe-core im \ac{PoC} einmalig beim initialen Seitenaufruf 
 \section{Playwright-Modul}
 \label{sec:impl-pw}
 
-Das Playwright-Modul implementiert \ac{FA}-02 (dynamische Zustandserfassung). Es definiert sieben generische Interaktionschecks, die jeweils ein spezifisches \ac{WCAG}-Erfolgskriterium adressieren. Tabelle~\ref{tab:pw-checks} gibt einen Überblick.
-
-\begin{table}[H]
-\centering
-\small
-\renewcommand{\arraystretch}{1.15}
-\begin{tabular}{@{}llll@{}}
-\toprule
-\textbf{Check-ID} & \textbf{Prüfgegenstand} & \textbf{\ac{WCAG}} & \textbf{Kategorie} \\
-\midrule
-\texttt{keyboard-tab-reachable} & Interaktive Elemente per Tab erreichbar & 2.1.1 (A) & semantisch \\
-\texttt{keyboard-trap-free} & Kein Keyboard-Trap nach 40 Tab-Presses & 2.1.2 (A) & semantisch \\
-\texttt{focus-visible} & Sichtbarer Fokusindikator vorhanden & 2.4.7 (AA) & layout \\
-\texttt{skip-link-present} & Erstes Tab-Ziel ist ein Skip-Link & 2.4.1 (A) & semantisch \\
-\texttt{page-title-present} & Seite hat einen nicht-leeren \texttt{<title>} & 2.4.2 (A) & syntaktisch \\
-\texttt{html-lang-present} & \texttt{<html>} hat ein \texttt{lang}-Attribut & 3.1.1 (A) & syntaktisch \\
-\texttt{focus-after-dialog} & Fokus wandert beim Dialogöffnen in den Dialog & 2.4.3 (A) & semantisch \\
-\bottomrule
-\end{tabular}
-\caption{Implementierte Playwright-Checks mit \ac{WCAG}-Zuordnung und Kategorie}
-\label{tab:pw-checks}
-\end{table}
+Das Playwright-Modul implementiert \ac{FA}-02 (dynamische Zustandserfassung). Es definiert sieben generische Interaktionschecks, die jeweils ein spezifisches \ac{WCAG}-Erfolgskriterium adressieren (vgl. Anhang~\ref{app:pw_grep_checks}, Tabelle~\ref{tab:pw-checks}).
 
 Die Checks sind anwendungsunabhängig konzipiert: Sie setzen keine Kenntnis der konkreten Anwendungslogik voraus und sind auf jeder Web-App ausführbar. Der Keyboard-Trap-Check beispielsweise drückt 40-mal die Tab-Taste und prüft, ob der Fokus in den letzten zehn Schritten auf demselben Element verbleibt. Der Check \texttt{focus-visible} navigiert per Tab durch die Seite und prüft für jedes fokussierte Element, ob ein sichtbarer Fokusindikator (\texttt{outline} oder \texttt{box-shadow}) vorhanden ist -- eine Prüfung, die Tafreshipour et al. als Schwachstelle bestehender Tools identifizieren.\footcite[Vgl.][S.~110]{tafreshipour_ma11y_2024}
 
@@ -106,35 +85,15 @@ Diese Anreicherung adressiert die in Abschnitt~\ref{Herausforderungen} beschrieb
 
 \subsection{Pattern-Findings}
 
-Zusätzlich zur Anreicherung erkennt das Modul sechs Anti-Patterns durch reguläre Ausdrücke. Tabelle~\ref{tab:grep-patterns} zeigt die implementierten Patterns.
-
-\begin{table}[H]
-\centering
-\small
-\renewcommand{\arraystretch}{1.15}
-\begin{tabular}{@{}lp{5.5cm}ll@{}}
-\toprule
-\textbf{Pattern-ID} & \textbf{Beschreibung} & \textbf{\ac{WCAG}} & \textbf{Kategorie} \\
-\midrule
-\texttt{div-span-onclick} & \texttt{onClick} auf \texttt{<div>}/\texttt{<span>} ohne Keyboard-Handler & 2.1.1 (A) & semantisch \\
-\texttt{img-missing-alt} & \texttt{<img>} ohne \texttt{alt}-Attribut & 1.1.1 (A) & syntaktisch \\
-\texttt{label-missing-htmlfor} & \texttt{<label>} ohne \texttt{htmlFor} & 1.3.1 (A) & syntaktisch \\
-\texttt{role-button-non-semantic} & \texttt{role="button"} auf Nicht-Button & 4.1.2 (A) & semantisch \\
-\texttt{tabindex-removes-element} & \texttt{tabIndex=\{-1\}} entfernt Element aus Tab-Reihenfolge & 2.1.1 (A) & semantisch \\
-\texttt{autofocus-usage} & \texttt{autoFocus} kann den Fokusfluss stören & 2.4.3 (A) & semantisch \\
-\bottomrule
-\end{tabular}
-\caption{Implementierte grep-Patterns mit \ac{WCAG}-Zuordnung}
-\label{tab:grep-patterns}
-\end{table}
+Zusätzlich zur Anreicherung erkennt das Modul sechs Anti-Patterns durch reguläre Ausdrücke (vgl. Anhang~\ref{app:pw_grep_checks}, Tabelle~\ref{tab:grep-patterns}): \texttt{div-span-onclick}, \texttt{img-missing-alt}, \texttt{label-missing-htmlfor}, \texttt{role-button-non-semantic}, \texttt{tabindex-removes-element} und \texttt{autofocus-usage}.
 
 Treffer werden nach der Normalisierung dedupliziert und auf maximal acht Treffer pro Pattern begrenzt, um eine Überrepräsentation im Token-Budget zu vermeiden (vgl. Abschnitt~\ref{sec:kontextualisierung}).
 
 % ─────────────────────────────────────────────────────────────────────────────
-\section{\ac{LLM}-Detektor-Modul}
+\section{\acs{LLM}-Detektor-Modul}
 \label{sec:impl-llm-detector}
 
-Das \ac{LLM}-Detektor-Modul ergänzt die regelbasierten Quellen um eine modellbasierte Quellcodeanalyse. Es wird nur ausgeführt, wenn der \ac{CLI}-Parameter \texttt{-{}-llm-detect} gesetzt ist und ein Quellcodepfad via \texttt{-{}-src-dir} vorliegt. Ziel ist nicht die Ersetzung bestehender Tools, sondern eine zusätzliche Detektionsquelle mit semantischem Fokus.
+Das \acs{LLM}-Detektor-Modul ergänzt die regelbasierten Quellen um eine modellbasierte Quellcodeanalyse. Es wird nur ausgeführt, wenn der \ac{CLI}-Parameter \texttt{-{}-llm-detect} gesetzt ist und ein Quellcodepfad via \texttt{-{}-src-dir} vorliegt. Ziel ist nicht die Ersetzung bestehender Tools, sondern eine zusätzliche Detektionsquelle mit semantischem Fokus.
 
 Die Verarbeitung erfolgt in fünf Schritten:
 
@@ -156,16 +115,16 @@ Die beiden Detektionsansätze unterscheiden sich grundlegend in ihrer Arbeitswei
 
 \begin{itemize}
   \item \textbf{grep} arbeitet regelbasiert und deterministisch. Es erkennt bekannte Muster zuverlässig und reproduzierbar, kann aber nur das finden, was vorher als Regel modelliert wird.
-  \item \textbf{\ac{LLM}-Detektor} arbeitet kontextsensitiv. Er kann auch semantisch ähnliche Problemstellen erkennen, die nicht exakt einem festen Regex-Muster entsprechen, ist jedoch anfälliger für Formatabweichungen und Halluzinationen.
+  \item \textbf{\acs{LLM}-Detektor} arbeitet kontextsensitiv. Er kann auch semantisch ähnliche Problemstellen erkennen, die nicht exakt einem festen Regex-Muster entsprechen, ist jedoch anfälliger für Formatabweichungen und Halluzinationen.
 \end{itemize}
 
-Der \ac{PoC} nutzt daher beide Ansätze komplementär: grep als stabile Baseline und den \ac{LLM}-Detektor als zusätzliche Quelle mit potenziellem Recall-Gewinn.
+Der \ac{PoC} nutzt daher beide Ansätze komplementär: grep als stabile Baseline und den \acs{LLM}-Detektor als zusätzliche Quelle mit potenziellem Recall-Gewinn.
 
-\subsection{Beispielhafter Ablauf eines \ac{LLM}-Findings}
+\subsection{Beispielhafter Ablauf eines \acs{LLM}-Findings}
 
 Ein typischer Detektionsfall läuft wie folgt ab: In einer Komponente enthält ein \texttt{<div>} einen \texttt{onClick}-Handler ohne tastaturäquivalentes Ereignis. Das Modell meldet dazu ein Finding mit Datei- und Zeilenbezug sowie Evidenztext, das normalisiert, dedupliziert und als \texttt{source="llm"} in das \ac{UFS} überführt wird, bevor es in der Priorisierungsphase verarbeitet wird.
 
-\begin{lstlisting}[language={}, caption={Beispiel eines validierten \ac{LLM}-Detektor-Findings (vereinfacht)}]
+\begin{lstlisting}[language={}, caption={Beispiel eines validierten \acs{LLM}-Detektor-Findings (vereinfacht)}]
 {
   "title": "Klickbare div-Komponente ohne Tastaturbedienung",
   "ruleId": "keyboard-click-only",
@@ -251,4 +210,14 @@ Der \texttt{-{}-skip-llm}-Modus speichert den fertigen Prompt als Textdatei, ohn
 \section{Beispielabläufe am Untersuchungsobjekt}
 \label{sec:beispielablaeufe}
 
-Ein vollständiger Durchlauf auf der test-12-Suite erzeugt stabil Findings aus allen vier Quellen (axe: 4, Playwright: 2, grep: 6) sowie einen modellabhängigen Beitrag des \ac{LLM}-Detektors. Die detaillierte Auswertung mit Recall-Matrix, Rohdaten und Modellvergleich ist in Kapitel~\ref{kap:7} dokumentiert.
+Ein vollständiger Durchlauf auf der test-12-Suite erzeugt stabil Findings aus allen vier Quellen: axe-core meldet vier Violations (u.\,a. fehlende Alternativtexte und Farbkontrastverstöße), zwei Playwright-Checks schlagen fehl (Fokusindikator-Verlust und fehlende Dialog-Fokusführung) und grep erkennt sechs Anti-Pattern-Treffer im Quellcode (u.\,a. \texttt{<div>}-Elemente mit \texttt{onClick}-Handler ohne Tastaturäquivalent). Der \acs{LLM}-Detektor ergänzt je nach Modellgröße durchschnittlich 11 bis 23 weitere semantische Findings. Eine vollständige Aufstellung der erkannten Violations findet sich in Anhang~\ref{app:accessibility_verstoesse_12}, Screenshots der Suite in Anhang~\ref{app:screenshots_test12}.
+
+Als konkretes Beispiel für den Datenpfad: Der Playwright-Check \texttt{focus-after-dialog} schlägt fehl, weil ein modaler Dialog den Tastaturfokus beim Öffnen nicht übernimmt. Der grep-Anreicherungsschritt lokalisiert die zugehörige Komponente im Quellcode und ergänzt den relevanten Code-Ausschnitt als Kontext. Der Prompt-Builder serialisiert dieses angereicherte Finding gemeinsam mit den übrigen Quellen und übergibt es an das lokale Modell. \texttt{qwen3:32b} klassifiziert den Befund als Must-have und generiert eine Empfehlung, die die betroffene Datei namentlich referenziert und einen React-konformen \texttt{useEffect}-Hook für die Fokussteuerung vorschlägt. Die Rohdaten und Benchmark-Ergebnisse aller 30 Runs sind in Anhang~\ref{app:rohdaten_12} und Anhang~\ref{app:modell_summary_12} dokumentiert.
+
+Auf der test-50-Suite (50 Komponenten) identifiziert axe-core 14 Violations, zwei Playwright-Checks schlagen fehl und grep liefert 21 Anti-Pattern-Treffer. Die größere Komponentenanzahl erhöht die Token-Last für den Detektor-Prompt spürbar, weshalb das Kontextfenster des 7b-Modells gelegentlich durch Truncation begrenzt wird. Screenshots der Testanwendung, Rohdaten und Modellvergleich finden sich in Anhang~\ref{app:screenshots_test50}, Anhang~\ref{app:rohdaten_50} und Anhang~\ref{app:modell_summary_50}.
+
+Die test-100-Suite skaliert auf 34 definierte Violations über 100 Komponenten. Der erhöhte Umfang zwingt das 7b-Modell regelmäßig zu Truncation und senkt damit den effektiven Recall merklich, während \texttt{qwen3:32b} eine stabile Erkennungsleistung beibehält. Details zur Recall-Degradation, Screenshots und Rohdaten finden sich in Anhang~\ref{app:screenshots_test100}, Anhang~\ref{app:rohdaten_100} sowie Anhang~\ref{app:modell_summary_100}.
+
+Für das \ac{BWEC} – eine produktionsnahe React-Anwendung des Landes Baden-Württemberg – produziert die Pipeline zehn axe-core-Violations, zwei Playwright-Checks und acht grep-Treffer. Da die Codebasis weit größer als die synthetischen Suites ist, wird sie in Chunks aufgeteilt; bei \texttt{maxfiles}~=~100 (66 Chunks) erzeugt der \acs{LLM}-Detektor im Mittel 15 bis 32 Findings je Chunk. Bei \texttt{maxfiles}~=~500 (330 Chunks) steigt der Gesamtumfang entsprechend. Rohdaten und Modellübersichten beider Konfigurationen befinden sich in Anhang~\ref{app:rohdaten_bwec} und Anhang~\ref{app:modell_summary_bwec} (\texttt{maxfiles}~=~100) sowie in Anhang~\ref{app:rohdaten_bwec500} und Anhang~\ref{app:modell_summary_bwec500} (\texttt{maxfiles}~=~500).
+
+Der erzeugte Markdown-Report enthält die priorisierten Handlungsempfehlungen strukturiert als Must-have- und Nice-to-have-Listen mit Datei- und \ac{WCAG}-Bezug; der maschinenlesbare \acs{JSON}-Report speichert zusätzlich Token-Statistiken, Phasenlaufzeiten und das Parsing-Ergebnis. Die vollständige quantitative Auswertung mit Recall-Matrix, Rohdaten und Modellvergleich ist in Kapitel~\ref{kap:7} dokumentiert.
