@@ -1,21 +1,21 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'latex-vorlage.blg'
-[96] biber-MSWIN64:340> INFO - === 
-[134] Biber.pm:420> INFO - Reading 'latex-vorlage.bcf'
-[277] Biber.pm:994> INFO - Found 88 citekeys in bib section 0
-[291] Biber.pm:4463> INFO - Processing section 0
-[302] Biber.pm:4654> INFO - Looking for bibtex file 'includes/literatur-datenbank.bib' for section 0
-[361] bibtex.pm:1713> INFO - LaTeX decoding ...
-[500] bibtex.pm:1519> INFO - Found BibTeX data source 'includes/literatur-datenbank.bib'
-[1199] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1200] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1200] Biber.pm:4283> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
-[1200] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
-[1335] bbl.pm:676> INFO - Writing 'latex-vorlage.bbl' with encoding 'UTF-8'
-[1466] bbl.pm:779> INFO - Output to latex-vorlage.bbl
-[1473] Biber.pm:131> WARN - Duplicate entry key: 'he_enhancing_2025' in file 'includes/literatur-datenbank.bib', skipping ...
-[1473] Biber.pm:131> WARN - legacy month field 'Apr' in entry 'BITV' is not an integer - this will probably not sort properly.
-[1474] Biber.pm:131> WARN - legacy month field 'Jul' in entry 'BITBW_2021' is not an integer - this will probably not sort properly.
-[1474] Biber.pm:131> WARN - legacy month field 'May' in entry 'Landesrecht_BW' is not an integer - this will probably not sort properly.
-[1474] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\joely\AppData\Local\Temp\biber_tmp_6RnX\e672c201c8e0f1acfb439ecdc2413f6e_20844.utf8, line 786, warning: 1 characters of junk seen at toplevel
-[1474] Biber.pm:133> INFO - WARNINGS: 5
+[101] biber-MSWIN64:340> INFO - === 
+[137] Biber.pm:420> INFO - Reading 'latex-vorlage.bcf'
+[291] Biber.pm:994> INFO - Found 88 citekeys in bib section 0
+[305] Biber.pm:4463> INFO - Processing section 0
+[317] Biber.pm:4654> INFO - Looking for bibtex file 'includes/literatur-datenbank.bib' for section 0
+[370] bibtex.pm:1713> INFO - LaTeX decoding ...
+[507] bibtex.pm:1519> INFO - Found BibTeX data source 'includes/literatur-datenbank.bib'
+[1265] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1265] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1265] Biber.pm:4283> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
+[1266] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
+[1387] bbl.pm:676> INFO - Writing 'latex-vorlage.bbl' with encoding 'UTF-8'
+[1513] bbl.pm:779> INFO - Output to latex-vorlage.bbl
+[1523] Biber.pm:131> WARN - Duplicate entry key: 'he_enhancing_2025' in file 'includes/literatur-datenbank.bib', skipping ...
+[1523] Biber.pm:131> WARN - legacy month field 'Apr' in entry 'BITV' is not an integer - this will probably not sort properly.
+[1523] Biber.pm:131> WARN - legacy month field 'Jul' in entry 'BITBW_2021' is not an integer - this will probably not sort properly.
+[1523] Biber.pm:131> WARN - legacy month field 'May' in entry 'Landesrecht_BW' is not an integer - this will probably not sort properly.
+[1523] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\joely\AppData\Local\Temp\biber_tmp_aCpY\e672c201c8e0f1acfb439ecdc2413f6e_3244.utf8, line 786, warning: 1 characters of junk seen at toplevel
+[1523] Biber.pm:133> INFO - WARNINGS: 5

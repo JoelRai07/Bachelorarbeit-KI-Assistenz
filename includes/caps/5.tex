@@ -1,6 +1,6 @@
 \chapter{Konzeption des Assistenzsystems} \label{kap:5}
 
-Dieses Kapitel beschreibt den konzeptionellen Entwurf des Assistenzsystems \textbf{\ac{ACE}} (\textit{Accessibility Context Engine}). Die Entwurfsentscheidungen leiten sich aus den Anforderungen (Kapitel~\ref{kap:4}), den theoretischen Grundlagen (Kapitel~\ref{kap:2}) und den in Kapitel~\ref{kap:3} identifizierten Forschungslücken ab.
+Dieses Kapitel beschreibt den konzeptionellen Entwurf des Assistenzsystems \textbf{\ac{ACE}}. Die Entwurfsentscheidungen leiten sich aus den Anforderungen (Kapitel~\ref{kap:4}), den theoretischen Grundlagen (Kapitel~\ref{kap:2}) und den in Kapitel~\ref{kap:3} identifizierten Forschungslücken ab.
 
 % ─────────────────────────────────────────────────────────────────────────────
 \section{Zielarchitektur und Datenpipeline}
@@ -12,7 +12,7 @@ Die Pipeline gliedert sich in fünf Phasen: die Datenerhebung durch axe-core, Pl
 
 \subsection{Analysequellen}
 
-Die Wahl der vier Analysequellen ergibt sich unmittelbar aus den in Abschnitt~\ref{kap:grenzen Tools} dargestellten Grenzen bestehender Tools: begrenzte Regelabdeckung, semantische Blindheit und fehlende Dynamik. Jede Quelle adressiert einen dieser Schwachpunkte.
+Die in Abschnitt~\ref{Forschungslücken} identifizierten Forschungslücken bilden den Ausgangspunkt; sie werden im Folgenden in konkrete Analysequellen und Verarbeitungsschritte operationalisiert.
 
 \textbf{axe-core} wird über einen gesteuerten Chromium-Browser ausgeführt und analysiert den vollständig gerenderten \ac{DOM} der Zielanwendung auf Verstöße gegen \ac{WCAG}-Erfolgskriterien. Da Rich-Client-Webanwendungen ihre Inhalte erst zur Laufzeit per JavaScript erzeugen (vgl. Abschnitt~\ref{kap:2.3}), ist die Ausführung in einem echten Browser unerlässlich.\footcite[Vgl.][]{fathallah_accessguru_2025} axe-core deckt primär \textit{syntaktische} Verstöße ab, weshalb es als alleinige Quelle nicht ausreicht.\footcite[Vgl.][]{kodithuwakku_assessing_2025}
 
@@ -34,15 +34,17 @@ Tabelle~\ref{tab:tool-mapping} fasst die Zuordnung der vier Analysequellen zu de
 \toprule
 \textbf{Quelle} & \textbf{Adressiertes Problem} & \textbf{Verstoßtypen} & \textbf{Theoriebezug} \\
 \midrule
-axe-core & Begrenzte Regelabdeckung\footcite[Vgl.][]{kodithuwakku_assessing_2025} & primär syntaktisch & Abschnitt~\ref{kap:grenzen Tools} \\
+axe-core & Begrenzte Regelabdeckung\footnotemark{} & primär syntaktisch & Abschnitt~\ref{kap:grenzen Tools} \\
 Playwright & Fehlende Dynamik bei zustandsabhängigen Barrieren & semantisch, layout & Abschnitt~\ref{Herausforderungen} \\
-grep & \ac{DOM}/Quellcode-Diskrepanz\footcite[Vgl.][]{fathallah_accessguru_2025} & alle (Anreicherung) & Abschnitt~\ref{Forschungslücken} \\
-\ac{LLM}-Codeanalyse & Semantische Muster jenseits fester Regex-Regeln & semantisch, syntaktisch, layout & Abschnitt~\ref{sec:kontextualisierung} \\
+grep & \ac{DOM}/Quellcode-Diskrepanz\footnotemark{} & alle (Anreicherung) & Abschnitte~\ref{kap:grenzen Tools} und~\ref{Forschungslücken} \\
+\ac{LLM}-Codeanalyse & Semantische Muster jenseits fester Regex-Regeln & semantisch, syntaktisch, layout & Abschnitte~\ref{kap:2.4} und~\ref{Forschungslücken} \\
 \bottomrule
 \end{tabular}
-\caption{Zuordnung der Analysequellen zu adressierten Problemen, Verstoßtypen und theoretischer Herleitung.}
+\caption[Zuordnung der Analysequellen]{Zuordnung der Analysequellen zu adressierten Problemen, Verstoßtypen und theoretischer Herleitung.}
 \label{tab:tool-mapping}
 \end{table}
+\footnotetext{Vgl. \cite{kodithuwakku_assessing_2025}.}
+\footnotetext{Vgl. \cite{fathallah_accessguru_2025}.}
 
 % ─────────────────────────────────────────────────────────────────────────────
 \subsection{\acl{UFS}}
@@ -96,9 +98,9 @@ Dieser Abschnitt beschreibt die Strategie für die Interaktion mit dem lokalen S
 
 \subsection{Zweistufige Prompt-Strategie}
 
-Konzeptionell wäre ein stark iterativer Ansatz denkbar. Fathallah et al. realisieren dies mit AccessGuru über iteratives Corrective Re-Prompting, das den Violation Score Decrease von 0,72 auf 0,84 verbessert.\footcite[Vgl.][]{fathallah_accessguru_2025} Auch Huang et al. zeigen, dass ReAct-Prompting bei der Barrierefreiheitskorrektur die besten Ergebnisse erzielt.\footcite[Vgl.][S.~5]{huang_access_2024}
+Konzeptionell wäre ein stärker iterativer Ansatz denkbar; entsprechende Vorarbeiten wie AccessGuru und ACCESS wurden in Kapitel~\ref{kap:3} bereits eingeordnet.
 
-Für den vorliegenden Anwendungsfall wird eine zweistufige Strategie gewählt: In Stufe~1 erzeugt das Modell als \ac{LLM}-Detektor strukturierte Code-Findings aus Quellcode-Chunks; in Stufe~2 priorisiert ein kombinierter Prompt alle Quellen (axe-core, Playwright, grep, \ac{LLM}). Der entscheidende Grund gegen weitere iterative Schleifen ist das Latenzbudget: Ein \ac{LLM}-Aufruf auf einem lokalen \ac{CPU}-basierten System benötigt je nach Modellgröße bereits mehrere Minuten. Zusätzliche ReAct- oder Corrective-Re-Prompting-Schleifen würden \ac{NFA}-02 verletzen -- eine Einschränkung, die für AccessGuru und ACCESS nicht gilt, da sie auf Cloud-\ac{API}s mit \ac{GPU}-Beschleunigung zugreifen.
+Für den vorliegenden Anwendungsfall wird eine zweistufige Strategie gewählt: In Stufe~1 erzeugt das Modell als \ac{LLM}-Detektor strukturierte Code-Findings aus Quellcode-Chunks; in Stufe~2 priorisiert ein kombinierter Prompt alle Quellen (axe-core, Playwright, grep, \ac{LLM}). Der entscheidende Grund gegen weitere iterative Schleifen ist das Latenzbudget: Ein \ac{LLM}-Aufruf auf einem lokalen \ac{CPU}-basierten System benötigt je nach Modellgröße bereits mehrere Minuten. Zusätzliche ReAct- oder Corrective-Re-Prompting-Schleifen würden \ac{NFA}-02 verletzen -- eine Einschränkung, die bei cloudbasierten Systemen mit \ac{GPU}-Beschleunigung in dieser Form nicht besteht.
 
 Der kombinierte Priorisierungsprompt in Stufe~2 ermöglicht es dem Sprachmodell, Zusammenhänge zwischen den Quellen direkt zu erkennen: Meldet axe-core ein fehlendes \texttt{aria-label}, liefert grep den zugehörigen Quellcodeausschnitt und bestätigt die \ac{LLM}-Codeanalyse dieselbe Stelle, kann das Modell diese Evidenz in einem konkreten Vorschlag zusammenführen.
 

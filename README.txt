@@ -22,8 +22,7 @@ Das wäre ein False Negative (ein echtes Problem wird nicht mehr gemeldet).
 Fragen für nächstes Mal:
 Stimmt das Token Budget Bild noch wenn man den text liest?
 Referenzen auf den neuen Anhang Detektionsquellen_Übersicht_BWEC im Text notwendig?
-Sehr unschöne tabelle "Vergleich über alle Suites
-Tab. 18: Kompakter Orientierungsvergleich der zentralen Kennzahlen über test-12, test-50 und
+Sehr unschöne tabelle "Vergleich über alle Suites Tab. 18: Kompakter Orientierungsvergleich der zentralen Kennzahlen über test-12, test-50 und
 test-100." da sie zu breit ist und mit resizebox alles megakomprimiert wird
 Ist die Reihenfolge der Anhänge gut so oder sollte noch was verändert werden?
 Sollte tabelle vergleich über alle suites nicht zu den anderen grafiken kommen die vergleiche machen?

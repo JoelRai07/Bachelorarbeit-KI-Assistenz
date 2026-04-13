@@ -18,9 +18,9 @@
 \hline
 \textbf{Bereich} & \textbf{Inhalte} \\
 \hline
-\hyperref[app:block_generell]{Generell} & \hyperref[anhang:complexity]{Komplexität von Home Pages}, \hyperref[app:react_popularity]{Framework-Popularität}, \hyperref[app:pw_grep_checks]{Playwright-Checks \& grep-Patterns}, \hyperref[app:konzeptmatrix]{Konzeptmatrix}, \hyperref[app:ace-pipeline-schema]{Pipeline-Schema}, \hyperref[app:systemprompt]{System-Prompt}, \hyperref[app:detektorprompt]{\ac{LLM}-Detektor-Prompts}, \hyperref[app:tokenbudget]{Token-Budget}, \hyperref[app:einsatzempfehlungen]{konsolidierte Empfehlung}, \hyperref[app:suite_vergleich]{Suite-Vergleich}, \hyperref[app:bewertungsskala_empfehlungen]{Bewertungsskala}, \hyperref[app:fa_nfa_erfuellung]{\ac{FA}/\ac{NFA}-Erfüllungsgrad}, \hyperref[app:reproducibility]{Reproduzierbarkeitsblatt}, \hyperref[app:console_output]{Console-Output-Auszüge}, \hyperref[app:threats_to_validity]{Threats to Validity} \\
+\hyperref[app:block_generell]{Generell} & \hyperref[anhang:complexity]{Komplexität von Home Pages}, \hyperref[app:react_popularity]{Framework-Popularität}, \hyperref[app:konzeptmatrix]{Konzeptmatrix}, \hyperref[app:ace-pipeline-schema]{Pipeline-Schema}, \hyperref[app:pw_grep_checks]{Playwright-Checks \& grep-Patterns}, \hyperref[app:systemprompt]{System-Prompt}, \hyperref[app:detektorprompt]{\ac{LLM}-Detektor-Prompts}, \hyperref[app:tokenbudget]{Token-Budget}, \hyperref[app:einsatzempfehlungen]{konsolidierte Empfehlung}, \hyperref[app:bewertungsskala_empfehlungen]{Bewertungsskala}, \hyperref[app:fa_nfa_erfuellung]{\ac{FA}/\ac{NFA}-Erfüllungsgrad}, \hyperref[app:reproducibility]{Reproduzierbarkeitsblatt}, \hyperref[app:console_output]{Console-Output-Auszüge}, \hyperref[app:threats_to_validity]{Threats to Validity} \\
 \hline
-\hyperref[app:graph_intro]{Vergleichsgrafiken} & \hyperref[app:graph_recall]{Recall-Degradation}, \hyperref[app:graph_laufzeit]{Laufzeit-Skalierung}, \hyperref[app:graph_sigma]{Konsistenz ($\sigma$)}, \hyperref[app:graph_overdetektion]{Recall\,/\,Überschuss (Suite-Gruppen)}, \hyperref[app:graph_truncation]{Truncation-Rate}, \hyperref[app:graph_heatmap_demo]{Heatmap Recall}, \hyperref[app:graph_must_nice_demo]{Must-/Nice-to-have-Verteilung} \\
+\hyperref[app:graph_intro]{Vergleichsgrafiken} & \hyperref[app:suite_vergleich]{Suite-Vergleich (Tabelle)}, \hyperref[app:graph_recall]{Recall-Degradation}, \hyperref[app:graph_laufzeit]{Laufzeit-Skalierung}, \hyperref[app:graph_sigma]{Konsistenz ($\sigma$)}, \hyperref[app:graph_overdetektion]{Recall\,/\,Überschuss (Suite-Gruppen)}, \hyperref[app:graph_truncation]{Truncation-Rate}, \hyperref[app:graph_heatmap_demo]{Heatmap Recall}, \hyperref[app:graph_must_nice_demo]{Must-/Nice-to-have-Verteilung} \\
 \hline
 \hyperref[app:block_test12]{test-12-Block} & \hyperref[app:accessibility_verstoesse_12]{Violations-Katalog}, \hyperref[app:erkennungsrate_poc_12]{Erkennungsrate}, \hyperref[app:recall_matrix_12]{Recall-Matrix}, \hyperref[app:rohdaten_12]{Rohdaten}, \hyperref[app:modell_summary_12]{Modellvergleich}, \hyperref[app:token_economy_12]{Token-Nutzung}, \hyperref[app:laufzeit_effizienz]{Laufzeit}, \hyperref[app:effizienz_metriken_12]{Effizienz}, \hyperref[app:overdetection_12]{Über-Detektion}, \hyperref[app:detektor_konsistenz_12]{Konsistenz}, \hyperref[app:empfehlungsqualitaet_12]{Empfehlungsqualität}, \hyperref[app:csv_export_12]{CSV-Auszug}, \hyperref[app:statistik_quantile_12]{Statistische Verteilung}, \hyperref[app:screenshots_test12]{Screenshots der Testsuite} \\
 \hline
@@ -53,51 +53,6 @@
   \caption[Framework Popularity über die letzten Jahre]{Framework Popularity über die letzten Jahre\footcite[Entnommen aus][]{262588213843476FrontendFrameworksPopularity}}
   \label{fig:react}
 \end{figure}
-
-\clearpage
-
-\anhang{Playwright-Checks und grep-Patterns}\label{app:pw_grep_checks}
-
-\begin{table}[htbp]
-\centering
-\small
-\renewcommand{\arraystretch}{1.15}
-\begin{tabular}{@{}llll@{}}
-\toprule
-\textbf{Check-ID} & \textbf{Prüfgegenstand} & \textbf{\ac{WCAG}} & \textbf{Kategorie} \\
-\midrule
-\texttt{keyboard-tab-reachable} & Interaktive Elemente per Tab erreichbar & 2.1.1 (A) & semantisch \\
-\texttt{keyboard-trap-free} & Kein Keyboard-Trap nach 40 Tab-Presses & 2.1.2 (A) & semantisch \\
-\texttt{focus-visible} & Sichtbarer Fokusindikator vorhanden & 2.4.7 (AA) & layout \\
-\texttt{skip-link-present} & Erstes Tab-Ziel ist ein Skip-Link & 2.4.1 (A) & semantisch \\
-\texttt{page-title-present} & Seite hat einen nicht-leeren \texttt{<title>} & 2.4.2 (A) & syntaktisch \\
-\texttt{html-lang-present} & \texttt{<html>} hat ein \texttt{lang}-Attribut & 3.1.1 (A) & syntaktisch \\
-\texttt{focus-after-dialog} & Fokus wandert beim Dialogöffnen in den Dialog & 2.4.3 (A) & semantisch \\
-\bottomrule
-\end{tabular}
-\caption{Implementierte Playwright-Checks mit \ac{WCAG}-Zuordnung und Kategorie}
-\label{tab:pw-checks}
-\end{table}
-
-\begin{table}[htbp]
-\centering
-\small
-\renewcommand{\arraystretch}{1.15}
-\begin{tabular}{@{}lp{5.5cm}ll@{}}
-\toprule
-\textbf{Pattern-ID} & \textbf{Beschreibung} & \textbf{\ac{WCAG}} & \textbf{Kategorie} \\
-\midrule
-\texttt{div-span-onclick} & \texttt{onClick} auf \texttt{<div>}/\texttt{<span>} ohne Keyboard-Handler & 2.1.1 (A) & semantisch \\
-\texttt{img-missing-alt} & \texttt{<img>} ohne \texttt{alt="..."} & 1.1.1 (A) & syntaktisch \\
-\texttt{label-missing-htmlfor} & \texttt{<label>} ohne \texttt{htmlFor} & 1.3.1 (A) & syntaktisch \\
-\texttt{role-button-non-semantic} & \texttt{role="button"} auf Nicht-Button & 4.1.2 (A) & semantisch \\
-\texttt{tabindex-removes-element} & \texttt{tabIndex=\{-1\}} entfernt Element aus Tab-Reihenfolge & 2.1.1 (A) & semantisch \\
-\texttt{autofocus-usage} & \texttt{autoFocus} kann den Fokusfluss stören & 2.4.3 (A) & semantisch \\
-\bottomrule
-\end{tabular}
-\caption{Implementierte grep-Patterns mit \ac{WCAG}-Zuordnung}
-\label{tab:grep-patterns}
-\end{table}
 
 \clearpage
 
@@ -239,7 +194,7 @@ Draffan et al.\ (2020) & Web2Access+AI
 }% Ende resizebox
 
 \caption[Konzeptmatrix (vollständige Übersicht)]{%
-Konzeptmatrix nach Webster Watson\footnotemark: Vollständige Übersicht aller analysierten Studien im Vergleich zum eigenen \acf{PoC}.
+Konzeptmatrix nach Webster Watson\footnotemark: vollständige Übersicht aller analysierten Studien im Vergleich zum eigenen \acf{PoC}.
 \yes~=~Konzept vorhanden/adressiert; leer~=~nicht adressiert.
 }
 \label{tab:konzeptmatrix_voll}
@@ -331,6 +286,49 @@ Konzeptmatrix nach Webster Watson\footnotemark: Vollständige Übersicht aller a
 %  \caption[Sequenzdiagramm der \ac{ACE}-Pipeline]{Detailliertes Sequenzdiagramm eines vollständigen \ac{ACE}-Pipeline-Durchlaufs. Dargestellt sind die Interaktionen zwischen \ac{CLI}, axe-core, Playwright, Code-Modul (grep), optionalem \ac{LLM}-Detektor, Prompt-Builder, Ollama und Output-Formatter (vgl. Abschnitt~\ref{sec:impl-pipeline}). }
 %  \label{fig:sequenz}
 %\end{figure}
+
+\anhang{Playwright-Checks und grep-Patterns}\label{app:pw_grep_checks}
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Check-ID} & \textbf{Prüfgegenstand} & \textbf{\ac{WCAG}} & \textbf{Kategorie} \\
+\midrule
+\texttt{keyboard-tab-reachable} & Interaktive Elemente per Tab erreichbar & 2.1.1 (A) & semantisch \\
+\texttt{keyboard-trap-free} & Kein Keyboard-Trap nach 40 Tab-Presses & 2.1.2 (A) & semantisch \\
+\texttt{focus-visible} & Sichtbarer Fokusindikator vorhanden & 2.4.7 (AA) & layout \\
+\texttt{skip-link-present} & Erstes Tab-Ziel ist ein Skip-Link & 2.4.1 (A) & semantisch \\
+\texttt{page-title-present} & Seite hat einen nicht-leeren \texttt{<title>} & 2.4.2 (A) & syntaktisch \\
+\texttt{html-lang-present} & \texttt{<html>} hat ein \texttt{lang}-Attribut & 3.1.1 (A) & syntaktisch \\
+\texttt{focus-after-dialog} & Fokus wandert beim Dialogöffnen in den Dialog & 2.4.3 (A) & semantisch \\
+\bottomrule
+\end{tabular}
+\caption{Implementierte Playwright-Checks mit \ac{WCAG}-Zuordnung und Kategorie}
+\label{tab:pw-checks}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}lp{5.5cm}ll@{}}
+\toprule
+\textbf{Pattern-ID} & \textbf{Beschreibung} & \textbf{\ac{WCAG}} & \textbf{Kategorie} \\
+\midrule
+\texttt{div-span-onclick} & \texttt{onClick} auf \texttt{<div>}/\texttt{<span>} ohne Keyboard-Handler & 2.1.1 (A) & semantisch \\
+\texttt{img-missing-alt} & \texttt{<img>} ohne \texttt{alt="..."} & 1.1.1 (A) & syntaktisch \\
+\texttt{label-missing-htmlfor} & \texttt{<label>} ohne \texttt{htmlFor} & 1.3.1 (A) & syntaktisch \\
+\texttt{role-button-non-semantic} & \texttt{role="button"} auf Nicht-Button & 4.1.2 (A) & semantisch \\
+\texttt{tabindex-removes-element} & \texttt{tabIndex=\{-1\}} entfernt Element aus Tab-Reihenfolge & 2.1.1 (A) & semantisch \\
+\texttt{autofocus-usage} & \texttt{autoFocus} kann den Fokusfluss stören & 2.4.3 (A) & semantisch \\
+\bottomrule
+\end{tabular}
+\caption{Implementierte grep-Patterns mit \ac{WCAG}-Zuordnung}
+\label{tab:grep-patterns}
+\end{table}
 
 \clearpage
 
@@ -564,7 +562,7 @@ Gib nur JSON zurück: {"findings": [...]}
   \node[draw, rounded corners=1pt, fill=orange!10, font=\scriptsize\itshape, anchor=west] at (10.6,1.95) {fest reserviert};
 \end{tikzpicture}
 
-\caption[Aufteilung des Token-Budgets]{Aufteilung des Kontextfensters (32.768 Tokens) gemäß Implementierung in \texttt{src/prompt.ts}: feste Reserven für System (400) und Output (8.192), variabler Bereich für serialisierte Findings mit Schweregrad-basierter Kürzung bei Budgetüberschreitung. Die Abbildung zeigt ausschließlich Stufe~2 (Priorisierung); Stufe~1 (\ac{LLM}-Detektor) besitzt ein separates, chunkweises \texttt{num\_predict}-Budget (Default 640, Benchmark 2048). Vgl. Abschnitt~\ref{sec:kontextualisierung}.}
+\caption[Aufteilung des Token-Budgets]{Aufteilung des Kontextfensters gemäß Implementierung in \texttt{src/prompt.ts}: feste Reserven für System (400~Tokens) und Output, variabler Bereich für serialisierte Findings mit Schweregrad-basierter Kürzung bei Budgetüberschreitung. Die Abbildung zeigt ausschließlich Stufe~2 (Priorisierung) mit den Code-Standardkonstanten (\texttt{TOTAL\_CONTEXT\_WINDOW}~=~32\,768, \texttt{RESERVED\_FOR\_OUTPUT}~=~8\,192). In den Benchmarks wurde \texttt{num\_predict} suite-spezifisch überschrieben: 6\,144 (test-12), 8\,192 (test-50), 12\,288 (test-100); für \ac{BWEC} galt \texttt{OLLAMA\_NUM\_CTX}~=~65\,536 mit \texttt{num\_predict}~=~24\,576. Stufe~1 (\ac{LLM}-Detektor) besitzt ein separates, chunkweises Budget: Default 640, Benchmarks test-12--100: 2\,048, \ac{BWEC}: 4\,096 Tokens. Vgl. Abschnitt~\ref{sec:kontextualisierung}.}
 \label{fig:tokenbudget}
 \end{figure}
 
@@ -600,38 +598,6 @@ Enterprise-Deployment & 14b & 32b & Produktionstauglich im zweistufigen Betrieb:
 \end{table}
 
 \clearpage
-\anhang{Vergleich über alle Suites}\label{app:suite_vergleich}
-
-\begin{table}[htbp]
-\centering
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.2}
-\caption[Zentrale Metriken im Suite-Vergleich]{Kompakter Orientierungsvergleich der zentralen Kennzahlen über test-12, test-50 und test-100.}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|c|c|c|}
-\hline
-\textbf{Metrik} & \textbf{test-12} & \textbf{test-50} & \textbf{test-100} \\
-\hline
-Ground-Truth-Violations & 12 & 50 & 100 \\
-\hline
-Runs je Modell & 10 & 10 & 10 \\
-\hline
-Output-Limit \texttt{num\_predict} & 6\,144 & 8\,192 & 12\,288 \\
-\hline
-Beste \ac{LLM}-Konsistenz $\sigma$ & 0{,}42 (14b) & 1{,}25 (32b) & 3{,}23 (14b) \\
-\hline
-\ac{NFA}-02-Konformität (strenge Sicht) & 7b, 14b: \checkmark & 7b: \checkmark & keines: \texttimes \\
-\hline
-Pragmatische \ac{BITV}-Eignung (Qualität/Zeit) & 14b: empfohlen, 32b: eingeschränkt & 14b: empfohlen, 32b: eingeschränkt & 14b: empfohlen, 32b: eingeschränkt \\
-\hline
-\end{tabular}
-}%
-\label{tab:suite_vergleich}
-\end{table}
-
-\noindent\textit{Hinweis:} Im Suite-Vergleich werden zwei Perspektiven getrennt ausgewiesen: \textit{strenge Sicht} (\ac{NFA}-02 als Ausschlusskriterium) und \textit{pragmatische Sicht} (Balance aus Erkennungsqualität und Zeitaufwand).
-
-\clearpage
 \anhang{Bewertungsskala für die Empfehlungsqualität der \ac{LLM}-Ausgaben}\label{app:bewertungsskala_empfehlungen}
 
 \begin{table}[htbp]
@@ -660,7 +626,7 @@ Pragmatische \ac{BITV}-Eignung (Qualität/Zeit) & 14b: empfohlen, 32b: eingeschr
 \centering
 \setlength{\tabcolsep}{5pt}
 \renewcommand{\arraystretch}{1.3}
-\caption[Erfüllungsgrad \ac{FA} und \ac{NFA}]{Erfüllungsgrad der funktionalen (\ac{FA}) und nicht-funktionalen (\ac{NFA}) Anforderungen im realisierten \ac{PoC}. Grundlage: konsolidierte Evaluation über test-12, test-50 und test-100. \checkmark~=~vollständig erfüllt; $(\sim)$~=~bedingt erfüllt; \texttimes~=~nicht erfüllt.}
+\caption[Erfüllungsgrad der funktionalen und nicht-funktionalen Anforderungen]{Dargestellt ist der Erfüllungsgrad der funktionalen (\ac{FA}) und nicht-funktionalen (\ac{NFA}) Anforderungen im realisierten \ac{PoC}. Die Bewertung basiert auf der konsolidierten Evaluation über test-12, test-50 und test-100. \checkmark~=~vollständig erfüllt; $(\sim)$~=~bedingt erfüllt; \texttimes~=~nicht erfüllt.}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|l|p{5cm}|c|>{\small}p{6.5cm}|}
 \hline
@@ -3056,7 +3022,7 @@ Die Benchmark-Rohdaten wurden als CSV-Datei exportiert. Tabelle~\ref{tab:csv_bei
 
 
 
-\anhang{Statistische Verteilung der \ac{LLM}-Findings (alle 10 Runs je Modell, test-100-Suite)}\label{app:statistik_quantile_100}
+\anhang{Statistische Verteilung der \ac{LLM}-Findings (alle 30 Runs, test-100-Suite)}\label{app:statistik_quantile_100}
 
 \begin{table}[htbp]
 \centering
@@ -3326,6 +3292,38 @@ $\sigma$         & 5{,}75 & 3{,}23 & 5{,}63 \\
 
 \noindent Die folgenden Grafiken fassen die Ergebnisse \textit{suite-übergreifend} (test-12, test-50, test-100) zusammen und sind damit nicht einem einzelnen Suite-Block zugeordnet. Nach den Screenshot-Abschnitten dienen sie als komprimierte Vergleichsebene für Recall, Laufzeit, Konsistenz, Über-/Unterdetektion und Truncation.
 
+\clearpage
+
+\anhang{Vergleich über alle Suites}\label{app:suite_vergleich}
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.25}
+\caption[Zentrale Metriken im Suite-Vergleich]{Kompakter Orientierungsvergleich der zentralen Kennzahlen über test-12, test-50 und test-100.}
+\begin{tabular}{|p{5.8cm}|c|c|c|}
+\hline
+\textbf{Metrik} & \textbf{test-12} & \textbf{test-50} & \textbf{test-100} \\
+\hline
+Ground-Truth-Violations                & 12               & 50               & 100 \\
+\hline
+Runs je Modell                         & \multicolumn{3}{c|}{10 je Modell und Suite} \\
+\hline
+Output-Limit \texttt{num\_predict}     & 6\,144           & 8\,192           & 12\,288 \\
+\hline
+Beste \ac{LLM}-Konsistenz $\sigma$     & 0{,}42 (14b)     & 1{,}25 (32b)     & 3{,}23 (14b) \\
+\hline
+\ac{NFA}-02-Konformität (strenge Sicht) & 7b, 14b: \checkmark & 7b: \checkmark & keines: \texttimes \\
+\hline
+Pragmatische \ac{BITV}-Eignung         & \multicolumn{3}{p{8.5cm}|}{14b: empfohlen, 32b: eingeschränkt \textit{(alle Suites)}} \\
+\hline
+\end{tabular}
+\label{tab:suite_vergleich}
+\end{table}
+
+\noindent\textit{Hinweis:} Im Suite-Vergleich werden zwei Perspektiven getrennt ausgewiesen: \textit{strenge Sicht} (\ac{NFA}-02 als Ausschlusskriterium) und \textit{pragmatische Sicht} (Balance aus Erkennungsqualität und Zeitaufwand).
+
+\clearpage
 
 % ══════════════════════════════════════════════════════════════════════════════
 % Vergleichsgrafiken über alle drei Testsuites (cross-suite)

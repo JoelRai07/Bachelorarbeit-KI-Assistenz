@@ -1,31 +1,31 @@
 \babel@toc {ngerman}{}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Prozessüberblick des geplanten Assistenzsystems}}{4}{figure.59}%
-\contentsline {figure}{\numberline {2}{\ignorespaces \ac {WCAG}-Schichtenmodell}}{8}{figure.99}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Taxonomie der Barrierefreiheitsverstöße}}{12}{figure.140}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Zero-Shot und Few-Shot Prompting im Vergleich}}{17}{figure.193}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Komplexität von Home Pages (6 Jahre)}}{70}{figure.550}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Framework Popularity über die letzten Jahre}}{70}{figure.555}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Schematische Übersicht der \ac {ACE}-Pipeline}}{74}{figure.569}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Aufteilung des Token-Budgets}}{79}{figure.708}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Screenshot Anmeldefenster der test-12-Suite}}{102}{figure.779}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Screenshot Kontaktformular der test-12-Suite}}{103}{figure.782}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Screenshot Dashboard-Übersicht der test-50-Suite}}{124}{figure.827}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Screenshot Profil-Tab (Profil bearbeiten) der test-50-Suite}}{125}{figure.830}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Screenshot Serverstatus der test-50-Suite}}{126}{figure.833}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Screenshot Benachrichtigungen der test-50-Suite}}{126}{figure.836}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Pareto nicht erkannter Violations}}{156}{figure.884}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Boxplot Laufzeiten test-100}}{157}{figure.887}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Pipeline der Findings-Verarbeitung}}{158}{figure.890}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Screenshot Chat-Modul der test-100-Suite}}{159}{figure.893}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Screenshot Suche-Modul der test-100-Suite}}{159}{figure.896}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Screenshot Einstellungen-Modul der test-100-Suite}}{160}{figure.899}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Screenshot Kalender-Modul der test-100-Suite}}{160}{figure.902}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Screenshot Hilfe-Center-Modul der test-100-Suite}}{161}{figure.905}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Screenshot Datei-Upload-Modul der test-100-Suite}}{161}{figure.908}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Recall-Degradation im Suite-Vergleich}}{162}{figure.915}%
-\contentsline {figure}{\numberline {25}{\ignorespaces Gesamtlaufzeit-Skalierung im Suite-Vergleich}}{163}{figure.918}%
-\contentsline {figure}{\numberline {26}{\ignorespaces \ac {LLM}-Konsistenz $\sigma $ im Suite-Vergleich}}{164}{figure.921}%
-\contentsline {figure}{\numberline {27}{\ignorespaces Recall und Überschuss im Suite-Vergleich}}{165}{figure.924}%
-\contentsline {figure}{\numberline {28}{\ignorespaces Truncation-Rate im Suite-Vergleich}}{166}{figure.927}%
-\contentsline {figure}{\numberline {29}{\ignorespaces Heatmap der Recall-Werte}}{167}{figure.930}%
-\contentsline {figure}{\numberline {30}{\ignorespaces Must/Nice-Verteilung je Modell und Suite}}{168}{figure.933}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Prozessüberblick des geplanten Assistenzsystems}}{4}{figure.56}%
+\contentsline {figure}{\numberline {2}{\ignorespaces \ac {WCAG}-Schichtenmodell}}{8}{figure.94}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Taxonomie der Barrierefreiheitsverstöße}}{12}{figure.135}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Zero-Shot und Few-Shot Prompting im Vergleich}}{17}{figure.189}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Komplexität von Home Pages (6 Jahre)}}{70}{figure.544}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Framework Popularity über die letzten Jahre}}{70}{figure.549}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Schematische Übersicht der \ac {ACE}-Pipeline}}{73}{figure.559}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Aufteilung des Token-Budgets}}{79}{figure.702}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Screenshot Anmeldefenster der test-12-Suite}}{101}{figure.770}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Screenshot Kontaktformular der test-12-Suite}}{102}{figure.773}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Screenshot Dashboard-Übersicht der test-50-Suite}}{123}{figure.818}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Screenshot Profil-Tab (Profil bearbeiten) der test-50-Suite}}{124}{figure.821}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Screenshot Serverstatus der test-50-Suite}}{125}{figure.824}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Screenshot Benachrichtigungen der test-50-Suite}}{125}{figure.827}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Pareto nicht erkannter Violations}}{155}{figure.875}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Boxplot Laufzeiten test-100}}{156}{figure.878}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Pipeline der Findings-Verarbeitung}}{157}{figure.881}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Screenshot Chat-Modul der test-100-Suite}}{158}{figure.884}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Screenshot Suche-Modul der test-100-Suite}}{158}{figure.887}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Screenshot Einstellungen-Modul der test-100-Suite}}{159}{figure.890}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Screenshot Kalender-Modul der test-100-Suite}}{159}{figure.893}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Screenshot Hilfe-Center-Modul der test-100-Suite}}{160}{figure.896}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Screenshot Datei-Upload-Modul der test-100-Suite}}{160}{figure.899}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Recall-Degradation im Suite-Vergleich}}{163}{figure.909}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Gesamtlaufzeit-Skalierung im Suite-Vergleich}}{164}{figure.912}%
+\contentsline {figure}{\numberline {26}{\ignorespaces \ac {LLM}-Konsistenz $\sigma $ im Suite-Vergleich}}{165}{figure.915}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Recall und Überschuss im Suite-Vergleich}}{166}{figure.918}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Truncation-Rate im Suite-Vergleich}}{167}{figure.921}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Heatmap der Recall-Werte}}{168}{figure.924}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Must/Nice-Verteilung je Modell und Suite}}{169}{figure.927}%

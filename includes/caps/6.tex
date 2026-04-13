@@ -193,12 +193,11 @@ Der Output-Formatter erzeugt pro Analysedurchlauf zwei Dateien: einen Markdown-R
 Die Pipeline-Orchestrierung in \texttt{index.ts} verkettet alle Module in der im Anhang dargestellten Reihenfolge (vgl. Anhang~\ref{app:ace-pipeline-schema}, Abbildung~\ref{fig:ace-pipeline-schema}). Jede Phase wird einzeln zeitgemessen, um die in \ac{NFA}-02 geforderte Laufzeitanalyse in Kapitel~\ref{kap:7} zu ermöglichen. Die Metriken werden in einem \texttt{PipelineMetrics}-Objekt gesammelt, das neben den Phasenzeiten auch Token-Schätzungen, Anreicherungsquoten und Deduplizierungsstatistiken enthält.
 
 Der Ablauf eines vollständigen Durchlaufs ist:
-
 \begin{enumerate}
   \item axe-core: Browser starten, \ac{DOM} analysieren, Findings normalisieren
-  \item Playwright: Sieben Interaktionschecks ausführen, fehlgeschlagene normalisieren
-  \item Code-Anreicherung: axe/Playwright-Findings mit Quellcode-Kontext ergänzen
-  \item Code-Patterns: Sechs Anti-Patterns im Quellcode suchen, deduplizieren
+  \item Playwright: sieben Interaktionschecks ausführen, fehlgeschlagene normalisieren
+  \item Code-Anreicherung: axe-/Playwright-Findings mit Quellcode-Kontext ergänzen
+  \item Code-Patterns: sechs Anti-Patterns im Quellcode suchen, deduplizieren
   \item \ac{LLM}-Codeanalyse (\texttt{-{}-llm-detect}): semantische Quellcodeanalyse ausführen und zusätzliche Findings normalisieren
   \item Prompt-Builder: Findings serialisieren, Token-Budget anwenden
   \item Ollama: kombinierten Priorisierungsprompt senden, Antwort empfangen

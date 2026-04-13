@@ -77,7 +77,7 @@ Tabelle~\ref{tab:recall_modellvergleich} zeigt den Recall nach Hinzunahme des \a
 \textbf{Bedingung} & \textbf{Erkannte V.} & \textbf{Recall} & \textbf{Neu ggü. Baseline} & \textbf{Nicht erkannt} \\
 \midrule
 Baseline (Tools only)         & 8\,/\,12  & 66,7\,\% & --                                  & V2, V8, V11, V12 \\
-+\,\texttt{qwen2.5-coder:7b}  & 9\,/\,12  & 75,0\,\% & +V8, +V12; V3 instabil              & V2, V3*, V11 \\
++\,\texttt{qwen2.5-coder:7b}  & 9\,/\,12  & 75,0\,\% & +V8, +V12; V3*                      & V2, V3*, V11 \\
 +\,\texttt{qwen2.5-coder:14b} & 12\,/\,12 & 100\,\%  & +V2, +V8, +V11, +V12                & -- \\
 +\,\texttt{qwen3:32b}         & 12\,/\,12 & 100\,\%  & +V2, +V8, +V11, +V12                & -- \\
 \bottomrule
@@ -174,7 +174,7 @@ Die Spalte \textit{Bewertung} fasst das Verhalten qualitativ zusammen. Zu beacht
 \texttt{qwen3:32b}         & 14,6 & 8,5  & 23,1 & \textbf{Korrekt} \\
 \bottomrule
 \end{tabular}
-\caption{Priorisierungsverhalten der drei Modelle (Mittelwerte über 10 Runs, test-12-Suite). Nice-to-have-Werte bei 7b und 14b sind durch Token-Limit-Effekte als untere Schranke zu interpretieren.}
+\caption[Priorisierungsverhalten der drei Modelle (test-12)]{Priorisierungsverhalten der drei Modelle (Mittelwerte über 10 Runs, test-12-Suite). Nice-to-have-Werte bei 7b und 14b sind durch Token-Limit-Effekte als untere Schranke zu interpretieren.}
 \label{tab:priorisierungsqualitaet}
 \end{table}
 
@@ -323,7 +323,7 @@ Ergänzend wurde das reale Untersuchungsobjekt \ac{BWEC} der \ac{BITBW} evaluier
 
 % KÜRZUNG: Konfigurationsabsatz komprimiert – Details im Anhang (tab:rohdaten_bwec).
 \paragraph{Konfiguration und Tool-Baseline.}
-Es wurden zwei Konfigurationen mit je 9~Runs durchgeführt: \textit{bwec} mit \texttt{maxfiles=100} (66~Chunks) und \textit{bwec-500} mit \texttt{maxfiles=500} (330~Chunks) als Skalierungsexperiment. Die deterministischen Quellen liefern über alle 18~Runs hinweg konstant axe-core~10, Playwright~2 und grep~8~Findings (Summe: 20), was die deterministische Eigenschaft dieser Quellen auch am realen Untersuchungsobjekt bestätigt.
+Es wurden zwei Konfigurationen mit je 9~Runs durchgeführt: \textit{bwec} mit \texttt{maxfiles=100} (66~Chunks) und \textit{bwec-500} mit \texttt{maxfiles=500} (330~Chunks) als Skalierungsexperiment. Die deterministischen Quellen liefern über alle 18~Runs hinweg konstant axe-core~10, Playwright~2 und grep~8~Findings (Summe: 20), was die deterministische Eigenschaft dieser Quellen auch am realen Untersuchungsobjekt bestätigt (vgl. Anhang~\ref{app:detektionsquellen_bwec}).
 
 \paragraph{Ergebnisse bei \texttt{maxfiles}~=~100 (66~Chunks).}
 Mit der für den produktiven Einsatz vorgesehenen Konfiguration verhält sich das System stabil. Der \ac{LLM}-Detektor liefert: \texttt{qwen2.5-coder:7b} Ø~14,5~Findings, \texttt{qwen2.5-coder:14b} Ø~22,0~Findings und \texttt{qwen3:32b} Ø~32,0~Findings. Alle Reports sind parsebar. Die Laufzeiten betragen Ø~328\,s (7b), Ø~824\,s (14b) und Ø~2\,128\,s (32b). Damit erfüllt nur \texttt{qwen2.5-coder:7b} \ac{NFA}-02.

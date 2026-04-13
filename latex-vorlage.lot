@@ -1,75 +1,75 @@
 \babel@toc {ngerman}{}\relax 
-\contentsline {table}{\numberline {1}{\ignorespaces Erkennungsleistung von Accessibility-Tools}}{10}{table.125}%
-\contentsline {table}{\numberline {2}{\ignorespaces Konzeptmatrix (Hauptmatrix, hoch priorisierte Studien)}}{22}{table.232}%
-\contentsline {table}{\numberline {3}{\ignorespaces Zuordnung der DSRM-Phasen zu den Kapiteln der Arbeit.}}{23}{table.242}%
-\contentsline {table}{\numberline {4}{\ignorespaces Anforderungsübersicht: Funktionale und nicht-funktionale Anforderungen mit Ursprung und Priorität.}}{31}{table.305}%
-\contentsline {table}{\numberline {5}{\ignorespaces Zuordnung der Analysequellen zu adressierten Problemen, Verstoßtypen und theoretischer Herleitung.}}{33}{table.320}%
-\contentsline {table}{\numberline {6}{\ignorespaces Durchgeführte Benchmark-Runs je Modell und Testsuite}}{48}{table.446}%
-\contentsline {table}{\numberline {7}{\ignorespaces Recall-Vergleich je Bedingung und Modell}}{49}{table.452}%
-\contentsline {table}{\numberline {8}{\ignorespaces Recall nach Verstoßkategorie und Modell}}{50}{table.454}%
-\contentsline {table}{\numberline {9}{\ignorespaces Precision, Recall und F1 auf test-50 und test-100}}{50}{table.457}%
-\contentsline {table}{\numberline {10}{\ignorespaces Priorisierungsverhalten der drei Modelle (Mittelwerte über 10 Runs, test-12-Suite). Nice-to-have-Werte bei 7b und 14b sind durch Token-Limit-Effekte als untere Schranke zu interpretieren.}}{51}{table.461}%
-\contentsline {table}{\numberline {11}{\ignorespaces Ablationsanalyse: Recall-Beitrag der Pipeline-Stufen}}{59}{table.523}%
-\contentsline {table}{\numberline {12}{\ignorespaces Modellwahl nach Anwendungsszenario.}}{60}{table.525}%
-\contentsline {table}{\numberline {13}{\ignorespaces Übersicht: generell vs. suite-spezifisch}}{69}{table.546}%
-\contentsline {table}{\numberline {14}{\ignorespaces Implementierte Playwright-Checks mit \ac {WCAG}-Zuordnung und Kategorie}}{71}{table.560}%
-\contentsline {table}{\numberline {15}{\ignorespaces Implementierte grep-Patterns mit \ac {WCAG}-Zuordnung}}{71}{table.561}%
-\contentsline {table}{\numberline {16}{\ignorespaces Konzeptmatrix (vollständige Übersicht)}}{73}{table.564}%
-\contentsline {table}{\numberline {17}{\ignorespaces Modellempfehlungen nach Anwendungsszenario}}{80}{table.711}%
-\contentsline {table}{\numberline {18}{\ignorespaces Zentrale Metriken im Suite-Vergleich}}{81}{table.714}%
-\contentsline {table}{\numberline {19}{\ignorespaces Bewertungsskala der Empfehlungsqualität}}{82}{table.717}%
-\contentsline {table}{\numberline {20}{\ignorespaces Erfüllungsgrad \ac {FA} und \ac {NFA}}}{84}{table.720}%
-\contentsline {table}{\numberline {21}{\ignorespaces Umgebungs- und Konfigurationsparameter}}{86}{table.723}%
-\contentsline {table}{\numberline {22}{Threats to Validity}}{88}{table.9.22}%
-\contentsline {table}{\numberline {23}{\ignorespaces Navigationsübersicht test-12-Suite}}{90}{table.733}%
-\contentsline {table}{\numberline {24}{\ignorespaces Accessibility-Verstöße (test-12)}}{91}{table.736}%
-\contentsline {table}{\numberline {25}{\ignorespaces Erkennungsrate der Violations (test-12)}}{92}{table.739}%
-\contentsline {table}{\numberline {26}{\ignorespaces Recall-Matrix (test-12)}}{93}{table.744}%
-\contentsline {table}{\numberline {27}{\ignorespaces Rohdaten Benchmark-Runs (test-12)}}{94}{table.747}%
-\contentsline {table}{\numberline {28}{\ignorespaces Modell-Leistungsvergleich (test-12)}}{95}{table.750}%
-\contentsline {table}{\numberline {29}{\ignorespaces Token-Nutzung pro Modell (test-12)}}{96}{table.753}%
-\contentsline {table}{\numberline {30}{\ignorespaces Laufzeiten je Pipeline-Phase (test-12)}}{97}{table.756}%
-\contentsline {table}{\numberline {31}{\ignorespaces \ac {LLM}-Findings je Sekunde (test-12)}}{97}{table.757}%
-\contentsline {table}{\numberline {32}{\ignorespaces Effizienzvergleich der Modelle (test-12)}}{97}{table.760}%
-\contentsline {table}{\numberline {33}{\ignorespaces Über-Detektion (test-12)}}{98}{table.763}%
-\contentsline {table}{\numberline {34}{\ignorespaces Detektor-Konsistenz (test-12)}}{98}{table.766}%
-\contentsline {table}{\numberline {35}{\ignorespaces Empfehlungsqualität (test-12)}}{99}{table.769}%
-\contentsline {table}{\numberline {36}{\ignorespaces CSV-Spaltenschema}}{100}{table.772}%
-\contentsline {table}{\numberline {37}{\ignorespaces Beispielzeilen aus dem CSV-Export (test-12)}}{100}{table.773}%
-\contentsline {table}{\numberline {38}{\ignorespaces Quantilanalyse der \ac {LLM}-Findings (test-12, alle 30 Runs)}}{101}{table.776}%
-\contentsline {table}{\numberline {39}{\ignorespaces Navigationsübersicht test-50-Suite}}{104}{table.787}%
-\contentsline {table}{\numberline {40}{Accessibility-Verstöße (test-50)}}{105}{table.9.40}%
-\contentsline {table}{\numberline {41}{Erkennungsrate der Violations (test-50)}}{108}{table.9.41}%
-\contentsline {table}{\numberline {42}{Recall-Matrix (test-50)}}{111}{table.9.42}%
-\contentsline {table}{\numberline {43}{\ignorespaces Rohdaten Benchmark-Runs (test-50)}}{114}{table.798}%
-\contentsline {table}{\numberline {44}{\ignorespaces Modell-Leistungsvergleich (test-50)}}{115}{table.801}%
-\contentsline {table}{\numberline {45}{\ignorespaces Token-Nutzung pro Modell (test-50)}}{116}{table.804}%
-\contentsline {table}{\numberline {46}{\ignorespaces Effizienzvergleich der Modelle (test-50)}}{116}{table.807}%
-\contentsline {table}{\numberline {47}{\ignorespaces Über-Detektion (test-50)}}{117}{table.810}%
-\contentsline {table}{\numberline {48}{\ignorespaces Precision je Run: test-50-Suite}}{118}{table.813}%
-\contentsline {table}{\numberline {49}{\ignorespaces Detektor-Konsistenz (test-50)}}{118}{table.816}%
-\contentsline {table}{\numberline {50}{Empfehlungsqualität (test-50)}}{119}{table.9.50}%
-\contentsline {table}{\numberline {51}{\ignorespaces Beispielzeilen aus dem CSV-Export (test-50)}}{122}{table.821}%
-\contentsline {table}{\numberline {52}{\ignorespaces Quantilanalyse der \ac {LLM}-Findings (test-50, alle 30 Runs)}}{123}{table.824}%
-\contentsline {table}{\numberline {53}{\ignorespaces Navigationsübersicht test-100-Suite}}{127}{table.841}%
-\contentsline {table}{\numberline {54}{Accessibility-Verstöße (test-100)}}{128}{table.9.54}%
-\contentsline {table}{\numberline {55}{Erkennungsrate der Violations (test-100)}}{132}{table.9.55}%
-\contentsline {table}{\numberline {56}{Recall-Matrix (test-100)}}{137}{table.9.56}%
-\contentsline {table}{\numberline {57}{\ignorespaces Rohdaten Benchmark-Runs (test-100)}}{142}{table.852}%
-\contentsline {table}{\numberline {58}{\ignorespaces Modell-Leistungsvergleich (test-100)}}{143}{table.855}%
-\contentsline {table}{\numberline {59}{\ignorespaces Token-Nutzung pro Modell (test-100)}}{144}{table.858}%
-\contentsline {table}{\numberline {60}{\ignorespaces Effizienzvergleich der Modelle (test-100)}}{144}{table.861}%
-\contentsline {table}{\numberline {61}{\ignorespaces Über-Detektion (test-100)}}{145}{table.864}%
-\contentsline {table}{\numberline {62}{\ignorespaces Stichproben-Plausibilisierung des finalen Reports}}{146}{table.867}%
-\contentsline {table}{\numberline {63}{\ignorespaces Precision je Run: test-100-Suite}}{147}{table.870}%
-\contentsline {table}{\numberline {64}{\ignorespaces Detektor-Konsistenz (test-100)}}{148}{table.873}%
-\contentsline {table}{\numberline {65}{Empfehlungsqualität (test-100)}}{149}{table.9.65}%
-\contentsline {table}{\numberline {66}{\ignorespaces Beispielzeilen aus dem CSV-Export (test-100)}}{155}{table.878}%
-\contentsline {table}{\numberline {67}{\ignorespaces Quantilanalyse der \ac {LLM}-Findings (test-100, alle Modelle)}}{155}{table.881}%
-\contentsline {table}{\numberline {68}{\ignorespaces Navigationsübersicht \ac {BWEC}-Block}}{169}{table.937}%
-\contentsline {table}{\numberline {69}{\ignorespaces Detektionsquellen-Übersicht \ac {BWEC}}}{170}{table.940}%
-\contentsline {table}{\numberline {70}{\ignorespaces \ac {BWEC} Tool-Findings Katalog}}{170}{table.941}%
-\contentsline {table}{\numberline {71}{\ignorespaces Rohdaten \ac {BWEC} (\texttt {maxfiles}=100)}}{171}{table.944}%
-\contentsline {table}{\numberline {72}{\ignorespaces Modell-Leistungsvergleich \ac {BWEC} (\texttt {maxfiles}=100)}}{172}{table.947}%
-\contentsline {table}{\numberline {73}{\ignorespaces Rohdaten \ac {BWEC} (\texttt {maxfiles}=500)}}{173}{table.950}%
-\contentsline {table}{\numberline {74}{\ignorespaces Modell-Leistungsvergleich \ac {BWEC} (\texttt {maxfiles}=500)}}{174}{table.953}%
+\contentsline {table}{\numberline {1}{\ignorespaces Erkennungsleistung von Accessibility-Tools}}{10}{table.120}%
+\contentsline {table}{\numberline {2}{\ignorespaces Konzeptmatrix (Hauptmatrix, hoch priorisierte Studien)}}{22}{table.228}%
+\contentsline {table}{\numberline {3}{\ignorespaces Zuordnung der DSRM-Phasen zu den Kapiteln der Arbeit.}}{23}{table.238}%
+\contentsline {table}{\numberline {4}{\ignorespaces Anforderungsübersicht: funktionale und nicht-funktionale Anforderungen}}{31}{table.301}%
+\contentsline {table}{\numberline {5}{\ignorespaces Zuordnung der Analysequellen}}{33}{table.316}%
+\contentsline {table}{\numberline {6}{\ignorespaces Durchgeführte Benchmark-Runs je Modell und Testsuite}}{48}{table.440}%
+\contentsline {table}{\numberline {7}{\ignorespaces Recall-Vergleich je Bedingung und Modell}}{49}{table.446}%
+\contentsline {table}{\numberline {8}{\ignorespaces Recall nach Verstoßkategorie und Modell}}{50}{table.448}%
+\contentsline {table}{\numberline {9}{\ignorespaces Precision, Recall und F1 auf test-50 und test-100}}{50}{table.451}%
+\contentsline {table}{\numberline {10}{\ignorespaces Priorisierungsverhalten der drei Modelle (test-12)}}{51}{table.455}%
+\contentsline {table}{\numberline {11}{\ignorespaces Ablationsanalyse: Recall-Beitrag der Pipeline-Stufen}}{59}{table.517}%
+\contentsline {table}{\numberline {12}{\ignorespaces Modellwahl nach Anwendungsszenario.}}{60}{table.519}%
+\contentsline {table}{\numberline {13}{\ignorespaces Übersicht: generell vs. suite-spezifisch}}{69}{table.540}%
+\contentsline {table}{\numberline {14}{\ignorespaces Konzeptmatrix (vollständige Übersicht)}}{72}{table.554}%
+\contentsline {table}{\numberline {15}{\ignorespaces Implementierte Playwright-Checks mit \ac {WCAG}-Zuordnung und Kategorie}}{74}{table.562}%
+\contentsline {table}{\numberline {16}{\ignorespaces Implementierte grep-Patterns mit \ac {WCAG}-Zuordnung}}{74}{table.563}%
+\contentsline {table}{\numberline {17}{\ignorespaces Modellempfehlungen nach Anwendungsszenario}}{80}{table.705}%
+\contentsline {table}{\numberline {18}{\ignorespaces Bewertungsskala der Empfehlungsqualität}}{81}{table.708}%
+\contentsline {table}{\numberline {19}{\ignorespaces Erfüllungsgrad der funktionalen und nicht-funktionalen Anforderungen}}{83}{table.711}%
+\contentsline {table}{\numberline {20}{\ignorespaces Umgebungs- und Konfigurationsparameter}}{85}{table.714}%
+\contentsline {table}{\numberline {21}{Threats to Validity}}{87}{table.9.21}%
+\contentsline {table}{\numberline {22}{\ignorespaces Navigationsübersicht test-12-Suite}}{89}{table.724}%
+\contentsline {table}{\numberline {23}{\ignorespaces Accessibility-Verstöße (test-12)}}{90}{table.727}%
+\contentsline {table}{\numberline {24}{\ignorespaces Erkennungsrate der Violations (test-12)}}{91}{table.730}%
+\contentsline {table}{\numberline {25}{\ignorespaces Recall-Matrix (test-12)}}{92}{table.735}%
+\contentsline {table}{\numberline {26}{\ignorespaces Rohdaten Benchmark-Runs (test-12)}}{93}{table.738}%
+\contentsline {table}{\numberline {27}{\ignorespaces Modell-Leistungsvergleich (test-12)}}{94}{table.741}%
+\contentsline {table}{\numberline {28}{\ignorespaces Token-Nutzung pro Modell (test-12)}}{95}{table.744}%
+\contentsline {table}{\numberline {29}{\ignorespaces Laufzeiten je Pipeline-Phase (test-12)}}{96}{table.747}%
+\contentsline {table}{\numberline {30}{\ignorespaces \ac {LLM}-Findings je Sekunde (test-12)}}{96}{table.748}%
+\contentsline {table}{\numberline {31}{\ignorespaces Effizienzvergleich der Modelle (test-12)}}{96}{table.751}%
+\contentsline {table}{\numberline {32}{\ignorespaces Über-Detektion (test-12)}}{97}{table.754}%
+\contentsline {table}{\numberline {33}{\ignorespaces Detektor-Konsistenz (test-12)}}{97}{table.757}%
+\contentsline {table}{\numberline {34}{\ignorespaces Empfehlungsqualität (test-12)}}{98}{table.760}%
+\contentsline {table}{\numberline {35}{\ignorespaces CSV-Spaltenschema}}{99}{table.763}%
+\contentsline {table}{\numberline {36}{\ignorespaces Beispielzeilen aus dem CSV-Export (test-12)}}{99}{table.764}%
+\contentsline {table}{\numberline {37}{\ignorespaces Quantilanalyse der \ac {LLM}-Findings (test-12, alle 30 Runs)}}{100}{table.767}%
+\contentsline {table}{\numberline {38}{\ignorespaces Navigationsübersicht test-50-Suite}}{103}{table.778}%
+\contentsline {table}{\numberline {39}{Accessibility-Verstöße (test-50)}}{104}{table.9.39}%
+\contentsline {table}{\numberline {40}{Erkennungsrate der Violations (test-50)}}{107}{table.9.40}%
+\contentsline {table}{\numberline {41}{Recall-Matrix (test-50)}}{110}{table.9.41}%
+\contentsline {table}{\numberline {42}{\ignorespaces Rohdaten Benchmark-Runs (test-50)}}{113}{table.789}%
+\contentsline {table}{\numberline {43}{\ignorespaces Modell-Leistungsvergleich (test-50)}}{114}{table.792}%
+\contentsline {table}{\numberline {44}{\ignorespaces Token-Nutzung pro Modell (test-50)}}{115}{table.795}%
+\contentsline {table}{\numberline {45}{\ignorespaces Effizienzvergleich der Modelle (test-50)}}{115}{table.798}%
+\contentsline {table}{\numberline {46}{\ignorespaces Über-Detektion (test-50)}}{116}{table.801}%
+\contentsline {table}{\numberline {47}{\ignorespaces Precision je Run: test-50-Suite}}{117}{table.804}%
+\contentsline {table}{\numberline {48}{\ignorespaces Detektor-Konsistenz (test-50)}}{117}{table.807}%
+\contentsline {table}{\numberline {49}{Empfehlungsqualität (test-50)}}{118}{table.9.49}%
+\contentsline {table}{\numberline {50}{\ignorespaces Beispielzeilen aus dem CSV-Export (test-50)}}{121}{table.812}%
+\contentsline {table}{\numberline {51}{\ignorespaces Quantilanalyse der \ac {LLM}-Findings (test-50, alle 30 Runs)}}{122}{table.815}%
+\contentsline {table}{\numberline {52}{\ignorespaces Navigationsübersicht test-100-Suite}}{126}{table.832}%
+\contentsline {table}{\numberline {53}{Accessibility-Verstöße (test-100)}}{127}{table.9.53}%
+\contentsline {table}{\numberline {54}{Erkennungsrate der Violations (test-100)}}{131}{table.9.54}%
+\contentsline {table}{\numberline {55}{Recall-Matrix (test-100)}}{136}{table.9.55}%
+\contentsline {table}{\numberline {56}{\ignorespaces Rohdaten Benchmark-Runs (test-100)}}{141}{table.843}%
+\contentsline {table}{\numberline {57}{\ignorespaces Modell-Leistungsvergleich (test-100)}}{142}{table.846}%
+\contentsline {table}{\numberline {58}{\ignorespaces Token-Nutzung pro Modell (test-100)}}{143}{table.849}%
+\contentsline {table}{\numberline {59}{\ignorespaces Effizienzvergleich der Modelle (test-100)}}{143}{table.852}%
+\contentsline {table}{\numberline {60}{\ignorespaces Über-Detektion (test-100)}}{144}{table.855}%
+\contentsline {table}{\numberline {61}{\ignorespaces Stichproben-Plausibilisierung des finalen Reports}}{145}{table.858}%
+\contentsline {table}{\numberline {62}{\ignorespaces Precision je Run: test-100-Suite}}{146}{table.861}%
+\contentsline {table}{\numberline {63}{\ignorespaces Detektor-Konsistenz (test-100)}}{147}{table.864}%
+\contentsline {table}{\numberline {64}{Empfehlungsqualität (test-100)}}{148}{table.9.64}%
+\contentsline {table}{\numberline {65}{\ignorespaces Beispielzeilen aus dem CSV-Export (test-100)}}{154}{table.869}%
+\contentsline {table}{\numberline {66}{\ignorespaces Quantilanalyse der \ac {LLM}-Findings (test-100, alle Modelle)}}{154}{table.872}%
+\contentsline {table}{\numberline {67}{\ignorespaces Zentrale Metriken im Suite-Vergleich}}{162}{table.906}%
+\contentsline {table}{\numberline {68}{\ignorespaces Navigationsübersicht \ac {BWEC}-Block}}{170}{table.931}%
+\contentsline {table}{\numberline {69}{\ignorespaces Detektionsquellen-Übersicht \ac {BWEC}}}{171}{table.934}%
+\contentsline {table}{\numberline {70}{\ignorespaces \ac {BWEC} Tool-Findings Katalog}}{171}{table.935}%
+\contentsline {table}{\numberline {71}{\ignorespaces Rohdaten \ac {BWEC} (\texttt {maxfiles}=100)}}{172}{table.938}%
+\contentsline {table}{\numberline {72}{\ignorespaces Modell-Leistungsvergleich \ac {BWEC} (\texttt {maxfiles}=100)}}{173}{table.941}%
+\contentsline {table}{\numberline {73}{\ignorespaces Rohdaten \ac {BWEC} (\texttt {maxfiles}=500)}}{174}{table.944}%
+\contentsline {table}{\numberline {74}{\ignorespaces Modell-Leistungsvergleich \ac {BWEC} (\texttt {maxfiles}=500)}}{175}{table.947}%
