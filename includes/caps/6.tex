@@ -101,8 +101,6 @@ Die Verarbeitung erfolgt in fünf Schritten:
   \item \textbf{Dateiselektion:} Das Modul sammelt rekursiv Dateien mit den Endungen \texttt{.tsx}, \texttt{.ts}, \texttt{.jsx}, \texttt{.js} und \texttt{.css}. Die Anzahl der analysierten Dateien ist über \texttt{LLM\_DETECT\_MAX\_FILES} begrenzbar (Default: 60; in den Benchmarkläufen auf 25 reduziert).
   \item \textbf{Chunking:} Die Dateien werden mit Zeilennummern versehen und in Text-Chunks aufgeteilt. Die Chunk-Größe ist über \texttt{LLM\_DETECT\_CHUNK\_CHARS} konfigurierbar (Benchmarkläufe: 4\,000 Zeichen).
   \item \textbf{Detektionsprompt:} Für jeden Chunk wird ein eigener Prompt erzeugt, der ausschließlich \acs{JSON} im fest definierten Schema verlangt.\footnote{Der vollständige System- und User-Prompt der Detektor-Phase ist in Anhang~\ref{app:detektorprompt} dokumentiert.}
-  % KÜRZUNG: Schritte 4 und 5 von je einem Absatz auf je einen Satz komprimiert –
-  % technische Details stehen vollständig im Anhang-Prompt.
   \item \textbf{Parsing und Validierung:} Antworten werden als \acs{JSON} extrahiert und validiert; ein Fallback überführt Formatabweichungen in das Zielformat.
   \item \textbf{Normalisierung und Deduplizierung:} Valide Einträge werden als \texttt{source="llm"} in das \ac{UFS} überführt und über den Schlüssel \texttt{ruleId|filePath|startLine} dedupliziert.
 \end{enumerate}
@@ -165,7 +163,7 @@ Regel~6 adressiert gezielt das in Abschnitt~\ref{kap:2.4} beschriebene Halluzina
 
 \subsection{Token-Budget-Steuerung}
 
-Wie in Abschnitt~\ref{sec:kontextualisierung} beschrieben, ist das Kontextfenster lokaler Modelle begrenzt. Der Prompt-Builder reserviert feste Anteile für den System-Prompt und die Modellausgabe; der verbleibende Platz steht für die serialisierten Findings zur Verfügung.\footnote{Beim eingesetzten Qwen2.5-Coder beträgt das Kontextfenster 32.768~Tokens. Nach Abzug von System-Prompt und Output-Reserve verbleiben ca.~24.000~Tokens für die Findings. Vgl. Anhang \ref{app:tokenbudget}}
+Wie in Abschnitt~\ref{sec:kontextualisierung} beschrieben, ist das Kontextfenster lokaler Modelle begrenzt. Der Prompt-Builder reserviert feste Anteile für den System-Prompt und die Modellausgabe; der verbleibende Platz steht für die serialisierten Findings zur Verfügung.\footnote{Beim eingesetzten Qwen2.5-Coder beträgt das Kontextfenster 32.768~Tokens. Nach Abzug von System-Prompt und Output-Reserve verbleiben ca.~24.000~Tokens für die Findings. Vgl. \cite{hui2024qwen25coder} sowie Anhang \ref{app:tokenbudget}}
 
 Übersteigt die Gesamtmenge der Findings dieses Budget, werden alle Findings quellenübergreifend nach Schweregrad sortiert; Einträge niedriger Priorität werden bei Bedarf entfernt. Findings mit Severity \texttt{critical} und \texttt{serious} haben dabei Vorrang. Der User-Prompt enthält einen expliziten Hinweis, wenn Findings aus Budgetgründen weggelassen werden.
 

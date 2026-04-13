@@ -46,95 +46,95 @@
 \contentsline {subsection}{\numberline {5.4.1}Ollama als Laufzeitumgebung}{29}{subsection.291}%
 \contentsline {subsection}{\numberline {5.4.2}Anforderungen an das Sprachmodell}{30}{subsection.295}%
 \contentsline {subsection}{\numberline {5.4.3}Ausgewählte Modellkandidaten für die Evaluation}{30}{subsection.297}%
-\contentsline {subsection}{\numberline {5.4.4}Zusammenfassung der Anforderungen}{30}{subsection.298}%
-\contentsline {chapter}{\numberline {6}Konzeption des Assistenzsystems}{32}{chapter.302}%
-\contentsline {section}{\numberline {6.1}Zielarchitektur und Datenpipeline}{32}{section.304}%
-\contentsline {subsection}{\numberline {6.1.1}Analysequellen}{32}{subsection.306}%
-\contentsline {subsection}{\numberline {6.1.2}\acl {UFS}}{33}{subsection.317}%
-\contentsline {section}{\numberline {6.2}Prompt-Strategie}{35}{section.341}%
-\contentsline {subsection}{\numberline {6.2.1}Zweistufige Prompt-Strategie}{35}{subsection.342}%
-\contentsline {subsection}{\numberline {6.2.2}Wahl der Prompt-Engineering-Strategien}{35}{subsection.343}%
-\contentsline {subsection}{\numberline {6.2.3}Token-Budget-Steuerung}{36}{subsection.347}%
-\contentsline {section}{\numberline {6.3}Ausgabeformat: entwicklernahe To-Do-Liste}{36}{section.349}%
-\contentsline {chapter}{\numberline {7}Implementierung des Proof of Concept}{38}{chapter.352}%
-\contentsline {section}{\numberline {7.1}Technischer Rahmen und Projektstruktur}{38}{section.353}%
-\contentsline {section}{\numberline {7.2}axe-core-Modul}{39}{section.374}%
-\contentsline {section}{\numberline {7.3}Playwright-Modul}{40}{section.376}%
-\contentsline {section}{\numberline {7.4}Code-Modul}{40}{section.378}%
-\contentsline {subsection}{\numberline {7.4.1}Anreicherung bestehender Findings}{40}{subsection.379}%
-\contentsline {subsection}{\numberline {7.4.2}Pattern-Findings}{41}{subsection.380}%
-\contentsline {section}{\numberline {7.5}\acs {LLM}-Detektor-Modul}{41}{section.381}%
-\contentsline {subsection}{\numberline {7.5.1}Abgrenzung zu grep und Nutzen der Kombination}{42}{subsection.390}%
-\contentsline {subsection}{\numberline {7.5.2}Beispielhafter Ablauf eines \acs {LLM}-Findings}{42}{subsection.391}%
-\contentsline {section}{\numberline {7.6}Prompt-Builder und System-Prompt}{42}{section.406}%
-\contentsline {subsection}{\numberline {7.6.1}System-Prompt}{43}{subsection.407}%
-\contentsline {subsection}{\numberline {7.6.2}Token-Budget-Steuerung}{43}{subsection.414}%
-\contentsline {subsection}{\numberline {7.6.3}Serialisierung}{44}{subsection.416}%
-\contentsline {section}{\numberline {7.7}Ollama-Client und Output-Formatter}{44}{section.417}%
-\contentsline {section}{\numberline {7.8}Pipeline-Orchestrierung}{44}{section.423}%
-\contentsline {section}{\numberline {7.9}Beispielabläufe am Untersuchungsobjekt}{45}{section.433}%
-\contentsline {chapter}{\numberline {8}Evaluation und Diskussion}{47}{chapter.435}%
-\contentsline {section}{\numberline {8.1}Versuchsdesign}{47}{section.436}%
-\contentsline {subsection}{\numberline {8.1.1}Testobjekte und Ground Truth}{47}{subsection.437}%
-\contentsline {subsection}{\numberline {8.1.2}Modelle, Konfiguration und Runs}{48}{subsection.438}%
-\contentsline {subsection}{\numberline {8.1.3}Metriken und Messverfahren}{48}{subsection.441}%
-\contentsline {section}{\numberline {8.2}Ergebnisse: Detektionsqualität (Recall)}{48}{section.442}%
-\contentsline {subsection}{\numberline {8.2.1}Baseline: Tool-Pipeline ohne \acs {LLM}-Detektor}{49}{subsection.444}%
-\contentsline {subsection}{\numberline {8.2.2}Recall nach \acs {LLM}-Detektor-Augmentierung}{49}{subsection.445}%
-\contentsline {subsection}{\numberline {8.2.3}Erkennungsleistung nach Verstoßkategorie}{49}{subsection.447}%
-\contentsline {subsection}{\numberline {8.2.4}Precision und F1-Score}{50}{subsection.449}%
-\contentsline {section}{\numberline {8.3}Ergebnisse: Priorisierungsqualität}{51}{section.453}%
-\contentsline {subsection}{\numberline {8.3.1}Modellvergleich Must-have und Nice-to-have}{51}{subsection.454}%
-\contentsline {section}{\numberline {8.4}Ergebnisse: Fix-Qualität (qualitativ)}{52}{section.456}%
-\contentsline {subsection}{\numberline {8.4.1}Bewertungsmaßstab}{52}{subsection.457}%
-\contentsline {subsection}{\numberline {8.4.2}Fallbeispiele nach Modell}{52}{subsection.458}%
-\contentsline {paragraph}{\nonumberline Fallbeispiel 1 -- Konkrete Empfehlung (Stufe~2, qwen3:32b).}{52}{paragraph*.460}%
-\contentsline {paragraph}{\nonumberline Fallbeispiel 2 -- Teilweise Empfehlung (Stufe~1, qwen2.5-coder:14b).}{52}{paragraph*.462}%
-\contentsline {paragraph}{\nonumberline Fallbeispiel 3 -- Fehlklassifikation (Stufe~0, qwen2.5-coder:7b).}{53}{paragraph*.464}%
-\contentsline {section}{\numberline {8.5}Ergebnisse: Effizienz und Robustheit}{53}{section.465}%
-\contentsline {subsection}{\numberline {8.5.1}Laufzeit und \acs {NFA}-02-Konformität}{53}{subsection.466}%
-\contentsline {subsection}{\numberline {8.5.2}Konsistenz und Parsing-Stabilität}{53}{subsection.467}%
-\contentsline {subsection}{\numberline {8.5.3}Token-Nutzung}{54}{subsection.468}%
-\contentsline {section}{\numberline {8.6}Limitationen und Validität}{54}{section.469}%
-\contentsline {subsection}{\numberline {8.6.1}Externe Validität}{54}{subsection.470}%
-\contentsline {subsection}{\numberline {8.6.2}Interne Validität und Token-Limit-Effekt}{54}{subsection.471}%
-\contentsline {subsection}{\numberline {8.6.3}Weitere Einschränkungen}{55}{subsection.472}%
-\contentsline {paragraph}{\nonumberline Grep-Limitierungen.}{55}{paragraph*.474}%
-\contentsline {paragraph}{\nonumberline Ursachen der Über-Detektion.}{55}{paragraph*.476}%
-\contentsline {paragraph}{\nonumberline Hardware-Abhängigkeit.}{55}{paragraph*.478}%
-\contentsline {section}{\numberline {8.7}Belastungsprüfung: test-50 und test-100}{55}{section.479}%
-\contentsline {subsection}{\numberline {8.7.1}Evaluation an test-50}{55}{subsection.480}%
-\contentsline {paragraph}{\nonumberline Token-Budget unter Druck.}{55}{paragraph*.482}%
-\contentsline {paragraph}{\nonumberline Detektionsleistung und Recall.}{56}{paragraph*.484}%
-\contentsline {paragraph}{\nonumberline Priorisierungsqualität.}{56}{paragraph*.486}%
-\contentsline {paragraph}{\nonumberline Effizienz und \ac {NFA}-02.}{56}{paragraph*.488}%
-\contentsline {subsection}{\numberline {8.7.2}Evaluation an test-100}{56}{subsection.489}%
-\contentsline {paragraph}{\nonumberline Token-Budget und Truncation.}{56}{paragraph*.491}%
-\contentsline {paragraph}{\nonumberline Detektionsleistung und Recall.}{56}{paragraph*.493}%
-\contentsline {paragraph}{\nonumberline Einordnung der Pareto-Perspektive.}{57}{paragraph*.495}%
-\contentsline {paragraph}{\nonumberline Laufzeit und Einsatzkontext.}{57}{paragraph*.497}%
-\contentsline {paragraph}{\nonumberline Erkennungsrate, Empfehlungsqualität und CSV-Auszug.}{57}{paragraph*.499}%
-\contentsline {paragraph}{\nonumberline Gesamteinordnung test-100.}{57}{paragraph*.501}%
-\contentsline {subsection}{\numberline {8.7.3}Evaluation am \acs {BWEC}-Untersuchungsobjekt}{57}{subsection.502}%
-\contentsline {paragraph}{\nonumberline Konfiguration und Tool-Baseline.}{57}{paragraph*.504}%
-\contentsline {paragraph}{\nonumberline Ergebnisse bei \texttt {maxfiles}~=~100 (66~Chunks).}{58}{paragraph*.506}%
-\contentsline {paragraph}{\nonumberline Skalierungsexperiment: \texttt {maxfiles}~=~500 (330~Chunks).}{58}{paragraph*.508}%
-\contentsline {paragraph}{\nonumberline Qualitative Plausibilitätsprüfung.}{58}{paragraph*.510}%
-\contentsline {section}{\numberline {8.8}Beantwortung der Forschungsfragen}{58}{section.511}%
-\contentsline {subsection}{\numberline {8.8.1}Übergeordnete Forschungsfrage}{58}{subsection.512}%
-\contentsline {subsection}{\numberline {8.8.2}TF1: Erkennungsleistung nach Verstoßtyp}{58}{subsection.513}%
-\contentsline {subsection}{\numberline {8.8.3}TF2: Mehrwert der Kontextkombination und Ablationsanalyse}{59}{subsection.514}%
-\contentsline {paragraph}{\nonumberline Ablationsanalyse: Beitrag des \ac {LLM}-Detektors.}{59}{paragraph*.516}%
-\contentsline {section}{\numberline {8.9}Modellwahl und Einsatzempfehlungen}{60}{section.518}%
-\contentsline {chapter}{\numberline {9}Fazit}{62}{chapter.520}%
-\contentsline {section}{\numberline {9.1}Zusammenfassung der Ergebnisse}{62}{section.521}%
-\contentsline {subsection}{\numberline {9.1.1}Beitrag zur übergeordneten Forschungsfrage}{62}{subsection.522}%
-\contentsline {subsection}{\numberline {9.1.2}Erfüllung der funktionalen und nicht-funktionalen Anforderungen}{63}{subsection.523}%
-\contentsline {section}{\numberline {9.2}Kritische Reflexion}{63}{section.525}%
-\contentsline {subsection}{\numberline {9.2.1}Grenzen der externen Validität}{63}{subsection.526}%
-\contentsline {subsection}{\numberline {9.2.2}Methodische Einschränkungen}{63}{subsection.527}%
-\contentsline {section}{\numberline {9.3}Ausblick}{64}{section.528}%
-\contentsline {subsection}{\numberline {9.3.1}Kurz- und mittelfristige Weiterentwicklungen}{64}{subsection.529}%
-\contentsline {subsection}{\numberline {9.3.2}Langfristige Forschungsperspektiven}{64}{subsection.535}%
-\contentsline {chapter}{Anhang}{66}{chapter*.536}%
-\contentsline {chapter}{Literaturverzeichnis}{176}{section*.948}%
+\contentsline {subsection}{\numberline {5.4.4}Zusammenfassung der Anforderungen}{30}{subsection.301}%
+\contentsline {chapter}{\numberline {6}Konzeption des Assistenzsystems}{32}{chapter.305}%
+\contentsline {section}{\numberline {6.1}Zielarchitektur und Datenpipeline}{32}{section.307}%
+\contentsline {subsection}{\numberline {6.1.1}Analysequellen}{32}{subsection.309}%
+\contentsline {subsection}{\numberline {6.1.2}\acl {UFS}}{33}{subsection.320}%
+\contentsline {section}{\numberline {6.2}Prompt-Strategie}{35}{section.344}%
+\contentsline {subsection}{\numberline {6.2.1}Zweistufige Prompt-Strategie}{35}{subsection.345}%
+\contentsline {subsection}{\numberline {6.2.2}Wahl der Prompt-Engineering-Strategien}{35}{subsection.346}%
+\contentsline {subsection}{\numberline {6.2.3}Token-Budget-Steuerung}{36}{subsection.350}%
+\contentsline {section}{\numberline {6.3}Ausgabeformat: entwicklernahe To-Do-Liste}{36}{section.352}%
+\contentsline {chapter}{\numberline {7}Implementierung des Proof of Concept}{38}{chapter.355}%
+\contentsline {section}{\numberline {7.1}Technischer Rahmen und Projektstruktur}{38}{section.356}%
+\contentsline {section}{\numberline {7.2}axe-core-Modul}{39}{section.377}%
+\contentsline {section}{\numberline {7.3}Playwright-Modul}{40}{section.379}%
+\contentsline {section}{\numberline {7.4}Code-Modul}{40}{section.381}%
+\contentsline {subsection}{\numberline {7.4.1}Anreicherung bestehender Findings}{40}{subsection.382}%
+\contentsline {subsection}{\numberline {7.4.2}Pattern-Findings}{41}{subsection.383}%
+\contentsline {section}{\numberline {7.5}\acs {LLM}-Detektor-Modul}{41}{section.384}%
+\contentsline {subsection}{\numberline {7.5.1}Abgrenzung zu grep und Nutzen der Kombination}{42}{subsection.393}%
+\contentsline {subsection}{\numberline {7.5.2}Beispielhafter Ablauf eines \acs {LLM}-Findings}{42}{subsection.394}%
+\contentsline {section}{\numberline {7.6}Prompt-Builder und System-Prompt}{42}{section.409}%
+\contentsline {subsection}{\numberline {7.6.1}System-Prompt}{43}{subsection.410}%
+\contentsline {subsection}{\numberline {7.6.2}Token-Budget-Steuerung}{43}{subsection.417}%
+\contentsline {subsection}{\numberline {7.6.3}Serialisierung}{44}{subsection.419}%
+\contentsline {section}{\numberline {7.7}Ollama-Client und Output-Formatter}{44}{section.420}%
+\contentsline {section}{\numberline {7.8}Pipeline-Orchestrierung}{44}{section.426}%
+\contentsline {section}{\numberline {7.9}Beispielabläufe am Untersuchungsobjekt}{45}{section.436}%
+\contentsline {chapter}{\numberline {8}Evaluation und Diskussion}{47}{chapter.438}%
+\contentsline {section}{\numberline {8.1}Versuchsdesign}{47}{section.439}%
+\contentsline {subsection}{\numberline {8.1.1}Testobjekte und Ground Truth}{47}{subsection.440}%
+\contentsline {subsection}{\numberline {8.1.2}Modelle, Konfiguration und Runs}{48}{subsection.441}%
+\contentsline {subsection}{\numberline {8.1.3}Metriken und Messverfahren}{48}{subsection.449}%
+\contentsline {section}{\numberline {8.2}Ergebnisse: Detektionsqualität (Recall)}{49}{section.450}%
+\contentsline {subsection}{\numberline {8.2.1}Baseline: Tool-Pipeline ohne \acs {LLM}-Detektor}{49}{subsection.452}%
+\contentsline {subsection}{\numberline {8.2.2}Recall nach \acs {LLM}-Detektor-Augmentierung}{49}{subsection.453}%
+\contentsline {subsection}{\numberline {8.2.3}Erkennungsleistung nach Verstoßkategorie}{49}{subsection.455}%
+\contentsline {subsection}{\numberline {8.2.4}Precision und F1-Score}{50}{subsection.457}%
+\contentsline {section}{\numberline {8.3}Ergebnisse: Priorisierungsqualität}{51}{section.461}%
+\contentsline {subsection}{\numberline {8.3.1}Modellvergleich Must-have und Nice-to-have}{51}{subsection.462}%
+\contentsline {section}{\numberline {8.4}Ergebnisse: Fix-Qualität (qualitativ)}{52}{section.464}%
+\contentsline {subsection}{\numberline {8.4.1}Bewertungsmaßstab}{52}{subsection.465}%
+\contentsline {subsection}{\numberline {8.4.2}Fallbeispiele nach Modell}{52}{subsection.466}%
+\contentsline {paragraph}{\nonumberline Fallbeispiel 1 -- Konkrete Empfehlung (Stufe~2, qwen3:32b).}{52}{paragraph*.468}%
+\contentsline {paragraph}{\nonumberline Fallbeispiel 2 -- Teilweise Empfehlung (Stufe~1, qwen2.5-coder:14b).}{53}{paragraph*.470}%
+\contentsline {paragraph}{\nonumberline Fallbeispiel 3 -- Fehlklassifikation (Stufe~0, qwen2.5-coder:7b).}{53}{paragraph*.472}%
+\contentsline {section}{\numberline {8.5}Ergebnisse: Effizienz und Robustheit}{53}{section.473}%
+\contentsline {subsection}{\numberline {8.5.1}Laufzeit und \acs {NFA}-02-Konformität}{53}{subsection.474}%
+\contentsline {subsection}{\numberline {8.5.2}Konsistenz und Parsing-Stabilität}{53}{subsection.475}%
+\contentsline {subsection}{\numberline {8.5.3}Token-Nutzung}{54}{subsection.476}%
+\contentsline {section}{\numberline {8.6}Limitationen und Validität}{54}{section.477}%
+\contentsline {subsection}{\numberline {8.6.1}Externe Validität}{54}{subsection.478}%
+\contentsline {subsection}{\numberline {8.6.2}Interne Validität und Token-Limit-Effekt}{54}{subsection.479}%
+\contentsline {subsection}{\numberline {8.6.3}Weitere Einschränkungen}{55}{subsection.480}%
+\contentsline {paragraph}{\nonumberline Grep-Limitierungen.}{55}{paragraph*.482}%
+\contentsline {paragraph}{\nonumberline Ursachen der Über-Detektion.}{55}{paragraph*.484}%
+\contentsline {paragraph}{\nonumberline Hardware-Abhängigkeit.}{55}{paragraph*.486}%
+\contentsline {section}{\numberline {8.7}Belastungsprüfung: test-50 und test-100}{55}{section.487}%
+\contentsline {subsection}{\numberline {8.7.1}Evaluation an test-50}{55}{subsection.488}%
+\contentsline {paragraph}{\nonumberline Token-Budget unter Druck.}{56}{paragraph*.490}%
+\contentsline {paragraph}{\nonumberline Detektionsleistung und Recall.}{56}{paragraph*.492}%
+\contentsline {paragraph}{\nonumberline Priorisierungsqualität.}{56}{paragraph*.494}%
+\contentsline {paragraph}{\nonumberline Effizienz und \ac {NFA}-02.}{56}{paragraph*.496}%
+\contentsline {subsection}{\numberline {8.7.2}Evaluation an test-100}{56}{subsection.497}%
+\contentsline {paragraph}{\nonumberline Token-Budget und Truncation.}{56}{paragraph*.499}%
+\contentsline {paragraph}{\nonumberline Detektionsleistung und Recall.}{57}{paragraph*.501}%
+\contentsline {paragraph}{\nonumberline Einordnung der Pareto-Perspektive.}{57}{paragraph*.503}%
+\contentsline {paragraph}{\nonumberline Laufzeit und Einsatzkontext.}{57}{paragraph*.505}%
+\contentsline {paragraph}{\nonumberline Erkennungsrate, Empfehlungsqualität und CSV-Auszug.}{57}{paragraph*.507}%
+\contentsline {paragraph}{\nonumberline Gesamteinordnung test-100.}{57}{paragraph*.509}%
+\contentsline {subsection}{\numberline {8.7.3}Evaluation am \acs {BWEC}-Untersuchungsobjekt}{57}{subsection.510}%
+\contentsline {paragraph}{\nonumberline Konfiguration und Tool-Baseline.}{58}{paragraph*.512}%
+\contentsline {paragraph}{\nonumberline Ergebnisse bei \texttt {maxfiles}~=~100 (66~Chunks).}{58}{paragraph*.514}%
+\contentsline {paragraph}{\nonumberline Skalierungsexperiment: \texttt {maxfiles}~=~500 (330~Chunks).}{58}{paragraph*.516}%
+\contentsline {paragraph}{\nonumberline Qualitative Plausibilitätsprüfung.}{58}{paragraph*.518}%
+\contentsline {section}{\numberline {8.8}Beantwortung der Forschungsfragen}{58}{section.519}%
+\contentsline {subsection}{\numberline {8.8.1}Übergeordnete Forschungsfrage}{58}{subsection.520}%
+\contentsline {subsection}{\numberline {8.8.2}TF1: Erkennungsleistung nach Verstoßtyp}{59}{subsection.521}%
+\contentsline {subsection}{\numberline {8.8.3}TF2: Mehrwert der Kontextkombination und Ablationsanalyse}{59}{subsection.522}%
+\contentsline {paragraph}{\nonumberline Ablationsanalyse: Beitrag des \ac {LLM}-Detektors.}{59}{paragraph*.524}%
+\contentsline {section}{\numberline {8.9}Modellwahl und Einsatzempfehlungen}{60}{section.526}%
+\contentsline {chapter}{\numberline {9}Fazit}{62}{chapter.528}%
+\contentsline {section}{\numberline {9.1}Zusammenfassung der Ergebnisse}{62}{section.529}%
+\contentsline {subsection}{\numberline {9.1.1}Beitrag zur übergeordneten Forschungsfrage}{62}{subsection.530}%
+\contentsline {subsection}{\numberline {9.1.2}Erfüllung der funktionalen und nicht-funktionalen Anforderungen}{63}{subsection.531}%
+\contentsline {section}{\numberline {9.2}Kritische Reflexion}{63}{section.533}%
+\contentsline {subsection}{\numberline {9.2.1}Grenzen der externen Validität}{63}{subsection.534}%
+\contentsline {subsection}{\numberline {9.2.2}Methodische Einschränkungen}{63}{subsection.535}%
+\contentsline {section}{\numberline {9.3}Ausblick}{64}{section.536}%
+\contentsline {subsection}{\numberline {9.3.1}Kurz- und mittelfristige Weiterentwicklungen}{64}{subsection.537}%
+\contentsline {subsection}{\numberline {9.3.2}Langfristige Forschungsperspektiven}{64}{subsection.543}%
+\contentsline {chapter}{Anhang}{66}{chapter*.544}%
+\contentsline {chapter}{Literaturverzeichnis}{176}{section*.956}%

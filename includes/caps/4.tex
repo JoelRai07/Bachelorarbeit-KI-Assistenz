@@ -4,13 +4,13 @@ In diesem Kapitel werden die Grundlagen für das in Kapitel~\ref{kap:5} beschrie
 
 \section{Problemkontext und Handlungsbedarf}\label{kap:4.1}
 
-Wie in Kapitel~\ref{kap:1} dargelegt, unterliegen alle von der \ac{BITBW} entwickelten und betriebenen Webanwendungen den gesetzlichen Anforderungen der \ac{BITV} 2.0, die \ac{WCAG} 2.2 auf Konformitätsstufe AA als verbindlichen Maßstab definiert.\footcite[Vgl.][]{BITV} In der Praxis erfolgt die Barrierefreiheitsprüfung heute überwiegend manuell oder durch den Einsatz einzelner regelbasierter Tools -- ein Vorgehen, das aus zwei Gründen problematisch ist: Manuelle Audits sind personalintensiv und skalieren nur unzureichend mit der Anzahl zu betreuender Anwendungen; regelbasierte Tools erfassen, wie in Kapitel~\ref{tools} dargelegt, nur einen Bruchteil der tatsächlich vorhandenen Barrieren.\footcite[Vgl.][S. 8-9]{tafreshipour_ma11y_2024}
+Wie in Kapitel~\ref{kap:1} dargelegt, unterliegen alle von der \ac{BITBW} entwickelten und betriebenen Webanwendungen den gesetzlichen Anforderungen der \ac{BITV} 2.0, die \ac{WCAG} 2.2 auf Konformitätsstufe AA als verbindlichen Maßstab definiert.\footcite[Vgl.][]{BITV} In der Praxis erfolgt die Barrierefreiheitsprüfung heute überwiegend manuell oder durch den Einsatz einzelner regelbasierter Tools -- ein Vorgehen, das aus zwei Gründen problematisch ist: Manuelle Audits sind personalintensiv und skalieren nur unzureichend mit der Anzahl zu betreuender Anwendungen; regelbasierte Tools erfassen, wie in Kapitel~\ref{tools} dargelegt, nur einen Bruchteil der tatsächlich vorhandenen Barrieren.\footcite[Vgl.][S. 8--9]{tafreshipour_ma11y_2024}
 
 Die in Kapitel~\ref{kap:3} identifizierten drei Forschungslücken -- fehlende Zustandserfassung durch Interaktionen, fehlende Quellcode-Verknüpfung sowie die Unvereinbarkeit cloudbasierter \ac{LLM}-\ac{API}s mit den Datenschutzanforderungen öffentlicher Verwaltungen (vgl. Abschnitt~\ref{datenschutz}) -- bilden den Ausgangspunkt der Anforderungserhebung.\footcites[Vgl.][S. 79]{hevnerChatterjeeDesignResearch2010}[Vgl.][S. 9--11, 23--24]{hevnerChatterjeeDesignResearch2010} Daraus leitet sich das Systemziel ab: ein lokal ausführbares, \ac{LLM}-gestütztes Assistenzsystem, das axe-core-Reports, Playwright-Interaktionsdaten und statische Quellcodeanalyse kombiniert (vgl. Abschnitt~\ref{kap:1.3}).\footcite[Vgl.][S. 9--11, 23--24]{hevnerChatterjeeDesignResearch2010}
 
 \section{\acl{FA}} \label{kap:4.2}
 
-\acf{FA} beschreiben, was ein System leisten soll.\footcite[Vgl.][S. 6-9]{sommerville2016software} Die folgenden Anforderungen ergeben sich aus der Problemanalyse (Abschnitt~\ref{kap:4.1}), den Forschungslücken (Abschnitt~\ref{Forschungslücken}) sowie einer Analyse vergleichbarer Systeme aus der Literatur.
+\acf{FA} beschreiben, was ein System leisten soll.\footcite[Vgl.][S. 105--107]{sommerville2016software} Die folgenden Anforderungen ergeben sich aus der Problemanalyse (Abschnitt~\ref{kap:4.1}), den Forschungslücken (Abschnitt~\ref{Forschungslücken}) sowie einer Analyse vergleichbarer Systeme aus der Literatur.
 
 \textfett{\acs{FA}-01 Regelbasierte Accessibility-Erkennung}
 
@@ -68,7 +68,7 @@ Die Auswahl konkreter Modellkandidaten sowie deren vergleichende Evaluation werd
 
 \subsection{Ausgewählte Modellkandidaten für die Evaluation}
 
-Für die Evaluation in Kapitel~\ref{kap:7} werden vier lokal ausführbare Modellkandidaten betrachtet, soweit die verfügbaren Hardware-Ressourcen eine Ausführung zulassen: \texttt{qwen2.5-coder:7b}, \texttt{qwen2.5-coder:14b}, \texttt{qwen3:32b} und \texttt{deepseek-r1:70b}. Die Auswahl folgt einem bewussten Vergleich unterschiedlicher Modellgrößen: 7B und 14B repräsentieren ressourcenschonende Modelle für den operativen Lokalbetrieb, 32B einen mittleren Kompromiss aus Qualität und Laufzeit, 70B ein leistungsstarkes Referenzmodell mit höherem Rechenbedarf.
+Für die Evaluation in Kapitel~\ref{kap:7} werden vier lokal ausführbare Modellkandidaten betrachtet, soweit die verfügbaren Hardware-Ressourcen eine Ausführung zulassen: \texttt{qwen2.5-coder:7b}, \texttt{qwen2.5-coder:14b}\footcite[Vgl.][]{hui2024qwen25coder}, \texttt{qwen3:32b}\footcite[Vgl.][]{qwen3} und \texttt{deepseek-r1:70b}\footcite[Vgl.][]{deepseek}. Die Auswahl folgt einem bewussten Vergleich unterschiedlicher Modellgrößen: 7B und 14B repräsentieren ressourcenschonende Modelle für den operativen Lokalbetrieb, 32B einen mittleren Kompromiss aus Qualität und Laufzeit, 70B ein leistungsstarkes Referenzmodell mit höherem Rechenbedarf.
 
 \subsection{Zusammenfassung der Anforderungen}
 

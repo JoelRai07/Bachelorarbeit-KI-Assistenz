@@ -18,13 +18,10 @@ Die \textit{test-50-Suite} (50~Violations) dient als Zwischenstufe zwischen Kali
 \subsection{Modelle, Konfiguration und Runs}
 \label{sec:versuch_modelle}
 
-Es werden drei lokal ausgeführte Sprachmodelle verglichen: \texttt{qwen2.5-coder:7b}, \texttt{qwen2.5-coder:14b} und \texttt{qwen3:32b}. Das in Kapitel~\ref{kap:4} ebenfalls genannte \texttt{deepseek-r1:70b} kann im Rahmen dieser Arbeit nicht evaluiert werden, da das Modell mit 70 Milliarden Parametern die verfügbare \ac{RAM}-Kapazität der Testumgebung überschreitet; es bleibt Gegenstand künftiger Evaluation auf leistungsstärkerer Hardware (vgl. Abschnitt~\ref{sec:eval_erweiterung}).
+Es werden drei lokal ausgeführte Sprachmodelle verglichen: \texttt{qwen2.5-coder:7b}, \texttt{qwen2.5-coder:14b}\footcite[Vgl.][]{hui2024qwen25coder} und \texttt{qwen3:32b}\footcite[Vgl.][]{qwen3}. Das in Kapitel~\ref{kap:4} ebenfalls genannte \texttt{deepseek-r1:70b}\footcite[Vgl.][]{deepseek} kann im Rahmen dieser Arbeit nicht evaluiert werden, da das Modell mit 70 Milliarden Parametern die verfügbare \ac{RAM}-Kapazität der Testumgebung überschreitet; es bleibt Gegenstand künftiger Evaluation auf leistungsstärkerer Hardware (vgl. Abschnitt~\ref{sec:eval_erweiterung}).
 
 Auf jeder der drei synthetischen Suites absolvierte jedes Modell zehn unabhängige Pipeline-Durchläufe, was insgesamt 90~Benchmarkläufe auf synthetischen Testsuiten ergibt. Ergänzend wurden 18~Läufe auf dem realen \ac{BWEC} durchgeführt (zwei Konfigurationen mit je 9~Runs). Die Temperatur wurde auf 0.05 gesetzt, um den Nicht-Determinismus zu minimieren. Der \ac{LLM}-Detektor operiert mit separaten Parametern: 2\,048~Tokens für die Code-Analyse, 4\,000~Zeichen pro Chunk und maximal 25~Dateien pro Durchlauf.
 
-% KÜRZUNG: Tabellen tab:versuchsdesign_uebersicht und tab:benchmark_runs zu einer
-% einzigen Tabelle zusammengeführt. tab:versuchsdesign_uebersicht wurde entfernt;
-% die Parameter sind in der Tabellenunterschrift dokumentiert.
 \begin{table}[htbp]
 \centering
 \small
@@ -35,15 +32,17 @@ Auf jeder der drei synthetischen Suites absolvierte jedes Modell zehn unabhängi
 \midrule
 \texttt{qwen2.5-coder:7b}  & Code       & 10~Runs & 10~Runs & 10~Runs \\
 \texttt{qwen2.5-coder:14b} & Code       & 10~Runs & 10~Runs & 10~Runs \\
-\texttt{qwen3:32b}         & Generalist & 10~Runs & 10~Runs & 10~Runs \\
-\texttt{deepseek-r1:70b}   & Reasoning  & --      & --      & --      \\
+\texttt{qwen3:32b}         & Generalist\footnotemark & 10~Runs & 10~Runs & 10~Runs \\
+\texttt{deepseek-r1:70b}   & Reasoning\footnotemark  & --      & --      & --      \\
 \midrule
 \textbf{Gesamt (durchgeführt)} & & \textbf{30} & \textbf{30} & \textbf{30} \\
 \bottomrule
 \end{tabular}
-\caption[Durchgeführte Benchmark-Runs je Modell und Testsuite]{Verteilung der Benchmark-Runs auf Modelle und Testsuiten (je 10~Runs pro Modell und Suite). \texttt{temperature}~=~0.05; \texttt{num\_predict}: test-12 = 6\,144; test-50 = 8\,192; test-100 = 12\,288. \texttt{deepseek-r1:70b} konnte aufgrund fehlender \ac{RAM}-Kapazität nicht evaluiert werden.}
+\caption[Durchgeführte Benchmark-Runs je Modell und Testsuite]{Verteilung der Benchmark-Runs auf Modelle und Testsuiten (je 10~Runs pro Modell und Suite). \texttt{temperature}~=~0.05; \texttt{num\_predict}: test-12 = 6\,144; test-50 = 8\,192; test-100 = 12\,288. \texttt{deepseek-r1:70b} konnte aufgrund fehlender \ac{RAM}-Kapazität sowie prohibitiv hoher \ac{CPU}- und \ac{GPU}-Last und resultierender Laufzeit nicht evaluiert werden.}
 \label{tab:benchmark_runs}
 \end{table}
+\footcitetext[Vgl.][]{qwen3}
+\footcitetext[Vgl.][]{deepseek}
 
 \subsection{Metriken und Messverfahren}
 \label{sec:versuch_metriken}
@@ -59,8 +58,6 @@ Dieser Abschnitt bewertet, welche der 12~Ground-Truth-Violations die Pipeline er
 \subsection{Baseline: Tool-Pipeline ohne \acs{LLM}-Detektor}
 \label{sec:recall_baseline}
 
-% KÜRZUNG: Erläuterung zu V8 / Playwright-Satz auf einen Satz komprimiert;
-% Detail wird in sec:limitationen und sec:ausblick_kurz behandelt.
 Ohne \ac{LLM}-Detektor erkennt die Tool-Pipeline (axe-core~+~Playwright~+~grep) in jedem Durchlauf stabil \textbf{8 von 12~Violations} (Recall: 66,7\,\%). Nicht erkannt werden V2 (fehlendes \texttt{aria-label}), V8 (modaler Fokus-Trap), V11 (\ac{DOM}-Reihenfolge) und V12 (Mindestgröße) -- Fälle, die überwiegend semantische oder kontextabhängige Interpretation erfordern. Ein generischer Fokus-Trap-Test für V8 ließ sich ohne anwendungsspezifische Selektoren nicht robust implementieren (vgl. Abschnitt~\ref{sec:fazit_ausblick}).
 
 \subsection{Recall nach \acs{LLM}-Detektor-Augmentierung}
@@ -157,8 +154,7 @@ Neben dem Recall ist die Korrektheit der Must-have/Nice-to-have-Klassifikation f
 \label{sec:prio_modellvergleich}
 
 Das Prompt-Design schreibt dem Modell vor, Findings nach Must-have und Nice-to-have zu kategorisieren. Da die Priorisierungsphase sämtliche Quellen (axe, Playwright, grep und \ac{LLM}-Detektor) zusammenführt, ist die Gesamtzahl der Report-Items größer als die Zahl der 12~Ground-Truth-Violations. Tabelle~\ref{tab:priorisierungsqualitaet} zeigt die mittleren Zählungen über 10~Runs.
-% KÜRZUNG: Abschnitt 7.5.2 (Einfluss des Token-Limits) entfernt; Kernaussage
-% in die Tabellenunterschrift integriert.
+
 Die Spalte \textit{Bewertung} fasst das Verhalten qualitativ zusammen. Zu beachten ist, dass Findings am Listenende -- typischerweise Nice-to-have -- bei 7b und 14b durch das Output-Token-Limit systematisch häufiger abgeschnitten werden; die Nice-to-have-Werte sind daher als untere Schranke zu interpretieren.
 
 \begin{table}[htbp]
@@ -254,12 +250,9 @@ Zusätzlich birgt die Operationalisierung \glqq{}Violation erkannt\grqq{} ein Ko
 \label{sec:limit_weitere}
 
 \paragraph{Grep-Limitierungen.}
-% KÜRZUNG: Grep-Limitierungen auf 2 Sätze komprimiert; technische Details im Anhang.
 Die regex-basierten grep-Patterns erkennen bekannte Anti-Patterns zuverlässig auf Textebene, sind aber weder erschöpfend noch struktursensitiv. Insbesondere Click-Patterns ohne Tastaturäquivalent können in Einzelfällen legitime Implementierungen zu aggressiv markieren.
 
 \paragraph{Ursachen der Über-Detektion.}
-% KÜRZUNG: Ursachenanalyse auf den Kernbefund komprimiert; vollständige
-% Stichprobenplausibilisierung im Anhang (app:stichprobe_plausibilitaet).
 Eine Stichproben-Plausibilisierung an zwei Läufen von \texttt{qwen3:32b} auf test-100 zeigt, dass bestätigte Halluzinationen die Ausnahme sind (1 von 176 geprüften Einträgen). Die dominanten Überdetektions-Effekte sind Quell-Duplikate, Mehrfachinstanzen und Grenzfälle der Zuordnung (vgl. Anhang~\ref{app:stichprobe_plausibilitaet}). \textbf{Über-Detektion ist damit überwiegend ein strukturelles und nicht primär ein inhaltliches Qualitätsproblem.}
 
 \paragraph{Hardware-Abhängigkeit.}
@@ -280,12 +273,9 @@ Die test-50-Messreihe wurde mit identischer Grundkonfiguration wie test-12 durch
 Die test-50-Messreihe zeigt als wichtigste Beobachtung: das Token-Budget wird nun systematisch erschöpft. Die mittleren Input-Tokens steigen auf ca.~13\,200--14\,200. Trotz des angehobenen Output-Limits schöpfen 60--90\,\% aller Runs das Budget vollständig aus: \texttt{qwen2.5-coder:7b} in 6\,/\,10~Runs, \texttt{qwen2.5-coder:14b} in 7\,/\,10~Runs und \texttt{qwen3:32b} in 9\,/\,10~Runs.
 
 \paragraph{Detektionsleistung und Recall.}
-% KÜRZUNG: Detektionsleistung und struktureller Engpass-Befund zusammengefasst.
 Die Baseline-Tools liefern auf test-50 stabil 14~axe-core-, 2~Playwright- und 21~grep-Findings. Der \ac{LLM}-Detektor erzielt im Mittel: \texttt{qwen2.5-coder:7b} 46{,}6~Findings ($\sigma \approx 3{,}20$), \texttt{qwen2.5-coder:14b} 51{,}3~Findings ($\sigma \approx 2{,}21$) und \texttt{qwen3:32b} 60{,}7~Findings ($\sigma \approx 1{,}25$). Ein strukturell bedeutsamer Befund ist in der Recall-Matrix (Tabelle~\ref{tab:recall_matrix_50}) direkt ablesbar: Die Baseline (Tool-only) erzielt 43\,/\,50 Violations, während \texttt{qwen2.5-coder:7b} mit der vollen Pipeline nur 36\,/\,50 erreicht. Bei 50~Violations wird die \ac{LLM}-Zusammenfassungsphase für 7b damit zum \textbf{Engpass statt zum Mehrwert} -- sie komprimiert vorhandene Tool-Findings unter Informationsverlust, statt sie zuverlässig zu ergänzen. Erst \texttt{qwen2.5-coder:14b} (48\,/\,50) und \texttt{qwen3:32b} (50\,/\,50) übertreffen das Baseline-Niveau.
 
 \paragraph{Priorisierungsqualität.}
-% KÜRZUNG: Tabelle tab:priorisierungsqualitaet_50 in den Anhang verschoben;
-% Kernaussage im Text zusammengefasst.
 \texttt{qwen3:32b} erzielt mit \O{}~47{,}6~Must-have die plausibelste Klassifikation relativ zur Ground Truth von 50~Violations. \texttt{qwen2.5-coder:14b} zeigt ein bimodales Muster mit einzelnen Runs, die fast ausschließlich Must-have ausgeben. \texttt{qwen2.5-coder:7b} bleibt instabil. Die vollständigen Priorisierungszählungen finden sich in Tabelle~\ref{tab:modell_summary_50} im Anhang.
 
 \paragraph{Effizienz und \ac{NFA}-02.}
@@ -321,7 +311,6 @@ Für die test-100-Suite ergibt sich ein klarer Trade-off: \texttt{qwen3:32b} lie
 
 Ergänzend wurde das reale Untersuchungsobjekt \ac{BWEC} der \ac{BITBW} evaluiert. Da keine bekannte Ground Truth vorliegt, beschränkt sich die Evaluation auf Systemstabilität, Skalierungseffekte und qualitative Plausibilität der generierten Befunde.
 
-% KÜRZUNG: Konfigurationsabsatz komprimiert – Details im Anhang (tab:rohdaten_bwec).
 \paragraph{Konfiguration und Tool-Baseline.}
 Es wurden zwei Konfigurationen mit je 9~Runs durchgeführt: \textit{bwec} mit \texttt{maxfiles=100} (66~Chunks) und \textit{bwec-500} mit \texttt{maxfiles=500} (330~Chunks) als Skalierungsexperiment. Die deterministischen Quellen liefern über alle 18~Runs hinweg konstant axe-core~10, Playwright~2 und grep~8~Findings (Summe: 20), was die deterministische Eigenschaft dieser Quellen auch am realen Untersuchungsobjekt bestätigt (vgl. Anhang~\ref{app:detektionsquellen_bwec}).
 
