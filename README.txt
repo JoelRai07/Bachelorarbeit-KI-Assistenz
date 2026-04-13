@@ -19,10 +19,7 @@ Weil man dabei echte Treffer verlieren kann.
 Wenn zwei ähnlich klingende Befunde fälschlich gemerged werden, verschwindet evtl. ein relevanter Hinweis.
 Das wäre ein False Negative (ein echtes Problem wird nicht mehr gemeldet).
 
-Fragen für nächstes Mal:
-Stimmt das Token Budget Bild noch wenn man den text liest?
-Referenzen auf den neuen Anhang Detektionsquellen_Übersicht_BWEC im Text notwendig?
-Sehr unschöne tabelle "Vergleich über alle Suites Tab. 18: Kompakter Orientierungsvergleich der zentralen Kennzahlen über test-12, test-50 und
-test-100." da sie zu breit ist und mit resizebox alles megakomprimiert wird
-Ist die Reihenfolge der Anhänge gut so oder sollte noch was verändert werden?
-Sollte tabelle vergleich über alle suites nicht zu den anderen grafiken kommen die vergleiche machen?
+Kommentieren den Prüfer
+- Seitenanzahl
+- Englische Fachbegriffe: Die Zitierrichtlinien sagen in Abschnitt 1.3 zwar, dass „entbehrliche Fremdwörter zu vermeiden" seien, und Abschnitt 1.11 empfiehlt, Fachbegriffe „im Text an der betreffenden Stelle oder in einer Fußnote" zu erläutern. Aber: In einer Wirtschaftsinformatik-Arbeit sind Begriffe wie Recall, Precision, Pipeline, Baseline und Parsing keine „entbehrlichen Fremdwörter" — das ist etablierte Fachterminologie, für die es teilweise gar keine sinnvolle deutsche Entsprechung gibt. „Trefferquote" für Recall oder „Datenverarbeitungskette" für Pipeline wäre eher verwirrend als hilfreich.
+- Erläuterung der "Eigenen Abbildung"

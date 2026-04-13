@@ -1,6 +1,6 @@
 \chapter{Evaluation und Diskussion} \label{kap:7}
 
-Dieses Kapitel bewertet das \ac{ACE}-System anhand der Forschungsfragen aus Kapitel~\ref{kap:1.3}. Abschnitt~\ref{sec:versuchsdesign} legt Versuchsdesign und Metriken fest; die Abschnitte~\ref{sec:ergebnisse_recall}--\ref{sec:ergebnisse_effizienz} dokumentieren die Ergebnisse zu Recall, Priorisierungsqualität, Fix-Qualität und Effizienz; die Abschnitte~\ref{sec:limitationen}--\ref{sec:modellwahl} diskutieren Limitationen, beantworten die Forschungsfragen und leiten Einsatzempfehlungen ab.
+Dieses Kapitel bewertet das \ac{ACE}-System anhand der Forschungsfragen aus Abschnitt~\ref{kap:1.3}. Abschnitt~\ref{sec:versuchsdesign} legt Versuchsdesign und Metriken fest; die Abschnitte~\ref{sec:ergebnisse_recall}--\ref{sec:ergebnisse_effizienz} dokumentieren die Ergebnisse zu Recall, Priorisierungsqualität, Fix-Qualität und Effizienz; die Abschnitte~\ref{sec:limitationen}--\ref{sec:modellwahl} diskutieren Limitationen, beantworten die Forschungsfragen und leiten Einsatzempfehlungen ab.
 
 % ─────────────────────────────────────────────────────────────────────────────
 \section{Versuchsdesign}
@@ -11,7 +11,7 @@ Die Evaluation ist mehrstufig angelegt und folgt einer klaren Stufenlogik: Die \
 \subsection{Testobjekte und Ground Truth}
 \label{sec:versuch_testobjekt}
 
-Die \textit{test-12-Suite} ist eine eigens entwickelte React-\ac{SPA} mit zwölf gezielt eingebetteten \ac{WCAG}-Verstößen (Tabelle~\ref{tab:accessibility_verstoesse}), die alle drei Kategorien der in Kapitel~\ref{Taxonomie} eingeführten Taxonomie abdecken: vier syntaktische (V1, V2, V3, V10), drei layout-bezogene (V4, V5, V12) und fünf semantische Verstöße (V6, V7, V8, V9, V11). Da die Ground Truth vollständig bekannt und kontrollierbar ist, eignet sich diese Suite als \textbf{Kalibrierungsphase}: Es lässt sich exakt prüfen, ob alle Detektionsquellen korrekt angebunden sind, die Normalisierung funktioniert und das \ac{LLM} die Pipeline-Ausgaben grundsätzlich verarbeiten kann. Aufgrund der geringen Komplexität der Suite sind die erzielten Recall-Werte jedoch nicht als repräsentativ für reale Anwendungen zu interpretieren. Die visuelle Gestalt der Testanwendung ist in Anhang~\ref{fig:test12_screen1} und \ref{fig:test12_screen2} dokumentiert.
+Die \textit{test-12-Suite} ist eine eigens entwickelte React-\ac{SPA} mit zwölf gezielt eingebetteten \ac{WCAG}-Verstößen (Tabelle~\ref{tab:accessibility_verstoesse}), die alle drei Kategorien der in Kapitel~\ref{Taxonomie} eingeführten Taxonomie abdecken: vier syntaktische (V1, V2, V3, V10), drei layout-bezogene (V4, V5, V12) und fünf semantische Verstöße (V6, V7, V8, V9, V11). Da die Ground Truth vollständig bekannt und kontrollierbar ist, eignet sich diese Suite als \textbf{Kalibrierungsphase}: Es lässt sich exakt prüfen, ob alle Detektionsquellen korrekt angebunden sind, die Normalisierung funktioniert und das \ac{LLM} die Pipeline-Ausgaben grundsätzlich verarbeiten kann. Aufgrund der geringen Komplexität der Suite sind die erzielten Recall-Werte jedoch nicht als repräsentativ für reale Anwendungen zu interpretieren. Die visuelle Gestalt der Testanwendung ist in Abbildung~\ref{fig:test12_screen1} und \ref{fig:test12_screen2} dokumentiert.
 
 Die \textit{test-50-Suite} (50~Violations) dient als Zwischenstufe zwischen Kalibrierung und Belastungsprüfung. Die \textit{test-100-Suite} (100~Violations, 11~Komponenten, vgl. Anhang~\ref{app:accessibility_verstoesse_100}) bildet die eigentliche \textbf{Belastungsprüfung}: Erst bei 100~Violations gerät das Token-Budget systematisch unter Druck, treten Trunkierungseffekte auf und werden Modellunterschiede unter annähernd realistischer Last sichtbar. Als reales Untersuchungsobjekt dient ergänzend der \ac{BWEC} der \ac{BITBW} -- eine produktiv betriebene React-\ac{SPA} mit unbekannter Ground Truth (vgl. Abschnitt~\ref{sec:eval_bwec}).
 
@@ -338,7 +338,7 @@ Die im BWEC-Lauf (\texttt{maxfiles}~=~100) generierten Findings mit \texttt{qwen
 \section{Beantwortung der Forschungsfragen}
 \label{sec:ff_beantwortung}
 
-Auf Basis der in den Abschnitten~\ref{sec:ergebnisse_recall}--\ref{sec:limitationen} dokumentierten Ergebnisse können die in Kapitel~\ref{kap:1.3} formulierten Forschungsfragen nun beantwortet werden.
+Auf Basis der in den Abschnitten~\ref{sec:ergebnisse_recall}--\ref{sec:limitationen} dokumentierten Ergebnisse können die in Abschnitt~\ref{kap:1.3} formulierten Forschungsfragen nun beantwortet werden.
 
 \subsection{Übergeordnete Forschungsfrage}
 \label{sec:ff_gesamt}
