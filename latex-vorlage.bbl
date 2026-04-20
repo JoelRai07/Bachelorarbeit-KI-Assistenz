@@ -2702,8 +2702,8 @@
     \endentry
     \entry{gurita_insights_2025}{inproceedings}{}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=f58be5c4b5096c6e415735248fef36f9}{%
-           family={Guriță},
+        {{un=0,uniquepart=base,hash=d77271f4b58f6449cc3a115fb1e34a44}{%
+           family={Guriţă},
            familyi={G\bibinitperiod},
            given={Alexandra-Elena},
            giveni={A\bibinithyphendelim E\bibinitperiod},
@@ -2721,14 +2721,14 @@
       \list{publisher}{1}{%
         {Association for Computing Machinery}%
       }
-      \strng{namehash}{8bc9d018566401c9440663994df39532}
-      \strng{fullhash}{8bc9d018566401c9440663994df39532}
-      \strng{fullhashraw}{8bc9d018566401c9440663994df39532}
-      \strng{bibnamehash}{8bc9d018566401c9440663994df39532}
-      \strng{authorbibnamehash}{8bc9d018566401c9440663994df39532}
-      \strng{authornamehash}{8bc9d018566401c9440663994df39532}
-      \strng{authorfullhash}{8bc9d018566401c9440663994df39532}
-      \strng{authorfullhashraw}{8bc9d018566401c9440663994df39532}
+      \strng{namehash}{c1f59597e851435f2eb7b72028e379f6}
+      \strng{fullhash}{c1f59597e851435f2eb7b72028e379f6}
+      \strng{fullhashraw}{c1f59597e851435f2eb7b72028e379f6}
+      \strng{bibnamehash}{c1f59597e851435f2eb7b72028e379f6}
+      \strng{authorbibnamehash}{c1f59597e851435f2eb7b72028e379f6}
+      \strng{authornamehash}{c1f59597e851435f2eb7b72028e379f6}
+      \strng{authorfullhash}{c1f59597e851435f2eb7b72028e379f6}
+      \strng{authorfullhashraw}{c1f59597e851435f2eb7b72028e379f6}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{extradatescope}{labelyear}

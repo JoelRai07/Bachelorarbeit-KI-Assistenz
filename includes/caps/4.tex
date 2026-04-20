@@ -1,40 +1,40 @@
-\chapter{Analyse und Anforderungen} \label{kap:4}
+\chapter{Analyse und Anforderungen}\label{kap:4}
 
-In diesem Kapitel werden die Grundlagen für das in Kapitel~\ref{kap:5} beschriebene Systemdesign erarbeitet. Abschnitt~\ref{kap:4.1} analysiert den Problemkontext und leitet daraus den konkreten Handlungsbedarf ab. Abschnitte~\ref{kap:4.2} und~\ref{kap:4.3} spezifizieren funktionale bzw. nicht-funktionale Anforderungen an das zu entwickelnde System. Abschnitt~\ref{kap:4.4} begründet die Auswahl des eingesetzten Sprachmodells.
+Dieses Kapitel erarbeitet die Grundlagen für das in Kapitel~\ref{kap:5} beschriebene Systemdesign. Zunächst werden Problemkontext und Handlungsbedarf analysiert. Anschließend werden die funktionalen und nicht-funktionalen Anforderungen an das zu entwickelnde System spezifiziert. Abschließend wird die Auswahl der eingesetzten Inferenzinfrastruktur und der Modellkandidaten begründet.
 
 \section{Problemkontext und Handlungsbedarf}\label{kap:4.1}
 
-Wie in Kapitel~\ref{kap:1} dargelegt, unterliegen alle von der \ac{BITBW} entwickelten und betriebenen Webanwendungen den gesetzlichen Anforderungen der \ac{BITV} 2.0, die \ac{WCAG} 2.2 auf Konformitätsstufe AA als verbindlichen Maßstab definiert.\footcite[Vgl.][]{BITV} In der Praxis erfolgt die Barrierefreiheitsprüfung heute überwiegend manuell oder durch den Einsatz einzelner regelbasierter Tools -- ein Vorgehen, das aus zwei Gründen problematisch ist: Manuelle Audits sind personalintensiv und skalieren nur unzureichend mit der Anzahl zu betreuender Anwendungen; regelbasierte Tools erfassen, wie in Kapitel~\ref{tools} dargelegt, nur einen Bruchteil der tatsächlich vorhandenen Barrieren.\footcite[Vgl.][S. 8--9]{tafreshipour_ma11y_2024}
+Wie in Kapitel~\ref{kap:1} dargelegt, unterliegen alle von der \ac{BITBW} entwickelten und betriebenen Webanwendungen den gesetzlichen Anforderungen der \ac{BITV} 2.0, für die \ac{WCAG} 2.2 auf Konformitätsstufe AA den verbindlichen Maßstab bildet.\footcite[Vgl.][]{BITV} In der Praxis erfolgt die Barrierefreiheitsprüfung bislang überwiegend manuell oder mithilfe einzelner regelbasierter Tools. Dieses Vorgehen ist aus zwei Gründen problematisch: Manuelle Audits sind personalintensiv und skalieren nur unzureichend mit der Anzahl zu betreuender Anwendungen; regelbasierte Tools erfassen, wie in Kapitel~\ref{tools} dargelegt, nur einen Bruchteil der tatsächlich vorhandenen Barrieren.\footcite[Vgl.][S. 8--9]{tafreshipour_ma11y_2024}
 
-Die in Kapitel~\ref{kap:3} identifizierten drei Forschungslücken -- fehlende Zustandserfassung durch Interaktionen, fehlende Quellcode-Verknüpfung sowie die Unvereinbarkeit cloudbasierter \ac{LLM}-\ac{API}s mit den Datenschutzanforderungen öffentlicher Verwaltungen (vgl. Abschnitt~\ref{datenschutz}) -- bilden den Ausgangspunkt der Anforderungserhebung.\footcites[Vgl.][S. 79]{hevnerChatterjeeDesignResearch2010}[Vgl.][S. 9--11, 23--24]{hevnerChatterjeeDesignResearch2010} Daraus leitet sich das Systemziel ab: ein lokal ausführbares, \ac{LLM}-gestütztes Assistenzsystem, das axe-core-Reports, Playwright-Interaktionsdaten und statische Quellcodeanalyse kombiniert (vgl. Abschnitt~\ref{kap:1.3}).\footcite[Vgl.][S. 9--11, 23--24]{hevnerChatterjeeDesignResearch2010}
+Die in Kapitel~\ref{kap:3} identifizierten drei Forschungslücken bilden den Ausgangspunkt der Anforderungserhebung.\footcites[Vgl.][S. 79]{hevnerChatterjeeDesignResearch2010}[Vgl.][S. 9--11, 23--24]{hevnerChatterjeeDesignResearch2010} Dazu zählen die fehlende Zustandserfassung durch Interaktionen, die fehlende Verknüpfung von \ac{DOM}-Befunden mit dem Quellcode sowie die Unvereinbarkeit cloudbasierter \ac{LLM}-\ac{API}s mit den Datenschutzanforderungen öffentlicher Verwaltungen (vgl. Abschnitt~\ref{datenschutz}). Daraus ergibt sich als Systemziel ein lokal ausführbares, \ac{LLM}-gestütztes Assistenzsystem, das axe-core-Reports, Playwright-Interaktionsdaten und statische Quellcodeanalyse kombiniert (vgl. Abschnitt~\ref{kap:1.3}).\footcite[Vgl.][S. 9--11, 23--24]{hevnerChatterjeeDesignResearch2010}
 
 \section{\acl{FA}} \label{kap:4.2}
 
-\acf{FA} beschreiben, was ein System leisten soll.\footcite[Vgl.][S. 105--107]{sommerville2016software} Die folgenden Anforderungen ergeben sich aus der Problemanalyse (Abschnitt~\ref{kap:4.1}), den Forschungslücken (Abschnitt~\ref{Forschungslücken}) sowie einer Analyse vergleichbarer Systeme aus der Literatur.
+\acf{FA} beschreiben die Leistungen, die ein System erbringen soll.\footcite[Vgl.][S. 105--107]{sommerville2016software} Die folgenden Anforderungen leiten sich aus der Problemanalyse (Abschnitt~\ref{kap:4.1}), den identifizierten Forschungslücken (Abschnitt~\ref{Forschungslücken}) sowie der Analyse vergleichbarer Systeme aus der Literatur ab.
 
 \textfett{\acs{FA}-01 Regelbasierte Accessibility-Erkennung}
 
-Das System muss den \ac{BWEC} automatisiert auf Barrierefreiheitsverstöße nach \ac{WCAG} 2.2 Level A und AA prüfen.\footcite[Vgl.][]{bwec,WCAG} Die Prüfung basiert auf axe-core als Detection-Backend.\footcite[Vgl.][]{axe} Der Output je Verstoß umfasst mindestens: Regel-ID, Schweregrad (critical/serious/moderate/minor) sowie ein \acs{HTML}-Ausschnitt des betroffenen Elements.
+Das System muss den \ac{BWEC} automatisiert auf Barrierefreiheitsverstöße gemäß \ac{WCAG} 2.2 der Konformitätsstufen A und AA prüfen.\footcite[Vgl.][]{bwec,WCAG} Die Prüfung basiert auf axe-core als Detection-Backend.\footcite[Vgl.][]{axe} Der Output je Verstoß umfasst mindestens: Regel-ID, Schweregrad (critical/serious/moderate/minor) sowie ein \acs{HTML}-Ausschnitt des betroffenen Elements.
 
 \textfett{\acs{FA}-02 Dynamische Zustandserfassung via Playwright}
 
-Das System muss über Playwright definierte Interaktionssequenzen ausführen und für jeden resultierenden \ac{DOM}-Zustand eine axe-core-Prüfung anstoßen.\footcite[Vgl.][]{playwright} Damit werden Barrieren erfasst, die im initialen Seitenzustand nicht vorhanden sind.\footnote{Siehe Kapitel \ref{Herausforderungen}}
+Das System muss mit Playwright definierte Interaktionssequenzen ausführen und zustandsabhängige Barrieren durch generische Interaktionschecks erfassen.\footcite[Vgl.][]{playwright} Damit werden Barrieren erfasst, die im initialen Seitenzustand nicht vorhanden sind.\footnote{Siehe Kapitel \ref{Herausforderungen}}
 
 \textfett{\acs{FA}-03 Statische Quellcodeanalyse}
 
-Das System muss den Quellcode der geprüften React-Anwendung automatisiert nach Mustern durchsuchen, die auf Barrierefreiheitsprobleme hindeuten: fehlende \texttt{aria}-Attribute, \texttt{onClick}-Handler auf nicht-interaktiven Elementen, fehlende \texttt{alt}-Attribute sowie fehlende Formular-Assoziationen.\footnote{Siehe Kapitel \ref{kap:2.1}}
+Das System muss den Quellcode der geprüften React-Anwendung automatisiert auf Muster untersuchen, die auf Barrierefreiheitsprobleme hindeuten, etwa fehlende \texttt{aria}-Attribute, \texttt{onClick}-Handler auf nicht-interaktiven Elementen, fehlende \texttt{alt}-Attribute sowie fehlende Formular-Assoziationen.\footnote{Siehe Kapitel \ref{kap:2.1}}
 
 \textfett{\ac{FA}-04 \ac{LLM}-gestützte Analyse und Handlungsempfehlung}
 
-Das System muss die Ergebnisse aus \ac{FA}-01, \ac{FA}-02 und \ac{FA}-03 zu einem strukturierten Kontext zusammenführen und an ein lokal ausgeführtes Sprachmodell übergeben, das daraus je Verstoß eine Handlungsempfehlung im Format Must-have/Nice-to-have unter Angabe der betroffenen Datei generiert.\footnote{Siehe Abschnitt~\ref{sec:kontextualisierung}}
+Das System muss die Ergebnisse aus \ac{FA}-01, \ac{FA}-02 und \ac{FA}-03 in einem strukturierten Kontext zusammenführen und an ein lokal ausgeführtes Sprachmodell übergeben, das daraus je Verstoß eine Handlungsempfehlung im Format Must-have/Nice-to-have unter Angabe der betroffenen Datei generiert.\footnote{Siehe Abschnitt~\ref{sec:kontextualisierung}}
 
 \textfett{\ac{FA}-05 Strukturierter \acs{JSON}-Output}
 
-Das System muss seine Ergebnisse in einem maschinenlesbaren \acs{JSON}-Format ausgeben.\footcite[Vgl.][]{paterno_how_2025,pool_testaro_2023} Der Report enthält je Befund: Verstoß-ID, Kategorie (syntaktisch/semantisch/layout), Schweregrad, betroffene Datei(en), Handlungsempfehlung (Must-have/Nice-to-have), \ac{WCAG}-Erfolgskriterium und -- falls vorhanden -- den relevanten Quellcode-Ausschnitt.
+Das System muss seine Ergebnisse in einem maschinenlesbaren \acs{JSON}-Format bereitstellen.\footcite[Vgl.][]{paterno_how_2025,pool_testaro_2023} Der Report enthält je Befund: Verstoß-ID, Kategorie (syntaktisch/semantisch/layout), Schweregrad, betroffene Datei(en), Handlungsempfehlung (Must-have/Nice-to-have), \ac{WCAG}-Erfolgskriterium und -- falls vorhanden -- den relevanten Quellcode-Ausschnitt.
 
 \section{\acl{NFA}}\label{kap:4.3}
 
-\acf{NFA} beschreiben Qualitätseigenschaften des Systems. Sie haben für das vorliegende System besonderes Gewicht, da der Betriebskontext der \ac{BITBW} (öffentliche Verwaltung, lokale Infrastruktur) strenge Rahmenbedingungen setzt.
+\acf{NFA} beschreiben die Qualitätseigenschaften des Systems. Für das vorliegende System haben sie besonderes Gewicht, da der Betriebskontext der \ac{BITBW} (öffentliche Verwaltung, lokale Infrastruktur) strenge Rahmenbedingungen setzt.
 
 \textfett{\ac{NFA}-01 Datenschutz und Lokal-First}
 
@@ -42,37 +42,37 @@ Das System muss vollständig ohne externe \ac{API}-Aufrufe betreibbar sein. Wede
 
 \textfett{\ac{NFA}-02 Laufzeit und Praktikabilität}
 
-Der vollständige Analyselauf muss auf einem Entwicklungsrechner in einer für den Entwicklungsalltag akzeptablen Zeit abschließen. Als Richtwert gilt eine Gesamtlaufzeit von unter zehn Minuten für eine einzelne Seite mit bis zu 20 axe-Verstößen. Diese Anforderung schließt mehrstufige Reasoning-Schleifen aus dem Scope des \ac{PoC} aus.\footnote{Siehe Kapitel \ref{Prompt}}
+Der vollständige Analyselauf muss auf einem Entwicklungsrechner innerhalb einer für den Entwicklungsalltag praktikablen Zeit abgeschlossen werden. Als Richtwert gilt eine Gesamtlaufzeit von unter zehn Minuten für eine einzelne Seite mit bis zu 20 axe-Verstößen. Diese Anforderung schließt mehrstufige Reasoning-Schleifen aus dem Scope des \ac{PoC} aus.\footnote{Siehe Kapitel \ref{Prompt}}
 
 \textfett{\ac{NFA}-03 Wartbarkeit und Erweiterbarkeit}
 
-Die Systemarchitektur muss eine modulare Trennung der Komponenten (Detection, Context-Building, Synthesis) vorsehen, sodass einzelne Komponenten unabhängig angepasst oder ausgetauscht werden können.
+Die Systemarchitektur muss eine modulare Trennung der Komponenten (Detection, Context-Building, Synthesis) vorsehen, sodass einzelne Bestandteile unabhängig angepasst oder ausgetauscht werden können.
 
 \textfett{\ac{NFA}-04 Reproduzierbarkeit}
 
-Das System muss deterministisch genug sein, dass zwei aufeinanderfolgende Analyseläufe auf derselben Anwendungsversion im Wesentlichen dieselben Befunde produzieren. Reproduzierbarkeit wird durch eine feste Temperatur-Einstellung (\texttt{temperature} = 0.05) und durch strukturierte Ausgabeformate (\acs{JSON}-Schema im Prompt) sichergestellt.\footcites[Vgl.][Temperature]{OpenAI_Developers}[Vgl.][Temperature]{anthropic2026claude}
+Das System muss hinreichend deterministisch sein, damit zwei aufeinanderfolgende Analyseläufe auf derselben Anwendungsversion im Wesentlichen dieselben Befunde erzeugen. Reproduzierbarkeit wird durch eine feste Temperatur-Einstellung (\texttt{temperature} = 0.05) und durch strukturierte Ausgabeformate (\acs{JSON}-Schema im Prompt) sichergestellt.\footcites[Vgl.][Temperature]{OpenAI_Developers}[Vgl.][Temperature]{anthropic2026claude}
 
 \section{Lokale Inferenzinfrastruktur und Modellkandidaten}\label{kap:4.4}
 
-Die Wahl der Inferenzinfrastruktur ist durch \ac{NFA}-01 (Lokal-First) strukturell vorgegeben: Cloudbasierte Modell-\ac{API}s scheiden aus, da ihre Nutzung die Übermittlung potenziell schützenswerter Quellcodeausschnitte und \ac{DOM}-Inhalte an externe Server erfordert.\footcite[Vgl.][Art. 28 und Art. 44 ff.]{dsgvo2016}
+Die Wahl der Inferenzinfrastruktur ist durch \ac{NFA}-01 (Lokal-First) weitgehend vorgegeben: Cloudbasierte Modell-\ac{API}s scheiden aus, da ihre Nutzung die Übermittlung potenziell schützenswerter Quellcodeausschnitte und \ac{DOM}-Inhalte an externe Server erfordert.\footcite[Vgl.][Art. 28 und Art. 44 ff.]{dsgvo2016}
 
 \subsection{Ollama als Laufzeitumgebung}
 
-Ollama ist ein quelloffenes Werkzeug, das die lokale Ausführung von \ac{LLM}s über eine einheitliche REST-\ac{API} ermöglicht.\footcite[Vgl.][]{Ollama} Die REST-\ac{API} ist kompatibel mit der OpenAI-\ac{API}-Spezifikation, wodurch sich bestehende Node.js-Bibliotheken ohne größeren Anpassungsaufwand integrieren lassen. Darüber hinaus unterstützt Ollama quantisierte Modellvarianten (z.\,B. Q4\_K\_M), die eine speichereffiziente Ausführung auf \ac{CPU}-basierten Systemen ohne dedizierte Grafikkarte ermöglichen -- relevant für Entwicklungsrechner der \ac{BITBW}, bei denen nicht von \ac{GPU}-Hardware ausgegangen werden kann.
+Ollama ist ein quelloffenes Werkzeug, das die lokale Ausführung von \ac{LLM}s über eine einheitliche REST-\ac{API} ermöglicht.\footcite[Vgl.][]{Ollama} Die REST-\ac{API} ist kompatibel mit der OpenAI-\ac{API}-Spezifikation, wodurch sich bestehende Node.js-Bibliotheken ohne größeren Anpassungsaufwand integrieren lassen. Darüber hinaus unterstützt Ollama quantisierte Modellvarianten (z.\,B. Q4\_K\_M), die eine speichereffiziente Ausführung auf \ac{CPU}-basierten Systemen ohne dedizierte Grafikkarte ermöglichen. Dies ist insbesondere für Entwicklungsrechner der \ac{BITBW} relevant, bei denen nicht von \ac{GPU}-Hardware ausgegangen werden kann.
 
 \subsection{Anforderungen an das Sprachmodell}
 
-Unabhängig von der konkreten Modellwahl lassen sich vier Eigenschaften ableiten: Das Modell muss (1)~\textbf{\ac{JSX} und TypeScript} verarbeiten können (\ac{FA}-03), (2)~\textbf{strukturierte Ausgaben} in einem vorgegebenen Format erzeugen (\ac{FA}-05, \ac{NFA}-04), (3)~innerhalb eines \textbf{Kontextfensters von mindestens 8.192 Tokens} arbeiten (\ac{FA}-04) und (4)~\textbf{auf \ac{CPU}-basierten Systemen} mit akzeptabler Latenz betreibbar sein, was die Modellgröße auf ca. 7--32 Milliarden Parameter begrenzt (\ac{NFA}-02).\footcite[Vgl.][S. 3]{hui2024qwen25coder}
+Unabhängig von der konkreten Modellwahl lassen sich vier zentrale Anforderungen an das Sprachmodell ableiten. Es muss (1)~\textbf{\ac{JSX} und TypeScript} verarbeiten können (\ac{FA}-03), (2)~\textbf{strukturierte Ausgaben} in einem vorgegebenen Format erzeugen (\ac{FA}-05, \ac{NFA}-04), (3)~innerhalb eines \textbf{Kontextfensters von mindestens 8.192 Tokens} arbeiten (\ac{FA}-04) und (4)~\textbf{auf \ac{CPU}-basierten Systemen} mit akzeptabler Latenz betreibbar sein, was die Modellgröße auf ca. 7--32 Milliarden Parameter begrenzt (\ac{NFA}-02).\footcite[Vgl.][S. 3]{hui2024qwen25coder}
 
 Die Auswahl konkreter Modellkandidaten sowie deren vergleichende Evaluation werden in Abschnitt~\ref{sec:kontextualisierung} bzw. Kapitel~\ref{kap:7} behandelt.
 
 \subsection{Ausgewählte Modellkandidaten für die Evaluation}
 
-Für die Evaluation in Kapitel~\ref{kap:7} werden vier lokal ausführbare Modellkandidaten betrachtet, soweit die verfügbaren Hardware-Ressourcen eine Ausführung zulassen: \texttt{qwen2.5-coder:7b}, \texttt{qwen2.5-coder:14b}\footcite[Vgl.][]{hui2024qwen25coder}, \texttt{qwen3:32b}\footcite[Vgl.][]{qwen3} und \texttt{deepseek-r1:70b}\footcite[Vgl.][]{deepseek}. Die Auswahl folgt einem bewussten Vergleich unterschiedlicher Modellgrößen: 7B und 14B repräsentieren ressourcenschonende Modelle für den operativen Lokalbetrieb, 32B einen mittleren Kompromiss aus Qualität und Laufzeit, 70B ein leistungsstarkes Referenzmodell mit höherem Rechenbedarf.
+Für die Evaluation in Kapitel~\ref{kap:7} werden vier lokal ausführbare Modellkandidaten betrachtet, soweit die verfügbaren Hardware-Ressourcen eine Ausführung zulassen: \texttt{qwen2.5-coder:7b}, \texttt{qwen2.5-coder:14b}\footcite[Vgl.][]{hui2024qwen25coder}, \texttt{qwen3:32b}\footcite[Vgl.][]{qwen3} und \texttt{deepseek-r1:70b}\footcite[Vgl.][]{deepseek}. Die Auswahl folgt dem Ziel, unterschiedliche Modellgrößen systematisch miteinander zu vergleichen: 7B und 14B repräsentieren ressourcenschonende Modelle für den operativen Lokalbetrieb, 32B einen mittleren Kompromiss aus Qualität und Laufzeit, 70B ein leistungsstarkes Referenzmodell mit höherem Rechenbedarf. DeepSeek-R1:70b wurde als Kandidat betrachtet, konnte jedoch aufgrund der verfügbaren Hardware-Ressourcen und der damit verbundenen Laufzeitanforderungen nicht in die finale Benchmarkserie aufgenommen werden; die Evaluation in Kapitel~\ref{kap:7} basiert daher auf den drei verbleibenden Modellen.
 
 \subsection{Zusammenfassung der Anforderungen}
 
-Tabelle~\ref{Anforderungstabelle} fasst die spezifizierten Anforderungen zusammen und gibt jeweils den Ursprung und die Priorität an.
+Tabelle~\ref{tab:anforderungen} fasst die spezifizierten Anforderungen zusammen und ordnet ihnen jeweils Ursprung und Priorität zu.
 
 \begin{table}[h]
 \centering
@@ -110,8 +110,7 @@ Tabelle~\ref{Anforderungstabelle} fasst die spezifizierten Anforderungen zusamme
 }
 
 \caption[Anforderungsübersicht: funktionale und nicht-funktionale Anforderungen]{Anforderungsübersicht: funktionale und nicht-funktionale Anforderungen mit Ursprung und Priorität.}
-\label{Anforderungstabelle}
 \label{tab:anforderungen}
 \end{table}
 
-Die Anforderungen \ac{FA}-01 bis \ac{FA}-05 und \ac{NFA}-01 bis \ac{NFA}-04 bilden die verbindliche Grundlage für das Systemdesign in Kapitel~\ref{kap:5}. \ac{NFA}-01 (Lokal-First) hat dabei Vorrang vor allen anderen Anforderungen und schränkt den Lösungsraum strukturell ein.
+Die Anforderungen \ac{FA}-01 bis \ac{FA}-05 sowie \ac{NFA}-01 bis \ac{NFA}-04 bilden die verbindliche Grundlage für das Systemdesign in Kapitel~\ref{kap:5}. \ac{NFA}-01 (Lokal-First) hat dabei Vorrang vor allen anderen Anforderungen und schränkt den Lösungsraum strukturell ein.

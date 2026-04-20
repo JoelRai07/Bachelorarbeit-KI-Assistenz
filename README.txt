@@ -23,3 +23,25 @@ Kommentieren den Prüfer
 - Seitenanzahl
 - Englische Fachbegriffe: Die Zitierrichtlinien sagen in Abschnitt 1.3 zwar, dass „entbehrliche Fremdwörter zu vermeiden" seien, und Abschnitt 1.11 empfiehlt, Fachbegriffe „im Text an der betreffenden Stelle oder in einer Fußnote" zu erläutern. Aber: In einer Wirtschaftsinformatik-Arbeit sind Begriffe wie Recall, Precision, Pipeline, Baseline und Parsing keine „entbehrlichen Fremdwörter" — das ist etablierte Fachterminologie, für die es teilweise gar keine sinnvolle deutsche Entsprechung gibt. „Trefferquote" für Recall oder „Datenverarbeitungskette" für Pipeline wäre eher verwirrend als hilfreich.
 - Erläuterung der "Eigenen Abbildung"
+
+Screenshot entfernen aus Anhang,
+Abbildung mit den Phasen in Kapitel 1 verbessern, schärfer machen
+Eventuell Datenflussdiagramm des Programms wieder zurückbringen
+
+Anhang verbessern
+2. Drei Datenquellen in der Einleitung, vier Analysequellen später
+3. Fokus-Trap, Keyboard-Trap und Fokusübernahme werden vermischt
+4. grep-Patterns passen nicht sauber zu deinen Suites
+6. „Erwartete Quelle“ und „tatsächliche Quelle“ passen teilweise nicht zusammen
+Mittlere, aber sinnvolle Nachschärfungen
+
+Diese Punkte sind kleiner, würden die Arbeit aber noch souveräner machen:
+
+Violation / Finding / Report-Item einmal sauber definieren.
+Im Moment wechselst du zwischen den Begriffen etwas frei.
+Im Fazit würde ich TF1 nicht zu stark als vollständig bestätigt formulieren, sondern eher:
+„differenziert beantwortet“ oder „weitgehend bestätigt“
+Bei den BWEC-Abschnitten noch klarer trennen:
+explorativer Feldtest vs. Ground-Truth-basierte Hauptevaluation
+
+

@@ -604,7 +604,7 @@ INPUT .\graphics\fewshot.png
 INPUT .\includes\caps\3.tex
 INPUT .\includes\caps\3.tex
 INPUT includes\caps\3.tex
-INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0500.tfm
+INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti0900.tfm
 INPUT .\includes\caps\4.tex
 INPUT .\includes\caps\4.tex
 INPUT includes\caps\4.tex
@@ -618,7 +618,6 @@ INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecit109
 INPUT .\includes\caps\6.tex
 INPUT .\includes\caps\6.tex
 INPUT includes\caps\6.tex
-INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti0900.tfm
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ectt0900.tfm
 INPUT .\includes\caps\7.tex
 INPUT .\includes\caps\7.tex
@@ -745,7 +744,6 @@ INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sym
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1000.tfm
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\eccc1095.tfm
-INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx0600.tfm
 INPUT .\includes\extra\erklaerung_ki.tex
 INPUT .\includes\extra\erklaerung_ki.tex
 INPUT includes\extra\erklaerung_ki.tex
@@ -757,8 +755,6 @@ INPUT .\latex-vorlage.out
 INPUT .\latex-vorlage.out
 INPUT latex-vorlage.run.xml
 OUTPUT latex-vorlage.run.xml
-INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx0600.pk
-INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx0600.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1095.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1095.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
@@ -775,8 +771,6 @@ INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ect
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1000.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt0900.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt0900.pk
-INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0900.pk
-INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0900.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecit1095.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecit1095.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk
@@ -785,8 +779,8 @@ INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecb
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbi1095.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx0900.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx0900.pk
-INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0500.pk
-INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0500.pk
+INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0900.pk
+INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0900.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0800.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0800.pk
 INPUT C:\Users\joely\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt0800.pk
@@ -839,8 +833,6 @@ INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
-INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
-INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy6.pfb
