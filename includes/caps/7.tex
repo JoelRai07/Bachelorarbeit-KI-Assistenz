@@ -94,6 +94,7 @@ Für \acs{TF}1 ist nicht nur der Gesamt-Recall relevant, sondern die Frage, welc
 \centering
 \small
 \renewcommand{\arraystretch}{1.15}
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{@{}lccccc@{}}
 \toprule
 \textbf{Kategorie} & \textbf{Violations} & \textbf{Baseline} & \textbf{+\,7b} & \textbf{+\,14b} & \textbf{+\,32b} \\
@@ -104,7 +105,8 @@ Semantisch  & V6, V7, V8, V9, V11    & 3\,/\,5 (60\,\%) & 4\,/\,5 (80\,\%)  & 5\
 \midrule
 \textbf{Gesamt} & \textbf{12} & \textbf{8\,/\,12 (67\,\%)} & \textbf{9\,/\,12 (75\,\%)} & \textbf{12\,/\,12 (100\,\%)} & \textbf{12\,/\,12 (100\,\%)} \\
 \bottomrule
-\end{tabular}
+\end{tabular}%
+}
 \caption[Recall nach Verstoßkategorie und Modell]{Erkennungsleistung differenziert nach Verstoßkategorie (test-12-Suite). Werte basieren auf der Mehrzahl der zehn Runs je Modell.}
 \label{tab:recall_kategorie}
 \end{table}
