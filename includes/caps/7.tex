@@ -195,7 +195,7 @@ Die Bewertungsskala (Tabelle~\ref{tab:bewertungsskala_empfehlungen}) unterscheid
 \label{sec:fix_fallbeispiele}
 
 \paragraph{Fallbeispiel 1 -- Konkrete Empfehlung (Stufe~2, qwen3:32b).}
-Für V8 (modaler Dialog ohne Fokus-Trap) generiert \texttt{qwen3:32b} eine Empfehlung, die \texttt{ContactForm.tsx} namentlich referenziert, einen React-konformen \texttt{useEffect}-Hook für \texttt{modalOpen} vorschlägt und die Fokusführung inklusive Tab- und Shift+Tab-Logik mit sauberem Event-Listener-Cleanup beschreibt. Die Empfehlung ist damit direkt in den Quellcode übertragbar und erreicht Stufe~2.
+Für V8 (Modaler Dialog übernimmt Fokus beim Öffnen nicht) generiert \texttt{qwen3:32b} eine Empfehlung, die \texttt{ContactForm.tsx} namentlich referenziert, einen React-konformen \texttt{useEffect}-Hook für \texttt{modalOpen} vorschlägt und die Fokusführung inklusive Tab- und Shift+Tab-Logik mit sauberem Event-Listener-Cleanup beschreibt. Die Empfehlung ist damit direkt in den Quellcode übertragbar und erreicht Stufe~2.
 
 \paragraph{Fallbeispiel 2 -- Teilweise Empfehlung (Stufe~1, qwen2.5-coder:14b).}
 \texttt{qwen2.5-coder:14b} empfiehlt für V4 (Kontrastverhältnis) sinngemäß, Hintergrund- oder Textfarbe anzupassen, um den Kontrast zu verbessern, liefert jedoch keinen ausreichend konkreten Bezug zum tatsächlichen Farbpaar oder die betroffene Regel im Stylesheet. Der Fix-Typ stimmt, der konkrete Umsetzungskontext bleibt jedoch zu vage -- Stufe~1.
@@ -439,7 +439,7 @@ Aus den vorstehenden Ergebnissen zu Recall, Priorisierungsqualität, Fix-Qualit�
 \textbf{Szenario} & \textbf{Empfehlung} \\
 \midrule
 Regulärer Entwicklungszyklus / Compliance-Gate & \texttt{qwen2.5-coder:14b} als Standardmodell für kleine bis mittlere Befundmengen; guter Trade-off aus Qualität und Laufzeit \\
-\ac{CICD}-Rauchtest (nicht compliance-relevant) & \texttt{qwen2.5-coder:7b}; schnellstes Feedback, aber nicht für verbindliche Bewertungen geeignet \\
+\ac{CICD}-Smoke-Test (nicht compliance-relevant) & \texttt{qwen2.5-coder:7b}; schnellstes Feedback, aber nicht für verbindliche Bewertungen geeignet \\
 Endaudit / Referenzläufe & \texttt{qwen3:32b}; höchste inhaltliche Abdeckung, aber deutlich höhere Laufzeit \\
 \bottomrule
 \end{tabular}

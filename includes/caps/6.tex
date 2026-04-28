@@ -10,36 +10,7 @@ Der \ac{PoC} ist als Node.js-Anwendung auf Basis von TypeScript implementiert.\f
 
 Als Kernabhängigkeiten dienen \texttt{playwright}@1.50 für die Browser-Automatisierung,\footcite[Vgl.][]{playwright} \texttt{@axe-core/playwright}@4.10 für die axe-core-Integration sowie \texttt{dotenv}@17.3 für die Konfigurationsverwaltung und \texttt{tsx}@6.5.7 als TypeScript-Runner.
 
-Die Projektstruktur folgt einer flachen Modulorganisation. Jedes Modul in \texttt{src/modules/} übernimmt sowohl die Datenerhebung als auch die Normalisierung in das \ac{UFS}:
-
-\lstset{
-  basicstyle=\ttfamily\scriptsize,
-  keywordstyle=\color{blue},
-  commentstyle=\color{gray},
-  stringstyle=\color{red},
-  numbers=left,
-  numberstyle=\tiny,
-  breaklines=true,
-  frame=single,
-  aboveskip=4pt,
-  belowskip=4pt
-}
-\begin{lstlisting}[language={}, caption={Projektstruktur des \acs{PoC}}, label={lst:projektstruktur}, basicstyle=\ttfamily\scriptsize]
-ace/
-  src/
-    index.ts
-    types.ts
-    config.ts
-    prompt.ts
-    ollama.ts
-    output.ts
-    modules/
-      axe.ts
-      playwright.ts
-      code.ts
-      llmDetector.ts
-  results/
-\end{lstlisting}
+Die Projektstruktur folgt einer flachen Modulorganisation (vgl.\,Anhang~\ref{app:projektstruktur}). Jedes Modul in \texttt{src/modules/} übernimmt sowohl die Datenerhebung als auch die Normalisierung in das \ac{UFS}.
 
 Die Pipeline wird über \texttt{src/index.ts} orchestriert und unterstützt fünf \ac{CLI}-Flags: \texttt{-{}-url} (Ziel-\acs{URL}), \texttt{-{}-src-dir} (Quellcode-Pfad), \texttt{-{}-skip-llm} (Prompt speichern ohne finale Priorisierung), \texttt{-{}-axe-only} (nur axe-core ausführen) und \texttt{-{}-llm-detect} (zusätzliche \ac{LLM}-Codeanalyse aktivieren). Die Konfiguration -- einschließlich Ollama-\acs{URL}, Modellname und Timeout-Werte -- erfolgt zentral in \texttt{config.ts} und kann über Umgebungsvariablen überschrieben werden.
 
@@ -72,7 +43,7 @@ Die Checks sind bewusst anwendungsunabhängig konzipiert: Sie setzen keine Kennt
 Fehlgeschlagene Checks werden über ein statisches Mapping (\texttt{CHECK\_DEFINITIONS}) in \texttt{UnifiedFinding}-Objekte überführt. Jede Check-Definition enthält die zugehörige \texttt{ruleId}, \texttt{severity}, \ac{WCAG}-Kriterien und Kategorie. Checks, die erfolgreich bestanden werden, erzeugen kein Finding.
 
 % ─────────────────────────────────────────────────────────────────────────────
-\section{Code-Modul}
+\section{Quellcode-Anreicherung und Anti-Pattern-Erkennung}
 \label{sec:impl-code}
 
 Das Code-Modul übernimmt zwei Aufgaben: die Anreicherung bestehender Findings mit Quellcode-Kontext (\ac{FA}-03) und die eigenständige Erkennung von Anti-Patterns im React-Quellcode.
@@ -148,7 +119,7 @@ Der Prompt-Builder setzt die in Abschnitt~\ref{sec:kontextualisierung} beschrieb
 
 Der System-Prompt implementiert die in Kapitel~\ref{kap:5} gewählten Prompt-Engineering-Strategien. Das \textbf{Role-Play Prompting} erfolgt durch die Anweisung \emph{,,Du bist ein erfahrener Barrierefreiheitsexperte für React/TypeScript-Webanwendungen``}, die das Modell in eine domänenspezifische Expertenrolle versetzt (vgl. Abschnitt~\ref{Prompt}). Das \textbf{Few-Shot Prompting} wird durch zwei konkrete Beispiele realisiert: ein \texttt{critical}-Finding (Farbkontrast) mit vollständigem Code-Fix als Must-have-Eintrag und ein \texttt{moderate}-Finding (\texttt{tabIndex}) als Nice-to-have-Eintrag. Beide Beispiele verdeutlichen dem Modell das erwartete Ausgabeformat einschließlich der \ac{WCAG}-Angabe, des Dateipfads und eines konkreten Code-Fix-Vorschlags.
 
-Ergänzend enthält der System-Prompt sechs Priorisierungsregeln, mit denen das Must-have/Nice-to-have-Schema operationalisiert wird:
+Ergänzend enthält der System-Prompt sechs Priorisierungsregeln, mit denen das Must-have/Nice-to-have-Schema umgesetzt wird:
 
 \begin{enumerate}
   \item Must-have: Severity \texttt{critical}/\texttt{serious} und \ac{WCAG} Level A/AA
