@@ -19,3 +19,6 @@ Bei den BWEC-Abschnitten noch klarer trennen:
 explorativer Feldtest vs. Ground-Truth-basierte Hauptevaluation
 
 
+Seite 17 falsche Fußnote
+Konzeptmatrix ist zentriert und nicht am Anfang der Seite
+Tabelle auf Seite 31 viel zu weit unten Anforderungsübersicht

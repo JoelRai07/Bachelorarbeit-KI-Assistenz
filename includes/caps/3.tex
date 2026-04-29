@@ -4,7 +4,7 @@ Dieses Kapitel gibt einen thematisch strukturierten Überblick über den Forschu
 
 \section{Vorgehen der Literaturrecherche}
 
-Zur Einordnung des Forschungsstands wurde eine strukturierte Literaturrecherche in wissenschaftlichen Repositorien und Datenbanken durchgeführt (u.\,a. ACM Digital Library, IEEE Xplore, ScienceDirect und arXiv).\footcite[Vgl.][]{WebsterWatson2002} Die Recherche erfolgte themenorientiert auf Basis von Suchbegriffen wie \glqq web accessibility\grqq, \glqq LLM accessibility\grqq, \glqq accessibility violation detection\grqq{} und \glqq axe-core\grqq. Berücksichtigt wurden primär aktuelle Arbeiten mit Bezug zur automatisierten Erkennung oder Behebung von Barrierefreiheitsverstößen in Webanwendungen mit \acs{KI}-Assistenzsystemen. Die identifizierten Arbeiten wurden thematisch gruppiert, priorisiert und vergleichend ausgewertet.
+Zur Einordnung des Forschungsstands wurde eine strukturierte Literaturrecherche in wissenschaftlichen Repositorien und Datenbanken durchgeführt (u.\,a. ACM Digital Library, IEEE Xplore, ScienceDirect und arXiv).\footcite[Vgl.][]{WebsterWatson2002} Die Recherche erfolgte themenorientiert auf Basis von Suchbegriffen wie \glqq web accessibility\grqq, \glqq LLM accessibility\grqq, \glqq accessibility violation detection\grqq{} und \glqq axe-core\grqq. Berücksichtigt wurden primär aktuelle Arbeiten mit Bezug zur automatisierten Erkennung oder Behebung von Barrierefreiheitsverstößen in Webanwendungen mit \acs{KI}-Assistenzsystemen. Die identifizierten Arbeiten wurden thematisch gruppiert, priorisiert und abschließend vergleichend ausgewertet.
 
 \section{Von frühen \acs{KI}-Ansätzen zur \acs{LLM}-basierten Erkennung}
 
@@ -47,7 +47,7 @@ Die Konzeptmatrix in Tabelle \ref{tab:konzeptmatrix_haupt} fasst die zentralen M
 
 \newcommand{\yes}{\textbf{x}}
 
-\begin{table}[htbp]
+\begin{table}[H]
 \centering
 \setlength{\tabcolsep}{2.5pt}
 \renewcommand{\arraystretch}{1.25}
@@ -163,11 +163,11 @@ Ergänzt wird dieser methodische Rahmen durch einen Fallstudienansatz nach Yin.\
 
 Die Wahl eines \ac{PoC} als Artefakttyp ist durch den explorativen Charakter der Forschungsfrage begründet: Das Ziel ist die konzeptionelle Demonstration der technischen Machbarkeit, nicht die statistisch belastbare Generalisierung auf eine Grundgesamtheit.\footcite[Vgl.][]{hevner2004dsr}
 
-\section{Untersuchungsgegenstand und Scope-Abgrenzung} \label{sec:scope}
+\section{Untersuchungsgegenstand und Anwendungsbereich} \label{sec:scope}
 
-Als Praxisrahmen und Motivationskontext dient der \ac{BWEC}, eine öffentlich zugängliche React-basierte Webanwendung der \ac{BITBW}.\footcite[Vgl.][]{bwec} Er vereint drei für die Forschungsfrage zentrale Merkmale: gesetzlich relevante Anforderungen an digitale Barrierefreiheit, einen datenschutzsensiblen Einsatzkontext in der öffentlichen Verwaltung sowie typische Interaktionsmuster moderner Single-Page Applications. Die formale Hauptevaluation erfolgt jedoch an synthetisch konstruierten Testsuiten (test-12, test-50, test-100) mit vollständig bekannter Ground Truth. Der \ac{BWEC} wird ergänzend als Feldtest ohne quantitativen Ground-Truth-Vergleich eingesetzt (vgl. Abschnitt~\ref{sec:eval_bwec}).
+Als Praxisrahmen und Motivationskontext dient der \ac{BWEC}, eine öffentlich zugängliche React-basierte Webanwendung der \ac{BITBW}.\footcite[Vgl.][]{bwec} Er vereint drei für die Forschungsfrage zentrale Merkmale: gesetzlich relevante Anforderungen an digitale Barrierefreiheit, einen datenschutzsensiblen Einsatzkontext in der öffentlichen Verwaltung sowie typische Interaktionsmuster moderner Single-Page Applications. Die formale Hauptevaluation erfolgt jedoch an synthetisch konstruierten Testsuiten (test-12, test-50, test-100) mit vollständig bekannter Ground Truth.\footnote{Als \textit{Ground Truth} (dt. Referenzwahrheit) bezeichnet man die vorab definierte, gesichert korrekte Lösung, anhand derer die Ausgaben eines Systems gemessen werden. Im vorliegenden Kontext umfasst sie die Gesamtmenge der absichtlich in die Testsuite eingebetteten \ac{WCAG}-Violations.} Der \ac{BWEC} wird ergänzend als Feldtest ohne quantitativen Ground-Truth-Vergleich eingesetzt (vgl. Abschnitt~\ref{sec:eval_bwec}).
 
-Der Untersuchungsscope ist wie folgt abgegrenzt:
+Der Untersuchungsbereich ist wie folgt abgegrenzt:
 
 \begin{itemize}
     \item \textbf{Eingeschlossen:} Öffentlich zugängliche Bereiche der Anwendung ohne Authentifizierung. Betrachtet werden \ac{WCAG}~2.2-Verstöße auf Konformitätsstufe A und AA, soweit sie durch regelbasierte Prüfung, \ac{DOM}-Analyse und Interaktionsausführung im Frontend beobachtbar sind.\footcite[Vgl.][]{WCAG}

@@ -130,7 +130,7 @@ Ergänzend enthält der System-Prompt sechs Priorisierungsregeln, mit denen das 
   \item Keine Findings erfinden, die nicht in den Daten vorhanden sind
 \end{enumerate}
 
-Regel~6 adressiert gezielt das in Abschnitt~\ref{kap:2.4} beschriebene Halluzinationsproblem von \ac{LLM}s. Der vollständige System-Prompt einschließlich der Few-Shot-Beispiele ist in Anhang~\ref{app:systemprompt} dokumentiert.
+Regel~6 adressiert gezielt das in Abschnitt~\ref{kap:2.4} beschriebene Halluzinationsproblem von \ac{LLM}s. Der vollständige System-Prompt sowie die Few-Shot-Beispiele sind in Anhang~\ref{app:systemprompt} dokumentiert.
 
 \subsection{Token-Budget-Steuerung}
 
@@ -150,7 +150,7 @@ Anhang~\ref{app:systemprompt} illustriert.
 
 Der Ollama-Client kapselt den \acs{HTTP}-Aufruf an die lokale Ollama-Instanz (\texttt{localhost:11434}). Die Anfrage nutzt den \texttt{/api/generate}-Endpunkt mit \texttt{temperature:~0.05} (\ac{NFA}-04).%
 % KÜRZUNG: Suiteabhängige num_predict-Werte in Fußnote verschoben, da Implementierungsdetail.
-\footnote{Der Standardwert \texttt{num\_predict}~=~6\,144 gilt für den operativen Betrieb. In den Benchmarkläufen wurden suiteabhängige Werte eingesetzt: 6\,144 (test-12), 8\,192 (test-50) und 12\,288 (test-100); vgl. Tabelle~\ref{tab:benchmark_runs} und Abschnitt~\ref{sec:limit_tokenlimit}.}
+\footnote{Der Standardwert \texttt{num\_predict}~=~6\,144 gilt für den operativen Betrieb. In den Benchmarkläufen wurden suiteabhängige Werte eingesetzt: 6\,144 (test-12), 8\,192 (test-50) und 12\,288 (test-100). Vgl. Tabelle~\ref{tab:benchmark_runs} und Abschnitt~\ref{sec:limit_tokenlimit}.}
 Die niedrige \texttt{temperature}-Einstellung reduziert den Nicht-Determinismus der Ausgaben (vgl. Abschnitt~\ref{kap:2.4}), ohne ihn vollständig zu eliminieren. Der Client verwendet ein konfigurierbares Timeout (Default: drei Stunden), da die Inferenz auf \ac{CPU}-basierten Systemen je nach Modellgröße mehrere Minuten in Anspruch nehmen kann. Die Antwort von Ollama enthält neben dem generierten Text auch die tatsächliche Anzahl der Prompt- und Output-Tokens (\texttt{prompt\_eval\_count}, \texttt{eval\_count}), die für die Evaluation in Kapitel~\ref{kap:7} erfasst werden.
 
 Der Output-Formatter erzeugt pro Analysedurchlauf zwei Ausgabedateien: einen Markdown-Report für die menschliche Lesbarkeit sowie einen \acs{JSON}-Report für die maschinelle Weiterverarbeitung (\ac{FA}-05). Der Markdown-Report enthält einen Metadaten-Header (\acs{URL}, Modell, Zeitstempel, Token-Statistiken), die Roh-Ausgabe des Sprachmodells sowie eine Metriken-Tabelle mit den Laufzeiten aller Pipeline-Phasen. Der \acs{JSON}-Report speichert zusätzlich das Parsing-Ergebnis der \ac{LLM}-Antwort: Der Formatter versucht, die Markdown-Ausgabe in Must-have- und Nice-to-have-Einträge zu zerlegen. Schlägt dieses Parsing fehl, etwa weil das Modell das vorgegebene Format nicht einhält, wird dies im Report dokumentiert (\texttt{parsed.success: false}).

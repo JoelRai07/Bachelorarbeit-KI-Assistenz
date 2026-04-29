@@ -57,6 +57,9 @@
 \clearpage
 
 \anhang{Erweiterte Konzeptmatrix}\label{app:konzeptmatrix}
+
+\noindent\textit{(Tabelle auf der nächsten Seite.)}
+
 \begin{table}[htbp]
 \centering
 \setlength{\tabcolsep}{2.5pt}
@@ -194,12 +197,11 @@ Draffan et al.\ (2020) & Web2Access+AI
 }% Ende resizebox
 
 \caption[Konzeptmatrix (vollständige Übersicht)]{%
-Konzeptmatrix nach Webster Watson\footnotemark: vollständige Übersicht aller analysierten Studien im Vergleich zum eigenen \acf{PoC}.
+Konzeptmatrix nach Webster und Watson~\cite{WebsterWatson2002}: vollständige Übersicht aller analysierten Studien im Vergleich zum eigenen \acf{PoC}.
 \yes~=~Konzept vorhanden/adressiert; leer~=~nicht adressiert. \glqq{}Barrieren korrigieren\grqq{} schließt die Generierung konkreter Code-Fix-Vorschläge ein, nicht notwendigerweise automatisches Patchen.
 }
 \label{tab:konzeptmatrix_voll}
 \end{table}
-\footnotetext{Vgl. \cite{WebsterWatson2002}.}
 
 \clearpage
 
@@ -279,6 +281,42 @@ Konzeptmatrix nach Webster Watson\footnotemark: vollständige Übersicht aller a
 
 \clearpage
 
+\anhang{TypeScript-Interface des Unified Finding Schema}\label{app:ufs-interface}
+
+\lstset{
+  basicstyle=\ttfamily\scriptsize,
+  keywordstyle=\color{blue},
+  commentstyle=\color{gray},
+  stringstyle=\color{red},
+  numbers=left,
+  numberstyle=\tiny,
+  breaklines=true,
+  frame=single
+}
+\begin{lstlisting}[language=JavaScript, caption={TypeScript-Interface des Unified Finding Schema}, label={lst:ufs}]
+export type FindingSource = "axe" | "playwright" | "grep" | "llm";
+export type Severity = "critical" | "serious" | "moderate" | "minor";
+export type WcagLevel = "A" | "AA" | "AAA";
+export type ViolationCategory = "syntaktisch" | "semantisch" | "layout";
+
+export interface UnifiedFinding {
+  id:             string;
+  source:         FindingSource;
+  ruleId:         string;
+  description:    string;
+  severity:       Severity;
+  wcagCriteria:   string[];
+  wcagLevel:      WcagLevel;
+  category:       ViolationCategory;
+  selector:       string | null;
+  componentPath:  string | null;
+  codeSnippet:    string | null;
+  lineRange:      [number, number] | null;
+}
+\end{lstlisting}
+
+\clearpage
+
 \anhang{Projektstruktur des \ac{PoC}}\label{app:projektstruktur}
 
 \lstset{
@@ -310,7 +348,6 @@ ace/
   results/
 \end{lstlisting}
 
-\clearpage
 
 %\anhang{Detailliertes Sequenzdiagramm}\label{app:sequenz}
 %\begin{figure}[p]
@@ -339,7 +376,7 @@ ace/
 \texttt{focus-after-dialog} & Fokus wandert beim Dialogöffnen in den Dialog & 2.4.3 (A) & semantisch \\
 \bottomrule
 \end{tabular}
-\caption{Implementierte Playwright-Checks mit \ac{WCAG}-Zuordnung und Kategorie}
+\caption{Implementierte Playwright-Checks mit \acs{WCAG}-Zuordnung und Kategorie}
 \label{tab:pw-checks}
 \end{table}
 
@@ -359,7 +396,7 @@ ace/
 \texttt{autofocus-usage} & \texttt{autoFocus} kann den Fokusfluss stören & 2.4.3 (A) & semantisch \\
 \bottomrule
 \end{tabular}
-\caption{Implementierte grep-Patterns mit \ac{WCAG}-Zuordnung}
+\caption{Implementierte grep-Patterns mit \acs{WCAG}-Zuordnung}
 \label{tab:grep-patterns}
 \end{table}
 
@@ -521,7 +558,7 @@ Regeln:
 5. Nur JSON ausgeben.
 \end{lstlisting}
 
-\medskip
+\clearpage
 \noindent\textbf{User-Prompt-Template (\ac{LLM}-Detektor, vereinfacht):}
 
 \lstset{
@@ -553,7 +590,6 @@ Gib nur JSON zurück: {"findings": [...]}
 \end{lstlisting}
 
 
-\clearpage
 \anhang{Aufteilung des Token-Budgets}\label{app:tokenbudget}
 
 \begin{figure}[htbp]
@@ -655,6 +691,8 @@ Enterprise-Deployment & 14b & 32b & Produktionstauglich im zweistufigen Betrieb:
 \clearpage
 \anhang{Erfüllungsgrad der funktionalen und nicht-funktionalen Anforderungen}\label{app:fa_nfa_erfuellung}
 
+\noindent\textit{(Tabelle auf der nächsten Seite.)}
+
 \begin{table}[htbp]
 \centering
 \setlength{\tabcolsep}{5pt}
@@ -692,7 +730,7 @@ Enterprise-Deployment & 14b & 32b & Produktionstauglich im zweistufigen Betrieb:
 
 \anhang{Reproduzierbarkeitsblatt}\label{app:reproducibility}
 
-\begin{table}[htbp]
+\begin{table}[H]
 \centering
 \setlength{\tabcolsep}{5pt}
 \renewcommand{\arraystretch}{1.4}
@@ -1084,8 +1122,6 @@ Gesamtlaufzeit (Min--Max)         & 191--284\,s      & 300--480\,s        & 617-
 \end{tabular}
 \label{tab:token_economy}
 \end{table}
-
-\clearpage
 
 \anhang{Laufzeit und Effizienz der Pipeline-Modelle (test-12-Suite)}\label{app:laufzeit_effizienz}\label{app:effizienz_metriken_12}
 
@@ -3165,7 +3201,7 @@ Pragmatische \ac{BITV}-Eignung         & \multicolumn{3}{p{8.5cm}|}{14b: empfohl
 \legend{\texttt{qwen2.5-coder:7b}, \texttt{qwen2.5-coder:14b}, \texttt{qwen3:32b}}
 \end{axis}
 \end{tikzpicture}
-\caption[\ac{LLM}-Konsistenz $\sigma$ im Suite-Vergleich]{Stichproben-Standardabweichung $\sigma$ der \ac{LLM}-Detektor-Findings je Modell und Testsuite ($n=10$ Runs). Niedrigere Werte bedeuten höhere Run-zu-Run-Konsistenz. Datenbasis: Tabellen~\ref{tab:detektor_konsistenz}, \ref{tab:detektor_konsistenz_50}, \ref{tab:detektor_konsistenz_100}.}
+\caption[\acs{LLM}-Konsistenz $\sigma$ im Suite-Vergleich]{Stichproben-Standardabweichung $\sigma$ der \ac{LLM}-Detektor-Findings je Modell und Testsuite ($n=10$ Runs). Niedrigere Werte bedeuten höhere Run-zu-Run-Konsistenz. Datenbasis: Tabellen~\ref{tab:detektor_konsistenz}, \ref{tab:detektor_konsistenz_50}, \ref{tab:detektor_konsistenz_100}.}
 \label{fig:graph_sigma}
 \end{figure}
 
@@ -3349,35 +3385,6 @@ Pragmatische \ac{BITV}-Eignung         & \multicolumn{3}{p{8.5cm}|}{14b: empfohl
 \label{fig:graph_must_nice_demo}
 \end{figure}
 
-% ═══════════════════════════════════════════════════════════════════
-\clearpage
-\phantomsection\label{app:block_bwec}
-\anhang{\ac{BWEC}-Block (kompletter Block)}
-
-\noindent\textit{Hinweis:} Der \ac{BWEC}-Block dokumentiert die explorative Erprobung des \ac{PoC} am realen Untersuchungsobjekt ohne Ground Truth. Im Unterschied zu test-12, test-50 und test-100 stehen hier daher vor allem Laufzeit-, Skalierungs- und Robustheitsbeobachtungen im Vordergrund.
-
-\begin{table}[htbp]
-\centering
-\setlength{\tabcolsep}{5pt}
-\renewcommand{\arraystretch}{1.15}
-\caption[Navigationsübersicht \ac{BWEC}-Block]{Navigationsübersicht in der standardisierten Reihenfolge für den \ac{BWEC}-Block.}
-\begin{tabular}{|c|p{11.4cm}|}
-\hline
-\textbf{Nr.} & \textbf{Baustein} \\
-\hline
-1 & \hyperref[app:detektionsquellen_bwec]{Detektionsquellen-Übersicht} \\
-\hline
-2 & \hyperref[app:rohdaten_bwec]{Rohdaten (\texttt{maxfiles}~=~100)} \\
-\hline
-3 & \hyperref[app:modell_summary_bwec]{Modell-Leistungsvergleich (\texttt{maxfiles}~=~100)} \\
-\hline
-4 & \hyperref[app:rohdaten_bwec500]{Rohdaten (\texttt{maxfiles}~=~500)} \\
-\hline
-5 & \hyperref[app:modell_summary_bwec500]{Modell-Leistungsvergleich (\texttt{maxfiles}~=~500)} \\
-\hline
-\end{tabular}
-\label{tab:template_bwec}
-\end{table}
 
 \clearpage
 

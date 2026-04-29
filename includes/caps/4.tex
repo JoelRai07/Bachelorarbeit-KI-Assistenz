@@ -4,7 +4,7 @@ Dieses Kapitel erarbeitet die Grundlagen für das in Kapitel~\ref{kap:5} beschri
 
 \section{Problemkontext und Handlungsbedarf}\label{kap:4.1}
 
-Wie in Kapitel~\ref{kap:1} dargelegt, unterliegen alle von der \ac{BITBW} entwickelten und betriebenen Webanwendungen den gesetzlichen Anforderungen der \ac{BITV} 2.0, für die \ac{WCAG} 2.2 auf Konformitätsstufe AA den verbindlichen Maßstab bildet.\footcite[Vgl.][]{BITV} In der Praxis erfolgt die Barrierefreiheitsprüfung bislang überwiegend manuell oder mithilfe einzelner regelbasierter Tools. Dieses Vorgehen ist aus zwei Gründen problematisch: Manuelle Audits sind personalintensiv und skalieren nur unzureichend mit der Anzahl zu betreuender Anwendungen; regelbasierte Tools erfassen, wie in Kapitel~\ref{tools} dargelegt, nur einen Bruchteil der tatsächlich vorhandenen Barrieren.\footcite[Vgl.][S. 8--9]{tafreshipour_ma11y_2024}
+Wie in Kapitel~\ref{kap:1} dargelegt, unterliegen alle von der \ac{BITBW} entwickelten und betriebenen Web\-anwendungen den gesetzlichen Anforderungen der \ac{BITV} 2.0, für die \ac{WCAG} 2.2 auf Konformitätsstufe AA den verbindlichen Maßstab bildet.\footcite[Vgl.][]{BITV} In der Praxis erfolgt die Barrierefreiheitsprüfung bislang überwiegend manuell oder mithilfe einzelner regelbasierter Tools. Dieses Vorgehen ist aus zwei Gründen problematisch: Manuelle Audits sind personalintensiv und skalieren nur unzureichend mit der Anzahl zu betreuender Anwendungen; regelbasierte Tools erfassen, wie in Kapitel~\ref{tools} dargelegt, nur einen Bruchteil der tatsächlich vorhandenen Barrieren.\footcite[Vgl.][S. 8--9]{tafreshipour_ma11y_2024}
 
 Die in Kapitel~\ref{kap:3} identifizierten drei Forschungslücken bilden den Ausgangspunkt der Anforderungserhebung.\footcites[Vgl.][S. 79]{hevnerChatterjeeDesignResearch2010}[Vgl.][S. 9--11, 23--24]{hevnerChatterjeeDesignResearch2010} Dazu zählen die fehlende Zustandserfassung durch Interaktionen, die fehlende Verknüpfung von \ac{DOM}-Befunden mit dem Quellcode sowie die Unvereinbarkeit cloudbasierter \ac{LLM}-\ac{API}s mit den Datenschutzanforderungen öffentlicher Verwaltungen (vgl. Abschnitt~\ref{datenschutz}). Daraus ergibt sich als Systemziel ein lokal ausführbares, \ac{LLM}-gestütztes Assistenzsystem, das axe-core-Reports, Playwright-Interaktionsdaten und statische Quellcodeanalyse kombiniert (vgl. Abschnitt~\ref{kap:1.3}).\footcite[Vgl.][S. 9--11, 23--24]{hevnerChatterjeeDesignResearch2010}
 
@@ -12,6 +12,7 @@ Die in Kapitel~\ref{kap:3} identifizierten drei Forschungslücken bilden den Aus
 
 \acf{FA} beschreiben die Leistungen, die ein System erbringen soll.\footcite[Vgl.][S. 105--107]{sommerville2016software} Die folgenden Anforderungen leiten sich aus der Problemanalyse (Abschnitt~\ref{kap:4.1}), den identifizierten Forschungslücken (Abschnitt~\ref{Forschungslücken}) sowie der Analyse vergleichbarer Systeme aus der Literatur ab.
 
+\clearpage
 \textfett{\acs{FA}-01 Regelbasierte Accessibility-Erkennung}
 
 Das System muss den \ac{BWEC} automatisiert auf Barrierefreiheitsverstöße gemäß \ac{WCAG} 2.2 der Konformitätsstufen A und AA prüfen.\footcite[Vgl.][]{bwec,WCAG} Die Prüfung basiert auf axe-core als Detection-Backend.\footcite[Vgl.][]{axe} Der Output je Verstoß umfasst mindestens: Regel-ID, Schweregrad (critical/serious/moderate/minor) sowie ein \acs{HTML}-Ausschnitt des betroffenen Elements.
@@ -58,11 +59,18 @@ Die Wahl der Inferenzinfrastruktur ist durch \ac{NFA}-01 (Lokal-First) weitgehen
 
 \subsection{Ollama als Laufzeitumgebung}
 
-Ollama ist ein quelloffenes Werkzeug, das die lokale Ausführung von \ac{LLM}s über eine einheitliche REST-\ac{API} ermöglicht.\footcite[Vgl.][]{Ollama} Die REST-\ac{API} ist kompatibel mit der OpenAI-\ac{API}-Spezifikation, wodurch sich bestehende Node.js-Bibliotheken ohne größeren Anpassungsaufwand integrieren lassen. Darüber hinaus unterstützt Ollama quantisierte Modellvarianten (z.\,B. Q4\_K\_M), die eine speichereffiziente Ausführung auf \ac{CPU}-basierten Systemen ohne dedizierte Grafikkarte ermöglichen. Dies ist insbesondere für Entwicklungsrechner der \ac{BITBW} relevant, bei denen nicht von \ac{GPU}-Hardware ausgegangen werden kann.
+Ollama ist ein quelloffenes Werkzeug, das die lokale Ausführung von \ac{LLM}s über eine einheit\-liche REST-\ac{API} ermöglicht.\footcite[Vgl.][]{Ollama} Die REST-\ac{API} ist kompatibel mit der OpenAI-\ac{API}-Spezifikation, wodurch sich bestehende Node.js-Bibliotheken ohne größeren Anpassungsaufwand integrieren lassen. Darüber hinaus unterstützt Ollama quantisierte Modellvarianten (z.\,B. Q4\_K\_M), die eine speichereffiziente Ausführung auf \ac{CPU}-basierten Systemen ohne dedizierte Grafikkarte ermöglichen. Dies ist insbesondere für Entwicklungsrechner der \ac{BITBW} relevant, bei denen nicht von \ac{GPU}-Hardware ausgegangen werden kann.
 
 \subsection{Anforderungen an das Sprachmodell}
 
-Unabhängig von der konkreten Modellwahl lassen sich vier zentrale Anforderungen an das Sprachmodell ableiten. Es muss (1)~\textbf{\ac{JSX} und TypeScript} verarbeiten können (\ac{FA}-03), (2)~\textbf{strukturierte Ausgaben} in einem vorgegebenen Format erzeugen (\ac{FA}-05, \ac{NFA}-04), (3)~innerhalb eines \textbf{Kontextfensters von mindestens 8.192 Tokens} arbeiten (\ac{FA}-04) und (4)~\textbf{auf \ac{CPU}-basierten Systemen} mit akzeptabler Latenz betreibbar sein, was die Modellgröße auf ca. 7--32 Milliarden Parameter begrenzt (\ac{NFA}-02).\footcite[Vgl.][S. 3]{hui2024qwen25coder}
+Unabhängig von der konkreten Modellwahl lassen sich vier zentrale Anforderungen an das Sprachmodell ableiten:\footcite[Vgl.][S. 3]{hui2024qwen25coder}
+
+\begin{enumerate}
+    \item \textbf{\ac{JSX} und TypeScript} verarbeiten können (\ac{FA}-03)
+    \item \textbf{Strukturierte Ausgaben} in einem vorgegebenen Format erzeugen (\ac{FA}-05, \ac{NFA}-04)
+    \item Innerhalb eines \textbf{Kontextfensters von mindestens 8.192 Tokens} arbeiten (\ac{FA}-04)
+    \item \textbf{Auf \ac{CPU}-basierten Systemen} mit akzeptabler Latenz betreibbar sein, was die Modellgröße auf ca. 7--32 Milliarden Parameter begrenzt (\ac{NFA}-02)
+\end{enumerate}
 
 Die Auswahl konkreter Modellkandidaten sowie deren vergleichende Evaluation werden in Abschnitt~\ref{sec:kontextualisierung} bzw. Kapitel~\ref{kap:7} behandelt.
 
@@ -74,7 +82,7 @@ Für die Evaluation in Kapitel~\ref{kap:7} werden vier lokal ausführbare Modell
 
 Tabelle~\ref{tab:anforderungen} fasst die spezifizierten Anforderungen zusammen und ordnet ihnen jeweils Ursprung und Priorität zu.
 
-\begin{table}[h]
+\begin{table}[tp]
 \centering
 \footnotesize
 \renewcommand{\arraystretch}{1.2}

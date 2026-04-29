@@ -6,9 +6,47 @@ Dieses Kapitel beschreibt den konzeptionellen Entwurf des Assistenzsystems \text
 \section{Zielarchitektur und Datenpipeline}
 \label{sec:zielarchitektur}
 
-Die Systemarchitektur folgt einer sequenziellen Datenpipeline, die vier Analysequellen zusammenführt, deren Ergebnisse normalisiert und an ein lokales Sprachmodell übergibt. Eine schematische Darstellung der Verarbeitungsschritte findet sich in Anhang~\ref{app:ace-pipeline-schema} (Abbildung~\ref{fig:ace-pipeline-schema}).
+Die Systemarchitektur folgt einer sequenziellen Datenpipeline, die vier Analysequellen zusammenführt, deren Ergebnisse normalisiert und an ein lokales Sprachmodell übergibt.
 
-Die Pipeline gliedert sich in fünf Phasen: Datenerhebung durch axe-core, Playwright und grep, \ac{LLM}-gestützte Quellcodeanalyse, Normalisierung der Rohdaten in das \ac{UFS}, Prompt-Konstruktion mit Token-Budget-Steuerung sowie Inferenz durch das lokale Sprachmodell mit anschließender Ausgabe.
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[
+    node distance=6mm and 6mm,
+    box/.style={draw, rounded corners=2pt, align=center,
+                minimum height=8mm, inner sep=3pt, font=\footnotesize},
+    arr/.style={-Latex, thin, shorten >=1pt}
+]
+% Quelle
+\node[box, minimum width=24mm] (bwec) {BWEC\enspace\tiny(React/TS)};
+
+% Drei Analysequellen
+\node[box, below left=8mm and 6mm of bwec]  (axe)  {axe-core\\\tiny(DOM)};
+\node[box, below=8mm of bwec]               (pw)   {Playwright\\\tiny(E2E)};
+\node[box, below right=8mm and 6mm of bwec] (code) {Code\\\tiny(grep + LLM)};
+
+% Pipeline
+\node[box, below=12mm of pw, minimum width=42mm] (ufs)
+    {Unified Finding Schema (UFS)\\\tiny via Normalizer};
+\node[box, below=of ufs, minimum width=42mm] (llm)
+    {Lokales LLM\\\tiny modellkonfigurierbar};
+\node[box, below=of llm, minimum width=42mm] (todo)
+    {Priorisierte To-Do-Liste};
+
+% Pfeile
+\draw[arr] (bwec) -- (axe);
+\draw[arr] (bwec) -- (pw);
+\draw[arr] (bwec) -- (code);
+\draw[arr] (axe)  -- (ufs);
+\draw[arr] (pw)   -- (ufs);
+\draw[arr] (code) -- (ufs);
+\draw[arr] (ufs)  -- (llm);
+\draw[arr] (llm)  -- (todo);
+\end{tikzpicture}
+\caption[Datenpipeline des Assistenzsystems]{Datenpipeline des Assistenzsystems: Vier Analysequellen (axe-core, Playwright, grep und \ac{LLM}-Codeanalyse -- im Diagramm als Code-Schiene zusammengefasst) werden über einen Normalizer in das \ac{UFS} überführt und durch ein lokal ausführbares \ac{LLM} zu priorisierten Handlungsempfehlungen verdichtet. Eine vergrößerte Darstellung findet sich in Anhang~\ref{app:ace-pipeline-schema}.}
+\label{fig:bwec-pipeline}
+\end{figure}
+
+Wie Abbildung~\ref{fig:bwec-pipeline} zeigt, gliedert sich die Pipeline in fünf Phasen: Datenerhebung durch axe-core, Playwright und grep, \ac{LLM}-gestützte Quellcodeanalyse, Normalisierung der Rohdaten in das \ac{UFS}, Prompt-Konstruktion mit Token-Budget-Steuerung sowie Inferenz durch das lokale Sprachmodell mit anschließender Ausgabe.
 
 \subsection{Analysequellen}
 
@@ -54,39 +92,7 @@ grep & \ac{DOM}/Quellcode-Diskrepanz\footnotemark{} & alle (Anreicherung) & Absc
 
 Die Notwendigkeit einer Normalisierungsschicht ergibt sich aus der Heterogenität der Ausgangsformate.\footcite[Vgl.][]{pool_testaro_2023} Konkret liefert axe-core Objekte mit \texttt{impact}-Stufen und \ac{DOM}-Selektorketten, Playwright gibt boolesche \texttt{passed}-Felder zurück, grep produziert Datei-Zeilen-Tupel, und die \ac{LLM}-Codeanalyse liefert \acs{JSON}-Objekte mit Evidenz- und Zeilenfeldern. Eine quellenübergreifende Deduplizierung und Priorisierung wäre auf dieser Grundlage nicht möglich. Zudem enthalten rohe axe-core-Ausgaben vollständige \ac{DOM}-Snapshots und ausführliche Hilfetexte, die für die \ac{LLM}-Inferenz das Token-Budget unnötig belasten.
 
-Das \ac{UFS} überführt daher alle Findings in eine einheitliche TypeScript-Schnittstelle. Listing~\ref{lst:ufs} zeigt das Interface, wie es im \ac{PoC} implementiert ist.
-
-\lstset{
-  basicstyle=\ttfamily\scriptsize,
-    keywordstyle=\color{blue},
-    commentstyle=\color{gray},
-    stringstyle=\color{red},
-    numbers=left,
-    numberstyle=\tiny,
-    breaklines=true,
-    frame=single
-}
-\begin{lstlisting}[language=JavaScript, caption={TypeScript-Interface des Unified Finding Schema}, label={lst:ufs}]
-export type FindingSource = "axe" | "playwright" | "grep" | "llm";
-export type Severity = "critical" | "serious" | "moderate" | "minor";
-export type WcagLevel = "A" | "AA" | "AAA";
-export type ViolationCategory = "syntaktisch" | "semantisch" | "layout";
-
-export interface UnifiedFinding {
-  id:             string;
-  source:         FindingSource;
-  ruleId:         string;
-  description:    string;
-  severity:       Severity;
-  wcagCriteria:   string[];
-  wcagLevel:      WcagLevel;
-  category:       ViolationCategory;
-  selector:       string | null;
-  componentPath:  string | null;
-  codeSnippet:    string | null;
-  lineRange:      [number, number] | null;
-}
-\end{lstlisting}
+Das \ac{UFS} überführt daher alle Findings in eine einheitliche TypeScript-Schnittstelle; das vollständige Interface ist in Anhang~\ref{app:ufs-interface} abgebildet.
 
 Die Felder lassen sich in drei Funktionsgruppen einteilen: \textbf{Identifikation und Klassifikation} (\texttt{id}, \texttt{source}, \texttt{ruleId}, \texttt{severity}, \texttt{category}), \textbf{\ac{WCAG}-Bezug} (\texttt{wcagCriteria}, \texttt{wcagLevel}) und \textbf{Quellcode-Kontext} (\texttt{selector}, \texttt{componentPath}, \texttt{codeSnippet}, \texttt{lineRange}). Felder, die eine Quelle nicht liefern kann, bleiben \texttt{null} und werden gegebenenfalls durch die grep-Anreicherung oder die \ac{LLM}-Codeanalyse ergänzt.
 
