@@ -3622,45 +3622,6 @@
       \verb https://ersj.eu/journal/3752
       \endverb
     \endentry
-    \entry{262588213843476FrontendFrameworksPopularity}{online}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=e4ba827009498f60becb01efd4b35036}{%
-           family={Krotoff},
-           familyi={K\bibinitperiod},
-           given={Tanguy},
-           giveni={T\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{e4ba827009498f60becb01efd4b35036}
-      \strng{fullhash}{e4ba827009498f60becb01efd4b35036}
-      \strng{fullhashraw}{e4ba827009498f60becb01efd4b35036}
-      \strng{bibnamehash}{e4ba827009498f60becb01efd4b35036}
-      \strng{authorbibnamehash}{e4ba827009498f60becb01efd4b35036}
-      \strng{authornamehash}{e4ba827009498f60becb01efd4b35036}
-      \strng{authorfullhash}{e4ba827009498f60becb01efd4b35036}
-      \strng{authorfullhashraw}{e4ba827009498f60becb01efd4b35036}
-      \field{sortinit}{K}
-      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Front-end frameworks popularity (React, Vue, Angular and Svelte) - {FrontendFrameworksPopularity}.md}
-      \field{langid}{english}
-      \field{title}{Front-end frameworks popularity (React, Vue, Angular and Svelte)}
-      \field{titleaddon}{Gist}
-      \field{urlday}{5}
-      \field{urlmonth}{3}
-      \field{urlyear}{2026}
-      \field{year}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://gist.github.com/tkrotoff/b1caa4c3a185629299ec234d2314e190
-      \endverb
-      \verb{url}
-      \verb https://gist.github.com/tkrotoff/b1caa4c3a185629299ec234d2314e190
-      \endverb
-    \endentry
     \entry{bwec}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=2f9dda1a4a89629c5739ab1f7bd58a4a}{%

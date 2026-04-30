@@ -46,21 +46,30 @@ Die Systemarchitektur folgt einer sequenziellen Datenpipeline, die vier Analyseq
 \label{fig:bwec-pipeline}
 \end{figure}
 
-Wie Abbildung~\ref{fig:bwec-pipeline} zeigt, gliedert sich die Pipeline in fünf Phasen: Datenerhebung durch axe-core, Playwright und grep, \ac{LLM}-gestützte Quellcodeanalyse, Normalisierung der Rohdaten in das \ac{UFS}, Prompt-Konstruktion mit Token-Budget-Steuerung sowie Inferenz durch das lokale Sprachmodell mit anschließender Ausgabe.
+Wie Abbildung~\ref{fig:bwec-pipeline} veranschaulicht, durchläuft ein vollständiger Analysedurchlauf folgende Schritte:
+\begin{enumerate}
+  \item axe-core: \ac{DOM} analysieren, Findings normalisieren
+  \item Playwright: sieben Interaktionschecks ausführen, fehlgeschlagene normalisieren
+  \item Code-Anreicherung: axe-/Playwright-Findings mit Quellcode-Kontext ergänzen
+  \item Code-Patterns: Anti-Patterns im Quellcode suchen, deduplizieren
+  \item \ac{LLM}-Codeanalyse: semantische Quellcodeanalyse ausführen, zusätzliche Findings normalisieren
+  \item Prompt-Builder: Findings serialisieren, Token-Budget anwenden
+  \item Ollama: kombinierten Priorisierungsprompt senden, Antwort empfangen
+  \item Output: Markdown- und \acs{JSON}-Report generieren und speichern
+\end{enumerate}
+Die folgenden Abschnitte beschreiben die konzeptionellen Grundlagen der einzelnen Komponenten.
 
 \subsection{Analysequellen}
 
 Die in Abschnitt~\ref{Forschungslücken} identifizierten Forschungslücken bilden den Ausgangspunkt der Konzeption und werden im Folgenden in konkrete Analysequellen und Verarbeitungsschritte überführt.
 
-\textbf{axe-core} wird über einen gesteuerten Chromium-Browser ausgeführt und analysiert den vollständig gerenderten \ac{DOM} der Zielanwendung auf Verstöße gegen \ac{WCAG}-Erfolgskriterien. Da Rich-Client-Webanwendungen ihre Inhalte erst zur Laufzeit per JavaScript erzeugen (vgl. Abschnitt~\ref{kap:2.3}), ist die Ausführung in einem echten Browser unerlässlich.\footcite[Vgl.][]{fathallah_accessguru_2025} axe-core deckt primär \textit{syntaktische} Verstöße ab und ist daher als alleinige Quelle nicht ausreichend.\footcite[Vgl.][]{kodithuwakku_assessing_2025}
+\textbf{axe-core} analysiert den vollständig gerenderten \ac{DOM} der Zielanwendung auf Verstöße gegen \ac{WCAG}-Erfolgskriterien. Da Rich-Client-Webanwendungen ihre Inhalte erst zur Laufzeit per JavaScript erzeugen (vgl. Abschnitt~\ref{kap:2.3}), ist die Ausführung in einem echten Browser unerlässlich.\footcite[Vgl.][]{fathallah_accessguru_2025} axe-core erfasst dabei primär \textit{syntaktische} Verstöße; semantische und interaktionsbedingte Barrieren bleiben außerhalb seiner Regelabdeckung.\footcite[Vgl.][]{kodithuwakku_assessing_2025}
 
-\textbf{Playwright} führt sieben generische Interaktionschecks aus, die unabhängig von der konkreten Anwendungslogik lauffähig sind. Geprüft werden unter anderem die Erreichbarkeit interaktiver Elemente per Tastatur, die Sichtbarkeit des Fokusindikators sowie das Vorhandensein eines Skip-Links. Diese Checks adressieren gezielt das in Abschnitt~\ref{Herausforderungen} beschriebene Problem \textit{zustandsabhängiger Barrieren}: Ein Modalfenster ohne Fokus-Trap oder ein per Tastatur nicht navigierbares Dropdown-Menü ist erst durch tatsächliche Browser-Interaktion sichtbar.\footcite[Vgl.][]{huang_access_2024}
+\textbf{Playwright} führt sieben generische Interaktionschecks aus und adressiert damit gezielt das in Abschnitt~\ref{Herausforderungen} beschriebene Problem \textit{zustandsabhängiger Barrieren}. Geprüft werden unter anderem die Tastaturerreichbarkeit interaktiver Elemente, die Sichtbarkeit des Fokusindikators und das Vorhandensein eines Skip-Links -- Eigenschaften, die erst durch tatsächliche Browser-Interaktion sichtbar werden.\footcite[Vgl.][]{huang_access_2024}
 
-\textbf{grep} übernimmt zwei komplementäre Aufgaben: Erstens reichert es bestehende axe-core- und Playwright-Findings um ihren Entstehungskontext im Quellcode an (\textit{Kontextanreicherung}); zweitens erkennt es eigenständig bekannte Anti-Patterns im React-Quellcode anhand regulärer Ausdrücke (\textit{Pattern-Erkennung}). Beide Aufgaben adressieren die in Kapitel~\ref{Forschungslücken} beschriebene Lücke zwischen \ac{DOM}-Analyse und Quellcode, die Fathallah et al. als offenes Problem von AccessGuru benennen.\footcite[Vgl.][]{fathallah_accessguru_2025}
+\textbf{grep} übernimmt zwei komplementäre Aufgaben: Bestehende axe-core- und Playwright-Findings werden um ihren Quellcode-Kontext angereichert (\textit{Kontextanreicherung}); unabhängig davon erkennt grep bekannte Anti-Patterns im React-Quellcode (\textit{Pattern-Erkennung}). Beide Aufgaben adressieren die in Kapitel~\ref{Forschungslücken} beschriebene Lücke zwischen \ac{DOM}-Analyse und Quellcode.\footcite[Vgl.][]{fathallah_accessguru_2025} Die Pattern-Erkennung basiert auf regulären Ausdrücken: Da die gesuchten Anti-Patterns textuell im \ac{JSX}-Markup erkennbar sind, bietet ein vollständiger \ac{AST}-Parser keinen konzeptionellen Mehrwert bei erhöhter Komplexität.\footcite[Vgl.][S.~12]{bassi_assessment_2025}
 
-Die Entscheidung für reguläre Ausdrücke anstelle eines vollständigen \ac{AST}-Parsers beruht darauf, dass die implementierten Pattern-Checks syntaktischer Natur sind und nach textuell erkennbaren Mustern im \ac{JSX}-Markup suchen, nicht nach semantischen Abhängigkeiten oder Kontrollflüssen im Code. Der regex-basierte Ansatz gewährleistet zudem Sprachunabhängigkeit über \texttt{.tsx}, \texttt{.jsx}, \texttt{.ts} und \texttt{.js}-Dateien ohne sprachspezifische Parser-Abhängigkeiten.\footcite[Vgl.][S.~12]{bassi_assessment_2025} Die Kontextanreicherung erfolgt selektiv und durchsucht ausschließlich Dateien, auf die bestehende Findings verweisen; die Pattern-Erkennung arbeitet breiter über die relevante Codebasis (vgl. Abschnitt~\ref{sec:impl-code}).
-
-\textbf{\ac{LLM}-Codeanalyse} ergänzt die regelbasierten Quellen um eine semantische Detektionsstufe. Das lokale Modell liest Quellcode-Chunks mit Zeilennummern und erzeugt strukturierte Findings im \ac{UFS}-Schema. Diese Findings werden als zusätzliche Quelle eingebunden und anschließend mit axe-core-, Playwright- und grep-Befunden fusioniert.\footcite[Vgl.][]{fathallah_accessguru_2025}
+\textbf{\ac{LLM}-Codeanalyse} ergänzt die regelbasierten Quellen um eine semantische Detektionsstufe: Das lokale Modell analysiert Quellcode-Chunks mit Zeilennummern und erzeugt strukturierte Findings im \ac{UFS}-Schema, die anschließend mit den übrigen Befunden zusammengeführt werden.\footcite[Vgl.][]{fathallah_accessguru_2025}
 
 Tabelle~\ref{tab:tool-mapping} fasst die Zuordnung der vier Analysequellen zu den adressierten Problemen und den jeweiligen Verstoßtypen zusammen.
 
@@ -68,7 +77,7 @@ Tabelle~\ref{tab:tool-mapping} fasst die Zuordnung der vier Analysequellen zu de
 \centering
 \small
 \renewcommand{\arraystretch}{1.15}
-\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}p{4.4cm}>{\raggedright\arraybackslash}p{2.9cm}>{\raggedright\arraybackslash}p{3.5cm}@{}}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash\footnotesize}p{4.4cm}>{\raggedright\arraybackslash}p{2.9cm}>{\raggedright\arraybackslash}p{3.5cm}@{}}
 \toprule
 \textbf{Quelle} & \textbf{Adressiertes Problem} & \textbf{Verstoßtypen} & \textbf{Theoriebezug} \\
 \midrule
@@ -90,11 +99,9 @@ grep & \ac{DOM}/Quellcode-Diskrepanz\footnotemark{} & alle (Anreicherung) & Absc
 \subsection{\acl{UFS}}
 \label{sec:ufs}
 
-Die Notwendigkeit einer Normalisierungsschicht ergibt sich aus der Heterogenität der Ausgangsformate.\footcite[Vgl.][]{pool_testaro_2023} Konkret liefert axe-core Objekte mit \texttt{impact}-Stufen und \ac{DOM}-Selektorketten, Playwright gibt boolesche \texttt{passed}-Felder zurück, grep produziert Datei-Zeilen-Tupel, und die \ac{LLM}-Codeanalyse liefert \acs{JSON}-Objekte mit Evidenz- und Zeilenfeldern. Eine quellenübergreifende Deduplizierung und Priorisierung wäre auf dieser Grundlage nicht möglich. Zudem enthalten rohe axe-core-Ausgaben vollständige \ac{DOM}-Snapshots und ausführliche Hilfetexte, die für die \ac{LLM}-Inferenz das Token-Budget unnötig belasten.
+Die vier Analysequellen liefern heterogene Ausgabeformate:\footcite[Vgl.][]{pool_testaro_2023} axe-core gibt Objekte mit \texttt{impact}-Stufen und \ac{DOM}-Selektorketten zurück, Playwright boolesche \texttt{passed}-Felder, grep Datei-Zeilen-Tupel und die \ac{LLM}-Codeanalyse strukturierte \acs{JSON}-Objekte mit Evidenz- und Zeilenfeldern. Ohne Normalisierung wäre eine quellenübergreifende Deduplizierung und Priorisierung nicht möglich; zudem enthalten rohe axe-core-Ausgaben vollständige \ac{DOM}-Snapshots, die das Token-Budget der \ac{LLM}-Inferenz unnötig belasten.
 
-Das \ac{UFS} überführt daher alle Findings in eine einheitliche TypeScript-Schnittstelle; das vollständige Interface ist in Anhang~\ref{app:ufs-interface} abgebildet.
-
-Die Felder lassen sich in drei Funktionsgruppen einteilen: \textbf{Identifikation und Klassifikation} (\texttt{id}, \texttt{source}, \texttt{ruleId}, \texttt{severity}, \texttt{category}), \textbf{\ac{WCAG}-Bezug} (\texttt{wcagCriteria}, \texttt{wcagLevel}) und \textbf{Quellcode-Kontext} (\texttt{selector}, \texttt{componentPath}, \texttt{codeSnippet}, \texttt{lineRange}). Felder, die eine Quelle nicht liefern kann, bleiben \texttt{null} und werden gegebenenfalls durch die grep-Anreicherung oder die \ac{LLM}-Codeanalyse ergänzt.
+Das \ac{UFS} überführt daher alle Findings in eine einheitliche TypeScript-Schnittstelle (vollständiges Interface: Anhang~\ref{app:ufs-interface}). Die Felder gliedern sich in drei Gruppen: Identifikation und Klassifikation (\texttt{id}, \texttt{source}, \texttt{ruleId}, \texttt{severity}, \texttt{category}), \ac{WCAG}-Bezug (\texttt{wcagCriteria}, \texttt{wcagLevel}) und Quellcode-Kontext (\texttt{selector}, \texttt{componentPath}, \texttt{codeSnippet}, \texttt{lineRange}). Felder, die eine Quelle nicht belegen kann, bleiben \texttt{null} und werden gegebenenfalls durch grep-Anreicherung oder \ac{LLM}-Codeanalyse ergänzt.
 
 Das Feld \texttt{category} bildet die in Abschnitt~\ref{Taxonomie} eingeführte Taxonomie nach Fathallah et al. direkt im Datenmodell ab.\footcite[Vgl.][]{fathallah_accessguru_2025} Das Feld \texttt{componentPath} bildet das entscheidende Bindeglied zwischen \ac{DOM}-Analyse und Quellcode: Erst durch die Verknüpfung eines axe-Findings mit dem konkreten Dateipfad und der Zeilennummer wird aus einer generischen Meldung (\emph{,,Element hat keinen alternativen Text``}) eine entwicklernahe Handlungsanweisung (\emph{,,In \texttt{LoginForm.tsx}, Zeile~46: Füge \texttt{alt}-Attribut hinzu``}).
 

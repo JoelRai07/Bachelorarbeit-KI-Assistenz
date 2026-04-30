@@ -2601,9 +2601,8 @@
     <bcf:citekey order="220" intorder="1">deepseek</bcf:citekey>
     <bcf:citekey order="221" intorder="1">he_enhancing_2025</bcf:citekey>
     <bcf:citekey order="222" intorder="1">WebAIM</bcf:citekey>
-    <bcf:citekey order="223" intorder="1">262588213843476FrontendFrameworksPopularity</bcf:citekey>
+    <bcf:citekey order="223" intorder="1">WebsterWatson2002</bcf:citekey>
     <bcf:citekey order="224" intorder="1">WebsterWatson2002</bcf:citekey>
-    <bcf:citekey order="225" intorder="1">WebsterWatson2002</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

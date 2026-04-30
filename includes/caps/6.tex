@@ -161,31 +161,26 @@ Der Output-Formatter erzeugt pro Analysedurchlauf zwei Ausgabedateien: einen Mar
 
 Die Pipeline-Orchestrierung in \texttt{index.ts} verkettet alle Module in der im Anhang dargestellten Reihenfolge (vgl. Anhang~\ref{app:ace-pipeline-schema}, Abbildung~\ref{fig:ace-pipeline-schema}). Jede Phase wird einzeln zeitgemessen, um die in \ac{NFA}-02 geforderte Laufzeitanalyse zu ermöglichen (für die Laufzeitanalyse siehe Kapitel~\ref{kap:7}). Die Metriken werden in einem \texttt{PipelineMetrics}-Objekt gesammelt, das neben den Phasenzeiten auch Token-Schätzungen, Anreicherungsquoten und Deduplizierungsstatistiken enthält.
 
-Ein vollständiger Durchlauf umfasst folgende Schritte:
-\begin{enumerate}
-  \item axe-core: Browser starten, \ac{DOM} analysieren, Findings normalisieren
-  \item Playwright: sieben Interaktionschecks ausführen, fehlgeschlagene normalisieren
-  \item Code-Anreicherung: axe-/Playwright-Findings mit Quellcode-Kontext ergänzen
-  \item Code-Patterns: sechs Anti-Patterns im Quellcode suchen, deduplizieren
-  \item \ac{LLM}-Codeanalyse (\texttt{-{}-llm-detect}): semantische Quellcodeanalyse ausführen und zusätzliche Findings normalisieren
-  \item Prompt-Builder: Findings serialisieren, Token-Budget anwenden
-  \item Ollama: kombinierten Priorisierungsprompt senden, Antwort empfangen
-  \item Output: Markdown- und \acs{JSON}-Report generieren und speichern
-\end{enumerate}
-
 Der \texttt{-{}-skip-llm}-Modus speichert den fertigen Prompt als Textdatei, ohne Ollama aufzurufen. Dieser Modus wird während der Entwicklung genutzt, um den Prompt unabhängig von der Modellverfügbarkeit zu iterieren und für die Evaluation zu dokumentieren.
 
 \section{Beispielabläufe am Untersuchungsobjekt}
 \label{sec:beispielablaeufe}
 
-Ein vollständiger Durchlauf auf der test-12-Suite erzeugt konsistent Findings aus allen vier Quellen: axe-core meldet vier Violations (u.\,a. fehlende Alternativtexte und Farbkontrastverstöße), zwei Playwright-Checks schlagen fehl (Fokusindikator-Verlust und fehlende Dialog-Fokusführung) und grep erkennt sechs Anti-Pattern-Treffer im Quellcode (u.\,a. \texttt{<div>}-Elemente mit \texttt{onClick}-Handler ohne Tastaturäquivalent). Der \acs{LLM}-Detektor ergänzt je nach Modellgröße durchschnittlich 11 bis 23 weitere semantische Findings. Eine vollständige Aufstellung der erkannten Violations findet sich in Anhang~\ref{app:accessibility_verstoesse_12}, Screenshots der Suite in Anhang~\ref{app:screenshots_test12}.
+Der folgende Ablauf zeigt exemplarisch die test-12-Suite und orientiert sich an den acht Pipeline-Phasen aus Abschnitt~\ref{sec:zielarchitektur}:
 
-Ein konkretes Beispiel für den Datenpfad ist der folgende Fall: Der Playwright-Check \texttt{focus-after-dialog} schlägt fehl, weil ein modaler Dialog den Tastaturfokus beim Öffnen nicht übernimmt. Der grep-Anreicherungsschritt lokalisiert die zugehörige Komponente im Quellcode und ergänzt den relevanten Code-Ausschnitt als Kontext. Der Prompt-Builder serialisiert dieses angereicherte Finding gemeinsam mit den übrigen Quellen und übergibt es an das lokale Modell. \texttt{qwen3:32b} klassifiziert den Befund als Must-have und generiert eine Empfehlung, die die betroffene Datei namentlich referenziert und einen React-konformen \texttt{useEffect}-Hook für die Fokussteuerung vorschlägt. Die Rohdaten und Benchmark-Ergebnisse aller 30 Runs sind in Anhang~\ref{app:rohdaten_12} und Anhang~\ref{app:modell_summary_12} dokumentiert.
+\begin{description}
+  \item[Phase 1 – axe-core] meldet vier Violations, darunter fehlende Alternativtexte und Farbkontrastverstöße.
+  \item[Phase 2 – Playwright] Zwei der sieben Interaktionschecks schlagen fehl: \texttt{focus-indicator} (Fokusindikator-Verlust bei Tab-Navigation) und \texttt{focus-after-dialog} (fehlende Fokusübernahme beim Öffnen eines modalen Dialogs).
+  \item[Phase 3 – Code-Anreicherung] Grep lokalisiert die zugehörigen Komponenten im Quellcode und ergänzt die relevanten Code-Ausschnitte -- u.\,a. wird \texttt{Modal.tsx} als Ursprungsdatei des \texttt{focus-after-dialog}-Befunds identifiziert.
+  \item[Phase 4 – Code-Patterns] Grep erkennt sechs Anti-Pattern-Treffer, darunter \texttt{<div>}-Elemente mit \texttt{onClick}-Handler ohne Tastaturäquivalent.
+  \item[Phase 5 – \ac{LLM}-Codeanalyse] Der \ac{LLM}-Detektor analysiert die Quellcode-Chunks und ergänzt je nach Modellgröße durchschnittlich 11 bis 23 weitere semantische Findings.
+  \item[Phase 6 – Prompt-Builder] Alle Findings werden serialisiert und das Token-Budget angewendet. Bei \texttt{qwen3:32b} ist das Budget von 6\,144~Tokens ausreichend; bei 7b und 14b ist es gelegentlich knapp.
+  \item[Phase 7 – Ollama] Das lokale Modell empfängt den kombinierten Priorisierungsprompt. \texttt{qwen3:32b} klassifiziert den \texttt{focus-after-dialog}-Befund als Must-have und schlägt einen React-konformen \texttt{useEffect}-Hook zur Fokussteuerung vor -- mit Verweis auf die betroffene Datei und Zeilennummer.
+  \item[Phase 8 – Output] Der Markdown-Report enthält priorisierte Must-have- und Nice-to-have-Empfehlungen mit Datei- und \ac{WCAG}-Bezug; der \acs{JSON}-Report speichert zusätzlich Token-Statistiken und Phasenlaufzeiten.
+\end{description}
 
-Auf der test-50-Suite (50 Violations) identifiziert axe-core 14 Violations, zwei Playwright-Checks schlagen fehl und grep liefert 21 Anti-Pattern-Treffer. Die größere Komponentenanzahl erhöht die Token-Last für den Detektor-Prompt spürbar, weshalb das Kontextfenster des 7b-Modells gelegentlich durch Truncation begrenzt wird. Screenshots der Testanwendung, Rohdaten und Modellvergleich finden sich in Anhang~\ref{app:screenshots_test50}, Anhang~\ref{app:rohdaten_50} und Anhang~\ref{app:modell_summary_50}.
+Die vollständige Aufstellung der erkannten Violations findet sich in Anhang~\ref{app:accessibility_verstoesse_12}, Screenshots in Anhang~\ref{app:screenshots_test12}, Rohdaten in Anhang~\ref{app:rohdaten_12}.
 
-Die test-100-Suite skaliert auf 100 eingebettete Violations über 11 Komponenten. Der erhöhte Umfang zwingt das 7b-Modell regelmäßig zu Truncation und senkt damit den effektiven Recall merklich, während \texttt{qwen3:32b} eine stabile Erkennungsleistung beibehält. Details zur Recall-Degradation, Screenshots und Rohdaten finden sich in Anhang~\ref{app:screenshots_test100}, Anhang~\ref{app:rohdaten_100} sowie Anhang~\ref{app:modell_summary_100}.
+Auf der test-50-Suite (50 Violations) identifiziert axe-core 14 Violations, zwei Playwright-Checks schlagen fehl und grep liefert 21 Anti-Pattern-Treffer. Die größere Komponentenanzahl erhöht die Token-Last, weshalb das Kontextfenster des 7b-Modells gelegentlich durch Truncation begrenzt wird. Auf der test-100-Suite (100 Violations, 11 Komponenten) verstärkt sich dieser Effekt: das 7b-Modell zeigt regelmäßige Truncation, während \texttt{qwen3:32b} eine stabile Erkennungsleistung beibehält. Screenshots, Rohdaten und Modellvergleich finden sich in den jeweiligen Anhängen (\ref{app:screenshots_test50}, \ref{app:rohdaten_50}, \ref{app:modell_summary_50} bzw.\ \ref{app:screenshots_test100}, \ref{app:rohdaten_100}, \ref{app:modell_summary_100}).
 
-Für den \ac{BWEC}, eine produktiv eingesetzte React-Anwendung des Landes Baden-Württemberg, erzeugt die Pipeline zehn axe-core-Violations, zwei Playwright-Checks und acht grep-Treffer. Da die Codebasis weit größer als die Codebasis der synthetischen Suites ist, wird sie in Chunks aufgeteilt; bei \texttt{maxfiles}~=~100 (66 Chunks) erzeugt der \acs{LLM}-Detektor im Mittel 15 bis 32 Findings pro Durchlauf. Bei \texttt{maxfiles}~=~500 (330 Chunks) steigt der Gesamtumfang entsprechend. Rohdaten und Modellübersichten beider Konfigurationen befinden sich in Anhang~\ref{app:rohdaten_bwec} und Anhang~\ref{app:modell_summary_bwec} (\texttt{maxfiles}~=~100) sowie in Anhang~\ref{app:rohdaten_bwec500} und Anhang~\ref{app:modell_summary_bwec500} (\texttt{maxfiles}~=~500).
-
-Der erzeugte Markdown-Report enthält die priorisierten Handlungsempfehlungen strukturiert als Must-have- und Nice-to-have-Listen mit Datei- und \ac{WCAG}-Bezug; der maschinenlesbare \acs{JSON}-Report speichert zusätzlich Token-Statistiken, Phasenlaufzeiten und das Parsing-Ergebnis. Die vollständige quantitative Auswertung mit Recall-Matrix, Rohdaten und Modellvergleich ist in Kapitel~\ref{kap:7} dokumentiert.
+Für den \ac{BWEC} erzeugt die Pipeline zehn axe-core-Violations, zwei Playwright-Checks und acht grep-Treffer. Da die Codebasis weit größer ist, wird sie in Chunks aufgeteilt; bei \texttt{maxfiles}~=~100 (66~Chunks) erzeugt der \acs{LLM}-Detektor im Mittel 15 bis 32 Findings pro Durchlauf, bei \texttt{maxfiles}~=~500 (330~Chunks) entsprechend mehr. Rohdaten und Modellübersichten beider Konfigurationen befinden sich in Anhang~\ref{app:rohdaten_bwec}, \ref{app:modell_summary_bwec} sowie \ref{app:rohdaten_bwec500}, \ref{app:modell_summary_bwec500}. Die vollständige quantitative Auswertung ist in Kapitel~\ref{kap:7} dokumentiert.

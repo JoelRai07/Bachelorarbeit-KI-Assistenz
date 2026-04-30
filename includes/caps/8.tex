@@ -10,7 +10,7 @@ Dieses abschließende Kapitel fasst die Ergebnisse der Arbeit zusammen (Abschnit
 \subsection{Beitrag zur übergeordneten Forschungsfrage}
 \label{sec:fazit_ff}
 
-Mit \ac{ACE} wurde ein \ac{DSR}-Artefakt entwickelt, das regelbasierte Prüfung, Interaktionsanalyse, Quellcodekontext und \ac{LLM}-gestützte Auswertung in einer Pipeline zusammenführt. Die Hauptevaluation umfasste 90 Benchmarkläufe (3 Modelle $\times$ 10 Runs je Testsuite) über die drei synthetischen Testsuiten test-12, test-50 und test-100. Die Beantwortung beider \acs{TF}s fällt dabei je nach Evaluationssuite unterschiedlich aus und wird im Folgenden differenziert dargestellt.
+Mit \ac{ACE} wurde ein \ac{DSR}-Artefakt entwickelt, das regelbasierte Prüfung, Interaktionsanalyse, Quellcodekontext und \ac{LLM}-gestützte Auswertung in einer Pipeline zusammenführt. Die Hauptevaluation umfasste 90 Benchmarkläufe (3 Modelle $\times$ 10 Testläufe je Testsuite) über die drei synthetischen Testsuiten test-12, test-50 und test-100. Die Beantwortung beider \acs{TF}s fällt dabei je nach Evaluationssuite unterschiedlich aus und wird im Folgenden differenziert dargestellt.
 
 Im Rahmen der synthetischen Evaluation kann \textbf{\acs{TF}1} grundsätzlich bestätigt werden. Die kombinierte Pipeline erzielt auf der test-100-Suite mit \texttt{qwen3:32b} einen konsistenten Recall von 63\,/\,100~Violations und liegt damit deutlich über der Tool-only-Baseline von 34\,/\,100. Die Arbeit zeigt damit keinen vollautomatischen Ersatz manueller Accessibility-Prüfung, sondern vielmehr eine substanzielle Erweiterung bestehender Toolketten.
 
@@ -37,11 +37,12 @@ Die ergänzende Erprobung am \ac{BWEC} zeigt, dass das System grundsätzlich auf
 \subsection{Methodische Einschränkungen}
 \label{sec:fazit_intern}
 
-Erstens beeinflusst das verfügbare Token-Budget die Priorisierungsqualität systematisch: Auf test-100 schöpft 14b in allen 10~Runs das Output-Limit aus, 7b in 80\,\% der Runs. \texttt{qwen3:32b} liefert die methodisch robusteste Basis (nur 1\,/\,10 trunkierte Runs), löst das Skalierungsproblem jedoch nicht vollständig.
-
-Zweitens beruht die Erkennungsbewertung auf einer Operationalisierung über die Report-Präsenz (Mehrheit der Runs), nicht auf einer formalen semantischen Äquivalenzklasse. Semantisch äquivalente, anders formulierte Findings können dadurch zu Unterschätzungen führen. Die Ergebnisse sind deskriptiv belastbar, aber nicht inferenzstatistisch verallgemeinerbar.
-
-Drittens wurde keine vollständige Precision-Evaluation über alle Runs der großen Suiten durchgeführt. Die ergänzende Stichprobenprüfung für \texttt{qwen3:32b} auf test-100 zeigt, dass echte Halluzinationen selten auftreten (1 von 176 geprüften Einträgen), der größere Teil der Überdetektion also auf Quell-Duplikate und Paraphrasen zurückgeht. Für den produktiven Einsatz bleibt dennoch eine nachgelagerte Plausibilisierung erforderlich.
+Die Evaluation unterliegt drei methodischen Einschränkungen:
+\begin{enumerate}
+    \item Das verfügbare Token-Budget beeinflusst die Priorisierungsqualität systematisch: Auf test-100 schöpft 14b in allen 10~Testläufen das Output-Limit aus, 7b in 80\,\% der Testläufe. \texttt{qwen3:32b} liefert die methodisch robusteste Basis (nur 1\,/\,10 trunkierte Testläufe), löst das Skalierungsproblem jedoch nicht vollständig.
+    \item Die Erkennungsbewertung beruht auf einer Operationalisierung über die Report-Präsenz (Mehrheit der Testläufe), nicht auf einer formalen semantischen Äquivalenzklasse. Semantisch äquivalente, anders formulierte Findings können dadurch zu Unterschätzungen führen. Die Ergebnisse sind deskriptiv belastbar, aber nicht inferenzstatistisch verallgemeinerbar.
+    \item Eine vollständige Precision-Evaluation über alle Testläufe der großen Suiten wurde nicht durchgeführt. Die ergänzende Stichprobenprüfung für \texttt{qwen3:32b} auf test-100 zeigt, dass echte Halluzinationen selten auftreten (1 von 176 geprüften Einträgen), der größere Teil der Überdetektion also auf Quell-Duplikate und Paraphrasen zurückgeht. Für den produktiven Einsatz bleibt dennoch eine nachgelagerte Plausibilisierung erforderlich.
+\end{enumerate}
 
 % ─────────────────────────────────────────────────────────────────────────────
 \section{Ausblick}

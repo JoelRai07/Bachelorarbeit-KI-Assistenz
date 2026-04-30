@@ -43,7 +43,7 @@ Das System muss vollständig ohne externe \ac{API}-Aufrufe betreibbar sein. Wede
 
 \textfett{\ac{NFA}-02 Laufzeit und Praktikabilität}
 
-Der vollständige Analyselauf muss auf einem Entwicklungsrechner innerhalb einer für den Entwicklungsalltag praktikablen Zeit abgeschlossen werden. Als Richtwert gilt eine Gesamtlaufzeit von unter zehn Minuten für eine einzelne Seite mit bis zu 20 axe-Verstößen. Diese Anforderung schließt mehrstufige Reasoning-Schleifen aus dem Scope des \ac{PoC} aus.\footnote{Siehe Kapitel \ref{Prompt}}
+Der vollständige Analyselauf muss auf einem Entwicklungsrechner innerhalb einer für den Entwicklungsalltag praktikablen Zeit abgeschlossen werden. Als Richtwert gilt eine Gesamtlaufzeit von unter zehn Minuten für eine einzelne Seite mit bis zu 20 axe-Verstößen. Diese Anforderung schließt mehrstufige Reasoning-Schleifen aus dem Rahmen des \ac{PoC} aus.\footnote{Siehe Kapitel \ref{Prompt}}
 
 \textfett{\ac{NFA}-03 Wartbarkeit und Erweiterbarkeit}
 
@@ -66,10 +66,10 @@ Ollama ist ein quelloffenes Werkzeug, das die lokale Ausführung von \ac{LLM}s �
 Unabhängig von der konkreten Modellwahl lassen sich vier zentrale Anforderungen an das Sprachmodell ableiten:\footcite[Vgl.][S. 3]{hui2024qwen25coder}
 
 \begin{enumerate}
-    \item \textbf{\ac{JSX} und TypeScript} verarbeiten können (\ac{FA}-03)
-    \item \textbf{Strukturierte Ausgaben} in einem vorgegebenen Format erzeugen (\ac{FA}-05, \ac{NFA}-04)
-    \item Innerhalb eines \textbf{Kontextfensters von mindestens 8.192 Tokens} arbeiten (\ac{FA}-04)
-    \item \textbf{Auf \ac{CPU}-basierten Systemen} mit akzeptabler Latenz betreibbar sein, was die Modellgröße auf ca. 7--32 Milliarden Parameter begrenzt (\ac{NFA}-02)
+    \item \ac{JSX} und TypeScript verarbeiten können (\ac{FA}-03)
+    \item Strukturierte Ausgaben in einem vorgegebenen Format erzeugen (\ac{FA}-05, \ac{NFA}-04)
+    \item Innerhalb eines Kontextfensters von mindestens 8.192 Tokens arbeiten (\ac{FA}-04)
+    \item Auf \ac{CPU}-basierten Systemen mit akzeptabler Latenz betreibbar sein, was die Modellgröße auf ca. 7--32 Milliarden Parameter begrenzt (\ac{NFA}-02)
 \end{enumerate}
 
 Die Auswahl konkreter Modellkandidaten sowie deren vergleichende Evaluation werden in Abschnitt~\ref{sec:kontextualisierung} bzw. Kapitel~\ref{kap:7} behandelt.

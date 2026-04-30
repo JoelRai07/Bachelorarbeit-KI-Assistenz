@@ -1,7 +1,11 @@
 \chapter{Stand der Forschung} \label{kap:3}
 
-Dieses Kapitel gibt einen thematisch strukturierten Überblick über den Forschungsstand zur \acs{KI}-gestützten Barrierefreiheitsanalyse. Darauf aufbauend werden die verbleibenden Forschungslücken herausgearbeitet, die den Ausgangspunkt der vorliegenden Arbeit bilden. Die relevanten Arbeiten lassen sich drei Entwicklungslinien zuordnen: (1) \ac{LLM}-basierte Erkennung von Accessibility-Verstößen, (2) \ac{LLM}-basierte Korrektur und Code-Generierung sowie (3) hybride Pipelines, die regelbasierte Tools mit \ac{LLM}-Analyse kombinieren.
-
+Dieses Kapitel gibt einen thematisch strukturierten Überblick über den Forschungsstand zur \acs{KI}-gestützten Barrierefreiheitsanalyse. Ausgehend davon werden die für diese Arbeit relevanten Forschungslücken herausgearbeitet. Die untersuchten Arbeiten lassen sich drei Entwicklungslinien zuordnen:
+\begin{enumerate}
+  \item \ac{LLM}-basierte Erkennung von Accessibility-Verstößen,
+  \item \ac{LLM}-basierte Korrektur und Code-Generierung sowie
+  \item hybride Pipelines, die regelbasierte Tools mit \ac{LLM}-Analyse kombinieren.
+\end{enumerate}
 \section{Vorgehen der Literaturrecherche}
 
 Zur Einordnung des Forschungsstands wurde eine strukturierte Literaturrecherche in wissenschaftlichen Repositorien und Datenbanken durchgeführt (u.\,a. ACM Digital Library, IEEE Xplore, ScienceDirect und arXiv).\footcite[Vgl.][]{WebsterWatson2002} Die Recherche erfolgte themenorientiert auf Basis von Suchbegriffen wie \glqq web accessibility\grqq, \glqq LLM accessibility\grqq, \glqq accessibility violation detection\grqq{} und \glqq axe-core\grqq. Berücksichtigt wurden primär aktuelle Arbeiten mit Bezug zur automatisierten Erkennung oder Behebung von Barrierefreiheitsverstößen in Webanwendungen mit \acs{KI}-Assistenzsystemen. Die identifizierten Arbeiten wurden thematisch gruppiert, priorisiert und abschließend vergleichend ausgewertet.
@@ -30,11 +34,11 @@ Pool (2023) adressiert die Detection-Schicht mit \textfett{Testaro}, einem Ensem
 
 Die Analyse der bestehenden Forschungsarbeiten zeigt drei persistente Forschungslücken, die den Ausgangspunkt der vorliegenden Arbeit bilden.
 
-Erstens berücksichtigt keiner der untersuchten Ansätze zustandsabhängige Barrieren systematisch, die erst durch Nutzerinteraktionen in React-basierten Single-Page Applications entstehen.\footcite[Vgl.][S. 110]{tafreshipour_ma11y_2024} Zwar setzen einzelne Systeme wie \textfett{AccessGuru} Playwright zur \ac{DOM}-Extraktion ein, jedoch beschränkt sich dies auf das initiale Rendering -- interaktionsbedingte Zustandswechsel werden nicht geprüft.\footcite[Vgl.][]{fathallah_accessguru_2025}
-
-Zweitens verknüpft keiner der analysierten Ansätze Tool-Reports systematisch mit dem Quellcode der geprüften Anwendung. \textfett{AccessGuru} selbst benennt dies als offenes Problem: die generierten Korrekturen beziehen sich auf isolierte \ac{DOM}-Snippets und nicht auf die \ac{JSX}-Komponenten, in denen Entwicklerinnen und Entwickler tatsächlich eingreifen müssten.\footcite[Vgl.][]{fathallah_accessguru_2025} Die Lücke zwischen technischer Fehlererkennung und entwicklernaher Umsetzung bleibt damit bestehen.
-
-Drittens adressiert keine der untersuchten Arbeiten explizit die datenschutzrechtlichen Anforderungen öffentlicher Verwaltungen: alle Systeme setzen auf cloudbasierte \ac{LLM}-\ac{API}s (primär GPT-4o), was für die \ac{BITBW} und vergleichbare Institutionen ohne vertiefte datenschutzrechtliche Prüfung nicht nutzbar ist.\footcite[Vgl.][Art. 28, 44 ff.]{dsgvo2016}
+\begin{enumerate}
+    \item Keiner der untersuchten Ansätze berücksichtigt zustandsabhängige Barrieren systematisch, die erst durch Nutzerinteraktionen in React-basierten Single-Page Applications entstehen.\footcite[Vgl.][S. 110]{tafreshipour_ma11y_2024} Zwar setzen einzelne Systeme wie \textfett{AccessGuru} Playwright zur \ac{DOM}-Extraktion ein, jedoch beschränkt sich dies auf das initiale Rendering -- interaktionsbedingte Zustandswechsel werden nicht geprüft.\footcite[Vgl.][]{fathallah_accessguru_2025}
+    \item Keiner der analysierten Ansätze verknüpft Tool-Reports systematisch mit dem Quellcode der geprüften Anwendung. \textfett{AccessGuru} selbst benennt dies als offenes Problem: die generierten Korrekturen beziehen sich auf isolierte \ac{DOM}-Snippets und nicht auf die \ac{JSX}-Komponenten, in denen Entwicklerinnen und Entwickler tatsächlich eingreifen müssten.\footcite[Vgl.][]{fathallah_accessguru_2025} Die Lücke zwischen technischer Fehlererkennung und entwicklernaher Umsetzung bleibt damit bestehen.
+    \item Keine der untersuchten Arbeiten adressiert explizit die datenschutzrechtlichen Anforderungen öffentlicher Verwaltungen: alle Systeme setzen auf cloudbasierte \ac{LLM}-\ac{API}s (primär GPT-4o), was für die \ac{BITBW} und vergleichbare Institutionen ohne vertiefte datenschutzrechtliche Prüfung nicht nutzbar ist.\footcite[Vgl.][Art. 28, 44 ff.]{dsgvo2016}
+\end{enumerate}
 
 Die Konzeptmatrix in Tabelle \ref{tab:konzeptmatrix_haupt} fasst die zentralen Merkmale der untersuchten Studien im Vergleich zum eigenen \ac{PoC} zusammen und macht die identifizierten Forschungslücken strukturell sichtbar.
 
@@ -107,14 +111,16 @@ Tafreshipour et al.\ (2024) & Ma11y
 Fernández-Navarro \& Chicano (2026) & \ac{LLM} Remediation
 & \yes & \yes & \yes & \yes &   & \yes & \yes &   &   & \yes &   &   & \yes &   \\ \hline
 
-% ── Eigener PoC ──────────────────────────────────────────────
+% ── Eigener PoC ──────────────────────────────────────
+\multicolumn{16}{|l|}{\textbf{Eigener Proof of Concept}} \\
+\hline
 
 \textbf{Martinez Campo (2026)} &
-\textbf{ACE (\ac{PoC})}
+\textbf{\ac{ACE} (\ac{PoC})}
 & \yes & \yes & \yes
 & \yes & \yes & \yes
 & \yes & \yes & \yes
-&   & \yes &
+& \yes & \yes &
 & \yes & \yes \\ \hline
 
 \end{tabular}%
@@ -135,7 +141,11 @@ Dieses Kapitel beschreibt das methodische Vorgehen der Arbeit. Zunächst wird di
 
 \section{Wissenschaftliche Methode} \label{sec:wiss_methode}
 
-Die vorliegende Arbeit folgt dem Forschungsparadigma des \ac{DSR}, das von Hevner et al. für die Wirtschaftsinformatik systematisiert wurde.\footcite[Vgl.][]{hevner2004dsr} \ac{DSR} eignet sich für diese Arbeit aus zwei Gründen. Erstens steht die Konstruktion eines konkreten technischen Artefakts im Zentrum der Forschungsfrage, nicht die Überprüfung einer statistischen Hypothese. Zweitens fordert \ac{DSR} explizit die Evaluation des Artefakts in einem realen Anwendungskontext, was dem praxisorientierten Charakter der Arbeit entspricht.\footcite[Vgl.][S. 80]{hevner2004dsr}
+Die vorliegende Arbeit folgt dem Forschungsparadigma des \ac{DSR}, das von Hevner et al. für die Wirtschaftsinformatik systematisiert wurde.\footcite[Vgl.][]{hevner2004dsr} \ac{DSR} eignet sich für diese Arbeit aus zwei Gründen:
+\begin{enumerate}
+    \item Die Konstruktion eines konkreten technischen Artefakts steht im Zentrum der Forschungsfrage, nicht die Überprüfung einer statistischen Hypothese.
+    \item \ac{DSR} fordert explizit die Evaluation des Artefakts in einem realen Anwendungskontext, was dem praxisorientierten Charakter der Arbeit entspricht.\footcite[Vgl.][S. 80]{hevner2004dsr}
+\end{enumerate}
 
 Alternative Ansätze wie Action Research oder kontrollierte Experimente wurden verworfen: Action Research setzt eine längerfristige Praktikerzusammenarbeit voraus, während kontrollierte Experimente eine Stichprobenbasis erfordern, die im Verwaltungskontext nicht verfügbar ist.\footcites[Vgl.][S. 1--2]{baskerville1999ar}[Vgl.][S. 239--335]{baskerville2004ar}
 
@@ -152,7 +162,7 @@ Zieldefinition & Kapitel \ref{kap:1.3} \& \ref{Forschungslücken} \\
 Design \& Entwicklung & Kapitel \ref{kap:4}-\ref{kap:6} \\
 Demonstration & Kapitel \ref{kap:6} (insb. Beispielabläufe) \\
 Evaluation & Kapitel \ref{kap:7} \\
-Kommunikation & Gesamtarbeit, zusammenfassend Kapitel \ref{kap:8} \\
+Kommunikation & Gesamtarbeit; Kap.~\ref{kap:8} \\
 \hline
 \end{tabular}
 \caption{Zuordnung der DSRM-Phasen zu den Kapiteln der Arbeit.}
@@ -186,8 +196,8 @@ Die Evaluation folgt einem fünfstufigen Vorgehen:
 
 \begin{enumerate}
     \item \textbf{Testsuite-Konstruktion:} Drei synthetische React-\acp{SPA} werden mit gezielt eingebetteten \ac{WCAG}-Violations entwickelt (test-12: 12, test-50: 50, test-100: 100~Violations), die alle drei Verstoßkategorien der in Abschnitt~\ref{Taxonomie} eingeführten Taxonomie abdecken.\footcite[Vgl.][]{WCAG}
-    \item \textbf{Benchmarkläufe:} Jede Suite wird mit drei Modellen jeweils zehnmal analysiert (insgesamt 90~Runs). Pro Lauf werden Recall, Priorisierungsverhalten, Fix-Qualität und Laufzeit erfasst.
-    \item \textbf{Recall-Auswertung:} Die Ergebnisse werden mit der bekannten Ground Truth verglichen. Eine Violation gilt als erkannt, wenn sie in der Mehrzahl der zehn Runs im finalen \ac{LLM}-Report erscheint.
+    \item \textbf{Benchmarkläufe:} Jede Suite wird mit drei Modellen jeweils zehnmal analysiert (insgesamt 90~Testläufe). Pro Lauf werden Recall, Priorisierungsverhalten, Fix-Qualität und Laufzeit erfasst.
+    \item \textbf{Recall-Auswertung:} Die Ergebnisse werden mit der bekannten Ground Truth verglichen. Eine Violation gilt als erkannt, wenn sie in der Mehrzahl der zehn Testläufe im finalen \ac{LLM}-Report erscheint.
     \item \textbf{Qualitative Empfehlungsbewertung:} Die generierten Handlungsempfehlungen werden anhand einer dreistufigen Bewertungsskala (Stufe~0--2) nach Dateikonkretheit und Code-Fix-Qualität bewertet.
     \item \textbf{\ac{BWEC}-Feldtest:} Die Pipeline wird ergänzend auf dem realen \ac{BWEC}-Untersuchungs\-objekt eingesetzt, um Systemstabilität und qualitative Plausibilität unter realen Bedingungen zu prüfen.\footcites[Vgl.][]{axe}[Vgl.][]{kodithuwakku_assessing_2025}
 \end{enumerate}
@@ -206,4 +216,8 @@ Die Evaluation erfolgt anhand von vier Kriterien, die aus den Forschungsfragen u
 
 \subsection{Limitationen des Evaluationsdesigns}
 
-Zwei methodische Einschränkungen des Evaluationsdesigns sind vorab zu benennen. Erstens wird die Bewertung durch den Autor selbst durchgeführt und nicht durch unabhängige Gutachter validiert. Zweitens sind die genannten Referenzwerte von \textfett{AccessGuru}\footcite[Vgl.][]{fathallah_accessguru_2025} und \textfett{GenA11y}\footcite[Vgl.][]{he_enhancing_2025} nur eingeschränkt vergleichbar, da sie auf anderen Datensätzen und unter anderen Rahmenbedingungen ermittelt wurden. Sie dienen daher als Orientierung, nicht als direkter Benchmark.
+Zwei methodische Einschränkungen des Evaluationsdesigns sind vorab zu benennen:
+\begin{enumerate}
+    \item Die Bewertung wird durch den Autor selbst durchgeführt und nicht durch unabhängige Gutachter validiert.
+    \item Die genannten Referenzwerte von \textfett{AccessGuru}\footcite[Vgl.][]{fathallah_accessguru_2025} und \textfett{GenA11y}\footcite[Vgl.][]{he_enhancing_2025} sind nur eingeschränkt vergleichbar, da sie auf anderen Datensätzen und unter anderen Rahmenbedingungen ermittelt wurden. Sie dienen daher als Orientierung, nicht als direkter Benchmark.
+\end{enumerate}
