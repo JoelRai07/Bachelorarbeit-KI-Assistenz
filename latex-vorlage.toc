@@ -77,42 +77,42 @@
 \contentsline {section}{\numberline {8.1}Versuchsdesign}{46}{section.470}%
 \contentsline {subsection}{\numberline {8.1.1}Testobjekte und Ground Truth}{46}{subsection.471}%
 \contentsline {subsection}{\numberline {8.1.2}Modelle, Konfiguration und Testläufe}{47}{subsection.472}%
-\contentsline {subsection}{\numberline {8.1.3}Metriken und Messverfahren}{48}{subsection.480}%
-\contentsline {section}{\numberline {8.2}Ergebnisse: Detektionsqualität (Recall)}{48}{section.485}%
-\contentsline {subsection}{\numberline {8.2.1}Baseline: Tool-Pipeline ohne \acs {LLM}-Detektor}{48}{subsection.487}%
-\contentsline {subsection}{\numberline {8.2.2}Recall nach \acs {LLM}-Detektor-Augmentierung}{48}{subsection.488}%
-\contentsline {subsection}{\numberline {8.2.3}Erkennungsleistung nach Verstoßkategorie}{49}{subsection.491}%
-\contentsline {section}{\numberline {8.3}Ergebnisse: Priorisierungsqualität}{50}{section.496}%
-\contentsline {subsection}{\numberline {8.3.1}Modellvergleich Must-have und Nice-to-have}{50}{subsection.497}%
-\contentsline {section}{\numberline {8.4}Ergebnisse: Fix-Qualität (qualitativ)}{51}{section.499}%
-\contentsline {subsection}{\numberline {8.4.1}Bewertungsmaßstab}{51}{subsection.500}%
-\contentsline {subsection}{\numberline {8.4.2}Fallbeispiele nach Modell}{51}{subsection.501}%
-\contentsline {section}{\numberline {8.5}Ergebnisse: Effizienz und Robustheit}{52}{section.502}%
-\contentsline {subsection}{\numberline {8.5.1}Laufzeit und \acs {NFA}-02-Konformität}{52}{subsection.503}%
-\contentsline {subsection}{\numberline {8.5.2}Konsistenz und Parsing-Stabilität}{52}{subsection.504}%
-\contentsline {section}{\numberline {8.6}Belastungsprüfung: test-50 und test-100}{53}{section.505}%
-\contentsline {subsection}{\numberline {8.6.1}Evaluation an test-50}{53}{subsection.507}%
-\contentsline {subsection}{\numberline {8.6.2}Evaluation an test-100}{54}{subsection.508}%
-\contentsline {section}{\numberline {8.7}Ergebnisse: Precision und F1-Score}{56}{section.512}%
-\contentsline {section}{\numberline {8.8}Evaluation am \acs {BWEC}-Untersuchungsobjekt}{57}{section.516}%
-\contentsline {section}{\numberline {8.9}Limitationen und Validität}{58}{section.517}%
-\contentsline {subsection}{\numberline {8.9.1}Externe Validität}{58}{subsection.518}%
-\contentsline {subsection}{\numberline {8.9.2}Interne Validität und Token-Limit-Effekt}{58}{subsection.519}%
-\contentsline {subsection}{\numberline {8.9.3}Weitere Einschränkungen}{59}{subsection.520}%
-\contentsline {section}{\numberline {8.10}Beantwortung der Forschungsfragen}{59}{section.521}%
-\contentsline {subsection}{\numberline {8.10.1}Übergeordnete Forschungsfrage}{59}{subsection.522}%
-\contentsline {subsection}{\numberline {8.10.2}TF1: Erkennungsleistung nach Verstoßtyp}{59}{subsection.523}%
-\contentsline {subsection}{\numberline {8.10.3}TF2: Mehrwert der Kontextkombination und partielle Ablationsanalyse}{60}{subsection.524}%
-\contentsline {section}{\numberline {8.11}Modellwahl und Einsatzempfehlungen}{61}{section.526}%
-\contentsline {chapter}{\numberline {9}Fazit}{62}{chapter.528}%
-\contentsline {section}{\numberline {9.1}Zusammenfassung der Ergebnisse}{62}{section.529}%
-\contentsline {subsection}{\numberline {9.1.1}Beitrag zur übergeordneten Forschungsfrage}{62}{subsection.530}%
-\contentsline {subsection}{\numberline {9.1.2}Erfüllung der funktionalen und nicht-funktionalen Anforderungen}{63}{subsection.531}%
-\contentsline {section}{\numberline {9.2}Kritische Reflexion}{63}{section.533}%
-\contentsline {subsection}{\numberline {9.2.1}Grenzen der externen Validität}{63}{subsection.534}%
-\contentsline {subsection}{\numberline {9.2.2}Methodische Einschränkungen}{64}{subsection.535}%
-\contentsline {section}{\numberline {9.3}Ausblick}{64}{section.539}%
-\contentsline {subsection}{\numberline {9.3.1}Kurz- und mittelfristige Weiterentwicklungen}{64}{subsection.540}%
-\contentsline {subsection}{\numberline {9.3.2}Langfristige Forschungsperspektiven}{65}{subsection.550}%
-\contentsline {chapter}{Anhang}{66}{chapter*.551}%
-\contentsline {chapter}{Literaturverzeichnis}{160}{section*.931}%
+\contentsline {subsection}{\numberline {8.1.3}Metriken und Messverfahren}{47}{subsection.478}%
+\contentsline {section}{\numberline {8.2}Ergebnisse: Detektionsqualität (Recall)}{48}{section.483}%
+\contentsline {subsection}{\numberline {8.2.1}Baseline: Tool-Pipeline ohne \acs {LLM}-Detektor}{48}{subsection.485}%
+\contentsline {subsection}{\numberline {8.2.2}Recall nach \acs {LLM}-Detektor-Augmentierung}{48}{subsection.486}%
+\contentsline {subsection}{\numberline {8.2.3}Erkennungsleistung nach Verstoßkategorie}{49}{subsection.489}%
+\contentsline {section}{\numberline {8.3}Ergebnisse: Priorisierungsqualität}{50}{section.494}%
+\contentsline {subsection}{\numberline {8.3.1}Modellvergleich Must-have und Nice-to-have}{50}{subsection.495}%
+\contentsline {section}{\numberline {8.4}Ergebnisse: Fix-Qualität (qualitativ)}{51}{section.497}%
+\contentsline {subsection}{\numberline {8.4.1}Bewertungsmaßstab}{51}{subsection.498}%
+\contentsline {subsection}{\numberline {8.4.2}Fallbeispiele nach Modell}{51}{subsection.499}%
+\contentsline {section}{\numberline {8.5}Ergebnisse: Effizienz und Robustheit}{51}{section.500}%
+\contentsline {subsection}{\numberline {8.5.1}Laufzeit und \acs {NFA}-02-Konformität}{52}{subsection.501}%
+\contentsline {subsection}{\numberline {8.5.2}Konsistenz und Parsing-Stabilität}{52}{subsection.502}%
+\contentsline {section}{\numberline {8.6}Belastungsprüfung: test-50 und test-100}{53}{section.503}%
+\contentsline {subsection}{\numberline {8.6.1}Evaluation an test-50}{53}{subsection.505}%
+\contentsline {subsection}{\numberline {8.6.2}Evaluation an test-100}{54}{subsection.506}%
+\contentsline {section}{\numberline {8.7}Ergebnisse: Precision und F1-Score}{56}{section.510}%
+\contentsline {section}{\numberline {8.8}Evaluation am \acs {BWEC}-Untersuchungsobjekt}{57}{section.514}%
+\contentsline {section}{\numberline {8.9}Limitationen und Validität}{58}{section.515}%
+\contentsline {subsection}{\numberline {8.9.1}Externe Validität}{58}{subsection.516}%
+\contentsline {subsection}{\numberline {8.9.2}Interne Validität und Token-Limit-Effekt}{58}{subsection.517}%
+\contentsline {subsection}{\numberline {8.9.3}Weitere Einschränkungen}{59}{subsection.518}%
+\contentsline {section}{\numberline {8.10}Beantwortung der Forschungsfragen}{59}{section.519}%
+\contentsline {subsection}{\numberline {8.10.1}Übergeordnete Forschungsfrage}{59}{subsection.520}%
+\contentsline {subsection}{\numberline {8.10.2}TF1: Erkennungsleistung nach Verstoßtyp}{59}{subsection.521}%
+\contentsline {subsection}{\numberline {8.10.3}TF2: Mehrwert der Kontextkombination und partielle Ablationsanalyse}{60}{subsection.522}%
+\contentsline {section}{\numberline {8.11}Modellwahl und Einsatzempfehlungen}{61}{section.524}%
+\contentsline {chapter}{\numberline {9}Fazit}{62}{chapter.526}%
+\contentsline {section}{\numberline {9.1}Zusammenfassung der Ergebnisse}{62}{section.527}%
+\contentsline {subsection}{\numberline {9.1.1}Beitrag zur übergeordneten Forschungsfrage}{62}{subsection.528}%
+\contentsline {subsection}{\numberline {9.1.2}Erfüllung der funktionalen und nicht-funktionalen Anforderungen}{63}{subsection.529}%
+\contentsline {section}{\numberline {9.2}Kritische Reflexion}{63}{section.531}%
+\contentsline {subsection}{\numberline {9.2.1}Grenzen der externen Validität}{63}{subsection.532}%
+\contentsline {subsection}{\numberline {9.2.2}Methodische Einschränkungen}{64}{subsection.533}%
+\contentsline {section}{\numberline {9.3}Ausblick}{64}{section.537}%
+\contentsline {subsection}{\numberline {9.3.1}Kurz- und mittelfristige Weiterentwicklungen}{64}{subsection.538}%
+\contentsline {subsection}{\numberline {9.3.2}Langfristige Forschungsperspektiven}{65}{subsection.548}%
+\contentsline {chapter}{Anhang}{66}{chapter*.549}%
+\contentsline {chapter}{Literaturverzeichnis}{160}{section*.929}%

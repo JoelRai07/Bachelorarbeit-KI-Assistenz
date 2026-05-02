@@ -26,18 +26,23 @@ Es werden drei lokal ausgeführte Sprachmodelle verglichen: \texttt{qwen2.5-code
 
 Auf jeder der drei synthetischen Suites absolvierte jedes Modell zehn unabhängige Pipeline-Durchläufe, was insgesamt 90~Benchmarkläufe auf synthetischen Testsuiten ergibt. Ergänzend wurden 18~Läufe auf dem realen \ac{BWEC} durchgeführt (zwei Konfigurationen mit je 9~Testläufen). Die Temperatur wurde auf 0.05 gesetzt, um den Nicht-Determinismus zu minimieren. Der \ac{LLM}-Detektor operiert mit separaten Parametern: 2\,048~Tokens für die Code-Analyse, 4\,000~Zeichen pro Chunk und maximal 25~Dateien pro Durchlauf.
 
+\newcounter{benchfnqwen}
+\newcounter{benchfndeep}
+
 \begin{table}[htbp]
 \centering
 \small
 \renewcommand{\arraystretch}{1.15}
+\stepcounter{footnote}\setcounter{benchfnqwen}{\value{footnote}}
+\stepcounter{footnote}\setcounter{benchfndeep}{\value{footnote}}
 \begin{tabular}{@{}llccc@{}}
 \toprule
 \textbf{Modell} & \textbf{Typ} & \textbf{test-12} & \textbf{test-50} & \textbf{test-100} \\
 \midrule
 \texttt{qwen2.5-coder:7b}  & Code       & 10~Testläufe & 10~Testläufe & 10~Testläufe \\
 \texttt{qwen2.5-coder:14b} & Code       & 10~Testläufe & 10~Testläufe & 10~Testläufe \\
-\texttt{qwen3:32b}         & Generalist\footnotemark & 10~Testläufe & 10~Testläufe & 10~Testläufe \\
-\texttt{deepseek-r1:70b}   & Reasoning\footnotemark  & --      & --      & --      \\
+\texttt{qwen3:32b}         & Generalist\footnotemark[\value{benchfnqwen}] & 10~Testläufe & 10~Testläufe & 10~Testläufe \\
+\texttt{deepseek-r1:70b}   & Reasoning\footnotemark[\value{benchfndeep}]  & --      & --      & --      \\
 \midrule
 \textbf{Gesamt (durchgeführt)} & & \textbf{30} & \textbf{30} & \textbf{30} \\
 \bottomrule
@@ -45,8 +50,8 @@ Auf jeder der drei synthetischen Suites absolvierte jedes Modell zehn unabhängi
 \caption[Durchgeführte Benchmarkläufe je Modell und Testsuite]{Verteilung der Benchmarkläufe auf Modelle und Testsuiten (je 10~Testläufe pro Modell und Suite). \texttt{temperature}~=~0.05; \texttt{num\_predict}: test-12 = 6\,144; test-50 = 8\,192; test-100 = 12\,288. \texttt{deepseek-r1:70b} konnte aufgrund fehlender \ac{RAM}-Kapazität sowie prohibitiv hoher \ac{CPU}- und \ac{GPU}-Last und resultierender Laufzeit nicht evaluiert werden.}
 \label{tab:benchmark_runs}
 \end{table}
-\footcitetext[Vgl.][]{qwen3}
-\footcitetext[Vgl.][]{deepseek}
+\footnotetext[\value{benchfnqwen}]{Vgl. \cite{qwen3}.}
+\footnotetext[\value{benchfndeep}]{Vgl. \cite{deepseek}.}
 
 \subsection{Metriken und Messverfahren}
 \label{sec:versuch_metriken}
@@ -238,7 +243,7 @@ Tabelle~\ref{tab:token_economy} schlüsselt Input- und Output-Tokens je Modell a
 \section{Belastungsprüfung: test-50 und test-100}
 \label{sec:eval_erweiterung}
 
-Die in den vorherigen Abschnitten präsentierten Kalibrierungsergebnisse (test-12) zeigen, dass die Pipeline korrekt funktioniert und alle Verstoßkategorien grundsätzlich erkennbar sind. Dieser Abschnitt dokumentiert die eigentliche Belastungsprüfung: die test-50-Suite (50~Violations) als Zwischenstufe sowie die test-100-Suite (100~Violations) als primäres Skalierungsobjekt, an dem Tokenbudget-Effekte, Modellunterschiede und Erkennungsgrenzen unter realistischerer Last sichtbar werden. Abbildung~\ref{fig:heatmap_recall_overview} fasst die Recall-Werte aller drei synthetischen Testsuiten im Überblick zusammen.
+Die in den vorherigen Abschnitten präsentierten Kalibrierungsergebnisse (test-12) zeigen, dass die Pipeline korrekt funktioniert und alle Verstoßkategorien grundsätzlich erkennbar sind. Dieser Abschnitt dokumentiert die eigentliche Belastungsprüfung: die test-50-Suite (50~Violations) als Zwischenstufe sowie die test-100-Suite (100~Violations) als primäres Skalierungsobjekt, an dem Token-Budget-Effekte, Modellunterschiede und Erkennungsgrenzen unter realistischerer Last sichtbar werden. Abbildung~\ref{fig:heatmap_recall_overview} fasst die Recall-Werte aller drei synthetischen Testsuiten im Überblick zusammen.
 
 \begin{figure}[htbp]
 \centering
