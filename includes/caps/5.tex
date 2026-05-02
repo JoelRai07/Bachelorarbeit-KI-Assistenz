@@ -42,26 +42,24 @@ Die Systemarchitektur folgt einer sequenziellen Datenpipeline, die vier Analyseq
 \draw[arr] (ufs)  -- (llm);
 \draw[arr] (llm)  -- (todo);
 \end{tikzpicture}
-\caption[Datenpipeline des Assistenzsystems]{Datenpipeline des Assistenzsystems: Vier Analysequellen (axe-core, Playwright, grep und \ac{LLM}-Codeanalyse -- im Diagramm als Code-Schiene zusammengefasst) werden über einen Normalizer in das \ac{UFS} überführt und durch ein lokal ausführbares \ac{LLM} zu priorisierten Handlungsempfehlungen verdichtet. Eine vergrößerte Darstellung findet sich in Anhang~\ref{app:ace-pipeline-schema}.}
+\caption[Datenpipeline des Assistenzsystems]{Schematische Datenpipeline des \ac{ACE}-Systems. Eine vergrößerte Darstellung findet sich in Anhang~\ref{app:ace-pipeline-schema}.}
 \label{fig:bwec-pipeline}
 \end{figure}
 
 Wie Abbildung~\ref{fig:bwec-pipeline} veranschaulicht, durchläuft ein vollständiger Analysedurchlauf folgende Schritte:
 \begin{enumerate}
-  \item axe-core: \ac{DOM} analysieren, Findings normalisieren
-  \item Playwright: sieben Interaktionschecks ausführen, fehlgeschlagene normalisieren
-  \item Code-Anreicherung: axe-/Playwright-Findings mit Quellcode-Kontext ergänzen
-  \item Code-Patterns: Anti-Patterns im Quellcode suchen, deduplizieren
-  \item \ac{LLM}-Codeanalyse: semantische Quellcodeanalyse ausführen, zusätzliche Findings normalisieren
-  \item Prompt-Builder: Findings serialisieren, Token-Budget anwenden
-  \item Ollama: kombinierten Priorisierungsprompt senden, Antwort empfangen
-  \item Output: Markdown- und \acs{JSON}-Report generieren und speichern
+  \item \textbf{axe-core} analysiert den \ac{DOM} der Zielanwendung und normalisiert erkannte Violations in das \ac{UFS}.
+  \item \textbf{Playwright} führt sieben Interaktionschecks aus und normalisiert fehlgeschlagene Checks in das \ac{UFS}.
+  \item \textbf{Code-Anreicherung:} Bestehende Findings von axe-core und Playwright werden um den zugehörigen Quellcode-Kontext ergänzt.
+  \item \textbf{Code-Patterns:} Grep durchsucht den React-Quellcode nach bekannten Anti-Patterns und dedupliziert die Treffer.
+  \item \textbf{\ac{LLM}-Codeanalyse} führt eine semantische Analyse der Quellcode-Chunks durch und normalisiert zusätzliche Findings in das \ac{UFS}.
+  \item \textbf{Prompt-Builder} serialisiert alle Findings und wendet die Token-Budget-Steuerung an.
+  \item \textbf{Ollama} empfängt den kombinierten Priorisierungsprompt und gibt die priorisierte Antwort zurück.
+  \item \textbf{Output-Formatter} generiert den Markdown- und \acs{JSON}-Report und speichert ihn.
 \end{enumerate}
 Die folgenden Abschnitte beschreiben die konzeptionellen Grundlagen der einzelnen Komponenten.
 
 \subsection{Analysequellen}
-
-Die in Abschnitt~\ref{Forschungslücken} identifizierten Forschungslücken bilden den Ausgangspunkt der Konzeption und werden im Folgenden in konkrete Analysequellen und Verarbeitungsschritte überführt.
 
 \textbf{axe-core} analysiert den vollständig gerenderten \ac{DOM} der Zielanwendung auf Verstöße gegen \ac{WCAG}-Erfolgskriterien. Da Rich-Client-Webanwendungen ihre Inhalte erst zur Laufzeit per JavaScript erzeugen (vgl. Abschnitt~\ref{kap:2.3}), ist die Ausführung in einem echten Browser unerlässlich.\footcite[Vgl.][]{fathallah_accessguru_2025} axe-core erfasst dabei primär \textit{syntaktische} Verstöße; semantische und interaktionsbedingte Barrieren bleiben außerhalb seiner Regelabdeckung.\footcite[Vgl.][]{kodithuwakku_assessing_2025}
 
@@ -77,7 +75,7 @@ Tabelle~\ref{tab:tool-mapping} fasst die Zuordnung der vier Analysequellen zu de
 \centering
 \small
 \renewcommand{\arraystretch}{1.15}
-\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash\footnotesize}p{4.4cm}>{\raggedright\arraybackslash}p{2.9cm}>{\raggedright\arraybackslash}p{3.5cm}@{}}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash\footnotesize}p{5.5cm}>{\raggedright\arraybackslash}p{3.4cm}>{\raggedright\arraybackslash}p{4cm}@{}}
 \toprule
 \textbf{Quelle} & \textbf{Adressiertes Problem} & \textbf{Verstoßtypen} & \textbf{Theoriebezug} \\
 \midrule
@@ -113,9 +111,7 @@ Dieser Abschnitt beschreibt die Interaktionsstrategie mit dem lokalen Sprachmode
 
 \subsection{Zweistufige Prompt-Strategie}
 
-Konzeptionell wäre ein stärker iterativer Ansatz denkbar; entsprechende Vorarbeiten wie AccessGuru und ACCESS wurden in Kapitel~\ref{kap:3} bereits eingeordnet.
-
-Für den vorliegenden Anwendungsfall wird eine zweistufige Strategie gewählt: In Stufe~1 erzeugt das Modell als \ac{LLM}-Detektor strukturierte Code-Findings aus Quellcode-Chunks; in Stufe~2 priorisiert ein kombinierter Prompt alle Quellen (axe-core, Playwright, grep, \ac{LLM}). Der zentrale Grund gegen weitere iterative Schleifen liegt im verfügbaren Latenzbudget: Ein \ac{LLM}-Aufruf auf einem lokalen \ac{CPU}-basierten System benötigt je nach Modellgröße bereits mehrere Minuten. Zusätzliche ReAct- oder Corrective-Re-Prompting-Schleifen würden die Laufzeit weiter erhöhen und damit \ac{NFA}-02 gefährden -- eine Einschränkung, die bei cloudbasierten Systemen mit \ac{GPU}-Beschleunigung in dieser Form nicht besteht.
+Für den vorliegenden Anwendungsfall wird einer zweistufigen gegenüber einer vollständig iterativen Strategie -- wie sie AccessGuru oder ACCESS verfolgen (vgl. Kapitel~\ref{kap:3}) -- der Vorzug gegeben: In Stufe~1 erzeugt das Modell als \ac{LLM}-Detektor strukturierte Code-Findings aus Quellcode-Chunks; in Stufe~2 priorisiert ein kombinierter Prompt alle Quellen (axe-core, Playwright, grep, \ac{LLM}). Der zentrale Grund gegen weitere iterative Schleifen liegt im verfügbaren Latenzbudget: Ein \ac{LLM}-Aufruf auf einem lokalen \ac{CPU}-basierten System benötigt je nach Modellgröße bereits mehrere Minuten. Zusätzliche ReAct- oder Corrective-Re-Prompting-Schleifen würden die Laufzeit weiter erhöhen und damit \ac{NFA}-02 gefährden -- eine Einschränkung, die bei cloudbasierten Systemen mit \ac{GPU}-Beschleunigung in dieser Form nicht besteht.
 
 Der kombinierte Priorisierungsprompt in Stufe~2 ermöglicht es dem Sprachmodell, Zusammenhänge zwischen den einzelnen Quellen unmittelbar zu erkennen: Meldet axe-core ein fehlendes \texttt{aria-label}, liefert grep den zugehörigen Quellcodeausschnitt und bestätigt die \ac{LLM}-Codeanalyse dieselbe Stelle, kann das Modell diese Evidenz in einem konkreten Vorschlag zusammenführen.
 
@@ -143,8 +139,7 @@ Das Ausgabeformat des Systems ist als priorisierte To-Do-Liste für Entwicklerin
 
 Die Liste ist in zwei Prioritätsstufen gegliedert: \emph{Must-have}-Einträge bezeichnen Verstöße gegen Erfolgskriterien der Konformitätsstufen A und AA (gesetzliche Konformitätspflicht nach \ac{BITV} und \ac{BFSG}); \emph{Nice-to-have}-Einträge umfassen Empfehlungen über den gesetzlichen Mindeststandard hinaus. Jeder Eintrag enthält -- sofern durch grep-Anreicherung oder \ac{LLM}-Codeanalyse verfügbar -- den Dateipfad, die Zeilennummer sowie einen konkreten Code-Fix-Vorschlag.
 
-Zu berücksichtigen ist, dass das Ausgabeformat zwar durch einen System-Prompt vorgegeben wird, dessen Einhaltung jedoch nicht garantiert werden kann -- insbesondere bei kleineren Modellen der 7B-Klasse.\footcite[Vgl.][S.~5]{brown2020gpt3fewshot} Die Evaluation in Kapitel~\ref{kap:7} untersucht, inwieweit die getesteten Modelle das vorgegebene Schema einhalten; Limitationen werden in Abschnitt~\ref{sec:limitationen} diskutiert.
+Zu berücksichtigen ist, dass das Ausgabeformat zwar durch einen System-Prompt vorgegeben wird, dessen Einhaltung jedoch nicht garantiert werden kann -- insbesondere bei kleineren Modellen der 7B-Klasse.\footcite[Vgl.][S.~5]{brown2020gpt3fewshot} Die Evaluation in Kapitel~\ref{kap:7} untersucht, inwieweit die getesteten Modelle das vorgegebene Schema einhalten; Limitationen werden in Abschnitt~\ref{sec:limitationen} diskutiert. 
+\enlargethispage{2\baselineskip}
 
-% ─────────────────────────────────────────────────────────────────────────────
-
-Zusammenfassend ergibt sich aus den Anforderungen, den theoretischen Grundlagen und den identifizierten Forschungslücken ein System, das vier komplementäre Analysequellen über ein einheitliches Datenmodell (\ac{UFS}) zusammenführt und in einer zweistufigen \ac{LLM}-Strategie verarbeitet: Stufe~1 für \ac{LLM}-basierte Code-Findings und Stufe~2 für die quellenübergreifende Priorisierung. Kapitel~\ref{kap:6} beschreibt die prototypische Umsetzung dieser Konzeption.
+Zusammenfassend bündelt das System vier komplementäre Analysequellen in einem einheitlichen Datenmodell (\ac{UFS}) und verarbeitet sie zweistufig: zunächst zur \ac{LLM}-basierten Codeanalyse, anschließend zur quellenübergreifenden Priorisierung. Kapitel~\ref{kap:6} beschreibt die prototypische Umsetzung dieser Konzeption.

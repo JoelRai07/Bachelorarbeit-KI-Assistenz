@@ -22,12 +22,9 @@ Regel~6 adressiert gezielt das in Abschnitt~\ref{kap:2.4} beschriebene Halluzina
 
 Zur Einordnung des Forschungsstands wurde eine strukturierte Literaturrecherche in wissenschaftlichen Repositorien und Datenbanken durchgeführt (u.\,a. ACM Digital Library, IEEE Xplore, ScienceDirect und arXiv).\footcite[Vgl.][]{WebsterWatson2002} Die Recherche erfolgte themenorientiert auf Basis von Suchbegriffen wie \glqq web accessibility\grqq, \glqq LLM accessibility\grqq, \glqq accessibility violation detection\grqq{} und \glqq axe-core\grqq. Berücksichtigt wurden primär aktuelle Arbeiten mit Bezug zur automatisierten Erkennung oder Behebung von Barrierefreiheitsverstößen in Webanwendungen mit \acs{KI}-Assistenzsystemen. Die identifizierten Arbeiten wurden thematisch gruppiert, priorisiert und vergleichend ausgewertet.
 
-Ground Trouth
-- Runs durch Testlaufe ersetzten
+Ordnung nochmal prüfen, was Ergebnisse: Precision und F1-Score usw.
+Datenschutz verbesserung
 
-Manchmal im Fließtext und manchmal auf Bulletpoint/Nummer, mehr Konsistenz. Auflistungspunkte vllt. gut? 
+Fatallah taxonomie Grafik Änderung prüfen
 
-Heatmap -> memorable for reader (revise other graphics)
-Anker -> Brücke zwischen Theorie und Praxis
-JAWS, NVDA, VoiceOver fett machen
-Aufzählung in Fazit 9.3 für Mittelfristig??
+Fragen ob jetzt alles Besser ist

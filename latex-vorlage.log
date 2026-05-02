@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.9.8)  30 APR 2026 23:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.9.8)  2 MAY 2026 02:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1346,7 +1346,7 @@ Package acronym Info: Label `acro:LLM' overridden on input line 83.
 
 
 [3]
-Package acronym Info: Label `acro:NFA' overridden on input line 92.
+Package acronym Info: Label `acro:NFA' overridden on input line 91.
 )
 \tf@toc=\write6
 \openout6 = `latex-vorlage.toc'.
@@ -1391,12 +1391,6 @@ LaTeX Warning: Hyper reference `acro:KPI' on page V undefined on input line 31.
 LaTeX Warning: Hyper reference `acro:KPI' on page V undefined on input line 31.
 
 
-LaTeX Warning: Hyper reference `acro:PW' on page V undefined on input line 35.
-
-
-LaTeX Warning: Hyper reference `acro:PW' on page V undefined on input line 35.
-
-
 
 [5
 
@@ -1413,7 +1407,7 @@ LaTeX Warning: Hyper reference `acro:TP' on page VI undefined on input line 41.
 [6] (latex-vorlage.lof
 Package acronym Info: Label `acro:WCAG' overridden on input line 2.
 Package acronym Info: Label `acro:WCAG' overridden on input line 2.
-Package acronym Info: Label `acro:LLM' overridden on input line 26.
+Package acronym Info: Label `acro:LLM' overridden on input line 27.
 )
 \tf@lof=\write7
 \openout7 = `latex-vorlage.lof'.
@@ -1494,7 +1488,7 @@ although it is yet undefined on input line 25.
 
 
 [7]
-<graphics/WCAG-Dreieck-4-Ebenen.png, id=983, 770.88pt x 643.6547pt>
+<graphics/WCAG-Dreieck-4-Ebenen.png, id=987, 770.88pt x 643.6547pt>
 File: graphics/WCAG-Dreieck-4-Ebenen.png Graphic file (type png)
 <use graphics/WCAG-Dreieck-4-Ebenen.png>
 Package pdftex.def Info: graphics/WCAG-Dreieck-4-Ebenen.png  used on input line 33.
@@ -1541,19 +1535,19 @@ Underfull \hbox (badness 2903) in paragraph at lines 129--130
 Package acronym Info: Label `acro:API' overridden on input line 137.
 Package acronym Info: Label `acro:JSON' newly defined as it shall be overridden
 although it is yet undefined on input line 145.
+
+
+[14]
 Package acronym Info: Label `acro:KI' overridden on input line 147.
 Package acronym Info: Label `acro:KI' overridden on input line 149.
 
 
-[14]
-
 [15]
-Package acronym Info: Label `acro:CoT' newly defined as it shall be overridden
-although it is yet undefined on input line 170.
-
 
 [16]
-<graphics/fewshot.png, id=1366, 894.34125pt x 477.28313pt>
+Package acronym Info: Label `acro:CoT' newly defined as it shall be overridden
+although it is yet undefined on input line 170.
+<graphics/fewshot.png, id=1367, 894.34125pt x 477.28313pt>
 File: graphics/fewshot.png Graphic file (type png)
 <use graphics/fewshot.png>
 Package pdftex.def Info: graphics/fewshot.png  used on input line 178.
@@ -1693,7 +1687,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--118
 
 [31]
 chapter 6.
-Package acronym Info: Label `acro:UFS' overridden on input line 45.
+Package acronym Info: Label `acro:UFS' overridden on input line 51.
 
 
 [32
@@ -1701,25 +1695,27 @@ Package acronym Info: Label `acro:UFS' overridden on input line 45.
 ]
 Package acronym Info: Label `acro:JSON' overridden on input line 58.
 Package acronym Info: Label `acro:AST' newly defined as it shall be overridden
-although it is yet undefined on input line 70.
+although it is yet undefined on input line 68.
 
 
 [33]
-Package acronym Info: Label `acro:JSON' overridden on input line 102.
+Overfull \hbox (10.3922pt too wide) in paragraph at lines 78--88
+ [][] 
+ []
+
+Package acronym Info: Label `acro:JSON' overridden on input line 100.
 
 
 [34
 pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.390}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.113 
+l.111 
       ]
 
-[35]
+[35]) (includes/caps/6.tex
 
-[36]) (includes/caps/6.tex
-
-[37]
+[36]
 chapter 7.
 
 Underfull \hbox (badness 5908) in paragraph at lines 11--12
@@ -1734,7 +1730,7 @@ Package acronym Info: Label `acro:URL' overridden on input line 15.
 Package acronym Info: Label `acro:URL' overridden on input line 21.
 
 
-[38
+[37
 
 ]
 Underfull \hbox (badness 3612) in paragraph at lines 43--44
@@ -1743,78 +1739,86 @@ Underfull \hbox (badness 3612) in paragraph at lines 43--44
 
 
 
-[39]
+[38]
 
-[40]
+[39]
 Package acronym Info: Label `acro:JSON' overridden on input line 74.
 Package acronym Info: Label `acro:JSON' overridden on input line 75.
 
 
-[41]
+[40]
 Underfull \hbox (badness 1466) in paragraph at lines 122--123
 []\T1/cmr/m/n/10.95 Ergänzend ent-hält der System-Prompt sechs Prio-ri-sie-rungs-re-geln, mit de-nen das Must-
  []
 
 
 
-[42]
+[41]
 Package acronym Info: Label `acro:HTTP' newly defined as it shall be overridden
 although it is yet undefined on input line 151.
-Package acronym Info: Label `acro:JSON' overridden on input line 156.
-Package acronym Info: Label `acro:URL' overridden on input line 156.
-Package acronym Info: Label `acro:JSON' overridden on input line 156.
+Package acronym Info: Label `acro:JSON' overridden on input line 155.
+Package acronym Info: Label `acro:URL' overridden on input line 155.
+Package acronym Info: Label `acro:JSON' overridden on input line 155.
 
 
-[43]
-Underfull \hbox (badness 2970) in paragraph at lines 178--179
+[42]
+Underfull \hbox (badness 2970) in paragraph at lines 177--178
 []\T1/cmr/m/n/10.95 Das lo-ka-le Mo-dell emp-fängt den kom-bi-nier-ten Prio-ri-sie-rungs-prompt.
  []
 
 
 
-[44]
-Package acronym Info: Label `acro:JSON' overridden on input line 179.
+[43]
+Package acronym Info: Label `acro:JSON' overridden on input line 178.
 ) (includes/caps/7.tex
 
-[45]
+[44]
 chapter 8.
+
+
+[45
+
+]
 Package acronym Info: Label `acro:RAM' newly defined as it shall be overridden
-although it is yet undefined on input line 21.
+although it is yet undefined on input line 25.
 
 
 [46
-
-]
-
-[47
 pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.475}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.58 
-     ]
+l.56   \item \textbf
+                    {Recall} (erkannte Violations relativ zur Ground Truth),]
 Package acronym Info: Label `acro:UI' newly defined as it shall be overridden
-although it is yet undefined on input line 63.
+although it is yet undefined on input line 67.
 
+
+[47]
 
 [48]
 
 [49]
-
-[50]
-Underfull \hbox (badness 1019) in paragraph at lines 211--213
+Underfull \hbox (badness 1019) in paragraph at lines 180--182
 \T1/cmr/m/n/10.95 Dia-log über-nimmt Fo-kus beim Öff-nen nicht) ge-ne-riert \T1/cmtt/m/n/10.95 qwen3:32b \T1/cmr/m/n/10.95 ei-ne Emp-feh-lung, die
  []
 
 
-Underfull \hbox (badness 5345) in paragraph at lines 211--213
+Underfull \hbox (badness 5345) in paragraph at lines 180--182
 \T1/cmtt/m/n/10.95 ContactForm.tsx \T1/cmr/m/n/10.95 na-ment-lich re-fe-ren-ziert, einen React-konformen \T1/cmtt/m/n/10.95 useEffect\T1/cmr/m/n/10.95 -Hook für
  []
 
 
+Overfull \hbox (3.06377pt too wide) in paragraph at lines 183--185
+[]\T1/cmr/bx/n/10.95 Fallbeispiel 2 -- Teil-wei-se Emp-feh-lung (Stu-fe 1, qwen2.5-coder:14b). \T1/cmtt/m/n/10.95 qwen2.5-coder:14b
+ []
+
+
+
+[50]
 
 [51]
-Overfull \hbox (3.06377pt too wide) in paragraph at lines 214--216
-[]\T1/cmr/bx/n/10.95 Fallbeispiel 2 -- Teil-wei-se Emp-feh-lung (Stu-fe 1, qwen2.5-coder:14b). \T1/cmtt/m/n/10.95 qwen2.5-coder:14b
+Underfull \hbox (badness 1478) in paragraph at lines 269--271
+[]\T1/cmr/bx/n/10.95 Token-Budget un-ter Druck. \T1/cmr/m/n/10.95 Die test-50-Messreihe zeigt als wich-tigs-te Be-ob-ach-tung:
  []
 
 
@@ -1822,37 +1826,34 @@ Overfull \hbox (3.06377pt too wide) in paragraph at lines 214--216
 [52]
 
 [53]
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 312.
+Package acronym Info: Label `acro:PW' newly defined as it shall be overridden
+although it is yet undefined on input line 354.
+
 
 [54]
-Underfull \hbox (badness 1478) in paragraph at lines 292--294
-[]\T1/cmr/bx/n/10.95 Token-Budget un-ter Druck. \T1/cmr/m/n/10.95 Die test-50-Messreihe zeigt als wich-tigs-te Be-ob-ach-tung:
- []
-
-
 
 [55]
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 335.
-
 
 [56]
 
 [57]
 
 [58]
-Underfull \hbox (badness 1221) in paragraph at lines 403--405
+Underfull \hbox (badness 1221) in paragraph at lines 495--497
 []\T1/cmr/bx/n/10.95 Ablationsanalyse: Bei-trag des [][]-Detektors. \T1/cmr/m/n/10.95 Um den Recall-Beitrag der ein-zel-
  []
 
 
-Underfull \hbox (badness 2856) in paragraph at lines 431--432
+Underfull \hbox (badness 2856) in paragraph at lines 523--524
 \T1/cmr/m/n/10.95 Befunde wer-den mit Quell-co-de-kon-text ver-bun-den, wo-durch kon-kre-te, ent-wick-lungs-na-he
  []
 
 
 
 [59]
-Overfull \hbox (19.68813pt too wide) in paragraph at lines 443--452
+Overfull \hbox (19.68813pt too wide) in paragraph at lines 535--544
  [][] 
  []
 
@@ -1868,10 +1869,10 @@ Package acronym Info: Label `acro:JSON' overridden on input line 22.
 ]
 
 [62]
-Package acronym Info: Label `acro:JSON' overridden on input line 62.
 
-
-[63]) (includes/anhang.tex
+[63]
+Package acronym Info: Label `acro:JSON' overridden on input line 67.
+) (includes/anhang.tex
 
 [64] (latex-vorlage.app
 
@@ -1970,7 +1971,7 @@ LaTeX Warning: Hyper reference `app:block_bwec' on page 67 undefined on input li
 [67
 
 ]
-<graphics/ComplexitÃ¤t.png, id=2784, 1336.24219pt x 534.49687pt>
+<graphics/ComplexitÃ¤t.png, id=2810, 1336.24219pt x 534.49687pt>
 File: graphics/ComplexitÃ¤t.png Graphic file (type png)
 <use graphics/ComplexitÃ¤t.png>
 Package pdftex.def Info: graphics/ComplexitÃ¤t.png  used on input line 44.
@@ -2001,17 +2002,17 @@ LaTeX Warning: Float too large for page by 8.85423pt on input line 194.
 [71
 
 ]
-Overfull \hbox (0.70195pt too wide) in paragraph at lines 356--369
+Overfull \hbox (0.70195pt too wide) in paragraph at lines 335--348
  [][] 
  []
 
 
-Underfull \hbox (badness 1406) in paragraph at lines 381--381
+Underfull \hbox (badness 1406) in paragraph at lines 360--360
 []|\T1/cmtt/m/n/10 onClick \T1/cmr/m/n/10 auf \T1/cmtt/m/n/10 <div>\T1/cmr/m/n/10 /\T1/cmtt/m/n/10 <span> \T1/cmr/m/n/10 oh-ne
  []
 
 
-Underfull \hbox (badness 4036) in paragraph at lines 385--385
+Underfull \hbox (badness 4036) in paragraph at lines 364--364
 []|\T1/cmtt/m/n/10 tabIndex={-1} \T1/cmr/m/n/10 ent-fernt Ele-ment
  []
 
@@ -2031,9 +2032,9 @@ Underfull \hbox (badness 4036) in paragraph at lines 385--385
 
 ]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 594.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 573.
 
-Underfull \hbox (badness 1490) in paragraph at lines 624--624
+Underfull \hbox (badness 1490) in paragraph at lines 603--603
 \T1/cmr/m/n/10.95 ser-ven für Sys-tem (400 To-kens) und Out-put, va-ria-bler Be-reich für se-ria-li-sier-te
  []
 
@@ -2042,27 +2043,27 @@ Underfull \hbox (badness 1490) in paragraph at lines 624--624
 [76
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 643--643
+Underfull \hbox (badness 10000) in paragraph at lines 622--622
 []|[][]\T1/cmr/m/n/10.95 -Smoke-Test (nicht
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 643--644
+Underfull \hbox (badness 10000) in paragraph at lines 622--623
 []|\T1/cmr/m/n/10.95 Schnellstes Feed-back; in-ver-se
  []
 
 
-Underfull \hbox (badness 2875) in paragraph at lines 647--648
+Underfull \hbox (badness 2875) in paragraph at lines 626--627
 []|\T1/cmr/m/n/10.95 14b lie-fert ro-bus-tes Qualitäts-
  []
 
 
-Underfull \hbox (badness 1275) in paragraph at lines 647--648
+Underfull \hbox (badness 1275) in paragraph at lines 626--627
 \T1/cmr/m/n/10.95 /Laufzeitprofil über die Sui-tes;
  []
 
 
-Underfull \hbox (badness 1354) in paragraph at lines 649--650
+Underfull \hbox (badness 1354) in paragraph at lines 628--629
 []|\T1/cmr/m/n/10.95 Höchste in-halt-li-che Ab-de-ckung;
  []
 
@@ -2071,17 +2072,17 @@ Underfull \hbox (badness 1354) in paragraph at lines 649--650
 [77
 
 ]
-Underfull \hbox (badness 3579) in paragraph at lines 671--672
+Underfull \hbox (badness 3579) in paragraph at lines 650--651
 []|\T1/cmr/m/n/10.95 Enthält Da-teiname, Zei-len-num-mer und
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 671--672
+Underfull \hbox (badness 10000) in paragraph at lines 650--651
 \T1/cmr/m/n/10.95 einen kon-kre-ten Fix-Vorschlag (z.B.
  []
 
 
-Underfull \hbox (badness 2165) in paragraph at lines 675--676
+Underfull \hbox (badness 2165) in paragraph at lines 654--655
 []|\T1/cmr/m/n/10.95 Beschreibt le-dig-lich das Pro-blem, oh-ne
  []
 
@@ -2090,52 +2091,52 @@ Underfull \hbox (badness 2165) in paragraph at lines 675--676
 [78
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 715--715
+Underfull \hbox (badness 10000) in paragraph at lines 694--694
 []|\T1/cmr/m/n/10.95 Regelbasierte Accessibility-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 715--715
+Underfull \hbox (badness 10000) in paragraph at lines 694--694
 []|\T1/cmr/m/n/10.95 Dynamische Zu-stand-ser-fas-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 715--715
+Underfull \hbox (badness 10000) in paragraph at lines 694--694
 []|\T1/cmr/m/n/10.95 Statische Quell-co-de-ana-ly-se
  []
 
 
-Underfull \hbox (badness 2318) in paragraph at lines 715--715
+Underfull \hbox (badness 2318) in paragraph at lines 694--694
 []|\T1/cmr/m/n/10 Pattern-Matching und Kon-text-an-rei-che-
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 715--715
+Underfull \hbox (badness 1565) in paragraph at lines 694--694
 []|[][]\T1/cmr/m/n/10.95 -gestützte Ana-ly-se und
  []
 
 
-Underfull \hbox (badness 3849) in paragraph at lines 715--715
+Underfull \hbox (badness 3849) in paragraph at lines 694--694
 \T1/cmr/m/n/10 ri-sie-rung) um-ge-setzt; Fix-Qualität mit
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 715--715
+Underfull \hbox (badness 10000) in paragraph at lines 694--694
 []|\T1/cmr/m/n/10.95 Lokal-First / Da-ten-schutz
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 715--715
+Underfull \hbox (badness 10000) in paragraph at lines 694--694
 []|\T1/cmr/m/n/10.95 Reproduzierbarkeit (sta-bi-le
  []
 
 
-Underfull \hbox (badness 5203) in paragraph at lines 715--715
+Underfull \hbox (badness 5203) in paragraph at lines 694--694
 []|\T1/cmr/m/n/10 Temperature 0,05 und [][]-Schema-
  []
 
 
-Underfull \hbox (badness 1946) in paragraph at lines 715--715
+Underfull \hbox (badness 1946) in paragraph at lines 694--694
 \T1/cmr/m/n/10 Prompting si-chern Grund-sta-bi-li-tät; auf
  []
 
@@ -2150,162 +2151,162 @@ Underfull \hbox (badness 1946) in paragraph at lines 715--715
 [81
 
 ]
-Overfull \hbox (1.49458pt too wide) in paragraph at lines 816--816
+Overfull \hbox (1.49458pt too wide) in paragraph at lines 795--795
 []|\T1/cmr/bx/n/10.95 Validitätsebene| 
  []
 
 
-Overfull \hbox (1.49458pt too wide) in paragraph at lines 821--821
+Overfull \hbox (1.49458pt too wide) in paragraph at lines 800--800
 []|\T1/cmr/bx/n/10.95 Validitätsebene| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 833--833
+Underfull \hbox (badness 10000) in paragraph at lines 812--812
 []|\T1/cmr/m/n/10.95 Modell-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 835--835
+Underfull \hbox (badness 10000) in paragraph at lines 814--814
 []|\T1/cmr/m/n/10.95 Prompt-
  []
 
 
-Underfull \hbox (badness 3343) in paragraph at lines 835--835
+Underfull \hbox (badness 3343) in paragraph at lines 814--814
 []|\T1/cmr/m/n/10.95 System-Prompt und Few-Shot-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 835--835
+Underfull \hbox (badness 10000) in paragraph at lines 814--814
 \T1/cmr/m/n/10.95 al-ter-na-ti-ve Prompt-Varianten
  []
 
 
-Underfull \hbox (badness 1072) in paragraph at lines 835--836
+Underfull \hbox (badness 1072) in paragraph at lines 814--815
 []|\T1/cmr/m/n/10.95 Der Prompt wird als fes-ter Be-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 837--837
+Underfull \hbox (badness 10000) in paragraph at lines 816--816
 []|\T1/cmr/m/n/10.95 Konfigurations-
  []
 
 
-Underfull \hbox (badness 8189) in paragraph at lines 837--837
+Underfull \hbox (badness 8189) in paragraph at lines 816--816
 []|\T1/cmr/m/n/10.95 Einstellungen wie Tem-pe-ra-tur
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 839--839
+Underfull \hbox (badness 10000) in paragraph at lines 818--818
 []|\T1/cmr/m/n/10.95 Ground-Truth-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 843--843
+Underfull \hbox (badness 10000) in paragraph at lines 822--822
 []|\T1/cmr/m/n/10.95 Testanwendungs-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 843--843
+Underfull \hbox (badness 10000) in paragraph at lines 822--822
 []|\T1/cmr/m/n/10.95 Die Haupte-va-lua-ti-on ba-siert
  []
 
 
-Underfull \hbox (badness 5374) in paragraph at lines 843--843
+Underfull \hbox (badness 5374) in paragraph at lines 822--822
 \T1/cmr/m/n/10.95 auf drei syn-the-ti-schen React-
  []
 
 
-Underfull \hbox (badness 1845) in paragraph at lines 843--843
+Underfull \hbox (badness 1845) in paragraph at lines 822--822
 \T1/cmr/m/n/10.95 er-gän-zend oh-ne Ground Truth
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 843--844
+Underfull \hbox (badness 10000) in paragraph at lines 822--823
 []|\T1/cmr/m/n/10.95 Die Er-geb-nis-se sind pri-mär
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 843--844
+Underfull \hbox (badness 10000) in paragraph at lines 822--823
 \T1/cmr/m/n/10.95 auf ver-gleich-ba-re React-/[][]-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 843--844
+Underfull \hbox (badness 10000) in paragraph at lines 822--823
 \T1/cmr/m/n/10.95 Umgebungen über-trag-bar. Ei-ne
  []
 
 
-Underfull \hbox (badness 1490) in paragraph at lines 843--844
+Underfull \hbox (badness 1490) in paragraph at lines 822--823
 \T1/cmr/m/n/10.95 brei-te-re Ge-ne-ra-li-sie-rung er-for-dert
  []
 
 
-Underfull \hbox (badness 2027) in paragraph at lines 843--844
+Underfull \hbox (badness 2027) in paragraph at lines 822--823
 \T1/cmr/m/n/10.95 zu-sätz-li-che Ground-Truth-basierte
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 845--845
+Underfull \hbox (badness 10000) in paragraph at lines 824--824
 []|\T1/cmr/m/n/10.95 Abgedeckt wer-den zen-tra-le
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 847--847
+Underfull \hbox (badness 10000) in paragraph at lines 826--826
 []|\T1/cmr/m/n/10.95 Modell-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 847--847
+Underfull \hbox (badness 10000) in paragraph at lines 826--826
 []|\T1/cmr/m/n/10.95 Evaluiert wur-den aus-schlieÿ-
  []
 
 
-Underfull \hbox (badness 3271) in paragraph at lines 847--847
+Underfull \hbox (badness 3271) in paragraph at lines 826--826
 \T1/cmr/m/n/10.95 lich lo-kal aus-ge-führ-te Mo-del-le
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 847--848
+Underfull \hbox (badness 10000) in paragraph at lines 826--827
 \T1/cmr/m/n/10.95 da-ten-schutz-freund-li-chen Local-
  []
 
 
-Underfull \hbox (badness 1540) in paragraph at lines 849--849
+Underfull \hbox (badness 1540) in paragraph at lines 828--828
 \T1/cmr/m/n/10.95 Test-sui-tes test-50 und test-100
  []
 
 
-Underfull \hbox (badness 4765) in paragraph at lines 849--850
+Underfull \hbox (badness 4765) in paragraph at lines 828--829
 \T1/cmr/m/n/10.95 Gren-zen bei Lauf-zeit, Kon-text-
  []
 
 
-Underfull \hbox (badness 3525) in paragraph at lines 853--854
+Underfull \hbox (badness 3525) in paragraph at lines 832--833
 []|\T1/cmr/m/n/10.95 Per-Run-Precision-Werte für al-le
  []
 
 
-Underfull \hbox (badness 1107) in paragraph at lines 853--854
+Underfull \hbox (badness 1107) in paragraph at lines 832--833
 \T1/cmr/m/n/10.95 drei Mo-del-le fin-den sich in An-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 855--855
+Underfull \hbox (badness 10000) in paragraph at lines 834--834
 []|\T1/cmr/m/n/10.95 Metrik-
  []
 
 
-Underfull \hbox (badness 1132) in paragraph at lines 855--856
+Underfull \hbox (badness 1132) in paragraph at lines 834--835
 \T1/cmr/m/n/10.95 bar als in ei-ner kur-z-en [][]-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 857--857
+Underfull \hbox (badness 10000) in paragraph at lines 836--836
 []|\T1/cmr/m/n/10.95 Priorisierungs-
  []
 
 
-Underfull \hbox (badness 1067) in paragraph at lines 857--858
+Underfull \hbox (badness 1067) in paragraph at lines 836--837
 \T1/cmr/m/n/10.95 ge-führt. Ob sich die-se Ein-schät-
  []
 
@@ -2315,27 +2316,27 @@ Underfull \hbox (badness 1067) in paragraph at lines 857--858
 ]
 
 [83]
-Underfull \hbox (badness 2662) in paragraph at lines 879--879
+Underfull \hbox (badness 2662) in paragraph at lines 858--858
 []|\T1/cmtt/m/n/10.95 <button> \T1/cmr/m/n/10.95 oh-ne sicht-ba-ren Text
  []
 
 
-Underfull \hbox (badness 2401) in paragraph at lines 885--885
+Underfull \hbox (badness 2401) in paragraph at lines 864--864
 []|\T1/cmr/m/n/10.95 Fokus-Outline via [][] ent-fernt
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 887--887
+Underfull \hbox (badness 10000) in paragraph at lines 866--866
 []|\T1/cmr/m/n/10.95 onClick-Handler oh-ne
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 887--887
+Underfull \hbox (badness 10000) in paragraph at lines 866--866
 []|\T1/cmr/m/n/10.95 grep + [][]-
  []
 
 
-Underfull \hbox (badness 4181) in paragraph at lines 895--895
+Underfull \hbox (badness 4181) in paragraph at lines 874--874
 []|\T1/cmtt/m/n/10.95 aria-hidden="true" \T1/cmr/m/n/10.95 auf fo-kus-
  []
 
@@ -2344,57 +2345,57 @@ Underfull \hbox (badness 4181) in paragraph at lines 895--895
 [84
 
 ]
-Underfull \hbox (badness 3942) in paragraph at lines 915--915
+Underfull \hbox (badness 3942) in paragraph at lines 894--894
 [][][]\T1/cmr/m/n/10.95 Erkennungsrate al-ler 12 Vio-la-ti-ons über al-le Mo-del-le (Kon-sis-tenz-schwel-le: $\OML/cmm/m/it/10.95 >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 946--946
+Underfull \hbox (badness 10000) in paragraph at lines 925--925
 []|\T1/cmr/bx/n/10.95 Tatsächliche
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 946--946
+Underfull \hbox (badness 10000) in paragraph at lines 925--925
 []|\T1/cmr/m/n/10.95 7b in-sta-bil;
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 946--946
+Underfull \hbox (badness 1565) in paragraph at lines 925--925
 \T1/cmr/m/n/10.95 14b/32b kon-sis-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 946--946
+Underfull \hbox (badness 10000) in paragraph at lines 925--925
 []|\T1/cmr/m/n/10.95 2 axe-Findings
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 946--946
+Underfull \hbox (badness 10000) in paragraph at lines 925--925
 []|\T1/cmr/m/n/10.95 Fokus-Outline ent-fernt
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 946--946
+Underfull \hbox (badness 10000) in paragraph at lines 925--925
 []|\T1/cmr/m/n/10.95 axe-core +
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 946--946
+Underfull \hbox (badness 10000) in paragraph at lines 925--925
 []|\T1/cmr/m/n/10.95 Playwright-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 946--946
+Underfull \hbox (badness 10000) in paragraph at lines 925--925
 \T1/cmr/m/n/10.95 Check greift
  []
 
 
-Underfull \hbox (badness 5050) in paragraph at lines 946--946
+Underfull \hbox (badness 5050) in paragraph at lines 925--925
 \T1/cmr/m/n/10.95 nicht; nur mit
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 946--946
+Underfull \hbox (badness 1565) in paragraph at lines 925--925
 []|\T1/cmr/m/n/10.95 14b/32b kon-sis-
  []
 
@@ -2403,22 +2404,22 @@ Underfull \hbox (badness 1565) in paragraph at lines 946--946
 [85
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 991--991
+Underfull \hbox (badness 10000) in paragraph at lines 970--970
 []|\T1/cmtt/m/n/10.95 <button> \T1/cmr/m/n/10.95 oh-ne \T1/cmtt/m/n/10.95 aria-label
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 991--991
+Underfull \hbox (badness 10000) in paragraph at lines 970--970
 []|\T1/cmr/m/n/10.95 Fokus-Outline ent-fernt
  []
 
 
-Underfull \hbox (badness 3281) in paragraph at lines 991--991
+Underfull \hbox (badness 3281) in paragraph at lines 970--970
 []|\T1/cmtt/m/n/10.95 aria-hidden="true" \T1/cmr/m/n/10.95 auf fo-
  []
 
 
-Underfull \hbox (badness 1297) in paragraph at lines 991--991
+Underfull \hbox (badness 1297) in paragraph at lines 970--970
 []|[][]\T1/cmr/m/n/10.95 -Reihenfolge weicht von
  []
 
@@ -2439,37 +2440,37 @@ Underfull \hbox (badness 1297) in paragraph at lines 991--991
 [89
 
 ]
-Underfull \hbox (badness 2213) in paragraph at lines 1178--1178
+Underfull \hbox (badness 2213) in paragraph at lines 1157--1157
 []|\T1/cmr/m/n/10.95 nahe an der Ground Truth;
  []
 
 
-Underfull \hbox (badness 5985) in paragraph at lines 1178--1178
+Underfull \hbox (badness 5985) in paragraph at lines 1157--1157
 []|\T1/cmr/m/n/10.95 deutlicher Über-schuss; ho-her
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1212--1212
+Underfull \hbox (badness 10000) in paragraph at lines 1191--1191
 []|\T1/cmr/bx/n/8 Gesamt-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1212--1212
+Underfull \hbox (badness 10000) in paragraph at lines 1191--1191
 []|\T1/cmr/bx/n/8 Ø pro
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1212--1212
+Underfull \hbox (badness 10000) in paragraph at lines 1191--1191
 []|\T1/cmr/bx/n/8 Min--
  []
 
 
-Overfull \hbox (3.94592pt too wide) in paragraph at lines 1212--1212
+Overfull \hbox (3.94592pt too wide) in paragraph at lines 1191--1191
 []|\T1/cmtt/m/n/8 qwen2.5-coder:14b| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1212--1212
+Underfull \hbox (badness 10000) in paragraph at lines 1191--1191
 []|\T1/cmr/m/n/8 modell-
  []
 
@@ -2478,67 +2479,67 @@ Underfull \hbox (badness 10000) in paragraph at lines 1212--1212
 [90
 
 ]
-Underfull \hbox (badness 7433) in paragraph at lines 1235--1236
+Underfull \hbox (badness 7433) in paragraph at lines 1214--1215
 []|\T1/cmr/m/n/10.95 Datei App.tsx:37, kon-kre-ter
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1237--1238
+Underfull \hbox (badness 10000) in paragraph at lines 1216--1217
 []|\T1/cmtt/m/n/10.95 aria-label\T1/cmr/m/n/10.95 -Wert mit spre-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1243--1243
+Underfull \hbox (badness 10000) in paragraph at lines 1222--1222
 []|\T1/cmr/m/n/10.95 Fokus-Outline ent-fernt
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1245--1246
+Underfull \hbox (badness 10000) in paragraph at lines 1224--1225
 []|\T1/cmtt/m/n/10.95 onKeyDown\T1/cmr/m/n/10.95 -Muster kor-rekt,
  []
 
 
-Underfull \hbox (badness 3482) in paragraph at lines 1247--1247
+Underfull \hbox (badness 3482) in paragraph at lines 1226--1226
 []|\T1/cmtt/m/n/10.95 role="button" \T1/cmr/m/n/10.95 auf \T1/cmtt/m/n/10.95 <div>
  []
 
 
-Underfull \hbox (badness 5036) in paragraph at lines 1247--1248
+Underfull \hbox (badness 5036) in paragraph at lines 1226--1227
 []|\T1/cmtt/m/n/10.95 tabIndex={0} \T1/cmr/m/n/10.95 + \T1/cmtt/m/n/10.95 onKeyDown
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1249--1249
+Underfull \hbox (badness 10000) in paragraph at lines 1228--1228
 []|\T1/cmr/m/n/10.95 Modal: Fo-kus-über-nah-me
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1249--1250
+Underfull \hbox (badness 10000) in paragraph at lines 1228--1229
 []|\T1/cmr/m/n/10.95 Vollständiger \T1/cmtt/m/n/10.95 useEffect\T1/cmr/m/n/10.95 -
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1249--1250
+Underfull \hbox (badness 10000) in paragraph at lines 1228--1229
 \T1/cmr/m/n/10.95 Fokus-Trap mit Shift+Tab-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1251--1252
+Underfull \hbox (badness 10000) in paragraph at lines 1230--1231
 []|\T1/cmtt/m/n/10.95 <a href="#main-content^^T\T1/cmr/m/n/10.95 -
  []
 
 
-Underfull \hbox (badness 1325) in paragraph at lines 1253--1254
+Underfull \hbox (badness 1325) in paragraph at lines 1232--1233
 []|\T1/cmr/m/n/10.95 Korrektur (\T1/cmtt/m/n/10.95 aria-hidden \T1/cmr/m/n/10.95 ent-
  []
 
 
-Underfull \hbox (badness 4279) in paragraph at lines 1253--1254
+Underfull \hbox (badness 4279) in paragraph at lines 1232--1233
 \T1/cmr/m/n/10.95 fer-nen oder \T1/cmtt/m/n/10.95 tabIndex={-1}\T1/cmr/m/n/10.95 )
  []
 
 
-Underfull \hbox (badness 1831) in paragraph at lines 1255--1256
+Underfull \hbox (badness 1831) in paragraph at lines 1234--1235
 []|[][] \T1/cmtt/m/n/10.95 order\T1/cmr/m/n/10.95 -Property als Lö-
  []
 
@@ -2547,7 +2548,7 @@ Underfull \hbox (badness 1831) in paragraph at lines 1255--1256
 [91
 
 ]
-Underfull \hbox (badness 6691) in paragraph at lines 1300--1300
+Underfull \hbox (badness 6691) in paragraph at lines 1279--1279
 []|\T1/cmr/m/n/10.95 Verwendetes Output-Token-Limit der Prio-ri-sie-
  []
 
@@ -2556,57 +2557,57 @@ Underfull \hbox (badness 6691) in paragraph at lines 1300--1300
 [92
 
 ]
-<graphics/test12-screen1.png, id=3283, 1443.89438pt x 777.65532pt>
+<graphics/test12-screen1.png, id=3309, 1443.89438pt x 777.65532pt>
 File: graphics/test12-screen1.png Graphic file (type png)
 <use graphics/test12-screen1.png>
-Package pdftex.def Info: graphics/test12-screen1.png  used on input line 1331.
+Package pdftex.def Info: graphics/test12-screen1.png  used on input line 1310.
 (pdftex.def)             Requested size: 341.43307pt x 183.88817pt.
-<graphics/test12-screen2.png, id=3284, 442.65375pt x 669.2503pt>
+<graphics/test12-screen2.png, id=3310, 442.65375pt x 669.2503pt>
 File: graphics/test12-screen2.png Graphic file (type png)
 <use graphics/test12-screen2.png>
-Package pdftex.def Info: graphics/test12-screen2.png  used on input line 1338.
+Package pdftex.def Info: graphics/test12-screen2.png  used on input line 1317.
 (pdftex.def)             Requested size: 227.62206pt x 344.15205pt.
 
 
 [93
 
  <./graphics/test12-screen1.png> <./graphics/test12-screen2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1374--1374
+Underfull \hbox (badness 10000) in paragraph at lines 1353--1353
 []|\T1/cmr/m/n/10.95 Deko-Bild oh-ne \T1/cmtt/m/n/10.95 alt= \T1/cmr/m/n/10.95 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1378--1378
+Underfull \hbox (badness 10000) in paragraph at lines 1357--1357
 []|[][] \T1/cmtt/m/n/10.95 order \T1/cmr/m/n/10.95 weicht von [][]-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1386--1386
+Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
 []|\T1/cmr/m/n/10.95 Überschriften-Hierarchie über-sprun-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1391--1391
+Underfull \hbox (badness 10000) in paragraph at lines 1370--1370
 []|\T1/cmtt/m/n/10.95 role="button" \T1/cmr/m/n/10.95 auf \T1/cmtt/m/n/10.95 <div> \T1/cmr/m/n/10.95 oh-ne
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1393--1393
+Underfull \hbox (badness 10000) in paragraph at lines 1372--1372
 []|\T1/cmr/m/n/10.95 Tabelle oh-ne \T1/cmtt/m/n/10.95 <caption> \T1/cmr/m/n/10.95 oder
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1400--1400
+Underfull \hbox (badness 10000) in paragraph at lines 1379--1379
 []|\T1/cmr/m/n/10.95 Pflichtfeld oh-ne
  []
 
 
-Underfull \hbox (badness 3118) in paragraph at lines 1403--1403
+Underfull \hbox (badness 3118) in paragraph at lines 1382--1382
 []|\T1/cmtt/m/n/10.95 outline: none \T1/cmr/m/n/10.95 auf But-ton (Fo-kus
  []
 
 
-Underfull \hbox (badness 5607) in paragraph at lines 1418--1418
+Underfull \hbox (badness 5607) in paragraph at lines 1397--1397
 []|\T1/cmr/m/n/10.95 Modaler Dia-log über-nimmt Fo-kus
  []
 
@@ -2616,72 +2617,72 @@ Underfull \hbox (badness 5607) in paragraph at lines 1418--1418
 ] [95]
 
 [96]
-Underfull \hbox (badness 10000) in paragraph at lines 1465--1465
+Underfull \hbox (badness 10000) in paragraph at lines 1444--1444
 []|\T1/cmr/m/n/10 Überschriften-Hierarchie über-
  []
 
 
-Underfull \hbox (badness 3049) in paragraph at lines 1470--1470
+Underfull \hbox (badness 3049) in paragraph at lines 1449--1449
 []|\T1/cmtt/m/n/10 role="button" \T1/cmr/m/n/10 auf \T1/cmtt/m/n/10 <div> \T1/cmr/m/n/10 o.
  []
 
 
-Underfull \hbox (badness 3417) in paragraph at lines 1472--1472
+Underfull \hbox (badness 3417) in paragraph at lines 1451--1451
 []|\T1/cmr/m/n/10 Tabelle o. \T1/cmtt/m/n/10 <caption> \T1/cmr/m/n/10 (Das-h-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1479--1479
+Underfull \hbox (badness 10000) in paragraph at lines 1458--1458
 []|\T1/cmr/m/n/10 Pflichtfeld oh-ne
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1479--1479
+Underfull \hbox (badness 10000) in paragraph at lines 1458--1458
 []|\T1/cmr/m/n/10 Alle Mo-del-le ([][]-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1480--1480
+Underfull \hbox (badness 10000) in paragraph at lines 1459--1459
 []|\T1/cmr/m/n/10 Alle Mo-del-le ([][]-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1483--1483
+Underfull \hbox (badness 10000) in paragraph at lines 1462--1462
 []|\T1/cmr/m/n/10 Alle Mo-del-le ([][]-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1485--1485
+Underfull \hbox (badness 10000) in paragraph at lines 1464--1464
 []|\T1/cmtt/m/n/10 onClick \T1/cmr/m/n/10 auf \T1/cmtt/m/n/10 <span> \T1/cmr/m/n/10 o.
  []
 
 
-Underfull \hbox (badness 1527) in paragraph at lines 1492--1492
+Underfull \hbox (badness 1527) in paragraph at lines 1471--1471
 []|\T1/cmr/m/n/10 Paginierung \T1/cmtt/m/n/10 <div> \T1/cmr/m/n/10 oh-ne Key-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1493--1493
+Underfull \hbox (badness 10000) in paragraph at lines 1472--1472
 []|\T1/cmtt/m/n/10 <li> \T1/cmr/m/n/10 mit \T1/cmtt/m/n/10 onClick \T1/cmr/m/n/10 oh-ne
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1494--1494
+Underfull \hbox (badness 10000) in paragraph at lines 1473--1473
 []|\T1/cmr/m/n/10 Alle Mo-del-le ([][]-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1497--1497
+Underfull \hbox (badness 10000) in paragraph at lines 1476--1476
 []|\T1/cmr/m/n/10 14b kons.; 32b inst.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1499--1499
+Underfull \hbox (badness 10000) in paragraph at lines 1478--1478
 []|\T1/cmtt/m/n/10 outline: none \T1/cmr/m/n/10 im Modal-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1499--1499
+Underfull \hbox (badness 10000) in paragraph at lines 1478--1478
 []|\T1/cmr/m/n/10 32b kons.; 14b inst.
  []
 
@@ -2690,102 +2691,102 @@ Underfull \hbox (badness 10000) in paragraph at lines 1499--1499
 ] [98]
 
 [99]
-Underfull \hbox (badness 10000) in paragraph at lines 1531--1531
+Underfull \hbox (badness 10000) in paragraph at lines 1510--1510
 []|[][] \T1/cmtt/m/n/10.95 order $\OMS/cmsy/m/n/10.95 6\OT1/cmr/m/n/10.95 =$ [][]\T1/cmr/m/n/10.95 -
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1533--1533
+Underfull \hbox (badness 10000) in paragraph at lines 1512--1512
 []|\T1/cmtt/m/n/10.95 onClick \T1/cmr/m/n/10.95 auf \T1/cmtt/m/n/10.95 <li>
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1534--1534
+Underfull \hbox (badness 10000) in paragraph at lines 1513--1513
 []|\T1/cmtt/m/n/10.95 onClick \T1/cmr/m/n/10.95 auf \T1/cmtt/m/n/10.95 <li>
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1535--1535
+Underfull \hbox (badness 10000) in paragraph at lines 1514--1514
 []|\T1/cmtt/m/n/10.95 role="button" \T1/cmr/m/n/10.95 o.\T1/cmtt/m/n/10.95 tabIndex
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1536--1536
+Underfull \hbox (badness 10000) in paragraph at lines 1515--1515
 []|\T1/cmtt/m/n/10.95 onClick \T1/cmr/m/n/10.95 auf \T1/cmtt/m/n/10.95 <li>
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1539--1539
+Underfull \hbox (badness 10000) in paragraph at lines 1518--1518
 []|\T1/cmr/m/n/10.95 Überschriften-Hierarchie
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1540--1540
+Underfull \hbox (badness 10000) in paragraph at lines 1519--1519
 []|[][]\T1/cmr/m/n/10.95 -Icon \T1/cmtt/m/n/10.95 <img> \T1/cmr/m/n/10.95 oh-ne
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1542--1542
+Underfull \hbox (badness 10000) in paragraph at lines 1521--1521
 []|[][]\T1/cmr/m/n/10.95 -Icon \T1/cmtt/m/n/10.95 <img> \T1/cmr/m/n/10.95 oh-ne
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1543--1543
+Underfull \hbox (badness 10000) in paragraph at lines 1522--1522
 []|\T1/cmtt/m/n/10.95 onClick \T1/cmr/m/n/10.95 auf \T1/cmtt/m/n/10.95 <div>
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1544--1544
+Underfull \hbox (badness 10000) in paragraph at lines 1523--1523
 []|\T1/cmtt/m/n/10.95 role="button" \T1/cmr/m/n/10.95 auf \T1/cmtt/m/n/10.95 <div>
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1553--1553
+Underfull \hbox (badness 10000) in paragraph at lines 1532--1532
 []|\T1/cmr/m/n/10.95 Pflichtfeld oh-ne
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1554--1554
+Underfull \hbox (badness 10000) in paragraph at lines 1533--1533
 []|\T1/cmr/m/n/10.95 Fehlermeldung nicht pro-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1557--1557
+Underfull \hbox (badness 10000) in paragraph at lines 1536--1536
 []|\T1/cmr/m/n/10.95 Statusmeldung oh-ne
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1559--1559
+Underfull \hbox (badness 10000) in paragraph at lines 1538--1538
 []|\T1/cmtt/m/n/10.95 onClick \T1/cmr/m/n/10.95 auf \T1/cmtt/m/n/10.95 <span>
  []
 
 
-Underfull \hbox (badness 1072) in paragraph at lines 1561--1561
+Underfull \hbox (badness 1072) in paragraph at lines 1540--1540
 []|\T1/cmr/m/n/10.95 Tabelle o.\T1/cmtt/m/n/10.95 <caption> \T1/cmr/m/n/10.95 (Da-ta-
  []
 
 
-Underfull \hbox (badness 8075) in paragraph at lines 1565--1565
+Underfull \hbox (badness 8075) in paragraph at lines 1544--1544
 []|\T1/cmr/m/n/10.95 Icon-Button oh-ne zu-gängl.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1567--1567
+Underfull \hbox (badness 10000) in paragraph at lines 1546--1546
 []|\T1/cmtt/m/n/10.95 <li> \T1/cmr/m/n/10.95 mit \T1/cmtt/m/n/10.95 onClick
  []
 
 
-Underfull \hbox (badness 3954) in paragraph at lines 1571--1571
+Underfull \hbox (badness 3954) in paragraph at lines 1550--1550
 []|\T1/cmr/m/n/10.95 Modaler Dia-log über-nimmt
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1572--1572
+Underfull \hbox (badness 10000) in paragraph at lines 1551--1551
 []|\T1/cmr/m/n/10.95 Dialog oh-ne
  []
 
 
-Underfull \hbox (badness 7759) in paragraph at lines 1573--1573
+Underfull \hbox (badness 7759) in paragraph at lines 1552--1552
 []|\T1/cmtt/m/n/10.95 outline: none \T1/cmr/m/n/10.95 im Modal-
  []
 
@@ -2806,17 +2807,17 @@ Underfull \hbox (badness 7759) in paragraph at lines 1573--1573
 [105
 
 ]
-Underfull \hbox (badness 1286) in paragraph at lines 1746--1746
+Underfull \hbox (badness 1286) in paragraph at lines 1725--1725
 \T1/cmr/m/n/10.95 lie-fert teils Un-ter-de-tek-ti-on bei
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1746--1746
+Underfull \hbox (badness 10000) in paragraph at lines 1725--1725
 []|\T1/cmr/m/n/10.95 erhöhter Über-schuss; zu-gleich
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1746--1746
+Underfull \hbox (badness 10000) in paragraph at lines 1725--1725
 \T1/cmr/m/n/10.95 kon-sis-ten-tes-te [][]-Detektion
  []
 
@@ -2825,27 +2826,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 1746--1746
 [106
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1826--1826
+Underfull \hbox (badness 10000) in paragraph at lines 1805--1805
 []|\T1/cmr/bx/n/8 Gesamt-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1826--1826
+Underfull \hbox (badness 10000) in paragraph at lines 1805--1805
 []|\T1/cmr/bx/n/8 Ø pro
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1826--1826
+Underfull \hbox (badness 10000) in paragraph at lines 1805--1805
 []|\T1/cmr/bx/n/8 Min--
  []
 
 
-Overfull \hbox (3.94592pt too wide) in paragraph at lines 1826--1826
+Overfull \hbox (3.94592pt too wide) in paragraph at lines 1805--1805
 []|\T1/cmtt/m/n/8 qwen2.5-coder:14b| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1826--1826
+Underfull \hbox (badness 10000) in paragraph at lines 1805--1805
 []|\T1/cmr/m/n/8 modell-
  []
 
@@ -2854,192 +2855,192 @@ Underfull \hbox (badness 10000) in paragraph at lines 1826--1826
 [107
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1857--1858
+Underfull \hbox (badness 10000) in paragraph at lines 1836--1837
 []|\T1/cmr/m/n/10.95 App.tsx, \T1/cmtt/m/n/10.95 <a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1857--1858
+Underfull \hbox (badness 10000) in paragraph at lines 1836--1837
 \T1/cmtt/m/n/10.95 href="#main-content^^T\T1/cmr/m/n/10.95 -Snippet
  []
 
 
-Underfull \hbox (badness 3724) in paragraph at lines 1861--1862
+Underfull \hbox (badness 3724) in paragraph at lines 1840--1841
 []|\T1/cmr/m/n/10.95 App.tsx:29, be-schrei-ben-der \T1/cmtt/m/n/10.95 alt\T1/cmr/m/n/10.95 -
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1863--1864
+Underfull \hbox (badness 10000) in paragraph at lines 1842--1843
 []|\T1/cmr/m/n/10.95 App.tsx:32, \T1/cmtt/m/n/10.95 alt=
  []
 
 
-Underfull \hbox (badness 2426) in paragraph at lines 1865--1865
+Underfull \hbox (badness 2426) in paragraph at lines 1844--1844
 []|\T1/cmr/m/n/10.95 Hamburger-Button oh-ne Na-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1865--1866
+Underfull \hbox (badness 10000) in paragraph at lines 1844--1845
 []|\T1/cmr/m/n/10.95 App.tsx:36, \T1/cmtt/m/n/10.95 aria-label="Menü
  []
 
 
-Underfull \hbox (badness 1931) in paragraph at lines 1869--1870
+Underfull \hbox (badness 1931) in paragraph at lines 1848--1849
 []|\T1/cmr/m/n/10.95 App.tsx:44, [][] \T1/cmtt/m/n/10.95 .header-badge
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1871--1871
+Underfull \hbox (badness 10000) in paragraph at lines 1850--1850
 []|[][] \T1/cmtt/m/n/10.95 order \T1/cmr/m/n/10.95 vs. [][]-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1873--1874
+Underfull \hbox (badness 10000) in paragraph at lines 1852--1853
 []|\T1/cmr/m/n/10.95 Sidebar.tsx:11,
  []
 
 
-Underfull \hbox (badness 7308) in paragraph at lines 1877--1878
+Underfull \hbox (badness 7308) in paragraph at lines 1856--1857
 []|\T1/cmr/m/n/10.95 Sidebar.tsx:21, Quer-ver-weis auf
  []
 
 
-Underfull \hbox (badness 3148) in paragraph at lines 1879--1880
+Underfull \hbox (badness 3148) in paragraph at lines 1858--1859
 []|\T1/cmr/m/n/10.95 Sidebar.tsx:30, \T1/cmtt/m/n/10.95 tabIndex={0} \T1/cmr/m/n/10.95 +
  []
 
 
-Underfull \hbox (badness 7308) in paragraph at lines 1881--1882
+Underfull \hbox (badness 7308) in paragraph at lines 1860--1861
 []|\T1/cmr/m/n/10.95 Sidebar.tsx:38, Quer-ver-weis auf
  []
 
 
-Underfull \hbox (badness 1418) in paragraph at lines 1885--1885
+Underfull \hbox (badness 1418) in paragraph at lines 1864--1864
 []|\T1/cmtt/m/n/10.95 aria-hidden \T1/cmr/m/n/10.95 auf fo-kus. Ele-
  []
 
 
-Underfull \hbox (badness 2478) in paragraph at lines 1889--1890
+Underfull \hbox (badness 2478) in paragraph at lines 1868--1869
 []|\T1/cmr/m/n/10.95 Dashboard.tsx:12, be-schrei-ben-der
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1891--1892
+Underfull \hbox (badness 10000) in paragraph at lines 1870--1871
 []|\T1/cmr/m/n/10.95 Dashboard.tsx:16, [][]-Fix mit
  []
 
 
-Underfull \hbox (badness 4391) in paragraph at lines 1895--1896
+Underfull \hbox (badness 4391) in paragraph at lines 1874--1875
 []|\T1/cmr/m/n/10.95 Dashboard.tsx:30, \T1/cmtt/m/n/10.95 onKeyDown \T1/cmr/m/n/10.95 +
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1897--1897
+Underfull \hbox (badness 10000) in paragraph at lines 1876--1876
 []|\T1/cmtt/m/n/10.95 role="button" \T1/cmr/m/n/10.95 div oh-ne
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1897--1898
+Underfull \hbox (badness 10000) in paragraph at lines 1876--1877
 []|\T1/cmr/m/n/10.95 Dashboard.tsx:38, \T1/cmtt/m/n/10.95 tabIndex={0}
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1901--1901
+Underfull \hbox (badness 10000) in paragraph at lines 1880--1880
 []|\T1/cmr/m/n/10.95 Tabelle oh-ne
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1901--1902
+Underfull \hbox (badness 10000) in paragraph at lines 1880--1881
 []|\T1/cmr/m/n/10.95 Dashboard.tsx:53,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1903--1904
+Underfull \hbox (badness 10000) in paragraph at lines 1882--1883
 []|\T1/cmr/m/n/10.95 Dashboard.tsx:57, \T1/cmtt/m/n/10.95 scope="col"
  []
 
 
-Underfull \hbox (badness 1442) in paragraph at lines 1905--1906
+Underfull \hbox (badness 1442) in paragraph at lines 1884--1885
 []|\T1/cmr/m/n/10.95 styles.css:247, [][] \T1/cmtt/m/n/10.95 ::after \T1/cmr/m/n/10.95 mit
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1907--1908
+Underfull \hbox (badness 10000) in paragraph at lines 1886--1887
 []|\T1/cmr/m/n/10.95 UserProfile.tsx:17,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1909--1910
+Underfull \hbox (badness 10000) in paragraph at lines 1888--1889
 []|\T1/cmr/m/n/10.95 UserProfile.tsx:20,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1915--1916
+Underfull \hbox (badness 10000) in paragraph at lines 1894--1895
 []|\T1/cmr/m/n/10.95 UserProfile.tsx:56, \T1/cmtt/m/n/10.95 required
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1917--1918
+Underfull \hbox (badness 10000) in paragraph at lines 1896--1897
 []|\T1/cmr/m/n/10.95 UserProfile.tsx:64,
  []
 
 
-Underfull \hbox (badness 7326) in paragraph at lines 1919--1920
+Underfull \hbox (badness 7326) in paragraph at lines 1898--1899
 []|\T1/cmr/m/n/10.95 UserProfile.tsx:73, [][]-Fix mit
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1923--1923
+Underfull \hbox (badness 10000) in paragraph at lines 1902--1902
 []|\T1/cmr/m/n/10.95 Statusmeldung oh-ne
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1923--1924
+Underfull \hbox (badness 10000) in paragraph at lines 1902--1903
 []|\T1/cmr/m/n/10.95 UserProfile.tsx:83,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1925--1926
+Underfull \hbox (badness 10000) in paragraph at lines 1904--1905
 []|\T1/cmr/m/n/10.95 UserProfile.tsx:86,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1929--1930
+Underfull \hbox (badness 10000) in paragraph at lines 1908--1909
 []|\T1/cmr/m/n/10.95 DataTable.tsx:29, \T1/cmtt/m/n/10.95 <label
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1931--1932
+Underfull \hbox (badness 10000) in paragraph at lines 1910--1911
 []|\T1/cmr/m/n/10.95 DataTable.tsx:33, \T1/cmtt/m/n/10.95 <caption>\T1/cmr/m/n/10.95 -
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1939--1940
+Underfull \hbox (badness 10000) in paragraph at lines 1918--1919
 []|\T1/cmr/m/n/10.95 DataTable.tsx:71,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1943--1944
+Underfull \hbox (badness 10000) in paragraph at lines 1922--1923
 []|\T1/cmr/m/n/10.95 Notifications.tsx:21, \T1/cmtt/m/n/10.95 onKeyDown\T1/cmr/m/n/10.95 -
  []
 
 
-Underfull \hbox (badness 1442) in paragraph at lines 1945--1946
+Underfull \hbox (badness 1442) in paragraph at lines 1924--1925
 []|\T1/cmr/m/n/10.95 styles.css:485, [][] \T1/cmtt/m/n/10.95 ::after \T1/cmr/m/n/10.95 mit
  []
 
 
-Underfull \hbox (badness 3815) in paragraph at lines 1949--1950
+Underfull \hbox (badness 3815) in paragraph at lines 1928--1929
 []|\T1/cmr/m/n/10.95 styles.css + No-ti-fi-ca-ti-ons.tsx:41,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1951--1952
+Underfull \hbox (badness 10000) in paragraph at lines 1930--1931
 []|\T1/cmr/m/n/10.95 Notifications.tsx:46, \T1/cmtt/m/n/10.95 useEffect\T1/cmr/m/n/10.95 -
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1953--1954
+Underfull \hbox (badness 10000) in paragraph at lines 1932--1933
 []|\T1/cmr/m/n/10.95 Notifications.tsx:49,
  []
 
@@ -3048,37 +3049,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 1953--1954
 ] [109] [110]
 
 [111]
-<graphics/test-50-Bild1.png, id=3494, 1444.64719pt x 773.89125pt>
+<graphics/test-50-Bild1.png, id=3520, 1444.64719pt x 773.89125pt>
 File: graphics/test-50-Bild1.png Graphic file (type png)
 <use graphics/test-50-Bild1.png>
-Package pdftex.def Info: graphics/test-50-Bild1.png  used on input line 1969.
+Package pdftex.def Info: graphics/test-50-Bild1.png  used on input line 1948.
 (pdftex.def)             Requested size: 409.71692pt x 219.4749pt.
-<graphics/test-50-Bild2.png, id=3495, 1443.89438pt x 773.89125pt>
+<graphics/test-50-Bild2.png, id=3521, 1443.89438pt x 773.89125pt>
 File: graphics/test-50-Bild2.png Graphic file (type png)
 <use graphics/test-50-Bild2.png>
-Package pdftex.def Info: graphics/test-50-Bild2.png  used on input line 1977.
+Package pdftex.def Info: graphics/test-50-Bild2.png  used on input line 1956.
 (pdftex.def)             Requested size: 409.71692pt x 219.59299pt.
 
 
 [112
 
  <./graphics/test-50-Bild1.png> <./graphics/test-50-Bild2.png>]
-<graphics/test-50-Bild3.png, id=3503, 1444.64719pt x 773.89125pt>
+<graphics/test-50-Bild3.png, id=3529, 1444.64719pt x 773.89125pt>
 File: graphics/test-50-Bild3.png Graphic file (type png)
 <use graphics/test-50-Bild3.png>
-Package pdftex.def Info: graphics/test-50-Bild3.png  used on input line 1986.
+Package pdftex.def Info: graphics/test-50-Bild3.png  used on input line 1965.
 (pdftex.def)             Requested size: 432.48051pt x 231.6732pt.
-<graphics/test-50-Bild4.png, id=3504, 1444.64719pt x 313.9228pt>
+<graphics/test-50-Bild4.png, id=3530, 1444.64719pt x 313.9228pt>
 File: graphics/test-50-Bild4.png Graphic file (type png)
 <use graphics/test-50-Bild4.png>
-Package pdftex.def Info: graphics/test-50-Bild4.png  used on input line 1993.
+Package pdftex.def Info: graphics/test-50-Bild4.png  used on input line 1972.
 (pdftex.def)             Requested size: 432.48051pt x 93.97638pt.
 
 
 [113
 
  <./graphics/test-50-Bild3.png> <./graphics/test-50-Bild4.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 2095--2095
+Underfull \hbox (badness 10000) in paragraph at lines 2074--2074
 []|\T1/cmr/m/n/10.95 Paginierung \T1/cmtt/m/n/10.95 role="button"
  []
 
@@ -3087,237 +3088,237 @@ Underfull \hbox (badness 10000) in paragraph at lines 2095--2095
 ] [115] [116]
 
 [117]
-Underfull \hbox (badness 3746) in paragraph at lines 2141--2141
+Underfull \hbox (badness 3746) in paragraph at lines 2120--2120
 [][]\T1/cmr/m/n/10 Erkennungsrate al-ler 100 Vio-la-ti-ons (Ge-sam-ter-ken-nungs-quo-te durch Voll-pi-pe-li-ne). \T1/cmr/m/it/10 Er-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2163--2163
+Underfull \hbox (badness 10000) in paragraph at lines 2142--2142
 []|\T1/cmr/m/n/10 nur 32b kons.;
  []
 
 
-Underfull \hbox (badness 3219) in paragraph at lines 2168--2168
+Underfull \hbox (badness 3219) in paragraph at lines 2147--2147
 []|[][]\T1/cmr/m/n/10 -Icon oh-ne \T1/cmtt/m/n/10 alt="..."
  []
 
 
-Underfull \hbox (badness 3219) in paragraph at lines 2170--2170
+Underfull \hbox (badness 3219) in paragraph at lines 2149--2149
 []|[][]\T1/cmr/m/n/10 -Icon oh-ne \T1/cmtt/m/n/10 alt="..."
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2174--2174
+Underfull \hbox (badness 10000) in paragraph at lines 2153--2153
 []|\T1/cmr/m/n/10 Tabelle oh-ne \T1/cmtt/m/n/10 <caption>
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2176--2176
+Underfull \hbox (badness 10000) in paragraph at lines 2155--2155
 []|\T1/cmr/m/n/10 Status nur durch Far-be
  []
 
 
-Underfull \hbox (badness 6125) in paragraph at lines 2179--2179
+Underfull \hbox (badness 6125) in paragraph at lines 2158--2158
 []|\T1/cmr/m/n/10 Input oh-ne \T1/cmtt/m/n/10 <label> \T1/cmr/m/n/10 (E-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2182--2182
+Underfull \hbox (badness 10000) in paragraph at lines 2161--2161
 []|\T1/cmr/m/n/10 Fehlermeldung nicht ver-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2183--2183
+Underfull \hbox (badness 10000) in paragraph at lines 2162--2162
 []|\T1/cmr/m/n/10 Button Kon-trast nied-rig
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2185--2185
+Underfull \hbox (badness 10000) in paragraph at lines 2164--2164
 []|\T1/cmr/m/n/10 Statusmeldung oh-ne
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2186--2186
+Underfull \hbox (badness 10000) in paragraph at lines 2165--2165
 []|\T1/cmr/m/n/10 Alle Mo-del-le
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2187--2187
+Underfull \hbox (badness 10000) in paragraph at lines 2166--2166
 []|\T1/cmtt/m/n/10 onClick <span> \T1/cmr/m/n/10 o.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2189--2189
+Underfull \hbox (badness 10000) in paragraph at lines 2168--2168
 []|\T1/cmr/m/n/10 Tabelle oh-ne \T1/cmtt/m/n/10 <caption>
  []
 
 
-Underfull \hbox (badness 7796) in paragraph at lines 2193--2193
+Underfull \hbox (badness 7796) in paragraph at lines 2172--2172
 []|\T1/cmr/m/n/10 Icon-Button oh-ne Na-men
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2193--2193
+Underfull \hbox (badness 10000) in paragraph at lines 2172--2172
 []|\T1/cmr/m/n/10 Alle Mo-del-le
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2203--2203
+Underfull \hbox (badness 10000) in paragraph at lines 2182--2182
 []|\T1/cmr/m/n/10 Modal: Fo-kus-über-nah-me
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2204--2204
+Underfull \hbox (badness 10000) in paragraph at lines 2183--2183
 []|\T1/cmr/m/n/10 Dialog oh-ne
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2204--2204
+Underfull \hbox (badness 10000) in paragraph at lines 2183--2183
 []|\T1/cmr/m/n/10 Alle Mo-del-le
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2210--2210
+Underfull \hbox (badness 10000) in paragraph at lines 2189--2189
 []|\T1/cmr/m/n/10 Alle Mo-del-le
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2211--2211
+Underfull \hbox (badness 10000) in paragraph at lines 2190--2190
 []|\T1/cmr/m/n/10 Alle Mo-del-le
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2212--2212
+Underfull \hbox (badness 10000) in paragraph at lines 2191--2191
 []|\T1/cmr/m/n/10 Alle Mo-del-le
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2215--2215
+Underfull \hbox (badness 10000) in paragraph at lines 2194--2194
 []|\T1/cmr/m/n/10 Button Kon-trast nied-rig
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2217--2217
+Underfull \hbox (badness 10000) in paragraph at lines 2196--2196
 []|\T1/cmr/m/n/10 Alle Mo-del-le
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2218--2218
+Underfull \hbox (badness 10000) in paragraph at lines 2197--2197
 []|\T1/cmr/m/n/10 Button oh-ne Na-men
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2218--2218
+Underfull \hbox (badness 10000) in paragraph at lines 2197--2197
 []|\T1/cmr/m/n/10 Alle Mo-del-le
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2227--2227
+Underfull \hbox (badness 10000) in paragraph at lines 2206--2206
 []|\T1/cmr/m/n/10 Dropzone \T1/cmtt/m/n/10 onClick \T1/cmr/m/n/10 o.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2228--2228
+Underfull \hbox (badness 10000) in paragraph at lines 2207--2207
 []|\T1/cmr/m/n/10 Upload-Icon oh-ne
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2231--2231
+Underfull \hbox (badness 10000) in paragraph at lines 2210--2210
 []|\T1/cmr/m/n/10 Progressbar oh-ne
  []
 
 
-Underfull \hbox (badness 2951) in paragraph at lines 2231--2231
+Underfull \hbox (badness 2951) in paragraph at lines 2210--2210
 []|\T1/cmr/m/n/10 32b inst.; 7b/14b
  []
 
 
-Underfull \hbox (badness 4726) in paragraph at lines 2232--2232
+Underfull \hbox (badness 4726) in paragraph at lines 2211--2211
 []|\T1/cmr/m/n/10 Kontrast Hil-fe-text nied-rig
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2233--2233
+Underfull \hbox (badness 10000) in paragraph at lines 2212--2212
 []|\T1/cmr/m/n/10 Button 16$\OMS/cmsy/m/n/10 ^^B$\T1/cmr/m/n/10 16px (Fi-leU-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2234--2234
+Underfull \hbox (badness 10000) in paragraph at lines 2213--2213
 []|\T1/cmr/m/n/10 Modal: Fo-kus-über-nah-me
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2235--2235
+Underfull \hbox (badness 10000) in paragraph at lines 2214--2214
 []|\T1/cmr/m/n/10 Dialog oh-ne
  []
 
 
-Underfull \hbox (badness 2951) in paragraph at lines 2236--2236
+Underfull \hbox (badness 2951) in paragraph at lines 2215--2215
 []|\T1/cmr/m/n/10 32b inst.; 7b/14b
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2237--2237
+Underfull \hbox (badness 10000) in paragraph at lines 2216--2216
 []|\T1/cmr/m/n/10 Tabelle oh-ne \T1/cmtt/m/n/10 <caption>
  []
 
 
-Underfull \hbox (badness 2951) in paragraph at lines 2238--2238
+Underfull \hbox (badness 2951) in paragraph at lines 2217--2217
 []|\T1/cmr/m/n/10 32b inst.; 7b/14b
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2242--2242
+Underfull \hbox (badness 10000) in paragraph at lines 2221--2221
 []|\T1/cmr/m/n/10 Detail oh-ne \T1/cmtt/m/n/10 aria-live
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2243--2243
+Underfull \hbox (badness 10000) in paragraph at lines 2222--2222
 []|\T1/cmr/m/n/10 Banner-Bild oh-ne
  []
 
 
-Underfull \hbox (badness 2951) in paragraph at lines 2243--2243
+Underfull \hbox (badness 2951) in paragraph at lines 2222--2222
 []|\T1/cmr/m/n/10 32b inst.; 7b/14b
  []
 
 
-Underfull \hbox (badness 2951) in paragraph at lines 2246--2246
+Underfull \hbox (badness 2951) in paragraph at lines 2225--2225
 []|\T1/cmr/m/n/10 32b inst.; 7b/14b
  []
 
 
-Underfull \hbox (badness 2951) in paragraph at lines 2247--2247
+Underfull \hbox (badness 2951) in paragraph at lines 2226--2226
 []|\T1/cmr/m/n/10 32b inst.; 7b/14b
  []
 
 
-Underfull \hbox (badness 4726) in paragraph at lines 2250--2250
+Underfull \hbox (badness 4726) in paragraph at lines 2229--2229
 []|\T1/cmr/m/n/10 Kontrast Hil-fe-text nied-rig
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2252--2252
+Underfull \hbox (badness 10000) in paragraph at lines 2231--2231
 []|\T1/cmr/m/n/10 Accordion \T1/cmtt/m/n/10 onClick \T1/cmr/m/n/10 o.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2253--2253
+Underfull \hbox (badness 10000) in paragraph at lines 2232--2232
 []|\T1/cmr/m/n/10 Accordion oh-ne
  []
 
 
-Underfull \hbox (badness 2951) in paragraph at lines 2254--2254
+Underfull \hbox (badness 2951) in paragraph at lines 2233--2233
 []|\T1/cmr/m/n/10 32b inst.; 7b/14b
  []
 
 
-Underfull \hbox (badness 2951) in paragraph at lines 2255--2255
+Underfull \hbox (badness 2951) in paragraph at lines 2234--2234
 []|\T1/cmr/m/n/10 32b inst.; 7b/14b
  []
 
 
-Underfull \hbox (badness 2951) in paragraph at lines 2256--2256
+Underfull \hbox (badness 2951) in paragraph at lines 2235--2235
 []|\T1/cmr/m/n/10 32b inst.; 7b/14b
  []
 
@@ -3326,142 +3327,142 @@ Underfull \hbox (badness 2951) in paragraph at lines 2256--2256
 ] [119] [120] [121]
 
 [122]
-Underfull \hbox (badness 3219) in paragraph at lines 2299--2299
+Underfull \hbox (badness 3219) in paragraph at lines 2278--2278
 []|[][]\T1/cmr/m/n/10 -Icon oh-ne \T1/cmtt/m/n/10 alt="..."
  []
 
 
-Underfull \hbox (badness 3219) in paragraph at lines 2301--2301
+Underfull \hbox (badness 3219) in paragraph at lines 2280--2280
 []|[][]\T1/cmr/m/n/10 -Icon oh-ne \T1/cmtt/m/n/10 alt="..."
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2305--2305
+Underfull \hbox (badness 10000) in paragraph at lines 2284--2284
 []|\T1/cmr/m/n/10 Tabelle oh-ne \T1/cmtt/m/n/10 <caption>
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2307--2307
+Underfull \hbox (badness 10000) in paragraph at lines 2286--2286
 []|\T1/cmr/m/n/10 Status nur durch Far-be
  []
 
 
-Underfull \hbox (badness 6125) in paragraph at lines 2310--2310
+Underfull \hbox (badness 6125) in paragraph at lines 2289--2289
 []|\T1/cmr/m/n/10 Input oh-ne \T1/cmtt/m/n/10 <label> \T1/cmr/m/n/10 (E-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2313--2313
+Underfull \hbox (badness 10000) in paragraph at lines 2292--2292
 []|\T1/cmr/m/n/10 Fehlermeldung nicht ver-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2314--2314
+Underfull \hbox (badness 10000) in paragraph at lines 2293--2293
 []|\T1/cmr/m/n/10 Button Kon-trast nied-rig
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2316--2316
+Underfull \hbox (badness 10000) in paragraph at lines 2295--2295
 []|\T1/cmr/m/n/10 Statusmeldung oh-ne
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2318--2318
+Underfull \hbox (badness 10000) in paragraph at lines 2297--2297
 []|\T1/cmtt/m/n/10 onClick <span> \T1/cmr/m/n/10 o.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2320--2320
+Underfull \hbox (badness 10000) in paragraph at lines 2299--2299
 []|\T1/cmr/m/n/10 Tabelle oh-ne \T1/cmtt/m/n/10 <caption>
  []
 
 
-Underfull \hbox (badness 7796) in paragraph at lines 2324--2324
+Underfull \hbox (badness 7796) in paragraph at lines 2303--2303
 []|\T1/cmr/m/n/10 Icon-Button oh-ne Na-men
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2334--2334
+Underfull \hbox (badness 10000) in paragraph at lines 2313--2313
 []|\T1/cmr/m/n/10 Modal: Fo-kus-über-nah-me
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2335--2335
+Underfull \hbox (badness 10000) in paragraph at lines 2314--2314
 []|\T1/cmr/m/n/10 Dialog oh-ne
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2346--2346
+Underfull \hbox (badness 10000) in paragraph at lines 2325--2325
 []|\T1/cmr/m/n/10 Button Kon-trast nied-rig
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2349--2349
+Underfull \hbox (badness 10000) in paragraph at lines 2328--2328
 []|\T1/cmr/m/n/10 Button oh-ne Na-men
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2358--2358
+Underfull \hbox (badness 10000) in paragraph at lines 2337--2337
 []|\T1/cmr/m/n/10 Dropzone \T1/cmtt/m/n/10 onClick \T1/cmr/m/n/10 o.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2359--2359
+Underfull \hbox (badness 10000) in paragraph at lines 2338--2338
 []|\T1/cmr/m/n/10 Upload-Icon oh-ne
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2362--2362
+Underfull \hbox (badness 10000) in paragraph at lines 2341--2341
 []|\T1/cmr/m/n/10 Progressbar oh-ne
  []
 
 
-Underfull \hbox (badness 4726) in paragraph at lines 2363--2363
+Underfull \hbox (badness 4726) in paragraph at lines 2342--2342
 []|\T1/cmr/m/n/10 Kontrast Hil-fe-text nied-rig
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2364--2364
+Underfull \hbox (badness 10000) in paragraph at lines 2343--2343
 []|\T1/cmr/m/n/10 Button 16$\OMS/cmsy/m/n/10 ^^B$\T1/cmr/m/n/10 16px (Fi-leU-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2365--2365
+Underfull \hbox (badness 10000) in paragraph at lines 2344--2344
 []|\T1/cmr/m/n/10 Modal: Fo-kus-über-nah-me
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2366--2366
+Underfull \hbox (badness 10000) in paragraph at lines 2345--2345
 []|\T1/cmr/m/n/10 Dialog oh-ne
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2368--2368
+Underfull \hbox (badness 10000) in paragraph at lines 2347--2347
 []|\T1/cmr/m/n/10 Tabelle oh-ne \T1/cmtt/m/n/10 <caption>
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2373--2373
+Underfull \hbox (badness 10000) in paragraph at lines 2352--2352
 []|\T1/cmr/m/n/10 Detail oh-ne \T1/cmtt/m/n/10 aria-live
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2374--2374
+Underfull \hbox (badness 10000) in paragraph at lines 2353--2353
 []|\T1/cmr/m/n/10 Banner-Bild oh-ne
  []
 
 
-Underfull \hbox (badness 4726) in paragraph at lines 2381--2381
+Underfull \hbox (badness 4726) in paragraph at lines 2360--2360
 []|\T1/cmr/m/n/10 Kontrast Hil-fe-text nied-rig
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2383--2383
+Underfull \hbox (badness 10000) in paragraph at lines 2362--2362
 []|\T1/cmr/m/n/10 Accordion \T1/cmtt/m/n/10 onClick \T1/cmr/m/n/10 o.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2384--2384
+Underfull \hbox (badness 10000) in paragraph at lines 2363--2363
 []|\T1/cmr/m/n/10 Accordion oh-ne
  []
 
@@ -3482,32 +3483,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 2384--2384
 [130
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 2560--2560
+Underfull \hbox (badness 10000) in paragraph at lines 2539--2539
 []|\T1/cmr/m/n/10.95 Leichte Über-de-tek-ti-on; ho-he
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2560--2560
+Underfull \hbox (badness 10000) in paragraph at lines 2539--2539
 []|\T1/cmr/m/n/10.95 Leichte Un-ter-de-tek-ti-on; al-le
  []
 
 
-Underfull \hbox (badness 3942) in paragraph at lines 2560--2560
+Underfull \hbox (badness 3942) in paragraph at lines 2539--2539
 \T1/cmr/m/n/10.95 10 Runs bei 12288 Output-
  []
 
 
-Underfull \hbox (badness 7649) in paragraph at lines 2560--2560
+Underfull \hbox (badness 7649) in paragraph at lines 2539--2539
 \T1/cmr/m/n/10.95 Tokens; Voll-stän-dig-keit durch
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2560--2560
+Underfull \hbox (badness 10000) in paragraph at lines 2539--2539
 []|\T1/cmr/m/n/10.95 Nahe an Ground Truth;
  []
 
 
-Underfull \hbox (badness 4805) in paragraph at lines 2560--2560
+Underfull \hbox (badness 4805) in paragraph at lines 2539--2539
 \T1/cmr/m/n/10.95 1/10 Runs trun-kiert; höchs-
  []
 
@@ -3517,24 +3518,24 @@ Underfull \hbox (badness 4805) in paragraph at lines 2560--2560
 
 ]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 2566.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 2545.
 
-Underfull \hbox (badness 1028) in paragraph at lines 2568--2569
+Underfull \hbox (badness 1028) in paragraph at lines 2547--2548
 \T1/cmtt/m/n/10.95 qwen3:32b \T1/cmr/m/n/10.95 auf test-100: Run 01 ist voll-stän-dig (kei-ne Trun-ca-ti-on, 72 Report-Einträge),
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2582--2582
+Underfull \hbox (badness 10000) in paragraph at lines 2561--2561
 []|\T1/cmr/m/n/10.95 Ein Fin-ding deckt meh-re-re GT-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2582--2582
+Underfull \hbox (badness 10000) in paragraph at lines 2561--2561
 \T1/cmr/m/n/10.95 Violations ab (z.B. \T1/cmtt/m/n/10.95 llm-076\T1/cmr/m/n/10.95 :
  []
 
 
-Underfull \hbox (badness 1648) in paragraph at lines 2584--2584
+Underfull \hbox (badness 1648) in paragraph at lines 2563--2563
 []|\T1/cmr/m/n/10.95 Mögliche Pa-ra-phra-se oder Vio-la-ti-on
  []
 
@@ -3547,32 +3548,32 @@ Underfull \hbox (badness 1648) in paragraph at lines 2584--2584
 [133
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 2672--2672
+Underfull \hbox (badness 10000) in paragraph at lines 2651--2651
 []|\T1/cmr/bx/n/8 Gesamt-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2672--2672
+Underfull \hbox (badness 10000) in paragraph at lines 2651--2651
 []|\T1/cmr/bx/n/8 Min--
  []
 
 
-Overfull \hbox (3.94592pt too wide) in paragraph at lines 2672--2672
+Overfull \hbox (3.94592pt too wide) in paragraph at lines 2651--2651
 []|\T1/cmtt/m/n/8 qwen2.5-coder:14b| 
  []
 
 
-Underfull \hbox (badness 4193) in paragraph at lines 2672--2672
+Underfull \hbox (badness 4193) in paragraph at lines 2651--2651
 []|\T1/cmr/m/n/8 moderate Kon-sis-tenz; 100%
  []
 
 
-Underfull \hbox (badness 2277) in paragraph at lines 2672--2672
+Underfull \hbox (badness 2277) in paragraph at lines 2651--2651
 []|\T1/cmr/m/n/8 moderate Streu-ung; deut-lich
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2672--2672
+Underfull \hbox (badness 10000) in paragraph at lines 2651--2651
 []|\T1/cmr/m/n/8 modell-
  []
 
@@ -3581,472 +3582,472 @@ Underfull \hbox (badness 10000) in paragraph at lines 2672--2672
 [134
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 2703--2703
+Underfull \hbox (badness 10000) in paragraph at lines 2682--2682
 []|\T1/cmr/m/n/10.95 App.tsx, \T1/cmtt/m/n/10.95 <a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2703--2703
+Underfull \hbox (badness 10000) in paragraph at lines 2682--2682
 \T1/cmtt/m/n/10.95 href="#main-content^^T\T1/cmr/m/n/10.95 -Snippet
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2704--2704
+Underfull \hbox (badness 10000) in paragraph at lines 2683--2683
 []|\T1/cmr/m/n/10.95 index.html, \T1/cmtt/m/n/10.95 <html lang="de^^T
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2705--2705
+Underfull \hbox (badness 10000) in paragraph at lines 2684--2684
 []|\T1/cmr/m/n/10.95 App.tsx, be-schrei-ben-der
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2705--2705
+Underfull \hbox (badness 10000) in paragraph at lines 2684--2684
 \T1/cmtt/m/n/10.95 alt="Company Logo" \T1/cmr/m/n/10.95 vor-ge-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2706--2706
+Underfull \hbox (badness 10000) in paragraph at lines 2685--2685
 []|\T1/cmr/m/n/10.95 App.tsx, \T1/cmtt/m/n/10.95 alt=
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2706--2706
+Underfull \hbox (badness 10000) in paragraph at lines 2685--2685
 \T1/cmtt/m/n/10.95 role="presentation" \T1/cmr/m/n/10.95 kor-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2707--2707
+Underfull \hbox (badness 10000) in paragraph at lines 2686--2686
 []|\T1/cmr/m/n/10.95 App.tsx, \T1/cmtt/m/n/10.95 aria-label="Menü
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2709--2709
+Underfull \hbox (badness 10000) in paragraph at lines 2688--2688
 []|\T1/cmr/m/n/10.95 App.tsx, \T1/cmtt/m/n/10.95 href=/help" \T1/cmr/m/n/10.95 mit
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2711--2711
+Underfull \hbox (badness 10000) in paragraph at lines 2690--2690
 []|\T1/cmr/m/n/10.95 App.tsx,
  []
 
 
-Overfull \hbox (4.78969pt too wide) in paragraph at lines 2711--2711
+Overfull \hbox (4.78969pt too wide) in paragraph at lines 2690--2690
 \T1/cmtt/m/n/10.95 aria-label="Hauptnavigation"| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2712--2712
+Underfull \hbox (badness 10000) in paragraph at lines 2691--2691
 []|\T1/cmr/m/n/10.95 App.tsx, vollst. \T1/cmtt/m/n/10.95 onKeyDown\T1/cmr/m/n/10.95 -
  []
 
 
-Underfull \hbox (badness 8019) in paragraph at lines 2714--2714
+Underfull \hbox (badness 8019) in paragraph at lines 2693--2693
 []|\T1/cmr/m/n/10.95 Dashboard.tsx, be-schrei-ben-der
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2715--2715
+Underfull \hbox (badness 10000) in paragraph at lines 2694--2694
 []|\T1/cmr/m/n/10.95 Dashboard.tsx, [][]-Fix mit
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2715--2715
+Underfull \hbox (badness 10000) in paragraph at lines 2694--2694
 [][]\T1/cmr/m/n/10.95 -konformem Hex-
  []
 
 
-Underfull \hbox (badness 7540) in paragraph at lines 2717--2717
+Underfull \hbox (badness 7540) in paragraph at lines 2696--2696
 []|\T1/cmr/m/n/10.95 Dashboard.tsx, \T1/cmtt/m/n/10.95 onKeyDown \T1/cmr/m/n/10.95 +
  []
 
 
-Underfull \hbox (badness 1460) in paragraph at lines 2719--2719
+Underfull \hbox (badness 1460) in paragraph at lines 2698--2698
 []|\T1/cmr/m/n/10.95 Dashboard.tsx, in-halts-be-schrei-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2720--2720
+Underfull \hbox (badness 10000) in paragraph at lines 2699--2699
 []|\T1/cmr/m/n/10.95 Tabelle oh-ne \T1/cmtt/m/n/10.95 <caption>
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2722--2722
+Underfull \hbox (badness 10000) in paragraph at lines 2701--2701
 []|\T1/cmr/m/n/10.95 Status nur durch Far-be
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2722--2722
+Underfull \hbox (badness 10000) in paragraph at lines 2701--2701
 []|\T1/cmr/m/n/10.95 Dashboard.tsx, Icon +
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2722--2722
+Underfull \hbox (badness 10000) in paragraph at lines 2701--2701
 \T1/cmtt/m/n/10.95 aria-label \T1/cmr/m/n/10.95 zu-sätz-lich zu
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2723--2723
+Underfull \hbox (badness 10000) in paragraph at lines 2702--2702
 []|\T1/cmr/m/n/10.95 UserProfile.tsx,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2728--2728
+Underfull \hbox (badness 10000) in paragraph at lines 2707--2707
 []|\T1/cmr/m/n/10.95 Fehlermeldung nicht ver-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2729--2729
+Underfull \hbox (badness 10000) in paragraph at lines 2708--2708
 []|\T1/cmr/m/n/10.95 Button Kon-trast nied-rig
  []
 
 
-Underfull \hbox (badness 4492) in paragraph at lines 2730--2730
+Underfull \hbox (badness 4492) in paragraph at lines 2709--2709
 []|\T1/cmtt/m/n/10.95 outline: none \T1/cmr/m/n/10.95 auf But-ton
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2731--2731
+Underfull \hbox (badness 10000) in paragraph at lines 2710--2710
 []|\T1/cmr/m/n/10.95 Statusmeldung oh-ne
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2731--2731
+Underfull \hbox (badness 10000) in paragraph at lines 2710--2710
 []|\T1/cmr/m/n/10.95 UserProfile.tsx,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2731--2731
+Underfull \hbox (badness 10000) in paragraph at lines 2710--2710
 \T1/cmtt/m/n/10.95 aria-live="polite" \T1/cmr/m/n/10.95 auf
  []
 
 
-Underfull \hbox (badness 2205) in paragraph at lines 2732--2732
+Underfull \hbox (badness 2205) in paragraph at lines 2711--2711
 []|\T1/cmr/m/n/10.95 UserProfile.tsx, ein-deu-ti-ge \T1/cmtt/m/n/10.95 id\T1/cmr/m/n/10.95 -
  []
 
 
-Underfull \hbox (badness 2096) in paragraph at lines 2733--2733
+Underfull \hbox (badness 2096) in paragraph at lines 2712--2712
 []|\T1/cmr/m/n/10.95 DataTable.tsx, vollst. Hand-ler
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2735--2735
+Underfull \hbox (badness 10000) in paragraph at lines 2714--2714
 []|\T1/cmr/m/n/10.95 DataTable.tsx, \T1/cmtt/m/n/10.95 <cap-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2735--2735
+Underfull \hbox (badness 10000) in paragraph at lines 2714--2714
 \T1/cmtt/m/n/10.95 tion>Daten-tabelle</cap-tion>
  []
 
 
-Underfull \hbox (badness 1308) in paragraph at lines 2738--2738
+Underfull \hbox (badness 1308) in paragraph at lines 2717--2717
 []|\T1/cmr/m/n/10.95 DataTable.tsx, Icon-Symbol +
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2739--2739
+Underfull \hbox (badness 10000) in paragraph at lines 2718--2718
 []|\T1/cmr/m/n/10.95 Icon-Button oh-ne Na-men
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2740--2740
+Underfull \hbox (badness 10000) in paragraph at lines 2719--2719
 []|\T1/cmr/m/n/10.95 DataTable.tsx, \T1/cmtt/m/n/10.95 onKeyDown \T1/cmr/m/n/10.95 +
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2743--2743
+Underfull \hbox (badness 10000) in paragraph at lines 2722--2722
 []|\T1/cmr/m/n/10.95 Notifications.tsx, vollst.
  []
 
 
-Underfull \hbox (badness 2096) in paragraph at lines 2745--2745
+Underfull \hbox (badness 2096) in paragraph at lines 2724--2724
 []|\T1/cmr/m/n/10.95 Notifications.tsx, [][]-Fix mit
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2746--2746
+Underfull \hbox (badness 10000) in paragraph at lines 2725--2725
 []|\T1/cmr/m/n/10.95 Notifications.tsx, Quer-ver-weis
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2747--2747
+Underfull \hbox (badness 10000) in paragraph at lines 2726--2726
 []|\T1/cmr/m/n/10.95 Notifications.tsx, Quer-ver-weis
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2749--2749
+Underfull \hbox (badness 10000) in paragraph at lines 2728--2728
 []|\T1/cmr/m/n/10.95 Notifications.tsx, Fokus-Trap-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2750--2750
+Underfull \hbox (badness 10000) in paragraph at lines 2729--2729
 []|\T1/cmr/m/n/10.95 Dialog oh-ne
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2750--2750
+Underfull \hbox (badness 10000) in paragraph at lines 2729--2729
 []|\T1/cmr/m/n/10.95 Notifications.tsx,
  []
 
 
-Underfull \hbox (badness 3954) in paragraph at lines 2750--2750
+Underfull \hbox (badness 3954) in paragraph at lines 2729--2729
 \T1/cmtt/m/n/10.95 aria-labelledby \T1/cmr/m/n/10.95 auf Dialog-
  []
 
 
-Underfull \hbox (badness 6204) in paragraph at lines 2752--2752
+Underfull \hbox (badness 6204) in paragraph at lines 2731--2731
 []|\T1/cmr/m/n/10.95 Notifications.tsx, \T1/cmtt/m/n/10.95 aria-hidden
  []
 
 
-Underfull \hbox (badness 7379) in paragraph at lines 2754--2754
+Underfull \hbox (badness 7379) in paragraph at lines 2733--2733
 []|\T1/cmr/m/n/10.95 Settings.tsx, Quer-ver-weis auf
  []
 
 
-Underfull \hbox (badness 7379) in paragraph at lines 2755--2755
+Underfull \hbox (badness 7379) in paragraph at lines 2734--2734
 []|\T1/cmr/m/n/10.95 Settings.tsx, Quer-ver-weis auf
  []
 
 
-Underfull \hbox (badness 4886) in paragraph at lines 2756--2756
+Underfull \hbox (badness 4886) in paragraph at lines 2735--2735
 []|\T1/cmr/m/n/10.95 Settings.tsx, \T1/cmtt/m/n/10.95 aria-label="Be-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2756--2756
+Underfull \hbox (badness 10000) in paragraph at lines 2735--2735
 \T1/cmtt/m/n/10.95 nach-rich-ti-gun-gen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2757--2757
+Underfull \hbox (badness 10000) in paragraph at lines 2736--2736
 []|\T1/cmr/m/n/10.95 Settings.tsx, \T1/cmtt/m/n/10.95 <label
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2759--2759
+Underfull \hbox (badness 10000) in paragraph at lines 2738--2738
 []|\T1/cmr/m/n/10.95 Settings.tsx, \T1/cmtt/m/n/10.95 <label
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2759--2759
+Underfull \hbox (badness 10000) in paragraph at lines 2738--2738
 \T1/cmtt/m/n/10.95 for="pw1^^TNeues
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2760--2760
+Underfull \hbox (badness 10000) in paragraph at lines 2739--2739
 []|\T1/cmr/m/n/10.95 Settings.tsx, \T1/cmtt/m/n/10.95 <label
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2760--2760
+Underfull \hbox (badness 10000) in paragraph at lines 2739--2739
 \T1/cmtt/m/n/10.95 for="pw2^^TPasswort
  []
 
 
-Underfull \hbox (badness 1448) in paragraph at lines 2762--2762
+Underfull \hbox (badness 1448) in paragraph at lines 2741--2741
 []|\T1/cmr/m/n/10.95 Checkbox oh-ne La-bel (Set-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2762--2762
+Underfull \hbox (badness 10000) in paragraph at lines 2741--2741
 []|\T1/cmr/m/n/10.95 Settings.tsx, \T1/cmtt/m/n/10.95 <label> \T1/cmr/m/n/10.95 mit
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2763--2763
+Underfull \hbox (badness 10000) in paragraph at lines 2742--2742
 []|\T1/cmr/m/n/10.95 SearchResults.tsx, \T1/cmtt/m/n/10.95 <label
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2764--2764
+Underfull \hbox (badness 10000) in paragraph at lines 2743--2743
 []|\T1/cmr/m/n/10.95 SearchResults.tsx,
  []
 
 
-Underfull \hbox (badness 3525) in paragraph at lines 2767--2767
+Underfull \hbox (badness 3525) in paragraph at lines 2746--2746
 []|\T1/cmr/m/n/10.95 SearchResults.tsx, Quer-ver-weis
  []
 
 
-Underfull \hbox (badness 3525) in paragraph at lines 2768--2768
+Underfull \hbox (badness 3525) in paragraph at lines 2747--2747
 []|\T1/cmr/m/n/10.95 SearchResults.tsx, Quer-ver-weis
  []
 
 
-Underfull \hbox (badness 3525) in paragraph at lines 2769--2769
+Underfull \hbox (badness 3525) in paragraph at lines 2748--2748
 []|\T1/cmr/m/n/10.95 SearchResults.tsx, Quer-ver-weis
  []
 
 
-Underfull \hbox (badness 2521) in paragraph at lines 2772--2772
+Underfull \hbox (badness 2521) in paragraph at lines 2751--2751
 []|\T1/cmr/m/n/10.95 Paginierung oh-ne \T1/cmtt/m/n/10.95 tabIndex
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2772--2772
+Underfull \hbox (badness 10000) in paragraph at lines 2751--2751
 []|\T1/cmr/m/n/10.95 SearchResults.tsx,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2772--2772
+Underfull \hbox (badness 10000) in paragraph at lines 2751--2751
 \T1/cmtt/m/n/10.95 tabIndex={0} \T1/cmr/m/n/10.95 +
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2773--2773
+Underfull \hbox (badness 10000) in paragraph at lines 2752--2752
 []|\T1/cmr/m/n/10.95 Dropzone \T1/cmtt/m/n/10.95 onClick \T1/cmr/m/n/10.95 o.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2773--2773
+Underfull \hbox (badness 10000) in paragraph at lines 2752--2752
 []|\T1/cmr/m/n/10.95 FileUpload.tsx, vollst.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2774--2774
+Underfull \hbox (badness 10000) in paragraph at lines 2753--2753
 []|\T1/cmr/m/n/10.95 FileUpload.tsx, \T1/cmtt/m/n/10.95 alt="Datei
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2776--2776
+Underfull \hbox (badness 10000) in paragraph at lines 2755--2755
 []|\T1/cmr/m/n/10.95 FileUpload.tsx,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2776--2776
+Underfull \hbox (badness 10000) in paragraph at lines 2755--2755
 \T1/cmtt/m/n/10.95 aria-label="Datei {name}
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2777--2777
+Underfull \hbox (badness 10000) in paragraph at lines 2756--2756
 []|\T1/cmr/m/n/10.95 Progressbar oh-ne
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2777--2777
+Underfull \hbox (badness 10000) in paragraph at lines 2756--2756
 []|\T1/cmr/m/n/10.95 FileUpload.tsx,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2777--2777
+Underfull \hbox (badness 10000) in paragraph at lines 2756--2756
 \T1/cmtt/m/n/10.95 aria-valuenow={progress}
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2778--2778
+Underfull \hbox (badness 10000) in paragraph at lines 2757--2757
 []|\T1/cmr/m/n/10.95 Kontrast Hil-fe-text nied-rig
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2778--2778
+Underfull \hbox (badness 10000) in paragraph at lines 2757--2757
 []|\T1/cmr/m/n/10.95 FileUpload.tsx, [][]-Fix für
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2779--2779
+Underfull \hbox (badness 10000) in paragraph at lines 2758--2758
 []|\T1/cmr/m/n/10.95 Button 16$\OMS/cmsy/m/n/10.95 ^^B$\T1/cmr/m/n/10.95 16px (Fi-leU-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2779--2779
+Underfull \hbox (badness 10000) in paragraph at lines 2758--2758
 []|\T1/cmr/m/n/10.95 styles.css, \T1/cmtt/m/n/10.95 .btn-upload \T1/cmr/m/n/10.95 auf
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2781--2781
+Underfull \hbox (badness 10000) in paragraph at lines 2760--2760
 []|\T1/cmr/m/n/10.95 Dialog oh-ne
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2781--2781
+Underfull \hbox (badness 10000) in paragraph at lines 2760--2760
 []|\T1/cmr/m/n/10.95 FileUpload.tsx,
  []
 
 
-Underfull \hbox (badness 1033) in paragraph at lines 2782--2782
+Underfull \hbox (badness 1033) in paragraph at lines 2761--2761
 []|\T1/cmr/m/n/10.95 FileUpload.tsx, \T1/cmtt/m/n/10.95 outline: none
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2783--2783
+Underfull \hbox (badness 10000) in paragraph at lines 2762--2762
 []|\T1/cmr/m/n/10.95 Tabelle oh-ne \T1/cmtt/m/n/10.95 <caption>
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2788--2788
+Underfull \hbox (badness 10000) in paragraph at lines 2767--2767
 []|\T1/cmr/m/n/10.95 Calendar.tsx,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2788--2788
+Underfull \hbox (badness 10000) in paragraph at lines 2767--2767
 \T1/cmtt/m/n/10.95 aria-live="polite" \T1/cmr/m/n/10.95 auf
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2789--2789
+Underfull \hbox (badness 10000) in paragraph at lines 2768--2768
 []|\T1/cmr/m/n/10.95 Calendar.tsx,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2792--2792
+Underfull \hbox (badness 10000) in paragraph at lines 2771--2771
 []|\T1/cmr/m/n/10.95 Chat.tsx, \T1/cmtt/m/n/10.95 <la-bel
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2792--2792
+Underfull \hbox (badness 10000) in paragraph at lines 2771--2771
 \T1/cmtt/m/n/10.95 for="chat-in-put^^TNa-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2793--2793
+Underfull \hbox (badness 10000) in paragraph at lines 2772--2772
 []|\T1/cmr/m/n/10.95 Chat.tsx,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2793--2793
+Underfull \hbox (badness 10000) in paragraph at lines 2772--2772
 \T1/cmtt/m/n/10.95 aria-label="Nachricht
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2794--2794
+Underfull \hbox (badness 10000) in paragraph at lines 2773--2773
 []|\T1/cmr/m/n/10.95 Chat.tsx, vollst. \T1/cmtt/m/n/10.95 onKeyDown\T1/cmr/m/n/10.95 -
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2796--2796
+Underfull \hbox (badness 10000) in paragraph at lines 2775--2775
 []|\T1/cmr/m/n/10.95 Kontrast Hil-fe-text nied-rig
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2798--2798
+Underfull \hbox (badness 10000) in paragraph at lines 2777--2777
 []|\T1/cmr/m/n/10.95 Accordion \T1/cmtt/m/n/10.95 onClick \T1/cmr/m/n/10.95 o.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2798--2798
+Underfull \hbox (badness 10000) in paragraph at lines 2777--2777
 []|\T1/cmr/m/n/10.95 HelpCenter.tsx, vollst.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2799--2799
+Underfull \hbox (badness 10000) in paragraph at lines 2778--2778
 []|\T1/cmr/m/n/10.95 Accordion oh-ne
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2800--2800
+Underfull \hbox (badness 10000) in paragraph at lines 2779--2779
 []|\T1/cmr/m/n/10.95 HelpCenter.tsx,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2801--2801
+Underfull \hbox (badness 10000) in paragraph at lines 2780--2780
 []|\T1/cmr/m/n/10.95 HelpCenter.tsx, [][]-Fix mit
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2802--2802
+Underfull \hbox (badness 10000) in paragraph at lines 2781--2781
 []|\T1/cmr/m/n/10.95 HelpCenter.tsx, \T1/cmtt/m/n/10.95 aria-hidden
  []
 
@@ -4055,8 +4056,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 2802--2802
 ] [136] [137] [138] [139] [140]
 
 [141]
-Package pgfplots info on input line 2834: Using 'lua backend=false' for axis: x coord trafo unsupported.
-Package pgfplots info on input line 2854: Using 'lua backend=false' for axis: x coord trafo unsupported.
+Package pgfplots info on input line 2813: Using 'lua backend=false' for axis: x coord trafo unsupported.
+Package pgfplots info on input line 2833: Using 'lua backend=false' for axis: x coord trafo unsupported.
 
 
 [142
@@ -4066,59 +4067,59 @@ Package pgfplots info on input line 2854: Using 'lua backend=false' for axis: x 
 [143
 
 ]
-
-[144
-
-]
-Underfull \hbox (badness 1226) in paragraph at lines 2994--2995
+Underfull \hbox (badness 1226) in paragraph at lines 2908--2909
 \T1/cmr/m/it/10.95 Anmerkung: \T1/cmr/m/n/10.95 Tei-le der test-100-Suite ver-wen-den die-sel-ben bzw. struk-tu-rell sehr ähn-li-che
  []
 
-<graphics/Chat-100.png, id=3823, 1444.64719pt x 407.27156pt>
+<graphics/Chat-100.png, id=3839, 1444.64719pt x 407.27156pt>
 File: graphics/Chat-100.png Graphic file (type png)
 <use graphics/Chat-100.png>
-Package pdftex.def Info: graphics/Chat-100.png  used on input line 2998.
+Package pdftex.def Info: graphics/Chat-100.png  used on input line 2912.
 (pdftex.def)             Requested size: 432.48051pt x 121.92139pt.
-<graphics/Suche-100.png, id=3824, 1442.38875pt x 447.92343pt>
+<graphics/Suche-100.png, id=3840, 1442.38875pt x 447.92343pt>
 File: graphics/Suche-100.png Graphic file (type png)
 <use graphics/Suche-100.png>
-Package pdftex.def Info: graphics/Suche-100.png  used on input line 3005.
+Package pdftex.def Info: graphics/Suche-100.png  used on input line 2919.
 (pdftex.def)             Requested size: 432.48051pt x 134.30287pt.
-<graphics/Einstellungen-100.png, id=3825, 1444.64719pt x 356.83313pt>
+<graphics/Einstellungen-100.png, id=3841, 1444.64719pt x 356.83313pt>
 File: graphics/Einstellungen-100.png Graphic file (type png)
 <use graphics/Einstellungen-100.png>
-Package pdftex.def Info: graphics/Einstellungen-100.png  used on input line 3012.
+Package pdftex.def Info: graphics/Einstellungen-100.png  used on input line 2926.
 (pdftex.def)             Requested size: 432.48051pt x 106.82207pt.
+
+
+[144
+
+ <./graphics/Chat-100.png> <./graphics/Suche-100.png> <./graphics/Einstellungen-100.png>]
+<graphics/Kalender-100.png, id=3850, 1444.64719pt x 420.06938pt>
+File: graphics/Kalender-100.png Graphic file (type png)
+<use graphics/Kalender-100.png>
+Package pdftex.def Info: graphics/Kalender-100.png  used on input line 2935.
+(pdftex.def)             Requested size: 432.48051pt x 125.75258pt.
+<graphics/Hilfe-Center-100.png, id=3851, 1444.64719pt x 368.1253pt>
+File: graphics/Hilfe-Center-100.png Graphic file (type png)
+<use graphics/Hilfe-Center-100.png>
+Package pdftex.def Info: graphics/Hilfe-Center-100.png  used on input line 2942.
+(pdftex.def)             Requested size: 432.48051pt x 110.20251pt.
+<graphics/DateiUplaod-100.png, id=3852, 1444.64719pt x 338.01282pt>
+File: graphics/DateiUplaod-100.png Graphic file (type png)
+<use graphics/DateiUplaod-100.png>
+Package pdftex.def Info: graphics/DateiUplaod-100.png  used on input line 2949.
+(pdftex.def)             Requested size: 432.48051pt x 101.18799pt.
 
 
 [145
 
- <./graphics/Chat-100.png> <./graphics/Suche-100.png> <./graphics/Einstellungen-100.png>]
-<graphics/Kalender-100.png, id=3834, 1444.64719pt x 420.06938pt>
-File: graphics/Kalender-100.png Graphic file (type png)
-<use graphics/Kalender-100.png>
-Package pdftex.def Info: graphics/Kalender-100.png  used on input line 3021.
-(pdftex.def)             Requested size: 432.48051pt x 125.75258pt.
-<graphics/Hilfe-Center-100.png, id=3835, 1444.64719pt x 368.1253pt>
-File: graphics/Hilfe-Center-100.png Graphic file (type png)
-<use graphics/Hilfe-Center-100.png>
-Package pdftex.def Info: graphics/Hilfe-Center-100.png  used on input line 3028.
-(pdftex.def)             Requested size: 432.48051pt x 110.20251pt.
-<graphics/DateiUplaod-100.png, id=3836, 1444.64719pt x 338.01282pt>
-File: graphics/DateiUplaod-100.png Graphic file (type png)
-<use graphics/DateiUplaod-100.png>
-Package pdftex.def Info: graphics/DateiUplaod-100.png  used on input line 3035.
-(pdftex.def)             Requested size: 432.48051pt x 101.18799pt.
-
-
-[146
-
  <./graphics/Kalender-100.png> <./graphics/Hilfe-Center-100.png> <./graphics/DateiUplaod-100.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 3063--3063
+Underfull \hbox (badness 10000) in paragraph at lines 2977--2977
 []|[][]\T1/cmr/m/n/10.95 -02-Konformität (stren-ge
  []
 
 
+
+[146
+
+]
 
 [147
 
@@ -4127,71 +4128,76 @@ Underfull \hbox (badness 10000) in paragraph at lines 3063--3063
 [148
 
 ]
+Package pgfplots info on input line 3098: Using 'lua backend=false' for axis: x coord trafo unsupported.
+
 
 [149
 
 ]
-Package pgfplots info on input line 3184: Using 'lua backend=false' for axis: x coord trafo unsupported.
+Package pgfplots info on input line 3139: Using 'lua backend=false' for axis: stacked plots unsupported (yet).
 
 
 [150
 
 ]
-Package pgfplots info on input line 3225: Using 'lua backend=false' for axis: stacked plots unsupported (yet).
+Package pgfplots info on input line 3189: Using 'lua backend=false' for axis: x coord trafo unsupported.
 
 
 [151
 
 ]
-Package pgfplots info on input line 3275: Using 'lua backend=false' for axis: x coord trafo unsupported.
-
 
 [152
 
 ]
+Package pgfplots info on input line 3274: Using 'lua backend=false' for axis: stacked plots unsupported (yet).
+Package pgfplots info on input line 3274: Using 'lua backend=false' for axis: x coord trafo unsupported.
+
 
 [153
 
 ]
-Package pgfplots info on input line 3360: Using 'lua backend=false' for axis: stacked plots unsupported (yet).
-Package pgfplots info on input line 3360: Using 'lua backend=false' for axis: x coord trafo unsupported.
+Underfull \hbox (badness 4391) in paragraph at lines 3343--3343
+[]|\T1/cmr/m/n/10 fehlendes \T1/cmtt/m/n/10 alt\T1/cmr/m/n/10 , \T1/cmtt/m/n/10 onClick \T1/cmr/m/n/10 oh-
+ []
+
+
+Underfull \hbox (badness 2057) in paragraph at lines 3343--3343
+\T1/cmr/m/n/10 ne Key-board, \T1/cmtt/m/n/10 <label> \T1/cmr/m/n/10 oh-ne
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3343--3343
+[]|\T1/cmr/m/n/10 semantisch-kontextuelle Mus-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3343--3343
+\T1/cmr/m/n/10 ter, [][]-Strukturmängel
+ []
+
+
+Underfull \hbox (badness 1024) in paragraph at lines 3372--3372
+[]|\T1/cmr/m/n/10.95 Fehlendes \T1/cmtt/m/n/10.95 alt\T1/cmr/m/n/10.95 -Attribut bei \T1/cmtt/m/n/10.95 <img> \T1/cmr/m/n/10.95 /
+ []
+
+
+Underfull \hbox (badness 6428) in paragraph at lines 3372--3372
+[]|\T1/cmr/m/n/10.95 Fehlender sicht-ba-rer Fo-ku-sin-di-ka-tor
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3372--3372
+[]|\T1/cmtt/m/n/10.95 <div> \T1/cmr/m/n/10.95 mit \T1/cmtt/m/n/10.95 onClick \T1/cmr/m/n/10.95 oh-ne
+ []
+
 
 
 [154
 
 ]
-Underfull \hbox (badness 4391) in paragraph at lines 3429--3429
-[]|\T1/cmr/m/n/10 fehlendes \T1/cmtt/m/n/10 alt\T1/cmr/m/n/10 , \T1/cmtt/m/n/10 onClick \T1/cmr/m/n/10 oh-
- []
-
-
-Underfull \hbox (badness 2057) in paragraph at lines 3429--3429
-\T1/cmr/m/n/10 ne Key-board, \T1/cmtt/m/n/10 <label> \T1/cmr/m/n/10 oh-ne
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3429--3429
-[]|\T1/cmr/m/n/10 semantisch-kontextuelle Mus-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3429--3429
-\T1/cmr/m/n/10 ter, [][]-Strukturmängel
- []
-
-
-Underfull \hbox (badness 1024) in paragraph at lines 3458--3458
-[]|\T1/cmr/m/n/10.95 Fehlendes \T1/cmtt/m/n/10.95 alt\T1/cmr/m/n/10.95 -Attribut bei \T1/cmtt/m/n/10.95 <img> \T1/cmr/m/n/10.95 /
- []
-
-
-Underfull \hbox (badness 6428) in paragraph at lines 3458--3458
-[]|\T1/cmr/m/n/10.95 Fehlender sicht-ba-rer Fo-ku-sin-di-ka-tor
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3458--3458
-[]|\T1/cmtt/m/n/10.95 <div> \T1/cmr/m/n/10.95 mit \T1/cmtt/m/n/10.95 onClick \T1/cmr/m/n/10.95 oh-ne
+Overfull \hbox (67.27692pt too wide) in paragraph at lines 3380--3381
+\T1/cmr/bx/n/10.95 Konfiguration: \T1/cmtt/m/n/10.95 OLLAMA_NUM_CTX \T1/cmr/m/n/10.95 = 65536; \T1/cmtt/m/n/10.95 OLLAMA_NUM_PREDICT \T1/cmr/m/n/10.95 = 24576; \T1/cmtt/m/n/10.95 LLM_DETECT_NUM_PREDICT \T1/cmr/m/n/10.95 = 4096;
  []
 
 
@@ -4199,11 +4205,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 3458--3458
 [155
 
 ]
-Overfull \hbox (67.27692pt too wide) in paragraph at lines 3466--3467
-\T1/cmr/bx/n/10.95 Konfiguration: \T1/cmtt/m/n/10.95 OLLAMA_NUM_CTX \T1/cmr/m/n/10.95 = 65536; \T1/cmtt/m/n/10.95 OLLAMA_NUM_PREDICT \T1/cmr/m/n/10.95 = 24576; \T1/cmtt/m/n/10.95 LLM_DETECT_NUM_PREDICT \T1/cmr/m/n/10.95 = 4096;
- []
-
-
 
 [156
 
@@ -4211,20 +4212,18 @@ Overfull \hbox (67.27692pt too wide) in paragraph at lines 3466--3467
 
 [157
 
-]
+])
 
 [158
 
-])
+]
 
 [159
 
-]
-
-[160
-
 
 ]
+
+[160]
 
 [161]
 
@@ -4235,8 +4234,6 @@ Overfull \hbox (67.27692pt too wide) in paragraph at lines 3466--3467
 [164]
 
 [165]
-
-[166]
 
 Package biblatex Warning: Field 'extrayear' is deprecated.
 (biblatex)                Please use 'extradate' instead.
@@ -4254,7 +4251,7 @@ Underfull \hbox (badness 1024) in paragraph at lines 82--82
 
 
 
-[167]
+[166]
 
 Package biblatex Warning: No driver for 'legislation'.
 (biblatex)                Using fallback driver on input line 82.
@@ -4297,14 +4294,14 @@ LaTeX Warning: Empty bibliography on input line 82.
 
 
 
-[168] (includes/extra/erklaerung_ki.tex
+[167] (includes/extra/erklaerung_ki.tex
 Underfull \hbox (badness 2103) in paragraph at lines 131--131
 []\T1/cmr/m/n/10.95 mich ak-tiv über die Leis-tungs-fä-hig-keit und Be-schrän-kun-gen der oben ge-nann-ten
  []
 
 
 
-[169
+[168
 
 
 
@@ -4330,11 +4327,11 @@ Underfull \hbox (badness 1308) in paragraph at lines 131--131
 
 ) (template/_dhbw_erklaerung.tex
 
-[170
+[169
 
 ])
 
-[171
+[170
 
 ] (latex-vorlage.aux)
  ***********
@@ -4352,24 +4349,24 @@ Package logreq Info: Writing requests to 'latex-vorlage.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54713 strings out of 473523
- 1247523 string characters out of 5714631
- 2632562 words of memory out of 5000000
+ 54716 strings out of 473523
+ 1247536 string characters out of 5714631
+ 2632639 words of memory out of 5000000
  75837 multiletter control sequences out of 15000+600000
  592850 words of font info for 113 fonts, out of 8000000 for 9000
  1146 hyphenation exceptions out of 8191
  108i,19n,127p,10962b,2447s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-pdfTeX warning (dest): name{Hfootnote.838} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.844} has been referenced but does not exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{Hfootnote.801} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.807} has been referenced but does not exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{Hfootnote.762} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.768} has been referenced but does not exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{Hfootnote.551} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.557} has been referenced but does not exist, replaced by a fixed one
 
 
 pdfTeX warning (dest): name{Hfootnote.474} has been referenced but does not exist, replaced by a fixed one
@@ -4377,13 +4374,10 @@ pdfTeX warning (dest): name{Hfootnote.474} has been referenced but does not exis
 
 pdfTeX warning (dest): name{Hfootnote.389} has been referenced but does not exist, replaced by a fixed one
 
-
-pdfTeX warning (dest): name{Hfootnote.164} has been referenced but does not exist, replaced by a fixed one
-
  <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcsx1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on latex-vorlage.pdf (181 pages, 2807887 bytes).
+Output written on latex-vorlage.pdf (180 pages, 2813132 bytes).
 PDF statistics:
- 6468 PDF objects out of 7423 (max. 8388607)
- 1248 named destinations out of 1440 (max. 500000)
- 1036 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6481 PDF objects out of 7423 (max. 8388607)
+ 1251 named destinations out of 1440 (max. 500000)
+ 1028 words of extra memory for PDF output out of 10000 (max. 10000000)
 

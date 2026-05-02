@@ -26,7 +26,7 @@
 \hline
 \hyperref[app:block_test50]{test-50-Block} & \hyperref[app:accessibility_verstoesse_50]{Violations-Katalog}, \hyperref[app:erkennungsrate_poc_50]{Erkennungsrate}, \hyperref[app:recall_matrix_50]{Recall-Matrix}, \hyperref[app:rohdaten_50]{Rohdaten}, \hyperref[app:modell_summary_50]{Modellvergleich}, \hyperref[app:token_economy_50]{Token-Nutzung}, \hyperref[app:effizienz_metriken_50]{Effizienz}, \hyperref[app:overdetection_50]{Über-Detektion}, \hyperref[app:precision_f1_50]{Precision/F1 je Run}, \hyperref[app:detektor_konsistenz_50]{Konsistenz}, \hyperref[app:empfehlungsqualitaet_50]{Empfehlungsqualität}, \hyperref[app:screenshots_test50]{Ansichten der Testsuite} \\
 \hline
-\hyperref[app:block_test100]{test-100-Block} & \hyperref[app:accessibility_verstoesse_100]{Violations-Katalog}, \hyperref[app:erkennungsrate_poc_100]{Erkennungsrate}, \hyperref[app:recall_matrix_100]{Recall-Matrix}, \hyperref[app:rohdaten_100]{Rohdaten}, \hyperref[app:modell_summary_100]{Modellvergleich}, \hyperref[app:token_economy_100]{Token-Nutzung}, \hyperref[app:effizienz_metriken_100]{Effizienz}, \hyperref[app:overdetection_100]{Über-Detektion}, \hyperref[app:stichprobe_plausibilitaet]{Stichproben-Plausibilisierung}, \hyperref[app:precision_f1_100]{Precision/F1 je Run}, \hyperref[app:detektor_konsistenz_100]{Konsistenz}, \hyperref[app:empfehlungsqualitaet_100]{Empfehlungsqualität}, \hyperref[app:graph_pareto_demo]{Pareto-Diagramm}, \hyperref[app:graph_boxplot_demo]{Boxplot Laufzeiten}, \hyperref[app:graph_pipeline_demo]{Pipeline-Diagramm}, \hyperref[app:screenshots_test100]{Ansichten der Testsuite} \\
+\hyperref[app:block_test100]{test-100-Block} & \hyperref[app:accessibility_verstoesse_100]{Violations-Katalog}, \hyperref[app:erkennungsrate_poc_100]{Erkennungsrate}, \hyperref[app:recall_matrix_100]{Recall-Matrix}, \hyperref[app:rohdaten_100]{Rohdaten}, \hyperref[app:modell_summary_100]{Modellvergleich}, \hyperref[app:token_economy_100]{Token-Nutzung}, \hyperref[app:effizienz_metriken_100]{Effizienz}, \hyperref[app:overdetection_100]{Über-Detektion}, \hyperref[app:stichprobe_plausibilitaet]{Stichproben-Plausibilisierung}, \hyperref[app:precision_f1_100]{Precision/F1 je Run}, \hyperref[app:detektor_konsistenz_100]{Konsistenz}, \hyperref[app:empfehlungsqualitaet_100]{Empfehlungsqualität}, \hyperref[app:graph_pareto_demo]{Pareto-Diagramm}, \hyperref[app:graph_boxplot_demo]{Boxplot Laufzeiten}, \hyperref[app:screenshots_test100]{Ansichten der Testsuite} \\
 \hline
 \hyperref[app:block_bwec]{\ac{BWEC}-Block} & \hyperref[app:detektionsquellen_bwec]{Detektionsquellen-Übersicht}, \hyperref[app:rohdaten_bwec]{Rohdaten (maxfiles=100)}, \hyperref[app:modell_summary_bwec]{Modellvergleich (maxfiles=100)}, \hyperref[app:rohdaten_bwec500]{Rohdaten (maxfiles=500)}, \hyperref[app:modell_summary_bwec500]{Modellvergleich (maxfiles=500)} \\
 \hline
@@ -222,48 +222,27 @@ Konzeptmatrix nach Webster und Watson~\cite{WebsterWatson2002}: vollständige Ü
     text width=26mm
   }
 ]
-
-% Top node
 \node[box, text width=44mm] (client) {\ac{BWEC} (React/TS)};
-
-% Tool nodes
 \node[smallbox, below left=17mm and 28mm of client] (axe) {axe-core\\(\ac{DOM})};
 \node[smallbox, below=17mm of client] (pw) {Playwright\\(E2E)};
 \node[smallbox, below right=17mm and 28mm of client] (grep) {Code\\(grep + \ac{LLM})};
-
-% Normalizer row
 \node[norm, below=12mm of axe] (n1) {Normalizer};
 \node[norm, below=12mm of pw] (n2) {Normalizer};
 \node[norm, below=12mm of grep] (n3) {Normalizer};
-
-% Unified schema
 \node[box, text width=42mm, below=16mm of n2] (ufs) {\acf{UFS}};
-
-% Prompt / \ac{LLM} runtime
 \node[box, text width=44mm, below=11mm of ufs] (ollama) {Kombinierter Prompt\\$\rightarrow$ Lokales \ac{LLM}\\(modellkonfigurierbar)};
-
-% Todo list
 \node[box, text width=42mm, below=11mm of ollama] (todo) {Priorisierte\\To-Do-Liste};
-
-% Arrows top -> tools
 \draw[->] (client) -- (axe);
 \draw[->] (client) -- (pw);
 \draw[->] (client) -- (grep);
-
-% Arrows tools -> normalizer
 \draw[->] (axe) -- (n1);
 \draw[->] (pw) -- (n2);
 \draw[->] (grep) -- (n3);
-
-% Arrows normalizer -> UFS (separate entry points on top edge)
 \draw[->] (n1) -- ([xshift=-10mm]ufs.north);
 \draw[->] (n2) -- (ufs.north);
 \draw[->] (n3) -- ([xshift=10mm]ufs.north);
-
-% Downstream
 \draw[->] (ufs) -- (ollama);
 \draw[->] (ollama) -- (todo);
-
 \end{tikzpicture}
 \caption[Schematische Übersicht der \ac{ACE}-Pipeline]{Schematische Übersicht der im \ac{PoC} implementierten \ac{ACE}-Pipeline von der Datenerhebung bis zur priorisierten Ausgabe. Die Code-Schiene umfasst regex-basierte Pattern (grep) und die \ac{LLM}-basierte Codeanalyse. Das verwendete \ac{LLM} ist in der Pipeline bewusst abstrahiert; die konkrete Modellwahl erfolgt je Einsatzszenario (vgl. Tabelle~\ref{tab:einsatzempfehlungen}).}
 \label{fig:ace-pipeline-schema}
@@ -2920,71 +2899,6 @@ V100 & \texttt{aria-hidden} auf fokuss.\ El. (HC)   & 2 & HelpCenter.tsx, \textt
 \end{tikzpicture}
 \caption[Boxplot Laufzeiten test-100]{Boxplot der Laufzeitverteilung je Modell (test-100). \texttt{qwen3:32b} zeigt den größten oberen Whisker bis 1\,708\,s, während \texttt{qwen2.5-coder:14b} die engste \ac{IQR}-Box besitzt.}
 \label{fig:graph_boxplot_demo}
-\end{figure}
-
-\clearpage
-
-\anhang{Pipeline-Diagramm der Findings-Verarbeitung}\label{app:graph_pipeline_demo}
-
-\noindent Das folgende Diagramm zeigt den strukturierten Verarbeitungsfluss der Findings für test-100 mit \texttt{qwen3:32b} (Run~01). Es visualisiert die Zusammenführung der Tool- und \ac{LLM}-basierten Findings, deren Konsolidierung sowie die anschließende Priorisierung in Must- und Nice-to-have-Kategorien.
-
-\begin{figure}[htbp]
-\centering
-\begin{tikzpicture}[
-  >=Latex,
-  box/.style={
-    draw,
-    rounded corners=2pt,
-    align=center,
-    minimum height=1.05cm,
-    text width=4.0cm,
-    fill=gray!10,
-    inner sep=4pt
-  },
-  mainbox/.style={
-    draw,
-    rounded corners=2pt,
-    align=center,
-    minimum height=1.1cm,
-    text width=4.2cm,
-    fill=gray!18,
-    inner sep=4pt
-  },
-  flow/.style={
-    ->,
-    thick
-  },
-  lab/.style={
-    font=\small,
-    fill=white,
-    inner sep=1.5pt
-  }
-]
-
-% Top nodes
-\node[box] (tool) at (-2.5,6.5) {Tool-Findings\\(Axe 11, \ac{PW} 2, Grep 24)};
-\node[box] (llm)  at (2.5,6.5)  {\ac{LLM}-Detektor\\(94)};
-
-% Middle nodes
-\node[mainbox] (ufs)  at (0,4.5) {\ac{UFS} + Deduplikation\\(131 Roh-Findings)};
-\node[mainbox] (prio) at (0,2.5) {Priorisierungs-\ac{LLM}\\(72 Report-Items)};
-
-% Bottom nodes
-\node[box] (must) at (-2.8,0.5) {Must-have\\(59)};
-\node[box] (nice) at (2.8,0.5)  {Nice-to-have\\(13)};
-
-% Flows
-\draw[flow] (tool.south) -- node[lab, left, xshift=-2mm] {37} (ufs.north west);
-\draw[flow] (llm.south)  -- node[lab, right, xshift=2mm] {94} (ufs.north east);
-
-\draw[flow] (ufs.south) -- node[lab, right] {Merge / Konsolidierung} (prio.north);
-
-\draw[flow] (prio.south west) -- node[lab, left, xshift=-2mm] {Must} (must.north);
-\draw[flow] (prio.south east) -- node[lab, right, xshift=2mm] {Nice} (nice.north);
-
-\end{tikzpicture}
-\caption[Pipeline der Findings-Verarbeitung]{Pipeline der Findings-Verarbeitung für test-100 (\texttt{qwen3:32b}, Run~01). Die Pfeilbeschriftungen geben die jeweiligen Mengen bzw. Kategorien zwischen den Verarbeitungsschritten an.}
-\label{fig:graph_pipeline_demo}
 \end{figure}
 
 \clearpage

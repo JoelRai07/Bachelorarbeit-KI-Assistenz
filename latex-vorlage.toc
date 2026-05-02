@@ -23,7 +23,7 @@
 \contentsline {section}{\numberline {2.4}\acs {KI}-Assistenzsysteme für Softwareanalyse und Handlungsempfehlungen}{15}{section.196}%
 \contentsline {subsection}{\numberline {2.4.1}Grundlagen: Large Language Models}{15}{subsection.200}%
 \contentsline {subsection}{\numberline {2.4.2}Prompt-Engineering-Strategien}{16}{subsection.214}%
-\contentsline {subsection}{\numberline {2.4.3}\acs {RAG} und Fine-Tuning als Erweiterungsansätze}{17}{subsection.227}%
+\contentsline {subsection}{\numberline {2.4.3}\acs {RAG} und Fine-Tuning als Erweiterungsansätze}{18}{subsection.227}%
 \contentsline {subsection}{\numberline {2.4.4}Datenschutz bei \acs {KI}-gestützten Accessibility-Services}{18}{subsection.232}%
 \contentsline {chapter}{\numberline {3}Stand der Forschung}{19}{chapter.241}%
 \contentsline {section}{\numberline {3.1}Vorgehen der Literaturrecherche}{19}{section.246}%
@@ -56,64 +56,63 @@
 \contentsline {subsection}{\numberline {6.2.2}Wahl der Prompt-Engineering-Strategien}{35}{subsection.398}%
 \contentsline {subsection}{\numberline {6.2.3}Token-Budget-Steuerung}{36}{subsection.402}%
 \contentsline {section}{\numberline {6.3}Ausgabeformat: entwicklernahe To-Do-Liste}{36}{section.404}%
-\contentsline {chapter}{\numberline {7}Implementierung des Proof of Concept}{38}{chapter.407}%
-\contentsline {section}{\numberline {7.1}Technischer Rahmen und Projektstruktur}{38}{section.408}%
-\contentsline {section}{\numberline {7.2}axe-core-Modul}{38}{section.414}%
-\contentsline {section}{\numberline {7.3}Playwright-Modul}{39}{section.416}%
-\contentsline {section}{\numberline {7.4}Quellcode-Anreicherung und Anti-Pattern-Erkennung}{40}{section.418}%
-\contentsline {subsection}{\numberline {7.4.1}Anreicherung bestehender Findings}{40}{subsection.419}%
-\contentsline {subsection}{\numberline {7.4.2}Pattern-Findings}{40}{subsection.420}%
-\contentsline {section}{\numberline {7.5}\acs {LLM}-Detektor-Modul}{40}{section.421}%
-\contentsline {subsection}{\numberline {7.5.1}Abgrenzung zu grep und Nutzen der Kombination}{41}{subsection.430}%
-\contentsline {subsection}{\numberline {7.5.2}Beispielhafter Ablauf eines \acs {LLM}-Findings}{41}{subsection.431}%
-\contentsline {section}{\numberline {7.6}Prompt-Builder und System-Prompt}{42}{section.446}%
-\contentsline {subsection}{\numberline {7.6.1}System-Prompt}{42}{subsection.447}%
-\contentsline {subsection}{\numberline {7.6.2}Token-Budget-Steuerung}{43}{subsection.454}%
-\contentsline {subsection}{\numberline {7.6.3}Serialisierung}{43}{subsection.456}%
-\contentsline {section}{\numberline {7.7}Ollama-Client und Output-Formatter}{43}{section.457}%
-\contentsline {section}{\numberline {7.8}Pipeline-Orchestrierung}{44}{section.463}%
-\contentsline {section}{\numberline {7.9}Beispielabläufe am Untersuchungsobjekt}{44}{section.464}%
-\contentsline {chapter}{\numberline {8}Evaluation und Diskussion}{46}{chapter.466}%
-\contentsline {section}{\numberline {8.1}Versuchsdesign}{46}{section.467}%
-\contentsline {subsection}{\numberline {8.1.1}Testobjekte und Ground Truth}{46}{subsection.468}%
-\contentsline {subsection}{\numberline {8.1.2}Modelle, Konfiguration und Testläufe}{47}{subsection.469}%
+\contentsline {chapter}{\numberline {7}Implementierung des Proof of Concept}{37}{chapter.407}%
+\contentsline {section}{\numberline {7.1}Technischer Rahmen und Projektstruktur}{37}{section.408}%
+\contentsline {section}{\numberline {7.2}axe-core-Modul}{37}{section.414}%
+\contentsline {section}{\numberline {7.3}Playwright-Modul}{38}{section.416}%
+\contentsline {section}{\numberline {7.4}Quellcode-Anreicherung und Anti-Pattern-Erkennung}{39}{section.418}%
+\contentsline {subsection}{\numberline {7.4.1}Anreicherung bestehender Findings}{39}{subsection.419}%
+\contentsline {subsection}{\numberline {7.4.2}Pattern-Findings}{39}{subsection.420}%
+\contentsline {section}{\numberline {7.5}\acs {LLM}-Detektor-Modul}{39}{section.421}%
+\contentsline {subsection}{\numberline {7.5.1}Abgrenzung zu grep und Nutzen der Kombination}{40}{subsection.430}%
+\contentsline {subsection}{\numberline {7.5.2}Beispielhafter Ablauf eines \acs {LLM}-Findings}{40}{subsection.431}%
+\contentsline {section}{\numberline {7.6}Prompt-Builder und System-Prompt}{41}{section.446}%
+\contentsline {subsection}{\numberline {7.6.1}System-Prompt}{41}{subsection.447}%
+\contentsline {subsection}{\numberline {7.6.2}Token-Budget-Steuerung}{42}{subsection.454}%
+\contentsline {subsection}{\numberline {7.6.3}Serialisierung}{42}{subsection.456}%
+\contentsline {section}{\numberline {7.7}Ollama-Client und Output-Formatter}{42}{section.457}%
+\contentsline {section}{\numberline {7.8}Pipeline-Orchestrierung}{43}{section.463}%
+\contentsline {section}{\numberline {7.9}Beispielabläufe am Untersuchungsobjekt}{43}{section.464}%
+\contentsline {chapter}{\numberline {8}Evaluation und Diskussion}{45}{chapter.466}%
+\contentsline {section}{\numberline {8.1}Versuchsdesign}{45}{section.467}%
+\contentsline {subsection}{\numberline {8.1.1}Testobjekte und Ground Truth}{45}{subsection.468}%
+\contentsline {subsection}{\numberline {8.1.2}Modelle, Konfiguration und Testläufe}{46}{subsection.469}%
 \contentsline {subsection}{\numberline {8.1.3}Metriken und Messverfahren}{47}{subsection.477}%
-\contentsline {section}{\numberline {8.2}Ergebnisse: Detektionsqualität (Recall)}{48}{section.482}%
-\contentsline {subsection}{\numberline {8.2.1}Baseline: Tool-Pipeline ohne \acs {LLM}-Detektor}{48}{subsection.484}%
-\contentsline {subsection}{\numberline {8.2.2}Recall nach \acs {LLM}-Detektor-Augmentierung}{48}{subsection.485}%
-\contentsline {subsection}{\numberline {8.2.3}Erkennungsleistung nach Verstoßkategorie}{49}{subsection.487}%
-\contentsline {subsection}{\numberline {8.2.4}Precision und F1-Score}{49}{subsection.492}%
-\contentsline {section}{\numberline {8.3}Ergebnisse: Priorisierungsqualität}{50}{section.496}%
-\contentsline {subsection}{\numberline {8.3.1}Modellvergleich Must-have und Nice-to-have}{50}{subsection.497}%
-\contentsline {section}{\numberline {8.4}Ergebnisse: Fix-Qualität (qualitativ)}{51}{section.499}%
-\contentsline {subsection}{\numberline {8.4.1}Bewertungsmaßstab}{51}{subsection.500}%
-\contentsline {subsection}{\numberline {8.4.2}Fallbeispiele nach Modell}{52}{subsection.501}%
-\contentsline {section}{\numberline {8.5}Ergebnisse: Effizienz und Robustheit}{52}{section.502}%
-\contentsline {subsection}{\numberline {8.5.1}Laufzeit und \acs {NFA}-02-Konformität}{52}{subsection.503}%
-\contentsline {subsection}{\numberline {8.5.2}Konsistenz und Parsing-Stabilität}{53}{subsection.504}%
-\contentsline {subsection}{\numberline {8.5.3}Token-Nutzung}{53}{subsection.505}%
-\contentsline {section}{\numberline {8.6}Limitationen und Validität}{53}{section.506}%
-\contentsline {subsection}{\numberline {8.6.1}Externe Validität}{53}{subsection.507}%
-\contentsline {subsection}{\numberline {8.6.2}Interne Validität und Token-Limit-Effekt}{54}{subsection.508}%
-\contentsline {subsection}{\numberline {8.6.3}Weitere Einschränkungen}{54}{subsection.509}%
-\contentsline {section}{\numberline {8.7}Belastungsprüfung: test-50 und test-100}{54}{section.510}%
-\contentsline {subsection}{\numberline {8.7.1}Evaluation an test-50}{55}{subsection.511}%
-\contentsline {subsection}{\numberline {8.7.2}Evaluation an test-100}{56}{subsection.512}%
-\contentsline {subsection}{\numberline {8.7.3}Evaluation am \acs {BWEC}-Untersuchungsobjekt}{57}{subsection.514}%
-\contentsline {section}{\numberline {8.8}Beantwortung der Forschungsfragen}{58}{section.515}%
-\contentsline {subsection}{\numberline {8.8.1}Übergeordnete Forschungsfrage}{58}{subsection.516}%
-\contentsline {subsection}{\numberline {8.8.2}TF1: Erkennungsleistung nach Verstoßtyp}{58}{subsection.517}%
-\contentsline {subsection}{\numberline {8.8.3}TF2: Mehrwert der Kontextkombination und Ablationsanalyse}{59}{subsection.518}%
-\contentsline {section}{\numberline {8.9}Modellwahl und Einsatzempfehlungen}{60}{section.520}%
-\contentsline {chapter}{\numberline {9}Fazit}{61}{chapter.522}%
-\contentsline {section}{\numberline {9.1}Zusammenfassung der Ergebnisse}{61}{section.523}%
-\contentsline {subsection}{\numberline {9.1.1}Beitrag zur übergeordneten Forschungsfrage}{61}{subsection.524}%
-\contentsline {subsection}{\numberline {9.1.2}Erfüllung der funktionalen und nicht-funktionalen Anforderungen}{61}{subsection.525}%
-\contentsline {section}{\numberline {9.2}Kritische Reflexion}{62}{section.527}%
-\contentsline {subsection}{\numberline {9.2.1}Grenzen der externen Validität}{62}{subsection.528}%
-\contentsline {subsection}{\numberline {9.2.2}Methodische Einschränkungen}{62}{subsection.529}%
-\contentsline {section}{\numberline {9.3}Ausblick}{63}{section.533}%
-\contentsline {subsection}{\numberline {9.3.1}Kurz- und mittelfristige Weiterentwicklungen}{63}{subsection.534}%
-\contentsline {subsection}{\numberline {9.3.2}Langfristige Forschungsperspektiven}{64}{subsection.540}%
-\contentsline {chapter}{Anhang}{65}{chapter*.541}%
-\contentsline {chapter}{Literaturverzeichnis}{160}{section*.924}%
+\contentsline {section}{\numberline {8.2}Ergebnisse: Detektionsqualität (Recall)}{47}{section.482}%
+\contentsline {subsection}{\numberline {8.2.1}Baseline: Tool-Pipeline ohne \acs {LLM}-Detektor}{47}{subsection.484}%
+\contentsline {subsection}{\numberline {8.2.2}Recall nach \acs {LLM}-Detektor-Augmentierung}{47}{subsection.485}%
+\contentsline {subsection}{\numberline {8.2.3}Erkennungsleistung nach Verstoßkategorie}{48}{subsection.487}%
+\contentsline {section}{\numberline {8.3}Ergebnisse: Priorisierungsqualität}{49}{section.492}%
+\contentsline {subsection}{\numberline {8.3.1}Modellvergleich Must-have und Nice-to-have}{49}{subsection.493}%
+\contentsline {section}{\numberline {8.4}Ergebnisse: Fix-Qualität (qualitativ)}{49}{section.495}%
+\contentsline {subsection}{\numberline {8.4.1}Bewertungsmaßstab}{50}{subsection.496}%
+\contentsline {subsection}{\numberline {8.4.2}Fallbeispiele nach Modell}{50}{subsection.497}%
+\contentsline {section}{\numberline {8.5}Ergebnisse: Effizienz und Robustheit}{50}{section.498}%
+\contentsline {subsection}{\numberline {8.5.1}Laufzeit und \acs {NFA}-02-Konformität}{51}{subsection.499}%
+\contentsline {subsection}{\numberline {8.5.2}Konsistenz und Parsing-Stabilität}{51}{subsection.500}%
+\contentsline {section}{\numberline {8.6}Belastungsprüfung: test-50 und test-100}{52}{section.501}%
+\contentsline {subsection}{\numberline {8.6.1}Evaluation an test-50}{52}{subsection.503}%
+\contentsline {subsection}{\numberline {8.6.2}Evaluation an test-100}{53}{subsection.504}%
+\contentsline {section}{\numberline {8.7}Ergebnisse: Precision und F1-Score}{55}{section.508}%
+\contentsline {section}{\numberline {8.8}Evaluation am \acs {BWEC}-Untersuchungsobjekt}{56}{section.512}%
+\contentsline {section}{\numberline {8.9}Limitationen und Validität}{57}{section.513}%
+\contentsline {subsection}{\numberline {8.9.1}Externe Validität}{57}{subsection.514}%
+\contentsline {subsection}{\numberline {8.9.2}Interne Validität und Token-Limit-Effekt}{57}{subsection.515}%
+\contentsline {subsection}{\numberline {8.9.3}Weitere Einschränkungen}{58}{subsection.516}%
+\contentsline {section}{\numberline {8.10}Beantwortung der Forschungsfragen}{58}{section.517}%
+\contentsline {subsection}{\numberline {8.10.1}Übergeordnete Forschungsfrage}{58}{subsection.518}%
+\contentsline {subsection}{\numberline {8.10.2}TF1: Erkennungsleistung nach Verstoßtyp}{58}{subsection.519}%
+\contentsline {subsection}{\numberline {8.10.3}TF2: Mehrwert der Kontextkombination und Ablationsanalyse}{59}{subsection.520}%
+\contentsline {section}{\numberline {8.11}Modellwahl und Einsatzempfehlungen}{60}{section.522}%
+\contentsline {chapter}{\numberline {9}Fazit}{61}{chapter.524}%
+\contentsline {section}{\numberline {9.1}Zusammenfassung der Ergebnisse}{61}{section.525}%
+\contentsline {subsection}{\numberline {9.1.1}Beitrag zur übergeordneten Forschungsfrage}{61}{subsection.526}%
+\contentsline {subsection}{\numberline {9.1.2}Erfüllung der funktionalen und nicht-funktionalen Anforderungen}{61}{subsection.527}%
+\contentsline {section}{\numberline {9.2}Kritische Reflexion}{62}{section.529}%
+\contentsline {subsection}{\numberline {9.2.1}Grenzen der externen Validität}{62}{subsection.530}%
+\contentsline {subsection}{\numberline {9.2.2}Methodische Einschränkungen}{62}{subsection.531}%
+\contentsline {section}{\numberline {9.3}Ausblick}{63}{section.535}%
+\contentsline {subsection}{\numberline {9.3.1}Kurz- und mittelfristige Weiterentwicklungen}{63}{subsection.536}%
+\contentsline {subsection}{\numberline {9.3.2}Langfristige Forschungsperspektiven}{64}{subsection.546}%
+\contentsline {chapter}{Anhang}{65}{chapter*.547}%
+\contentsline {chapter}{Literaturverzeichnis}{159}{section*.927}%
