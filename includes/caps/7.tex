@@ -94,6 +94,26 @@ Baseline (Tools only)         & 8\,/\,12  & 66,7\,\% & --                       
 \label{tab:recall_modellvergleich}
 \end{table}
 
+Tabelle~\ref{tab:recall_suiten_ueberblick} erweitert diesen Vergleich auf alle drei synthetischen Testsuiten und macht die Recall-Degradation bei steigender Komplexität unmittelbar sichtbar.
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Bedingung} & \textbf{test-12} & \textbf{test-50} & \textbf{test-100} \\
+\midrule
+Baseline (Tools only)         & 8\,/\,12 (66{,}7\,\%)  & 43\,/\,50 (86\,\%)  & 34\,/\,100 (34\,\%) \\
++\,\texttt{qwen2.5-coder:7b}  & 9\,/\,12 (75\,\%)      & 36\,/\,50 (72\,\%)  & 40\,/\,100 (40\,\%) \\
++\,\texttt{qwen2.5-coder:14b} & 12\,/\,12 (100\,\%)    & 48\,/\,50 (96\,\%)  & 53\,/\,100 (53\,\%) \\
++\,\texttt{qwen3:32b}         & 12\,/\,12 (100\,\%)    & 50\,/\,50 (100\,\%) & 63\,/\,100 (63\,\%) \\
+\bottomrule
+\end{tabular}
+\caption[Recall-Überblick über alle drei Testsuiten]{Recall je Bedingung und Testsuite (erkannte Violations\,/\,Ground Truth, prozentualer Anteil in Klammern). Die detaillierte Analyse der Belastungssuiten erfolgt in Abschnitt~\ref{sec:eval_erweiterung}.}
+\label{tab:recall_suiten_ueberblick}
+\end{table}
+
 Die detaillierte Aufschlüsselung für alle 12~Violations mit der jeweiligen Erkennungsquelle findet sich in Tabelle~\ref{tab:erkennungsrate_poc}, die vollständige Recall-Matrix in Tabelle~\ref{tab:recall_matrix}.
 
 \subsection{Erkennungsleistung nach Verstoßkategorie}
@@ -206,7 +226,7 @@ Die vollständigen Laufzeit- und Effizienztabellen finden sich in Anhang~\ref{ap
 \subsection{Konsistenz und Parsing-Stabilität}
 \label{sec:effizienz_konsistenz}
 
-Die Standardabweichung der \ac{LLM}-Detektor-Findings variiert deutlich zwischen den Modellen. Auf test-12 erreicht \texttt{qwen2.5-coder:14b} mit $\sigma = 0{,}42$ die höchste Konsistenz; \texttt{qwen3:32b} liegt mit $\sigma = 0{,}53$ nur geringfügig darüber, während \texttt{qwen2.5-coder:7b} mit $\sigma = 3{,}28$ eine deutlich höhere Varianz zeigt.
+Die Standardabweichung der \ac{LLM}-Detektor-Findings variiert deutlich zwischen den Modellen. Auf test-12 erreicht \texttt{qwen2.5-coder:14b} mit $\sigma = 0{,}42$ die höchste Konsistenz; \texttt{qwen3:32b} liegt mit $\sigma = 0{,}53$ nur geringfügig darüber, während \texttt{qwen2.5-coder:7b} mit $\sigma = 3{,}28$ eine deutlich höhere Varianz zeigt (vgl. Tabelle~\ref{tab:detektor_konsistenz}).
 
 Die festen Detektoren (axe, Playwright, grep) bleiben über alle Benchmarkläufe vollständig deterministisch, sodass die Varianz ausschließlich aus der \ac{LLM}-Stufe stammt. In allen 30~Testläufen der test-12-Suite wird der \ac{LLM}-Output erfolgreich geparst (\texttt{parsed.success: true}, 100\,\%). Das Prompt-Design mit Role-Play- und Few-Shot-Prompting zeigt damit eine hohe Formatstabilität über alle drei Modelle hinweg und unterstützt Anforderung~\ac{NFA}-04.
 
@@ -485,12 +505,12 @@ Die übergeordnete Forschungsfrage kann positiv beantwortet werden, mit modell- 
 
 \textbf{Ja -- mit modellabhängigen Einschränkungen.} Mit \texttt{qwen2.5-coder:14b} und \texttt{qwen3:32b} erkennt die vollständige Pipeline auf der test-12-Suite alle drei Verstoßkategorien vollständig: syntaktische, layout-bezogene und semantische Violations jeweils zu 100\,\% (vgl. Tabelle~\ref{tab:recall_kategorie}). Die größte methodische Herausforderung liegt im semantischen Bereich: Hier ist der Baseline-Recall mit 60\,\% am niedrigsten, und der \ac{LLM}-Detektor leistet den größten Einzelbeitrag (+40~Prozentpunkte). Bei \texttt{qwen2.5-coder:7b} bestehen hingegen modellspezifische Grenzen.
 
-Über die drei kontrollierten Testsuiten zeigt sich konsistent ein Mehrwert durch die \ac{LLM}-Erweiterung: auf test-12 steigt der Recall von 66,7\,\% auf bis zu 100\,\%, auf test-50 von 43/50 auf 48/50 bzw.\ 50/50 und auf test-100 von 34/100 auf 53/100 bzw.\ 63/100. Ein direkter Benchmark gegen Literaturwerte bleibt methodisch eingeschränkt, da Datensätze, Ground-Truth-Konstruktion, Metriken und Laufzeitumgebungen nicht identisch sind.
+Über die drei kontrollierten Testsuiten zeigt sich konsistent ein Mehrwert durch die \ac{LLM}-Erweiterung: auf test-12 steigt der Recall von 66,7\,\% auf bis zu 100\,\%, auf test-50 von 43\,/\,50 auf 48\,/\,50 bzw.\ 50\,/\,50 und auf test-100 von 34\,/\,100 auf 53\,/\,100 bzw.\ 63\,/\,100. Ein direkter Benchmark gegen Literaturwerte bleibt methodisch eingeschränkt, da Datensätze, Ground-Truth-Konstruktion, Metriken und Laufzeitumgebungen nicht identisch sind.
 
 \subsection{TF2: Mehrwert der Kontextkombination und Ablationsanalyse}
 \label{sec:ff_tf2}
 
-\textbf{Ja, der Mehrwert ist messbar und zeigt sich sowohl quantitativ als auch qualitativ.} Die Tool-Pipeline (axe + Playwright + grep) erreicht auf test-12 einen Recall von 66,7\,\% (8/12). Durch den \ac{LLM}-Detektor steigt der Recall auf bis zu 100\,\%. Dabei betrifft der Zugewinn genau jene Violations, die durch die regelbasierten Quellen nicht zuverlässig erreichbar sind: V8 (modaler Fokus-Trap), V11 (\ac{DOM}-/visuelle Reihenfolge) und V12 (Mindestgröße interaktiver Elemente) werden erst durch die \ac{LLM}-gestützte Analyse konsistent erfasst; V2 (fehlendes \texttt{aria-label} auf Icon-Button) ebenfalls ab 14b.
+\textbf{Ja, der Mehrwert ist messbar und zeigt sich sowohl quantitativ als auch qualitativ.} Die Tool-Pipeline (axe + Playwright + grep) erreicht auf test-12 einen Recall von 66{,}7\,\% (8\,/\,12). Durch den \ac{LLM}-Detektor steigt der Recall auf bis zu 100\,\%. Dabei betrifft der Zugewinn genau jene Violations, die durch die regelbasierten Quellen nicht zuverlässig erreichbar sind: V8 (modaler Fokus-Trap), V11 (\ac{DOM}-/visuelle Reihenfolge) und V12 (Mindestgröße interaktiver Elemente) werden erst durch die \ac{LLM}-gestützte Analyse konsistent erfasst; V2 (fehlendes \texttt{aria-label} auf Icon-Button) ebenfalls ab 14b.
 
 \textbf{Ablationsanalyse: Beitrag des \ac{LLM}-Detektors.}
 Um den Recall-Beitrag der einzelnen Pipeline-Stufen zu isolieren, werden zwei empirisch gemessene Bedingungen um eine architekturell begründete Bedingung~B ergänzt:
@@ -516,7 +536,7 @@ Bedingung~B ist konstruktiv ableitbar: Der \ac{LLM}-Priorisierer in Stufe~2
 erhält als Eingabe ausschließlich die von den Tool-Quellen gemeldeten 
 Findings -- er kann keine Violations erkennen, die nicht bereits in diesem 
 Input enthalten sind. Die empirischen Daten stützen diese architekturelle 
-Ableitung: In keinem der 30~Testläufe auf test-12 tritt eine Violation erstmals im Stufe-2-Output auf, die nicht bereits durch die Quellen in Stufe~1 gemeldet wurde. Folglich gilt $\text{Recall}(B) \leq \text{Recall}(A)$. Der empirisch messbare Recall-Zuwachs von 8/12 auf 12/12 ist damit kausal dem \ac{LLM}-Detektor (Stufe~1) zuzuschreiben, der den React-Quellcode 
+Ableitung: In keinem der 30~Testläufe auf test-12 tritt eine Violation erstmals im Stufe-2-Output auf, die nicht bereits durch die Quellen in Stufe~1 gemeldet wurde. Folglich gilt $\text{Recall}(B) \leq \text{Recall}(A)$. Der empirisch messbare Recall-Zuwachs von 8\,/\,12 auf 12\,/\,12 ist damit kausal dem \ac{LLM}-Detektor (Stufe~1) zuzuschreiben, der den React-Quellcode 
 chunkweise semantisch analysiert und dabei V2, V8, V11 und V12 aufdeckt. 
 Diese Violations entziehen sich der regelbasierten Prüfung, weil sie  entweder semantisches Kontextwissen (V2: inhaltlich unzureichendes \texttt{aria-label}), Zustands\-abhängigkeit (V8: modale Fokusführung) oder Layout-Semantik (V11: \ac{DOM}-/visuelle Reihenfolgedivergenz) erfordern. Die Aussage bleibt bewusst vorsichtig: Da keine vollständige Ablationsstudie mit isolierten Bedingungen auf allen drei Suites durchgeführt wurde, handelt es sich um eine auf test-12 beschränkte Partialablation.
 

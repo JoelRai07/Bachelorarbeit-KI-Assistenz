@@ -811,6 +811,76 @@
       \verb https://doi.org/10.1093/qje/qjae044
       \endverb
     \endentry
+    \entry{bmds_digitale_souveraenitaet}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=dad81a4ba2c9d63a68f22f95e423c67f}{%
+           family={{Bundesministerium für Digitales und Souveränität}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{dad81a4ba2c9d63a68f22f95e423c67f}
+      \strng{fullhash}{dad81a4ba2c9d63a68f22f95e423c67f}
+      \strng{fullhashraw}{dad81a4ba2c9d63a68f22f95e423c67f}
+      \strng{bibnamehash}{dad81a4ba2c9d63a68f22f95e423c67f}
+      \strng{authorbibnamehash}{dad81a4ba2c9d63a68f22f95e423c67f}
+      \strng{authornamehash}{dad81a4ba2c9d63a68f22f95e423c67f}
+      \strng{authorfullhash}{dad81a4ba2c9d63a68f22f95e423c67f}
+      \strng{authorfullhashraw}{dad81a4ba2c9d63a68f22f95e423c67f}
+      \field{extraname}{1}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Digitale Souveränität in der öffentlichen Verwaltung}
+      \field{urlday}{2}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://bmds.bund.de/themen/digitale-souveraenitaet/digitale-souveraenitaet-in-der-oeffentlichen-verwaltung
+      \endverb
+      \verb{url}
+      \verb https://bmds.bund.de/themen/digitale-souveraenitaet/digitale-souveraenitaet-in-der-oeffentlichen-verwaltung
+      \endverb
+    \endentry
+    \entry{bmds_souveraener_arbeitsplatz}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=dad81a4ba2c9d63a68f22f95e423c67f}{%
+           family={{Bundesministerium für Digitales und Souveränität}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{dad81a4ba2c9d63a68f22f95e423c67f}
+      \strng{fullhash}{dad81a4ba2c9d63a68f22f95e423c67f}
+      \strng{fullhashraw}{dad81a4ba2c9d63a68f22f95e423c67f}
+      \strng{bibnamehash}{dad81a4ba2c9d63a68f22f95e423c67f}
+      \strng{authorbibnamehash}{dad81a4ba2c9d63a68f22f95e423c67f}
+      \strng{authornamehash}{dad81a4ba2c9d63a68f22f95e423c67f}
+      \strng{authorfullhash}{dad81a4ba2c9d63a68f22f95e423c67f}
+      \strng{authorfullhashraw}{dad81a4ba2c9d63a68f22f95e423c67f}
+      \field{extraname}{2}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Souveräner Arbeitsplatz}
+      \field{urlday}{2}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://bmds.bund.de/themen/digitale-souveraenitaet/digitale-souveraenitaet-in-der-oeffentlichen-verwaltung/souveraener-arbeitsplatz
+      \endverb
+      \verb{url}
+      \verb https://bmds.bund.de/themen/digitale-souveraenitaet/digitale-souveraenitaet-in-der-oeffentlichen-verwaltung/souveraener-arbeitsplatz
+      \endverb
+    \endentry
     \entry{BITV}{legislation}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=ca9e1064e1d32641b807916e8e7c4ede}{%
@@ -2874,8 +2944,6 @@
       \field{year}{2024}
       \field{dateera}{ce}
       \field{urldateera}{ce}
-      \field{pages}{469\bibrangedash 488}
-      \range{pages}{20}
       \verb{doi}
       \verb 10.37307/b.978-3-503-23763-0.15
       \endverb
@@ -5787,6 +5855,39 @@
       \endverb
       \verb{url}
       \verb https://arxiv.org/abs/2307.09288
+      \endverb
+    \endentry
+    \entry{cloudact2018}{legislation}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=85e6c92db93e0b02864ac243ca3e4acf}{%
+           family={{U.S. Congress}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{85e6c92db93e0b02864ac243ca3e4acf}
+      \strng{fullhash}{85e6c92db93e0b02864ac243ca3e4acf}
+      \strng{fullhashraw}{85e6c92db93e0b02864ac243ca3e4acf}
+      \strng{bibnamehash}{85e6c92db93e0b02864ac243ca3e4acf}
+      \strng{authorbibnamehash}{85e6c92db93e0b02864ac243ca3e4acf}
+      \strng{authornamehash}{85e6c92db93e0b02864ac243ca3e4acf}
+      \strng{authorfullhash}{85e6c92db93e0b02864ac243ca3e4acf}
+      \strng{authorfullhashraw}{85e6c92db93e0b02864ac243ca3e4acf}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Clarifying Lawful Overseas Use of Data Act (CLOUD Act)}
+      \field{urlday}{2}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.congress.gov/bill/115th-congress/senate-bill/2383
+      \endverb
+      \verb{url}
+      \verb https://www.congress.gov/bill/115th-congress/senate-bill/2383
       \endverb
     \endentry
     \entry{OHCHR}{legislation}{}{}

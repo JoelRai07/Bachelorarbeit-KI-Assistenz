@@ -37,7 +37,7 @@ Die Analyse der bestehenden Forschungsarbeiten zeigt drei persistente Forschungs
 \begin{enumerate}
     \item Keiner der untersuchten Ansätze berücksichtigt zustandsabhängige Barrieren systematisch, die erst durch Nutzerinteraktionen in React-basierten Single-Page Applications entstehen.\footcite[Vgl.][S. 110]{tafreshipour_ma11y_2024} Zwar setzen einzelne Systeme wie \textfett{AccessGuru} Playwright zur \ac{DOM}-Extraktion ein, jedoch beschränkt sich dies auf das initiale Rendering -- interaktionsbedingte Zustandswechsel werden nicht geprüft.\footcite[Vgl.][]{fathallah_accessguru_2025}
     \item Keiner der analysierten Ansätze verknüpft Tool-Reports systematisch mit dem Quellcode der geprüften Anwendung. \textfett{AccessGuru} selbst benennt dies als offenes Problem: die generierten Korrekturen beziehen sich auf isolierte \ac{DOM}-Snippets und nicht auf die \ac{JSX}-Komponenten, in denen Entwicklerinnen und Entwickler tatsächlich eingreifen müssten.\footcite[Vgl.][]{fathallah_accessguru_2025} Die Lücke zwischen technischer Fehlererkennung und entwicklernaher Umsetzung bleibt damit bestehen.
-    \item Keine der untersuchten Arbeiten adressiert explizit die datenschutzrechtlichen Anforderungen öffentlicher Verwaltungen: alle Systeme setzen auf cloudbasierte \ac{LLM}-\ac{API}s (primär GPT-4o), was für die \ac{BITBW} und vergleichbare Institutionen ohne vertiefte datenschutzrechtliche Prüfung nicht nutzbar ist.\footcite[Vgl.][Art. 28, 44 ff.]{dsgvo2016}
+    \item Keine der untersuchten Arbeiten adressiert explizit die Anforderungen an digitale Souveränität und den Datenschutz öffentlicher Verwaltungen: alle Systeme setzen auf cloudbasierte \ac{LLM}-\ac{API}s (primär GPT-4o), was für die \ac{BITBW} und vergleichbare Institutionen -- sowohl aus Gründen digitaler Souveränität als auch ohne vertiefte datenschutzrechtliche Prüfung -- nicht nutzbar ist.\footcites[Vgl.][]{bmds_digitale_souveraenitaet}[Vgl.][Art. 28, 44 ff.]{dsgvo2016}
 \end{enumerate}
 
 Die Konzeptmatrix in Tabelle \ref{tab:konzeptmatrix_haupt} fasst die zentralen Merkmale der untersuchten Studien im Vergleich zum eigenen \ac{PoC} zusammen und macht die identifizierten Forschungslücken strukturell sichtbar.
@@ -127,7 +127,7 @@ Fernández-Navarro \& Chicano (2026) & \ac{LLM} Remediation
 }% Ende resizebox
 
 \caption[Konzeptmatrix (Hauptmatrix, hoch priorisierte Studien)]{%
-  Konzeptmatrix nach Webster Watson\footnotemark: hoch priorisierte Studien im Vergleich
+  Konzeptmatrix nach Webster und Watson\footnotemark: hoch priorisierte Studien im Vergleich
   zum eigenen \acf{PoC}. \yes~=~Konzept vorhanden/adressiert; leer ~=~nicht adressiert.
   Für den eigenen \ac{PoC} bezeichnen die Markierungen angestrebte Designziele, deren Umsetzung und Wirksamkeit in Kapitel~\ref{kap:7} evaluiert wird.
   Die vollständige Matrix aller analysierten Studien findet sich in Anhang~\ref{app:konzeptmatrix}.}

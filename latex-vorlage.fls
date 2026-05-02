@@ -587,13 +587,6 @@ INPUT includes\taxonomie-figure.tex
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm0800.tfm
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ectt0800.tfm
 INPUT C:\Users\joely\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti0800.tfm
-INPUT .\graphics\fewshot.png
-INPUT .\graphics\fewshot.png
-INPUT .\graphics\fewshot.png
-INPUT .\graphics\fewshot.png
-INPUT .\graphics\fewshot.png
-INPUT .\graphics\fewshot.png
-INPUT .\graphics\fewshot.png
 INPUT .\includes\caps\3.tex
 INPUT .\includes\caps\3.tex
 INPUT includes\caps\3.tex
