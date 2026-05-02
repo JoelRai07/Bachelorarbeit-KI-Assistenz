@@ -7,6 +7,8 @@ Dieses abschließende Kapitel fasst die Ergebnisse der Arbeit zusammen (Abschnit
 \section{Zusammenfassung der Ergebnisse}
 \label{sec:fazit_zusammenfassung}
 
+Die Ergebnisdarstellung gliedert sich in die Beantwortung der Teilforschungsfragen sowie die Überprüfung der spezifizierten funktionalen und nicht-funktionalen Anforderungen.
+
 \subsection{Beitrag zur übergeordneten Forschungsfrage}
 \label{sec:fazit_ff}
 
@@ -26,6 +28,8 @@ Die fünf funktionalen Anforderungen \ac{FA}-01 bis \ac{FA}-05 wurden vollständ
 % ─────────────────────────────────────────────────────────────────────────────
 \section{Kritische Reflexion}
 \label{sec:fazit_reflexion}
+
+Die Aussagekraft der Ergebnisse wird im Folgenden hinsichtlich externer Validität und methodischer Einschränkungen eingeordnet, um den Geltungsbereich der Befunde transparent zu machen.
 
 \subsection{Grenzen der externen Validität}
 \label{sec:fazit_extern}
@@ -48,13 +52,15 @@ Die Evaluation unterliegt drei methodischen Einschränkungen:
 \section{Ausblick}
 \label{sec:fazit_ausblick}
 
+Aufbauend auf den identifizierten Grenzen und dem methodischen Potenzial des Ansatzes werden im Folgenden konkrete Weiterentwicklungen sowie langfristige Forschungsperspektiven skizziert.
+
 \subsection{Kurz- und mittelfristige Weiterentwicklungen}
 \label{sec:ausblick_kurz_mittel}
 
 Kurzfristig bieten sich vier Weiterentwicklungen an:
 \begin{enumerate}
-    \item \textbf{Manuelle Plausibilisierung des \ac{BWEC}-Blocks:} Expertenabgleich der Pipeline-Ergebnisse mit einer referenziellen Baseline. Da der \ac{BWEC}-Block mangels Ground Truth ausschließlich qualitativ bewertet werden konnte, würde ein solcher Abgleich erstmals eine quantitative Einschätzung der Erkennungsleistung auf einem realen Produktivsystem ermöglichen.
-    \item \textbf{Gezielte Playwright-Interaktionsprüfungen:} Erweiterung der Checks um Dialog-Fokusübernahme und Interaktionsnavigation. Damit ließen sich dynamische Barrierefreiheitsprobleme erfassen, die erst durch Nutzerinteraktion -- etwa das Öffnen eines Modaldialogs oder die Tastaturnavigation durch ein Menü -- sichtbar werden.
+    \item \textbf{Manuelle Plausibilisierung des \ac{BWEC}-Blocks:} Expertenabgleich der Pipeline-Ergebnisse mit einer referenziellen Baseline, um erstmals eine quantitative Einschätzung der Erkennungsleistung auf einem realen Produktivsystem zu ermöglichen.
+    \item \textbf{Gezielte Playwright-Interaktionsprüfungen:} Erweiterung der Checks um Dialog-Fokusübernahme und Interaktionsnavigation, um dynamische Barrieren zu erfassen, die erst durch Nutzerinteraktion sichtbar werden.
     \item \textbf{Deduplikations- und Konsolidierungslogik:} Nachgelagerte Zusammenführung überlappender Findings aus den vier Detektionsquellen. Eine gezielte Clustering-Logik würde die Reportgröße reduzieren und die Priorisierungsphase entlasten, da redundante Einträge das Token-Budget unnötig beanspruchen.
     \item \textbf{Formalisierung der Stichprobenprüfung:} Integration als fester Workflow-Bestandteil zur systematischen Quantifizierung von Halluzinationsraten und Deduplikationsbedarf. Eine standardisierte Methode würde es erlauben, Qualitätsaussagen vergleichbar und reproduzierbar über verschiedene Modellversionen hinweg zu treffen.
 \end{enumerate}
@@ -63,8 +69,8 @@ Mittelfristig stehen vier Weiterentwicklungen im Vordergrund:
 \begin{enumerate}
     \item \textbf{Hierarchischer Umbau der Priorisierungsphase:} Statt eines einzigen großen Prompts wären mehrstufige Cluster- oder Zusammenfassungsverfahren denkbar, da die \ac{BWEC}-Messungen den zentralen technischen Engpass in diesem Schritt erkennen lassen.
     \item \textbf{Erweiterung der axe-core-Zustandsabdeckung:} axe-core könnte ergänzend auf mehreren systematisch durchlaufenen \ac{DOM}-Zuständen ausgeführt werden. Relevante Zustände umfassen geöffnete Menüs, Modaldialoge, Hover-Zustände und validierungsbedingte Fehlermeldungen -- Bereiche, die im initialen \ac{DOM} nicht sichtbar und für die bestehenden Playwright-Checks zu feinkörnig sind.
-    \item \textbf{\acs{CICD}-Integration:} Einbettung von \ac{ACE} in bestehende Build-Pipelines (z.\,B. GitHub Actions oder GitLab~\acs{CI}), sodass Accessibility-Checks automatisch bei Pull-Requests ausgelöst werden. Leichte Komponentenprüfungen könnten per-Commit laufen, während tiefere Analysen als nächtlicher Job reserviert bleiben -- in Einklang mit dem in Abschnitt~\ref{sec:fazit_anforderungen} beschriebenen gestuften Betriebsmodell.
-    \item \textbf{Nachgelagerte Automatisierung über den \acs{JSON}-Report:} Der strukturierte Report könnte als Grundlage für weitergehende Automatisierung dienen -- insbesondere die Übergabe der priorisierten Aufgabenliste an einen nachgelagerten Agenten, der Findings eigenständig in Issue-Tracker überführt, Pull-Request-Beschreibungen generiert oder Korrekturen in einer integrierten Entwicklungsumgebung umsetzt.
+    \item \textbf{\acs{CICD}-Integration:} Einbettung von \ac{ACE} in bestehende Build-Pipelines (z.\,B. GitHub Actions oder GitLab~\acs{CI}), sodass Accessibility-Checks automatisch bei Pull-Requests ausgelöst werden.
+    \item \textbf{Nachgelagerte Automatisierung über den \acs{JSON}-Report:} Der strukturierte Report könnte als Grundlage für weitergehende Automatisierung dienen, etwa die Übergabe an einen nachgelagerten Agenten zur Überführung in Issue-Tracker oder zur Code-Korrektur.
 \end{enumerate}
 
 \subsection{Langfristige Forschungsperspektiven}

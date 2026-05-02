@@ -4,9 +4,9 @@ Dieses Kapitel erarbeitet die Grundlagen für das in Kapitel~\ref{kap:5} beschri
 
 \section{Problemkontext und Handlungsbedarf}\label{kap:4.1}
 
-Wie in Kapitel~\ref{kap:1} dargelegt, unterliegen alle von der \ac{BITBW} entwickelten und betriebenen Web\-anwendungen den gesetzlichen Anforderungen der \ac{BITV} 2.0, für die \ac{WCAG} 2.2 auf Konformitätsstufe AA den verbindlichen Maßstab bildet.\footcite[Vgl.][]{BITV} In der Praxis erfolgt die Barrierefreiheitsprüfung bislang überwiegend manuell oder mithilfe einzelner regelbasierter Tools. Dieses Vorgehen ist aus zwei Gründen problematisch: Manuelle Audits sind personalintensiv und skalieren nur unzureichend mit der Anzahl zu betreuender Anwendungen; regelbasierte Tools erfassen, wie in Kapitel~\ref{tools} dargelegt, nur einen Bruchteil der tatsächlich vorhandenen Barrieren.\footcite[Vgl.][S. 8--9]{tafreshipour_ma11y_2024}
+Wie in Kapitel~\ref{kap:1} dargelegt, unterliegen alle von der \ac{BITBW} entwickelten und betriebenen Web\-anwendungen den gesetzlichen Anforderungen der \ac{BITV} 2.0, für die \ac{WCAG} 2.2 auf Konformitätsstufe AA den verbindlichen Maßstab bildet.\footcites[Vgl.][S. 475]{heinemann_barrierefreiheit_2024}[][]{BITV} In der Praxis erfolgt die Barrierefreiheitsprüfung bislang überwiegend manuell oder mithilfe einzelner regelbasierter Tools. Dieses Vorgehen ist aus zwei Gründen problematisch: Manuelle Audits sind personalintensiv und skalieren nur unzureichend mit der Anzahl zu betreuender Anwendungen; regelbasierte Tools erfassen, wie in Kapitel~\ref{tools} dargelegt, nur einen Bruchteil der tatsächlich vorhandenen Barrieren.\footcite[Vgl.][S. 8--9]{tafreshipour_ma11y_2024}
 
-Die in Kapitel~\ref{kap:3} identifizierten drei Forschungslücken bilden den Ausgangspunkt der Anforderungserhebung.\footcites[Vgl.][S. 79]{hevnerChatterjeeDesignResearch2010}[Vgl.][S. 9--11, 23--24]{hevnerChatterjeeDesignResearch2010} Dazu zählen die fehlende Zustandserfassung durch Interaktionen, die fehlende Verknüpfung von \ac{DOM}-Befunden mit dem Quellcode sowie die Anforderungen an digitale Souveränität und den Datenschutzvorgaben öffentlicher Verwaltungen, die den Einsatz cloudbasierter \ac{LLM}-\ac{API}s ausschließen (vgl. Abschnitt~\ref{datenschutz}). Daraus ergibt sich als Systemziel ein lokal ausführbares, \ac{LLM}-gestütztes Assistenzsystem, das axe-core-Reports, Playwright-Interaktionsdaten und statische Quellcodeanalyse kombiniert (vgl. Abschnitt~\ref{kap:1.3}).\footcite[Vgl.][S. 9--11, 23--24]{hevnerChatterjeeDesignResearch2010}
+Die in Kapitel~\ref{kap:3} identifizierten drei Forschungslücken bilden den Ausgangspunkt der Anforderungserhebung.\footcites[Vgl.][S. 9--11, 23--24]{hevnerChatterjeeDesignResearch2010} Dazu zählen die fehlende Zustandserfassung durch Interaktionen, die fehlende Verknüpfung von \ac{DOM}-Befunden mit dem Quellcode sowie die Anforderungen an digitale Souveränität und den Datenschutzvorgaben öffentlicher Verwaltungen, die den Einsatz cloudbasierter \ac{LLM}-\ac{API}s ausschließen (vgl. Abschnitt~\ref{datenschutz}). Daraus ergibt sich als Systemziel ein lokal ausführbares, \ac{LLM}-gestütztes Assistenzsystem, das axe-core-Reports, Playwright-Interaktionsdaten und statische Quellcodeanalyse kombiniert (vgl. Abschnitt~\ref{kap:1.3}).
 
 \section{\acl{FA}} \label{kap:4.2}
 
@@ -39,7 +39,7 @@ Das System muss seine Ergebnisse in einem maschinenlesbaren \acs{JSON}-Format be
 
 \textfett{\ac{NFA}-01 Digitale Souveränität und Lokal-First}
 
-Das System muss vollständig ohne externe \ac{API}-Aufrufe betreibbar sein. Weder Quellcode noch \ac{DOM}-Inhalte noch Violation-Reports dürfen das interne Netzwerk verlassen. Dies folgt sowohl aus den Anforderungen an digitale Souveränität öffentlicher Verwaltungen als auch aus den datenschutzrechtlichen Vorgaben der \ac{DSGVO}.\footcites[Vgl.][]{bmds_digitale_souveraenitaet}[Vgl.][Art. 28 und Art. 32]{dsgvo2016}
+Das System muss vollständig ohne externe \ac{API}-Aufrufe betreibbar sein. Weder Quellcode noch \ac{DOM}-Inhalte noch Violation-Reports dürfen das interne Netzwerk verlassen. Dies folgt sowohl aus den Anforderungen an digitale Souveränität öffentlicher Verwaltungen als auch aus den datenschutzrechtlichen Vorgaben der \ac{DSGVO}.\footcites[Vgl.][]{bmds_digitale_souveraenitaet}[][Art. 28 und Art. 32]{dsgvo2016}
 
 \textfett{\ac{NFA}-02 Laufzeit und Praktikabilität}
 
@@ -51,11 +51,11 @@ Die Systemarchitektur muss eine modulare Trennung der Komponenten (Detection, Co
 
 \textfett{\ac{NFA}-04 Reproduzierbarkeit}
 
-Das System muss hinreichend deterministisch sein, damit zwei aufeinanderfolgende Analyseläufe auf derselben Anwendungsversion im Wesentlichen dieselben Befunde erzeugen. Reproduzierbarkeit wird durch eine feste Temperatur-Einstellung (\texttt{temperature} = 0.05) und durch strukturierte Ausgabeformate (\acs{JSON}-Schema im Prompt) sichergestellt.\footcites[Vgl.][Temperature]{OpenAI_Developers}[Vgl.][Temperature]{anthropic2026claude}
+Das System muss hinreichend deterministisch sein, damit zwei aufeinanderfolgende Analyseläufe auf derselben Anwendungsversion im Wesentlichen dieselben Befunde erzeugen. Reproduzierbarkeit wird durch eine feste Temperatur-Einstellung (\texttt{temperature} = 0.05) und durch strukturierte Ausgabeformate (\acs{JSON}-Schema im Prompt) sichergestellt.\footcites[Vgl.][Temperature]{OpenAI_Developers}[][Temperature]{anthropic2026claude}
 
 \section{Lokale Inferenzinfrastruktur und Modellkandidaten}\label{kap:4.4}
 
-Die Wahl der Inferenzinfrastruktur ist durch \ac{NFA}-01 (Lokal-First) weitgehend vorgegeben: Cloudbasierte Modell-\ac{API}s scheiden aus, da ihre Nutzung die Übermittlung potenziell schützenswerter Quellcodeausschnitte und \ac{DOM}-Inhalte an externe, überwiegend US-amerikanische Server erfordert -- was weder mit den Anforderungen an digitale Souveränität noch mit den datenschutzrechtlichen Vorgaben der \ac{DSGVO} vereinbar ist.\footcites[Vgl.][]{bmds_digitale_souveraenitaet}[Vgl.][Art. 28 und Art. 44 ff.]{dsgvo2016}
+Die Wahl der Inferenzinfrastruktur ist durch \ac{NFA}-01 (Lokal-First) weitgehend vorgegeben: Cloudbasierte Modell-\ac{API}s scheiden aus, da ihre Nutzung die Übermittlung potenziell schützenswerter Quellcodeausschnitte und \ac{DOM}-Inhalte an externe, überwiegend US-amerikanische Server erfordert -- was weder mit den Anforderungen an digitale Souveränität noch mit den datenschutzrechtlichen Vorgaben der \ac{DSGVO} vereinbar ist.\footcites[Vgl.][]{bmds_digitale_souveraenitaet}[][Art. 28 und Art. 44 ff.]{dsgvo2016}
 
 \subsection{Ollama als Laufzeitumgebung}
 

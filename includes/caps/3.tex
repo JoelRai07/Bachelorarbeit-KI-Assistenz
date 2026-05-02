@@ -8,7 +8,11 @@ Dieses Kapitel gibt einen thematisch strukturierten Überblick über den Forschu
 \end{enumerate}
 \section{Vorgehen der Literaturrecherche}
 
-Zur Einordnung des Forschungsstands wurde eine strukturierte Literaturrecherche in wissenschaftlichen Repositorien und Datenbanken durchgeführt (u.\,a. ACM Digital Library, IEEE Xplore, ScienceDirect und arXiv).\footcite[Vgl.][]{WebsterWatson2002} Die Recherche erfolgte themenorientiert auf Basis von Suchbegriffen wie \glqq web accessibility\grqq, \glqq LLM accessibility\grqq, \glqq accessibility violation detection\grqq{} und \glqq axe-core\grqq. Berücksichtigt wurden primär aktuelle Arbeiten mit Bezug zur automatisierten Erkennung oder Behebung von Barrierefreiheitsverstößen in Webanwendungen mit \acs{KI}-Assistenzsystemen. Die identifizierten Arbeiten wurden thematisch gruppiert, priorisiert und abschließend vergleichend ausgewertet.
+Die Recherche orientierte sich am strukturierten Vorgehen nach Webster und Watson:\footcite[Vgl.][]{WebsterWatson2002} Einem keyword-basierten Einstieg folgte ein Vorwärts- und Rückwärts-Snowballing entlang der Literaturlisten besonders einschlägiger Kernwerke. Durchsucht wurden ACM Digital Library, IEEE Xplore, ScienceDirect und arXiv. Die eingesetzten Suchstrings umfassten: \textit{\glqq web accessibility\grqq}, \textit{\glqq LLM accessibility\grqq}, \textit{\glqq accessibility violation detection\grqq}, \textit{\glqq axe-core accessibility\grqq}, \textit{\glqq WCAG automated testing\grqq} sowie \textit{\glqq screen reader artificial intelligence\grqq}.
+
+Inklusionskriterien: Erscheinungsjahr 2018--2026, Peer-Review-Status oder einschlägige Preprints (arXiv), expliziter Bezug zu Web-Barrierefreiheit sowie \acs{KI}- bzw. \acs{LLM}-gestützter Erkennung oder Korrektur, englisch- oder deutschsprachig. Exkludiert wurden Arbeiten mit ausschließlichem Bezug zu mobilen Apps, Desktop- oder PDF-Anwendungen, reine Meinungsbeiträge ohne empirische Daten sowie Duplikate nach Titelmatch.
+
+Die Treffermenge wurde durch ein zweistufiges Screening -- zunächst Titel-/Abstract-Sichtung, anschließend Volltextprüfung anhand der Inklusionskriterien -- auf die einbezogenen Kernarbeiten reduziert. Die identifizierten Arbeiten wurden thematisch gruppiert und vergleichend ausgewertet; die vollständige Konzeptmatrix mit allen untersuchten Merkmalen findet sich in Tabelle~\ref{tab:konzeptmatrix_haupt}.
 
 \section{Von frühen \acs{KI}-Ansätzen zur \acs{LLM}-basierten Erkennung}
 
@@ -32,12 +36,12 @@ Pool (2023) adressiert die Detection-Schicht mit \textfett{Testaro}, einem Ensem
 
 \section{Forschungslücken und Einordnung der vorliegenden Arbeit} \label{Forschungslücken}
 
-Die Analyse der bestehenden Forschungsarbeiten zeigt drei persistente Forschungslücken, die den Ausgangspunkt der vorliegenden Arbeit bilden.
+Die Auswertung der betrachteten Literatur zeigt drei persistente Forschungslücken, die den Ausgangspunkt der vorliegenden Arbeit bilden.
 
 \begin{enumerate}
     \item Keiner der untersuchten Ansätze berücksichtigt zustandsabhängige Barrieren systematisch, die erst durch Nutzerinteraktionen in React-basierten Single-Page Applications entstehen.\footcite[Vgl.][S. 110]{tafreshipour_ma11y_2024} Zwar setzen einzelne Systeme wie \textfett{AccessGuru} Playwright zur \ac{DOM}-Extraktion ein, jedoch beschränkt sich dies auf das initiale Rendering -- interaktionsbedingte Zustandswechsel werden nicht geprüft.\footcite[Vgl.][]{fathallah_accessguru_2025}
     \item Keiner der analysierten Ansätze verknüpft Tool-Reports systematisch mit dem Quellcode der geprüften Anwendung. \textfett{AccessGuru} selbst benennt dies als offenes Problem: die generierten Korrekturen beziehen sich auf isolierte \ac{DOM}-Snippets und nicht auf die \ac{JSX}-Komponenten, in denen Entwicklerinnen und Entwickler tatsächlich eingreifen müssten.\footcite[Vgl.][]{fathallah_accessguru_2025} Die Lücke zwischen technischer Fehlererkennung und entwicklernaher Umsetzung bleibt damit bestehen.
-    \item Keine der untersuchten Arbeiten adressiert explizit die Anforderungen an digitale Souveränität und den Datenschutz öffentlicher Verwaltungen: alle Systeme setzen auf cloudbasierte \ac{LLM}-\ac{API}s (primär GPT-4o), was für die \ac{BITBW} und vergleichbare Institutionen -- sowohl aus Gründen digitaler Souveränität als auch ohne vertiefte datenschutzrechtliche Prüfung -- nicht nutzbar ist.\footcites[Vgl.][]{bmds_digitale_souveraenitaet}[Vgl.][Art. 28, 44 ff.]{dsgvo2016}
+    \item Keine der untersuchten Arbeiten adressiert explizit die Anforderungen an digitale Souveränität und den Datenschutz öffentlicher Verwaltungen: alle Systeme setzen auf cloudbasierte \ac{LLM}-\ac{API}s (primär GPT-4o), was für die \ac{BITBW} und vergleichbare Institutionen -- sowohl aus Gründen digitaler Souveränität als auch ohne vertiefte datenschutzrechtliche Prüfung -- nicht nutzbar ist.\footcites[Vgl.][]{bmds_digitale_souveraenitaet}[][Art. 28, 44 ff.]{dsgvo2016}
 \end{enumerate}
 
 Die Konzeptmatrix in Tabelle \ref{tab:konzeptmatrix_haupt} fasst die zentralen Merkmale der untersuchten Studien im Vergleich zum eigenen \ac{PoC} zusammen und macht die identifizierten Forschungslücken strukturell sichtbar.
@@ -147,7 +151,7 @@ Die vorliegende Arbeit folgt dem Forschungsparadigma des \ac{DSR}, das von Hevne
     \item \ac{DSR} fordert explizit die Evaluation des Artefakts in einem realen Anwendungskontext, was dem praxisorientierten Charakter der Arbeit entspricht.\footcite[Vgl.][S. 80]{hevner2004dsr}
 \end{enumerate}
 
-Alternative Ansätze wie Action Research oder kontrollierte Experimente wurden verworfen: Action Research setzt eine längerfristige Praktikerzusammenarbeit voraus, während kontrollierte Experimente eine Stichprobenbasis erfordern, die im Verwaltungskontext nicht verfügbar ist.\footcites[Vgl.][S. 1--2]{baskerville1999ar}[Vgl.][S. 239--335]{baskerville2004ar}
+Alternative Ansätze wie Action Research oder kontrollierte Experimente wurden verworfen: Action Research setzt eine längerfristige Praktikerzusammenarbeit voraus, während kontrollierte Experimente eine Stichprobenbasis erfordern, die im Verwaltungskontext nicht verfügbar ist.\footcites[Vgl.][S. 1--2]{baskerville1999ar}[][S. 239--335]{baskerville2004ar}
 
 Als prozessualer Rahmen dient das sechsphasige DSRM-Prozessmodell nach Peffers et al.\footcite[Vgl.][]{peffers2007dsrm} Die Zuordnung der einzelnen Phasen zu den Kapiteln dieser Arbeit zeigt Tabelle~\ref{tab:dsrm_mapping}.
 
@@ -199,7 +203,7 @@ Die Evaluation folgt einem fünfstufigen Vorgehen:
     \item \textbf{Benchmarkläufe:} Jede Suite wird mit drei Modellen jeweils zehnmal analysiert (insgesamt 90~Testläufe). Pro Lauf werden Recall, Priorisierungsverhalten, Fix-Qualität und Laufzeit erfasst.
     \item \textbf{Recall-Auswertung:} Die Ergebnisse werden mit der bekannten Ground Truth verglichen. Eine Violation gilt als erkannt, wenn sie in der Mehrzahl der zehn Testläufe im finalen \ac{LLM}-Report erscheint.
     \item \textbf{Qualitative Empfehlungsbewertung:} Die generierten Handlungsempfehlungen werden anhand einer dreistufigen Bewertungsskala (Stufe~0--2) nach Dateikonkretheit und Code-Fix-Qualität bewertet.
-    \item \textbf{\ac{BWEC}-Feldtest:} Die Pipeline wird ergänzend auf dem realen \ac{BWEC}-Untersuchungs\-objekt eingesetzt, um Systemstabilität und qualitative Plausibilität unter realen Bedingungen zu prüfen.\footcites[Vgl.][]{axe}[Vgl.][]{kodithuwakku_assessing_2025}
+    \item \textbf{\ac{BWEC}-Feldtest:} Die Pipeline wird ergänzend auf dem realen \ac{BWEC}-Untersuchungs\-objekt eingesetzt, um Systemstabilität und qualitative Plausibilität unter realen Bedingungen zu prüfen.\footcites[Vgl.][]{axe}[][]{kodithuwakku_assessing_2025}
 \end{enumerate}
 
 \subsection{Bewertungskriterien}

@@ -326,7 +326,7 @@ Die Baseline-Tools erkennen stabil 34\,/\,100~Violations. Der \ac{LLM}-Detektor 
 \end{itemize}
 Der deutliche Recall-Zuwachs von \texttt{qwen3:32b} gegenüber der Baseline (+29~Violations) spricht auch bei 100~Violations für einen substanziellen Mehrwert der \ac{LLM}-Erweiterung. Die hohe Truncation-Rate bei 7b und 14b begrenzt deren Erkennungsleistung hingegen systematisch.
 
-Die 37 nicht erkannten Violations bei \texttt{qwen3:32b} verteilen sich auf 16 syntaktische, 13 semantische und 8 layout-bezogene Fälle (vgl. Abbildung~\ref{fig:graph_pareto_demo} im Anhang). Strukturell dominieren drei Ursachenklassen: Interaktions- oder Zustandsfälle ohne robuste Playwright-Instrumentierung (z.\,B. V78), rein manuell prüfbare semantische Fälle (z.\,B. Status nur durch Farbe) sowie Befunde, die die $>\,5/10$-Konsistenzschwelle verfehlen.
+Die 37 nicht erkannten Violations bei \texttt{qwen3:32b} sind nach Ursachenklassen im Anhang aufgeschlüsselt (vgl. Abbildung~\ref{fig:graph_pareto_demo}). Strukturell dominieren drei Ursachenklassen: Interaktions- oder Zustandsfälle ohne robuste Playwright-Instrumentierung (z.\,B. V78), rein manuell prüfbare semantische Fälle (z.\,B. Status nur durch Farbe) sowie Befunde, die die $>\,5/10$-Konsistenzschwelle verfehlen.
 
 \textbf{Einordnung der Pareto-Perspektive.}
 Für die Ursachenanalyse wird ein Pareto-Diagramm\footnote{Ein Pareto-Diagramm kombiniert ein nach Häufigkeit absteigend sortiertes Balkendiagramm mit einer kumulativen Linie und macht so sichtbar, welche Ursachenklassen den größten Anteil am Gesamtproblem ausmachen (Pareto-Prinzip: ca. 80\,\% der Effekte entstehen durch 20\,\% der Ursachen).} gezielt auf \textbf{test-100 mit \texttt{qwen3:32b}} angewendet, da dieses Modell den höchsten Recall bei zugleich nur 1\,/\,10 trunkierten Testläufen erreicht. Die verbleibenden Lücken lassen sich damit weniger auf offensichtliche Modellschwächen als vielmehr auf strukturell schwierige Violations zurückführen.
@@ -507,12 +507,12 @@ Die übergeordnete Forschungsfrage kann positiv beantwortet werden, mit modell- 
 
 Über die drei kontrollierten Testsuiten zeigt sich konsistent ein Mehrwert durch die \ac{LLM}-Erweiterung: auf test-12 steigt der Recall von 66,7\,\% auf bis zu 100\,\%, auf test-50 von 43\,/\,50 auf 48\,/\,50 bzw.\ 50\,/\,50 und auf test-100 von 34\,/\,100 auf 53\,/\,100 bzw.\ 63\,/\,100. Ein direkter Benchmark gegen Literaturwerte bleibt methodisch eingeschränkt, da Datensätze, Ground-Truth-Konstruktion, Metriken und Laufzeitumgebungen nicht identisch sind.
 
-\subsection{TF2: Mehrwert der Kontextkombination und Ablationsanalyse}
+\subsection{TF2: Mehrwert der Kontextkombination und partielle Ablationsanalyse}
 \label{sec:ff_tf2}
 
 \textbf{Ja, der Mehrwert ist messbar und zeigt sich sowohl quantitativ als auch qualitativ.} Die Tool-Pipeline (axe + Playwright + grep) erreicht auf test-12 einen Recall von 66{,}7\,\% (8\,/\,12). Durch den \ac{LLM}-Detektor steigt der Recall auf bis zu 100\,\%. Dabei betrifft der Zugewinn genau jene Violations, die durch die regelbasierten Quellen nicht zuverlässig erreichbar sind: V8 (modaler Fokus-Trap), V11 (\ac{DOM}-/visuelle Reihenfolge) und V12 (Mindestgröße interaktiver Elemente) werden erst durch die \ac{LLM}-gestützte Analyse konsistent erfasst; V2 (fehlendes \texttt{aria-label} auf Icon-Button) ebenfalls ab 14b.
 
-\textbf{Ablationsanalyse: Beitrag des \ac{LLM}-Detektors.}
+\textbf{Partielle Ablationsanalyse: Beitrag des \ac{LLM}-Detektors.}
 Um den Recall-Beitrag der einzelnen Pipeline-Stufen zu isolieren, werden zwei empirisch gemessene Bedingungen um eine architekturell begründete Bedingung~B ergänzt:
 
 \begin{table}[htbp]
@@ -528,7 +528,7 @@ B & Stufe-2-Priorisierer ohne \ac{LLM}-Detektor (Stufe 1)& $\leq$~8\,/\,12      
 C & Vollständige Pipeline (Stufe~1~+~2, \texttt{qwen3:32b}) & 12\,/\,12 (100\,\%) & gemessen \\
 \bottomrule
 \end{tabular}
-\caption[Ablationsanalyse: Recall-Beitrag der Pipeline-Stufen]{Ablationsanalyse auf test-12. Bedingung~B ist architekturell begründet: Der Priorisierer (Stufe~2) verarbeitet ausschließlich die ihm übergebenen Findings und kann daher per Konstruktion keine neuen Violations erkennen.}
+\caption[Partielle Ablationsanalyse: Recall-Beitrag der Pipeline-Stufen]{Partielle Ablationsanalyse auf test-12. Bedingung~B ist architekturell begründet: Der Priorisierer (Stufe~2) verarbeitet ausschließlich die ihm übergebenen Findings und kann daher per Konstruktion keine neuen Violations erkennen.}
 \label{tab:ablation}
 \end{table}
 

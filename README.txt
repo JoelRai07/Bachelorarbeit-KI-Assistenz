@@ -1,1 +1,1 @@
-Frage an den Pruefer: An mehreren Stellen verwendest du „Vgl. X; Vgl. Y" – DHBW-üblich ist „Vgl. X; Y" ohne zweites „Vgl."; uneinheitlich (z. B. Fn 7, Fn 39, Fn 49). In einer halben Stunde komplett vereinheitlichbar.
+Diese Whitespaces sind LaTeX-typisch durch \chapter-Breaks; mit \flushbottom und gezieltem Vermeiden sehr kurzer Halbseiten an Kapitelenden teils glättbar – aber hier nicht prioritär.
