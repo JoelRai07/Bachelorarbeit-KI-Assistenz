@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.9.8)  3 MAY 2026 01:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.9.8)  3 MAY 2026 20:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1486,78 +1486,78 @@ although it is yet undefined on input line 27.
 
 
 [7]
-<graphics/WCAG-Dreieck-4-Ebenen.png, id=989, 770.88pt x 643.6547pt>
-File: graphics/WCAG-Dreieck-4-Ebenen.png Graphic file (type png)
-<use graphics/WCAG-Dreieck-4-Ebenen.png>
-Package pdftex.def Info: graphics/WCAG-Dreieck-4-Ebenen.png  used on input line 35.
-(pdftex.def)             Requested size: 204.85846pt x 171.04892pt.
-Package acronym Info: Label `acro:HTML' overridden on input line 40.
+<graphics/neuepyramide.png, id=990, 1027.84pt x 1027.84pt>
+File: graphics/neuepyramide.png Graphic file (type png)
+<use graphics/neuepyramide.png>
+Package pdftex.def Info: graphics/neuepyramide.png  used on input line 35.
+(pdftex.def)             Requested size: 204.85846pt x 204.8586pt.
+Package acronym Info: Label `acro:HTML' overridden on input line 41.
 
 
-[8 <./graphics/WCAG-Dreieck-4-Ebenen.png>]
-Package acronym Info: Label `acro:HTML' overridden on input line 55.
-Package acronym Info: Label `acro:SEO' newly defined as it shall be overridden
-although it is yet undefined on input line 61.
+[8 <./graphics/neuepyramide.png>]
+Package acronym Info: Label `acro:HTML' overridden on input line 56.
 
 
 [9]
-Package acronym Info: Label `acro:HTML' overridden on input line 64.
+Package acronym Info: Label `acro:SEO' newly defined as it shall be overridden
+although it is yet undefined on input line 62.
+Package acronym Info: Label `acro:HTML' overridden on input line 65.
 
 
 [10]
 
 [11] (includes/taxonomie-figure.tex)
 Package acronym Info: Label `acro:SPA' newly defined as it shall be overridden
-although it is yet undefined on input line 118.
-Package acronym Info: Label `acro:HTML' overridden on input line 118.
+although it is yet undefined on input line 119.
+Package acronym Info: Label `acro:HTML' overridden on input line 119.
 
 
 [12]
 Package acronym Info: Label `acro:JSX' newly defined as it shall be overridden
-although it is yet undefined on input line 125.
-Package acronym Info: Label `acro:HTML' overridden on input line 125.
+although it is yet undefined on input line 126.
+Package acronym Info: Label `acro:HTML' overridden on input line 126.
 
 
 [13]
-Package acronym Info: Label `acro:HTML' overridden on input line 134.
+Package acronym Info: Label `acro:HTML' overridden on input line 135.
 
-Underfull \hbox (badness 1762) in paragraph at lines 134--135
+Underfull \hbox (badness 1762) in paragraph at lines 135--136
 []\T1/cmr/m/n/10.95 Zwischen Quell-co-de und ge-ren-der-tem [][] be-steht ei-ne Dis-kre-panz, die für die
  []
 
 
-Underfull \hbox (badness 2903) in paragraph at lines 134--135
+Underfull \hbox (badness 2903) in paragraph at lines 135--136
 \T1/cmr/m/n/10.95 React-Laufzeitumgebung, die die-se De-fi-ni-tio-nen in [][]-Elemente über-setzt. Ein
  []
 
-Package acronym Info: Label `acro:API' overridden on input line 142.
+Package acronym Info: Label `acro:API' overridden on input line 143.
 
 
 [14]
 Package acronym Info: Label `acro:JSON' newly defined as it shall be overridden
-although it is yet undefined on input line 150.
-Package acronym Info: Label `acro:KI' overridden on input line 152.
-Package acronym Info: Label `acro:KI' overridden on input line 154.
+although it is yet undefined on input line 151.
+Package acronym Info: Label `acro:KI' overridden on input line 153.
+Package acronym Info: Label `acro:KI' overridden on input line 155.
 
 
 [15]
 
 [16]
 Package acronym Info: Label `acro:CoT' newly defined as it shall be overridden
-although it is yet undefined on input line 175.
-Package acronym Info: Label `acro:RAG' overridden on input line 182.
-Package acronym Info: Label `acro:RAG' overridden on input line 184.
+although it is yet undefined on input line 176.
+Package acronym Info: Label `acro:RAG' overridden on input line 183.
+Package acronym Info: Label `acro:RAG' overridden on input line 185.
 
 
 [17]
-Package acronym Info: Label `acro:HTML' overridden on input line 195.
+Package acronym Info: Label `acro:HTML' overridden on input line 196.
 Package acronym Info: Label `acro:DSGVO' newly defined as it shall be overridden
-although it is yet undefined on input line 195.
-Package acronym Info: Label `acro:HTML' overridden on input line 199.
+although it is yet undefined on input line 196.
 
 
 [18]
-Package acronym Info: Label `acro:KI' overridden on input line 201.
+Package acronym Info: Label `acro:HTML' overridden on input line 200.
+Package acronym Info: Label `acro:KI' overridden on input line 202.
 ) (includes/caps/3.tex
 
 [19]
@@ -1692,7 +1692,7 @@ Package acronym Info: Label `acro:JSON' overridden on input line 100.
 
 
 [35
-pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.393}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.395}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.111 
@@ -1948,7 +1948,7 @@ LaTeX Warning: Hyper reference `app:block_bwec' on page 68 undefined on input li
 [68
 
 ]
-<graphics/ComplexitÃ¤t.png, id=2852, 1336.24219pt x 534.49687pt>
+<graphics/ComplexitÃ¤t.png, id=2856, 1336.24219pt x 534.49687pt>
 File: graphics/ComplexitÃ¤t.png Graphic file (type png)
 <use graphics/ComplexitÃ¤t.png>
 Package pdftex.def Info: graphics/ComplexitÃ¤t.png  used on input line 44.
@@ -2524,12 +2524,12 @@ Underfull \hbox (badness 6691) in paragraph at lines 1279--1279
 [93
 
 ]
-<graphics/test12-screen1.png, id=3352, 1443.89438pt x 777.65532pt>
+<graphics/test12-screen1.png, id=3356, 1443.89438pt x 777.65532pt>
 File: graphics/test12-screen1.png Graphic file (type png)
 <use graphics/test12-screen1.png>
 Package pdftex.def Info: graphics/test12-screen1.png  used on input line 1310.
 (pdftex.def)             Requested size: 341.43307pt x 183.88817pt.
-<graphics/test12-screen2.png, id=3353, 442.65375pt x 669.2503pt>
+<graphics/test12-screen2.png, id=3357, 442.65375pt x 669.2503pt>
 File: graphics/test12-screen2.png Graphic file (type png)
 <use graphics/test12-screen2.png>
 Package pdftex.def Info: graphics/test12-screen2.png  used on input line 1317.
@@ -3021,12 +3021,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1932--1933
 ] [110] [111]
 
 [112]
-<graphics/test-50-Bild1.png, id=3562, 1444.64719pt x 773.89125pt>
+<graphics/test-50-Bild1.png, id=3566, 1444.64719pt x 773.89125pt>
 File: graphics/test-50-Bild1.png Graphic file (type png)
 <use graphics/test-50-Bild1.png>
 Package pdftex.def Info: graphics/test-50-Bild1.png  used on input line 1948.
 (pdftex.def)             Requested size: 409.71692pt x 219.4749pt.
-<graphics/test-50-Bild2.png, id=3563, 1443.89438pt x 773.89125pt>
+<graphics/test-50-Bild2.png, id=3567, 1443.89438pt x 773.89125pt>
 File: graphics/test-50-Bild2.png Graphic file (type png)
 <use graphics/test-50-Bild2.png>
 Package pdftex.def Info: graphics/test-50-Bild2.png  used on input line 1956.
@@ -3036,12 +3036,12 @@ Package pdftex.def Info: graphics/test-50-Bild2.png  used on input line 1956.
 [113
 
  <./graphics/test-50-Bild1.png> <./graphics/test-50-Bild2.png>]
-<graphics/test-50-Bild3.png, id=3571, 1444.64719pt x 773.89125pt>
+<graphics/test-50-Bild3.png, id=3575, 1444.64719pt x 773.89125pt>
 File: graphics/test-50-Bild3.png Graphic file (type png)
 <use graphics/test-50-Bild3.png>
 Package pdftex.def Info: graphics/test-50-Bild3.png  used on input line 1965.
 (pdftex.def)             Requested size: 432.48051pt x 231.6732pt.
-<graphics/test-50-Bild4.png, id=3572, 1444.64719pt x 313.9228pt>
+<graphics/test-50-Bild4.png, id=3576, 1444.64719pt x 313.9228pt>
 File: graphics/test-50-Bild4.png Graphic file (type png)
 <use graphics/test-50-Bild4.png>
 Package pdftex.def Info: graphics/test-50-Bild4.png  used on input line 1972.
@@ -4043,17 +4043,17 @@ Underfull \hbox (badness 1226) in paragraph at lines 2908--2909
 \T1/cmr/m/it/10.95 Anmerkung: \T1/cmr/m/n/10.95 Tei-le der test-100-Suite ver-wen-den die-sel-ben bzw. struk-tu-rell sehr ähn-li-che
  []
 
-<graphics/Chat-100.png, id=3881, 1444.64719pt x 407.27156pt>
+<graphics/Chat-100.png, id=3885, 1444.64719pt x 407.27156pt>
 File: graphics/Chat-100.png Graphic file (type png)
 <use graphics/Chat-100.png>
 Package pdftex.def Info: graphics/Chat-100.png  used on input line 2912.
 (pdftex.def)             Requested size: 432.48051pt x 121.92139pt.
-<graphics/Suche-100.png, id=3882, 1442.38875pt x 447.92343pt>
+<graphics/Suche-100.png, id=3886, 1442.38875pt x 447.92343pt>
 File: graphics/Suche-100.png Graphic file (type png)
 <use graphics/Suche-100.png>
 Package pdftex.def Info: graphics/Suche-100.png  used on input line 2919.
 (pdftex.def)             Requested size: 432.48051pt x 134.30287pt.
-<graphics/Einstellungen-100.png, id=3883, 1444.64719pt x 356.83313pt>
+<graphics/Einstellungen-100.png, id=3887, 1444.64719pt x 356.83313pt>
 File: graphics/Einstellungen-100.png Graphic file (type png)
 <use graphics/Einstellungen-100.png>
 Package pdftex.def Info: graphics/Einstellungen-100.png  used on input line 2926.
@@ -4063,17 +4063,17 @@ Package pdftex.def Info: graphics/Einstellungen-100.png  used on input line 2926
 [145
 
  <./graphics/Chat-100.png> <./graphics/Suche-100.png> <./graphics/Einstellungen-100.png>]
-<graphics/Kalender-100.png, id=3892, 1444.64719pt x 420.06938pt>
+<graphics/Kalender-100.png, id=3896, 1444.64719pt x 420.06938pt>
 File: graphics/Kalender-100.png Graphic file (type png)
 <use graphics/Kalender-100.png>
 Package pdftex.def Info: graphics/Kalender-100.png  used on input line 2935.
 (pdftex.def)             Requested size: 432.48051pt x 125.75258pt.
-<graphics/Hilfe-Center-100.png, id=3893, 1444.64719pt x 368.1253pt>
+<graphics/Hilfe-Center-100.png, id=3897, 1444.64719pt x 368.1253pt>
 File: graphics/Hilfe-Center-100.png Graphic file (type png)
 <use graphics/Hilfe-Center-100.png>
 Package pdftex.def Info: graphics/Hilfe-Center-100.png  used on input line 2942.
 (pdftex.def)             Requested size: 432.48051pt x 110.20251pt.
-<graphics/DateiUplaod-100.png, id=3894, 1444.64719pt x 338.01282pt>
+<graphics/DateiUplaod-100.png, id=3898, 1444.64719pt x 338.01282pt>
 File: graphics/DateiUplaod-100.png Graphic file (type png)
 <use graphics/DateiUplaod-100.png>
 Package pdftex.def Info: graphics/DateiUplaod-100.png  used on input line 2949.
@@ -4223,17 +4223,6 @@ Underfull \hbox (badness 1028) in paragraph at lines 82--82
 
 
 [167]
-
-Package biblatex Warning: Field 'extrayear' is deprecated.
-(biblatex)                Please use 'extradate' instead.
-(biblatex)                Using 'extradate' now.
-
-
-Underfull \hbox (badness 1158) in paragraph at lines 82--82
-[][]\T1/cmr/bx/n/10.95 WebAIM (2026b)\T1/cmr/m/n/10.95 : We-bAIM: Key-board Ac-ces-si-bi-li-ty. \T1/cmr/m/sc/10.95 url\T1/cmr/m/n/10.95 : []$\T1/cmtt/m/n/10.95 https : / / webaim . org /
- []
-
-
 Underfull \hbox (badness 1024) in paragraph at lines 82--82
 [][]\T1/cmr/bx/n/10.95 Google (2025)\T1/cmr/m/n/10.95 : \T1/cmr/m/it/10.95 Lighthou-se: Au-to-ma-ted au-diting, per-for-man-ce, and ac-ces-si-bi-li-ty tool for
  []
@@ -4259,7 +4248,7 @@ Package biblatex Warning: No driver for 'legislation'.
 
 
 Underfull \hbox (badness 1721) in paragraph at lines 82--82
-[][]\T1/cmr/bx/n/10.95 European Com-mis-si-on (2026)\T1/cmr/m/n/10.95 : \T1/cmr/m/it/10.95 Eu-ro-pean ac-ces-si-bi-li-ty act (EAA)\T1/cmr/m/n/10.95 . \T1/cmr/m/sc/10.95 url\T1/cmr/m/n/10.95 : []$\T1/cmtt/m/n/10.95 https : / /
+[][]\T1/cmr/bx/n/10.95 European Com-mis-si-on (2019)\T1/cmr/m/n/10.95 : \T1/cmr/m/it/10.95 Eu-ro-pean ac-ces-si-bi-li-ty act (EAA)\T1/cmr/m/n/10.95 . \T1/cmr/m/sc/10.95 url\T1/cmr/m/n/10.95 : []$\T1/cmtt/m/n/10.95 https : / /
  []
 
 
@@ -4346,32 +4335,32 @@ Package logreq Info: Writing requests to 'latex-vorlage.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54784 strings out of 473523
- 1249953 string characters out of 5714631
- 2649082 words of memory out of 5000000
- 75891 multiletter control sequences out of 15000+600000
+ 54792 strings out of 473523
+ 1250118 string characters out of 5714631
+ 2650655 words of memory out of 5000000
+ 75897 multiletter control sequences out of 15000+600000
  592850 words of font info for 113 fonts, out of 8000000 for 9000
  1146 hyphenation exceptions out of 8191
  108i,19n,127p,10962b,2447s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-pdfTeX warning (dest): name{Hfootnote.846} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.848} has been referenced but does not exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{Hfootnote.809} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.811} has been referenced but does not exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{Hfootnote.770} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.772} has been referenced but does not exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{Hfootnote.559} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.561} has been referenced but does not exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{Hfootnote.392} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.394} has been referenced but does not exist, replaced by a fixed one
 
- <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcsx1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on latex-vorlage.pdf (182 pages, 2753719 bytes).
+ <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcsx1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\joely\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/joely/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on latex-vorlage.pdf (182 pages, 3775824 bytes).
 PDF statistics:
- 6555 PDF objects out of 7423 (max. 8388607)
- 1265 named destinations out of 1440 (max. 500000)
+ 6558 PDF objects out of 7423 (max. 8388607)
+ 1267 named destinations out of 1440 (max. 500000)
  1023 words of extra memory for PDF output out of 10000 (max. 10000000)
 

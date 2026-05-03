@@ -919,6 +919,41 @@
       \verb https://www.barrierefreiheit-dienstekonsolidierung.bund.de/Webs/PB/DE/gesetze-und-richtlinien/bitv2-0/bitv2-0-node.html
       \endverb
     \endentry
+    \entry{WCAGRegelnVerstehen}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e9272f26e98fdef3c96c848118dad2ab}{%
+           family={Charismarcom},
+           familyi={C\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Charismarcom}%
+      }
+      \strng{namehash}{e9272f26e98fdef3c96c848118dad2ab}
+      \strng{fullhash}{e9272f26e98fdef3c96c848118dad2ab}
+      \strng{fullhashraw}{e9272f26e98fdef3c96c848118dad2ab}
+      \strng{bibnamehash}{e9272f26e98fdef3c96c848118dad2ab}
+      \strng{authorbibnamehash}{e9272f26e98fdef3c96c848118dad2ab}
+      \strng{authornamehash}{e9272f26e98fdef3c96c848118dad2ab}
+      \strng{authorfullhash}{e9272f26e98fdef3c96c848118dad2ab}
+      \strng{authorfullhashraw}{e9272f26e98fdef3c96c848118dad2ab}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{ngerman}
+      \field{title}{WCAG Regeln verstehen und umsetzen | Agentur Charismarcom}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.charismarcom.de/wcag/
+      \endverb
+      \verb{url}
+      \verb https://www.charismarcom.de/wcag/
+      \endverb
+    \endentry
     \entry{chiou_detecting_2021}{inproceedings}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=847ec50c29d00424a35b65c19d75894f}{%
@@ -1101,14 +1136,18 @@
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{day}{19}
       \field{journaltitle}{BFSG}
+      \field{month}{3}
       \field{title}{BFSG (Barrierefreiheitsstärkungsgesetz)}
       \field{urlday}{24}
       \field{urlmonth}{2}
       \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://bfsg-gesetz.de/
@@ -1238,14 +1277,18 @@
       \field{sortinit}{E}
       \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{day}{17}
       \field{journaltitle}{European Commission}
+      \field{month}{4}
       \field{title}{European accessibility act (EAA)}
       \field{urlday}{24}
       \field{urlmonth}{2}
       \field{urlyear}{2026}
+      \field{year}{2019}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/european-accessibility-act-eaa_en
@@ -1466,7 +1509,11 @@
       \field{eprintclass}{cs.SE}
       \field{eprinttype}{arXiv}
       \field{title}{Automated LLM-Based Accessibility Remediation: From Conventional Websites to Angular Single-Page Applications}
+      \field{urlday}{15}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
       \field{year}{2026}
+      \field{urldateera}{ce}
       \verb{eprint}
       \verb 2602.17887
       \endverb
@@ -3522,29 +3569,6 @@
       \endverb
       \keyw{Computer Science - Computation and Language}
     \endentry
-    \entry{JavaScriptSyntaxTypesa}{software}{}{}
-      \field{sortinit}{J}
-      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labeltitlesource}{title}
-      \field{abstract}{TypeScript extends JavaScript by adding types to the language. TypeScript speeds up your development experience by catching errors and providing fixes before you even run your code.}
-      \field{langid}{english}
-      \field{title}{{{JavaScript With Syntax For Types}}.}
-      \field{urlday}{14}
-      \field{urlmonth}{3}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb C:\Users\joely\Zotero\storage\GJECNN3U\www.typescriptlang.org.html
-      \endverb
-      \verb{urlraw}
-      \verb https://www.typescriptlang.org/
-      \endverb
-      \verb{url}
-      \verb https://www.typescriptlang.org/
-      \endverb
-    \endentry
     \entry{jiang2023mistral7b}{inproceedings}{}{}
       \name{author}{18}{}{%
         {{un=0,uniquepart=base,hash=a91e014a59af240c37c0fc26432a125b}{%
@@ -3727,7 +3751,11 @@
       \field{edition}{3rd}
       \field{note}{Online manuscript released January 6, 2026}
       \field{title}{Speech and Language Processing: An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition with Language Models}
+      \field{urlday}{9}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
       \field{year}{2026}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://web.stanford.edu/~jurafsky/slp3/
       \endverb
@@ -4149,9 +4177,13 @@
       \field{labeltitlesource}{title}
       \field{booktitle}{Advances in Neural Information Processing Systems}
       \field{title}{Retrieval-Augmented Generation for Knowledge-Intensive {{NLP}} Tasks}
+      \field{urlday}{1}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
       \field{volume}{33}
       \field{year}{2020}
       \field{dateera}{ce}
+      \field{urldateera}{ce}
       \field{pages}{9459\bibrangedash 9474}
       \range{pages}{16}
       \verb{urlraw}
@@ -4302,6 +4334,47 @@
       \verb https://react.dev/
       \endverb
     \endentry
+    \entry{JavaScriptSyntaxTypesa}{software}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={Microsoft},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{TypeScript extends JavaScript by adding types to the language. TypeScript speeds up your development experience by catching errors and providing fixes before you even run your code.}
+      \field{langid}{english}
+      \field{title}{{{JavaScript With Syntax For Types}}.}
+      \field{urlday}{14}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\joely\Zotero\storage\GJECNN3U\www.typescriptlang.org.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.typescriptlang.org/
+      \endverb
+      \verb{url}
+      \verb https://www.typescriptlang.org/
+      \endverb
+    \endentry
     \entry{playwright}{software}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=140864078aeca1c7c35b4beb33c53c34}{%
@@ -4316,8 +4389,10 @@
       \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
       \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
       \strng{authorfullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \field{extraname}{2}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{2}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -4813,7 +4888,7 @@
       \field{sortinit}{O}
       \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{OpenAI API Reference}
@@ -4821,6 +4896,8 @@
       \field{urlday}{1}
       \field{urlmonth}{3}
       \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://developers.openai.com/api/reference/resources/completions/methods/create/
@@ -6306,7 +6383,11 @@
       \field{eprintclass}{cs.CL}
       \field{eprinttype}{arXiv}
       \field{title}{Attention Is All You Need}
+      \field{urlday}{5}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
       \field{year}{2023}
+      \field{urldateera}{ce}
       \verb{eprint}
       \verb 1706.03762
       \endverb
@@ -6490,7 +6571,7 @@
       \verb https://webaim.org/projects/million/2019
       \endverb
     \endentry
-    \entry{WebAIM}{online}{}{}
+    \entry{WebAIMKeyboardAccessibility}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=790eee551afe5a8832859712ba1b5f4f}{%
            family={WebAIM},
@@ -6505,6 +6586,43 @@
       \strng{authorfullhash}{790eee551afe5a8832859712ba1b5f4f}
       \strng{authorfullhashraw}{790eee551afe5a8832859712ba1b5f4f}
       \field{extraname}{2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{26}
+      \field{month}{9}
+      \field{title}{{WebAIM}: Keyboard Accessibility}
+      \field{urlday}{4}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://webaim.org/techniques/keyboard/
+      \endverb
+      \verb{url}
+      \verb https://webaim.org/techniques/keyboard/
+      \endverb
+    \endentry
+    \entry{WebAIM}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=790eee551afe5a8832859712ba1b5f4f}{%
+           family={WebAIM},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{fullhash}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{fullhashraw}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{bibnamehash}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{authorbibnamehash}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{authornamehash}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{authorfullhash}{790eee551afe5a8832859712ba1b5f4f}
+      \strng{authorfullhashraw}{790eee551afe5a8832859712ba1b5f4f}
+      \field{extraname}{3}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{extradatescope}{labelyear}
@@ -6540,12 +6658,11 @@
       \strng{authornamehash}{790eee551afe5a8832859712ba1b5f4f}
       \strng{authorfullhash}{790eee551afe5a8832859712ba1b5f4f}
       \strng{authorfullhashraw}{790eee551afe5a8832859712ba1b5f4f}
-      \field{extraname}{3}
+      \field{extraname}{4}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{extradate}{1}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{WAVE Web Accessibility Evaluation Tool}
@@ -6553,46 +6670,14 @@
       \field{urlday}{28}
       \field{urlmonth}{2}
       \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://wave.webaim.org/
       \endverb
       \verb{url}
       \verb https://wave.webaim.org/
-      \endverb
-    \endentry
-    \entry{WebAIMKeyboardAccessibility}{online}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=790eee551afe5a8832859712ba1b5f4f}{%
-           family={WebAIM},
-           familyi={W\bibinitperiod}}}%
-      }
-      \strng{namehash}{790eee551afe5a8832859712ba1b5f4f}
-      \strng{fullhash}{790eee551afe5a8832859712ba1b5f4f}
-      \strng{fullhashraw}{790eee551afe5a8832859712ba1b5f4f}
-      \strng{bibnamehash}{790eee551afe5a8832859712ba1b5f4f}
-      \strng{authorbibnamehash}{790eee551afe5a8832859712ba1b5f4f}
-      \strng{authornamehash}{790eee551afe5a8832859712ba1b5f4f}
-      \strng{authorfullhash}{790eee551afe5a8832859712ba1b5f4f}
-      \strng{authorfullhashraw}{790eee551afe5a8832859712ba1b5f4f}
-      \field{extraname}{4}
-      \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{extradate}{2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{{WebAIM}: Keyboard Accessibility}
-      \field{urlday}{4}
-      \field{urlmonth}{3}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://webaim.org/techniques/keyboard/
-      \endverb
-      \verb{url}
-      \verb https://webaim.org/techniques/keyboard/
       \endverb
     \endentry
     \entry{WebsterWatson2002}{article}{}{}
@@ -6790,11 +6875,11 @@
            given={Maarten},
            giveni={M\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=5e60cdd23d7f33ec86e49a7b10e86129}{%
-           family={{ichter}},
-           familyi={i\bibinitperiod},
-           given={brian},
-           giveni={b\bibinitperiod},
+        {{un=0,uniquepart=base,hash=a096e9107f0463212211c4510c6fa470}{%
+           family={Ichter},
+           familyi={I\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod},
            givenun=0}}%
         {{un=0,uniquepart=base,hash=61e00ed0c44b8bddb9077a74a4ac1167}{%
            family={Xia},
@@ -6857,13 +6942,13 @@
         {Curran Associates, Inc.}%
       }
       \strng{namehash}{b14663f4d0bd3b59eb629fe8a9acd724}
-      \strng{fullhash}{84c869427df2bcc99b6d065525eb6829}
-      \strng{fullhashraw}{84c869427df2bcc99b6d065525eb6829}
-      \strng{bibnamehash}{84c869427df2bcc99b6d065525eb6829}
-      \strng{authorbibnamehash}{84c869427df2bcc99b6d065525eb6829}
+      \strng{fullhash}{0a6023425e9f1a427e86985342d6f7ef}
+      \strng{fullhashraw}{0a6023425e9f1a427e86985342d6f7ef}
+      \strng{bibnamehash}{0a6023425e9f1a427e86985342d6f7ef}
+      \strng{authorbibnamehash}{0a6023425e9f1a427e86985342d6f7ef}
       \strng{authornamehash}{b14663f4d0bd3b59eb629fe8a9acd724}
-      \strng{authorfullhash}{84c869427df2bcc99b6d065525eb6829}
-      \strng{authorfullhashraw}{84c869427df2bcc99b6d065525eb6829}
+      \strng{authorfullhash}{0a6023425e9f1a427e86985342d6f7ef}
+      \strng{authorfullhashraw}{0a6023425e9f1a427e86985342d6f7ef}
       \strng{editorbibnamehash}{149e334d093f657bc216da323592d003}
       \strng{editornamehash}{ef48c9a3cb05b7d5bc7df5bc7eec0b92}
       \strng{editorfullhash}{149e334d093f657bc216da323592d003}
@@ -6876,9 +6961,13 @@
       \field{labeltitlesource}{title}
       \field{booktitle}{Advances in Neural Information Processing Systems}
       \field{title}{Chain-of-Thought Prompting Elicits Reasoning in Large Language Models}
+      \field{urlday}{9}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
       \field{volume}{35}
       \field{year}{2022}
       \field{dateera}{ce}
+      \field{urldateera}{ce}
       \field{pages}{24824\bibrangedash 24837}
       \range{pages}{14}
       \verb{urlraw}
@@ -6907,8 +6996,7 @@
       \strng{authorfullhashraw}{531217507bec092b6ec36c0f78f46736}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{World Health Organization}
@@ -7052,14 +7140,18 @@
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{extradate}{2}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{day}{30}
       \field{journaltitle}{W3C WAI}
+      \field{month}{1}
       \field{title}{Web Accessibility Initiative}
       \field{urlday}{28}
       \field{urlmonth}{2}
       \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.w3.org/WAI/
@@ -7448,7 +7540,11 @@
       \field{eprintclass}{cs.CL}
       \field{eprinttype}{arXiv}
       \field{title}{Qwen3 Technical Report}
+      \field{urlday}{15}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
       \field{year}{2025}
+      \field{urldateera}{ce}
       \verb{eprint}
       \verb 2505.09388
       \endverb

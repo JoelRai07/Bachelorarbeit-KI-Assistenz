@@ -11,108 +11,108 @@
 \contentsline {section}{\numberline {2.1}Barrierefreiheit von Webanwendungen}{6}{section.93}%
 \contentsline {subsection}{\numberline {2.1.1}Begriffsdefinition und Relevanz}{6}{subsection.94}%
 \contentsline {subsection}{\numberline {2.1.2}\acs {WCAG}: Aufbau, Prinzipien und Konformitätsstufen}{7}{subsection.111}%
-\contentsline {subsection}{\numberline {2.1.3}Rechtlicher Rahmen}{9}{subsection.124}%
-\contentsline {section}{\numberline {2.2}Automatisierte Barrierefreiheitsanalyse}{9}{section.126}%
-\contentsline {subsection}{\numberline {2.2.1}Klassische Tool-Ansätze}{9}{subsection.128}%
-\contentsline {subsection}{\numberline {2.2.2}Grenzen bestehender Tools}{10}{subsection.140}%
-\contentsline {subsection}{\numberline {2.2.3}Taxonomie der Verstöße: syntaktisch, semantisch, Layout}{11}{subsection.153}%
-\contentsline {section}{\numberline {2.3}Rich-Client-Webanwendungen und Testautomatisierung}{12}{section.164}%
-\contentsline {subsection}{\numberline {2.3.1}Charakteristika und Abgrenzung}{12}{subsection.165}%
-\contentsline {subsection}{\numberline {2.3.2}Herausforderungen für die Barrierefreiheitsprüfung}{13}{subsection.177}%
-\contentsline {subsection}{\numberline {2.3.3}Playwright als Testautomatisierungswerkzeug}{14}{subsection.187}%
-\contentsline {section}{\numberline {2.4}\acs {KI}-Assistenzsysteme für Softwareanalyse und Handlungsempfehlungen}{15}{section.195}%
-\contentsline {subsection}{\numberline {2.4.1}Grundlagen: Large Language Models}{15}{subsection.199}%
-\contentsline {subsection}{\numberline {2.4.2}Prompt-Engineering-Strategien}{16}{subsection.213}%
-\contentsline {subsection}{\numberline {2.4.3}\acs {RAG} und Fine-Tuning als Erweiterungsansätze}{17}{subsection.223}%
-\contentsline {subsection}{\numberline {2.4.4}Digitale Souveränität und Datenschutz}{18}{subsection.228}%
-\contentsline {chapter}{\numberline {3}Stand der Forschung}{20}{chapter.245}%
-\contentsline {section}{\numberline {3.1}Vorgehen der Literaturrecherche}{20}{section.250}%
-\contentsline {section}{\numberline {3.2}Von frühen \acs {KI}-Ansätzen zur \acs {LLM}-basierten Erkennung}{20}{section.253}%
-\contentsline {section}{\numberline {3.3}\acs {LLM}-basierte Korrektur und Prompt-Engineering}{21}{section.258}%
-\contentsline {section}{\numberline {3.4}Hybride Pipelines und Ensemble-Testing}{21}{section.268}%
-\contentsline {section}{\numberline {3.5}Forschungslücken und Einordnung der vorliegenden Arbeit}{22}{section.276}%
-\contentsline {chapter}{\numberline {4}Methodik}{24}{chapter.289}%
-\contentsline {section}{\numberline {4.1}Wissenschaftliche Methode}{24}{section.290}%
-\contentsline {section}{\numberline {4.2}Untersuchungsgegenstand und Anwendungsbereich}{25}{section.301}%
-\contentsline {section}{\numberline {4.3}Evaluationsdesign und Kriterien}{25}{section.306}%
-\contentsline {subsection}{\numberline {4.3.1}Evaluationslogik}{26}{subsection.307}%
-\contentsline {subsection}{\numberline {4.3.2}Bewertungskriterien}{26}{subsection.315}%
-\contentsline {subsection}{\numberline {4.3.3}Limitationen des Evaluationsdesigns}{27}{subsection.320}%
-\contentsline {chapter}{\numberline {5}Analyse und Anforderungen}{28}{chapter.325}%
-\contentsline {section}{\numberline {5.1}Problemkontext und Handlungsbedarf}{28}{section.326}%
-\contentsline {section}{\numberline {5.2}\acl {FA}}{28}{section.330}%
-\contentsline {section}{\numberline {5.3}\acl {NFA}}{29}{section.344}%
-\contentsline {section}{\numberline {5.4}Lokale Inferenzinfrastruktur und Modellkandidaten}{30}{section.351}%
-\contentsline {subsection}{\numberline {5.4.1}Ollama als Laufzeitumgebung}{31}{subsection.353}%
-\contentsline {subsection}{\numberline {5.4.2}Anforderungen an das Sprachmodell}{31}{subsection.357}%
-\contentsline {subsection}{\numberline {5.4.3}Ausgewählte Modellkandidaten für die Evaluation}{31}{subsection.363}%
-\contentsline {subsection}{\numberline {5.4.4}Zusammenfassung der Anforderungen}{32}{subsection.367}%
-\contentsline {chapter}{\numberline {6}Konzeption des Assistenzsystems}{33}{chapter.371}%
-\contentsline {section}{\numberline {6.1}Zielarchitektur und Datenpipeline}{33}{section.372}%
-\contentsline {subsection}{\numberline {6.1.1}Analysequellen}{34}{subsection.384}%
-\contentsline {subsection}{\numberline {6.1.2}\acl {UFS}}{35}{subsection.395}%
-\contentsline {section}{\numberline {6.2}Prompt-Strategie}{36}{section.399}%
-\contentsline {subsection}{\numberline {6.2.1}Zweistufige Prompt-Strategie}{36}{subsection.400}%
-\contentsline {subsection}{\numberline {6.2.2}Wahl der Prompt-Engineering-Strategien}{36}{subsection.401}%
-\contentsline {subsection}{\numberline {6.2.3}Token-Budget-Steuerung}{37}{subsection.405}%
-\contentsline {section}{\numberline {6.3}Ausgabeformat: entwicklernahe To-Do-Liste}{37}{section.407}%
-\contentsline {chapter}{\numberline {7}Implementierung des Proof of Concept}{38}{chapter.410}%
-\contentsline {section}{\numberline {7.1}Technischer Rahmen und Projektstruktur}{38}{section.411}%
-\contentsline {section}{\numberline {7.2}axe-core-Modul}{38}{section.417}%
-\contentsline {section}{\numberline {7.3}Playwright-Modul}{39}{section.419}%
-\contentsline {section}{\numberline {7.4}Quellcode-Anreicherung und Anti-Pattern-Erkennung}{40}{section.421}%
-\contentsline {subsection}{\numberline {7.4.1}Anreicherung bestehender Findings}{40}{subsection.422}%
-\contentsline {subsection}{\numberline {7.4.2}Pattern-Findings}{40}{subsection.423}%
-\contentsline {section}{\numberline {7.5}\acs {LLM}-Detektor-Modul}{40}{section.424}%
-\contentsline {subsection}{\numberline {7.5.1}Abgrenzung zu grep und Nutzen der Kombination}{41}{subsection.433}%
-\contentsline {subsection}{\numberline {7.5.2}Beispielhafter Ablauf eines \acs {LLM}-Findings}{41}{subsection.434}%
-\contentsline {section}{\numberline {7.6}Prompt-Builder und System-Prompt}{42}{section.449}%
-\contentsline {subsection}{\numberline {7.6.1}System-Prompt}{42}{subsection.450}%
-\contentsline {subsection}{\numberline {7.6.2}Token-Budget-Steuerung}{43}{subsection.457}%
-\contentsline {subsection}{\numberline {7.6.3}Serialisierung}{43}{subsection.459}%
-\contentsline {section}{\numberline {7.7}Ollama-Client und Output-Formatter}{43}{section.460}%
-\contentsline {section}{\numberline {7.8}Pipeline-Orchestrierung}{44}{section.466}%
-\contentsline {section}{\numberline {7.9}Beispielabläufe am Untersuchungsobjekt}{44}{section.467}%
-\contentsline {chapter}{\numberline {8}Evaluation und Diskussion}{46}{chapter.469}%
-\contentsline {section}{\numberline {8.1}Versuchsdesign}{46}{section.470}%
-\contentsline {subsection}{\numberline {8.1.1}Testobjekte und Ground Truth}{46}{subsection.471}%
-\contentsline {subsection}{\numberline {8.1.2}Modelle, Konfiguration und Testläufe}{47}{subsection.472}%
-\contentsline {subsection}{\numberline {8.1.3}Metriken und Messverfahren}{47}{subsection.478}%
-\contentsline {section}{\numberline {8.2}Ergebnisse: Detektionsqualität (Recall)}{48}{section.483}%
-\contentsline {subsection}{\numberline {8.2.1}Baseline: Tool-Pipeline ohne \acs {LLM}-Detektor}{48}{subsection.485}%
-\contentsline {subsection}{\numberline {8.2.2}Recall nach \acs {LLM}-Detektor-Augmentierung}{48}{subsection.486}%
-\contentsline {subsection}{\numberline {8.2.3}Erkennungsleistung nach Verstoßkategorie}{49}{subsection.489}%
-\contentsline {section}{\numberline {8.3}Ergebnisse: Priorisierungsqualität}{50}{section.494}%
-\contentsline {subsection}{\numberline {8.3.1}Modellvergleich Must-have und Nice-to-have}{50}{subsection.495}%
-\contentsline {section}{\numberline {8.4}Ergebnisse: Fix-Qualität (qualitativ)}{51}{section.497}%
-\contentsline {subsection}{\numberline {8.4.1}Bewertungsmaßstab}{51}{subsection.498}%
-\contentsline {subsection}{\numberline {8.4.2}Fallbeispiele nach Modell}{51}{subsection.499}%
-\contentsline {section}{\numberline {8.5}Ergebnisse: Effizienz und Robustheit}{51}{section.500}%
-\contentsline {subsection}{\numberline {8.5.1}Laufzeit und \acs {NFA}-02-Konformität}{52}{subsection.501}%
-\contentsline {subsection}{\numberline {8.5.2}Konsistenz und Parsing-Stabilität}{52}{subsection.502}%
-\contentsline {section}{\numberline {8.6}Belastungsprüfung: test-50 und test-100}{53}{section.503}%
-\contentsline {subsection}{\numberline {8.6.1}Evaluation an test-50}{53}{subsection.505}%
-\contentsline {subsection}{\numberline {8.6.2}Evaluation an test-100}{54}{subsection.506}%
-\contentsline {section}{\numberline {8.7}Ergebnisse: Precision und F1-Score}{56}{section.510}%
-\contentsline {section}{\numberline {8.8}Evaluation am \acs {BWEC}-Untersuchungsobjekt}{57}{section.514}%
-\contentsline {section}{\numberline {8.9}Limitationen und Validität}{58}{section.515}%
-\contentsline {subsection}{\numberline {8.9.1}Externe Validität}{58}{subsection.516}%
-\contentsline {subsection}{\numberline {8.9.2}Interne Validität und Token-Limit-Effekt}{58}{subsection.517}%
-\contentsline {subsection}{\numberline {8.9.3}Weitere Einschränkungen}{59}{subsection.518}%
-\contentsline {section}{\numberline {8.10}Beantwortung der Forschungsfragen}{59}{section.519}%
-\contentsline {subsection}{\numberline {8.10.1}Übergeordnete Forschungsfrage}{59}{subsection.520}%
-\contentsline {subsection}{\numberline {8.10.2}TF1: Erkennungsleistung nach Verstoßtyp}{59}{subsection.521}%
-\contentsline {subsection}{\numberline {8.10.3}TF2: Mehrwert der Kontextkombination und partielle Ablationsanalyse}{60}{subsection.522}%
-\contentsline {section}{\numberline {8.11}Modellwahl und Einsatzempfehlungen}{61}{section.524}%
-\contentsline {chapter}{\numberline {9}Fazit}{62}{chapter.526}%
-\contentsline {section}{\numberline {9.1}Zusammenfassung der Ergebnisse}{62}{section.527}%
-\contentsline {subsection}{\numberline {9.1.1}Beitrag zur übergeordneten Forschungsfrage}{62}{subsection.528}%
-\contentsline {subsection}{\numberline {9.1.2}Erfüllung der funktionalen und nicht-funktionalen Anforderungen}{63}{subsection.529}%
-\contentsline {section}{\numberline {9.2}Kritische Reflexion}{63}{section.531}%
-\contentsline {subsection}{\numberline {9.2.1}Grenzen der externen Validität}{63}{subsection.532}%
-\contentsline {subsection}{\numberline {9.2.2}Methodische Einschränkungen}{64}{subsection.533}%
-\contentsline {section}{\numberline {9.3}Ausblick}{64}{section.537}%
-\contentsline {subsection}{\numberline {9.3.1}Kurz- und mittelfristige Weiterentwicklungen}{64}{subsection.538}%
-\contentsline {subsection}{\numberline {9.3.2}Langfristige Forschungsperspektiven}{65}{subsection.548}%
-\contentsline {chapter}{Anhang}{66}{chapter*.549}%
-\contentsline {chapter}{Literaturverzeichnis}{160}{section*.929}%
+\contentsline {subsection}{\numberline {2.1.3}Rechtlicher Rahmen}{9}{subsection.126}%
+\contentsline {section}{\numberline {2.2}Automatisierte Barrierefreiheitsanalyse}{9}{section.128}%
+\contentsline {subsection}{\numberline {2.2.1}Klassische Tool-Ansätze}{9}{subsection.130}%
+\contentsline {subsection}{\numberline {2.2.2}Grenzen bestehender Tools}{10}{subsection.142}%
+\contentsline {subsection}{\numberline {2.2.3}Taxonomie der Verstöße: syntaktisch, semantisch, Layout}{11}{subsection.155}%
+\contentsline {section}{\numberline {2.3}Rich-Client-Webanwendungen und Testautomatisierung}{12}{section.166}%
+\contentsline {subsection}{\numberline {2.3.1}Charakteristika und Abgrenzung}{13}{subsection.167}%
+\contentsline {subsection}{\numberline {2.3.2}Herausforderungen für die Barrierefreiheitsprüfung}{13}{subsection.179}%
+\contentsline {subsection}{\numberline {2.3.3}Playwright als Testautomatisierungswerkzeug}{14}{subsection.189}%
+\contentsline {section}{\numberline {2.4}\acs {KI}-Assistenzsysteme für Softwareanalyse und Handlungsempfehlungen}{15}{section.197}%
+\contentsline {subsection}{\numberline {2.4.1}Grundlagen: Large Language Models}{15}{subsection.201}%
+\contentsline {subsection}{\numberline {2.4.2}Prompt-Engineering-Strategien}{16}{subsection.215}%
+\contentsline {subsection}{\numberline {2.4.3}\acs {RAG} und Fine-Tuning als Erweiterungsansätze}{18}{subsection.225}%
+\contentsline {subsection}{\numberline {2.4.4}Digitale Souveränität und Datenschutz}{18}{subsection.230}%
+\contentsline {chapter}{\numberline {3}Stand der Forschung}{20}{chapter.247}%
+\contentsline {section}{\numberline {3.1}Vorgehen der Literaturrecherche}{20}{section.252}%
+\contentsline {section}{\numberline {3.2}Von frühen \acs {KI}-Ansätzen zur \acs {LLM}-basierten Erkennung}{20}{section.255}%
+\contentsline {section}{\numberline {3.3}\acs {LLM}-basierte Korrektur und Prompt-Engineering}{21}{section.260}%
+\contentsline {section}{\numberline {3.4}Hybride Pipelines und Ensemble-Testing}{21}{section.270}%
+\contentsline {section}{\numberline {3.5}Forschungslücken und Einordnung der vorliegenden Arbeit}{22}{section.278}%
+\contentsline {chapter}{\numberline {4}Methodik}{24}{chapter.291}%
+\contentsline {section}{\numberline {4.1}Wissenschaftliche Methode}{24}{section.292}%
+\contentsline {section}{\numberline {4.2}Untersuchungsgegenstand und Anwendungsbereich}{25}{section.303}%
+\contentsline {section}{\numberline {4.3}Evaluationsdesign und Kriterien}{25}{section.308}%
+\contentsline {subsection}{\numberline {4.3.1}Evaluationslogik}{26}{subsection.309}%
+\contentsline {subsection}{\numberline {4.3.2}Bewertungskriterien}{26}{subsection.317}%
+\contentsline {subsection}{\numberline {4.3.3}Limitationen des Evaluationsdesigns}{27}{subsection.322}%
+\contentsline {chapter}{\numberline {5}Analyse und Anforderungen}{28}{chapter.327}%
+\contentsline {section}{\numberline {5.1}Problemkontext und Handlungsbedarf}{28}{section.328}%
+\contentsline {section}{\numberline {5.2}\acl {FA}}{28}{section.332}%
+\contentsline {section}{\numberline {5.3}\acl {NFA}}{29}{section.346}%
+\contentsline {section}{\numberline {5.4}Lokale Inferenzinfrastruktur und Modellkandidaten}{30}{section.353}%
+\contentsline {subsection}{\numberline {5.4.1}Ollama als Laufzeitumgebung}{31}{subsection.355}%
+\contentsline {subsection}{\numberline {5.4.2}Anforderungen an das Sprachmodell}{31}{subsection.359}%
+\contentsline {subsection}{\numberline {5.4.3}Ausgewählte Modellkandidaten für die Evaluation}{31}{subsection.365}%
+\contentsline {subsection}{\numberline {5.4.4}Zusammenfassung der Anforderungen}{32}{subsection.369}%
+\contentsline {chapter}{\numberline {6}Konzeption des Assistenzsystems}{33}{chapter.373}%
+\contentsline {section}{\numberline {6.1}Zielarchitektur und Datenpipeline}{33}{section.374}%
+\contentsline {subsection}{\numberline {6.1.1}Analysequellen}{34}{subsection.386}%
+\contentsline {subsection}{\numberline {6.1.2}\acl {UFS}}{35}{subsection.397}%
+\contentsline {section}{\numberline {6.2}Prompt-Strategie}{36}{section.401}%
+\contentsline {subsection}{\numberline {6.2.1}Zweistufige Prompt-Strategie}{36}{subsection.402}%
+\contentsline {subsection}{\numberline {6.2.2}Wahl der Prompt-Engineering-Strategien}{36}{subsection.403}%
+\contentsline {subsection}{\numberline {6.2.3}Token-Budget-Steuerung}{37}{subsection.407}%
+\contentsline {section}{\numberline {6.3}Ausgabeformat: entwicklernahe To-Do-Liste}{37}{section.409}%
+\contentsline {chapter}{\numberline {7}Implementierung des Proof of Concept}{38}{chapter.412}%
+\contentsline {section}{\numberline {7.1}Technischer Rahmen und Projektstruktur}{38}{section.413}%
+\contentsline {section}{\numberline {7.2}axe-core-Modul}{38}{section.419}%
+\contentsline {section}{\numberline {7.3}Playwright-Modul}{39}{section.421}%
+\contentsline {section}{\numberline {7.4}Quellcode-Anreicherung und Anti-Pattern-Erkennung}{40}{section.423}%
+\contentsline {subsection}{\numberline {7.4.1}Anreicherung bestehender Findings}{40}{subsection.424}%
+\contentsline {subsection}{\numberline {7.4.2}Pattern-Findings}{40}{subsection.425}%
+\contentsline {section}{\numberline {7.5}\acs {LLM}-Detektor-Modul}{40}{section.426}%
+\contentsline {subsection}{\numberline {7.5.1}Abgrenzung zu grep und Nutzen der Kombination}{41}{subsection.435}%
+\contentsline {subsection}{\numberline {7.5.2}Beispielhafter Ablauf eines \acs {LLM}-Findings}{41}{subsection.436}%
+\contentsline {section}{\numberline {7.6}Prompt-Builder und System-Prompt}{42}{section.451}%
+\contentsline {subsection}{\numberline {7.6.1}System-Prompt}{42}{subsection.452}%
+\contentsline {subsection}{\numberline {7.6.2}Token-Budget-Steuerung}{43}{subsection.459}%
+\contentsline {subsection}{\numberline {7.6.3}Serialisierung}{43}{subsection.461}%
+\contentsline {section}{\numberline {7.7}Ollama-Client und Output-Formatter}{43}{section.462}%
+\contentsline {section}{\numberline {7.8}Pipeline-Orchestrierung}{44}{section.468}%
+\contentsline {section}{\numberline {7.9}Beispielabläufe am Untersuchungsobjekt}{44}{section.469}%
+\contentsline {chapter}{\numberline {8}Evaluation und Diskussion}{46}{chapter.471}%
+\contentsline {section}{\numberline {8.1}Versuchsdesign}{46}{section.472}%
+\contentsline {subsection}{\numberline {8.1.1}Testobjekte und Ground Truth}{46}{subsection.473}%
+\contentsline {subsection}{\numberline {8.1.2}Modelle, Konfiguration und Testläufe}{47}{subsection.474}%
+\contentsline {subsection}{\numberline {8.1.3}Metriken und Messverfahren}{47}{subsection.480}%
+\contentsline {section}{\numberline {8.2}Ergebnisse: Detektionsqualität (Recall)}{48}{section.485}%
+\contentsline {subsection}{\numberline {8.2.1}Baseline: Tool-Pipeline ohne \acs {LLM}-Detektor}{48}{subsection.487}%
+\contentsline {subsection}{\numberline {8.2.2}Recall nach \acs {LLM}-Detektor-Augmentierung}{48}{subsection.488}%
+\contentsline {subsection}{\numberline {8.2.3}Erkennungsleistung nach Verstoßkategorie}{49}{subsection.491}%
+\contentsline {section}{\numberline {8.3}Ergebnisse: Priorisierungsqualität}{50}{section.496}%
+\contentsline {subsection}{\numberline {8.3.1}Modellvergleich Must-have und Nice-to-have}{50}{subsection.497}%
+\contentsline {section}{\numberline {8.4}Ergebnisse: Fix-Qualität (qualitativ)}{51}{section.499}%
+\contentsline {subsection}{\numberline {8.4.1}Bewertungsmaßstab}{51}{subsection.500}%
+\contentsline {subsection}{\numberline {8.4.2}Fallbeispiele nach Modell}{51}{subsection.501}%
+\contentsline {section}{\numberline {8.5}Ergebnisse: Effizienz und Robustheit}{51}{section.502}%
+\contentsline {subsection}{\numberline {8.5.1}Laufzeit und \acs {NFA}-02-Konformität}{52}{subsection.503}%
+\contentsline {subsection}{\numberline {8.5.2}Konsistenz und Parsing-Stabilität}{52}{subsection.504}%
+\contentsline {section}{\numberline {8.6}Belastungsprüfung: test-50 und test-100}{53}{section.505}%
+\contentsline {subsection}{\numberline {8.6.1}Evaluation an test-50}{53}{subsection.507}%
+\contentsline {subsection}{\numberline {8.6.2}Evaluation an test-100}{54}{subsection.508}%
+\contentsline {section}{\numberline {8.7}Ergebnisse: Precision und F1-Score}{56}{section.512}%
+\contentsline {section}{\numberline {8.8}Evaluation am \acs {BWEC}-Untersuchungsobjekt}{57}{section.516}%
+\contentsline {section}{\numberline {8.9}Limitationen und Validität}{58}{section.517}%
+\contentsline {subsection}{\numberline {8.9.1}Externe Validität}{58}{subsection.518}%
+\contentsline {subsection}{\numberline {8.9.2}Interne Validität und Token-Limit-Effekt}{58}{subsection.519}%
+\contentsline {subsection}{\numberline {8.9.3}Weitere Einschränkungen}{59}{subsection.520}%
+\contentsline {section}{\numberline {8.10}Beantwortung der Forschungsfragen}{59}{section.521}%
+\contentsline {subsection}{\numberline {8.10.1}Übergeordnete Forschungsfrage}{59}{subsection.522}%
+\contentsline {subsection}{\numberline {8.10.2}TF1: Erkennungsleistung nach Verstoßtyp}{59}{subsection.523}%
+\contentsline {subsection}{\numberline {8.10.3}TF2: Mehrwert der Kontextkombination und partielle Ablationsanalyse}{60}{subsection.524}%
+\contentsline {section}{\numberline {8.11}Modellwahl und Einsatzempfehlungen}{61}{section.526}%
+\contentsline {chapter}{\numberline {9}Fazit}{62}{chapter.528}%
+\contentsline {section}{\numberline {9.1}Zusammenfassung der Ergebnisse}{62}{section.529}%
+\contentsline {subsection}{\numberline {9.1.1}Beitrag zur übergeordneten Forschungsfrage}{62}{subsection.530}%
+\contentsline {subsection}{\numberline {9.1.2}Erfüllung der funktionalen und nicht-funktionalen Anforderungen}{63}{subsection.531}%
+\contentsline {section}{\numberline {9.2}Kritische Reflexion}{63}{section.533}%
+\contentsline {subsection}{\numberline {9.2.1}Grenzen der externen Validität}{63}{subsection.534}%
+\contentsline {subsection}{\numberline {9.2.2}Methodische Einschränkungen}{64}{subsection.535}%
+\contentsline {section}{\numberline {9.3}Ausblick}{64}{section.539}%
+\contentsline {subsection}{\numberline {9.3.1}Kurz- und mittelfristige Weiterentwicklungen}{64}{subsection.540}%
+\contentsline {subsection}{\numberline {9.3.2}Langfristige Forschungsperspektiven}{65}{subsection.550}%
+\contentsline {chapter}{Anhang}{66}{chapter*.551}%
+\contentsline {chapter}{Literaturverzeichnis}{160}{section*.931}%

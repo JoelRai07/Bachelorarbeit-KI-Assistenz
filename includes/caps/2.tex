@@ -32,10 +32,11 @@ Jedes Erfolgskriterium ist einer von drei Konformitätsstufen zugeordnet.\footci
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.45\textwidth]{graphics/WCAG-Dreieck-4-Ebenen.png}
- \caption[\acs{WCAG}-Schichtenmodell]{\ac{WCAG}-Schichtenmodell. Die hierarchische Schichtenstruktur bleibt zwischen \ac{WCAG}~2.1 (78 Erfolgskriterien) und \ac{WCAG}~2.2 (86 Erfolgskriterien) strukturell unverändert; diese Darstellung basiert auf \ac{WCAG}~2.1.}
+  \includegraphics[width=0.45\textwidth]{graphics/neuepyramide.png}
+ \caption[\acs{WCAG}-Schichtenmodell]{\ac{WCAG}-Schichtenmodell. Die hierarchische Schichtenstruktur bleibt zwischen \ac{WCAG}~2.1 (78 Erfolgskriterien) und \ac{WCAG}~2.2 (86 Erfolgskriterien) strukturell unverändert.\footnotemark}
   \label{fig:WCAG-Schichten}
 \end{figure}
+\footnotetext{Mit Änderung entnommen aus \cite{WCAG} und \cite{WCAGRegelnVerstehen}, fachlich aktualisiert gemäß \ac{WCAG}~2.2.}
 
 Die praktische Umsetzung dieser Standards bleibt trotz ihrer langen Etablierung unzureichend.\footcite[Vgl.][S. 297]{bassi_assessment_2025} Die WebAIM Million Study wird seit 2019 jährlich von WebAIM (\textit{Web Accessibility In Mind}), einer gemeinnützigen Organisation der Utah State University, veröffentlicht. Sie analysiert automatisiert die Startseiten der jeweils meistbesuchten eine Million Websites weltweit und gilt damit als die umfangreichste empirische Erhebung zur Verbreitung von \ac{WCAG}-Verstößen im Web.\footcite[Vgl.][]{WebAIM} Die Ausgabe 2025 identifizierte durchschnittlich 56,8 \ac{WCAG}-Fehler pro Seite. Die häufigsten Verstoßkategorien betrafen fehlende Alternativtexte (54{,}5\,\% der untersuchten Seiten), unzureichende Farbkontraste (80{,}6\,\%), fehlende Labels (47{,}4\,\%), leere Links (44{,}6\,\%) und fehlende Sprachangaben im \acs{HTML} (17{,}1\,\%).\footcite[Vgl.][]{WebAIM}
 
@@ -91,7 +92,7 @@ Includia Accessibility Checker & 33 & 31 & 41.18 & 21.02 \\
 \caption[Erkennungsleistung von Accessibility-Tools]{Vergleich der Erkennungsleistung verschiedener Accessibility-Prüfwerkzeuge.\footnotemark{} CER = Korrektheits-Ratio (Precision-Analog), ICR = Item-Coverage-Ratio (Recall-Analog) -- Definitionen siehe Fließtext.}
 \label{tab:tool_evaluation}
 \end{table}
-\footnotetext{Entnommen aus \cite{kodithuwakku_assessing_2025}.}
+\footnotetext{Enthalten in: \cite{kodithuwakku_assessing_2025}.}
 
 Ein zentrales Defizit liegt in der semantischen Blindheit der Werkzeuge.\footcite[Vgl.][]{fathallah_accessguru_2025} Regelbasierte Tools können lediglich prüfen, ob ein Accessibility-Attribut vorhanden ist, nicht aber, ob der Inhalt dem richtigen Zweck dient. Ein Bild mit dem Alternativtext \textit{image} oder \textit{IMG\_0042.jpg} wird von allen Tools als regelkonform eingestuft, obwohl dieser Text für Screenreader-Nutzende keinen Mehrwert bietet. \textbf{Ma11y}, ein Mutation-Testing-Framework für Accessibility, hat dieses Problem empirisch quantifiziert: Bei der systematischen Injektion von 25 gezielten Defekten in reale Webanwendungen erkannten die sechs ausgewählten Tools semantische Verstöße nur zu 26\,\% und syntaktische Verstöße zu 54\,\% -- im Durchschnitt blieb damit nahezu die Hälfte aller injizierten Defekte unentdeckt.\footcite[Vgl.][S. 108]{tafreshipour_ma11y_2024}
 
