@@ -1,6 +1,6 @@
 \chapter{Evaluation und Diskussion} \label{kap:7}
 
-Dieses Kapitel evaluiert das \ac{ACE}-System entlang der in Abschnitt~\ref{kap:1.3} formulierten Forschungsfragen. Zunächst werden Versuchsdesign und Metriken beschrieben. Anschließend werden die Kalibrierungsergebnisse (test-12) zu Detektionsqualität, Priorisierung, Fix-Qualität und Effizienz dargestellt, gefolgt von der eigentlichen Belastungsprüfung auf test-50 und test-100 sowie der ergänzenden Evaluation am realen Untersuchungsobjekt \ac{BWEC}. Abschließend folgen Limitationen, die Beantwortung der Forschungsfragen sowie daraus abgeleitete Einsatzempfehlungen.
+Dieses Kapitel evaluiert das \ac{ACE}-System entlang der in Abschnitt~\ref{kap:1.3} formulierten Forschungsfragen. Zunächst werden Versuchsdesign und Metriken beschrieben. Anschließend werden die Kalibrierungsergebnisse (test-12) zu Detektionsqualität, Priorisierung, Fix-Qualität und \mbox{Effizienz} dargestellt, gefolgt von der eigentlichen Belastungsprüfung auf test-50 und test-100 sowie der ergänzenden Evaluation am realen Untersuchungsobjekt \ac{BWEC}. Abschließend folgen Limitationen, die Beantwortung der Forschungsfragen sowie daraus abgeleitete Einsatzempfehlungen.
 
 % ─────────────────────────────────────────────────────────────────────────────
 \section{Versuchsdesign}
@@ -22,7 +22,7 @@ Die Evaluation folgt einer mehrstufigen Versuchslogik: Die \textit{test-12-Suite
 \subsection{Modelle, Konfiguration und Testläufe}
 \label{sec:versuch_modelle}
 
-Es werden drei lokal ausgeführte Sprachmodelle verglichen: \texttt{qwen2.5-coder:7b}, \texttt{qwen\-2.5-co\-der:14b}\footcite[Vgl.][]{hui2024qwen25coder} und \texttt{qwen3:32b}\footcite[Vgl.][]{qwen3}. Das in Kapitel~\ref{kap:4} ebenfalls genannte \texttt{deepseek-r1:70b}\footcite[Vgl.][]{deepseek} kann im Rahmen dieser Arbeit nicht evaluiert werden, da das Modell mit 70 Milliarden Parametern die verfügbare \ac{RAM}-Kapazität der Testumgebung überschreitet; es bleibt Gegenstand künftiger Evaluation auf leistungsstärkerer Hardware (vgl. Abschnitt~\ref{sec:eval_erweiterung}).
+Es werden drei lokal ausgeführte Sprachmodelle verglichen: \texttt{qwen2.5-coder:7b}, \texttt{qwen2.5\allowbreak-coder:14b}\footcite[Vgl.][]{hui2024qwen25coder} und \texttt{qwen3:32b}\footcite[Vgl.][]{qwen3}. Das in Kapitel~\ref{kap:4} ebenfalls genannte \texttt{deepseek-r1:70b}\footcite[Vgl.][]{deepseek} kann im Rahmen dieser Arbeit nicht evaluiert werden, da das Modell mit 70 Milliarden Parametern die verfügbare \ac{RAM}-Kapazität der Testumgebung überschreitet; es bleibt Gegenstand künftiger Evaluation auf leistungsstärkerer Hardware (vgl. Abschnitt~\ref{sec:eval_erweiterung}).
 
 Auf jeder der drei synthetischen Suites absolvierte jedes Modell zehn unabhängige Pipeline-Durchläufe, was insgesamt 90~Benchmarkläufe auf synthetischen Testsuiten ergibt. Ergänzend wurden 18~Läufe auf dem realen \ac{BWEC} durchgeführt (zwei Konfigurationen mit je 9~Testläufen). Die Temperatur wurde auf 0.05 gesetzt, um den Nicht-Determinismus zu minimieren. Der \ac{LLM}-Detektor operiert mit separaten Parametern: 2\,048~Tokens für die Code-Analyse, 4\,000~Zeichen pro Chunk und maximal 25~Dateien pro Durchlauf.
 
@@ -63,13 +63,13 @@ Ausgewertet werden vier Metriken:
   \item \textbf{Fix-Qualität} nach der dreistufigen Skala aus Tabelle~\ref{tab:bewertungsskala_empfehlungen} sowie
   \item \textbf{Effizienz} (Laufzeit und Konsistenz über mehrere Testläufe).
 \end{enumerate}
-Eine Violation gilt als erkannt, wenn sie in der Mehrzahl der zehn Testläufe ($>\,5$) im finalen \ac{LLM}-Report erscheint. Diese Schwelle bietet Robustheit gegenüber einzelnen \ac{LLM}-Ausreißern, ohne bei probabilistischen Modellen zu restriktiv zu sein. Die vollständigen Rohdaten aller Benchmarkläufe finden sich in den Anhangstabellen der jeweiligen Suites.
+Eine Violation gilt als erkannt, wenn sie in der Mehrzahl der zehn Testläufe ($>\,5$) im finalen \ac{LLM}-Report erscheint. Diese Schwelle bietet Robustheit gegenüber einzelnen \ac{LLM}-Ausreißern, ohne bei probabilistischen Modellen zu restriktiv zu sein. Die vollständigen Rohdaten aller Benchmark\-läufe finden sich in den Anhangstabellen der jeweiligen Suites.
 
 % ─────────────────────────────────────────────────────────────────────────────
 \section{Ergebnisse: Detektionsqualität (Recall)}
 \label{sec:ergebnisse_recall}
 
-Dieser Abschnitt bewertet, welche der 12~Ground-Truth-Violations die Pipeline erkennt -- zunächst ohne \ac{LLM}-Detektor (Baseline), dann mit \ac{LLM}-Detektor je Modell und abschließend differenziert nach Verstoßkategorie. Die \acs{UI}-Screenshots der test-12-Suite finden sich in Anhang~\ref{fig:test12_screen1} und \ref{fig:test12_screen2}.
+Dieser Abschnitt bewertet, welche der 12~Ground-Truth-Violations die Pipeline erkennt -- zunächst ohne \ac{LLM}-Detektor (Baseline), dann mit \ac{LLM}-Detektor je Modell und abschließend diffe\-renziert nach Verstoßkategorie. Die \acs{UI}-Screenshots der test-12-Suite finden sich in Anhang~\ref{fig:test12_screen1} und \ref{fig:test12_screen2}.
 
 \subsection{Baseline: Tool-Pipeline ohne \acs{LLM}-Detektor}
 \label{sec:recall_baseline}
@@ -182,7 +182,7 @@ Die Spalte \textit{Bewertung} fasst das Verhalten qualitativ zusammen. Zu beacht
 \label{tab:priorisierungsqualitaet}
 \end{table}
 
-\texttt{qwen2.5-coder:7b} zeigt ein fehlerhaftes Priorisierungsverhalten: Pflichtanforderungen wie Fokusindikator oder Skip-Link werden nicht stabil im Must-have-Bereich gehalten. Für einen \ac{BITV}-konformen Einsatz ist dieses Modell daher \textit{nicht geeignet}.
+\texttt{qwen2.5-coder:7b} zeigt ein fehlerhaftes Priorisierungsverhalten: Pflichtanforderungen wie Fokus\-indikator oder Skip-Link werden nicht stabil im Must-have-Bereich gehalten. Für einen \ac{BITV}-konformen Einsatz ist dieses Modell daher \textit{nicht geeignet}.
 
 \texttt{qwen2.5-coder:14b} trennt die beiden Kategorien zwar formal, überbetont aber den Must-have-Bereich deutlich. Das Modell ist damit \textit{undifferenziert}, aber nicht so fehlerhaft wie 7b.
 
@@ -209,7 +209,7 @@ Für V8 (Modaler Dialog übernimmt Fokus beim Öffnen nicht) generiert \texttt{q
 \texttt{qwen2.5-coder:14b} empfiehlt für V4 (Kontrastverhältnis) sinngemäß, Hintergrund- oder Textfarbe anzupassen, um den Kontrast zu verbessern, liefert jedoch keinen ausreichend konkreten Bezug zum tatsächlichen Farbpaar oder die betroffene Regel im Stylesheet. Der Fix-Typ stimmt, der konkrete Umsetzungskontext bleibt jedoch zu vage -- Stufe~1.
 
 \textbf{Fallbeispiel 3 -- Fehlklassifikation (Stufe~0, qwen2.5-coder:7b).}
-\texttt{qwen2.5-coder:7b} behandelt den Fokusindikator-Verlust (V5, \ac{WCAG}~2.4.7~AA) nicht stabil als Pflichtanforderung und formuliert den Fix nur generisch. Damit fehlt sowohl das korrekte Priorisierungssignal als auch die unmittelbare Umsetzbarkeit im Quellcode -- Stufe~0.
+\texttt{qwen2.5-coder:7b} behandelt den Fokus\-indikator-Verlust (V5, \ac{WCAG}~2.4.7~AA) nicht stabil als Pflichtanforderung und formuliert den Fix nur generisch. Damit fehlt sowohl das korrekte Priorisierungssignal als auch die unmittelbare Umsetzbarkeit im Quellcode -- Stufe~0.
 
 % ─────────────────────────────────────────────────────────────────────────────
 \section{Ergebnisse: Effizienz und Robustheit}
@@ -557,7 +557,7 @@ Aus den vorstehenden Ergebnissen zu Recall, Priorisierungsqualität, Fix-Qualit�
 \centering
 \small
 \renewcommand{\arraystretch}{1.15}
-\begin{tabular}{@{}lp{8.6cm}@{}}
+\begin{tabular}{@{}lp{8cm}@{}}
 \toprule
 \textbf{Szenario} & \textbf{Empfehlung} \\
 \midrule

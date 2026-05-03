@@ -6,7 +6,7 @@ Dieses Kapitel beschreibt die prototypische Umsetzung des in Kapitel~\ref{kap:5}
 \section{Technischer Rahmen und Projektstruktur}
 \label{sec:techstack}
 
-Der \ac{PoC} ist als Node.js-Anwendung auf Basis von TypeScript implementiert.\footcite[Vgl.][]{JavaScriptSyntaxTypesa} Die Wahl von TypeScript ist durch die technologische Nähe zum Untersuchungsgegenstand begründet: Der \ac{BWEC} ist in ein TypeScript-basiertes Monorepo eingebettet, sodass auch der \ac{PoC} im selben technologischen Kontext entwickelt wird. Dies erleichtert sowohl die Integration als auch eine mögliche Übertragung auf weitere Anwendungen innerhalb vergleichbarer Architekturen. Darüber hinaus ermöglicht TypeScript eine typsichere Definition des \ac{UFS} (vgl. Listing~\ref{lst:ufs}). Als Laufzeitumgebung wird Node.js ab Version~24 eingesetzt; die Ausführung erfolgt über \texttt{tsx}, einen TypeScript-Runner, der Kompilierung und Ausführung in einem Schritt verbindet. Auf ein zusätzliches Framework wurde bewusst verzichtet, um den \ac{PoC} minimal zu halten.
+Der \ac{PoC} ist als Node.js-Anwendung auf Basis von TypeScript implementiert.\footcite[Vgl.][]{JavaScriptSyntaxTypesa} Die Wahl von TypeScript ist durch die technologische Nähe zum Untersuchungsgegenstand begründet: Der \ac{BWEC} ist in ein TypeScript-basiertes Monorepo eingebettet, sodass auch der \ac{PoC} im selben technologischen Kontext entwickelt wird. Dies erleichtert sowohl die Integration als auch eine mögliche Übertragung auf weitere Anwendungen innerhalb vergleichbarer Architekturen. \mbox{Darüber} hinaus ermöglicht TypeScript eine typsichere Definition des \ac{UFS} (vgl. Listing~\ref{lst:ufs}). Als Laufzeitumgebung wird Node.js ab Version~24 eingesetzt; die Ausführung erfolgt über \texttt{tsx}, einen TypeScript-Runner, der Kompilierung und Ausführung in einem Schritt verbindet. Auf ein zusätzliches Framework wurde bewusst verzichtet, um den \ac{PoC} minimal zu halten.
 
 Als Kernabhängigkeiten dienen \texttt{playwright}@1.50 für die Browser-Automatisierung,\footcite[Vgl.][]{playwright} \texttt{@axe-core/playwright}@4.10 für die axe-core-Integration sowie \texttt{dotenv}@17.3 für die Konfigurationsverwaltung und \texttt{tsx}@6.5.7 als TypeScript-Runner.
 
@@ -64,7 +64,7 @@ Treffer werden nach der Normalisierung dedupliziert und auf maximal acht Treffer
 \section{\acs{LLM}-Detektor-Modul}
 \label{sec:impl-llm-detector}
 
-Das \acs{LLM}-Detektor-Modul ergänzt die regelbasierten Quellen um eine modellbasierte Quellcodeanalyse. Es wird nur ausgeführt, wenn der \ac{CLI}-Parameter \texttt{-{}-llm-detect} gesetzt ist und ein Quellcodepfad via \texttt{-{}-src-dir} vorliegt. Ziel ist nicht die Ersetzung bestehender Tools, sondern die Ergänzung um eine zusätzliche Detektionsquelle mit semantischem Fokus.
+Das \acs{LLM}-Detektor-Modul ergänzt die regelbasierten Quellen um eine modellbasierte Quellcode\-analyse. Es wird nur ausgeführt, wenn der \ac{CLI}-Parameter \texttt{-{}-llm-detect} gesetzt ist und ein Quellcodepfad via \texttt{-{}-src-dir} vorliegt. Ziel ist nicht die Ersetzung bestehender Tools, sondern die Ergänzung um eine zusätzliche Detektionsquelle mit semantischem Fokus.
 
 Die Verarbeitung erfolgt in fünf Schritten:
 
@@ -84,7 +84,7 @@ Die beiden Detektionsansätze unterscheiden sich grundlegend in ihrer Arbeitswei
 
 \begin{itemize}
   \item \textbf{grep} arbeitet regelbasiert und deterministisch. Es erkennt bekannte Muster zuverlässig und reproduzierbar, kann aber nur das finden, was vorher als Regel modelliert wird.
-  \item \textbf{\acs{LLM}-Detektor} arbeitet kontextsensitiv. Er kann auch semantisch ähnliche Problemstellen erkennen, die nicht exakt einem festen Regex-Muster entsprechen, ist jedoch anfälliger für Formatabweichungen und Halluzinationen.
+  \item \textbf{\acs{LLM}-Detektor} arbeitet kontextsensitiv. Er kann auch semantisch ähnliche \mbox{Problemstellen} erkennen, die nicht exakt einem festen Regex-Muster entsprechen, ist jedoch anfälliger für Formatabweichungen und Halluzinationen.
 \end{itemize}
 
 Der \ac{PoC} kombiniert daher beide Ansätze in komplementärer Weise: grep als stabile Baseline und den \acs{LLM}-Detektor als zusätzliche Quelle mit potenziellem Recall-Gewinn.
@@ -134,7 +134,7 @@ Regel~6 adressiert gezielt das in Abschnitt~\ref{kap:2.4} beschriebene Halluzina
 
 \subsection{Token-Budget-Steuerung}
 
-Wie in Abschnitt~\ref{sec:kontextualisierung} beschrieben, ist das Kontextfenster lokaler Modelle eine begrenzte Ressource. Der Prompt-Builder reserviert feste Anteile für den System-Prompt und die Modellausgabe; der verbleibende Platz steht für die serialisierten Findings zur Verfügung.\footnote{Beim eingesetzten Qwen2.5-Coder beträgt das Kontextfenster 32.768~Tokens. Nach Abzug von System-Prompt und Output-Reserve verbleiben ca.~24.000~Tokens für die Findings. Vgl. \cite{hui2024qwen25coder} sowie Anhang \ref{app:tokenbudget}}
+Wie in Abschnitt~\ref{sec:kontextualisierung} dargestellt, stellt das Kontextfenster lokaler Modelle eine begrenzte \mbox{Ressource} dar. Der Prompt-Builder reserviert feste Anteile für den System-Prompt und die Modellausgabe; der verbleibende Platz steht für die serialisierten Findings zur Verfügung.\footnote{Beim eingesetzten Qwen2.5-Coder beträgt das Kontextfenster 32.768~Tokens. Nach Abzug von System-Prompt und Output-Reserve verbleiben ca.~24.000~Tokens für die Findings. Vgl. \cite{hui2024qwen25coder} sowie Anhang \ref{app:tokenbudget}}
 
 Übersteigt die Gesamtmenge der Findings dieses Budget, werden alle Findings quellenübergreifend nach Schweregrad sortiert; Einträge niedriger Priorität werden bei Bedarf entfernt. Findings mit Severity \texttt{critical} und \texttt{serious} haben dabei Vorrang. Der User-Prompt enthält einen expliziten Hinweis, wenn Findings aus Budgetgründen weggelassen werden.
 
@@ -150,7 +150,7 @@ Anhang~\ref{app:systemprompt} illustriert.
 
 Der Ollama-Client kapselt den \acs{HTTP}-Aufruf an die lokale Ollama-Instanz (\texttt{localhost:11434}). Die Anfrage nutzt den \texttt{/api/generate}-Endpunkt mit \texttt{temperature:~0.05} (\ac{NFA}-04).%
 \footnote{Der Standardwert \texttt{num\_predict}~=~6\,144 gilt für den operativen Betrieb. In den Benchmarkläufen wurden suiteabhängige Werte eingesetzt: 6\,144 (test-12), 8\,192 (test-50) und 12\,288 (test-100). Vgl. Tabelle~\ref{tab:benchmark_runs} und Abschnitt~\ref{sec:limit_tokenlimit}.}
-Die niedrige \texttt{temperature}-Einstellung reduziert den Nicht-Determinismus der Ausgaben (vgl. Abschnitt~\ref{kap:2.4}), ohne ihn vollständig zu eliminieren. Der Client verwendet ein konfigurierbares Timeout (Default: drei Stunden), da die Inferenz auf \ac{CPU}-basierten Systemen je nach Modellgröße mehrere Minuten in Anspruch nehmen kann. Die Antwort von Ollama enthält neben dem generierten Text auch die tatsächliche Anzahl der Prompt- und Output-Tokens (\texttt{prompt\_eval\_count}, \texttt{eval\_count}), die für die Evaluation in Kapitel~\ref{kap:7} erfasst werden.
+Die niedrige \texttt{temperature}-Einstellung reduziert den Nicht-Determinismus der Ausgaben (vgl. Abschnitt~\ref{kap:2.4}), ohne ihn vollständig zu eliminieren. Der Client verwendet ein konfigurierbares Time\-out (Default: drei Stunden), da die Inferenz auf \ac{CPU}-basierten Systemen je nach Modellgröße mehrere Minuten in Anspruch nehmen kann. Die Antwort von Ollama enthält neben dem generierten Text auch die tatsächliche Anzahl der Prompt- und Output-Tokens (\texttt{prompt\_eval\_count}, \texttt{eval\_count}), die für die Evaluation in Kapitel~\ref{kap:7} erfasst werden.
 
 Der Output-Formatter erzeugt pro Analysedurchlauf zwei Ausgabedateien: einen Markdown-Report für die menschliche Lesbarkeit sowie einen \acs{JSON}-Report für die maschinelle Weiterverarbeitung (\ac{FA}-05). Der Markdown-Report enthält einen Metadaten-Header (\acs{URL}, Modell, Zeitstempel, Token-Statistiken), die Roh-Ausgabe des Sprachmodells sowie eine Metriken-Tabelle mit den Laufzeiten aller Pipeline-Phasen. Der \acs{JSON}-Report speichert zusätzlich das Parsing-Ergebnis der \ac{LLM}-Antwort: Der Formatter versucht, die Markdown-Ausgabe in Must-have- und Nice-to-have-Einträge zu zerlegen. Schlägt dieses Parsing fehl, etwa weil das Modell das vorgegebene Format nicht einhält, wird dies im Report dokumentiert (\texttt{parsed.success: false}).
 
