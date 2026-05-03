@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber latex-vorlage"] 1777833828.43594 "latex-vorlage.bcf" "latex-vorlage.bbl" "latex-vorlage" 1777838691.03732 0
+["biber latex-vorlage"] 1777839610.05368 "latex-vorlage.bcf" "latex-vorlage.bbl" "latex-vorlage" 1777839879.65182 0
   "includes/literatur-datenbank.bib" 1777833827 110653 585dc637f197ce882972e1702cc1703e ""
-  "latex-vorlage.bcf" 1777838690 127220 913dbd02af0dce2e6e33a4fc8529da85 "pdflatex"
+  "latex-vorlage.bcf" 1777839878 127144 4fbea8dad53e4ce0dd7d9f4f2a626bd7 "pdflatex"
   (generated)
   "latex-vorlage.bbl"
   "latex-vorlage.blg"
   (rewritten before read)
-["pdflatex"] 1777838680.91355 "c:/Users/joely/OneDrive/Desktop/BA/latex-vorlage_v2.1/latex-vorlage.tex" "latex-vorlage.pdf" "latex-vorlage" 1777838691.03833 0
+["pdflatex"] 1777839869.38377 "c:/Users/joely/OneDrive/Desktop/BA/latex-vorlage_v2.1/latex-vorlage.tex" "latex-vorlage.pdf" "latex-vorlage" 1777839879.65314 0
   "C:/Users/joely/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1775835912 81107 70b8516c68c2e617189c5e44bfd16b96 ""
   "C:/Users/joely/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbi1095.pk" 1769806526 38336 1ff2b123e883a6a5ff520a795da8cd83 ""
   "C:/Users/joely/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx0800.pk" 1720700301 19872 48ad9cc151b0d834b403dc2fb7fb0d1d ""
@@ -376,7 +376,7 @@
   "graphics/test12-screen2.png" 1775069123 19642 9cb611012914ab13a33e2a3a3e816aea ""
   "includes/anhang.tex" 1777833052 216326 d3869a9319631499c61231f7f7e5f022 ""
   "includes/caps/1.tex" 1777834986 14437 14105a708e01b579be5acbfa61b5b072 ""
-  "includes/caps/2.tex" 1777838680 38392 59b4576ecc4f0aed595c1f7ea8b8b5eb ""
+  "includes/caps/2.tex" 1777839598 38314 237effb9963f9903b1045492bd5d641e ""
   "includes/caps/3.tex" 1777837150 21956 b75bd33a318b812dbbffb8198acdaf8d ""
   "includes/caps/4.tex" 1777837278 12022 3bdd55def6fe8b948a46ff61674fb389 ""
   "includes/caps/5.tex" 1777837520 15598 6c59f9acab5cdabe6e2f3e3c66065152 ""
@@ -385,18 +385,18 @@
   "includes/caps/8.tex" 1777838593 11926 e92d098b7491d6feece7f03344a1814d ""
   "includes/extra/abkuerzungen.tex" 1777484373 1794 1603b649551a89e45c3d41b6f54ccf4a ""
   "includes/extra/abstract.tex" 1777834392 2906 a1513797d53e5e1f13258a9814c79cae ""
-  "includes/extra/config.tex" 1777829880 3137 473ebccc54dae24412b8ca7e7973a787 ""
+  "includes/extra/config.tex" 1777839868 3128 ca79e0a61fae080889da5dc158cb1dc2 ""
   "includes/extra/erklaerung_ki.tex" 1777483139 5346 e9031d15dd3d3dfcd58dd5ab7c5cc1bb ""
   "includes/taxonomie-figure.tex" 1777832712 2433 d9d16c9d439ccb870eb36410b54292aa ""
-  "latex-vorlage.app" 1777838690 8035 1ce21b891d9dd5375faea5fb880c936a "pdflatex"
-  "latex-vorlage.aux" 1777838690 187125 22be4a014e2c528190d736ab402482f0 "pdflatex"
-  "latex-vorlage.bbl" 1777833831 351354 cc7758b4a759d3facd98813c001bd0d8 "biber latex-vorlage"
-  "latex-vorlage.lof" 1777838690 3261 b43f3c8a0a1f37e9d5a48f02f5ea3257 "pdflatex"
-  "latex-vorlage.lot" 1777838690 7169 0ee9c8610e83d3dd79e2d3e32f4016a8 "pdflatex"
-  "latex-vorlage.out" 1777838683 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "latex-vorlage.run.xml" 1777838690 2428 2d119b512bd1d4ff1381f82b4891beaf "pdflatex"
+  "latex-vorlage.app" 1777839878 8035 1ce21b891d9dd5375faea5fb880c936a "pdflatex"
+  "latex-vorlage.aux" 1777839878 186894 10703856478a269ee264529d5e2f5480 "pdflatex"
+  "latex-vorlage.bbl" 1777839613 349949 5c54656b3c28239505e9928838d4a0fc "biber latex-vorlage"
+  "latex-vorlage.lof" 1777839878 3261 b43f3c8a0a1f37e9d5a48f02f5ea3257 "pdflatex"
+  "latex-vorlage.lot" 1777839878 7169 0ee9c8610e83d3dd79e2d3e32f4016a8 "pdflatex"
+  "latex-vorlage.out" 1777839871 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "latex-vorlage.run.xml" 1777839878 2428 2d119b512bd1d4ff1381f82b4891beaf "pdflatex"
   "latex-vorlage.tex" 1777486065 2843 8d2dbcb3aafc2e8b348127f909546cda ""
-  "latex-vorlage.toc" 1777838690 11192 bcd50b82f6f886916595069e0ea8c725 "pdflatex"
+  "latex-vorlage.toc" 1777839878 11192 bcd50b82f6f886916595069e0ea8c725 "pdflatex"
   "template/_dhbw_biblatex-config.tex" 1777832156 6999 b128cab154e0b1d6f71020e0229854ef ""
   "template/_dhbw_deckblatt.tex" 1777834276 2396 78e3f70518cf1c06ab5c80eb4dc577d9 ""
   "template/_dhbw_erklaerung.tex" 1771866037 924 13f182951ae36c7ba91049ce26ef857d ""

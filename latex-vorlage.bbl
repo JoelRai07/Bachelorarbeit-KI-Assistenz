@@ -919,41 +919,6 @@
       \verb https://www.barrierefreiheit-dienstekonsolidierung.bund.de/Webs/PB/DE/gesetze-und-richtlinien/bitv2-0/bitv2-0-node.html
       \endverb
     \endentry
-    \entry{WCAGRegelnVerstehen}{online}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=e9272f26e98fdef3c96c848118dad2ab}{%
-           family={Charismarcom},
-           familyi={C\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {Charismarcom}%
-      }
-      \strng{namehash}{e9272f26e98fdef3c96c848118dad2ab}
-      \strng{fullhash}{e9272f26e98fdef3c96c848118dad2ab}
-      \strng{fullhashraw}{e9272f26e98fdef3c96c848118dad2ab}
-      \strng{bibnamehash}{e9272f26e98fdef3c96c848118dad2ab}
-      \strng{authorbibnamehash}{e9272f26e98fdef3c96c848118dad2ab}
-      \strng{authornamehash}{e9272f26e98fdef3c96c848118dad2ab}
-      \strng{authorfullhash}{e9272f26e98fdef3c96c848118dad2ab}
-      \strng{authorfullhashraw}{e9272f26e98fdef3c96c848118dad2ab}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{labeldatesource}{nodate}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{langid}{ngerman}
-      \field{title}{WCAG Regeln verstehen und umsetzen | Agentur Charismarcom}
-      \field{urlday}{3}
-      \field{urlmonth}{5}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.charismarcom.de/wcag/
-      \endverb
-      \verb{url}
-      \verb https://www.charismarcom.de/wcag/
-      \endverb
-    \endentry
     \entry{chiou_detecting_2021}{inproceedings}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=847ec50c29d00424a35b65c19d75894f}{%
